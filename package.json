@@ -1,0 +1,43 @@
+{
+  "name": "longbridge.cloud",
+  "private": false,
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "Longbridge Whale web site",
+  "scripts": {
+    "dev": "yarn dev:canary",
+    "dev:canary": "PROXY=canary vite",
+    "dev:prod": "PROXY=prod vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "canary:preview": "PROXY=canary yarn build && vite preview --port 5005",
+    "prod:preview": "PROXY=prod yarn build && vite preview --port 6006"
+  },
+  "dependencies": {
+    "ahooks": "^3.3.10",
+    "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-i18next": "^11.16.8",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.2",
+    "@vitejs/plugin-react": "^1.3.0",
+    "autoprefixer": "^10.4.1",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "postcss": "^8.4.5",
+    "prettier": "^2.6.2",
+    "sass": "^1.45.2",
+    "tailwindcss": "^3.0.24",
+    "typescript": "^4.4.4",
+    "vite": "^2.9.7"
+  }
+}
