@@ -6,8 +6,11 @@ module.exports = {
     JSX: true,
   },
   env: {
+    commonjs: true,
+    es6: true,
     browser: true,
+    node: true,
   },
-  plugins: ['react-hooks'],
-  extends: ['eslint:recommended','plugin:react-hooks/recommended','prettier',],
-}
+  plugins: ['react-hooks', 'prettier'],
+  extends: ['eslint:recommended', 'plugin:react-hooks/recommended'],
+};
