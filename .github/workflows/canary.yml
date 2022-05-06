@@ -1,0 +1,37 @@
+name: Deploy Canary
+on:
+  push:
+    branches:
+      - main
+      - canary
+jobs:
+  deploy_canary:
+    name: build
+    timeout-minutes: 30
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 1
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: yarn
+
+      - name: install dependency npm
+        run: yarn
+
+      - name: build canary env out file
+        run: |
+          yarn build
+
+      - name: upload canary out to s3
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.FE_S3_OPEN_STATIC_CANARY_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.FE_S3_OPEN_STATIC_CANARY_ACCESS_KEY_SECRET }}
+        run: |
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 sync ./out s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/longbridge-cloud2/ --exclude "*.map" --cache-control max-age=31536000
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/longbridge-cloud2/index.html --cache-control no-cache
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/longbridge-cloud2/zh-CN/index.html --cache-control no-cache
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/longbridge-cloud2/zh-HK/index.html --cache-control no-cache
