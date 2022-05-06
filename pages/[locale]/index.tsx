@@ -1,9 +1,11 @@
 import React from "react";
 import { NextSeo } from "next-seo";
 import { i18nPaths } from "../../utils/i18n-paths";
+import { LocalPath } from "../../utils/local-path";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import i18nextConfig from "../../next-i18next.config";
 import { useTranslation } from "next-i18next";
+import { SEOMeta } from "../../utils/seo";
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -22,11 +24,8 @@ const IndexPage = () => {
   const { t } = useTranslation("common");
   return (
     <div>
-      <NextSeo
-        title={t("appName")}
-        description="Longbridge Whale description"
-      />
-      {t("h1")}
+      <SEOMeta title={"default"} description="Longbridge Whale description" />
+      <LocalPath href="/about">about</LocalPath>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { appWithTranslation } from "next-i18next";
+import "./../styles/globals.css";
 
 const AppWithTranslation = appWithTranslation(
   ({ Component, pageProps }: AppProps) => {

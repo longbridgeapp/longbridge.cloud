@@ -2,7 +2,7 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 
-export const localPath = (props: any) => {
+export const LocalPath = (props: any) => {
   const { i18n } = useTranslation();
   const router = useRouter();
 

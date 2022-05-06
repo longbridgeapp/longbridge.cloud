@@ -3,6 +3,7 @@ import { SEOMeta } from "../../utils/seo";
 import { i18nPaths } from "../../utils/i18n-paths";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import i18nextConfig from "../../next-i18next.config";
+import { LocalPath } from "../../utils/local-path";
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -22,11 +23,10 @@ export const getStaticProps = async (ctx: any) => ({
 const AboutPage = () => {
   return (
     <div>
-      <SEOMeta
-        title="About - Longbridge Whale"
-        description="Longbridge Whale description about"
-      />
+      <SEOMeta title="About" description="Longbridge Whale description about" />
       AboutPage
+      <hr />
+      <LocalPath href="/">Indexddd</LocalPath>
     </div>
   );
 };
