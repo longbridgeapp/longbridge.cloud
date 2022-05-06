@@ -4,6 +4,7 @@ import { i18nPaths } from "../../utils/i18n-paths";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import i18nextConfig from "../../next-i18next.config";
 import { LocalPath } from "../../utils/local-path";
+import { useTranslation } from "next-i18next";
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -21,12 +22,13 @@ export const getStaticProps = async (ctx: any) => ({
 });
 
 const AboutPage = () => {
+  const { t } = useTranslation("common");
   return (
     <div>
       <SEOMeta title="About" description="Longbridge Whale description about" />
       AboutPage
       <hr />
-      <LocalPath href="/">Indexddd</LocalPath>
+      <LocalPath href="/">{t("appName")}</LocalPath>
     </div>
   );
 };
