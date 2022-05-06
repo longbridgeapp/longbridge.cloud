@@ -20,7 +20,7 @@ function LBApp() {
   useMount(async () => {
     // 如果从 path 中获取到语言，第一优先切换
     if (localeFormPath) {
-      await i18n.changeLanguage(localeFormPath, () => console.log('-21', i18n.language))
+      await i18n.changeLanguage(localeFormPath)
       if (localeFormPath === i18n.options.lng) return (window.location.href = '/')
     }
   })
