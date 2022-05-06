@@ -2,7 +2,7 @@ name: Deploy Release
 on:
   push:
     branches:
-      - main
+      - release
 jobs:
   deploy_release:
     name: build
