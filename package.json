@@ -1,52 +1,26 @@
 {
-  "name": "longbridge.cloud",
-  "private": false,
-  "license": "MIT",
-  "version": "0.0.0",
-  "description": "Longbridge Whale web site",
+  "name": "longbridge-cloud",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "yarn dev:canary",
-    "dev:canary": "PROXY=canary vite --port 3003",
-    "dev:prod": "PROXY=prod vite --port 3004",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
-    "canary:preview": "PROXY=canary yarn build && vite preview --port 5005",
-    "prod:preview": "PROXY=prod yarn build && vite preview --port 6006"
+    "dev": "next dev",
+    "build": "next build && next export",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@originjs/vite-plugin-commonjs": "^1.0.3",
-    "ahooks": "^3.3.10",
-    "i18next": "^21.6.16",
-    "i18next-browser-languagedetector": "^6.1.4",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-i18next": "^11.16.8",
-    "react-router-dom": "^6.3.0"
+    "next": "12.1.6",
+    "next-seo": "^5.4.0",
+    "react": "18.1.0",
+    "react-dom": "18.1.0"
   },
   "devDependencies": {
-    "@types/node": "^17.0.31",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.2",
-    "@vitejs/plugin-react": "^1.3.0",
-    "autoprefixer": "^10.4.1",
-    "eslint": "^7.8.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-jsx-a11y": "^6.5.1",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.3.0",
-    "postcss": "^8.4.5",
-    "prettier": "^2.6.2",
-    "sass": "^1.45.2",
-    "tailwindcss": "^3.0.24",
-    "typescript": "^4.4.4",
-    "vite": "^2.9.7"
-  },
-  "browserslist": [
-    ">0.3%",
-    "not ie 11",
-    "not dead",
-    "not op_mini all"
-  ]
+    "@types/node": "17.0.31",
+    "@types/react": "18.0.8",
+    "@types/react-dom": "18.0.3",
+    "eslint": "8.14.0",
+    "eslint-config-next": "12.1.6",
+    "sass": "^1.51.0",
+    "typescript": "4.6.4"
+  }
 }
