@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --port=3003",
     "build": "next build && next export",
     "start": "next start",
     "lint": "next lint"
@@ -13,7 +13,13 @@
     "next-i18next": "^11.0.0",
     "next-seo": "^5.4.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "ahooks": "^3.3.10",
+    "classnames": "^2.3.1",
+    "i18next": "^21.6.16",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "react-i18next": "^11.16.8",
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@types/node": "17.0.31",

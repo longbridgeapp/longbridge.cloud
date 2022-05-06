@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.main-container {
+  @apply px-10;
+}
+.main-content-width {
+  @apply max-w-7xl mx-auto;
+}
+.section-content-container {
+  @apply max-w-[1920px] mx-auto;
+}
+:root {
+  --bg_color_1: #F5F6F6;
+  --text_color_1_supplement: #464F56;
+  --brand_color: #5622CF;
+}
+.text-text_brand_color {
+  color: var(--brand_color);
+}
+.bg-brand_color {
+  background-color: var(--brand_color);
+}

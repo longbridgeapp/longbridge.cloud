@@ -1,0 +1,17 @@
+:local(.navs) {
+  .nav-item {
+    &.nav-item__selected {
+      color: var(--brand_color);
+    }
+    .nav-item__dropdown {
+      @apply pr-20;
+    }
+  }
+}
+:local(.header) {
+  .logo {
+    @media screen and (max-width: 1520px) {
+      @apply mr-20;
+    }
+  }
+}
