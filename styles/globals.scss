@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./tailwind.scss";
 
 .main-container {
   @apply px-10;
@@ -15,10 +13,26 @@
   --bg_color_1: #F5F6F6;
   --text_color_1_supplement: #464F56;
   --brand_color: #5622CF;
+  --text_color_2: #82888D;
+  --border_color: red;
+  --tag_border_color: #C7CACC;
+}
+* {
+  &::-webkit-scrollbar {
+    width: 2px;
+    height: 2px;
+  }
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-md;
+    background-color: var(--border_color);
+  }
 }
 .text-text_brand_color {
   color: var(--brand_color);
 }
 .bg-brand_color {
   background-color: var(--brand_color);
+}
+html {
+  font-family: PingFang SC;
 }
