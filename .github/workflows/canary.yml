@@ -23,8 +23,9 @@ jobs:
         run: yarn
 
       - name: build canary env out file
+        env:
+          PUBLIC_ASSET_PATH: https://static.longbridge.xyz/open-longbridge-cloud/
         run: |
-          export PUBLIC_ASSET_PATH=https://static.longbridge.xyz/open-longbridge-cloud/
           yarn build
 
       - name: upload canary out to s3
