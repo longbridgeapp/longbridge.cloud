@@ -32,6 +32,6 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.FE_S3_OPEN_STATIC_CANARY_ACCESS_KEY_SECRET }}
         run: |
           aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 sync ./out s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/ --exclude "*.map" --cache-control max-age=31536000
-          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/index.html --cache-control no-cache
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/en/index.html --cache-control no-cache
           aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/zh-CN/index.html --cache-control no-cache
-          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/zh-HK/index.html --cache-control no-cache
+          aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/index.html --cache-control no-cache
