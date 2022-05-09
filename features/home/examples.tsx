@@ -1,9 +1,6 @@
 import { useTranslation } from 'next-i18next'
-// eslint-disable-next-line import/no-unresolved
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-// eslint-disable-next-line import/no-unresolved
 import 'swiper/css'
-// eslint-disable-next-line import/no-unresolved
 import 'swiper/css/pagination'
 import { FC, HTMLAttributes, useEffect, useMemo } from 'react'
 import { useUpdate } from 'ahooks'

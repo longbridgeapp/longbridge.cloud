@@ -10,6 +10,7 @@ import { isServer } from '@/utils/common'
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
     <StaticRouter location={router.asPath}>
+      {/* @ts-ignore */}
       <Component {...pageProps} />
     </StaticRouter>
   )
@@ -23,7 +24,6 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
       <Head>
         <link rel="icon" type="image/x-icon" href="https://pub.lbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
       </Head>
-      {/*@ts-ignore*/}
       {isServer() ? nextRouter : feRouter}
     </div>
   )
