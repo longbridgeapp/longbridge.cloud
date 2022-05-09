@@ -1,4 +1,3 @@
-/* eslint-disable  */
 function webpackConfig(config, { webpack, isServer }) {
   config.plugins.push(
     new webpack.ProvidePlugin({
@@ -35,14 +34,10 @@ function webpackConfig(config, { webpack, isServer }) {
                 },
               }
             }
+            if (/resolve-url-loader/.test(l.loader)) l.options.sourceMap = false
           })
       })
   })
-
-  config.output.webassemblyModuleFilename = 'static/wasm/[modulehash].wasm'
-  // Since Webpack 5 doesn't enable WebAssembly by default, we should do it manually
-  config.experiments = { asyncWebAssembly: true, layers: true }
-
   return config
 }
 

@@ -5,9 +5,9 @@ import { FirstScreen } from '@/features/home/first-screen'
 import { HomeFeatures } from '@/features/home/features'
 import DivideDot from '@/components/divide-dot'
 import { HomeExamples } from '@/features/home/examples'
-import { i18nPaths } from '../../utils/i18n-paths'
-import i18nextConfig from '../../next-i18next.config'
-import { SEOMeta } from '../../utils/seo'
+import { i18nPaths } from '@/utils/i18n-paths'
+import i18nextConfig from '@/next-i18next.config'
+import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
