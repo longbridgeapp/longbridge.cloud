@@ -9,11 +9,11 @@ function useFeatures() {
   return useMemo(() => {
     return [
       {
-        desc: i18n.t('云原生、<br />微服务架构. '),
+        desc: i18n.t('云原生、<br />微服务架构。'),
         picture: 'https://pub.lbkrs.com/files/202205/GwaswnCk3WSQSRDU/1.png',
       },
       {
-        desc: i18n.t('多云、对接点的<br />行情灾备能力. '),
+        desc: i18n.t('多云、对接点的<br />行情灾备能力。'),
         picture: 'https://pub.lbkrs.com/files/202205/jY2uNADvyHuZHtoh/2.png',
       },
       {

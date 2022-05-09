@@ -15,7 +15,7 @@ function useFeatures() {
       {
         title: i18n.t('客户生命周期管理'),
         desc: i18n.t(
-          '与客户建立良好客户管理的核心是了解客户在每个生命周期节点的需求，通过WHALE CRM 能够高效管理用户状态，确保用户需求能够被管理以及被执行'
+          '与客户建立良好客户管理的核心是了解客户在每个生命周期节点的需求，通过 WHALE CRM 能够高效管理用户状态，确保用户需求能够被管理以及被执行'
         ),
         picture: 'https://pub.lbkrs.com/files/202205/UR6qffqL4krfeNuB/Vector__12_.png',
       },
