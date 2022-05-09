@@ -9,8 +9,8 @@ export const AboutGallery = () => {
     <div className="main-container py-[120px]">
       <div className={classNames('main-content-width')}>
         <h3 className="text-4xl">
-          <span className="font-bold">{i18n.t('abount_gallery_001')}</span>
-          <span className="font-normal">{i18n.t('abount_gallery_002')}</span>
+          <span className="font-bold">{i18n.t('about_gallery_001')}</span>
+          <span className="font-normal">{i18n.t('about_gallery_002')}</span>
         </h3>
         <div className="mt-8">
           <DivideDot size="large" />

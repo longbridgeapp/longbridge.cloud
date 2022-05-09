@@ -24,12 +24,12 @@ const AboutPage = () => {
       screenProps={{
         titleNowrap: true,
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
-        title: i18n.t('abount_page_001'),
+        title: i18n.t('about_page_001'),
         desc: (
           <span>
             {i18n.t('solutions_page_002')}
             <br />
-            {i18n.t('abount_page_002')}
+            {i18n.t('about_page_002')}
           </span>
         ),
       }}

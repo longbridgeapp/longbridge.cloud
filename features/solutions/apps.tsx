@@ -28,7 +28,7 @@ const AppCard: FC<{
           {services.map(service => {
             return (
               <li key={service.name} className="service-item">
-                <div className="flex items-center">
+                <div className="flex">
                   <div className="dot"></div>
                   {service.name}
                 </div>

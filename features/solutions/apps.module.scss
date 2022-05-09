@@ -21,17 +21,20 @@
         @apply leading-9;
         .dot {
           @apply w-1 h-1 rounded-full mr-3;
+
+          transform: translateY(16px);
           background-color: var(--brand_color);
         }
         .sub-dot {
           @apply w-1 h-1 rounded-full mr-3 border border-solid;
 
+          transform: translateY(16px);
           border-color: var(--brand_color);
         }
         .sub-service-list {
           @apply pl-4;
           .sub-service-item {
-            @apply flex items-center;
+            @apply flex text-[12px];
           }
         }
       }
