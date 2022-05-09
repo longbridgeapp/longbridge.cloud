@@ -23,6 +23,8 @@ jobs:
         run: yarn
 
       - name: build canary env out file
+        env:
+          PUBLIC_ASSET_PATH: https://static.longbridge.xyz/open-longbridge-cloud/
         run: |
           yarn build
 

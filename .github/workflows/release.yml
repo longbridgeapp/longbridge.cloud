@@ -22,6 +22,8 @@ jobs:
         run: yarn
 
       - name: build release env dist file
+        env:
+          PUBLIC_ASSET_PATH: https://static.lbkrs.com/open-longbridge-cloud/
         run: yarn build:release
 
       - name: upload dist to bj
@@ -29,7 +31,9 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_ACCESS_KEY_SECRET }}
         run: |
-          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 sync ./dist s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/longbridge-cloud/ --exclude "*.map" --cache-control max-age=31536000
-          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./dist/docs/index.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/longbridge-cloud/ --cache-control no-cache
-          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./dist/en/docs/index.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/longbridge-cloud/en/ --cache-control no-cache
-          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./dist/zh-HK/docs/index.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/longbridge-cloud/zh-HK/ --cache-control no-cache
+          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 sync ./out s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/ --exclude "*.map" --exclude "*.html" --cache-control max-age=31536000
+          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/en/index.html --cache-control no-cache
+          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/zh-CN/index.html --cache-control no-cache
+          aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/index.html --cache-control no-cache
+          cd ./out
+          for file in **/*.html; do aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
