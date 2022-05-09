@@ -1,4 +1,5 @@
 :local(.first-screen) {
+  background-size: cover;
   @screen md {
     .desc {
       @apply text-xl mt-6;

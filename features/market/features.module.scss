@@ -1,0 +1,26 @@
+:local(.features) {
+  @apply py-[120px];
+  .feature-item {
+    @apply flex-1 mr-5 last:mr-0;
+    border: 1px solid var(--border_color_1);
+    .desc {
+      @apply mt-4 text-xl font-normal;
+    }
+  }
+}
+:local(.services) {
+  @apply pb-[120px];
+  .service-item {
+    @apply flex mt-12 first:mt-0;
+    .cover {
+      @apply w-12 mr-9;
+    }
+    .title {
+      @apply text-xl font-normal;
+    }
+    .desc {
+      @apply text-base mt-3;
+      color: var(--text_color_2);
+    }
+  }
+}

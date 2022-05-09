@@ -12,10 +12,19 @@ export type IDropdownProps = {
   alwaysChildren?: boolean
   className?: string
   content?: React.ReactNode
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: any) => void
   value?: string | number
 }
-const Dropdown: React.FC<IDropdownProps> = ({ alwaysChildren = false, value, content, className, children, onChange, items = [] }) => {
+const Dropdown: React.FC<IDropdownProps> = ({
+  alwaysChildren = false,
+  value,
+  content,
+  className,
+  children,
+  onChange,
+  items = [],
+}) => {
   const [showContent, setShowContent] = React.useState(false)
   const selectedItem = items.find(item => item.value === value)
   const containerRef = React.useRef(null)

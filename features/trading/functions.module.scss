@@ -1,0 +1,40 @@
+:local(.functions) {
+  @apply py-[100px];
+
+  background-color: var(--bg_color_2);
+}
+$border: 1px solid var(--border_color_1);
+:local(.section) {
+  @apply mt-5 first:mt-0;
+  table {
+    @apply bg-white w-full;
+
+    border: $border;
+    tr {
+      border-bottom: $border;
+    }
+    td {
+      @apply py-6 text-center;
+
+      border-right: $border;
+      &.name-td {
+        @apply text-white;
+
+        background-color: var(--brand_color);
+        .name {
+        }
+        .note {
+          @apply opacity-70 mt-2 text-sm;
+        }
+        
+      }
+      &.function-desc {
+        color: var(--text_color_1_supplement);
+      }
+      &.function-name {
+        @apply font-medium;
+      }
+    }
+    
+  }
+}

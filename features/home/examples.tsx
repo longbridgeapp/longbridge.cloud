@@ -104,8 +104,20 @@ const Arrow: FC<
       })}
       {...res}
     >
-      {disabled && <img src="https://pub.lbkrs.com/files/202205/z8nDRutpB8ZrtAHz/Union__1_.png" alt="" />}
-      {!disabled && <img src="https://pub.lbkrs.com/files/202205/m9PDvy7BLG11UYfW/Union.png" alt="" />}
+      <img
+        className={classNames('', {
+          hidden: !disabled,
+        })}
+        src="https://pub.lbkrs.com/files/202205/z8nDRutpB8ZrtAHz/Union__1_.png"
+        alt=""
+      />
+      <img
+        className={classNames('', {
+          hidden: disabled,
+        })}
+        src="https://pub.lbkrs.com/files/202205/m9PDvy7BLG11UYfW/Union.png"
+        alt=""
+      />
     </div>
   )
 }
@@ -118,7 +130,10 @@ const Controls = () => {
   const hasNext = activeIndex < total - 1
   const hasPrev = activeIndex > 0
   useEffect(() => {
+    swiper.on('init', update)
     swiper.on('slideChangeTransitionEnd', update)
+    swiper.on('breakpoint', update)
+    setTimeout(update, 200)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
@@ -130,7 +145,7 @@ const Controls = () => {
             <div
               // eslint-disable-next-line react/no-array-index-key
               key={index}
-              className={classNames('h-1 w-9 mr-3 last:mr-0', {
+              className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all', {
                 active: index === activeIndex,
               })}
               style={{

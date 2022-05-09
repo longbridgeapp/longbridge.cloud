@@ -16,6 +16,9 @@
   --text_color_2: #82888D;
   --border_color: red;
   --tag_border_color: #C7CACC;
+  --border_color_1: #EAEBEC;
+  --text_color_3: #464F56;
+  --bg_color_2: #F8F9FA;
 }
 * {
   &::-webkit-scrollbar {
@@ -29,6 +32,9 @@
 }
 .text-text_brand_color {
   color: var(--brand_color);
+}
+.text-section-title {
+  @apply text-[40px] leading-[50px] font-medium;
 }
 .bg-brand_color {
   background-color: var(--brand_color);

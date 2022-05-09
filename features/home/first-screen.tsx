@@ -5,19 +5,21 @@ import { useTranslation } from 'react-i18next'
 import styles from './first-screen.module.scss'
 
 export const FirstScreen: FC<{
-  background: string
+  backgroundColor?: string
+  backgroundImage?: string
   title: string | ReactNode
   desc: string
   cover?: string
   contactUs?: boolean
-}> = ({ background, title, desc, contactUs = false, cover = '' }) => {
+}> = ({ backgroundColor, backgroundImage, title, desc, contactUs = false, cover = '' }) => {
   const i18n = useTranslation()
 
   return (
     <div
       className={styles['first-screen']}
       style={{
-        background,
+        backgroundColor,
+        backgroundImage,
       }}
     >
       <div className="section-content-container">

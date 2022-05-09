@@ -43,6 +43,8 @@ module.exports = {
     'max-classes-per-file': 'off',
     'import/prefer-default-export': 'off',
     'react/jsx-props-no-spreading': 'off',
+    'react/no-danger': 'off',
+    'no-unused-expressions': ['error', { allowShortCircuit: true, allowTernary: true }],
     'react/self-closing-comp': [
       'error',
       {
@@ -62,5 +64,9 @@ module.exports = {
         vue: 'never',
       },
     ],
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
   },
 }

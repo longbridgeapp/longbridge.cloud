@@ -24,7 +24,6 @@
 
     top: calc(100% + 4px);
     width: max-content;
-    border: 1px solid var(--border_color);
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
     animation: translate .15s;
     &.content-visible {

@@ -35,7 +35,7 @@ const IndexPage = () => {
     <div>
       <SEOMeta title="default" description="Longbridge Whale description" />
       <FirstScreen
-        background="var(--bg_color_1)"
+        backgroundColor="var(--bg_color_1)"
         title={title}
         desc={i18n.t(
           'A one-stop service provider for brokerage infrastructure, including systems, apps, and basic services for platform operations, with the lowest cost.'
