@@ -81,14 +81,14 @@ type IFeature = {
   title: string
   desc: string
 }
-const Section: FC<{
-  title: string
+export const BssSection: FC<{
+  title?: string
   features: IFeature[]
 }> = ({ title, features }) => {
   return (
     <div className="main-container">
       <div className={classNames(styles.features, 'main-content-width')}>
-        <h2 className="text-section-title">{title}</h2>
+        {title && <h2 className="text-section-title">{title}</h2>}
         <div className="mt-5">
           {features.map(feature => {
             return (
@@ -118,7 +118,7 @@ export const BssFeatures = () => {
   return (
     <div className="py-[60px]">
       {sections.map(section => {
-        return <Section key={section.title} title={section.title} features={section.features} />
+        return <BssSection key={section.title} title={section.title} features={section.features} />
       })}
     </div>
   )

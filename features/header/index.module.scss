@@ -1,6 +1,8 @@
 :local(.navs) {
   .nav-item {
-    &.nav-item__selected {
+    @apply transition-all text-black font-medium;
+    &.nav-item__selected,
+    &:hover {
       color: var(--brand_color);
     }
     .nav-item__dropdown {

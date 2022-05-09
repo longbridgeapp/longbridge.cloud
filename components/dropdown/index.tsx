@@ -3,18 +3,21 @@ import React from 'react'
 import { useClickAway } from 'ahooks'
 import styles from './index.module.scss'
 
+type IItem = {
+  label: string
+  shortLabel?: string | React.ReactNode
+  value: string | number
+}
 export type IDropdownProps = {
-  items?: {
-    label: string
-    shortLabel?: string | React.ReactNode
-    value: string | number
-  }[]
+  items?: IItem[]
   alwaysChildren?: boolean
   className?: string
   content?: React.ReactNode
   // eslint-disable-next-line no-unused-vars
   onChange?: (value: any) => void
   value?: string | number
+  trigger?: 'click' | 'hover'
+  renderItem?: (item: IItem) => React.ReactNode
 }
 const Dropdown: React.FC<IDropdownProps> = ({
   alwaysChildren = false,
@@ -23,7 +26,9 @@ const Dropdown: React.FC<IDropdownProps> = ({
   className,
   children,
   onChange,
+  trigger = 'click',
   items = [],
+  renderItem
 }) => {
   const [showContent, setShowContent] = React.useState(false)
   const selectedItem = items.find(item => item.value === value)
@@ -36,10 +41,25 @@ const Dropdown: React.FC<IDropdownProps> = ({
       onChange && onChange(newValue)
     }
   }
+  const onClick = () => {
+    if (trigger === 'click') {
+      setShowContent(!showContent)
+    }
+  }
+  const onMouseEnter = () => {
+    if (trigger === 'hover') {
+      setShowContent(true)
+    }
+  }
+  const onMouseLeave = () => {
+    if (trigger === 'hover') {
+      setShowContent(false)
+    }
+  }
 
   return (
-    <div className={classNames(styles.dropdown, className)} ref={containerRef}>
-      <div className="trigger" onClick={() => setShowContent(!showContent)}>
+    <div onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave} className={classNames(styles.dropdown, className)} ref={containerRef}>
+      <div className="trigger" onClick={onClick}>
         {selectedItem && !alwaysChildren ? (
           <div className="flex items-center">
             <span>{selectedItem.shortLabel || selectedItem.label}</span>
@@ -67,7 +87,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
                 })}
                 onClick={() => handleChange(item.value)}
               >
-                {item.label}
+                {renderItem ? renderItem(item) : item.label}
               </div>
             )
           })}

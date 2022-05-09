@@ -1,0 +1,23 @@
+:local(.features) {
+  @apply py-[120px];
+  .feature-item {
+    @apply flex items-center mt-36 first:mt-0;
+    &:nth-child(2n) {
+      .feature-right {
+        order: -1;
+      }
+    }
+    .feature-left,
+    .feature-right {
+      @apply flex-1;
+    }
+    // 奇数倒转
+    img {
+      @apply inline-block max-w-[420px] w-2/3;
+    }
+    .desc {
+      @apply text-3xl font-medium;
+      color: var(--text_color_2);
+    }
+  }
+}

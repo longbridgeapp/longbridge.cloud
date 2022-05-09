@@ -5,7 +5,6 @@ import { i18nPaths } from '@/utils/i18n-paths'
 import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
 import { PageLayout } from '@/features/common/page-layout'
-import { AboutGallery } from '@/features/about/gallery'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -16,15 +15,14 @@ export const getStaticProps = async (ctx: any) => ({
     ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
   },
 })
-const AboutPage = () => {
+const SolutionsPage = () => {
   const i18n = useTranslation()
 
   return (
     <PageLayout
       screenProps={{
-        titleNowrap: true,
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
-        title: i18n.t('关于长桥 WHALE'),
+        title: i18n.t('一站式解决方案'),
         desc: (
           <span>
             {i18n.t(
@@ -32,15 +30,14 @@ const AboutPage = () => {
             )}
             <br />
             {i18n.t(
-              'WHALE 为券商提供App，前、中、后台的一站式券商产品及解决方案，同时涵盖行情，资讯，基本面等数据服务；所有系统都是基于云端架构，WHALE 也是 SFC 目前唯一颁发 EDSP 之机构。Cloud Native保障了系统运营的高可靠性，同时免去了本地机房运维的高成本；提供了完整解决方案的同时，可以订阅每一个原子化的产品；WHALE的主旨是赋能生态，实现与合作伙伴的共赢。'
+              'LONGBRIDGE WHALE 提供了证券交易的全链路能力，包括了交易终端（含公版 App、White Label App）、前台业务系统（含 AMS / OMS / EMS / RMS / 交易员前台等）、清结算后台（出入金、清结算、交收、托管、公司行动等），也包括了这些系统部署所需的基础设施（混合部署、专线、带宽、弹性伸缩、灾备等），包括了为证券经纪人、交易员、RO、客服、风控、合规等多个运营角色提供的的系统管理产品 WAS (WHALE Admin System)。除此之外，通过 LONGBRIDGE 的最佳实践沉淀下来的平台运营工具，如：智能营销系统、运营活动搭建平台等也通过 SaaS 开放给客户。希望通过 WHALE SaaS 提供的一站式解决方案、原子化产品以及针对于不同客户的组合解决方案，能够让客户做一次真正的互联网券商升级，拥有自己运营用户的能力，拥有通过互联网获客的能力，具备更佳的市场竞争力，给用户带来更优使用体验。'
             )}
           </span>
         ),
       }}
     >
       <SEOMeta title="default" description="Longbridge Whale description" />
-      <AboutGallery />
     </PageLayout>
   )
 }
-export default AboutPage
+export default SolutionsPage

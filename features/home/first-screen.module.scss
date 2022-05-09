@@ -1,8 +1,8 @@
 :local(.first-screen) {
-  background-size: cover;
+  @apply bg-cover;
   @screen md {
     .desc {
-      @apply text-xl mt-6;
+      @apply text-xl mt-6 leading-9;
   
       color: var(--text_color_1_supplement);
     }

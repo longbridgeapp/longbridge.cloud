@@ -1,13 +1,13 @@
 import React from 'react'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
-import { FirstScreen } from '@/features/home/first-screen'
 import { HomeFeatures } from '@/features/home/features'
 import DivideDot from '@/components/divide-dot'
 import { HomeExamples } from '@/features/home/examples'
 import { i18nPaths } from '@/utils/i18n-paths'
 import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
+import { PageLayout } from '@/features/common/page-layout'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -32,19 +32,20 @@ const IndexPage = () => {
   )
 
   return (
-    <div>
-      <SEOMeta title="default" description="Longbridge Whale description" />
-      <FirstScreen
-        backgroundColor="var(--bg_color_1)"
-        title={title}
-        desc={i18n.t(
+    <PageLayout
+      screenProps={{
+        backgroundColor: 'var(--bg_color_1)',
+        title,
+        desc: i18n.t(
           'A one-stop service provider for brokerage infrastructure, including systems, apps, and basic services for platform operations, with the lowest cost.'
-        )}
-        cover="https://pub.lbkrs.com/files/202205/c4LPqwdQrmZ4VtLk/Group_627289.png"
-      />
+        ),
+        cover: 'https://pub.lbkrs.com/files/202205/c4LPqwdQrmZ4VtLk/Group_627289.png',
+      }}
+    >
+      <SEOMeta title="default" description="Longbridge Whale description" />
       <HomeFeatures />
       <HomeExamples />
-    </div>
+    </PageLayout>
   )
 }
 export default IndexPage

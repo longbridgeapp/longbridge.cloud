@@ -5,6 +5,8 @@ import MarketPage from '@/pages/[locale]/market'
 import BssPage from '@/pages/[locale]/bss'
 import CrmPage from '@/pages/[locale]/crm'
 import TradingPage from '@/pages/[locale]/trading'
+import SolutionsPage from '@/pages/[locale]/solutions'
+import AboutPage from '@/pages/[locale]/about'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -18,6 +20,8 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="bss" element={<BssPage {...pageProps} />} />
               <Route path="trading" element={<TradingPage {...pageProps} />} />
               <Route path="crm" element={<CrmPage {...pageProps} />} />
+              <Route path="solutions" element={<SolutionsPage {...pageProps} />} />
+              <Route path="about" element={<AboutPage {...pageProps} />} />
             </Route>
           </Fragment>
         )

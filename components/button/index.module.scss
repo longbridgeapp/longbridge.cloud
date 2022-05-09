@@ -1,7 +1,13 @@
 :local(.button) {
-  @apply flex items-center justify-center px-6 py-3;
+  @apply flex items-center justify-center;
+  &.button-large {
+    @apply px-6 py-3 text-xl;
+  }
+  &.button-medium {
+    @apply px-[22px] py-2.5;
+  }
   &.primary {
-    @apply text-white text-xl;
+    @apply text-white;
     background-color: var(--brand_color);
     &:hover {
       opacity: 0.8;

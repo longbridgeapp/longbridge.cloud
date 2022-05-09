@@ -17,12 +17,14 @@
     @apply cursor-pointer py-1 px-2 rounded-full text-base font-medium;
     &:hover {
       background-color: var(--dropdown-hover-bg);
+      
     }
+
   }
   .content {
     @apply hidden absolute right-0 py-2 bg-white min-w-full;
 
-    top: calc(100% + 4px);
+    top: calc(100%);
     width: max-content;
     box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
     animation: translate .15s;
@@ -31,7 +33,7 @@
     }
   }
   .dropdown-menu__item {
-    @apply px-5 py-3 cursor-pointer;
+    @apply px-5 py-3 cursor-pointer text-black font-normal;
 
     transition: all .2s;
     &:hover,

@@ -37,6 +37,9 @@ html {
 .text-text_brand_color {
   color: var(--brand_color);
 }
+.text-text_color_1_supplement {
+  color: var(--text_color_1_supplement);
+}
 .text-section-title {
   @apply text-[40px] leading-[50px] font-medium;
 }

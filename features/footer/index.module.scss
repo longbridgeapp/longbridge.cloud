@@ -1,0 +1,9 @@
+:local(.footer) {
+  @apply py-12;
+  color: var(--text_color_2);
+  a {
+    &:hover {
+      color: var(--brand_color);
+    }
+  }
+}
