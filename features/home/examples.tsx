@@ -155,7 +155,7 @@ function useExamples(): IExampleProps[] {
         logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
         cover: 'https://pub.lbkrs.com/files/202205/WVGhGV7smuP81kK8/charles-deluvio-Lks7vei-eAg-unsplash_2.png',
         desc: i18n.t(
-          '盈泰在与 WHALE 合作之前，需要负担高额的本地机房维护费用，系统费用。没有App，没有资讯，没有实时行情等，由于产品体验不好，只能通过经纪人电话下单，用户不断流失，一直处于亏损状态；与 WHALE 合作后，用户可以通过 App 实时看行情、资产、可以通过资讯，社区了解更多的投资信息，DARTs 也屡获新高。不仅用户留存率大大提高，同时获得了大量的新增用户。'
+          '盈泰在与 WHALE 合作之前，需要负担高额的本地机房维护费用，系统费用。没有 App，没有资讯，没有实时行情等，由于产品体验不好，只能通过经纪人电话下单，用户不断流失，一直处于亏损状态；与 WHALE 合作后，用户可以通过 App 实时看行情、资产、可以通过资讯，社区了解更多的投资信息，DARTs 也屡获新高。不仅用户留存率大大提高，同时获得了大量的新增用户。'
         ),
         functions: {
           app: i18n.t('Longport  App Free'),
@@ -170,7 +170,7 @@ function useExamples(): IExampleProps[] {
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
         cover: 'https://pub.lbkrs.com/files/202205/1qojMBP3AxMRdTNr/Rectangle.png',
         desc: i18n.t(
-          'LONGBRIDGE 是 WHALE 全能力的展示，通过 WHALE 定制化的 APP，提供了“发现-认知-交易”完整的用户旅程；其中行业内独特的供应链数据让用户快速了解行业上下游，全面的判断股票的投资潜力；“全景模式”更是让普通用户能够容易地读懂基本面信息，而不用费解的去研究什么是市净率，市盈率等生涩的金融词汇；LONGBRDGE 通过 WHALE 提供的邀请，拼团，秒杀等获客工具 2021 Q4 在香港本地获得的 2.5 万的有资产用户，5 万开户用户，10 万注册用户。通过股票卡，免佣卡，等运营工具实现了 60 天有资产用户 50% 的交易转化率。'
+          'LONGBRIDGE 是 WHALE 全能力的展示，通过 WHALE 定制化的 APP，提供了“发现 - 认知 - 交易”完整的用户旅程；其中行业内独特的供应链数据让用户快速了解行业上下游，全面的判断股票的投资潜力；“全景模式”更是让普通用户能够容易地读懂基本面信息，而不用费解的去研究什么是市净率，市盈率等生涩的金融词汇；LONGBRDGE 通过 WHALE 提供的邀请，拼团，秒杀等获客工具 2021 Q4 在香港本地获得的 2.5 万的有资产用户，5 万开户用户，10 万注册用户。通过股票卡，免佣卡，等运营工具实现了 60 天有资产用户 50% 的交易转化率。'
         ),
         functions: {
           app: i18n.t('定制化 App'),
