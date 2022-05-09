@@ -7,8 +7,8 @@ const DivideDot: FC<{
 }> = ({ size = 'small' }) => {
   return (
     <div className={classNames(styles['divide-dot'], 'mt-5 flex', size)}>
-      <div className="bg-brand_color left"></div>
-      <div className="bg-brand_color ml-4 right"></div>
+      <div className="left"></div>
+      <div className="ml-4 right"></div>
     </div>
   )
 }

@@ -13,6 +13,7 @@ export type IFirstScreenProps = {
   desc: string | ReactNode
   cover?: string
   contactUs?: boolean
+  contentFLex?: string
 }
 
 export const FirstScreen: FC<IFirstScreenProps> = ({
@@ -22,6 +23,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
   desc,
   contactUs = false,
   cover = '',
+  contentFLex = '1',
   titleNowrap = false,
 }) => {
   const i18n = useTranslation()
@@ -38,11 +40,19 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
         <Header />
         <div className="main-container pb-40 pt-20">
           <div className="flex main-content-width items-center">
-            <div className="flex-1">
-              <h2 className={classNames('title', {
-                'whitespace-nowrap': titleNowrap,
-              })}>{title}</h2>
-              <p className="desc">{desc}</p>
+            <div
+              style={{
+                flex: contentFLex,
+              }}
+            >
+              <h2
+                className={classNames('title', {
+                  'whitespace-nowrap': titleNowrap,
+                })}
+              >
+                {title}
+              </h2>
+              <p className=" desc">{desc}</p>
               {contactUs && <Button className="mt-8">{i18n.t('Talk to Us')}</Button>}
             </div>
             <div className="flex-1 ml-16">{cover && <img src={cover} alt="cover" />}</div>

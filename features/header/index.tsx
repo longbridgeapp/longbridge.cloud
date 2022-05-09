@@ -43,7 +43,7 @@ function useNavs() {
             label: i18n.t('一站式解决方案'),
           },
           {
-            value: '/solutions-app',
+            value: '/solutions/app',
             label: i18n.t('APP 解决方案'),
           },
         ],

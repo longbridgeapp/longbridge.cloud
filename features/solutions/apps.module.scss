@@ -1,0 +1,61 @@
+:local(.card) {
+  @apply px-12 py-20;
+  color: var(--text_color_1_supplement);
+  background-color: var(--bg_color_3);
+  .name {
+    @apply font-bold text-[54px] leading-[68px];
+  }
+  .desc {
+    @apply text-xl mt-5;
+  }
+  .services {
+    @apply pt-10;
+
+    border-top: 1px dashed var(--tag_border_color);
+    .title {
+      @apply text-black text-2xl;
+    }
+    .service-list {
+      @apply mt-4;
+      .service-item {
+        @apply leading-9;
+        .dot {
+          @apply w-1 h-1 rounded-full mr-3;
+          background-color: var(--brand_color);
+        }
+        .sub-dot {
+          @apply w-1 h-1 rounded-full mr-3 border border-solid;
+
+          border-color: var(--brand_color);
+        }
+        .sub-service-list {
+          @apply pl-4;
+          .sub-service-item {
+            @apply flex items-center;
+          }
+        }
+      }
+    }
+  }
+  &.brand-theme {
+    @apply text-white;
+    background-color: var(--brand_color);
+    --divide_dot_color: #fff;
+    .services {
+      border-top: 1px dashed #7350FF;
+      .title {
+        @apply text-white;
+      }
+      .service-list {
+        .service-item {
+          .dot {
+            background-color: #fff;
+          }
+          .sub-dot {
+            border-color: #fff;
+          }
+        }
+      }
+    }
+  }
+}

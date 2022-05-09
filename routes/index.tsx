@@ -7,6 +7,7 @@ import CrmPage from '@/pages/[locale]/crm'
 import TradingPage from '@/pages/[locale]/trading'
 import SolutionsPage from '@/pages/[locale]/solutions'
 import AboutPage from '@/pages/[locale]/about'
+import AppSolutionPage from '@/pages/[locale]/solutions/app'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -21,6 +22,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="trading" element={<TradingPage {...pageProps} />} />
               <Route path="crm" element={<CrmPage {...pageProps} />} />
               <Route path="solutions" element={<SolutionsPage {...pageProps} />} />
+              <Route path="solutions/app" element={<AppSolutionPage {...pageProps} />} />
               <Route path="about" element={<AboutPage {...pageProps} />} />
             </Route>
           </Fragment>

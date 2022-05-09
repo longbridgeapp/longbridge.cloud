@@ -1,0 +1,26 @@
+:local(.section) {
+  @apply flex items-start py-8;
+  border-bottom: 1px solid var(--border_color_1);
+  .icon {
+    @apply w-12;
+  }
+  .main {
+    @apply flex flex-col flex-1 ml-12;
+    .title{
+      @apply font-medium text-xl;
+    }
+    .features {
+      @apply flex flex-wrap mt-4;
+      .feature-item {
+        @apply w-1/3 mt-2 flex items-center;
+
+        color: var(--text_color_3);
+        .dot {
+          @apply w-1 h-1 rounded-full mr-3;
+          background-color: var(--brand_color);
+
+        }
+      }
+    }
+  }
+}

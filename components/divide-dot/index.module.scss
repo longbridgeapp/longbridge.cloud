@@ -1,4 +1,7 @@
 :local(.divide-dot) {
+  > * {
+    background-color: var(--divide_dot_color);
+  }
   &.large {
     .left,
     .right {

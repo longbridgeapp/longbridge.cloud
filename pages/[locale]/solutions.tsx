@@ -5,6 +5,7 @@ import { i18nPaths } from '@/utils/i18n-paths'
 import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
 import { PageLayout } from '@/features/common/page-layout'
+import { SolutionFeatures } from '@/features/solutions/features'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -21,8 +22,9 @@ const SolutionsPage = () => {
   return (
     <PageLayout
       screenProps={{
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
+        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
         title: i18n.t('一站式解决方案'),
+        contentFLex: '2.5',
         desc: (
           <span>
             {i18n.t(
@@ -37,6 +39,7 @@ const SolutionsPage = () => {
       }}
     >
       <SEOMeta title="default" description="Longbridge Whale description" />
+      <SolutionFeatures />
     </PageLayout>
   )
 }
