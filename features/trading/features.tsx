@@ -5,17 +5,17 @@ import { PictureTextCard } from '../common/picture-text-card'
 import styles from './features.module.scss'
 
 function useFeatures() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        title: i18n.t('多端支持'),
-        desc: i18n.t('支持 Windows、macOS、Linux、iOS、Android、Web'),
+        title: i18n.t('trading_features_001'),
+        desc: i18n.t('trading_features_002'),
         picture: 'https://pub.lbkrs.com/files/202205/wSRoysh88oprXzTU/20220509-134745.png',
       },
       {
-        title: i18n.t('极佳的性能'),
-        desc: i18n.t('核心引擎采用 Rust 实现，健壮、小巧、安全，同时提供了极佳的性能'),
+        title: i18n.t('trading_features_003'),
+        desc: i18n.t('trading_features_004'),
         picture: 'https://pub.lbkrs.com/files/202205/V6ohUmpmiXhTCrEt/20220509-134805.png',
       },
     ]

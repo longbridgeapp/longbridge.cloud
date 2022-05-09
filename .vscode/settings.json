@@ -2,5 +2,14 @@
   "editor.formatOnSave": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.enabledFrameworks": [
+    "i18next"
+  ],
+  "i18n-ally.localesPaths": [
+    "./public/locales"
+  ],
+  "i18n-ally.extract.keygenStrategy": "empty",
+  "i18n-ally.keystyle": "flat"
 }

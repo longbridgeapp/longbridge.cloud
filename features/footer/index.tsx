@@ -3,10 +3,8 @@ import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 
-
-
 const Footer: FC = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   const socials = useMemo(() => {
     return [
       {
@@ -22,13 +20,13 @@ const Footer: FC = () => {
   const links = useMemo(() => {
     return [
       {
-        label: i18n.t('隐私政策'),
+        label: i18n.t('footer_001'),
         href: '/about',
       },
       {
-        label: i18n.t('条款'),
+        label: i18n.t('footer_002'),
         href: '/contact',
-      }
+      },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -39,11 +37,11 @@ const Footer: FC = () => {
         <div className="flex justify-between items-center">
           <div className="flex">
             <div className="flex flex-col">
-              <span className="text-sm">{i18n.t('Tel')}</span>
+              <span className="text-sm">{i18n.t('footer_004')}</span>
               <span className="mt-2 font-medium">400-024-2688</span>
             </div>
             <div className="flex flex-col ml-12">
-              <span className="text-sm">{i18n.t('Mail')}</span>
+              <span className="text-sm">{i18n.t('footer_003')}</span>
               <span className="mt-2 font-medium">Support@Longbridge-inc.com</span>
             </div>
           </div>
@@ -59,12 +57,14 @@ const Footer: FC = () => {
         </div>
         <div className="flex justify-between items-center mt-6">
           <div className="text-xs">
-            <span>{i18n.t('© 2022 LONGBRIDGE WHALE. All rights reserved.')}</span>
+            <span>{i18n.t('footer_005')}</span>
           </div>
           <div>
             {links.map(({ label, href }) => {
               return (
-                <a className="text-xs ml-12 first:ml-0" href={href} key={label}>{label}</a>
+                <a className="text-xs ml-12 first:ml-0" href={href} key={label}>
+                  {label}
+                </a>
               )
             })}
           </div>

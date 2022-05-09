@@ -5,23 +5,23 @@ import { PictureTextCard } from '../common/picture-text-card'
 import styles from './features.module.scss'
 
 function useFeatures() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        desc: i18n.t('云原生、<br />微服务架构。'),
+        desc: i18n.t('market_features_001'),
         picture: 'https://pub.lbkrs.com/files/202205/GwaswnCk3WSQSRDU/1.png',
       },
       {
-        desc: i18n.t('多云、对接点的<br />行情灾备能力。'),
+        desc: i18n.t('market_features_002'),
         picture: 'https://pub.lbkrs.com/files/202205/jY2uNADvyHuZHtoh/2.png',
       },
       {
-        desc: i18n.t('自研高性能行情传输协议，<br />微秒级行情处理能力'),
+        desc: i18n.t('market_features_003'),
         picture: 'https://pub.lbkrs.com/files/202205/kqQQxChD8MdMs8o1/3.png',
       },
       {
-        desc: i18n.t('全内存行情数据存储方案，<br />微秒级的查询性能'),
+        desc: i18n.t('market_features_004'),
         picture: 'https://pub.lbkrs.com/files/202205/kPYAnqDPJz1P6Kds/4.png',
       },
     ]
@@ -31,7 +31,7 @@ function useFeatures() {
 
 export const MarketFeatures = () => {
   const features = useFeatures()
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className="main-container">
@@ -39,7 +39,7 @@ export const MarketFeatures = () => {
         <h2
           className="text-[40px] leading-[50px] font-normal"
           dangerouslySetInnerHTML={{
-            __html: i18n.t('Market Data, <br />Fast Because Of The Cloud'),
+            __html: i18n.t('market_features_005'),
           }}
         ></h2>
         <div className="flex justify-between mt-14">
@@ -52,33 +52,27 @@ export const MarketFeatures = () => {
   )
 }
 function useServices() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        title: i18n.t('行情数据服务'),
-        desc: i18n.t(
-          '提供包括美股、港股、新加坡股、A 股市场等各市场全面的行情，可通过 Open API、SDK、App 等多种方式接入。'
-        ),
+        title: i18n.t('market_features_006'),
+        desc: i18n.t('market_features_007'),
         picture: 'https://pub.lbkrs.com/files/202205/tBYE9zxz9wvojoHb/Vector.png',
       },
       {
-        title: i18n.t('行情商店'),
-        desc: i18n.t('满足用户对高级行情的需求，提供美国、香港、沪深、新加坡四大市场的实时行情数据及高级行情。'),
+        title: i18n.t('market_features_008'),
+        desc: i18n.t('market_features_009'),
         picture: 'https://pub.lbkrs.com/files/202205/ipYi7bC7b9rkm6gR/Vector__1_.png',
       },
       {
-        title: i18n.t('行情权限管理'),
-        desc: i18n.t(
-          '根据用户条件终端、市场、地区等对用户可使用的行情等级进行配置，并结合行情商店系统，满足交易所合规和用户行情的双重需求。'
-        ),
+        title: i18n.t('market_features_010'),
+        desc: i18n.t('market_features_011'),
         picture: 'https://pub.lbkrs.com/files/202205/hkk7u7VYvA1223Kt/Vector__2_.png',
       },
       {
-        title: i18n.t('行情成本管理'),
-        desc: i18n.t(
-          '提供独立的行情成本管理系统管控需向交易所上缴的行情使用成本，并提供符合交易所格式的申报数据便于申报。'
-        ),
+        title: i18n.t('market_features_012'),
+        desc: i18n.t('market_features_013'),
         picture: 'https://pub.lbkrs.com/files/202205/3p1Qa4T8k3rLN6LL/Vector__3_.png',
       },
     ]
@@ -87,7 +81,7 @@ function useServices() {
 }
 export const MarketServices = () => {
   const services = useServices()
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className="main-container">
@@ -95,7 +89,7 @@ export const MarketServices = () => {
         <h2
           className="text-section-title"
           dangerouslySetInnerHTML={{
-            __html: i18n.t('Global Market, Global Service'),
+            __html: i18n.t('market_features_014'),
           }}
         ></h2>
         <div className="flex justify-between items-center mt-14">

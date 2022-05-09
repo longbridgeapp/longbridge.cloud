@@ -18,22 +18,22 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const BssPage = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <PageLayout
       screenProps={{
         contactUs: true,
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/SSpgCXC62ZPfstQ2/bss.png)',
-        title: i18n.t('WHALE BSS'),
+        title: i18n.t('bss_page_003'),
         desc: i18n.t(
-          'WHALE BSS 是全新一代基于云原生架构的一站式交易结算系统，覆盖了从交易到结算的全部流程。支持不同市场、多投资品、多币种的交易能力，满足券商灵活的业务模式。'
+          'bss_page_001'
         ),
       }}
     >
       <SEOMeta title="default" description="Longbridge Whale description" />
       <BssFeatures />
-      <ContactBanner title={i18n.t('Get Started With WHALE BSS')} desc={i18n.t('Try Whale Bss for free, and explore all the tools and services you need to start')} />
+      <ContactBanner title={i18n.t('bss_page_002')} desc={i18n.t('Try Whale Bss for free, and explore all the tools and services you need to start')} />
     </PageLayout>
   )
 }

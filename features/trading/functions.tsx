@@ -4,64 +4,64 @@ import { useTranslation } from 'react-i18next'
 import styles from './functions.module.scss'
 
 function useSections() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        name: i18n.t('证券交易业务'),
-        note: i18n.t('香港 1 号牌 '),
+        name: i18n.t('trading_functions_001'),
+        note: i18n.t('trading_functions_002'),
         functions: [
           {
-            name: i18n.t('股票交易'),
-            desc: i18n.t('美/港股，美股盘前/后'),
+            name: i18n.t('trading_functions_003'),
+            desc: i18n.t('trading_functions_004'),
           },
           {
-            name: i18n.t('订单类型'),
-            desc: i18n.t('8 种，即将扩展到 10 种  '),
+            name: i18n.t('trading_functions_005'),
+            desc: i18n.t('trading_functions_006'),
           },
           {
-            name: i18n.t('期权交易'),
-            desc: i18n.t('支持组合保证金 '),
+            name: i18n.t('trading_functions_007'),
+            desc: i18n.t('trading_functions_008'),
           },
           {
-            name: i18n.t('公募基金'),
-            desc: i18n.t('数十支美元及港币基金'),
+            name: i18n.t('trading_functions_009'),
+            desc: i18n.t('trading_functions_010'),
           },
           {
-            name: i18n.t('私募基金'),
-            desc: i18n.t('世界知管理人以及涵盖多个行业的股票私募基金'),
+            name: i18n.t('trading_functions_011'),
+            desc: i18n.t('trading_functions_012'),
           },
           {
-            name: i18n.t('机构账户'),
-            desc: i18n.t('阶梯费率，API 交易'),
+            name: i18n.t('trading_functions_013'),
+            desc: i18n.t('trading_functions_014'),
           },
           {
-            name: i18n.t('IPO'),
-            desc: i18n.t('标准港股新股认购，美股新股认购，港股国际配售'),
+            name: i18n.t('trading_functions_015'),
+            desc: i18n.t('trading_functions_016'),
           },
         ],
       },
       {
-        name: i18n.t('投资顾问业务'),
-        note: i18n.t('香港 4 号牌  '),
+        name: i18n.t('trading_functions_017'),
+        note: i18n.t('trading_functions_018'),
         functions: [
           {
-            name: i18n.t('投研'),
-            desc: i18n.t('海豚投研'),
+            name: i18n.t('trading_functions_019'),
+            desc: i18n.t('trading_functions_020'),
           },
           {
-            name: i18n.t('股票评分'),
-            desc: i18n.t('全景模式'),
+            name: i18n.t('trading_functions_021'),
+            desc: i18n.t('trading_functions_022'),
           },
         ],
       },
       {
-        name: i18n.t('程序化交易业务'),
-        note: i18n.t('香港 4 号牌 '),
+        name: i18n.t('trading_functions_023'),
+        note: i18n.t('trading_functions_018'),
         functions: [
           {
-            name: i18n.t('暗盘'),
-            desc: i18n.t('TPS : 20000'),
+            name: i18n.t('trading_functions_024'),
+            desc: i18n.t('trading_functions_025'),
           },
         ],
       },
@@ -111,12 +111,12 @@ const Section: FC<{
 
 export const TradingFunctions = () => {
   const sections = useSections()
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className={classNames(styles.functions, 'main-container')}>
       <div className={classNames('main-content-width')}>
-        <h3 className="text-section-title">{i18n.t('丰富的功能')}</h3>
+        <h3 className="text-section-title">{i18n.t('trading_functions_026')}</h3>
         <div className="mt-[60px]">
           {sections.map(({ name, note, functions }) => {
             return <Section name={name} note={note} key={name} functions={functions} />

@@ -25,9 +25,9 @@ export const LocaleDropdown: FC = () => {
       },
     ]
   }, [])
-  const { i18n } = useTranslation()
+  const { i18n } = useTranslation('common')
   const [locale, setLocale] = useState(i18n.language)
-  const pathLocale = i18n.language !== 'zh-CN' ? i18n.language : ''
+  const pathLocale = i18n.language
   const onChange = (value: string) => {
     Cookies.set('locale', value, {
       domain: getRootDomain(location.hostname),
@@ -40,11 +40,10 @@ export const LocaleDropdown: FC = () => {
     } else {
       pathname = `/${value}${pathname}`
     }
-    pathname = pathname.replace('/zh-CN', '')
     const url = new URL(location.href)
     url.pathname = pathname
     location.href = url.toString()
   }
 
-  return <Dropdown  items={items} value={locale} onChange={onChange} />
+  return <Dropdown items={items} value={locale} onChange={onChange} />
 }

@@ -9,53 +9,53 @@ import styles from './index.module.scss'
 import { LocaleDropdown } from './locale-dropdown'
 
 function useNavs() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
         value: '/',
-        label: i18n.t('产品'),
+        label: i18n.t('header_nav_001'),
         children: [
           {
             value: '/market',
-            label: i18n.t('Whale Market Data'),
+            label: i18n.t('header_nav_002'),
           },
           {
             value: '/bss',
-            label: i18n.t('Whale BSS'),
+            label: i18n.t('header_nav_003'),
           },
           {
             value: '/trading',
-            label: i18n.t('Trading Platform'),
+            label: i18n.t('header_nav_004'),
           },
           {
             value: '/crm',
-            label: i18n.t('Whale CRM'),
+            label: i18n.t('header_nav_005'),
           },
         ],
       },
       {
         value: '/solutions ',
-        label: i18n.t('解决方案'),
+        label: i18n.t('header_nav_006'),
         children: [
           {
             value: '/solutions',
-            label: i18n.t('一站式解决方案'),
+            label: i18n.t('solutions_page_001'),
           },
           {
             value: '/solutions/app',
-            label: i18n.t('APP 解决方案'),
+            label: i18n.t('solutions_app_page_001'),
           },
         ],
       },
       {
         value: '/about',
-        label: i18n.t('关于我们'),
+        label: i18n.t('header_nav_007'),
         children: [],
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []) 
+  }, [])
 }
 const Navs = () => {
   const navs = useNavs()

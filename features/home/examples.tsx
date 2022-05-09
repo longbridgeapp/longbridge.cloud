@@ -16,27 +16,27 @@ type IExampleFunctions = {
 }
 
 function useExampleFunctionColumns() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        title: i18n.t('APP'),
+        title: i18n.t('home_examples_001'),
         prop: 'app',
       },
       {
-        title: i18n.t('美港股实时行情'),
+        title: i18n.t('home_examples_002'),
         prop: 'quotation',
       },
       {
-        title: i18n.t('系统'),
+        title: i18n.t('home_examples_003'),
         prop: 'system',
       },
       {
-        title: i18n.t('社区'),
+        title: i18n.t('home_examples_004'),
         prop: 'social',
       },
       {
-        title: i18n.t('资讯'),
+        title: i18n.t('home_examples_005'),
         prop: 'news',
       },
     ]
@@ -157,20 +157,18 @@ const Controls = () => {
   )
 }
 function useExamples(): IExampleProps[] {
-  const i18n = useTranslation()
-  const free = i18n.t('Free')
+  const i18n = useTranslation('common')
+  const free = i18n.t('home_examples_006')
 
   return useMemo(() => {
     const examples: IExampleProps[] = [
       {
-        name: 'WINTECH SECURITIES LTD. ',
+        name: i18n.t('home_examples_009'),
         logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
         cover: 'https://pub.lbkrs.com/files/202205/WVGhGV7smuP81kK8/charles-deluvio-Lks7vei-eAg-unsplash_2.png',
-        desc: i18n.t(
-          '盈泰在与 WHALE 合作之前，需要负担高额的本地机房维护费用，系统费用。没有 App，没有资讯，没有实时行情等，由于产品体验不好，只能通过经纪人电话下单，用户不断流失，一直处于亏损状态；与 WHALE 合作后，用户可以通过 App 实时看行情、资产、可以通过资讯，社区了解更多的投资信息，DARTs 也屡获新高。不仅用户留存率大大提高，同时获得了大量的新增用户。'
-        ),
+        desc: i18n.t('home_examples_007'),
         functions: {
-          app: i18n.t('Longport  App Free'),
+          app: i18n.t('home_examples_008'),
           quotation: free,
           system: free,
           social: free,
@@ -178,16 +176,14 @@ function useExamples(): IExampleProps[] {
         },
       },
       {
-        name: 'LONBRIDGE.',
+        name: i18n.t('home_examples_010'),
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
         cover: 'https://pub.lbkrs.com/files/202205/1qojMBP3AxMRdTNr/Rectangle.png',
-        desc: i18n.t(
-          'LONGBRIDGE 是 WHALE 全能力的展示，通过 WHALE 定制化的 APP，提供了“发现 - 认知 - 交易”完整的用户旅程；其中行业内独特的供应链数据让用户快速了解行业上下游，全面的判断股票的投资潜力；“全景模式”更是让普通用户能够容易地读懂基本面信息，而不用费解的去研究什么是市净率，市盈率等生涩的金融词汇；LONGBRDGE 通过 WHALE 提供的邀请，拼团，秒杀等获客工具 2021 Q4 在香港本地获得的 2.5 万的有资产用户，5 万开户用户，10 万注册用户。通过股票卡，免佣卡，等运营工具实现了 60 天有资产用户 50% 的交易转化率。'
-        ),
+        desc: i18n.t('home_examples_011'),
         functions: {
-          app: i18n.t('定制化 App'),
-          quotation: i18n.t('订阅收费'),
-          system: i18n.t('2 港币/用户'),
+          app: i18n.t('home_examples_012'),
+          quotation: i18n.t('home_examples_013'),
+          system: i18n.t('home_examples_014'),
           social: free,
           news: free,
         },
@@ -224,15 +220,15 @@ const Examples = () => {
 }
 
 export const HomeExamples = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className={styles.container}>
       <div className="section-content-container">
         <div className="main-container !pr-0">
           <div>
-            <span className="label text-text_brand_color text-2xl">{i18n.t('Best Practice')}</span>
-            <h3 className="font-normal text-[40px] mt-6">{i18n.t('They all chose LONGBRIDGE WHALE')}</h3>
+            <span className="label text-text_brand_color text-2xl">{i18n.t('home_examples_015')}</span>
+            <h3 className="font-normal text-[40px] mt-6">{i18n.t('home_examples_016')}</h3>
             <div className="mt-[60px]">
               <Examples />
             </div>

@@ -17,23 +17,19 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const AboutPage = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <PageLayout
       screenProps={{
         titleNowrap: true,
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
-        title: i18n.t('关于长桥 WHALE'),
+        title: i18n.t('abount_page_001'),
         desc: (
           <span>
-            {i18n.t(
-              'LONGBRIDGE WHALE（簡稱 WHALE）成立於 2021 年 3 月，是由來自新加坡的長橋集團旗下長橋科技研發的一站式互联网證券交易云服務商，並由來自新加坡和香港的資深金融管理者，以及來自阿里巴巴、字節跳動等國際科技巨頭企業技術專才組成的創始團隊成立推出創辦的。'
-            )}
+            {i18n.t('solutions_page_002')}
             <br />
-            {i18n.t(
-              'WHALE 为券商提供 App，前、中、后台的一站式券商产品及解决方案，同时涵盖行情，资讯，基本面等数据服务；所有系统都是基于云端架构，WHALE 也是 SFC 目前唯一颁发 EDSP 之机构。Cloud Native 保障了系统运营的高可靠性，同时免去了本地机房运维的高成本；提供了完整解决方案的同时，可以订阅每一个原子化的产品；WHALE 的主旨是赋能生态，实现与合作伙伴的共赢。'
-            )}
+            {i18n.t('abount_page_002')}
           </span>
         ),
       }}

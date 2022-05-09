@@ -1,16 +1,16 @@
-import DivideDot from "@/components/divide-dot"
-import classNames from "classnames"
-import { useTranslation } from "next-i18next"
+import DivideDot from '@/components/divide-dot'
+import classNames from 'classnames'
+import { useTranslation } from 'next-i18next'
 
 export const AboutGallery = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className="main-container py-[120px]">
       <div className={classNames('main-content-width')}>
         <h3 className="text-4xl">
-          <span className="font-bold">{i18n.t('LONGBRIDGE')}</span>
-          <span className="font-normal">{i18n.t('Global Office')}</span>
+          <span className="font-bold">{i18n.t('abount_gallery_001')}</span>
+          <span className="font-normal">{i18n.t('abount_gallery_002')}</span>
         </h3>
         <div className="mt-8">
           <DivideDot size="large" />

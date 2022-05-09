@@ -6,7 +6,7 @@ const ContactBanner: FC<{
   title?: string
   desc: string
 }> = ({ title, desc }) => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div
@@ -18,7 +18,9 @@ const ContactBanner: FC<{
       <div className="main-content-width">
         <h3 className="text-3xl font-medium">{title}</h3>
         <p className="text-xl mt-5 text-text_color_1_supplement">{desc}</p>
-        <Button size="medium" className="mt-6">{i18n.t('Talk to Us')}</Button>
+        <Button size="medium" className="mt-6">
+          {i18n.t('home_first_screen_001')}
+        </Button>
       </div>
     </div>
   )

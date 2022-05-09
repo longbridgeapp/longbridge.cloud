@@ -4,65 +4,70 @@ import { useTranslation } from 'react-i18next'
 import styles from './features.module.scss'
 
 function useSections() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        title: i18n.t('最佳体验的交易终端'),
+        title: i18n.t('solutions_features_001'),
         picture: 'https://pub.lbkrs.com/files/202205/78iwM4XxJkpDfBZk/Vector-1.png',
         features: [
-          i18n.t('面向 Global 用户设计'),
-          i18n.t('基于算法的信息步速分层分发'),
-          i18n.t('分层用户交易体验'),
-          i18n.t('全平台支持'),
-          i18n.t('屡获殊荣'),
+          i18n.t('solutions_features_002'),
+          i18n.t('solutions_features_003'),
+          i18n.t('solutions_features_004'),
+          i18n.t('solutions_features_005'),
+          i18n.t('solutions_features_006'),
         ],
       },
       {
-        title: i18n.t('极速交易系统'),
+        title: i18n.t('solutions_features_007'),
         picture: 'https://pub.lbkrs.com/files/202205/nD8KJU7wNcny2Dh1/Vector-2.png',
         features: [
-          i18n.t('全内存可弹性伸缩交易系统'),
-          i18n.t('全平台支持'),
-          i18n.t('多上手订单路由执行能力'),
-          i18n.t('自动灵活的风控能力'),
-          i18n.t('最快 10 ms 的订单处理能力'),
+          i18n.t('solutions_features_008'),
+          i18n.t('solutions_features_005'),
+          i18n.t('solutions_features_009'),
+          i18n.t('solutions_features_010'),
+          i18n.t('solutions_features_011'),
         ],
       },
       {
-        title: i18n.t('高效清结算体系'),
+        title: i18n.t('solutions_features_012'),
         picture: 'https://pub.lbkrs.com/files/202205/S1kDuN3w4EPuWjMD/Vector-3.png',
         features: [
-          i18n.t('连接数十家银行机构'),
-          i18n.t('灵活全面的公司行动支持'),
-          i18n.t('极具效率的对唱和财务系统支持'),
-          i18n.t('准实时的自动化出入金'),
+          i18n.t('solutions_features_013'),
+          i18n.t('solutions_features_014'),
+          i18n.t('solutions_features_015'),
+          i18n.t('solutions_features_016'),
         ],
       },
       {
-        title: i18n.t('智能业务系统'),
+        title: i18n.t('solutions_features_017'),
         picture: 'https://pub.lbkrs.com/files/202205/p6ym1pc6CQrKz6aw/Vector-4.png',
         features: [
-          i18n.t('互联网用户增长最佳实践'),
-          i18n.t('多市场渠道归因获客来源'),
-          i18n.t('实时用户标签分群和广告投放'),
-          i18n.t('丰富的市场及用户运营手段，如卡券权益，拼团等产品化的运营工具'),
+          i18n.t('solutions_features_018'),
+          i18n.t('solutions_features_019'),
+          i18n.t('solutions_features_020'),
+          i18n.t('solutions_features_021'),
         ],
       },
       {
-        title: i18n.t('数据支撑中台'),
+        title: i18n.t('solutions_features_022'),
         picture: 'https://pub.lbkrs.com/files/202205/q8y6r4HAFL52kZUK/Vector-5.png',
         features: [
-          i18n.t('实时、离线报表服务'),
-          i18n.t('股票资产治理'),
-          i18n.t('客户数据管理平台'),
-          i18n.t('算法中台'),
+          i18n.t('solutions_features_023'),
+          i18n.t('solutions_features_024'),
+          i18n.t('solutions_features_025'),
+          i18n.t('solutions_features_026'),
         ],
       },
       {
-        title: i18n.t('资产管理系统'),
+        title: i18n.t('solutions_features_027'),
         picture: 'https://pub.lbkrs.com/files/202205/STxVfAJAXTU7QDii/Vector-6.png',
-        features: [i18n.t('多资产支持'), i18n.t('高效仓位管理'), i18n.t('资产异动检测'), i18n.t('佣金及税费管理')],
+        features: [
+          i18n.t('solutions_features_028'),
+          i18n.t('solutions_features_029'),
+          i18n.t('solutions_features_030'),
+          i18n.t('solutions_features_031'),
+        ],
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -5,19 +5,15 @@ import { useTranslation } from 'react-i18next'
 import styles from './gallery.module.scss'
 
 function useFeatures() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
   return useMemo(() => {
     return [
       {
-        desc: i18n.t(
-          '从全球市场到行业，<br /> 到个股的投资标点发现旅程'
-        ),
+        desc: i18n.t('trading_gallery_001'),
         picture: 'https://pub.lbkrs.com/files/202205/7sTteg1TWPLZrVhw/Group_627308.png',
       },
       {
-        desc: i18n.t(
-          '全景模式，表态视图，供应链数据等，<br /> 让用户熟悉行业，了解个股，<br /> 在市场动态中把握机会。'
-        ),
+        desc: i18n.t('trading_gallery_002'),
         picture: 'https://pub.lbkrs.com/files/202205/YXeYSVwAbX3EfwgS/Group_627309.png',
       },
     ]
@@ -37,14 +33,16 @@ export const TradingGallery = () => {
                 <img src={feature.picture} alt={feature.desc} />
               </div>
               <div className="feature-right">
-                <p className="desc" dangerouslySetInnerHTML={{
-                  __html: feature.desc,
-                }}></p>
+                <p
+                  className="desc"
+                  dangerouslySetInnerHTML={{
+                    __html: feature.desc,
+                  }}
+                ></p>
                 <div className="mt-8">
                   <DivideDot size="medium" />
                 </div>
               </div>
-              
             </div>
           )
         })}

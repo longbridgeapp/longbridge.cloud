@@ -19,13 +19,13 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const IndexPage = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   const title = (
     <>
       <div className="text-5xl leading-tight">
-        <span>{i18n.t('Empower and connect the financial industry with ')}</span>
-        <span className="text-text_brand_color">{i18n.t('Internet technology')}</span>
+        <span>{i18n.t('home_page_002')}</span>
+        <span className="text-text_brand_color">{i18n.t('home_page_001')}</span>
       </div>
       <DivideDot size="large" />
     </>

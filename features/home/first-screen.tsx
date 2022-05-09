@@ -26,7 +26,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
   contentFLex = '1',
   titleNowrap = false,
 }) => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div
@@ -53,7 +53,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
                 {title}
               </h2>
               <p className=" desc">{desc}</p>
-              {contactUs && <Button className="mt-8">{i18n.t('Talk to Us')}</Button>}
+              {contactUs && <Button className="mt-8">{i18n.t('home_first_screen_001')}</Button>}
             </div>
             <div className="flex-1 ml-16">{cover && <img src={cover} alt="cover" />}</div>
           </div>

@@ -13,7 +13,7 @@ const AppCard: FC<{
   }[]
   className?: string
 }> = ({ name, desc, services, className }) => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <div className={classNames(styles.card, className)}>
@@ -23,7 +23,7 @@ const AppCard: FC<{
         <p className="desc">{desc}</p>
       </div>
       <div className="services">
-        <span className="title">{i18n.t('提供服务')}</span>
+        <span className="title">{i18n.t('solutions_apps_001')}</span>
         <ul className="service-list">
           {services.map(service => {
             return (
@@ -53,80 +53,79 @@ const AppCard: FC<{
   )
 }
 function useApps() {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return useMemo(() => {
     return [
       {
-        name: i18n.t('LONGPORT'),
+        name: i18n.t('solutions_apps_002'),
         className: 'flex-1',
-        desc: i18n.t('LONGPORT 是给 FD，OB/EP 客户提供的一款包括行情，资讯等完全免费的公版 App。'),
+        desc: i18n.t('solutions_apps_003'),
         services: [
           {
-            name: i18n.t('美股、港股、美股期权，基金等实时行情'),
+            name: i18n.t('solutions_apps_004'),
           },
           {
-            name: i18n.t('美港股等全球经济相关资讯，并依据用户的持仓以及交易偏好提供相关资讯'),
+            name: i18n.t('solutions_apps_005'),
           },
           {
-            name: i18n.t('社区部分免费'),
+            name: i18n.t('solutions_apps_006'),
           },
           {
-            name: i18n.t('如果用户在多家 FD 券商客户开户，LONGPORT 提供子账户功能'),
+            name: i18n.t('solutions_apps_007'),
           },
           {
-            name: i18n.t('功能列表'),
+            name: i18n.t('solutions_apps_008'),
             children: [
-              i18n.t('关注 - 自选列表，股单，含股票基本面数据'),
-              i18n.t('市场 - 主流市场行情指数动态'),
-              i18n.t('市场 - 新股中心'),
-              i18n.t('市场 - 基金交易模块'),
-              i18n.t('动态 - 资讯与研报'),
-              i18n.t('动态 - 直播与学堂'),
-              i18n.t('动态 - 社区中心'),
-              i18n.t('资产 - 客户资产、出入金、换汇、转仓、盈亏分析、交易中心、公司行动、结单、资金流水、交易记录等。'),
-              i18n.t('我的 - 设置、帮助中心、客服、行情商城、费率中心、社区主页'),
-            ]
+              i18n.t('solutions_apps_009'),
+              i18n.t('solutions_apps_010'),
+              i18n.t('solutions_apps_011'),
+              i18n.t('solutions_apps_012'),
+              i18n.t('solutions_apps_013'),
+              i18n.t('solutions_apps_014'),
+              i18n.t('solutions_apps_015'),
+              i18n.t('solutions_apps_016'),
+              i18n.t('solutions_apps_017'),
+            ],
           },
-        ]
+        ],
       },
       {
-        name: i18n.t('White Label'),
+        name: i18n.t('solutions_apps_018'),
         className: 'flex-1 brand-theme',
-        desc: i18n.t('LONGPORT 是给 FD，OB/EP 客户提供的一款可定制的收费 App'),
+        desc: i18n.t('solutions_apps_019'),
         services: [
           {
-            name: i18n.t('美港股等行情计费以及与数据源提供商结算服务'),
+            name: i18n.t('solutions_apps_020'),
           },
           {
-            name: i18n.t('基本面以及资讯的计费以及结算服务'),
+            name: i18n.t('solutions_apps_021'),
           },
           {
-            name: i18n.t('对于收费的功能项目，客户可以基于自己的需求来确定是否订阅'),
+            name: i18n.t('solutions_apps_022'),
           },
           {
-            name: i18n.t('定制部分，包括 logo，颜色，特殊需求可以与产品专家沟通。'),
+            name: i18n.t('solutions_apps_023'),
           },
           {
-            name: i18n.t('功能列表'),
+            name: i18n.t('solutions_apps_024'),
             children: [
-              i18n.t('关注 - 自选列表，股单，含股票基本面数据'),
-              i18n.t('市场 - 主流市场行情指数动态'),
-              i18n.t('市场 - 新股中心'),
-              i18n.t('市场 - 基金交易模块'),
-              i18n.t('动态 - 资讯与研报'),
-              i18n.t('动态 - 直播与学堂'),
-              i18n.t('动态 - 社区中心'),
-              i18n.t('资产 - 客户资产、出入金、换汇、转仓、盈亏分析、交易中心、公司行动、结单、资金流水、交易记录等。'),
-              i18n.t('我的 - 设置、帮助中心、智能线上客服、任务中心、活动中心、卡券管理，行情商城、费率中心、奖励记录、社区主页'),
-            ]
+              i18n.t('solutions_apps_009'),
+              i18n.t('solutions_apps_010'),
+              i18n.t('solutions_apps_011'),
+              i18n.t('solutions_apps_012'),
+              i18n.t('solutions_apps_013'),
+              i18n.t('solutions_apps_014'),
+              i18n.t('solutions_apps_015'),
+              i18n.t('solutions_apps_016'),
+              i18n.t('solutions_apps_026'),
+            ],
           },
-        ]
-      }
+        ],
+      },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
-
 }
 
 export const SolutionApps = () => {
@@ -135,22 +134,8 @@ export const SolutionApps = () => {
   return (
     <div className="py-[60px] main-container">
       <div className={classNames(styles.apps, 'main-content-width flex')}>
-        {apps.map(({
-          name,
-          services,
-          className,
-          desc
-          
-        }) => {
-          return (
-            <AppCard
-              key={name}
-              className={className}
-              name={name}
-              services={services}
-              desc={desc}
-            />
-          )
+        {apps.map(({ name, services, className, desc }) => {
+          return <AppCard key={name} className={className} name={name} services={services} desc={desc} />
         })}
       </div>
     </div>

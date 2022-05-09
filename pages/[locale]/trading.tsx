@@ -20,17 +20,15 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const TradingPage = () => {
-  const i18n = useTranslation()
+  const i18n = useTranslation('common')
 
   return (
     <PageLayout
       screenProps={{
         contactUs: true,
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
-        title: i18n.t('WHALE Trading Platform'),
-        desc: i18n.t(
-          'WHALE Trading Platform 为客户提供了迄今为止最佳体验的证券App，WHALE 以「发现」—「认知」—「交易」用户的核心旅程为基础，结合大量的结构化数据，让用户在美股，港股，新加坡，欧洲等全球核心市场更容易发现投资机会。'
-        ),
+        title: i18n.t('trading_page_001'),
+        desc: i18n.t('trading_page_002'),
         cover: 'https://pub.lbkrs.com/files/202205/QNtq9XZvZBPrArjb/cn01.png',
       }}
     >
@@ -38,7 +36,7 @@ const TradingPage = () => {
       <TradingFeatures />
       <TradingFunctions />
       <TradingGallery />
-      <ContactBanner title={i18n.t('Get Started With WHALE Trading Platform')} desc={i18n.t('Try Whale Trading Platform for free, and explore all the tools and services you need to start')} />
+      <ContactBanner title={i18n.t('trading_page_003')} desc={i18n.t('trading_page_004')} />
     </PageLayout>
   )
 }
