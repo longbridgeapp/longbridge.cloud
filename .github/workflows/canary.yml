@@ -38,5 +38,6 @@ jobs:
           aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/en/index.html --cache-control no-cache
           aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/zh-CN/index.html --cache-control no-cache
           aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/zh-HK/index.html --cache-control no-cache
+          echo '----------------------------------------'
           cd ./out
           for file in **/*/*.html; do aws --region=${{ secrets.CANARY_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_CANARY_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;

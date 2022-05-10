@@ -51,3 +51,4 @@ jobs:
           aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/zh-HK/index.html --cache-control no-cache
           cd ./out
           for file in **/*/*.html; do aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
+          for file in **/*.html; do aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
