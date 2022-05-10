@@ -100,7 +100,7 @@ export const MarketServices = () => {
                   <div className="cover">
                     <img src={service.picture} alt={service.title} />
                   </div>
-                  <div>
+                  <div className="ml-9 flex-1">
                     <h3 className="title">{service.title}</h3>
                     <p className="desc">{service.desc}</p>
                   </div>

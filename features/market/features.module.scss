@@ -13,7 +13,7 @@
   .service-item {
     @apply flex mt-12 first:mt-0;
     .cover {
-      @apply w-12 mr-9;
+      @apply w-12;
     }
     .title {
       @apply text-xl font-normal;
