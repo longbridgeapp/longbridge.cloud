@@ -1,13 +1,11 @@
 :local(.first-screen) {
   @apply bg-cover;
-  @screen md {
-    .desc {
-      @apply text-xl mt-6 leading-9;
-  
-      color: var(--text_color_1_supplement);
-    }
-    .title {
-      @apply font-medium text-[60px];
-    }
+  .desc {
+    @apply text-xl mt-6 leading-9;
+
+    color: var(--text_color_1_supplement);
+  }
+  .title {
+    @apply font-medium text-[60px];
   }
 }

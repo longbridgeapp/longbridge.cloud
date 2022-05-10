@@ -95,14 +95,16 @@ export const BssSection: FC<{
               <div className="feature-item" key={feature.title}>
                 <div className="left">
                   <img src={feature.picture} alt={feature.title} />
-                  <h4 className="title">{feature.title}</h4>
                 </div>
-                <p
-                  className="desc"
-                  dangerouslySetInnerHTML={{
-                    __html: feature.desc,
-                  }}
-                ></p>
+                <div className="ml-12">
+                  <h4 className="title">{feature.title}</h4>
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: feature.desc,
+                    }}
+                  ></p>
+                </div>
               </div>
             )
           })}
