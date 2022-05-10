@@ -4,10 +4,10 @@ import { useTranslation } from 'next-i18next'
 // @ts-ignore
 export const LocaleLink: typeof Link = ({ to, children, ...other }) => {
   const { i18n } = useTranslation('common')
-  const locale = i18n.language || ''
+  const localePrefix = i18n.language === 'zh-HK' ? '' : `/${i18n.language}`
 
   return (
-    <Link to={`/${locale}${to}`} {...other}>
+    <Link to={`${localePrefix}${to}`} {...other}>
       {children}
     </Link>
   )
