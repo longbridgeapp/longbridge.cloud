@@ -7,6 +7,8 @@
   }
   .desc {
     @apply text-xl mt-5;
+
+    height: 3em;
   }
   .services {
     @apply pt-10;
@@ -58,6 +60,13 @@
             border-color: #fff;
           }
         }
+      }
+    }
+  }
+  &.en {
+    .desc {
+      @media screen and (max-width: 1120px) {
+        height: 4em;
       }
     }
   }

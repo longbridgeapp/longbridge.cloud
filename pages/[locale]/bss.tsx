@@ -24,6 +24,7 @@ const BssPage = () => {
     <PageLayout
       screenProps={{
         contactUs: true,
+        contentFLex: i18n.i18n.language === 'en' ?  '3' : '1',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/SSpgCXC62ZPfstQ2/bss.png)',
         title: i18n.t('bss_page_003'),
         desc: i18n.t(

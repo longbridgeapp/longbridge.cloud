@@ -25,6 +25,7 @@ const MarketPage = () => {
       screenProps={{
         titleNowrap: true,
         contactUs: true,
+        contentFLex: i18n.i18n.language === 'en' ?  '10' : '1',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/h3NVqR1SHi2NMSL1/market_data.png)',
         title: i18n.t('market_page_001'),
         desc: i18n.t('market_page_002'),

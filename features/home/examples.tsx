@@ -2,10 +2,11 @@ import { useTranslation } from 'next-i18next'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { FC, HTMLAttributes, useEffect, useMemo } from 'react'
-import { useUpdate } from 'ahooks'
+import { FC, HTMLAttributes, useEffect, useMemo, useState } from 'react'
+import { useMount, useUpdate, useUpdateEffect } from 'ahooks'
 import classNames from 'classnames'
 import styles from './examples.module.scss'
+import { useResize } from '@/hooks/use-resize'
 
 type IExampleFunctions = {
   app: string
@@ -53,10 +54,27 @@ type IExampleProps = {
 
 const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
   const columns = useExampleFunctionColumns()
+  const [height, setHeight] = useState('auto')
+  const [windowWidth] = useResize()
+  const updateHeight = () => {
+    setHeight(document.querySelector('.swiper-wrapper')?.clientHeight + 'px')
+  }
+  useUpdateEffect(() => {
+    setHeight('auto')
+    setTimeout(updateHeight, 100)
+  }, [windowWidth])
+  useMount(() => {
+    setTimeout(updateHeight, 100)
+  })
+  
   return (
-    <div className={styles.example}>
-      <div className="cover">
-        <img src={cover} alt={name} />
+    <div className={styles.example} style={{
+      height,
+    }}>
+      <div className="cover" style={{
+        backgroundImage: `url(${cover})`,
+      }}>
+        {/* <img src={cover} alt={name} /> */}
       </div>
       <div className="main">
         <div className="logo">
@@ -165,7 +183,7 @@ function useExamples(): IExampleProps[] {
       {
         name: i18n.t('home_examples_009'),
         logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
-        cover: 'https://pub.lbkrs.com/files/202205/WVGhGV7smuP81kK8/charles-deluvio-Lks7vei-eAg-unsplash_2.png',
+        cover: 'https://pub.lbkrs.com/files/202205/zEN5oxy61TTKjneY/wintech.png',
         desc: i18n.t('home_examples_007'),
         functions: {
           app: i18n.t('home_examples_008'),
@@ -178,7 +196,7 @@ function useExamples(): IExampleProps[] {
       {
         name: i18n.t('home_examples_010'),
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
-        cover: 'https://pub.lbkrs.com/files/202205/1qojMBP3AxMRdTNr/Rectangle.png',
+        cover: 'https://pub.lbkrs.com/files/202205/iSBTzQxVyxtSFQqk/longbridge.png',
         desc: i18n.t('home_examples_011'),
         functions: {
           app: i18n.t('home_examples_012'),

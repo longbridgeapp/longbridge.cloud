@@ -24,7 +24,7 @@ const SolutionsPage = () => {
       screenProps={{
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
         title: i18n.t('solutions_page_001'),
-        contentFLex: '2.5',
+        contentFLex: '30',
         desc: (
           <span>
             {i18n.t('solutions_page_002')}
