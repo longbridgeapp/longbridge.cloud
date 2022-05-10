@@ -15,11 +15,12 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const IndexPage = () => {
-  const i18n = useTranslation('common')
+  const i18n = useTranslation(['common'])
+  const seoI18n = useTranslation(['seo'])
 
   const title = (
     <>
@@ -42,7 +43,7 @@ const IndexPage = () => {
         cover: 'https://pub.lbkrs.com/files/202205/c4LPqwdQrmZ4VtLk/Group_627289.png',
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <HomeFeatures />
       <HomeExamples />
     </PageLayout>
