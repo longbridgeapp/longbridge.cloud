@@ -24,7 +24,7 @@ const IndexPage = () => {
   const title = (
     <>
       <div className="text-5xl leading-tight">
-        <span>{i18n.t('home_page_002')}</span>
+        <span>{i18n.t('home_page_002')}</span>&nbsp;
         <span className="text-text_brand_color">{i18n.t('home_page_001')}</span>
       </div>
       <DivideDot size="large" />
