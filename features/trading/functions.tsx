@@ -57,7 +57,7 @@ function useSections() {
       },
       {
         name: i18n.t('trading_functions_023'),
-        note: i18n.t('trading_functions_018'),
+        note: i18n.t('trading_functions_018_1'),
         functions: [
           {
             name: i18n.t('trading_functions_024'),

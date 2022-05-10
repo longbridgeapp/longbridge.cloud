@@ -3,5 +3,6 @@ module.exports = {
     defaultLocale: "zh-HK",
     locales: ["zh-HK", "en", "zh-CN"],
     localeDetection: false,
+    reloadOnPrerender: true,
   },
 };

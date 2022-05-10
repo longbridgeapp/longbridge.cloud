@@ -24,7 +24,7 @@ function useFeatures() {
       },
       {
         title: i18n.t('crm_page_005'),
-        desc: i18n.t('crm_page_006 构建了常用的用户触达通道，如：通过 App Push、短信、邮件、WhatsApp 等。'),
+        desc: i18n.t('crm_page_006'),
         picture: 'https://pub.lbkrs.com/files/202205/nYkoKAQfXUpC8aGZ/Vector__14_.png',
       },
       {

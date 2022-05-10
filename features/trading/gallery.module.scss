@@ -6,6 +6,9 @@
       .feature-right {
         order: -1;
       }
+      .feature-left {
+        @apply pr-4; 
+      }
     }
     .feature-left,
     .feature-right {
