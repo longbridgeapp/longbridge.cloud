@@ -115,7 +115,6 @@ function useApps() {
               i18n.t('solutions_apps_011'),
               i18n.t('solutions_apps_012'),
               i18n.t('solutions_apps_013'),
-              i18n.t('solutions_apps_014'),
               i18n.t('solutions_apps_015'),
               i18n.t('solutions_apps_016'),
               i18n.t('solutions_apps_026'),
