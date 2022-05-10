@@ -1,5 +1,5 @@
-@mixin sss() {
-  @media screen and (max-width: 1100px) {
+@mixin breakpoint() {
+  @media screen and (max-width: 1300px) {
     & {
       @content;
     }
@@ -7,7 +7,7 @@
 }
 :local(.swipe-box-wrapper) {
   .swiper-slide {
-    width: 80%;
+    width: 85%;
   }
 }
 :local(.container) {
@@ -24,6 +24,7 @@
   @apply flex h-full;
   .cover {
     @apply flex-1 bg-cover;
+    width: 35%;
     img {
       @apply h-full;
 
@@ -33,7 +34,7 @@
   .main {
     @apply text-white px-[60px] py-12 overflow-y-auto;
 
-    flex: 1.8;
+    flex: 1.5;
     background-color: var(--brand_color);
     .logo {
       @apply w-[60px];
@@ -55,7 +56,7 @@
       }
     }
   }
-  @include sss() {
+  @include breakpoint() {
     .main {
       .logo {
         @apply w-[40px];
@@ -78,7 +79,7 @@
 
 :local(.controls) {
   @apply flex justify-between items-center mt-8;
-  width: 80%;
+  width: 85%;
 }
 :local(.arrow) {
   @apply w-[42px] h-[22px] cursor-pointer;
