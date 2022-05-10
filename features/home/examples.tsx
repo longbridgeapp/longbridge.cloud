@@ -160,12 +160,13 @@ const Controls = () => {
             <div
               // eslint-disable-next-line react/no-array-index-key
               key={index}
-              className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all', {
+              className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all cursor-pointer', {
                 active: index === activeIndex,
               })}
               style={{
                 backgroundColor: index !== activeIndex ? 'var(--tag_border_color)' : 'var(--brand_color)',
               }}
+              onClick={() => swiper.slideTo(index)}
             ></div>
           )
         })}
