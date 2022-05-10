@@ -72,9 +72,9 @@ const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
       height,
     }}>
       <div className="cover" style={{
-        backgroundImage: `url(${cover})`,
+        // backgroundImage: `url(${cover})`,
       }}>
-        {/* <img src={cover} alt={name} /> */}
+        <img src={cover} alt={name} />
       </div>
       <div className="main">
         <div className="logo">
