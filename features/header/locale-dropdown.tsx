@@ -1,5 +1,5 @@
 import React, { FC, useState, useMemo, useEffect } from 'react'
-import { getRootDomain } from '@/utils/common'
+import { getBasenameLocale, getRootDomain } from '@/utils/common'
 import Cookies from 'js-cookie'
 import Dropdown from '@/components/dropdown'
 import { useTranslation } from 'next-i18next'
@@ -27,8 +27,8 @@ export const LocaleDropdown: FC = () => {
   }, [])
   const { i18n } = useTranslation('common')
   const [locale, setLocale] = useState(i18n.language || Cookies.get('locale'))
-  const pathLocale = i18n.language
   const onChange = (value: string) => {
+    const pathLocale = getBasenameLocale()
     Cookies.set('locale', value, {
       domain: getRootDomain(location.hostname),
       expires: 7,
@@ -46,5 +46,5 @@ export const LocaleDropdown: FC = () => {
     location.href = url.toString()
   }
 
-  return <Dropdown items={items} value={locale} onChange={onChange} />
+  return <Dropdown trigger="hover" items={items} value={locale} onChange={onChange} />
 }
