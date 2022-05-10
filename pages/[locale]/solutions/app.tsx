@@ -13,10 +13,11 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const AppSolutionPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
   return (
@@ -28,7 +29,7 @@ const AppSolutionPage = () => {
         desc: i18n.t('solutions_app_page_002'),
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('solutions-app.title')} description={seoI18n.t('solutions-app.description')} />
       <SolutionApps />
     </PageLayout>
   )

@@ -14,12 +14,13 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const MarketPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
-
+  
   return (
     <PageLayout
       screenProps={{
@@ -31,7 +32,8 @@ const MarketPage = () => {
         desc: i18n.t('market_page_002'),
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      
+      <SEOMeta title={seoI18n.t('market.title')} description={seoI18n.t('market.description')} />
       <MarketFeatures />
       <MarketServices />
       <ContactBanner title={i18n.t('market_page_003')} desc={i18n.t('market_page_004')} />

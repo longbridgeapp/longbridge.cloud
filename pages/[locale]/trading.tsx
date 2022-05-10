@@ -16,10 +16,11 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const TradingPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
   return (
@@ -32,7 +33,7 @@ const TradingPage = () => {
         cover: 'https://pub.lbkrs.com/files/202205/QNtq9XZvZBPrArjb/cn01.png',
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('trading.title')} description={seoI18n.t('trading.description')} />
       <TradingFeatures />
       <TradingFunctions />
       <TradingGallery />

@@ -19,8 +19,8 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const IndexPage = () => {
-  const i18n = useTranslation(['common'])
   const seoI18n = useTranslation(['seo'])
+  const i18n = useTranslation(['common'])
 
   const title = (
     <>
@@ -38,7 +38,7 @@ const IndexPage = () => {
         backgroundColor: 'var(--bg_color_1)',
         title,
         desc: i18n.t(
-          'A one-stop service provider for brokerage infrastructure, including systems, apps, and basic services for platform operations, with the lowest cost.'
+          'home_page_003'
         ),
         cover: 'https://pub.lbkrs.com/files/202205/c4LPqwdQrmZ4VtLk/Group_627289.png',
       }}

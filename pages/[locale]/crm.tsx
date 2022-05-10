@@ -43,10 +43,11 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const CrmPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   const features = useFeatures()
 
@@ -60,7 +61,7 @@ const CrmPage = () => {
         cover: 'https://pub.lbkrs.com/files/202205/EAvD94bcLjHKXzGk/Group_627297.png',
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('crm.title')} description={seoI18n.t('crm.description')} />
       <div className="py-[60px]">
         <BssSection features={features} />
       </div>
