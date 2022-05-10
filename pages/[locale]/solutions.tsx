@@ -13,10 +13,11 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const SolutionsPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
   return (
@@ -24,7 +25,7 @@ const SolutionsPage = () => {
       screenProps={{
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
         title: i18n.t('solutions_page_001'),
-        contentFLex: '2.5',
+        contentFLex: '30',
         desc: (
           <span>
             {i18n.t('solutions_page_002')}
@@ -34,7 +35,7 @@ const SolutionsPage = () => {
         ),
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('solutions.title')} description={seoI18n.t('solutions.description')} />
       <SolutionFeatures />
     </PageLayout>
   )

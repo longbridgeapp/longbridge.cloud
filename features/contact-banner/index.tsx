@@ -7,7 +7,9 @@ const ContactBanner: FC<{
   desc: string
 }> = ({ title, desc }) => {
   const i18n = useTranslation('common')
-
+  if (true) {
+    return null
+  }
   return (
     <div
       className="main-container py-[72px] bg-cover"

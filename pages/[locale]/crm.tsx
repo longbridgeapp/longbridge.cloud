@@ -24,7 +24,7 @@ function useFeatures() {
       },
       {
         title: i18n.t('crm_page_005'),
-        desc: i18n.t('crm_page_006 构建了常用的用户触达通道，如：通过 App Push、短信、邮件、WhatsApp 等。'),
+        desc: i18n.t('crm_page_006'),
         picture: 'https://pub.lbkrs.com/files/202205/nYkoKAQfXUpC8aGZ/Vector__14_.png',
       },
       {
@@ -43,10 +43,11 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const CrmPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   const features = useFeatures()
 
@@ -60,7 +61,7 @@ const CrmPage = () => {
         cover: 'https://pub.lbkrs.com/files/202205/EAvD94bcLjHKXzGk/Group_627297.png',
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('crm.title')} description={seoI18n.t('crm.description')} />
       <div className="py-[60px]">
         <BssSection features={features} />
       </div>

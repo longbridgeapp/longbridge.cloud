@@ -6,7 +6,6 @@ import { appWithTranslation } from 'next-i18next'
 import '@/styles/globals.scss'
 import RouteList from '@/routes'
 import { isServer } from '@/utils/common'
-import Header from '@/features/header'
 
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (

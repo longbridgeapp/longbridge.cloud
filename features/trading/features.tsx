@@ -11,12 +11,12 @@ function useFeatures() {
       {
         title: i18n.t('trading_features_001'),
         desc: i18n.t('trading_features_002'),
-        picture: 'https://pub.lbkrs.com/files/202205/wSRoysh88oprXzTU/20220509-134745.png',
+        picture: 'https://pub.lbkrs.com/files/202205/Ls3uQ15At2UHs5k5/trading_platform_01.png',
       },
       {
         title: i18n.t('trading_features_003'),
         desc: i18n.t('trading_features_004'),
-        picture: 'https://pub.lbkrs.com/files/202205/V6ohUmpmiXhTCrEt/20220509-134805.png',
+        picture: 'https://pub.lbkrs.com/files/202205/51i5U7W63hbXy6DY/trading_platform_02.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps

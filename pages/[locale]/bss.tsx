@@ -14,16 +14,18 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const BssPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
   return (
     <PageLayout
       screenProps={{
         contactUs: true,
+        contentFLex: i18n.i18n.language === 'en' ?  '3' : '1',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/SSpgCXC62ZPfstQ2/bss.png)',
         title: i18n.t('bss_page_003'),
         desc: i18n.t(
@@ -31,7 +33,7 @@ const BssPage = () => {
         ),
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('bss.title')} description={seoI18n.t('bss.description')} />
       <BssFeatures />
       <ContactBanner title={i18n.t('bss_page_002')} desc={i18n.t('Try Whale Bss for free, and explore all the tools and services you need to start')} />
     </PageLayout>

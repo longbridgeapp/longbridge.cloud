@@ -17,6 +17,8 @@
     }
     .title {
       @apply text-xl font-normal;
+
+      line-height: 1;
     }
     .desc {
       @apply text-base mt-3;

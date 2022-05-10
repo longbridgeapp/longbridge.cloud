@@ -53,7 +53,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
                 {title}
               </h2>
               <p className=" desc">{desc}</p>
-              {contactUs && <Button className="mt-8">{i18n.t('home_first_screen_001')}</Button>}
+              {contactUs && false && <Button className="mt-8">{i18n.t('home_first_screen_001')}</Button>}
             </div>
             <div className="flex-1 ml-16">{cover && <img src={cover} alt="cover" />}</div>
           </div>

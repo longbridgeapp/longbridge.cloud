@@ -16,7 +16,7 @@ const AppCard: FC<{
   const i18n = useTranslation('common')
 
   return (
-    <div className={classNames(styles.card, className)}>
+    <div className={classNames(styles.card, className, i18n.i18n.language)}>
       <div className="pb-10">
         <h3 className="name">{name}</h3>
         <DivideDot />
@@ -28,7 +28,7 @@ const AppCard: FC<{
           {services.map(service => {
             return (
               <li key={service.name} className="service-item">
-                <div className="flex items-center">
+                <div className="flex">
                   <div className="dot"></div>
                   {service.name}
                 </div>

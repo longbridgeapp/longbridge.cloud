@@ -13,28 +13,30 @@ export const getStaticPaths = () => ({
 })
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common'], i18nextConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
 const AboutPage = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
   return (
     <PageLayout
       screenProps={{
         titleNowrap: true,
+        contentFLex: '10',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
-        title: i18n.t('abount_page_001'),
+        title: i18n.t('about_page_001'),
         desc: (
           <span>
             {i18n.t('solutions_page_002')}
             <br />
-            {i18n.t('abount_page_002')}
+            {i18n.t('about_page_002')}
           </span>
         ),
       }}
     >
-      <SEOMeta title="default" description="Longbridge Whale description" />
+      <SEOMeta title={seoI18n.t('about.title')} description={seoI18n.t('about.description')} />
       <AboutGallery />
     </PageLayout>
   )

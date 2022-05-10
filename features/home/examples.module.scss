@@ -1,5 +1,5 @@
 @mixin sss() {
-  @media screen and (max-width: 1300px) {
+  @media screen and (max-width: 1100px) {
     & {
       @content;
     }
@@ -7,18 +7,13 @@
 }
 :local(.swipe-box-wrapper) {
   .swiper-slide {
-    width: 1200px;
-    height: 652px;
-  }
-  @include sss() {
-    .swiper-slide {
-      width: 830px;
-      height: 452px;
-    }
+    width: 80%;
   }
 }
 :local(.container) {
-  @apply py-[100px];
+  @apply py-[100px] bg-cover;
+
+  background-image: url(https://pub.lbkrs.com/files/202205/FKyFqs57BsXmbiGp/_bg.png);
   @media screen and (min-width: 1400px) {
     .main-container {
       padding-left: calc((100% - 1280px) / 2);
@@ -28,12 +23,17 @@
 :local(.example) {
   @apply flex h-full;
   .cover {
+    @apply flex-1 bg-cover;
     img {
       @apply h-full;
+
+      object-fit: cover;
     }
   }
   .main {
-    @apply text-white px-[60px] py-12 flex-1 overflow-y-auto;
+    @apply text-white px-[60px] py-12 overflow-y-auto;
+
+    flex: 1.8;
     background-color: var(--brand_color);
     .logo {
       @apply w-[60px];
@@ -78,10 +78,7 @@
 
 :local(.controls) {
   @apply flex justify-between items-center mt-8;
-  width: 1200px;
-  @include sss() {
-    width: 830px;
-  }
+  width: 80%;
 }
 :local(.arrow) {
   @apply w-[42px] h-[22px] cursor-pointer;

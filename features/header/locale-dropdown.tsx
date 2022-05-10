@@ -1,4 +1,4 @@
-import React, { FC, useState, useMemo } from 'react'
+import React, { FC, useState, useMemo, useEffect } from 'react'
 import { getRootDomain } from '@/utils/common'
 import Cookies from 'js-cookie'
 import Dropdown from '@/components/dropdown'
@@ -26,7 +26,7 @@ export const LocaleDropdown: FC = () => {
     ]
   }, [])
   const { i18n } = useTranslation('common')
-  const [locale, setLocale] = useState(i18n.language)
+  const [locale, setLocale] = useState(i18n.language || Cookies.get('locale'))
   const pathLocale = i18n.language
   const onChange = (value: string) => {
     Cookies.set('locale', value, {
@@ -40,6 +40,7 @@ export const LocaleDropdown: FC = () => {
     } else {
       pathname = `/${value}${pathname}`
     }
+    pathname = pathname.replace('/zh-HK', '')
     const url = new URL(location.href)
     url.pathname = pathname
     location.href = url.toString()
