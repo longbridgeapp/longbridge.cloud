@@ -37,7 +37,7 @@ export const MarketFeatures = () => {
     <div className="main-container">
       <div className={classNames(styles.features, 'main-content-width')}>
         <h2
-          className="text-[40px] leading-[50px] font-normal"
+          className="text-section-title"
           dangerouslySetInnerHTML={{
             __html: i18n.t('market_features_005'),
           }}

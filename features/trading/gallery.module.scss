@@ -7,8 +7,17 @@
         order: -1;
       }
       .feature-left {
-        @apply pr-4; 
+        @apply pl-[120px] pr-0; 
       }
+      .feature-right {
+        @apply pr-[120px] pl-0; 
+      }
+    }
+    .feature-left {
+      @apply pr-[120px]; 
+    }
+    .feature-right {
+      @apply pl-[120px]; 
     }
     .feature-left,
     .feature-right {
@@ -16,11 +25,10 @@
     }
     // 奇数倒转
     img {
-      @apply inline-block max-w-[420px] w-2/3;
+      @apply inline-block;
     }
     .desc {
       @apply text-3xl font-medium;
-      color: var(--text_color_2);
     }
   }
 }

@@ -22,7 +22,7 @@
       @apply font-medium text-[40px];
     }
     .desc {
-      @apply text-xl mt-6;
+      @apply text-xl mt-6 leading-[1.7];
       color: var(--text_color_2);
     }
   }
