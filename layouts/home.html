@@ -1,0 +1,22 @@
+{{ define "header" }}
+  <head class="eee">ddd</head>
+{{ end }}
+{{ define "main" }}
+
+<div class="bd-content ps-lg-2">
+  {{ if .Page.Params.sections }}
+  <div class="row g-3">
+    {{ range .Page.Params.sections }}
+    <div class="col-md-6">
+      <a class="d-block text-decoration-none" href="../{{ urlize .title }}/">
+        <strong class="d-block h5 mb-0">{{ .title }}</strong>
+        <span class="text-secondary">{{ .desc }}</span>
+      </a>
+    </div>
+    {{ end }}
+  </div>
+  {{ end }}
+</div>
+
+{{ .Content }}
+{{ end }}
