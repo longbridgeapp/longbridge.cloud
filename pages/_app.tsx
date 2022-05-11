@@ -5,11 +5,8 @@ import { StaticRouter } from 'react-router-dom/server'
 import { appWithTranslation } from 'next-i18next'
 import '@/styles/globals.scss'
 import RouteList from '@/routes'
-import { isServer } from '@/utils/common'
 import { useMount } from 'ahooks'
-import { getSystemLanguage } from '@/utils/common'
-import { getBasenameLocale } from '@/utils/common'
-import { getLocaleHref } from '@/utils/common'
+import { getSystemLanguage, getBasenameLocale, getLocaleHref, isServer } from '@/utils/common'
 
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
