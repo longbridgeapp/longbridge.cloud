@@ -1,4 +1,5 @@
 import Dropdown from '@/components/dropdown'
+import Icon from '@/components/icon'
 import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
@@ -90,10 +91,7 @@ const Navs = () => {
                 <LocaleLink to={nav.value} className="flex items-center">
                   <span>{nav.label}</span>
                   <div className="text-[8px] ml-1">
-                    <img
-                      src="https://pub.lbkrs.com/static/offline/202111/oPFw5UmKNxErcZsQ/caret-down.svg"
-                      alt="caret-down"
-                    />
+                    <Icon type="cart-down" />
                   </div>
                 </LocaleLink>
               </Dropdown>

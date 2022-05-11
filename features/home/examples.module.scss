@@ -82,16 +82,13 @@
   width: 85%;
 }
 :local(.arrow) {
-  @apply w-[42px] h-[22px] cursor-pointer;
+  @apply cursor-pointer;
   &.is-left {
-    &:not(.disabled) {
-      transform: rotate(180deg);
-    }
+    transform: rotate(180deg);
   }
   &.disabled {
     @apply cursor-not-allowed;
-    &:not(.is-left) {
-      transform: rotate(180deg);
-    }
+
+    color: var(--disabled_color_1);
   }
 }

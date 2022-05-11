@@ -7,6 +7,7 @@ import { useMount, useUpdate, useUpdateEffect } from 'ahooks'
 import classNames from 'classnames'
 import styles from './examples.module.scss'
 import { useResize } from '@/hooks/use-resize'
+import Icon from '@/components/icon'
 
 type IExampleFunctions = {
   app: string
@@ -119,20 +120,7 @@ const Arrow: FC<
       })}
       {...res}
     >
-      <img
-        className={classNames('', {
-          hidden: !disabled,
-        })}
-        src="https://pub.lbkrs.com/files/202205/z8nDRutpB8ZrtAHz/Union__1_.png"
-        alt=""
-      />
-      <img
-        className={classNames('', {
-          hidden: disabled,
-        })}
-        src="https://pub.lbkrs.com/files/202205/m9PDvy7BLG11UYfW/Union.png"
-        alt=""
-      />
+      <Icon className="text-4xl" type="arrow-right" />
     </div>
   )
 }
