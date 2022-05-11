@@ -16,7 +16,7 @@ export function getRootDomain(hostname: string) {
 // 在最外面获取当前 path 上的语言信息
 export function getBasenameLocale(path?: string) {
   const invalidLocaleRegexResult = path || window.location.pathname.match(/^\/(zh-CN|en|zh-HK)\/?/)
-  return invalidLocaleRegexResult?.[1]
+  return invalidLocaleRegexResult?.[1] || ''
 }
 export function getSystemLanguage() {
   const lang = navigator.language
