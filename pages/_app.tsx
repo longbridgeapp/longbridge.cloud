@@ -6,6 +6,10 @@ import { appWithTranslation } from 'next-i18next'
 import '@/styles/globals.scss'
 import RouteList from '@/routes'
 import { isServer } from '@/utils/common'
+import { useMount } from 'ahooks'
+import { getSystemLanguage } from '@/utils/common'
+import { getBasenameLocale } from '@/utils/common'
+import { getLocaleHref } from '@/utils/common'
 
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
@@ -19,6 +23,15 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
       <RouteList pageProps={pageProps} />
     </BrowserRouter>
   )
+
+  useMount(() => {
+    const pathLocale = getBasenameLocale()
+    const locale = getSystemLanguage()
+    if (!pathLocale && locale !== 'zh-HK') {
+      location.href = getLocaleHref(pathLocale, locale)
+    }
+
+  })
   return (
     <div className="app">
       <Head>
