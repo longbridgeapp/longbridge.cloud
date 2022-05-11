@@ -32,7 +32,7 @@ function useSections() {
           },
           {
             title: i18n.t('bss_features_010'),
-            desc: i18n.t('支持 bss_features_011'),
+            desc: i18n.t('bss_features_011'),
             picture: 'https://pub.lbkrs.com/files/202205/JXUS4rjSDusvrdXi/Vector__5_.png',
           },
           {

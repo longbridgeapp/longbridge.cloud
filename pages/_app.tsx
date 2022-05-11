@@ -31,10 +31,9 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
     }
     if (!cookieLocale && locale !== 'zh-HK') {
       location.href = getLocaleHref(pathLocale, locale)
-    } else if (cookieLocale) {
-      location.href = getLocaleHref(pathLocale, locale)
+    } else if (cookieLocale && cookieLocale !== 'zh-HK') {
+      location.href = getLocaleHref(pathLocale, cookieLocale)
     }
-
   })
   return (
     <div className="app">

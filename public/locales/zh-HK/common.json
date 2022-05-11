@@ -14,7 +14,7 @@
   "bss_features_008": "毫秒級風控引擎",
   "bss_features_009": "毫秒級的風控引擎，秒級 Margin call 處理，保證金自動化追繳，自動平倉能力",
   "bss_features_010": "多種出入金通道支持",
-  "bss_features_011": "FPS、eDDA、銀證等多種出入金通道，智能憑證匹配，秒級入金處理速度",
+  "bss_features_011": "支持 FPS、eDDA、銀證等多種出入金通道，智能憑證匹配，秒級入金處理速度",
   "bss_features_012": "打新多倍融資池支持",
   "bss_features_013": "打新多倍融資池支持，打新搶購抗壓能力",
   "bss_features_014": "技術優勢",
