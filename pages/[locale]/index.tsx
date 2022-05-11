@@ -40,7 +40,7 @@ const IndexPage = () => {
         desc: i18n.t(
           'home_page_003'
         ),
-        cover: 'https://pub.lbkrs.com/files/202205/c4LPqwdQrmZ4VtLk/Group_627289.png',
+        cover: 'https://pub.lbkrs.com/files/202205/oRP64GrJ7ASpuFJk/-header.png',
       }}
     >
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />

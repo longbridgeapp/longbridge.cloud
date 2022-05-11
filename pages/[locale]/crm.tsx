@@ -58,7 +58,7 @@ const CrmPage = () => {
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/P6diSwqwKAq21wRK/crm.png)',
         title: i18n.t('crm_page_009'),
         desc: i18n.t('crm_page_0010'),
-        cover: 'https://pub.lbkrs.com/files/202205/EAvD94bcLjHKXzGk/Group_627297.png',
+        cover: 'https://pub.lbkrs.com/files/202205/j4vR5MN24LYt7Kyb/crm-header.png',
       }}
     >
       <SEOMeta title={seoI18n.t('crm.title')} description={seoI18n.t('crm.description')} />

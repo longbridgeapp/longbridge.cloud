@@ -1,10 +1,12 @@
 :local(.features) {
   @apply py-[120px];
   .feature-item {
-    @apply flex-1 mr-5 last:mr-0;
-    border: 1px solid var(--border_color_1);
+    @apply flex flex-col mr-5 last:mr-0 items-center;
     .desc {
-      @apply mt-4 text-xl font-normal;
+      @apply mt-4 text-xl font-normal text-center;
+    }
+    img {
+      @apply h-[80px];
     }
   }
 }

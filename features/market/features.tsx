@@ -10,19 +10,19 @@ function useFeatures() {
     return [
       {
         desc: i18n.t('market_features_001'),
-        picture: 'https://pub.lbkrs.com/files/202205/GwaswnCk3WSQSRDU/1.png',
+        picture: 'https://pub.lbkrs.com/files/202205/LVsNBrP3ompLpDgd/Vector-2.png',
       },
       {
         desc: i18n.t('market_features_002'),
-        picture: 'https://pub.lbkrs.com/files/202205/jY2uNADvyHuZHtoh/2.png',
+        picture: 'https://pub.lbkrs.com/files/202205/23g4qBbMdubKuuyy/Vector.png',
       },
       {
         desc: i18n.t('market_features_003'),
-        picture: 'https://pub.lbkrs.com/files/202205/kqQQxChD8MdMs8o1/3.png',
+        picture: 'https://pub.lbkrs.com/files/202205/WbN7RYmYgDnN4nP7/Vector-1.png',
       },
       {
         desc: i18n.t('market_features_004'),
-        picture: 'https://pub.lbkrs.com/files/202205/kPYAnqDPJz1P6Kds/4.png',
+        picture: 'https://pub.lbkrs.com/files/202205/RhiQGzGZSsn2rB8P/Vector-3.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -42,9 +42,16 @@ export const MarketFeatures = () => {
             __html: i18n.t('market_features_005'),
           }}
         ></h2>
-        <div className="flex justify-between mt-14">
+        <div className="flex justify-between mt-14 pl-8">
           {features.map(feature => {
-            return <PictureTextCard desc={feature.desc} picture={feature.picture} key={feature.desc} />
+            return (
+              <div key={feature.desc} className="feature-item">
+                 <img src={feature.picture} alt="" />
+                 <div className="desc" dangerouslySetInnerHTML={{
+                    __html: feature.desc,
+                 }}></div>
+              </div>
+            )
           })}
         </div>
       </div>

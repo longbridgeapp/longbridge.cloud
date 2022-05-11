@@ -1,29 +1,36 @@
-:local(.features) {
-  .feature-item {
-    @apply flex items-center mt-40 last:mb-40;
-    &:nth-child(2n) {
-      .right {
-        order: -1;
-        text-align: left;
-      }
-    }
-    .left,
+:local(.feature-item-container) {
+  @apply py-[120px];
+  &:nth-child(2n) {
+    background-color: var(--bg_color_2);
     .right {
-      @apply flex-1;
+      @apply text-left;
+      order: -1;
     }
-    .right {
-      @apply text-right;
-    }
-    // 奇数倒转
-    img {
-      @apply inline-block max-w-[420px] w-2/3;
-    }
-    .title {
-      @apply font-medium text-[40px];
-    }
-    .desc {
-      @apply text-xl mt-6 leading-[1.7];
+  }
+  .left,
+  .right {
+    @apply flex-1;
+  }
+  .right {
+    @apply text-right;
+  }
+  // 奇数倒转
+  .cover {
+    @apply inline-block max-w-[430px] w-2/3;
+  }
+  .title {
+    @apply font-medium text-[36px];
+  }
+  .desc-list {
+    .desc-item {
+      @apply flex text-sm mt-6 leading-[1.7] items-start;
       color: var(--text_color_2);
+      .icon {
+        @apply w-10;
+      }
+      .text {
+        @apply ml-8 flex-1;
+      }
     }
   }
 }
