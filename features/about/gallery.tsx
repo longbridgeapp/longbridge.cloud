@@ -6,17 +6,17 @@ export const AboutGallery = () => {
   const i18n = useTranslation('common')
 
   return (
-    <div className="main-container py-[120px]">
+    <div className="main-container pt-[120px] pb-[60px]">
       <div className={classNames('main-content-width')}>
         <h3 className="text-4xl">
-          <span className="font-bold">{i18n.t('about_gallery_001')}</span>
+          <span className="font-bold">{i18n.t('about_gallery_001')}</span>&nbsp;
           <span className="font-normal">{i18n.t('about_gallery_002')}</span>
         </h3>
         <div className="mt-8">
           <DivideDot size="large" />
         </div>
         <div className="mt-14">
-          <img src="https://pub.lbkrs.com/files/202205/YSbgwc62jxFySVy5/Group_626643.png" alt="" />
+          <img src="https://pub.lbkrs.com/files/202205/VSQ5HprP1H6vzuXk/Group_626643.png" alt="" />
         </div>
       </div>
     </div>

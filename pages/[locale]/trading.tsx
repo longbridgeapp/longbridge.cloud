@@ -30,7 +30,7 @@ const TradingPage = () => {
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
         title: i18n.t('trading_page_001'),
         desc: i18n.t('trading_page_002'),
-        cover: 'https://pub.lbkrs.com/files/202205/QNtq9XZvZBPrArjb/cn01.png',
+        cover: 'https://pub.lbkrs.com/files/202205/Gm8Kw2xQbkwo7TXs/trading_header.png',
       }}
     >
       <SEOMeta title={seoI18n.t('trading.title')} description={seoI18n.t('trading.description')} />

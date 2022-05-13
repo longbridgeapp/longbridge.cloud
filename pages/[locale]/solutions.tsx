@@ -26,7 +26,11 @@ const SolutionsPage = () => {
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
         title: i18n.t('solutions_page_001'),
         contentFLex: '30',
-        desc: i18n.t('solutions_page_003'),
+        desc: <>
+          <span>{i18n.t('solutions_page_003')}</span>
+          <br />
+          <span className="mt-4 inline-block">{i18n.t('solutions_page_003_1')}</span>
+        </>,
       }}
     >
       <SEOMeta title={seoI18n.t('solutions.title')} description={seoI18n.t('solutions.description')} />

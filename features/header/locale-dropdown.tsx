@@ -1,5 +1,5 @@
 import React, { FC, useState, useMemo, useEffect } from 'react'
-import { getBasenameLocale, getRootDomain } from '@/utils/common'
+import { getBasenameLocale, getLocaleHref, getRootDomain } from '@/utils/common'
 import Cookies from 'js-cookie'
 import Dropdown from '@/components/dropdown'
 import { useTranslation } from 'next-i18next'
@@ -34,16 +34,7 @@ export const LocaleDropdown: FC = () => {
       expires: 7,
     })
     setLocale(value)
-    let pathname = location.pathname
-    if (pathLocale) {
-      pathname = pathname.replace(`/${pathLocale}`, `/${value}`)
-    } else {
-      pathname = `/${value}${pathname}`
-    }
-    pathname = pathname.replace('/zh-HK', '')
-    const url = new URL(location.href)
-    url.pathname = pathname
-    location.href = url.toString()
+    location.href = getLocaleHref(pathLocale!, value)
   }
 
   return <Dropdown trigger="hover" items={items} value={locale} onChange={onChange} />

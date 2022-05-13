@@ -1,4 +1,5 @@
 import Dropdown from '@/components/dropdown'
+import Icon from '@/components/icon'
 import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
@@ -61,6 +62,7 @@ const Navs = () => {
   const navs = useNavs()
   const pathname = usePurePathname()
   const navigate = useLocaleNavigate()
+  const i18n = useTranslation('common')
   const selectedNav = useMemo(() => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
@@ -89,11 +91,10 @@ const Navs = () => {
               >
                 <LocaleLink to={nav.value} className="flex items-center">
                   <span>{nav.label}</span>
-                  <div className="text-[8px] ml-1">
-                    <img
-                      src="https://pub.lbkrs.com/static/offline/202111/oPFw5UmKNxErcZsQ/caret-down.svg"
-                      alt="caret-down"
-                    />
+                  <div className={classNames('text-[8px] ml-1')} style={{
+                    transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`
+                  }}>
+                    <Icon type="cart-down" />
                   </div>
                 </LocaleLink>
               </Dropdown>

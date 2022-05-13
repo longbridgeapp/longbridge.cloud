@@ -1,23 +1,22 @@
 :local(.features) {
   @apply py-[60px];
   .feature-item {
-    @apply flex justify-between items-center py-10;
+    @apply flex py-10;
 
     border-bottom: 1px solid var(--border_color_1);
     .left {
-      @apply flex items-center;
-
+      @apply w-12;
       img {
         @apply w-12;
       }
-      .title {
-        @apply ml-12 text-xl font-normal;
-      }
     }
     .desc {
-      @apply text-right max-w-[450px] text-base;
+      @apply text-base mt-4;
 
       color: var(--text_color_3);
+    }
+    .title {
+      @apply text-xl font-medium;
     }
   }
 }

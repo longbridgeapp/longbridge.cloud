@@ -32,7 +32,7 @@ function useSections() {
           },
           {
             title: i18n.t('bss_features_010'),
-            desc: i18n.t('支持 bss_features_011'),
+            desc: i18n.t('bss_features_011'),
             picture: 'https://pub.lbkrs.com/files/202205/JXUS4rjSDusvrdXi/Vector__5_.png',
           },
           {
@@ -95,14 +95,16 @@ export const BssSection: FC<{
               <div className="feature-item" key={feature.title}>
                 <div className="left">
                   <img src={feature.picture} alt={feature.title} />
-                  <h4 className="title">{feature.title}</h4>
                 </div>
-                <p
-                  className="desc"
-                  dangerouslySetInnerHTML={{
-                    __html: feature.desc,
-                  }}
-                ></p>
+                <div className="ml-12 flex-1">
+                  <h4 className="title">{feature.title}</h4>
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: feature.desc,
+                    }}
+                  ></p>
+                </div>
               </div>
             )
           })}
@@ -116,7 +118,7 @@ export const BssFeatures = () => {
   const sections = useSections()
 
   return (
-    <div className="py-[60px]">
+    <div>
       {sections.map(section => {
         return <BssSection key={section.title} title={section.title} features={section.features} />
       })}

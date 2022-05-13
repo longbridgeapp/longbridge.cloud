@@ -15,7 +15,6 @@ function useSections() {
           i18n.t('solutions_features_003'),
           i18n.t('solutions_features_004'),
           i18n.t('solutions_features_005'),
-          i18n.t('solutions_features_006'),
         ],
       },
       {

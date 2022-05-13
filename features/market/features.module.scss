@@ -1,15 +1,19 @@
 :local(.features) {
   @apply py-[120px];
   .feature-item {
-    @apply flex-1 mr-5 last:mr-0;
-    border: 1px solid var(--border_color_1);
+    @apply flex flex-col mr-5 last:mr-0 items-center;
+
+    max-width: 22%;
     .desc {
-      @apply mt-4 text-xl font-normal;
+      @apply mt-4 text-xl font-normal text-center;
+    }
+    img {
+      @apply h-12;
     }
   }
 }
 :local(.services) {
-  @apply pb-[120px];
+  @apply pb-[60px];
   .service-item {
     @apply flex mt-12 first:mt-0;
     .cover {

@@ -1,7 +1,7 @@
 @import "tailwind.css";
 
 .main-container {
-  @apply px-10;
+  @apply px-[100px];
 }
 .main-content-width {
   @apply max-w-7xl mx-auto;
@@ -21,9 +21,11 @@
   --bg_color_2: #F8F9FA;
   --bg_color_3: #F1F4FA;
   --divide_dot_color: var(--brand_color);
+  --disabled_color_1: #777d82;
 }
 html {
   font-family: PingFang SC;
+  min-width: 768px;
 }
 
 * {
