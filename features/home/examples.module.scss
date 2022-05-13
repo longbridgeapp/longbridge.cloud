@@ -16,7 +16,8 @@ $slide-width: 85%;
   @apply pt-[100px] pb-[140px] bg-cover;
 
   background-image: url(https://pub.lbkrs.com/files/202205/FKyFqs57BsXmbiGp/_bg.png);
-  @media screen and (min-width: 1400px) {
+  // 本来 1400px 是合理的一个值，但是那个临界点会遮住翻页按钮
+  @media screen and (min-width: 1480px) {
     .main-container {
       padding-left: calc((100% - 1280px) / 2);
     }
