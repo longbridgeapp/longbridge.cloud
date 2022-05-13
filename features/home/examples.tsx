@@ -2,11 +2,13 @@ import { useTranslation } from 'next-i18next'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { FC, HTMLAttributes, useEffect, useMemo, useState } from 'react'
+import { FC, HTMLAttributes, useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useMount, useUpdate, useUpdateEffect } from 'ahooks'
 import classNames from 'classnames'
 import styles from './examples.module.scss'
 import { useResize } from '@/hooks/use-resize'
+import Icon from '@/components/icon'
 
 type IExampleFunctions = {
   app: string
@@ -47,12 +49,12 @@ function useExampleFunctionColumns() {
 type IExampleProps = {
   name: string
   logo: string
-  desc: string
+  descList: string[]
   cover: string
   functions: IExampleFunctions
 }
 
-const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
+const Example: FC<IExampleProps> = ({ name, logo, descList, cover, functions }) => {
   const columns = useExampleFunctionColumns()
   const [height, setHeight] = useState('auto')
   const [windowWidth] = useResize()
@@ -66,22 +68,39 @@ const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
   useMount(() => {
     setTimeout(updateHeight, 100)
   })
-  
+
   return (
-    <div className={styles.example} style={{
-      height,
-    }}>
-      <div className="cover" style={{
-        // backgroundImage: `url(${cover})`,
-      }}>
-        <img src={cover} alt={name} />
+    <div
+      className={styles.example}
+      style={{
+        height,
+      }}
+    >
+      <div
+        className="cover"
+      >
+        {/* Safari 下直接使用 100% 会有样式问题 */}
+        <img style={{
+          height,
+        }} src={cover} alt={name} />
       </div>
       <div className="main">
         <div className="logo">
-          <img src={logo} alt={name} />
+          <img
+            src={logo}
+            alt={name}
+          />
         </div>
         <h4 className="name">{name}</h4>
-        <p className="desc">{desc}</p>
+        <div>
+          {descList.map(desc => {
+            return (
+              <p key={desc} className="desc">
+                {desc}
+              </p>
+            )
+          })}
+        </div>
         <div className="functions">
           <table>
             <colgroup>
@@ -119,20 +138,7 @@ const Arrow: FC<
       })}
       {...res}
     >
-      <img
-        className={classNames('', {
-          hidden: !disabled,
-        })}
-        src="https://pub.lbkrs.com/files/202205/z8nDRutpB8ZrtAHz/Union__1_.png"
-        alt=""
-      />
-      <img
-        className={classNames('', {
-          hidden: disabled,
-        })}
-        src="https://pub.lbkrs.com/files/202205/m9PDvy7BLG11UYfW/Union.png"
-        alt=""
-      />
+      <Icon className="text-2xl" type="arrow-right" />
     </div>
   )
 }
@@ -153,24 +159,29 @@ const Controls = () => {
   }, [])
   return (
     <div className={styles.controls}>
-      <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} />
-      <div className="flex">
-        {new Array(total).fill(0).map((_, index) => {
-          return (
-            <div
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
-              className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all', {
-                active: index === activeIndex,
-              })}
-              style={{
-                backgroundColor: index !== activeIndex ? 'var(--tag_border_color)' : 'var(--brand_color)',
-              }}
-            ></div>
-          )
-        })}
+      <div className="pagination">
+        <div className="flex">
+          {new Array(total).fill(0).map((_, index) => {
+            return (
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all cursor-pointer', {
+                  active: index === activeIndex,
+                })}
+                style={{
+                  backgroundColor: index !== activeIndex ? 'var(--tag_border_color)' : 'var(--brand_color)',
+                }}
+                onClick={() => swiper.slideTo(index)}
+              ></div>
+            )
+          })}
+        </div>
       </div>
-      <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} />
+      <div className="buttons">
+        {hasPrev ? <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} /> : <span></span>}
+        {hasNext ? <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} /> : <span></span>}
+      </div>
     </div>
   )
 }
@@ -182,9 +193,9 @@ function useExamples(): IExampleProps[] {
     const examples: IExampleProps[] = [
       {
         name: i18n.t('home_examples_009'),
-        logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
+        logo: 'https://pub.lbkrs.com/files/202205/NttAUryfw6TR8hDd/wintech_logo_.png',
         cover: 'https://pub.lbkrs.com/files/202205/zEN5oxy61TTKjneY/wintech.png',
-        desc: i18n.t('home_examples_007'),
+        descList: [i18n.t('home_examples_007')],
         functions: {
           app: i18n.t('home_examples_008'),
           quotation: free,
@@ -197,7 +208,7 @@ function useExamples(): IExampleProps[] {
         name: i18n.t('home_examples_010'),
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
         cover: 'https://pub.lbkrs.com/files/202205/iSBTzQxVyxtSFQqk/longbridge.png',
-        desc: i18n.t('home_examples_011'),
+        descList: [i18n.t('home_examples_011'), i18n.t('home_examples_011_1'), i18n.t('home_examples_011_2')],
         functions: {
           app: i18n.t('home_examples_012'),
           quotation: i18n.t('home_examples_013'),
@@ -214,26 +225,35 @@ function useExamples(): IExampleProps[] {
 }
 const Examples = () => {
   const examples = useExamples()
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [controls, setControls] = useState(null)
+  useEffect(() => {
+    setControls(createPortal(<Controls />, containerRef.current!) as any)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [containerRef.current])
+
   return (
-    <Swiper
-      slidesPerView="auto"
-      pagination={{
-        clickable: true,
-      }}
-      spaceBetween={48}
-      autoplay
-      navigation
-      className={styles['swipe-box-wrapper']}
-    >
-      {examples.map(example => {
-        return (
-          <SwiperSlide key={example.name}>
-            <Example {...example} />
-          </SwiperSlide>
-        )
-      })}
-      <Controls />
-    </Swiper>
+    <div ref={containerRef} className="relative">
+      <Swiper
+        slidesPerView="auto"
+        pagination={{
+          clickable: true,
+        }}
+        spaceBetween={48}
+        autoplay
+        navigation
+        className={styles['swipe-box-wrapper']}
+      >
+        {examples.map(example => {
+          return (
+            <SwiperSlide key={example.name}>
+              <Example {...example} />
+            </SwiperSlide>
+          )
+        })}
+        {controls}
+      </Swiper>
+    </div>
   )
 }
 
@@ -242,7 +262,7 @@ export const HomeExamples = () => {
 
   return (
     <div className={styles.container}>
-      <div className="section-content-container">
+      <div>
         <div className="main-container !pr-0">
           <div>
             <span className="label text-text_brand_color text-2xl">{i18n.t('home_examples_015')}</span>

@@ -5,7 +5,9 @@ import { StaticRouter } from 'react-router-dom/server'
 import { appWithTranslation } from 'next-i18next'
 import '@/styles/globals.scss'
 import RouteList from '@/routes'
-import { isServer } from '@/utils/common'
+import Cookies from 'js-cookie'
+import { useMount } from 'ahooks'
+import { getSystemLanguage, getBasenameLocale, getLocaleHref, isServer } from '@/utils/common'
 
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
@@ -19,6 +21,20 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
       <RouteList pageProps={pageProps} />
     </BrowserRouter>
   )
+
+  useMount(() => {
+    const pathLocale = getBasenameLocale()
+    const cookieLocale = Cookies.get('locale')
+    const locale = getSystemLanguage()
+    if (pathLocale) {
+      return
+    }
+    if (!cookieLocale && locale !== 'zh-HK') {
+      location.href = getLocaleHref(pathLocale, locale)
+    } else if (cookieLocale && cookieLocale !== 'zh-HK') {
+      location.href = getLocaleHref(pathLocale, cookieLocale)
+    }
+  })
   return (
     <div className="app">
       <Head>

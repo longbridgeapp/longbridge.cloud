@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React from 'react'
 import { useClickAway } from 'ahooks'
 import styles from './index.module.scss'
+import Icon from '../icon'
 
 type IItem = {
   label: string
@@ -63,8 +64,8 @@ const Dropdown: React.FC<IDropdownProps> = ({
         {selectedItem && !alwaysChildren ? (
           <div className="flex items-center">
             <span>{selectedItem.shortLabel || selectedItem.label}</span>
-            <div className="text-[8px] ml-1">
-              <img src="https://pub.lbkrs.com/static/offline/202111/oPFw5UmKNxErcZsQ/caret-down.svg" alt="caret-down" />
+            <div className="text-[8px] ml-1 translate-y-[-2px]">
+              <Icon type="cart-down" />
             </div>
           </div>
         ) : (

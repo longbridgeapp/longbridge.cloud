@@ -10,11 +10,11 @@ function useFeatures() {
     return [
       {
         desc: i18n.t('trading_gallery_001'),
-        picture: 'https://pub.lbkrs.com/files/202205/7sTteg1TWPLZrVhw/Group_627308.png',
+        picture: 'https://pub.lbkrs.com/files/202205/bPJymyB54gXuempu/trading_03.png',
       },
       {
         desc: i18n.t('trading_gallery_002'),
-        picture: 'https://pub.lbkrs.com/files/202205/YXeYSVwAbX3EfwgS/Group_627309.png',
+        picture: 'https://pub.lbkrs.com/files/202205/ZwPGQKodXsg1tssZ/trading_04.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -24,29 +24,31 @@ function useFeatures() {
 export const TradingGallery = () => {
   const features = useFeatures()
   return (
-    <div className="main-container">
-      <div className={classNames(styles.features, 'main-content-width')}>
-        {features.map(feature => {
-          return (
-            <div className="feature-item" key={feature.desc}>
-              <div className="feature-left">
-                <img src={feature.picture} alt={feature.desc} />
-              </div>
-              <div className="feature-right">
-                <p
-                  className="desc"
-                  dangerouslySetInnerHTML={{
-                    __html: feature.desc,
-                  }}
-                ></p>
-                <div className="mt-8">
-                  <DivideDot size="medium" />
+    <div className={classNames(styles.features)}>
+      {features.map(feature => {
+        return (
+          <div key={feature.desc} className="feature-item-container main-container">
+            <div className={classNames('main-content-width')}>
+              <div className="feature-item">
+                <div className="feature-top">
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: feature.desc,
+                    }}
+                  ></p>
+                  <div className="mt-8">
+                    <DivideDot size="medium" />
+                  </div>
+                </div>
+                <div className="feature-bottom">
+                  <img src={feature.picture} alt={feature.desc} />
                 </div>
               </div>
             </div>
-          )
-        })}
-      </div>
+          </div>
+        )
+      })}
     </div>
   )
 }
