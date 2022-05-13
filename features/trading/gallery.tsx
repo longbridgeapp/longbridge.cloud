@@ -26,29 +26,29 @@ export const TradingGallery = () => {
   return (
     <div className={classNames(styles.features)}>
       {features.map(feature => {
-          return (
-            <div key={feature.desc} className="feature-item-container main-container">
-              <div className={classNames('main-content-width')}>
-                <div className="feature-item" >
-                  <div className="feature-top">
-                    <p
-                      className="desc"
-                      dangerouslySetInnerHTML={{
-                        __html: feature.desc,
-                      }}
-                    ></p>
-                    <div className="mt-8">
-                      <DivideDot size="medium" />
-                    </div>
+        return (
+          <div key={feature.desc} className="feature-item-container main-container">
+            <div className={classNames('main-content-width')}>
+              <div className="feature-item">
+                <div className="feature-top">
+                  <p
+                    className="desc"
+                    dangerouslySetInnerHTML={{
+                      __html: feature.desc,
+                    }}
+                  ></p>
+                  <div className="mt-8">
+                    <DivideDot size="medium" />
                   </div>
-                  <div className="feature-bottom">
-                    <img src={feature.picture} alt={feature.desc} />
-                  </div>
+                </div>
+                <div className="feature-bottom">
+                  <img src={feature.picture} alt={feature.desc} />
                 </div>
               </div>
             </div>
-          )
-        })}
+          </div>
+        )
+      })}
     </div>
   )
 }

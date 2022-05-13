@@ -5,7 +5,6 @@
     &:nth-child(2n) {
       background-color:  var(--bg_color_2);
     }
-    // 奇数倒转
     img {
       @apply inline-block;
     }
