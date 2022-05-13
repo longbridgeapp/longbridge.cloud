@@ -99,8 +99,8 @@ $slide-width: 85%;
   @apply cursor-pointer rounded-full w-[68px] h-[68px] flex justify-center items-center;
 
   background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0px 1px 4px rgba(11, 19, 31, 0.2);
-
+  box-shadow: 0px 1px 4px rgba(11, 19, 31, 0.08);
+  color: #3d464c;
   &.is-left {
     transform: rotate(180deg);
   }
