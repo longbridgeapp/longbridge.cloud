@@ -31,7 +31,12 @@ const AboutPage = () => {
           <span>
             {i18n.t('solutions_page_002')}
             <br />
-            {i18n.t('about_page_002')}
+            <span className="inline-block mt-4">
+              {i18n.t('about_page_002')}
+            </span>
+            <span className="inline-block mt-4">
+              {i18n.t('about_page_003')}
+            </span>
           </span>
         ),
       }}

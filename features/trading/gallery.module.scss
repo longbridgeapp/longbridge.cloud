@@ -1,27 +1,9 @@
 :local(.features) {
   @apply py-[120px];
-  .feature-item {
-    @apply flex items-center mt-36 first:mt-0;
+  .feature-item-container {
+    @apply py-[100px];
     &:nth-child(2n) {
-      .feature-right {
-        order: -1;
-      }
-      .feature-left {
-        @apply pl-[120px] pr-0; 
-      }
-      .feature-right {
-        @apply pr-[120px] pl-0; 
-      }
-    }
-    .feature-left {
-      @apply pr-[120px]; 
-    }
-    .feature-right {
-      @apply pl-[120px]; 
-    }
-    .feature-left,
-    .feature-right {
-      @apply flex-1;
+      background-color:  var(--bg_color_2);
     }
     // 奇数倒转
     img {
@@ -29,6 +11,12 @@
     }
     .desc {
       @apply text-3xl font-medium;
+    }
+    .feature-top {
+      max-width: 60%;
+    }
+    .feature-bottom {
+      @apply mt-[60px];
     }
   }
 }

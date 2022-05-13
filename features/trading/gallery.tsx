@@ -24,29 +24,31 @@ function useFeatures() {
 export const TradingGallery = () => {
   const features = useFeatures()
   return (
-    <div className="main-container">
-      <div className={classNames(styles.features, 'main-content-width')}>
-        {features.map(feature => {
+    <div className={classNames(styles.features)}>
+      {features.map(feature => {
           return (
-            <div className="feature-item" key={feature.desc}>
-              <div className="feature-left">
-                <img src={feature.picture} alt={feature.desc} />
-              </div>
-              <div className="feature-right">
-                <p
-                  className="desc"
-                  dangerouslySetInnerHTML={{
-                    __html: feature.desc,
-                  }}
-                ></p>
-                <div className="mt-8">
-                  <DivideDot size="medium" />
+            <div key={feature.desc} className="feature-item-container main-container">
+              <div className={classNames('main-content-width')}>
+                <div className="feature-item" >
+                  <div className="feature-top">
+                    <p
+                      className="desc"
+                      dangerouslySetInnerHTML={{
+                        __html: feature.desc,
+                      }}
+                    ></p>
+                    <div className="mt-8">
+                      <DivideDot size="medium" />
+                    </div>
+                  </div>
+                  <div className="feature-bottom">
+                    <img src={feature.picture} alt={feature.desc} />
+                  </div>
                 </div>
               </div>
             </div>
           )
         })}
-      </div>
     </div>
   )
 }

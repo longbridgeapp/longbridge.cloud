@@ -16,7 +16,7 @@ export const AboutGallery = () => {
           <DivideDot size="large" />
         </div>
         <div className="mt-14">
-          <img src="https://pub.lbkrs.com/files/202205/YSbgwc62jxFySVy5/Group_626643.png" alt="" />
+          <img src="https://pub.lbkrs.com/files/202205/VSQ5HprP1H6vzuXk/Group_626643.png" alt="" />
         </div>
       </div>
     </div>

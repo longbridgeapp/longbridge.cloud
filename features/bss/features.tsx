@@ -96,7 +96,7 @@ export const BssSection: FC<{
                 <div className="left">
                   <img src={feature.picture} alt={feature.title} />
                 </div>
-                <div className="ml-12">
+                <div className="ml-12 flex-1">
                   <h4 className="title">{feature.title}</h4>
                   <p
                     className="desc"

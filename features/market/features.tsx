@@ -42,7 +42,7 @@ export const MarketFeatures = () => {
             __html: i18n.t('market_features_005'),
           }}
         ></h2>
-        <div className="flex justify-between mt-14 pl-8">
+        <div className="flex justify-between mt-14 pl-2">
           {features.map(feature => {
             return (
               <div key={feature.desc} className="feature-item">

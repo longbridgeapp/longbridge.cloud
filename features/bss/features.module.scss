@@ -5,6 +5,7 @@
 
     border-bottom: 1px solid var(--border_color_1);
     .left {
+      @apply w-12;
       img {
         @apply w-12;
       }

@@ -2,11 +2,13 @@
   @apply py-[120px];
   .feature-item {
     @apply flex flex-col mr-5 last:mr-0 items-center;
+
+    max-width: 22%;
     .desc {
       @apply mt-4 text-xl font-normal text-center;
     }
     img {
-      @apply h-[80px];
+      @apply h-12;
     }
   }
 }

@@ -48,12 +48,12 @@ function useExampleFunctionColumns() {
 type IExampleProps = {
   name: string
   logo: string
-  desc: string
+  descList: string[]
   cover: string
   functions: IExampleFunctions
 }
 
-const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
+const Example: FC<IExampleProps> = ({ name, logo, descList, cover, functions }) => {
   const columns = useExampleFunctionColumns()
   const [height, setHeight] = useState('auto')
   const [windowWidth] = useResize()
@@ -82,7 +82,11 @@ const Example: FC<IExampleProps> = ({ name, logo, desc, cover, functions }) => {
           <img src={logo} alt={name} />
         </div>
         <h4 className="name">{name}</h4>
-        <p className="desc">{desc}</p>
+        <div>
+          {descList.map(desc => {
+            return <p key={desc} className="desc">{desc}</p>
+          })}
+        </div>
         <div className="functions">
           <table>
             <colgroup>
@@ -173,7 +177,9 @@ function useExamples(): IExampleProps[] {
         name: i18n.t('home_examples_009'),
         logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
         cover: 'https://pub.lbkrs.com/files/202205/zEN5oxy61TTKjneY/wintech.png',
-        desc: i18n.t('home_examples_007'),
+        descList: [
+          i18n.t('home_examples_007'),
+        ],
         functions: {
           app: i18n.t('home_examples_008'),
           quotation: free,
@@ -186,7 +192,11 @@ function useExamples(): IExampleProps[] {
         name: i18n.t('home_examples_010'),
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
         cover: 'https://pub.lbkrs.com/files/202205/iSBTzQxVyxtSFQqk/longbridge.png',
-        desc: i18n.t('home_examples_011'),
+        descList: [
+          i18n.t('home_examples_011'),
+          i18n.t('home_examples_011_1'),
+          i18n.t('home_examples_011_2'),
+        ],
         functions: {
           app: i18n.t('home_examples_012'),
           quotation: i18n.t('home_examples_013'),

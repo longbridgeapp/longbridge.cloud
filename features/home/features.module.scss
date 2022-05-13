@@ -1,7 +1,9 @@
 :local(.feature-item-container) {
   @apply py-[120px];
-  &:nth-child(2n) {
-    background-color: var(--bg_color_2);
+
+  background-color: var(--bg_color_2);
+  &:nth-child(2n + 1) {
+    @apply bg-white;
     .right {
       @apply text-left;
       order: -1;
