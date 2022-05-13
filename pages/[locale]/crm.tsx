@@ -62,7 +62,7 @@ const CrmPage = () => {
       }}
     >
       <SEOMeta title={seoI18n.t('crm.title')} description={seoI18n.t('crm.description')} />
-      <div className="py-[60px]">
+      <div>
         <BssSection features={features} />
       </div>
       <ContactBanner title={i18n.t('crm_page_0011')} desc={i18n.t('crm_page_0012')} />

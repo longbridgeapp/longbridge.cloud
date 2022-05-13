@@ -6,7 +6,7 @@ export const AboutGallery = () => {
   const i18n = useTranslation('common')
 
   return (
-    <div className="main-container py-[120px]">
+    <div className="main-container pt-[120px] pb-[60px]">
       <div className={classNames('main-content-width')}>
         <h3 className="text-4xl">
           <span className="font-bold">{i18n.t('about_gallery_001')}</span>&nbsp;

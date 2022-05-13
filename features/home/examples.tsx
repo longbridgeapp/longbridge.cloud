@@ -2,7 +2,8 @@ import { useTranslation } from 'next-i18next'
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/pagination'
-import { FC, HTMLAttributes, useEffect, useMemo, useState } from 'react'
+import { FC, HTMLAttributes, useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { useMount, useUpdate, useUpdateEffect } from 'ahooks'
 import classNames from 'classnames'
 import styles from './examples.module.scss'
@@ -145,25 +146,29 @@ const Controls = () => {
   }, [])
   return (
     <div className={styles.controls}>
-      <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} />
-      <div className="flex">
-        {new Array(total).fill(0).map((_, index) => {
-          return (
-            <div
-              // eslint-disable-next-line react/no-array-index-key
-              key={index}
-              className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all cursor-pointer', {
-                active: index === activeIndex,
-              })}
-              style={{
-                backgroundColor: index !== activeIndex ? 'var(--tag_border_color)' : 'var(--brand_color)',
-              }}
-              onClick={() => swiper.slideTo(index)}
-            ></div>
-          )
-        })}
+      <div className="pagination">
+        <div className="flex">
+          {new Array(total).fill(0).map((_, index) => {
+            return (
+              <div
+                // eslint-disable-next-line react/no-array-index-key
+                key={index}
+                className={classNames('h-1 w-9 mr-3 last:mr-0 transition-all cursor-pointer', {
+                  active: index === activeIndex,
+                })}
+                style={{
+                  backgroundColor: index !== activeIndex ? 'var(--tag_border_color)' : 'var(--brand_color)',
+                }}
+                onClick={() => swiper.slideTo(index)}
+              ></div>
+            )
+          })}
+        </div>
       </div>
-      <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} />
+      <div className="buttons">
+        <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} />
+        <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} />
+      </div>
     </div>
   )
 }
@@ -175,7 +180,7 @@ function useExamples(): IExampleProps[] {
     const examples: IExampleProps[] = [
       {
         name: i18n.t('home_examples_009'),
-        logo: 'https://pub.lbkrs.com/files/202205/EnwcZZWuQFUSdprB/Group_626657__1_.png',
+        logo: 'https://pub.lbkrs.com/files/202205/NttAUryfw6TR8hDd/wintech_logo_.png',
         cover: 'https://pub.lbkrs.com/files/202205/zEN5oxy61TTKjneY/wintech.png',
         descList: [
           i18n.t('home_examples_007'),
@@ -213,26 +218,36 @@ function useExamples(): IExampleProps[] {
 }
 const Examples = () => {
   const examples = useExamples()
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [controls, setControls] = useState(null)
+  useEffect(() => {
+    setControls(createPortal(<Controls />, containerRef.current!) as any)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [containerRef.current])
+
   return (
-    <Swiper
-      slidesPerView="auto"
-      pagination={{
-        clickable: true,
-      }}
-      spaceBetween={48}
-      autoplay
-      navigation
-      className={styles['swipe-box-wrapper']}
-    >
-      {examples.map(example => {
-        return (
-          <SwiperSlide key={example.name}>
-            <Example {...example} />
-          </SwiperSlide>
-        )
-      })}
-      <Controls />
-    </Swiper>
+    <div ref={containerRef} className="relative">
+      <Swiper
+        slidesPerView="auto"
+        pagination={{
+          clickable: true,
+        }}
+        spaceBetween={48}
+        autoplay
+        navigation
+        className={styles['swipe-box-wrapper']}
+      >
+        {examples.map(example => {
+          return (
+            <SwiperSlide key={example.name}>
+              <Example {...example} />
+            </SwiperSlide>
+          )
+        })}
+        {controls}
+      </Swiper>
+    </div>
+    
   )
 }
 
@@ -241,7 +256,7 @@ export const HomeExamples = () => {
 
   return (
     <div className={styles.container}>
-      <div className="section-content-container">
+      <div>
         <div className="main-container !pr-0">
           <div>
             <span className="label text-text_brand_color text-2xl">{i18n.t('home_examples_015')}</span>

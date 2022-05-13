@@ -80,7 +80,9 @@ export const HomeFeatures = () => {
             <div className={classNames(styles['feature-item-container'], 'main-container')} key={feature.title}>
               <div className="main-content-width">
                 <div>
-                  <h3 className="title">{feature.title}</h3>
+                  <h3 className="title" dangerouslySetInnerHTML={{
+                    __html: feature.title,
+                  }}></h3>
                   <div className="flex justify-between items-center mt-[60px]">
                     <div className="left">
                       <div className="desc-list">

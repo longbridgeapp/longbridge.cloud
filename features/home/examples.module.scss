@@ -1,3 +1,5 @@
+$slide-width: 85%;
+
 @mixin breakpoint() {
   @media screen and (max-width: 1300px) {
     & {
@@ -7,11 +9,11 @@
 }
 :local(.swipe-box-wrapper) {
   .swiper-slide {
-    width: 85%;
+    width: $slide-width;
   }
 }
 :local(.container) {
-  @apply py-[100px] bg-cover;
+  @apply pt-[100px] pb-[140px] bg-cover;
 
   background-image: url(https://pub.lbkrs.com/files/202205/FKyFqs57BsXmbiGp/_bg.png);
   @media screen and (min-width: 1400px) {
@@ -78,11 +80,27 @@
 }
 
 :local(.controls) {
-  @apply flex justify-between items-center mt-8;
-  width: 85%;
+  .pagination {
+    @apply flex justify-center absolute left-0 z-20;
+
+    width: $slide-width;
+    bottom: -60px;
+  }
+  .buttons {
+    @apply flex justify-between items-center absolute z-20 w-full;
+
+    top: 50%;
+    left: -100px;
+    width: calc(#{$slide-width} + 200px);
+    transform: translateY(-50%);
+  }
 }
 :local(.arrow) {
-  @apply cursor-pointer;
+  @apply cursor-pointer p-4 rounded-full;
+
+  background: #FFFFFF;
+  box-shadow: 0px 1px 4px rgba(11, 19, 31, 0.2);
+
   &.is-left {
     transform: rotate(180deg);
   }
@@ -90,5 +108,11 @@
     @apply cursor-not-allowed;
 
     color: var(--disabled_color_1);
+  }
+  &:not(.disabled) {
+    &:hover {
+      color: #fff;
+      background-color: var(--brand_color);
+    }
   }
 }

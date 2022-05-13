@@ -118,7 +118,7 @@ export const BssFeatures = () => {
   const sections = useSections()
 
   return (
-    <div className="py-[60px]">
+    <div>
       {sections.map(section => {
         return <BssSection key={section.title} title={section.title} features={section.features} />
       })}

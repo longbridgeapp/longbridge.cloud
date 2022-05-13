@@ -13,7 +13,7 @@
   }
 }
 :local(.services) {
-  @apply pb-[120px];
+  @apply pb-[60px];
   .service-item {
     @apply flex mt-12 first:mt-0;
     .cover {

@@ -3,6 +3,9 @@ import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 
+const email = 'service@longbridge.global'
+const tel = ''
+
 const Footer: FC = () => {
   const i18n = useTranslation('common')
   const socials = useMemo(() => {
@@ -32,19 +35,19 @@ const Footer: FC = () => {
   }, [])
 
   return (
-    <footer className="main-container">
-      <div className={classNames(styles.footer, 'main-content-width')}>
+    <footer className={classNames(styles.footer, 'main-container')}>
+      <div className={classNames('main-content-width')}>
         <div className="flex justify-between items-center">
           <div className="flex">
             {false && (
               <div className="flex flex-col">
                 <span className="text-sm">{i18n.t('footer_004')}</span>
-                <span className="mt-2 font-medium">400-024-2688</span>
+                <a className="mt-2 font-medium" href={`tel:${tel}`}>{tel}</a>
               </div>
             )}
             <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_003')}</span>
-              <span className="mt-2 font-medium">service@longbridge.global</span>
+              <a className="mt-2 font-medium" href={`mailto:${email}`}>{email}</a>
             </div>
           </div>
           <div>
