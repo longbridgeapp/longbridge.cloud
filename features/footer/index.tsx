@@ -44,7 +44,7 @@ const Footer: FC = () => {
             )}
             <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_003')}</span>
-              <span className="mt-2 font-medium">Support@Longbridge-inc.com</span>
+              <span className="mt-2 font-medium">service@longbridge.global</span>
             </div>
           </div>
           <div>

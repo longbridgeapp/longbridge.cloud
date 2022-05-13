@@ -61,7 +61,7 @@
   "market_features_004": "全内存行情数据存储方案，<br />微秒级的查询性能",
   "market_features_005": "行情数据，因云而快",
   "market_features_006": "行情数据服务",
-  "market_features_007": "提供包括美股、港股、新加坡股、A 股市场等各市场全面的行情，支持通过 Open API、SDK、App 等多种方式接入。",
+  "market_features_007": "提供包括美股、港股、新加坡股、A 股市场等各市场全面的行情，支持通过 OpenAPI、SDK、App 等多种方式接入。",
   "market_features_008": "行情商店",
   "market_features_009": "满足用户对高级行情的需求，提供美国、香港、沪深、新加坡四大市场的实时行情数据及高级行情。",
   "market_features_010": "行情权限管理",
