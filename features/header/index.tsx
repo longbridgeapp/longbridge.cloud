@@ -62,6 +62,7 @@ const Navs = () => {
   const navs = useNavs()
   const pathname = usePurePathname()
   const navigate = useLocaleNavigate()
+  const i18n = useTranslation('common')
   const selectedNav = useMemo(() => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
@@ -90,7 +91,9 @@ const Navs = () => {
               >
                 <LocaleLink to={nav.value} className="flex items-center">
                   <span>{nav.label}</span>
-                  <div className="text-[8px] ml-1">
+                  <div className={classNames('text-[8px] ml-1')} style={{
+                    transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`
+                  }}>
                     <Icon type="cart-down" />
                   </div>
                 </LocaleLink>

@@ -64,7 +64,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
         {selectedItem && !alwaysChildren ? (
           <div className="flex items-center">
             <span>{selectedItem.shortLabel || selectedItem.label}</span>
-            <div className="text-[8px] ml-1">
+            <div className="text-[8px] ml-1 translate-y-[-2px]">
               <Icon type="cart-down" />
             </div>
           </div>
