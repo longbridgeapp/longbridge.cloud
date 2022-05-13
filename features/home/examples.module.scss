@@ -90,15 +90,15 @@ $slide-width: 85%;
     @apply flex justify-between items-center absolute z-20 w-full;
 
     top: 50%;
-    left: -100px;
-    width: calc(#{$slide-width} + 200px);
+    left: -90px;
+    width: calc(#{$slide-width} + 180px);
     transform: translateY(-50%);
   }
 }
 :local(.arrow) {
-  @apply cursor-pointer p-4 rounded-full;
+  @apply cursor-pointer rounded-full w-[68px] h-[68px] flex justify-center items-center;
 
-  background: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.9);
   box-shadow: 0px 1px 4px rgba(11, 19, 31, 0.2);
 
   &.is-left {
@@ -112,6 +112,7 @@ $slide-width: 85%;
   &:not(.disabled) {
     &:hover {
       color: #fff;
+      opacity: 0.9;
       background-color: var(--brand_color);
     }
   }

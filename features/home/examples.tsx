@@ -125,7 +125,7 @@ const Arrow: FC<
       })}
       {...res}
     >
-      <Icon className="text-4xl" type="arrow-right" />
+      <Icon className="text-2xl" type="arrow-right" />
     </div>
   )
 }
@@ -166,8 +166,8 @@ const Controls = () => {
         </div>
       </div>
       <div className="buttons">
-        <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} />
-        <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} />
+        {hasPrev ? <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} /> : <span></span>}
+        {hasNext ? <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()}/> : <span></span>}
       </div>
     </div>
   )

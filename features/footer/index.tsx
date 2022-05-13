@@ -3,7 +3,7 @@ import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 
-const email = 'service@longbridge.global'
+const email = 'cs@longbridge.cloud'
 const tel = ''
 
 const Footer: FC = () => {
