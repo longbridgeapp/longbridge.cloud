@@ -22,8 +22,6 @@ jobs:
         run: yarn
 
       - name: build release env dist file
-        env:
-          PUBLIC_ASSET_PATH: https://static.lbkrs.com/open-longbridge-cloud/
         run: yarn build
 
       - name: upload dist to bj
