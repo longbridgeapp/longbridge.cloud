@@ -40,16 +40,16 @@ jobs:
 #          for file in **/*/*.html; do aws --region=${{ secrets.PROD_BJ_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_BJ_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
 #          for file in **/*.html; do aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
 
-#      - name: upload dist to hk
-#        env:
-#          AWS_ACCESS_KEY_ID: ${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_ACCESS_KEY_ID }}
-#          AWS_SECRET_ACCESS_KEY: ${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_ACCESS_KEY_SECRET }}
-#        run: |
-#          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 sync ./out s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/ --exclude "*.map" --exclude "*.html" --cache-control max-age=31536000
-#          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 sync ./out/zh-HK/ s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/ --cache-control no-cache
-#          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/en/index.html --cache-control no-cache
-#          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/zh-CN/index.html --cache-control no-cache
-#          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/zh-HK/index.html --cache-control no-cache
+      - name: upload dist to hk
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_ACCESS_KEY_SECRET }}
+        run: |
+          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 sync ./out s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/ --exclude "*.map" 
+          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 sync ./out/zh-HK/ s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/ --cache-control no-cache
+          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/en.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/en/index.html --cache-control no-cache
+          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-CN.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/zh-CN/index.html --cache-control no-cache
+          aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ./out/zh-HK.html s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/zh-HK/index.html --cache-control no-cache
 #          cd ./out
 #          for file in **/*/*.html; do aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
 #          for file in **/*.html; do aws --region=${{ secrets.PROD_HK_AWS_DEFAULT_REGION }} s3 cp ${file} s3://${{ secrets.FE_S3_OPEN_STATIC_PROD_HK_BUCKET }}/open-longbridge-cloud/${file} --cache-control no-cache; done;
