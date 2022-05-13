@@ -68,24 +68,37 @@ const Example: FC<IExampleProps> = ({ name, logo, descList, cover, functions }) 
   useMount(() => {
     setTimeout(updateHeight, 100)
   })
-  
+
   return (
-    <div className={styles.example} style={{
-      height,
-    }}>
-      <div className="cover" style={{
-        // backgroundImage: `url(${cover})`,
-      }}>
-        <img src={cover} alt={name} />
+    <div
+      className={styles.example}
+      style={{
+        height,
+      }}
+    >
+      <div
+        className="cover"
+      >
+        {/* Safari 下直接使用 100% 会有样式问题 */}
+        <img style={{
+          height,
+        }} src={cover} alt={name} />
       </div>
       <div className="main">
         <div className="logo">
-          <img src={logo} alt={name} />
+          <img
+            src={logo}
+            alt={name}
+          />
         </div>
         <h4 className="name">{name}</h4>
         <div>
           {descList.map(desc => {
-            return <p key={desc} className="desc">{desc}</p>
+            return (
+              <p key={desc} className="desc">
+                {desc}
+              </p>
+            )
           })}
         </div>
         <div className="functions">
@@ -167,7 +180,7 @@ const Controls = () => {
       </div>
       <div className="buttons">
         {hasPrev ? <Arrow isLeft disabled={!hasPrev} onClick={() => swiper.slidePrev()} /> : <span></span>}
-        {hasNext ? <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()}/> : <span></span>}
+        {hasNext ? <Arrow isLeft={false} disabled={!hasNext} onClick={() => swiper.slideNext()} /> : <span></span>}
       </div>
     </div>
   )
@@ -182,9 +195,7 @@ function useExamples(): IExampleProps[] {
         name: i18n.t('home_examples_009'),
         logo: 'https://pub.lbkrs.com/files/202205/NttAUryfw6TR8hDd/wintech_logo_.png',
         cover: 'https://pub.lbkrs.com/files/202205/zEN5oxy61TTKjneY/wintech.png',
-        descList: [
-          i18n.t('home_examples_007'),
-        ],
+        descList: [i18n.t('home_examples_007')],
         functions: {
           app: i18n.t('home_examples_008'),
           quotation: free,
@@ -197,11 +208,7 @@ function useExamples(): IExampleProps[] {
         name: i18n.t('home_examples_010'),
         logo: 'https://pub.lbkrs.com/files/202205/URxWFMb2Lev4Dhja/Group_626657.png',
         cover: 'https://pub.lbkrs.com/files/202205/iSBTzQxVyxtSFQqk/longbridge.png',
-        descList: [
-          i18n.t('home_examples_011'),
-          i18n.t('home_examples_011_1'),
-          i18n.t('home_examples_011_2'),
-        ],
+        descList: [i18n.t('home_examples_011'), i18n.t('home_examples_011_1'), i18n.t('home_examples_011_2')],
         functions: {
           app: i18n.t('home_examples_012'),
           quotation: i18n.t('home_examples_013'),
@@ -247,7 +254,6 @@ const Examples = () => {
         {controls}
       </Swiper>
     </div>
-    
   )
 }
 

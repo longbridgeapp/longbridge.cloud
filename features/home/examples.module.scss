@@ -28,8 +28,6 @@ $slide-width: 85%;
     @apply flex-1 bg-cover;
     width: 35%;
     img {
-      @apply h-full;
-
       object-fit: cover;
     }
   }
