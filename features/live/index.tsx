@@ -5,6 +5,7 @@ import styles from './live.module.scss'
 import { useTranslation } from 'next-i18next'
 import DivideDot from '@/components/divide-dot'
 import { FC, useMemo } from 'react'
+import Footer from '../footer'
 
 type IAgendaProps = {
   name: string
@@ -46,18 +47,15 @@ function useAgendas(): IAgendaProps[] {
   }, [])
 }
 
-const Agenda: FC<IAgendaProps & {
-  showLine: boolean
-}> = ({ name, content, position, sex, showLine }) => {
+const Agenda: FC<
+  IAgendaProps & {
+    showLine: boolean
+  }
+> = ({ name, content, position, sex, showLine }) => {
   return (
     <>
       <div className="agenda-item flex flex-col justify-center items-center text-center">
-        <div className="flex items-center justify-center h-[2em] text-2xl font-medium">
-          <span>{content}</span>
-          {showLine && <div className="flex-1 mx-4">
-        <div className="border-black  w-full border-b-[1px] border-dashed"></div>
-      </div>}
-        </div>
+        <div className="flex items-center justify-center h-[2em] text-2xl font-medium">{content}</div>
         <div className="mt-5">
           {name && (
             <div>
@@ -68,9 +66,80 @@ const Agenda: FC<IAgendaProps & {
           <div className="position">{position}</div>
         </div>
       </div>
-      
-      
+      {showLine && (
+        <div className="w-10 mx-4 text-2xl h-[2em] flex flex-col justify-center items-center">
+          <div className="border-black  w-full border-b-[1px] border-dashed"></div>
+        </div>
+      )}
     </>
+  )
+}
+
+function useGuests() {
+  const i18n = useTranslation('common')
+  return useMemo(() => {
+    return [
+      {
+        name: i18n.t('陈舜权'),
+        sex: i18n.t('先生'),
+        position: i18n.t('注册合规师公会会长'),
+        avatar: '',
+      },
+      {
+        name: i18n.t('刘国林'),
+        sex: i18n.t('先生'),
+        position: i18n.t('盈泰证券负责人员、董事'),
+        avatar: '',
+      },
+      {
+        name: i18n.t('张玉婷'),
+        sex: i18n.t('女士'),
+        position: i18n.t('香港交易所市场发展科助理副总裁'),
+        avatar: '',
+      },
+      {
+        name: i18n.t('张银凯'),
+        sex: i18n.t('先生'),
+        position: i18n.t('益高证券董事及总经理'),
+        avatar: '',
+      },
+    ]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+}
+const Guests = () => {
+  const guests = useGuests()
+  const i18n = useTranslation('common')
+
+  return (
+    <div className={styles.guests}>
+      <div className="main-container">
+        <div className="main-content-width">
+          <h3 className="font-bold text-4xl">{i18n.t('嘉宾介绍')}</h3>
+          <div className="mt-7">
+            <DivideDot size="large" />
+          </div>
+          <div className="guest-list flex justify-between flex-wrap mt-7">
+            {guests.map(({ name, sex, position, avatar }) => {
+              return (
+                <div className="guest-item flex w-[48%] mb-10" key={name}>
+                  <img className="w-[45%] object-cover" src={avatar || 'https://pub.lbkrs.com/files/202205/HsX46TS6JsHWwhZm/Mask_group.png'} alt={name} />
+                  <div className="bg-white flex-1 p-10">
+                    <div className="font-bold pb-5 mb-5 border-b-[1px] border-dashed">
+                      <span className="text-3xl">{name}</span>
+                      <span className="text-lg ml-2">{sex}</span>
+                    </div>
+                    <div className="text-lg">
+                      <span>{position}</span>
+                    </div>
+                  </div>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+      </div>
+    </div>
   )
 }
 
@@ -113,9 +182,7 @@ const Detail = () => {
             <h4 className="font-medium text-2xl">{i18n.t('议程：')}</h4>
             <div className="agenda-list flex justify-between items-start mt-7">
               {agendas.map((item, index) => {
-                return (
-                  <Agenda showLine={index !== agendas.length - 1} {...item} key={item.content} />
-                )
+                return <Agenda showLine={index !== agendas.length - 1} {...item} key={item.content} />
               })}
             </div>
           </div>
@@ -131,7 +198,7 @@ const Live = () => {
       <div className={styles.live}>
         <div className="section-content-container">
           <Header />
-          <div className="main-container py-20">
+          <div className="main-container pb-20 pt-10">
             <div className="main-content-width">
               <div className="flex justify-between">
                 <div className="flex-[2]">
@@ -146,6 +213,8 @@ const Live = () => {
         </div>
       </div>
       <Detail />
+      <Guests />
+      <Footer />
     </div>
   )
 }

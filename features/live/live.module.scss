@@ -15,10 +15,17 @@
   }
   .agenda-list {
     .agenda-item {
-      @apply px-4 min-w-[144px] flex-[4] first:pl-0;
+      @apply first:pl-0 max-w-[144px];
+      &:first-child {
+        
+      }
       .position {
         color: var(--text_color_2);
       }
     }
   }
+}
+:local(.guests) {
+  @apply py-[120px];
+  background-color: var(--bg_color_1);
 }

@@ -78,7 +78,7 @@ function useFormItems() {
 export const LiveForm: FC = () => {
   const i18n = useTranslation('common')
   const [formItems, update, formValue] = useFormItems()
-  const { succeed, setSucceed } = useLive()
+  const { succeed, setSucceed, ended } = useLive()
   const isValid = useMemo(() => {
     return formItems.every(item => item.value)
   }, [formItems])
@@ -124,8 +124,8 @@ export const LiveForm: FC = () => {
         </div>
       </div>
 
-      <Button loading={loading} onClick={run} disabled={!isValid || succeed} size="medium" className="w-full">
-        {succeed ? i18n.t('你已成功报名') : i18n.t('提交')}
+      <Button loading={loading} onClick={run} disabled={!isValid || succeed || ended} size="medium" className="w-full">
+        {ended ? i18n.t('活动已结束') : succeed ? i18n.t('你已成功报名') : i18n.t('提交')}
       </Button>
     </form>
   )

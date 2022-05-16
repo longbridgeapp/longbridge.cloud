@@ -13,5 +13,13 @@
         background-color: rgba(255, 255, 255, 0.2);
       }
     }
+    .video-box {
+      >div {
+        @apply flex-1 w-full h-full;
+      }
+      video {
+        @apply w-full h-full object-cover flex-1;
+      }
+    }
   }
 }

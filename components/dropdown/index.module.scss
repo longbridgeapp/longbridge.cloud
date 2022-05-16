@@ -22,7 +22,7 @@
 
   }
   .content {
-    @apply hidden absolute right-0 bg-white min-w-full;
+    @apply hidden absolute right-0 bg-white min-w-full z-10;
 
     top: calc(100%);
     width: max-content;
