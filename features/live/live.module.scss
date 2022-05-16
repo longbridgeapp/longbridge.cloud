@@ -1,0 +1,24 @@
+:local(.live) {
+  @apply bg-cover;
+
+  background-image: url(https://pub.lbkrs.com/files/202205/fcjpWTwywjW6RhJX/20220516-142140.png);
+}
+:local(.detail) {
+  @apply py-[100px];
+  .desc {
+    @apply text-xl mt-[60px] leading-[1.5];
+
+    color: var(--text_color_2);
+    p {
+      @apply mb-8 last:mb-0;
+    }
+  }
+  .agenda-list {
+    .agenda-item {
+      @apply px-4 min-w-[144px] flex-[4] first:pl-0;
+      .position {
+        color: var(--text_color_2);
+      }
+    }
+  }
+}

@@ -54,6 +54,11 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
+      {
+        value: '/live',
+        label: i18n.t('header_nav_008'),
+        children: [],
+      },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -99,7 +104,7 @@ const Navs = () => {
                 </LocaleLink>
               </Dropdown>
             )}
-            {nav.children.length === 0 && <LocaleLink to={nav.value}>{nav.label}</LocaleLink>}
+            {nav.children.length === 0 && <LocaleLink className="pr-20" to={nav.value}>{nav.label}</LocaleLink>}
           </div>
         )
       })}

@@ -7,7 +7,7 @@ export interface IconBaseProps extends React.HTMLProps<HTMLSpanElement> {
 }
 
 const SourceIcon = createFromIconfontCN({
-  scriptUrl: '//at.alicdn.com/t/font_3392465_6t9rfuzt01b.js',
+  scriptUrl: '//at.alicdn.com/t/font_3392465_62id6usimmq.js',
   extraCommonProps: {
     className: 'iconfont',
   },
