@@ -117,7 +117,7 @@ export const LiveForm: FC = () => {
             const id = `form-${item.key}`
             return (
               <div key={item.key} className="form-item">
-                <label htmlFor={id}>{item.label}</label>
+                <label htmlFor={id}>{item.label}{item.required && '*'}</label>
                 <input
                   value={item.value}
                   onChange={e => update(item.key, e.target.value)}

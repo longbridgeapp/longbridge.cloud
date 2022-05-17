@@ -27,7 +27,7 @@ type IResponse<T> = Promise<{
         公司或机构: ${institution};
         其它信息：${messages}
       `,
-      sub_type: started ? 'whale_report_started' : 'whale_report',
+      sub_type: 'longbridge_cloud_live',
     })
   })
   if (resp.ok) {

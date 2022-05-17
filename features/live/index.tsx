@@ -6,13 +6,11 @@ import { useTranslation } from 'next-i18next'
 import DivideDot from '@/components/divide-dot'
 import { FC, useMemo } from 'react'
 import Footer from '../footer'
+import classNames from 'classnames'
 
 type IAgendaProps = {
   content: string
-  participants: {
-    position: string
-    name: string
-  }[]
+  icon: string
 }
 function useAgendas(): IAgendaProps[] {
   const i18n = useTranslation('common')
@@ -21,53 +19,19 @@ function useAgendas(): IAgendaProps[] {
     return [
       {
         content: i18n.t('live_index_004'),
-        participants: [
-          {
-            position: i18n.t('live_index_003'),
-            name: i18n.t('live_index_001'),
-          },
-        ],
+        icon: 'https://pub.lbkrs.com/files/202205/ZbHvsYTuz69qULDK/live_home.png',
       },
       {
         content: i18n.t('live_index_008'),
-        participants: [
-          {
-            position: i18n.t('live_index_006'),
-            name: i18n.t('live_index_005'),
-          },
-        ],
+        icon: 'https://pub.lbkrs.com/files/202205/KGLZ6id8wdWBWHwj/stock.png',
       },
       {
         content: i18n.t('live_index_035'),
-        participants: [
-          {
-            position: i18n.t('live_index_036'),
-            name: i18n.t('live_index_037'),
-          },
-          {
-            position: i18n.t('live_index_038'),
-            name: i18n.t('live_index_039'),
-          },
-        ],
+        icon: 'https://pub.lbkrs.com/files/202205/49Bgxj45qsgtHMV2/quote.png',
       },
       {
         content: i18n.t('live_index_010'),
-
-        participants: [
-          {
-            position: i18n.t('live_index_003'),
-            name: i18n.t('live_index_040'),
-          },
-        ],
-      },
-      {
-        content: i18n.t('live_index_012'),
-        participants: [
-          {
-            position: '',
-            name: i18n.t('live_index_041'),
-          },
-        ],
+        icon: 'https://pub.lbkrs.com/files/202205/hfwcRkwpkWsgKYiH/encyclopedia.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -78,27 +42,18 @@ const Agenda: FC<
   IAgendaProps & {
     showLine: boolean
   }
-> = ({ content, participants, showLine }) => {
+> = ({ content, icon, showLine }) => {
   return (
     <>
       <div className="agenda-item flex flex-col justify-center items-center text-center">
-        <div className="flex items-center justify-center h-[2em] text-2xl font-medium">{content}</div>
-        {participants.map(({ name, position }) => {
-          return (
-            <div key={name} className="mt-5">
-              {name && (
-                <div>
-                  <span className="text-xl whitespace-nowrap">{name}</span>
-                </div>
-              )}
-              <div className="position">{position}</div>
-            </div>
-          )
-        })}
+        <div>
+          <img className="w-12" src={icon} alt="" />
+        </div>
+        <div className="mt-10 flex items-center justify-center h-[2em] text-2xl font-medium">{content}</div>
       </div>
       {showLine && (
-        <div className="w-10 mx-4 text-2xl h-[2em] flex flex-col justify-center items-center">
-          <div className="border-black  w-full border-b-[1px] border-dashed"></div>
+        <div className="w-14 mx-4">
+          <img src="https://pub.lbkrs.com/files/202205/qPh3hGsxawvM2FQe/Vector_276.png" alt="" />
         </div>
       )}
     </>
@@ -191,14 +146,24 @@ const Detail = () => {
               <img src="https://pub.lbkrs.com/files/202205/nRzqH899MYacvpDP/Group_627269.png" alt="" />
             </div>
           </div>
-          <div className="mt-[60px]">
-            <h4 className="font-medium text-2xl">{i18n.t('live_index_023')}</h4>
-            <div className="agenda-list flex justify-between items-start mt-7">
+        </div>
+      </div>
+    </div>
+  )
+}
+const AgendaList = () => {
+  const i18n = useTranslation('common')
+  const agendas = useAgendas()
+  return (
+    <div className={classNames(styles['agenda-list'], 'bg-bg_color_1')}>
+      <div className="main-container">
+        <div className="main-content-width py-[120px]">
+        <h4 className="font-medium text-2xl">{i18n.t('live_index_023')}</h4>
+            <div className="agenda-list flex justify-between items-center mt-10">
               {agendas.map((item, index) => {
                 return <Agenda showLine={index !== agendas.length - 1} {...item} key={item.content} />
               })}
             </div>
-          </div>
         </div>
       </div>
     </div>
@@ -226,7 +191,8 @@ const Live = () => {
         </div>
       </div>
       <Detail />
-      <Guests />
+      <AgendaList />
+      {false && <Guests />}
       <Footer />
     </div>
   )
