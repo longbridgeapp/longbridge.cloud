@@ -20,6 +20,9 @@
       video {
         @apply w-full h-full object-cover flex-1;
       }
+      .vjs-fullscreen-control {
+        @apply absolute right-0;
+      }
     }
   }
 }

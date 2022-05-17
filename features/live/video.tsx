@@ -19,6 +19,7 @@ export const LiveVideo = () => {
     if (!player && videoRef.current) {
       const player = videojs(videoRef.current!, {
         controls: true,
+        
         controlBar: {
           volumePanel: true,
           remainingTimeDisplay: false,
@@ -28,6 +29,20 @@ export const LiveVideo = () => {
           playToggle: true,
           liveDisplay: true,
           pictureInPictureToggle: false,
+          children: [
+            {
+              name: 'playToggle',
+            },
+            {
+              name: 'volumePanel',
+            },
+            {
+              name: 'liveDisplay',
+            },
+            {
+              name: 'fullscreenToggle',
+            },
+          ]
         },
         sources: [
           // {
