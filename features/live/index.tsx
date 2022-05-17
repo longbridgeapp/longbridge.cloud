@@ -177,7 +177,7 @@ const Detail = () => {
         <div className="main-content-width">
           <div className="flex justify-between items-center">
             <div className="flex-1">
-              <h3 className="font-bold text-4xl">{i18n.t('live_video_005')}</h3>
+              <h3 className="font-bold text-4xl">{i18n.t('live_video_005_1')}</h3>
               <div className="mt-7">
                 <DivideDot size="large" />
               </div>

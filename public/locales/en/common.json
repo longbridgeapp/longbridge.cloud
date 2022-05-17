@@ -216,8 +216,8 @@
   "live_form_009": "Business E-mail",
   "live_form_010": "",
   "live_form_004": "Submit",
-  "live_video_004": "LONGBRIDGE WHALE Virtual Launch Event",
-  "live_video_005": "#LET’S GO CLOUD",
+  "live_video_004": "#LET'S GO CLOUD | LONGBRIDGE WHALE Virtual Launch Event",
+  "live_video_005": "",
   "live_index_020": "Amid the rapid development in FinTech and an increasing degree of digitalisation, applications in the securities brokering industry have become cumulatively intertwined and integrated with key technologies, leading to the emergence of a wide range of new technological applications and solutions.",
   "live_index_021": "Long Bridge Technology has officially registered as a Hong Kong Stock Exchange (HKEX) Broker Supplied Systems (BSS) Vendor, and to launch the one-stop solution LONGBRIDGE WHALE. ",
   "live_index_022": "Please join the virtual launch event #LET’S GO CLOUD in unveiling the brand new concept and be digitalised together. ",
@@ -255,5 +255,7 @@
   "live_form_011": "For futher information, \nplease fill the form below",
   "live_video_007": "Days",
   "live_video_006": "",
-  "live_form_003": "Your registration was successful"
+  "live_form_003": "Your registration was successful",
+  "live_form_001": "Report",
+  "live_video_005_1": "#LET’S GO CLOUD - \nLONGBRIDGE WHALE virtual Launch Event"
 }
