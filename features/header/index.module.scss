@@ -4,9 +4,15 @@
     &.nav-item__selected,
     &:hover {
       color: var(--brand_color);
+      .play-icon {
+        @apply text-white;
+      }
     }
     .nav-item__dropdown {
       @apply pr-20;
+    }
+    .play-icon {
+      transform:  translateX(-50%) translateY(-50%) scale(0.5);
     }
   }
 }
