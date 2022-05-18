@@ -244,7 +244,7 @@
   "live_index_019": "益高證券董事及總經理",
   "live_index_020": "近年來，以雲計算、大數據、人工智能、區塊鍊等技術為代表的金融科技在證券領域的應用場景正不斷拓展，金融科技和數字化或將成為證券行業下一個極速發展週期的核心驅動力。",
   "live_index_021": "作為全球最活躍及流動性最高的證券市場之一，香港證券業亦正積極擁抱金融科技創新，加速數字化轉型。",
-  "live_index_022": "長橋科技已於近日通過香港交易所認證，正式成為港交所經紀自設系統供應商（BSS Vendor）。\n現誠邀  閣下共同見證數字化發展新時刻。",
+  "live_index_022": "長橋科技已於近日通過香港交易所認證，正式成為港交所經紀自設系統供應商（BSS Vendor）。\n現誠邀閣下共同見證數字化發展新時刻。",
   "live_index_023": "議程：",
   "live_index_024": "嘉賓介紹",
   "live_index_035": "協會寄語",
@@ -253,12 +253,13 @@
   "live_index_038": "益高證券董事及總經理",
   "live_index_040": "門小雙 先生",
   "live_index_041": "劉國林 先生",
-  "live_video_001": "直播已結束，請聯絡 bd@longbridge.cloud 觀看回放",
+  "live_video_001": "直播已結束，如需回放請您聯繫 bd@longbridge.cloud",
   "live_video_002": "報名成功，到時可以直接觀看直播",
   "live_video_003": "請您預先登記，以觀看直播視頻",
   "live_video_004": "LONGBRIDGE WHALE 品牌發布暨研討會",
   "live_video_005": "數字券商 向雲而生 Let's Go Cloud！",
   "live_video_006": "直播倒計時：",
   "live_video_007": "天",
-  "live_index_039": "& 張銀凱 先生"
+  "live_index_039": "& 張銀凱 先生",
+  "live_video_005_1": "數字券商 向雲而生 Let's Go Cloud！"
 }

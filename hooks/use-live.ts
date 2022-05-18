@@ -1,7 +1,7 @@
 import { SUCCEED_KEY, STARTED_SUCCEED_KEY } from '@/constants'
 import { useCountDown, useLocalStorageState, useMount } from 'ahooks'
 import { getLiveInfo, ILiveInfo, LIVE_STATUS } from '@/services'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 /** 获取直播信息的 hook，用到 succeed 字段的组件需要 client only，否则会出错 */
 export function useLive() {
@@ -19,12 +19,18 @@ export function useLive() {
   const [, startCountDown] = useCountDown({
     targetDate: new Date(liveInfo.started_at),
   })
-  useMount(async () => {
+  const liveInfoRef = useRef(liveInfo)
+  liveInfoRef.current = liveInfo
+  const updateLIveInfo = async () => {
     const { data: { live } } = await getLiveInfo()
-    // TODO: 暂时写死
-    live.status = LIVE_STATUS.booking
-    live.started_at = Date.now() + 30 * 1000 //  Number(live.started_at) * 1000
-    setLiveInfo(live)
+    live.started_at = Number(live.started_at) * 1000
+    if (!liveInfoRef.current.m3u8_live_url || liveInfoRef.current.status !== live.status) {
+      setLiveInfo(live)
+    }
+  }
+  useMount(() => {
+    updateLIveInfo()
+    setInterval(updateLIveInfo, 10 * 1000)
   })
 
   return {

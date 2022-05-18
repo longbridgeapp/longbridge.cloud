@@ -49,7 +49,7 @@ export type ILiveInfo = {
 /**
  * 获取直播信息
  */
- export const getLiveInfo = async (id: string = '14735'): IResponse<{
+ export const getLiveInfo = async (id: string = '14780'): IResponse<{
    live: ILiveInfo
  }> => {
   const resp = await fetch(`${host}/lives/${id}`, {
