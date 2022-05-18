@@ -2,7 +2,8 @@
   @apply px-7 py-5 bg-white flex flex-col justify-between h-full;
   .form-item {
     @apply mb-5 text-sm;
-    input {
+    input,
+    textarea {
       @apply px-4 py-2.5 mt-2 w-full outline-none;
       border: 0.5px solid #E2E3E4;
       transition: all .2s;

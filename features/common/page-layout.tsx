@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { FirstScreen, IFirstScreenProps } from '@/features/home/first-screen'
 import Footer from '@/features/footer'
+import { LiveModal } from '@/features/home/live-modal'
 
 export const PageLayout: FC<{
   screenProps: IFirstScreenProps
@@ -13,5 +14,6 @@ export const PageLayout: FC<{
     <FirstScreen {...screenProps}/>
     {children}
     <Footer />
+    <LiveModal />
   </div>
 }

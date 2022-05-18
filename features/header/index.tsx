@@ -108,7 +108,7 @@ const Navs = () => {
                 </LocaleLink>
               </Dropdown>
             )}
-            {nav.children.length === 0 && <LocaleLink className="pr-20 flex items-center" to={nav.value}>
+            {nav.children.length === 0 && <LocaleLink className="pr-10 lg:pr-20 flex items-center" to={nav.value}>
               <span>{nav.label}</span>
               {nav.suffix && (
                 <span className="ml-2">{nav.suffix}</span>

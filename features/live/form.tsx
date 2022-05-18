@@ -1,4 +1,4 @@
-import { FC, useEffect, useMemo, useState } from 'react'
+import { createElement, FC, useEffect, useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import styles from './form.module.scss'
 import Button from '@/components/button'
@@ -41,7 +41,7 @@ function useFormItems(started: boolean) {
       placeholder: i18n.t('live_form_013'),
       key: 'messages',
       value: '',
-      type: 'text',
+      type: 'textarea',
       required: false,
     })
   }
@@ -122,19 +122,20 @@ export const LiveForm: FC = () => {
             return (
               <div key={item.key} className="form-item">
                 <label htmlFor={id}>{item.label}{item.required && '*'}</label>
-                <input
-                  value={item.value}
-                  onChange={e => update(item.key, e.target.value)}
-                  type={item.type}
-                  id={id}
-                  placeholder={item.placeholder}
-                />
+                {createElement(item.type === 'textarea' ? 'textarea' : 'input', {
+                  value: item.value,
+                  onChange: (e: any) => update(item.key, e.target.value),
+                  type: item.type,
+                  id,
+                  rows: 5,
+                  placeholder: item.placeholder
+                })}
               </div>
             )
           })}
         </div>
+        <p className="mb-4 text-sm text-text_color_2">{i18n.t('live_form_014')}</p>
       </div>
-
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full">
         {!started ? (succeed ? i18n.t('live_form_003') : i18n.t('live_form_004')) : (startedSucceed ? i18n.t('live_form_004_1') : i18n.t('live_form_004'))}
       </Button>

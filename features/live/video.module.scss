@@ -1,5 +1,6 @@
 // 背景 
 :local(.video) {
+  @apply h-full bg-white flex flex-col justify-between;
   .top {
     @apply flex flex-col justify-center items-center bg-cover relative min-h-[480px] text-white;
     background-image: url(https://pub.lbkrs.com/files/202205/qYFYBryEFKmep6Pe/20220516-142134.png);
