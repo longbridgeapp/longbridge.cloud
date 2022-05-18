@@ -1,12 +1,15 @@
-import { SUCCEED_KEY, STARTED_SUCCEED_KEY } from '@/constants'
-import { useCountDown, useLocalStorageState, useMount } from 'ahooks'
+import { SUCCEED_KEY } from '@/constants'
+import { useCountDown, useMount, useLocalStorageState } from 'ahooks'
 import { getLiveInfo, ILiveInfo, LIVE_STATUS } from '@/services'
 import { useRef, useState } from 'react'
+import { createAState } from './create-a-state'
+
+const useApplySucceed = createAState()
 
 /** 获取直播信息的 hook，用到 succeed 字段的组件需要 client only，否则会出错 */
 export function useLive() {
   const [succeed, setSucceed] = useLocalStorageState(SUCCEED_KEY)
-  const [startedSucceed, setStartedSucceed] = useLocalStorageState(STARTED_SUCCEED_KEY)
+  const [syncSucceed, setSyncSucceed] = useApplySucceed(succeed)
   const [liveInfo, setLiveInfo] = useState<ILiveInfo>({
     m3u8_live_url: '',
     started_at: Date.now() + 30 * 1000,
@@ -22,7 +25,7 @@ export function useLive() {
   const liveInfoRef = useRef(liveInfo)
   liveInfoRef.current = liveInfo
   const updateLIveInfo = async () => {
-    const { data: { live } } = await getLiveInfo()
+    const { live } = await getLiveInfo()
     live.started_at = Number(live.started_at) * 1000
     if (!liveInfoRef.current.m3u8_live_url || liveInfoRef.current.status !== live.status) {
       setLiveInfo(live)
@@ -36,10 +39,11 @@ export function useLive() {
   return {
     started,
     ended,
-    startedSucceed,
-    setStartedSucceed,
-    succeed,
-    setSucceed,
+    succeed: syncSucceed,
+    setSucceed: (val: any) => {
+      setSucceed(val)
+      setSyncSucceed(val)
+    },
     startCountDown,
     liveInfo,
   }

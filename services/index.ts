@@ -1,10 +1,15 @@
 const host = 'https://m.longbridge.xyz/api/forward' || 'https://m.lbkrs.com/api/forward';
 
-type IResponse<T> = Promise<{
-  code: number
-  data: T
-  message: string
-}>
+async function transformRes(res: any) {
+  if (res.ok) {
+    const data = await res.json()
+    if (data.code === 0) {
+      return data.data
+    }
+    return Promise.reject(data)
+  }
+  return Promise.reject(res.statusText)
+}
 /**
  * 报名
  */
@@ -30,10 +35,7 @@ type IResponse<T> = Promise<{
       sub_type: 'longbridge_cloud_live',
     })
   })
-  if (resp.ok) {
-    return resp.json()
-  }
-  return Promise.reject(resp.statusText)
+  return transformRes(resp)
 }
 export enum LIVE_STATUS {
   booking = 1,
@@ -49,7 +51,7 @@ export type ILiveInfo = {
 /**
  * 获取直播信息
  */
- export const getLiveInfo = async (id: string = '14780'): IResponse<{
+ export const getLiveInfo = async (id: string = '14780'): Promise<{
    live: ILiveInfo
  }> => {
   const resp = await fetch(`${host}/lives/${id}`, {
@@ -59,8 +61,5 @@ export type ILiveInfo = {
       'Accept': 'application/json, text/plain, */*',
     }
   })
-  if (resp.ok) {
-    return resp.json()
-  }
-  return Promise.reject(resp.statusText)
+  return transformRes(resp)
 }

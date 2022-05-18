@@ -107,7 +107,7 @@ export const LiveVideo = () => {
         <h4 className="font-medium text-lg mt-2">{i18n.t('live_video_005')}</h4>
         <div className="flex items-center text-sm mt-4">
           <Icon type="circle_time" className="mr-2" />
-          <span>2020.05.27 | 14:00-15:00 (UTC+8)</span>
+          <span>2022.05.27 | 14:00-15:00 (UTC+8)</span>
         </div>
       </div>
     </div>

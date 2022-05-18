@@ -77,7 +77,8 @@ function useFormItems(started: boolean) {
 }
 export const LiveForm: FC = () => {
   const i18n = useTranslation('common')
-  const { succeed, setSucceed, started, startedSucceed, setStartedSucceed } = useLive()
+  const { succeed, setSucceed, started } = useLive()
+  const [startedSucceed, setStartedSucceed] = useState(false)
   const [formItems, update, formValue] = useFormItems(started)
   const isValid = useMemo(() => {
     return formItems.filter(item => item.required === true).every(item => item.value)
@@ -97,6 +98,9 @@ export const LiveForm: FC = () => {
         setSucceed(true)
       } else {
         setStartedSucceed(true)
+        setTimeout(() => {
+          setStartedSucceed(false)
+        }, 5000)
       }
     },
     {
@@ -132,7 +136,7 @@ export const LiveForm: FC = () => {
       </div>
 
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full">
-        {!started ? (succeed ? i18n.t('live_form_003') : i18n.t('live_form_004')) : i18n.t('live_form_004')}
+        {!started ? (succeed ? i18n.t('live_form_003') : i18n.t('live_form_004')) : (startedSucceed ? i18n.t('live_form_004_1') : i18n.t('live_form_004'))}
       </Button>
     </form>
   )
