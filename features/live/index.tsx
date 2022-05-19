@@ -172,17 +172,17 @@ const AgendaList = () => {
 
 const Live = () => {
   return (
-    <div>
+    <div className={styles['live-page']}>
       <div className={styles.live}>
         <div className="section-content-container">
           <Header />
           <div className="main-container pb-20 pt-10">
             <div className="main-content-width">
-              <div className="flex justify-between">
+              <div className="flex flex-col md:flex-row justify-between">
                 <div className="flex-[2]">
                   <LiveVideo />
                 </div>
-                <div className="ml-7 flex-1">
+                <div className="mt-10 md:ml-7 md:mt-0 flex-1">
                   <LiveForm />
                 </div>
               </div>
