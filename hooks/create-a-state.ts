@@ -13,7 +13,7 @@ export function createAState() {
       setState(newVal)
       if (target[key]) {
         target[key].forEach(fn => {
-          if (fn !== setAState) {
+          if (fn !== setState) {
             fn(newVal)
           }
         })
@@ -23,8 +23,7 @@ export function createAState() {
       if (!target[key]) {
         target[key] = []
       }
-      target[key].push(setAState)
-      console.log(target[key])
+      target[key].push(setState)
       return () => {
         delete target[key]
       }

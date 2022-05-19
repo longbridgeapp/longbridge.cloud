@@ -1,16 +1,20 @@
 import { SUCCEED_KEY } from '@/constants'
 import { useCountDown, useMount, useLocalStorageState } from 'ahooks'
 import { getLiveInfo, ILiveInfo, LIVE_STATUS } from '@/services'
-import { useRef, useState } from 'react'
+import { useEffect, useRef } from 'react'
 import { createAState } from './create-a-state'
 
 const useApplySucceed = createAState()
+const useLiveInfo = createAState()
+
+let updateLIveInfoTimer: any
+const updateLIveInfoSubscribes: any[] = []
 
 /** 获取直播信息的 hook，用到 succeed 字段的组件需要 client only，否则会出错 */
 export function useLive() {
   const [succeed, setSucceed] = useLocalStorageState(SUCCEED_KEY)
   const [syncSucceed, setSyncSucceed] = useApplySucceed(succeed)
-  const [liveInfo, setLiveInfo] = useState<ILiveInfo>({
+  const [liveInfo, setLiveInfo] = useLiveInfo<ILiveInfo>({
     m3u8_live_url: '',
     started_at: Date.now() + 30 * 1000,
     status: LIVE_STATUS.booking,
@@ -31,10 +35,21 @@ export function useLive() {
       setLiveInfo(live)
     }
   }
-  useMount(() => {
-    updateLIveInfo()
-    setInterval(updateLIveInfo, 10 * 1000)
-  })
+  useEffect(() => {
+    if (!updateLIveInfoTimer) {
+      updateLIveInfo()
+      updateLIveInfoTimer = setInterval(updateLIveInfo, 10 * 1000)
+    }
+    updateLIveInfoSubscribes.push(1)
+    return () => {
+      updateLIveInfoSubscribes.pop()
+      if (updateLIveInfoSubscribes.length === 0) {
+        clearInterval(updateLIveInfoTimer)
+        updateLIveInfoTimer = null
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return {
     started,
