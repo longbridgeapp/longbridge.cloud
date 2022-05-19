@@ -6,6 +6,7 @@ import { useRequest } from 'ahooks'
 import { report } from '@/services'
 import { useLive } from '@/hooks/use-live'
 import { isServer } from '@/utils/common'
+import classNames from 'classnames'
 
 function useFormItems(started: boolean) {
   const i18n = useTranslation('common')
@@ -16,6 +17,7 @@ function useFormItems(started: boolean) {
       key: 'name',
       value: '',
       type: 'text',
+      error: false,
       required: true,
     },
     {
@@ -23,6 +25,7 @@ function useFormItems(started: boolean) {
       placeholder: i18n.t('live_form_008'),
       key: 'institution',
       value: '',
+      error: false,
       type: 'text',
       required: true,
     },
@@ -30,8 +33,12 @@ function useFormItems(started: boolean) {
       label: i18n.t('live_form_009'),
       placeholder: i18n.t('live_form_010'),
       key: 'email',
+      error: false,
       value: '',
       type: 'text',
+      rule: (val: string) => {
+        return /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(val)
+      },
       required: true,
     },
   ]
@@ -43,6 +50,7 @@ function useFormItems(started: boolean) {
       value: '',
       type: 'textarea',
       required: false,
+      error: false,
     })
   }
   const [formItems, setFormItems] = useState(items)
@@ -51,6 +59,11 @@ function useFormItems(started: boolean) {
     const newItems = formItems.map(item => {
       if (item.key === key) {
         item.value = value
+        if ((item.required && !item.value) || (item.rule && !item.rule(value))) {
+          item.error = true
+        } else {
+          item.error = false
+        }
       }
       return item
     })
@@ -81,7 +94,9 @@ export const LiveForm: FC = () => {
   const [startedSucceed, setStartedSucceed] = useState(false)
   const [formItems, update, formValue] = useFormItems(started)
   const isValid = useMemo(() => {
-    return formItems.filter(item => item.required === true).every(item => item.value)
+    const required = formItems.filter(item => item.required === true).every(item => item.value)
+    const rule = formItems.filter(item => item.rule).every(item => item.rule?.(item.value))
+    return required && rule
   }, [formItems])
   const disabled = !isValid || (!started && succeed) || (started && startedSucceed)
   const { run, loading } = useRequest(
@@ -120,15 +135,20 @@ export const LiveForm: FC = () => {
           {formItems.map(item => {
             const id = `form-${item.key}`
             return (
-              <div key={item.key} className="form-item">
-                <label htmlFor={id}>{item.label}{item.required && '*'}</label>
+              <div key={item.key} className={classNames('form-item', {
+                'is-error': item.error,
+              })}>
+                <label htmlFor={id}>
+                  {item.label}
+                  {item.required && '*'}
+                </label>
                 {createElement(item.type === 'textarea' ? 'textarea' : 'input', {
                   value: item.value,
                   onChange: (e: any) => update(item.key, e.target.value),
                   type: item.type,
                   id,
                   rows: 5,
-                  placeholder: item.placeholder
+                  placeholder: item.placeholder,
                 })}
               </div>
             )
@@ -137,7 +157,13 @@ export const LiveForm: FC = () => {
         <p className="mb-4 text-sm text-text_color_2">{i18n.t('live_form_014')}</p>
       </div>
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full">
-        {!started ? (succeed ? i18n.t('live_form_003') : i18n.t('live_form_004')) : (startedSucceed ? i18n.t('live_form_004_1') : i18n.t('live_form_004'))}
+        {!started
+          ? succeed
+            ? i18n.t('live_form_003')
+            : i18n.t('live_form_004')
+          : startedSucceed
+          ? i18n.t('live_form_004_1')
+          : i18n.t('live_form_004')}
       </Button>
     </form>
   )

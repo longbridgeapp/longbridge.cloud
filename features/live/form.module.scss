@@ -2,6 +2,12 @@
   @apply px-7 py-5 bg-white flex flex-col justify-between h-full;
   .form-item {
     @apply mb-5 text-sm;
+    &.is-error {
+      input,
+      textarea {
+        border-color: var(--error_color_1) !important;
+      }
+    }
     input,
     textarea {
       @apply px-4 py-2.5 mt-2 w-full outline-none;
