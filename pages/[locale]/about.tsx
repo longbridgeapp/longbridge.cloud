@@ -23,7 +23,6 @@ const AboutPage = () => {
   return (
     <PageLayout
       screenProps={{
-        titleNowrap: true,
         contentFLex: '10',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
         title: i18n.t('about_page_001'),

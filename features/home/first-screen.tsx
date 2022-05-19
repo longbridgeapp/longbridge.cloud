@@ -9,7 +9,6 @@ export type IFirstScreenProps = {
   backgroundColor?: string
   backgroundImage?: string
   title: string | ReactNode
-  titleNowrap?: boolean
   desc: string | ReactNode
   cover?: string
   contactUs?: boolean
@@ -24,7 +23,6 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
   contactUs = false,
   cover = '',
   contentFLex = '1',
-  titleNowrap = false,
 }) => {
   const i18n = useTranslation('common')
 
@@ -46,9 +44,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
               }}
             >
               <h2
-                className={classNames('title', {
-                  'whitespace-nowrap': titleNowrap,
-                })}
+                className={classNames('title')}
               >
                 {title}
               </h2>

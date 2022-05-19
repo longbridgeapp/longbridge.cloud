@@ -6,6 +6,6 @@
     color: var(--text_color_1_supplement);
   }
   .title {
-    @apply font-medium text-[60px];
+    @apply font-medium text-[40px] leading-tight;
   }
 }

@@ -24,7 +24,6 @@ const MarketPage = () => {
   return (
     <PageLayout
       screenProps={{
-        titleNowrap: true,
         contactUs: true,
         contentFLex: '30',
         backgroundImage: 'url(https://pub.lbkrs.com/files/202205/h3NVqR1SHi2NMSL1/market_data.png)',
