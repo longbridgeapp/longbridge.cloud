@@ -54,15 +54,15 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
-      {
-        value: '/live',
-        label: i18n.t('header_nav_008'),
-        suffix: <div className="relative flex justify-center items-center">
-          <Icon type="live" />
-          <Icon type="play" className="text-xs absolute left-1/2 top-1/2 play-icon" />
-        </div>,
-        children: [],
-      },
+      // {
+      //   value: '/live',
+      //   label: i18n.t('header_nav_008'),
+      //   suffix: <div className="relative flex justify-center items-center">
+      //     <Icon type="live" />
+      //     <Icon type="play" className="text-xs absolute left-1/2 top-1/2 play-icon" />
+      //   </div>,
+      //   children: [],
+      // },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

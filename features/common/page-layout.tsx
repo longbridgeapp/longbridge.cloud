@@ -14,6 +14,6 @@ export const PageLayout: FC<{
     <FirstScreen {...screenProps}/>
     {children}
     <Footer />
-    <LiveModal />
+    {/* <LiveModal /> */}
   </div>
 }

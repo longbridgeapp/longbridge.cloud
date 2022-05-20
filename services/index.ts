@@ -1,4 +1,4 @@
-const host = 'https://m.longbridge.xyz/api/forward' || 'https://m.lbkrs.com/api/forward';
+const host = 'https://m.lbkrs.com/api/forward';
 
 async function transformRes(res: any) {
   if (res.ok) {
@@ -51,7 +51,7 @@ export type ILiveInfo = {
 /**
  * 获取直播信息
  */
- export const getLiveInfo = async (id: string = '14780'): Promise<{
+ export const getLiveInfo = async (id: string = '12998'): Promise<{
    live: ILiveInfo
  }> => {
   const resp = await fetch(`${host}/lives/${id}`, {
