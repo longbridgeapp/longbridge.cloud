@@ -1,5 +1,6 @@
 :local(.live-modal) {
-  @apply bg-bg_color_4 fixed right-[5%] bottom-4 md:bottom-10 w-[90%] md:right-10 md:w-auto rounded-lg z-20;
+  @apply bg-bg_color_4 fixed right-[5%] bottom-4  w-[90%] rounded-lg z-20;
+  @apply md:right-10 md:bottom-10 md:w-[200px];
 
   @screen md {
     @apply text-center;

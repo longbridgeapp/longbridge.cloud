@@ -35,6 +35,29 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
       location.href = getLocaleHref(pathLocale, cookieLocale)
     }
   })
+  useMount(() => {
+    const bindEventListener = function (type: string) {
+      const historyEvent = (history as any)[type]
+      return function(this: any) {
+        const e: any = new Event(type)
+        // eslint-disable-next-line prefer-rest-params
+        e.arguments = arguments
+        window.dispatchEvent(e)
+        // eslint-disable-next-line prefer-rest-params
+        const newEvent = historyEvent.apply(this, arguments)
+        return newEvent
+      }
+    }
+    history.pushState = bindEventListener('pushState')
+    history.replaceState = bindEventListener('replaceState')
+    const resetTop = () => {
+      window.document.scrollingElement!.scrollTop = 0
+    }
+    window.addEventListener('popstate', resetTop)
+    window.addEventListener('pushState', resetTop)
+    window.addEventListener('replaceState', resetTop)
+  })
+
   return (
     <div className="app">
       <Head>
