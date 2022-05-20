@@ -13,4 +13,9 @@
       opacity: 0.8;
     }
   }
+  &.disabled {
+    @apply pointer-events-none;
+    background-color: var(--bg_color_1) !important;
+    color: var(--text_color_2) !important;
+  }
 }

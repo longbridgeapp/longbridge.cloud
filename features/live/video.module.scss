@@ -1,0 +1,29 @@
+// 背景 
+:local(.video) {
+  @apply h-full bg-white flex flex-col justify-between;
+  .top {
+    @apply flex flex-col justify-center items-center bg-cover relative min-h-[480px] text-white;
+    background-image: url(https://pub.lbkrs.com/files/202205/qYFYBryEFKmep6Pe/20220516-142134.png);
+    .countdown {
+      @apply flex items-center absolute top-8 right-8 text-xs;
+
+      .number {
+        @apply flex justify-center items-center w-6 h-6 mx-1;
+
+        transform: scale(0.9);
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+    }
+    .video-box {
+      >div {
+        @apply flex-1 w-full h-full;
+      }
+      video {
+        @apply w-full h-full object-cover flex-1;
+      }
+      .vjs-fullscreen-control {
+        @apply absolute right-0;
+      }
+    }
+  }
+}

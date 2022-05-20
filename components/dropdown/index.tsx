@@ -43,7 +43,7 @@ const Dropdown: React.FC<IDropdownProps> = ({
     }
   }
   const onClick = () => {
-    if (trigger === 'click') {
+    if (trigger === 'click' || window.innerWidth <= 768) {
       setShowContent(!showContent)
     }
   }

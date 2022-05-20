@@ -46,3 +46,10 @@ export function getLocaleHref(pathLocale: string, locale: string) {
   url.pathname = pathname
   return url.toString()
 }
+/** 填充最多 2 个 0 */
+export function fillZero(val: string | number) {
+  if (val.toString().length >= 2) {
+    return val
+  }
+  return `0${val}`
+}
