@@ -51,6 +51,7 @@ function useNavs() {
       },
       {
         value: '/about',
+        suffix: '',
         label: i18n.t('header_nav_007'),
         children: [],
       },
