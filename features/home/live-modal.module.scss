@@ -1,3 +1,7 @@
 :local(.live-modal) {
-  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+  @apply bg-bg_color_4 fixed right-[5%] bottom-4 md:bottom-10 w-[90%] md:right-10 md:w-auto rounded-lg z-20;
+
+  @screen md {
+    @apply text-center;
+  }
 }

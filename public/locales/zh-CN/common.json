@@ -220,7 +220,7 @@
   "live_form_005": "姓名",
   "live_form_006": "请输入姓名",
   "live_form_007": "公司/机构名称",
-  "live_form_008": "请输入公司/结构名称",
+  "live_form_008": "请输入公司/机构名称",
   "live_form_009": "邮箱",
   "live_form_010": "请输入邮箱地址",
   "live_index_001": "胡国文 先生",
@@ -262,5 +262,8 @@
   "live_video_007": "天",
   "live_video_005_1": "数字券商 向云而生 Let's Go Cloud！",
   "live_form_004_1": "已提交，如有其他查询您可于 5 秒后再次提交",
-  "live_form_014": " 星号 (*) 的栏位为必填"
+  "live_form_014": " 星号 (*) 的栏位为必填",
+  "live_modal_001": "品牌发布研讨会",
+  "live_modal_002": "LET'S GO CLOUD",
+  "live_modal_003": "数字券商·向云而生"
 }
