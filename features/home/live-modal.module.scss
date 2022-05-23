@@ -2,6 +2,8 @@
   @apply bg-bg_color_4 fixed right-[5%] bottom-4  w-[90%] rounded-lg z-20;
   @apply md:right-10 md:bottom-10 md:w-[200px];
 
+  box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.08);
+
   @screen md {
     @apply text-center;
   }
