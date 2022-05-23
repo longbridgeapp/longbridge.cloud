@@ -43,8 +43,8 @@ export const LiveModal = () => {
           {started ? i18n.t('live_modal_001') : i18n.t('live_modal_002')}
         </Button>
       </LocaleLink>
-      <div onClick={() => setVisible(false)} className="absolute cursor-pointer right-4 top-2">
-        <Icon type="close" className="text-2xl md:text-base text-black hover:text-brand_color" />
+      <div onClick={() => setVisible(false)} className="absolute cursor-pointer right-4 top-3 md:top-1">
+        <Icon type="close" className="text-xl md:text-sm text-black hover:text-brand_color" />
       </div>
     </div>
   )
