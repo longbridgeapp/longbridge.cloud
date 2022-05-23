@@ -27,6 +27,7 @@ async function transformRes(res: any) {
     },
     body: JSON.stringify({
       content: `
+        时间：${started ? '直播中' : '预约中'};
         姓名: ${name};
         邮箱: ${email};
         公司或机构: ${institution};
