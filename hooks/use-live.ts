@@ -31,7 +31,11 @@ export function useLive() {
   const updateLIveInfo = async () => {
     const { live } = await getLiveInfo()
     live.started_at = Number(live.started_at) * 1000
-    if (!liveInfoRef.current.m3u8_live_url || liveInfoRef.current.status !== live.status) {
+    if (
+      !liveInfoRef.current.m3u8_live_url ||
+      liveInfoRef.current.status !== live.status ||
+      liveInfoRef.current.m3u8_live_url !== live.m3u8_live_url
+    ) {
       setLiveInfo(live)
     }
   }

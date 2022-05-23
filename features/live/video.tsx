@@ -65,7 +65,7 @@ export const LiveVideo = () => {
       ])
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [started, ended, liveInfo])
+  }, [started, ended, liveInfo.m3u8_live_url])
   if (isServer()) {
     return null
   }

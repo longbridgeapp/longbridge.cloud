@@ -4,6 +4,7 @@
     "source.fixAll.eslint": true
   },
   "i18n-ally.editor.preferEditor": true,
+  "i18n-ally.namespace": true,
   "i18n-ally.enabledFrameworks": [
     "i18next"
   ],

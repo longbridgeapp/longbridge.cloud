@@ -1,41 +1,50 @@
-import Button from "@/components/button"
-import Icon from "@/components/icon"
-import classNames from "classnames"
-import { useState } from "react"
-import { useTranslation } from "next-i18next"
+import Button from '@/components/button'
+import Icon from '@/components/icon'
+import classNames from 'classnames'
+import { useState } from 'react'
+import { useTranslation } from 'next-i18next'
 import styles from './live-modal.module.scss'
-import { LocaleLink } from "@/components/locale-link"
-import { useLive } from "@/hooks/use-live"
-import { isServer } from "@/utils/common"
+import { LocaleLink } from '@/components/locale-link'
+import { useLive } from '@/hooks/use-live'
+import { isServer } from '@/utils/common'
+
+const pictures = {
+  mobile: {
+    'en': 'https://pub.lbkrs.com/files/202205/ozAiPfqNHb4WuFeT/PopupMobileEnglish.png',
+    'zh-CN': 'https://pub.lbkrs.com/files/202205/1GUZ7UJHtB5DV63J/PopupMobileChinese.png',
+    'zh-HK': 'https://pub.lbkrs.com/files/202205/K7xkvP5Wi11Au5BP/PopupMobileChineseTr.png',
+  },
+  pc: {
+    'en': 'https://pub.lbkrs.com/files/202205/1hTPugDXvqG9vPb2/PopupWebEnglish.png',
+    'zh-CN': 'https://pub.lbkrs.com/files/202205/uxLZPiVtgnYsTBAN/PopupWebChinese.png',
+    'zh-HK': 'https://pub.lbkrs.com/files/202205/QUX5kNpgghaWRDrd/PopupWebChineseTr.png',
+  },
+} as any
 
 export const LiveModal = () => {
   const [visible, setVisible] = useState(true)
   const i18n = useTranslation('common')
+  const isEn = i18n.i18n.language === 'en'
   const { started, ended } = useLive()
-
   if (!visible || isServer() || ended) {
     return null
   }
+  // 以 768 为分界线
+  const picture = pictures[window.innerWidth > 768 ? 'pc' : 'mobile'][i18n.i18n.language]
 
   return (
-    <div className={classNames(styles['live-modal'], 'fixed right-[10%] bottom-10 w-[80%] md:right-10 md:w-auto rounded-lg z-20')}>
+    <div className={classNames(styles['live-modal'])}>
       <div>
-        <div className="text-white">
-          <h3 className="font-medium text-xl">WHALE</h3>
-          <p>{i18n.t('塞德里克福建省地方的思路')}</p>
-        </div>
-        <div className="bg-white text-white py-5 px-10">
-          <LocaleLink to="/live">
-            <Button className="w-full">
-              <Icon type="play-2" className="mr-2" />
-              {started ? i18n.t('现在观看') : i18n.t('立即登记')}
-            </Button>
-          </LocaleLink>
-          
-        </div>
+        <img src={picture} alt="" />
       </div>
-      <div onClick={() => setVisible(false)} className="absolute cursor-pointer right-4 top-4">
-        <Icon type="close" className="text-white" />
+      <LocaleLink to="/live" className="block absolute bottom-6 left-10 md:bottom-4 md:left-1/2 md:translate-x-[-50%]">
+        <Button className="md:w-full md:!text-sm md:!py-2 whitespace-nowrap" size="medium">
+          <Icon type="play-2" className="mr-2" />
+          {started ? i18n.t('live_modal_001') : i18n.t('live_modal_002')}
+        </Button>
+      </LocaleLink>
+      <div onClick={() => setVisible(false)} className="absolute cursor-pointer right-4 top-3 md:top-1">
+        <Icon type="close" className="text-xl md:text-sm text-black hover:text-brand_color" />
       </div>
     </div>
   )
