@@ -1,8 +1,8 @@
-import { FC, useState } from 'react'
+import { FC } from 'react'
 import { FirstScreen, IFirstScreenProps } from '@/features/home/first-screen'
 import Footer from '@/features/footer'
 import { LiveModal } from '@/features/home/live-modal'
-import { useMount } from 'ahooks'
+import { isServer } from '@/utils/common'
 
 export const PageLayout: FC<{
   screenProps: IFirstScreenProps
@@ -10,16 +10,11 @@ export const PageLayout: FC<{
   screenProps,
   children
 }) => {
-  const [showLiveModal, setShowLiveModal] = useState(false)
-  useMount(() => {
-    setShowLiveModal(location.href.includes('live'))
-  })
-
   return <div>
     {/* 放在这里一是因为它和 header 绑定了，二是可以后面方便控制吸顶效果 */}
     <FirstScreen {...screenProps}/>
     {children}
     <Footer />
-    {showLiveModal && <LiveModal />}
+    {!isServer() && <LiveModal />}
   </div>
 }

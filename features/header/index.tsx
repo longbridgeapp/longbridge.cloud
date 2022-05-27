@@ -55,15 +55,15 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
-      // {
-      //   value: '/live',
-      //   label: i18n.t('header_nav_008'),
-      //   suffix: <div className="relative flex justify-center items-center">
-      //     <Icon type="live" />
-      //     <Icon type="play" className="text-xs absolute left-1/2 top-1/2 play-icon" />
-      //   </div>,
-      //   children: [],
-      // },
+      {
+        value: '/live',
+        label: i18n.t('header_nav_008'),
+        suffix: <div className="relative flex items-center justify-center">
+          <Icon type="live" />
+          <Icon type="play" className="absolute text-xs left-1/2 top-1/2 play-icon" />
+        </div>,
+        children: [],
+      },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -109,7 +109,7 @@ const Navs = () => {
                 </LocaleLink>
               </Dropdown>
             )}
-            {nav.children.length === 0 && <LocaleLink className="pr-10 lg:pr-20 flex items-center" to={nav.value}>
+            {nav.children.length === 0 && <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
               <span>{nav.label}</span>
               {nav.suffix && (
                 <span className="ml-2">{nav.suffix}</span>
@@ -132,7 +132,7 @@ const Header: FC = () => {
           alt="logo"
         />
       </LocaleLink>
-      <div className="main-content-width flex-1">
+      <div className="flex-1 main-content-width">
         <Navs />
       </div>
       <div className="w-[73px]">
