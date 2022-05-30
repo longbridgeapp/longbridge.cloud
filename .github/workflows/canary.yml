@@ -24,7 +24,7 @@ jobs:
 
       - name: build canary env out file
         run: |
-          yarn build
+          PROXY=prod yarn build
 
       - name: upload canary out to s3
         env:

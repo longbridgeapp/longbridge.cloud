@@ -78,3 +78,18 @@ export const getLiveInfo = async (
   })
   return transformRes(resp)
 }
+
+/**
+ * 获取直播信息
+ */
+export const getAppConfig = async (keys: string[]): Promise<any> => {
+  const resp = await fetch(`${host}/v2/app/config?${keys.map(key => `keys=${key}&platform=web`).join('&')}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json, text/plain, */*',
+      'x-platform': 'web',
+    },
+  })
+  return transformRes(resp)
+}
