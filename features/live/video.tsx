@@ -75,9 +75,9 @@ export const LiveVideo = () => {
         <div className="top">
           {(liveInfoLoaded && !started || ended) && (
             <>
-              <div className="flex flex-col justify-center items-center">
+              <div className="absolute flex flex-col items-center justify-center -translate-y-1/2 top-1/2">
                 <img className="w-[73px]" src="https://pub.lbkrs.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
-                <div className="mt-14 text-center">
+                <div className="text-center mt-14">
                   {ended ? i18n.t('live_video_001') : succeed ? i18n.t('live_video_002') : i18n.t('live_video_003')}
                 </div>
               </div>
@@ -96,16 +96,16 @@ export const LiveVideo = () => {
             </>
           )}
           {liveInfoLoaded && started && !ended && (
-            <div className="video-box w-full h-full flex-1 flex flex-col">
+            <div className="flex flex-col flex-1 w-full h-full video-box">
               <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
             </div>
           )}
         </div>
 
-      <div className="bg-white px-7 py-6">
-        <h3 className="font-medium text-2xl">{i18n.t('live_video_004')}</h3>
-        <h4 className="font-medium text-lg mt-2">{i18n.t('live_video_005')}</h4>
-        <div className="flex items-center text-sm mt-4">
+      <div className="py-6 bg-white px-7">
+        <h3 className="text-2xl font-medium">{i18n.t('live_video_004')}</h3>
+        <h4 className="mt-2 text-lg font-medium">{i18n.t('live_video_005')}</h4>
+        <div className="flex items-center mt-4 text-sm">
           <Icon type="circle_time" className="mr-2" />
           <span>2022.05.31 | 14:00-15:00 (UTC+8)</span>
         </div>

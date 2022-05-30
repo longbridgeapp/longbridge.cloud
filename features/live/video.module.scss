@@ -1,8 +1,10 @@
 // 背景 
 :local(.video) {
-  @apply h-full bg-white flex flex-col justify-between;
+  @apply bg-white flex flex-col justify-between;
+  // @apply h-full;
   .top {
-    @apply flex flex-col justify-center items-center bg-cover relative min-h-[480px] text-white;
+    @apply flex flex-col justify-center items-center bg-cover relative min-h-[280px] text-white;
+    padding-top: 56.25%;
     background-image: url(https://pub.lbkrs.com/files/202205/qYFYBryEFKmep6Pe/20220516-142134.png);
     .countdown {
       @apply flex items-center absolute top-8 right-8 text-xs;
