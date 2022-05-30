@@ -1,4 +1,8 @@
-const host = 'https://m.lbkrs.com/api/forward';
+let host = 'https://m.longbridge.xyz/api/forward'
+
+if (process.env.PROXY === 'prod') {
+  host = 'https://m.lbkrs.com/api/forward'
+}
 
 async function transformRes(res: any) {
   if (res.ok) {
@@ -13,12 +17,20 @@ async function transformRes(res: any) {
 /**
  * 报名
  */
- export const report = async ({ email, name, institution, messages } : {
-  email: string
-  name: string
-  institution: string
-  messages: string
- }, started: boolean) => {
+export const report = async (
+  {
+    email,
+    name,
+    institution,
+    messages,
+  }: {
+    email: string
+    name: string
+    institution: string
+    messages: string
+  },
+  started: boolean
+) => {
   const resp = await fetch(`${host}/support/feedback/upload`, {
     method: 'POST',
     headers: {
@@ -34,14 +46,14 @@ async function transformRes(res: any) {
         其它信息：${messages}
       `,
       sub_type: 'longbridge_cloud_live',
-    })
+    }),
   })
   return transformRes(resp)
 }
 export enum LIVE_STATUS {
   booking = 1,
   online = 2,
-  ended = 3
+  ended = 3,
 }
 export type ILiveInfo = {
   m3u8_live_url: string
@@ -52,15 +64,17 @@ export type ILiveInfo = {
 /**
  * 获取直播信息
  */
- export const getLiveInfo = async (id: string = '12998'): Promise<{
-   live: ILiveInfo
- }> => {
+export const getLiveInfo = async (
+  id: string = '12998'
+): Promise<{
+  live: ILiveInfo
+}> => {
   const resp = await fetch(`${host}/lives/${id}`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json, text/plain, */*',
-    }
+    },
   })
   return transformRes(resp)
 }
