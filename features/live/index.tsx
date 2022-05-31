@@ -45,14 +45,14 @@ const Agenda: FC<
 > = ({ content, icon, showLine }) => {
   return (
     <>
-      <div className="agenda-item flex flex-col justify-center items-center text-center">
+      <div className="flex flex-col items-center justify-center text-center agenda-item">
         <div>
           <img className="w-12" src={icon} alt="" />
         </div>
         <div className="mt-10 flex items-center justify-center h-[2em] text-2xl font-medium">{content}</div>
       </div>
       {showLine && (
-        <div className="w-14 mx-4">
+        <div className="mx-4 w-14">
           <img src="https://pub.lbkrs.com/files/202205/qPh3hGsxawvM2FQe/Vector_276.png" alt="" />
         </div>
       )}
@@ -96,18 +96,18 @@ const Guests = () => {
     <div className={styles.guests}>
       <div className="main-container">
         <div className="main-content-width">
-          <h3 className="font-bold text-4xl">{i18n.t('live_index_024')}</h3>
+          <h3 className="text-4xl font-bold">{i18n.t('live_index_024')}</h3>
           <div className="mt-7">
             <DivideDot size="large" />
           </div>
-          <div className="guest-list flex justify-between flex-wrap mt-7">
+          <div className="flex flex-wrap justify-between guest-list mt-7">
             {guests.map(({ name, sex, position }) => {
               return (
                 <div className="guest-item flex mb-10 w-[45%] xl:w-[22%]" key={name}>
-                  <div className="bg-white flex-1 p-10">
+                  <div className="flex-1 p-10 bg-white">
                     <div className="font-bold pb-5 mb-5 border-b-[1px] border-dashed">
                       <span className="text-3xl">{name}</span>
-                      <span className="text-lg ml-2">{sex}</span>
+                      <span className="ml-2 text-lg">{sex}</span>
                     </div>
                     <div className="text-lg position-text text-text_color_2">
                       <span>{position}</span>
@@ -130,9 +130,9 @@ const Detail = () => {
     <div className={styles.detail}>
       <div className="main-container">
         <div className="main-content-width">
-          <div className="flex justify-between items-center">
+          <div className="flex items-center justify-between">
             <div className="flex-1">
-              <h3 className="font-bold text-4xl">{i18n.t('live_video_005_1')}</h3>
+              <h3 className="text-4xl font-bold">{i18n.t('live_video_005_1')}</h3>
               <div className="mt-7">
                 <DivideDot size="large" />
               </div>
@@ -158,8 +158,8 @@ const AgendaList = () => {
     <div className={classNames(styles['agenda-list'], 'bg-bg_color_1')}>
       <div className="main-container">
         <div className="main-content-width py-[120px]">
-        <h4 className="font-medium text-2xl">{i18n.t('live_index_023')}</h4>
-            <div className="agenda-list flex justify-between items-center mt-10">
+        <h4 className="text-2xl font-medium">{i18n.t('live_index_023')}</h4>
+            <div className="flex items-center justify-between mt-10 agenda-list">
               {agendas.map((item, index) => {
                 return <Agenda showLine={index !== agendas.length - 1} {...item} key={item.content} />
               })}
@@ -176,13 +176,13 @@ const Live = () => {
       <div className={styles.live}>
         <div className="section-content-container">
           <Header />
-          <div className="main-container pb-20 pt-10">
+          <div className="pt-10 pb-20 main-container">
             <div className="main-content-width">
-              <div className="flex flex-col md:flex-row justify-between">
+              <div className="flex flex-col justify-between md:flex-row">
                 <div className="flex-[2]">
                   <LiveVideo />
                 </div>
-                <div className="mt-10 md:ml-7 md:mt-0 flex-1">
+                <div className="flex-1 mt-10 md:ml-7 md:mt-0">
                   <LiveForm />
                 </div>
               </div>

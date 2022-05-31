@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - canary
+      - feat/live
 jobs:
   deploy_canary:
     name: build
@@ -24,7 +25,7 @@ jobs:
 
       - name: build canary env out file
         run: |
-          yarn build
+          PROXY=prod yarn build
 
       - name: upload canary out to s3
         env:
