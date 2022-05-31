@@ -19,7 +19,7 @@ export const LiveVideo = () => {
     if (!player && videoRef.current) {
       const player = videojs(videoRef.current!, {
         controls: true,
-
+        fluid: true,
         controlBar: {
           volumePanel: true,
           remainingTimeDisplay: false,

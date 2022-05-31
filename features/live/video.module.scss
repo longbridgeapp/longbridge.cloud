@@ -21,7 +21,8 @@
         @apply flex-1 w-full h-full;
       }
       video {
-        @apply w-full h-full object-cover flex-1;
+        @apply w-full object-cover flex-1;
+        // height: auto !important;
       }
       .vjs-fullscreen-control {
         @apply absolute right-0;
