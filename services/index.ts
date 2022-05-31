@@ -40,9 +40,9 @@ export const report = async (
     body: JSON.stringify({
       content: `
         时间：${started ? '直播中' : '预约中'};
-        姓名: ${name};
-        邮箱: ${email};
-        公司或机构: ${institution};
+        姓名：${name};
+        邮箱：${email};
+        公司或机构：${institution};
         其它信息：${messages}
       `,
       sub_type: 'longbridge_cloud_live',
@@ -57,6 +57,7 @@ export enum LIVE_STATUS {
 }
 export type ILiveInfo = {
   m3u8_live_url: string
+  replay_url: string
   /** 秒数 */
   started_at: string | number
   status: LIVE_STATUS
