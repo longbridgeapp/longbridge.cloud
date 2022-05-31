@@ -96,7 +96,7 @@ export const LiveVideo = () => {
             </>
           )}
           {liveInfoLoaded && started && !ended && (
-            <div className="flex flex-col flex-1 w-full h-full video-box">
+            <div className="absolute inset-0 flex flex-col flex-1 w-full h-full video-box">
               <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
             </div>
           )}

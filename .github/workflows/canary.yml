@@ -4,6 +4,7 @@ on:
     branches:
       - main
       - canary
+      - feat/live
 jobs:
   deploy_canary:
     name: build
