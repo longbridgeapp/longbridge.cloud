@@ -20,6 +20,7 @@ export function useLive() {
   const [liveID, setLiveID] = useLiveID('')
   const [liveInfo, setLiveInfo] = useLiveInfo<ILiveInfo>({
     m3u8_live_url: '',
+    replay_url: '',
     started_at: Date.now() + 30 * 1000,
     status: LIVE_STATUS.booking,
   })
@@ -49,7 +50,7 @@ export function useLive() {
       const key = 'longbridge_cloud_live'
       getAppConfig([key]).then(res => {
         const liveID = res?.config?.[key]?.live_id || ''
-        setLiveID(liveID)
+        setLiveID('8220' || liveID)
       })
       featchLiveIDLocker = true
     }

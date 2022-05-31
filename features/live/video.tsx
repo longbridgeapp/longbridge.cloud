@@ -59,8 +59,8 @@ export const LiveVideo = () => {
     } else if (player) {
       player.src([
         {
-          src: liveInfo.m3u8_live_url,
-          type: 'application/x-mpegURL',
+          src: ended ? liveInfo.replay_url : liveInfo.m3u8_live_url,
+          // type: 'application/x-mpegURL',
         },
       ])
     }
@@ -95,7 +95,7 @@ export const LiveVideo = () => {
               )}
             </>
           )}
-          {liveInfoLoaded && started && !ended && (
+          {liveInfoLoaded && started && (
             <div className="absolute inset-0 flex flex-col flex-1 w-full h-full video-box">
               <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
             </div>

@@ -57,6 +57,7 @@ export enum LIVE_STATUS {
 }
 export type ILiveInfo = {
   m3u8_live_url: string
+  replay_url: string
   /** 秒数 */
   started_at: string | number
   status: LIVE_STATUS
