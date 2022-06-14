@@ -59,8 +59,8 @@ export const LiveVideo = () => {
     } else if (player) {
       player.src([
         {
-          src: liveInfo.m3u8_live_url,
-          type: 'application/x-mpegURL',
+          src: ended ? liveInfo.replay_url : liveInfo.m3u8_live_url,
+          // type: 'application/x-mpegURL',
         },
       ])
     }
@@ -77,7 +77,7 @@ export const LiveVideo = () => {
             <>
               <div className="absolute flex flex-col items-center justify-center -translate-y-1/2 top-1/2">
                 <img className="w-[73px]" src="https://pub.lbkrs.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
-                <div className="text-center mt-14">
+                <div className="px-5 text-center mt-14">
                   {ended ? i18n.t('live_video_001') : succeed ? i18n.t('live_video_002') : i18n.t('live_video_003')}
                 </div>
               </div>
@@ -95,7 +95,7 @@ export const LiveVideo = () => {
               )}
             </>
           )}
-          {liveInfoLoaded && started && !ended && (
+          {liveInfoLoaded && started && liveInfo.replay_url && (
             <div className="absolute inset-0 flex flex-col flex-1 w-full h-full video-box">
               <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
             </div>

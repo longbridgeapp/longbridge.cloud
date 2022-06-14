@@ -55,15 +55,15 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
-      {
-        value: '/live',
-        label: i18n.t('header_nav_008'),
-        suffix: <div className="relative flex items-center justify-center">
-          <Icon type="live" />
-          <Icon type="play" className="absolute text-xs left-1/2 top-1/2 play-icon" />
-        </div>,
-        children: [],
-      },
+      // {
+      //   value: '/live',
+      //   label: i18n.t('header_nav_008'),
+      //   suffix: <div className="relative flex items-center justify-center">
+      //     <Icon type="live" />
+      //     <Icon type="play" className="absolute text-xs left-1/2 top-1/2 play-icon" />
+      //   </div>,
+      //   children: [],
+      // },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -101,20 +101,23 @@ const Navs = () => {
               >
                 <LocaleLink to={nav.value} className="flex items-center">
                   <span>{nav.label}</span>
-                  <div className={classNames('text-[8px] ml-1')} style={{
-                    transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`
-                  }}>
+                  <div
+                    className={classNames('text-[8px] ml-1')}
+                    style={{
+                      transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`,
+                    }}
+                  >
                     <Icon type="cart-down" />
                   </div>
                 </LocaleLink>
               </Dropdown>
             )}
-            {nav.children.length === 0 && <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
-              <span>{nav.label}</span>
-              {nav.suffix && (
-                <span className="ml-2">{nav.suffix}</span>
-              )}
-              </LocaleLink>}
+            {nav.children.length === 0 && (
+              <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
+                <span>{nav.label}</span>
+                {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
+              </LocaleLink>
+            )}
           </div>
         )
       })}

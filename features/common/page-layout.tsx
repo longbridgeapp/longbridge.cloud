@@ -2,7 +2,7 @@ import { FC } from 'react'
 import { FirstScreen, IFirstScreenProps } from '@/features/home/first-screen'
 import Footer from '@/features/footer'
 // import { LiveModal } from '@/features/home/live-modal'
-import { isServer } from '@/utils/common'
+// import { isServer } from '@/utils/common'
 
 export const PageLayout: FC<{
   screenProps: IFirstScreenProps

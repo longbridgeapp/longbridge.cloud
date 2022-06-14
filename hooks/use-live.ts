@@ -20,6 +20,7 @@ export function useLive() {
   const [liveID, setLiveID] = useLiveID('')
   const [liveInfo, setLiveInfo] = useLiveInfo<ILiveInfo>({
     m3u8_live_url: '',
+    replay_url: '',
     started_at: Date.now() + 30 * 1000,
     status: LIVE_STATUS.booking,
   })
