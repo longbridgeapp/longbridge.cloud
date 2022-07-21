@@ -14,7 +14,7 @@ const WhatCanOneStopDo = ({ list, name }: { list: { icon: string; title: string;
       />
       <ul className="flex flex-wrap justify-between mt-8 md:mt-14">
         {list.map(({ icon, title, desc }) => (
-          <li className="flex w-full py-8 border-b md:w-2/5" key={icon}>
+          <li className="flex w-full py-8 border-b md:w-[45%]" key={icon}>
             <div className="mr-12">
               <Icon type={icon} className="text-5xl" />
             </div>

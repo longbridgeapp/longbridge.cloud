@@ -6,15 +6,15 @@ import { useRequest } from 'ahooks'
 import { feedback } from '@/services'
 import classNames from 'classnames'
 import Icon from '@/components/icon'
-
+import { toast } from 'react-toastify'
 import styles from './talk-to-us.module.scss'
 
 function useFormItems() {
   const i18n = useTranslation('common')
   const items = [
     {
-      label: i18n.t('talk-to-us.name-label'),
-      placeholder: i18n.t('talk-to-us.name-placeholder'),
+      label: i18n.t('feedback.name'),
+      placeholder: i18n.t('feedback.name-placeholder'),
       key: 'name',
       value: '',
       type: 'text',
@@ -22,8 +22,8 @@ function useFormItems() {
       required: true,
     },
     {
-      label: i18n.t('talk-to-us.institution-label'),
-      placeholder: i18n.t('talk-to-us.institution-placeholder'),
+      label: i18n.t('feedback.institution'),
+      placeholder: i18n.t('feedback.institution-placeholder'),
       key: 'institution',
       value: '',
       error: false,
@@ -31,8 +31,8 @@ function useFormItems() {
       required: true,
     },
     {
-      label: i18n.t('talk-to-us.email-label'),
-      placeholder: i18n.t('talk-to-us.email-placeholder'),
+      label: i18n.t('feedback.email'),
+      placeholder: i18n.t('feedback.email-placeholder'),
       key: 'email',
       error: false,
       value: '',
@@ -43,8 +43,8 @@ function useFormItems() {
       required: true,
     },
     {
-      label: i18n.t('talk-to-us.other-label'),
-      placeholder: i18n.t('talk-to-us.other-placeholder'),
+      label: i18n.t('feedback.other'),
+      placeholder: i18n.t('feedback.other-placeholder'),
       key: 'other',
       error: false,
       value: '',
@@ -103,10 +103,21 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
         return
       }
       // 这里认为成功即可
-      await feedback(formValue)
-      formItems.forEach(({ key }) => {
-        update(key, '')
-      })
+      const resp = await feedback(formValue)
+      console.log('resp', resp)
+      if (resp?.ok) {
+        formItems.forEach(({ key }) => {
+          update(key, '')
+        })
+        toast('发送成功', {
+          type: 'success',
+        })
+        onClose()
+      } else {
+        toast('发送失败', {
+          type: 'error',
+        })
+      }
     },
     {
       manual: true,
@@ -148,7 +159,8 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
             )
           })}
         </div>
-        <p className="mb-4 text-sm text-text_color_2">{i18n.t(' 星号 (*) 的栏位为必填')}</p>
+        {/* <p className="mb-4 text-sm text-text_color_2">{i18n.t(' 星号 (*) 的栏位为必填')}</p> */}
+        <p className="mb-4 text-sm text-text_color_2">Email: cs@Longbridge.cloud</p>
       </div>
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full text-sm">
         {i18n.t('live_form_004')}
@@ -176,7 +188,7 @@ export const TalkToUs = ({ className, style }: { className?: string; style?: CSS
         </FullMask>
       )}
       <Button size="medium" className={classNames('mt-6', className)} style={style} onClick={onOpen}>
-        {i18n.t('home_first_screen_001')}
+        {i18n.t('talk-to-us')}
       </Button>
     </>
   )

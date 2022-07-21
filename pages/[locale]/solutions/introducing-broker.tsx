@@ -23,7 +23,7 @@ export const getStaticProps = async (ctx: any) => ({
     ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig)),
   },
 })
-const WhaleIntroducingPage = () => {
+const IntroducingPage = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
@@ -46,4 +46,4 @@ const WhaleIntroducingPage = () => {
     </Layout>
   )
 }
-export default WhaleIntroducingPage
+export default IntroducingPage

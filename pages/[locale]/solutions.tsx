@@ -6,6 +6,7 @@ import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
 import { PageLayout } from '@/features/common/page-layout'
 import { SolutionFeatures } from '@/features/solutions/features'
+import IntroducingPage from './solutions/introducing-broker'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -17,25 +18,6 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 const SolutionsPage = () => {
-  const seoI18n = useTranslation(['seo'])
-  const i18n = useTranslation('common')
-
-  return (
-    <PageLayout
-      screenProps={{
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
-        title: i18n.t('solutions_page_001'),
-        contentFLex: '30',
-        desc: <>
-          <span>{i18n.t('solutions_page_003')}</span>
-          <br />
-          <span className="mt-4 inline-block">{i18n.t('solutions_page_003_1')}</span>
-        </>,
-      }}
-    >
-      <SEOMeta title={seoI18n.t('solutions.title')} description={seoI18n.t('solutions.description')} />
-      <SolutionFeatures />
-    </PageLayout>
-  )
+  return <IntroducingPage />
 }
 export default SolutionsPage

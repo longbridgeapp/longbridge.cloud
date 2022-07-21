@@ -268,5 +268,14 @@
   "live_modal_003": "数字券商·向云而生",
   "introducing-broker.page-title": "Introducing Broker - FD 客户",
   "longport.page-title": "LongPort 一站式解决方案",
-  "white-label.page-title": "White Label 一站式解决方案"
+  "white-label.page-title": "White Label 一站式解决方案",
+  "talk-to-us": "联系我们",
+  "feedback.name": "姓名",
+  "feedback.name-placeholder": "请输入姓名",
+  "feedback.institution": "所在公司 / 机构名称",
+  "feedback.institution-placeholder": "请输入公司 / 机构名称",
+  "feedback.email": "邮箱",
+  "feedback.email-placeholder": "请输入邮箱地址",
+  "feedback.other": "其他訊息",
+  "feedback.other-placeholder": "请输入我的意见，非必填"
 }

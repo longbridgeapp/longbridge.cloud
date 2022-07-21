@@ -35,7 +35,7 @@ const LongPortApp = () => {
   }, [])
 
   return (
-    <Block className="bg-bg_color_3">
+    <Block className="bg-bg_color_2">
       <BlockHeader
         title={i18n.t('不止是拓展无线，更是助你快速触达用户')}
         desc={i18n.t('LongPort App，无论您的用户身在何处，都可以轻松满足从发现、认知、交易的全链路体验')}

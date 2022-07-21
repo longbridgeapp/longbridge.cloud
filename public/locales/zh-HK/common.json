@@ -266,5 +266,13 @@
   "live_form_014": "星號 (*) 的欄位為必填項",
   "live_modal_001": "立即觀看",
   "live_modal_002": "立即預約",
-  "live_modal_003": "數字券商·向雲而生"
+  "live_modal_003": "數字券商·向雲而生",
+  "talk-to-us": "聯繫我們",
+  "feedback.name": "姓名",
+  "feedback.name-placeholder": "請輸入姓名",
+  "feedback.institution": "所在公司 / 機構名稱",
+  "feedback.email": "郵箱",
+  "feedback.email-placeholder": "請輸入郵箱地址",
+  "feedback.other": "其他訊息",
+  "feedback.other-placeholder": "請輸入我的意見，非必填"
 }

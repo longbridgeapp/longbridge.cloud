@@ -8,6 +8,7 @@ import { i18nPaths } from '@/utils/i18n-paths'
 import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
 import { PageLayout } from '@/features/common/page-layout'
+import { BG_BANNER } from '@/features/block/top-banner'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -35,12 +36,10 @@ const IndexPage = () => {
   return (
     <PageLayout
       screenProps={{
-        backgroundColor: 'var(--bg_color_1)',
+        backgroundImage: `url(${BG_BANNER})`,
         title,
-        desc: i18n.t(
-          'home_page_003'
-        ),
-        cover: 'https://pub.lbkrs.com/files/202205/oRP64GrJ7ASpuFJk/-header.png',
+        desc: i18n.t('home_page_003'),
+        cover: 'https://pub.lbkrs.com/files/202207/yGQxErdGoofNJhoh/header_img.png',
       }}
     >
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />

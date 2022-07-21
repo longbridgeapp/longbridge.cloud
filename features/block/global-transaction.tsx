@@ -40,15 +40,12 @@ const GlobalTransaction = () => {
         slogn={i18n.t('全球交易')}
       />
       <BlockBetween
-        left={
-          <div className="flex-1">
-            <img src={IMAGE_URL} className="h-[360px]" alt="" />
-          </div>
-        }
+        className="mt-5"
+        left={<img src={IMAGE_URL} className="w-[450px]" alt="" />}
         right={
-          <ul className="flex flex-col flex-1">
+          <ul>
             {list.map(({ icon, desc }) => (
-              <li className="flex w-[480px] py-5" key={icon}>
+              <li className="flex py-5" key={icon}>
                 <div className="mr-12">
                   <Icon type={icon} className="text-4xl" />
                 </div>
