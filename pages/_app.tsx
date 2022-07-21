@@ -3,11 +3,14 @@ import Head from 'next/head'
 import { BrowserRouter } from 'react-router-dom'
 import { StaticRouter } from 'react-router-dom/server'
 import { appWithTranslation } from 'next-i18next'
-import '@/styles/globals.scss'
+import { ToastContainer } from 'react-toastify'
 import RouteList from '@/routes'
 import Cookies from 'js-cookie'
 import { useMount } from 'ahooks'
 import { getSystemLanguage, getBasenameLocale, getLocaleHref, isServer } from '@/utils/common'
+
+import '@/styles/globals.scss'
+import 'react-toastify/dist/ReactToastify.css'
 
 const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
@@ -38,7 +41,7 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
   useMount(() => {
     const bindEventListener = function (type: string) {
       const historyEvent = (history as any)[type]
-      return function(this: any) {
+      return function (this: any) {
         const e: any = new Event(type)
         // eslint-disable-next-line prefer-rest-params
         e.arguments = arguments
@@ -63,6 +66,7 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
       <Head>
         <link rel="icon" type="image/x-icon" href="https://pub.lbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
       </Head>
+      <ToastContainer position="top-center" theme="colored" hideProgressBar />
       {isServer() ? nextRouter : feRouter}
     </div>
   )

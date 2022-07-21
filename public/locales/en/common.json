@@ -263,5 +263,13 @@
   "live_modal_002": "SIGN UP NOW",
   "live_modal_003": "",
   "live_modal_001": "WATCH NOW",
-  "live_video_003": "Please complete the form to register to attend the event"
+  "live_video_003": "Please complete the form to register to attend the event",
+  "talk-to-us": "Talk to Us",
+  "feedback.name": "Name",
+  "feedback.name-placeholder": "Please type in your name",
+  "feedback.institution": "Company/Institution",
+  "feedback.email": "Business E-mail",
+  "feedback.email-placeholder": "Please input the email address",
+  "feedback.other": "Messages",
+  "feedback.other-placeholder": "Please enter my opinion, not required"
 }

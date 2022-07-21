@@ -18,7 +18,7 @@ const PremiumRate = ({
       <BlockHeader title={title} />
       <ul className="flex flex-wrap justify-between mt-14">
         {list.map(({ icon, title, desc }) => (
-          <li className="flex w-[480px] py-8 border-b" key={icon}>
+          <li className="flex w-full md:w-[45%] py-8 border-b" key={icon}>
             <div className="mr-12">
               <Icon type={icon} className="text-5xl" />
             </div>

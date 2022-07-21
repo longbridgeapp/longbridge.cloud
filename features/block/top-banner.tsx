@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next'
 import { Block, BlockHeader, BlockBetween, TopBlock } from '@/components/block'
 import { TalkToUs } from '@/features/talk-to-us'
 
-const BG_BANNER = 'https://pub.lbkrs.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
+export const BG_BANNER = 'https://pub.lbkrs.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
 const IMAGE_URL = 'https://pub.lbkrs.com/files/202207/Ggr6CvK2f2jWASHe/Group_427318855.png'
 
 export const BrokerBanner = () => {

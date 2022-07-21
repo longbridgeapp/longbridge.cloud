@@ -39,14 +39,14 @@ function useNavs() {
         value: '/solutions ',
         label: i18n.t('header_nav_006'),
         children: [
-          {
-            value: '/solutions',
-            label: i18n.t('solutions_page_001'),
-          },
-          {
-            value: '/solutions/app',
-            label: i18n.t('solutions_app_page_001'),
-          },
+          // {
+          //   value: '/solutions',
+          //   label: i18n.t('solutions_page_001'),
+          // },
+          // {
+          //   value: '/solutions/app',
+          //   label: i18n.t('solutions_app_page_001'),
+          // },
           {
             value: '/solutions/introducing-broker',
             label: i18n.t('introducing-broker.page-title'),

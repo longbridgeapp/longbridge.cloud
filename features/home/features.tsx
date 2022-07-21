@@ -27,7 +27,7 @@ function useFeatures() {
             text: i18n.t('home_features_002_4'),
           },
         ],
-        picture: 'https://pub.lbkrs.com/files/202205/aXYAZTGwmuHQ8H3x/01.png',
+        picture: 'https://pub.lbkrs.com/files/202207/sM4h3JKELaG6JDSg/img_1.png',
       },
       {
         title: i18n.t('home_features_003'),
@@ -63,7 +63,7 @@ function useFeatures() {
             text: i18n.t('home_features_006_2'),
           },
         ],
-        picture: 'https://pub.lbkrs.com/files/202205/6Uuaz6d642ZCj6XX/03.png',
+        picture: 'https://pub.lbkrs.com/files/202207/XsGgnV2wjAUbS2Gk/img_3.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -74,38 +74,43 @@ export const HomeFeatures = () => {
   const features = useFeatures()
   return (
     <div>
-      {
-        features.map(feature => {
-          return (
-            <div className={classNames(styles['feature-item-container'], 'main-container')} key={feature.title}>
-              <div className="main-content-width">
-                <div>
-                  <h3 className="title" dangerouslySetInnerHTML={{
+      {features.map(feature => {
+        return (
+          <div className={classNames(styles['feature-item-container'], 'main-container')} key={feature.title}>
+            <div className="main-content-width">
+              <div>
+                <h3
+                  className="title"
+                  dangerouslySetInnerHTML={{
                     __html: feature.title,
-                  }}></h3>
-                  <div className="flex justify-between items-center mt-[60px]">
-                    <div className="left">
-                      <div className="desc-list">
-                        {feature.descList.map(desc => {
-                          return (
-                            <div className="desc-item" key={desc.text}>
-                              <img className="icon" src={desc.icon || 'https://pub.lbkrs.com/files/202205/JRr82mvwpYDoZhGL/Vector__8_.png'} alt="" />
-                              <div className="text">{desc.text}</div>
-                            </div>
-                          )
-                        })}
-                      </div>
+                  }}
+                ></h3>
+                <div className="flex justify-between items-center mt-[60px]">
+                  <div className="left">
+                    <div className="desc-list">
+                      {feature.descList.map(desc => {
+                        return (
+                          <div className="desc-item" key={desc.text}>
+                            <img
+                              className="icon"
+                              src={desc.icon || 'https://pub.lbkrs.com/files/202205/JRr82mvwpYDoZhGL/Vector__8_.png'}
+                              alt=""
+                            />
+                            <div className="text">{desc.text}</div>
+                          </div>
+                        )
+                      })}
                     </div>
-                    <div className="right">
-                      <img className="cover" src={feature.picture} alt={feature.title} />
-                    </div>
+                  </div>
+                  <div className="right">
+                    <img className="cover" src={feature.picture} alt={feature.title} />
                   </div>
                 </div>
               </div>
             </div>
-          )
-        })
-      }
+          </div>
+        )
+      })}
     </div>
   )
 }

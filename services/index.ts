@@ -50,6 +50,12 @@ export const report = async (
   })
   return transformRes(resp)
 }
+
+/**
+ * whale_cloud_web_feedback
+ * toB 官网用户反馈
+ * 这个是找佳成手动添加的😢
+ */
 export const feedback = async ({
   email,
   name,
@@ -74,7 +80,7 @@ export const feedback = async ({
         公司或机构：${institution};
         其它信息：${messages}
       `,
-      sub_type: 'cloud_feedback',
+      sub_type: 'whale_cloud_web_feedback',
     }),
   })
   return transformRes(resp)

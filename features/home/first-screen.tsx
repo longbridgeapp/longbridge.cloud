@@ -2,6 +2,7 @@ import { FC, ReactNode } from 'react'
 import Header from '@/features/header'
 import Button from '@/components/button'
 import { useTranslation } from 'react-i18next'
+import { TalkToUs } from '../talk-to-us'
 import styles from './first-screen.module.scss'
 import classNames from 'classnames'
 
@@ -36,20 +37,16 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
     >
       <div className="section-content-container">
         <Header />
-        <div className="main-container pb-40 pt-20">
-          <div className="flex main-content-width items-center">
+        <div className="pt-20 pb-40 main-container">
+          <div className="flex items-center main-content-width">
             <div
               style={{
                 flex: contentFLex,
               }}
             >
-              <h2
-                className={classNames('title')}
-              >
-                {title}
-              </h2>
+              <h2 className={classNames('title')}>{title}</h2>
               <p className=" desc">{desc}</p>
-              {contactUs && false && <Button className="mt-8">{i18n.t('home_first_screen_001')}</Button>}
+              {contactUs && <TalkToUs />}
             </div>
             <div className="flex-1 ml-16">{cover && <img src={cover} alt="cover" />}</div>
           </div>
