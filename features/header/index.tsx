@@ -47,6 +47,18 @@ function useNavs() {
             value: '/solutions/app',
             label: i18n.t('solutions_app_page_001'),
           },
+          {
+            value: '/solutions/introducing-broker',
+            label: i18n.t('introducing-broker.page-title'),
+          },
+          {
+            value: '/solutions/longport',
+            label: i18n.t('longport.page-title'),
+          },
+          {
+            value: '/solutions/white-label',
+            label: i18n.t('white-label.page-title'),
+          },
         ],
       },
       {
@@ -128,13 +140,11 @@ const Navs = () => {
 const Header: FC = () => {
   return (
     <div className={classNames(styles.header, 'flex px-10 py-8')}>
-      <LocaleLink className="logo" to="/">
-        <img
-          className="w-[73px]"
-          src="https://pub.lbkrs.com/files/202205/bq1Bo5fTP6XyqoZH/longbridge-whale-logo.png"
-          alt="logo"
-        />
-      </LocaleLink>
+      <div className="logo-wrap">
+        <LocaleLink className="logo" to="/">
+          <Icon type="cloud-logo" className="align-top" />
+        </LocaleLink>
+      </div>
       <div className="flex-1 main-content-width">
         <Navs />
       </div>

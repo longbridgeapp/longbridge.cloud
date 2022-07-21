@@ -50,6 +50,35 @@ export const report = async (
   })
   return transformRes(resp)
 }
+export const feedback = async ({
+  email,
+  name,
+  institution,
+  messages,
+}: {
+  email: string
+  name: string
+  institution: string
+  messages: string
+}) => {
+  const resp = await fetch(`${host}/support/feedback/upload`, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept': 'application/json, text/plain, */*',
+    },
+    body: JSON.stringify({
+      content: `
+        姓名：${name};
+        邮箱：${email};
+        公司或机构：${institution};
+        其它信息：${messages}
+      `,
+      sub_type: 'cloud_feedback',
+    }),
+  })
+  return transformRes(resp)
+}
 export enum LIVE_STATUS {
   booking = 1,
   online = 2,

@@ -1,0 +1,9 @@
+:local(.scope) {
+  @apply bg-brand_color;
+  .talk-to-us {
+    button {
+      color: var(--brand_color) !important;
+      background-color: #fff !important;
+    }
+  }
+}
