@@ -109,12 +109,12 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
         formItems.forEach(({ key }) => {
           update(key, '')
         })
-        toast('发送成功', {
+        toast(i18n.t('send-success'), {
           type: 'success',
         })
         onClose()
       } else {
-        toast('发送失败', {
+        toast(i18n.t('send-error'), {
           type: 'error',
         })
       }
@@ -128,7 +128,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
     <form className={styles.form}>
       <div>
         <div className="flex justify-between">
-          <h3 className="w-2/3 text-xl font-bold">{i18n.t('阁下亦可以通过一下表格和我们联络')}</h3>
+          <h3 className="w-2/3 text-xl font-bold">{i18n.t('feedback.title')}</h3>
           <div>
             <Icon type="close" className="cursor-pointer hover:text-brand_color" onClick={onClose}></Icon>
           </div>

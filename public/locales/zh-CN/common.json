@@ -304,7 +304,7 @@
   "one-stop.white-label.title": "White Label App",
   "one-stop.white-label.desc": "快速灵活的品牌定制能力，只需基础设计即可上线 App",
   "longport-app.title": "不止是拓展无线，更是助你快速触达用户",
-  "longport-app.desc": "LongPort App，无论您的用户身在何处，都可以轻松满足从发现、认知、交易的全链路体验",
+  "longport-app.desc": "{{name}}，无论您的用户身在何处，都可以轻松满足从发现、认知、交易的全链路体验",
   "longport-app.slogn": "面向全披露介绍经纪商的最佳极速实践",
   "longport-app.item-1": "覆盖港股、美股、A 股等国际主要金融市场，提供各市场基础及高级实时行情",
   "longport-app.item-2": "股票全景、多维股票评分、独有可视化供应链产业链分析工具，快速发现甄别投资机会",
@@ -314,7 +314,7 @@
   "global-transaction.title": "通过出色的交易能力吸引更多客户",
   "global-transaction.desc": "丰富的证券交易能力，提升您的服务能力和盈利能力。我们将通过我们的持续迭代帮助您创建值得期待的交易场景",
   "global-transaction.slogn": "全球交易",
-  "global-transaction.item-1": "涵盖港股、美股、A 股通三个市场全部正股及 ETF 的交易能力",
+  "global-transaction.item-1": "涵盖港股、美股、A 股通三个市场全部正股及 ETF 的交易",
   "global-transaction.item-2": "支持港股 IPO 申购、国际配售及暗盘交易",
   "global-transaction.item-3": "支持港股涡轮牛熊证交易",
   "global-transaction.item-4": "支持美股期权交易",
@@ -358,5 +358,12 @@
   "footer-banner.1m": "在 1 分钟内开始",
   "footer-banner.item-1": "Whale Introducing Broker 解决方案，是面向全披露介绍经纪商的一站式解决方案。介绍经纪商无需自设经纪系统，即可完成客户开户、交易、计费等全过程，并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端",
   "footer-banner.item-2": "LongPort 一站式解决方案，是面向中等规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，便捷的管理客户。并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端",
-  "footer-banner.item-3": "White Label 一站式解决方案，是面向大规模及超大规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，并且可以通过独立品牌的白标 app 服务最终客户，通过完整的营销系统完成高效的获客及转化"
+  "footer-banner.item-3": "White Label 一站式解决方案，是面向大规模及超大规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，并且可以通过独立品牌的白标 app 服务最终客户，通过完整的营销系统完成高效的获客及转化",
+  "longport-app.slogn-2": "面向中等规模零售经纪商的最佳极速实践",
+  "longport-app.slogn-3": "面向大规模及超大规模零售经纪商的最佳极速实践",
+  "customer-management.item-14": "完整的客户关系管理系统，高效完成客户转化、客户关系维护",
+  "talk-to-us.title": "阁下亦可以通过以下表格和我们联络",
+  "feedback.title": "阁下亦可以通过以下表格和我们联络",
+  "send-success": "发送成功",
+  "send-error": "发送失败"
 }

@@ -32,7 +32,7 @@ const IntroducingPage = () => {
       <SEOMeta title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <BrokerBanner />
       <BrokerOneStop />
-      <LongPortApp />
+      <LongPortApp name="LongPort App" slogn={i18n.t('longport-app.slogn')} />
       <GlobalTransaction />
       <BrokerManagement />
       <BrokerPremiumRate />

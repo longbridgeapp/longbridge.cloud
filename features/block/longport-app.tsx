@@ -6,7 +6,7 @@ import Icon from '@/components/icon'
 
 const IMAGE_URL = 'https://pub.lbkrs.com/files/202207/H2KHstvbtQhWzHgC/Group_427318854.png'
 
-const LongPortApp = () => {
+const LongPortApp = ({ name, slogn }: { name: string; slogn: string }) => {
   const i18n = useTranslation('common')
 
   const list = useMemo(() => {
@@ -36,11 +36,7 @@ const LongPortApp = () => {
 
   return (
     <Block className="bg-bg_color_2">
-      <BlockHeader
-        title={i18n.t('longport-app.title')}
-        desc={i18n.t('longport-app.desc')}
-        slogn={i18n.t('longport-app.slogn')}
-      />
+      <BlockHeader title={i18n.t('longport-app.title')} desc={i18n.t('longport-app.desc', { name })} slogn={slogn} />
       <BlockBetween
         reverse
         left={

@@ -32,7 +32,7 @@ const WhaleIntroducingPage = () => {
       <SEOMeta title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <LongportBanner />
       <LongPortOneStop />
-      <LongPortApp />
+      <LongPortApp name="LongPort App" slogn={i18n.t('longport-app.slogn-2')} />
       <GlobalTransaction />
       <LongPortManagement />
       <LongPortPremiumRate />
