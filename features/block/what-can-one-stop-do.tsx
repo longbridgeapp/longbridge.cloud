@@ -8,13 +8,10 @@ const WhatCanOneStopDo = ({ list, name }: { list: { icon: string; title: string;
 
   return (
     <Block>
-      <BlockHeader
-        title={i18n.t(`使用 ${name} 一站式解决方案可以做什么？`)}
-        desc={i18n.t('在您的客户需要的地方随时提供服务，并为您的团队提供更快行动所需的数字化转型支持')}
-      />
-      <ul className="flex flex-wrap justify-between mt-8 md:mt-14">
+      <BlockHeader title={i18n.t(`one-stop.what-can-do.title`, { name })} desc={i18n.t('one-stop.what-can-do.desc')} />
+      <ul className="flex flex-wrap justify-between mt-8 lg:mt-14">
         {list.map(({ icon, title, desc }) => (
-          <li className="flex w-full py-8 border-b md:w-[45%]" key={icon}>
+          <li className="flex w-full py-8 border-b lg:w-[45%]" key={icon}>
             <div className="mr-12">
               <Icon type={icon} className="text-5xl" />
             </div>
@@ -35,28 +32,28 @@ export const BrokerOneStop = () => {
     return [
       {
         icon: 'broker-1',
-        title: i18n.t('LongPort'),
-        desc: i18n.t('全端覆盖，包括 App、iPad、Desktop、Web'),
+        title: i18n.t('one-stop.longport.title'),
+        desc: i18n.t('one-stop.longport.desc'),
       },
       {
         icon: 'broker-4',
-        title: i18n.t('Whale Trade Terminal'),
-        desc: i18n.t('专业的交易员终端，极速、便捷的交易下单'),
+        title: i18n.t('one-stop.terminal.title'),
+        desc: i18n.t('one-stop.terminal.desc'),
       },
       {
         icon: 'broker-2',
-        title: i18n.t('证券交易'),
-        desc: i18n.t('涵盖港股、美股、A 股通 3 大市场，支持正股、EFT、IPO、国配、暗盘交易、牛熊证、美股期权'),
+        title: i18n.t('one-stop.trade.title'),
+        desc: i18n.t('one-stop.trade.desc'),
       },
       {
         icon: 'broker-5',
-        title: i18n.t('客户管理'),
-        desc: i18n.t('完整的客户关系管理系统，高效完成客户转化、客户关系维护'),
+        title: i18n.t('one-stop.custom-manager.title'),
+        desc: i18n.t('one-stop.custom-manager.desc'),
       },
       {
         icon: 'broker-3',
-        title: i18n.t('服务计费'),
-        desc: i18n.t('优惠的费率，灵活的佣金机制'),
+        title: i18n.t('one-stop.service.title'),
+        desc: i18n.t('one-stop.service.desc'),
       },
     ]
   }, [])
@@ -70,28 +67,28 @@ export const LongPortOneStop = () => {
     return [
       {
         icon: 'broker-1',
-        title: i18n.t('LongPort'),
-        desc: i18n.t('全端覆盖，包括 App、iPad、Desktop、Web'),
+        title: i18n.t('one-stop.longport.title'),
+        desc: i18n.t('one-stop.longport.desc'),
       },
       {
         icon: 'broker-4',
-        title: i18n.t('Whale Trade Terminal'),
-        desc: i18n.t('专业的交易员终端，极速、便捷的交易下单'),
+        title: i18n.t('one-stop.terminal.title'),
+        desc: i18n.t('one-stop.terminal.desc'),
       },
       {
         icon: 'broker-2',
-        title: i18n.t('证券交易'),
-        desc: i18n.t('涵盖港股、美股、A 股通 3 大市场，支持正股、EFT、IPO、国配、暗盘交易、牛熊证、美股期权'),
+        title: i18n.t('one-stop.trade.title'),
+        desc: i18n.t('one-stop.trade.desc'),
       },
       {
         icon: 'Union-11',
-        title: i18n.t('云原生（Cloud native）证券业务系统'),
-        desc: i18n.t('全平台覆盖证券交易系统，包括证券交易中台及移动端 app、桌面版、交易员终端'),
+        title: i18n.t('one-stop.cloud.title'),
+        desc: i18n.t('one-stop.cloud.desc'),
       },
       {
         icon: 'broker-5',
-        title: i18n.t('客户管理'),
-        desc: i18n.t('完整的客户关系管理系统，高效完成客户转化、客户关系维护'),
+        title: i18n.t('one-stop.custom-manager.title'),
+        desc: i18n.t('one-stop.custom-manager.desc'),
       },
     ]
   }, [])
@@ -105,28 +102,28 @@ export const WhiteLabelOneStop = () => {
     return [
       {
         icon: 'broker-1',
-        title: i18n.t('White Label App'),
-        desc: i18n.t('快速灵活的品牌定制能力，只需基础设计即可上线 App'),
+        title: i18n.t('one-stop.white-label.title'),
+        desc: i18n.t('one-stop.white-label.desc'),
       },
       {
         icon: 'broker-4',
-        title: i18n.t('Whale Trade Terminal'),
-        desc: i18n.t('专业的交易员终端，极速、便捷的交易下单'),
+        title: i18n.t('one-stop.terminal.title'),
+        desc: i18n.t('one-stop.terminal.desc'),
       },
       {
         icon: 'broker-2',
-        title: i18n.t('证券交易'),
-        desc: i18n.t('涵盖港股、美股、A 股通 3 大市场，支持正股、EFT、IPO、国配、暗盘交易、牛熊证、美股期权'),
+        title: i18n.t('one-stop.trade.title'),
+        desc: i18n.t('one-stop.trade.desc'),
       },
       {
         icon: 'Union-11',
-        title: i18n.t('云原生（Cloud native）证券业务系统'),
-        desc: i18n.t('全平台覆盖证券交易系统，包括证券交易中台及移动端 app、桌面版、交易员终端'),
+        title: i18n.t('one-stop.cloud.title'),
+        desc: i18n.t('one-stop.cloud.desc'),
       },
       {
         icon: 'broker-5',
-        title: i18n.t('客户管理'),
-        desc: i18n.t('完整的客户关系管理系统，高效完成客户转化、客户关系维护'),
+        title: i18n.t('one-stop.custom-manager.title'),
+        desc: i18n.t('one-stop.custom-manager.desc'),
       },
     ]
   }, [])

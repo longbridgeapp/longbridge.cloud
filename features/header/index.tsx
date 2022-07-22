@@ -36,7 +36,7 @@ function useNavs() {
         ],
       },
       {
-        value: '/solutions ',
+        value: '/solutions/introducing-broker',
         label: i18n.t('header_nav_006'),
         children: [
           // {

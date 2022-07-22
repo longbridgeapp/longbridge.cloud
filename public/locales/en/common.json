@@ -271,5 +271,8 @@
   "feedback.email": "Business E-mail",
   "feedback.email-placeholder": "Please input the email address",
   "feedback.other": "Messages",
-  "feedback.other-placeholder": "Please enter my opinion, not required"
+  "feedback.other-placeholder": "Please enter my opinion, not required",
+  "introducing-broker.page-title": "Introducing Broker - FD Customers",
+  "longport.page-title": "LongPort One-stop Solution",
+  "white-label.page-title": "White Label One-stop Solution"
 }
