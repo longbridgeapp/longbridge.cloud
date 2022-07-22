@@ -14,16 +14,14 @@ export const BrokerBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('Introducing Broker 一站式解决方案 - FD 客户')}
-                desc={i18n.t(
-                  '介绍经纪商无需自设经纪系统，即可完成客户开户、交易、计费等全过程，并且可以使用拥有新一代互联网证券交易体验的 LongPort App 及 Whale Trade Terminal 交易员终端。'
-                )}
-                slogn={i18n.t('面向全披露介绍经纪商的一站式解决方案')}
+                title={i18n.t('top-banner.broker-title')}
+                desc={i18n.t('top-banner.broker-desc')}
+                slogn={i18n.t('top-banner.broker-slogn')}
               />
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 md:mt-0" alt="" />}
+          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.broker-title')} />}
         />
       </Block>
     </TopBlock>
@@ -39,16 +37,14 @@ export const LongportBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('公版 LongPort 一站式解决方案 - Omnibus 客户')}
-                desc={i18n.t(
-                  '零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，便捷的管理客户。该方案亦向客户提供拥有新一代互联网证券交易体验的 LongPort App 及 Whale Trade Terminal 交易员终端'
-                )}
-                slogn={i18n.t('面向中等规模零售经纪商一站式解决方案')}
+                title={i18n.t('top-banner.longport-title')}
+                desc={i18n.t('top-banner.longport-desc')}
+                slogn={i18n.t('top-banner.longport-slogn')}
               />
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 md:mt-0" alt="" />}
+          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.longport-title')} />}
         />
       </Block>
     </TopBlock>
@@ -64,16 +60,14 @@ export const WhiteLabelBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('白标 White Label  一站式解决方案 - Omnibus 客户')}
-                desc={i18n.t(
-                  '零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，并且可以通过独立品牌的白标 app 服务最终客户，通过完整的营销系统完成高效的获客及转化'
-                )}
-                slogn={i18n.t('面向大规模及超大规模零售经纪商一站式解决方案')}
+                title={i18n.t('top-banner.white-label-title')}
+                desc={i18n.t('top-banner.white-label-desc')}
+                slogn={i18n.t('top-banner.white-label-slogn')}
               />
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 md:mt-0" alt="" />}
+          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.white-label-title')} />}
         />
       </Block>
     </TopBlock>

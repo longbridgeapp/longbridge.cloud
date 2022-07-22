@@ -37,12 +37,7 @@ const WhaleIntroducingPage = () => {
       <LongPortManagement />
       <LongPortPremiumRate />
       <WhaleTradeTerminal />
-      <FooterBanner
-        title={i18n.t('在 1 分钟内开始')}
-        desc={i18n.t(
-          'LongPort 一站式解决方案，是面向中等规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，便捷的管理客户。并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端'
-        )}
-      />
+      <FooterBanner title={i18n.t('footer-banner.1m')} desc={i18n.t('footer-banner.item-2')} />
     </Layout>
   )
 }

@@ -29,14 +29,10 @@ const CustomerManagement = ({
       <BlockBetween
         reverse
         left={
-          <div className="mt-5 md:pr-20 md:mt-0">
+          <div className="mt-5 lg:pr-20 lg:mt-0">
             <dl className="text-white">
-              <dt className="text-3xl">{i18n.t('掌握精准客户数据，进行有效服务')}</dt>
-              <dd className="mt-4 text-xl opacity-70">
-                {i18n.t(
-                  '客户管理不再是盲测，利用专业工具帮助您真正了解客户需求，寻找并定位您最有价值的客户，高效完成客户转化、客户关系维护，令回报最大化。'
-                )}
-              </dd>
+              <dt className="text-3xl">{i18n.t('customer-management.title')}</dt>
+              <dd className="mt-4 text-xl opacity-70">{i18n.t('customer-management.desc')}</dd>
             </dl>
             <div className="talk-to-us">
               <TalkToUs
@@ -51,13 +47,18 @@ const CustomerManagement = ({
         }
         right={<img src={imageUrl} alt="" />}
       />
-      <ul className="text-white md:flex">
+      <ul className="text-white lg:flex">
         {list.map(({ icon, title, desc }) => (
-          <li className="w-full md:flex-1 md:w-auto" key={icon}>
-            <div className="mb-8 text-[92px]">
+          <li className="w-full lg:flex-1 lg:w-auto" key={icon}>
+            <div
+              className="my-8 text-[92px]"
+              style={{
+                lineHeight: 0,
+              }}
+            >
               <Icon type={icon} />
             </div>
-            <dl className="w-full md:w-2/3 md:p-0">
+            <dl className="w-full lg:w-2/3 lg:p-0">
               <dt className="text-xl">{title}</dt>
               <dd className="mt-3 text-base opacity-70">{desc}</dd>
             </dl>
@@ -75,18 +76,18 @@ export const BrokerManagement = () => {
     return [
       {
         icon: 'Union-8',
-        title: '快速查询',
-        desc: i18n.t('快速查询客户的个人信息、交易订单、资产信息'),
+        title: 'customer-management.item-1',
+        desc: i18n.t('customer-management.item-2'),
       },
       {
         icon: 'Union-9',
-        title: '客户关系管理系统',
-        desc: i18n.t('完整的客户关系管理系统，高效完成客户转化、客户关系维护'),
+        title: 'customer-management.item-3',
+        desc: i18n.t('one-stop.custom-manager.desc'),
       },
       {
         icon: 'Union-10',
-        title: '客服系统',
-        desc: i18n.t('完善的帮助中心与客服系统，随时解答客户的各类问题'),
+        title: 'customer-management.item-4',
+        desc: i18n.t('customer-management.item-5'),
       },
     ]
   }, [])
@@ -105,23 +106,23 @@ export const WhiteLabelManagement = () => {
     return [
       {
         icon: 'Union-9',
-        title: '完备的客户管理系统',
-        desc: i18n.t('通过 CRM 为核心管理客户全生命周期，高效获客转化'),
+        title: 'customer-management.item-6',
+        desc: i18n.t('customer-management.item-7'),
       },
       {
         icon: 'Union-12',
-        title: '智能投放系统',
-        desc: i18n.t('通过丰富的用户标签，智能的规则配置，完成用户的精准触达'),
+        title: 'customer-management.item-8',
+        desc: i18n.t('customer-management.item-9'),
       },
       {
         icon: 'Union-13',
-        title: '卡券权益系统',
-        desc: i18n.t('提供费率折扣、免佣、股票卡、现金卡等灵活配置的营销权益'),
+        title: 'customer-management.item-10',
+        desc: i18n.t('customer-management.item-11'),
       },
       {
         icon: 'Union-14',
-        title: '活动系统',
-        desc: i18n.t('提供灵活的获客、裂变线上活动配置及自动发奖能力'),
+        title: 'customer-management.item-12',
+        desc: i18n.t('customer-management.item-13'),
       },
     ]
   }, [])

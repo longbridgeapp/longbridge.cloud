@@ -37,12 +37,7 @@ const IntroducingPage = () => {
       <BrokerManagement />
       <BrokerPremiumRate />
       <WhaleTradeTerminal />
-      <FooterBanner
-        title={i18n.t('在 1 分钟内开始')}
-        desc={i18n.t(
-          'Whale Introducing Broker 解决方案，是面向全披露介绍经纪商的一站式解决方案。介绍经纪商无需自设经纪系统，即可完成客户开户、交易、计费等全过程，并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端'
-        )}
-      />
+      <FooterBanner title={i18n.t('footer-banner.1m')} desc={i18n.t('footer-banner.item-1')} />
     </Layout>
   )
 }

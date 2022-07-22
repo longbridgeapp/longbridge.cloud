@@ -11,14 +11,12 @@ const PremiumRate = ({
   list: Array<{ icon: string; title: string; desc: string }>
   title: string
 }) => {
-  const i18n = useTranslation('common')
-
   return (
     <Block>
       <BlockHeader title={title} />
       <ul className="flex flex-wrap justify-between mt-14">
         {list.map(({ icon, title, desc }) => (
-          <li className="flex w-full md:w-[45%] py-8 border-b" key={icon}>
+          <li className="flex w-full lg:w-[45%] py-8 border-b" key={icon}>
             <div className="mr-12">
               <Icon type={icon} className="text-5xl" />
             </div>
@@ -40,22 +38,22 @@ export const BrokerPremiumRate = () => {
     return [
       {
         icon: 'Union-5',
-        title: '佣金费率',
-        desc: i18n.t('港股交易佣金、美股交易佣金、港股融资费率、美股融资费率'),
+        title: 'rate.item-1',
+        desc: i18n.t('rate.item-2'),
       },
       {
         icon: 'Union-6',
-        title: '灵活的经纪人分佣机制',
-        desc: i18n.t('针对不同经纪人分组灵活调整分佣比例'),
+        title: 'rate.item-3',
+        desc: i18n.t('rate.item-4'),
       },
       {
         icon: 'Union-7',
-        title: '分级费率',
-        desc: i18n.t('针对不同客户分级配置费率，灵活计费结算'),
+        title: 'rate.item-5',
+        desc: i18n.t('rate.item-6'),
       },
     ]
   }, [])
-  return <PremiumRate list={list} title={i18n.t('优惠的费率，灵活的佣金机制')} />
+  return <PremiumRate list={list} title={i18n.t('one-stop.service.desc')} />
 }
 
 export const LongPortPremiumRate = () => {
@@ -65,28 +63,28 @@ export const LongPortPremiumRate = () => {
     return [
       {
         icon: 'Union-15',
-        title: i18n.t('全平台覆盖证券交易系统'),
-        desc: i18n.t('包括证券交易中台及移动端 app、桌面版、交易员终端'),
+        title: i18n.t('rate.item-7'),
+        desc: i18n.t('rate.item-8'),
       },
       {
         icon: 'Union-6',
-        title: i18n.t('便捷的证券账户系统'),
-        desc: i18n.t('包括快速的线上开户、KYC、AML 服务'),
+        title: i18n.t('rate.item-9'),
+        desc: i18n.t('rate.item-10'),
       },
       {
         icon: 'Union-16',
-        title: i18n.t('极速的出入金系统'),
-        desc: i18n.t('支持多家银行，对客户提供 eDDA、FPS、银证转帐等多种方式，快至分钟级入账'),
+        title: i18n.t('rate.item-11'),
+        desc: i18n.t('rate.item-12'),
       },
       {
         icon: 'Union-17',
-        title: i18n.t('完整的结算交收系统'),
-        desc: i18n.t('覆盖多市场多产品多币种，全面的业务报表'),
+        title: i18n.t('rate.item-13'),
+        desc: i18n.t('rate.item-14'),
       },
     ]
   }, [])
 
-  return <PremiumRate list={list} title={i18n.t('云原生（Cloud native）证券业务系统')} />
+  return <PremiumRate list={list} title={i18n.t('one-stop.cloud.title')} />
 }
 
 export const WhiteLabelPremiumRate = () => <LongPortPremiumRate />

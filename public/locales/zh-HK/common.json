@@ -274,5 +274,8 @@
   "feedback.email": "郵箱",
   "feedback.email-placeholder": "請輸入郵箱地址",
   "feedback.other": "其他訊息",
-  "feedback.other-placeholder": "請輸入我的意見，非必填"
+  "feedback.other-placeholder": "請輸入我的意見，非必填",
+  "introducing-broker.page-title": "Introducing Broker - FD 客戶",
+  "longport.page-title": "LongPort 一站式解決方案",
+  "white-label.page-title": "White Label 一站式解決方案"
 }

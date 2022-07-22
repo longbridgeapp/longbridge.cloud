@@ -4,7 +4,7 @@ import classNames from 'classnames'
 export const Block: FC<{ className?: string; style?: CSSProperties }> = ({ children, className, style }) => {
   return (
     <div className={classNames('main-container', className)} style={style}>
-      <div className="py-10 md:py-20">
+      <div className="py-10 lg:py-20">
         <div className="main-content-width">{children}</div>
       </div>
     </div>
@@ -49,7 +49,7 @@ export const BlockBetween = ({
   return (
     <div
       className={classNames(
-        'flex items-center pb-10 md:flex-row',
+        'flex items-center pb-5 :lg:pb-10 lg:flex-row',
         reverse ? 'flex-col-reverse' : 'flex-col',
         className
       )}

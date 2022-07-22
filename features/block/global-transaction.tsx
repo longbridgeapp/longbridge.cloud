@@ -13,19 +13,19 @@ const GlobalTransaction = () => {
     return [
       {
         icon: 'Union-1',
-        desc: i18n.t('涵盖港股、美股、A 股通三个市场全部正股及 ETF 的交易能力'),
+        desc: i18n.t('global-transaction.item-1'),
       },
       {
         icon: 'Union-2',
-        desc: i18n.t('支持港股 IPO 申购、国际配售及暗盘交易'),
+        desc: i18n.t('global-transaction.item-2'),
       },
       {
         icon: 'Union-3',
-        desc: i18n.t('支持港股涡轮牛熊证交易'),
+        desc: i18n.t('global-transaction.item-3'),
       },
       {
         icon: 'Union-4',
-        desc: i18n.t('支持美股期权交易'),
+        desc: i18n.t('global-transaction.item-4'),
       },
     ]
   }, [])
@@ -33,11 +33,9 @@ const GlobalTransaction = () => {
   return (
     <Block>
       <BlockHeader
-        title={i18n.t('通过出色的交易能力吸引更多客户')}
-        desc={i18n.t(
-          '丰富的证券交易能力，提升您的服务能力和盈利能力。我们将通过我们的持续迭代帮助您创建值得期待的交易场景'
-        )}
-        slogn={i18n.t('全球交易')}
+        title={i18n.t('global-transaction.title')}
+        desc={i18n.t('global-transaction.desc')}
+        slogn={i18n.t('global-transaction.slogn')}
       />
       <BlockBetween
         className="mt-5"
