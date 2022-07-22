@@ -1,10 +1,13 @@
 import React, { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
-
 import { Block, BlockHeader } from '@/components/block'
+import classNames from 'classnames'
+import Style from './whale-trade-terminal.module.scss'
 
 const WhaleTradeTerminal = () => {
   const i18n = useTranslation('common')
+
+  console.log('en', i18n.i18n.language)
 
   const list = useMemo(() => {
     return [
@@ -32,7 +35,7 @@ const WhaleTradeTerminal = () => {
   }, [])
 
   return (
-    <Block className="bg-bg_color_2">
+    <Block className={Style.scope}>
       <BlockHeader title={i18n.t('one-stop.terminal.title')} desc={i18n.t('one-stop.terminal.desc')} />
       <div className="flex items-center mt-5">
         <ul className="justify-between md:flex md:flex-wrap ">
@@ -43,7 +46,13 @@ const WhaleTradeTerminal = () => {
               </div>
               <div className="h-[175px] py-8 px-10 bg-white">
                 <h3 className="text-xl text-brand_color">{title}</h3>
-                <p className="mt-3 text-xl font-medium">{desc}</p>
+                <p
+                  className={classNames('mt-3 text-xl font-medium', {
+                    'desc-en': i18n.i18n.language === 'en',
+                  })}
+                >
+                  {desc}
+                </p>
               </div>
             </li>
           ))}
