@@ -76,17 +76,17 @@ export const BrokerManagement = () => {
     return [
       {
         icon: 'Union-8',
-        title: 'customer-management.item-1',
+        title: i18n.t('customer-management.item-1'),
         desc: i18n.t('customer-management.item-2'),
       },
       {
         icon: 'Union-9',
-        title: 'customer-management.item-3',
-        desc: i18n.t('one-stop.custom-manager.desc'),
+        title: i18n.t('customer-management.item-3'),
+        desc: i18n.t('customer-management.item-14'),
       },
       {
         icon: 'Union-10',
-        title: 'customer-management.item-4',
+        title: i18n.t('customer-management.item-4'),
         desc: i18n.t('customer-management.item-5'),
       },
     ]
@@ -106,22 +106,22 @@ export const WhiteLabelManagement = () => {
     return [
       {
         icon: 'Union-9',
-        title: 'customer-management.item-6',
+        title: i18n.t('customer-management.item-6'),
         desc: i18n.t('customer-management.item-7'),
       },
       {
         icon: 'Union-12',
-        title: 'customer-management.item-8',
+        title: i18n.t('customer-management.item-8'),
         desc: i18n.t('customer-management.item-9'),
       },
       {
         icon: 'Union-13',
-        title: 'customer-management.item-10',
+        title: i18n.t('customer-management.item-10'),
         desc: i18n.t('customer-management.item-11'),
       },
       {
         icon: 'Union-14',
-        title: 'customer-management.item-12',
+        title: i18n.t('customer-management.item-12'),
         desc: i18n.t('customer-management.item-13'),
       },
     ]

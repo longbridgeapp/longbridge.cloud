@@ -2,7 +2,6 @@ import React, { useMemo } from 'react'
 import { useTranslation } from 'next-i18next'
 
 import { Block, BlockHeader } from '@/components/block'
-import Icon from '@/components/icon'
 
 const WhaleTradeTerminal = () => {
   const i18n = useTranslation('common')

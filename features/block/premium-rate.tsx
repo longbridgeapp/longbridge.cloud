@@ -38,17 +38,17 @@ export const BrokerPremiumRate = () => {
     return [
       {
         icon: 'Union-5',
-        title: 'rate.item-1',
+        title: i18n.t('rate.item-1'),
         desc: i18n.t('rate.item-2'),
       },
       {
         icon: 'Union-6',
-        title: 'rate.item-3',
+        title: i18n.t('rate.item-3'),
         desc: i18n.t('rate.item-4'),
       },
       {
         icon: 'Union-7',
-        title: 'rate.item-5',
+        title: i18n.t('rate.item-5'),
         desc: i18n.t('rate.item-6'),
       },
     ]
