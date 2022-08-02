@@ -15,7 +15,7 @@ export const BrokerBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('top-banner.broker-title')}
+                title={i18n.t('introducing-broker.page-title')}
                 desc={i18n.t('top-banner.broker-desc')}
                 slogn={i18n.t('top-banner.broker-slogn')}
               />
@@ -38,7 +38,7 @@ export const LongportBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('top-banner.longport-title')}
+                title={i18n.t('longport.page-title')}
                 desc={i18n.t('top-banner.longport-desc')}
                 slogn={i18n.t('top-banner.longport-slogn')}
               />
@@ -61,7 +61,7 @@ export const WhiteLabelBanner = () => {
           left={
             <>
               <BlockHeader
-                title={i18n.t('top-banner.white-label-title')}
+                title={i18n.t('white-label.page-title')}
                 desc={i18n.t('top-banner.white-label-desc')}
                 slogn={i18n.t('top-banner.white-label-slogn')}
               />
