@@ -22,13 +22,17 @@ export const BlockHeader = ({ title, desc, slogn }: { title: string; desc?: stri
 }
 
 // 需要预留顶部导航距离
-export const TopBlock: FC<{ imageUrl: string }> = ({ children, imageUrl }) => {
+export const TopBlock: FC<{ imageUrl?: string }> = ({ children, imageUrl }) => {
   return (
     <div
       className="pt-24 bg-cover"
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-      }}
+      style={
+        imageUrl
+          ? {
+              backgroundImage: `url(${imageUrl})`,
+            }
+          : {}
+      }
     >
       {children}
     </div>

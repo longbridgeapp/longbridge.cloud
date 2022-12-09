@@ -40,3 +40,11 @@ html {
 html {
   font-family: PingFang SC;
 }
+
+.ant-carousel .slick-dots li button {
+  background: #000000;
+  opacity: 0.2;
+}
+.ant-carousel .slick-dots li.slick-active button {
+  background: #5622CF;
+}

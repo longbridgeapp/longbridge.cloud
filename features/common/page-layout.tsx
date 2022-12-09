@@ -19,7 +19,7 @@ export const PageLayout: FC<{
 export const Layout: FC = ({ children }) => {
   return (
     <div className="relative">
-      <div className="absolute inset-x-0">
+      <div className="absolute inset-x-0 z-50">
         <Header />
       </div>
       {children}
