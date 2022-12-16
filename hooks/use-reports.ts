@@ -17,9 +17,9 @@ export function useReports() {
   }, [])
 
   const fetchReports = async () => {
-    const key = 'hk-reports'
+    const key = 'whale-reports'
     const resp = await getAppConfig([key])
-    const _reports = resp?.config?.['hk-reports']
+    const _reports = resp?.config?.[key]
     if (_reports) {
       setReports(_reports)
       reportsState = _reports
