@@ -6,12 +6,24 @@ import { usePurePathname } from '@/hooks/use-pure-pathname'
 import classNames from 'classnames'
 import { FC, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
+import { useReports } from '@/hooks/use-reports'
 import styles from './index.module.scss'
 import { LocaleDropdown } from './locale-dropdown'
 
 function useNavs() {
+  const [reports] = useReports()
+
   const i18n = useTranslation('common')
   return useMemo(() => {
+    const computedRoutes = []
+    if (!!reports?.length) {
+      computedRoutes.push({
+        value: '/whale-reports',
+        suffix: '',
+        label: i18n.t('header_nav_009'),
+        children: [],
+      })
+    }
     return [
       {
         value: '/',
@@ -67,6 +79,7 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
+      ...computedRoutes,
       // {
       //   value: '/live',
       //   label: i18n.t('header_nav_008'),
@@ -78,7 +91,7 @@ function useNavs() {
       // },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [reports])
 }
 const Navs = () => {
   const navs = useNavs()
