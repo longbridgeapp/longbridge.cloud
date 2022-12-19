@@ -125,6 +125,7 @@ export const getAppConfig = async (keys: string[]): Promise<any> => {
       'Content-Type': 'application/json',
       'Accept': 'application/json, text/plain, */*',
       'x-platform': 'web',
+      'x-app-id': 'longport',
     },
   })
   return transformRes(resp)
