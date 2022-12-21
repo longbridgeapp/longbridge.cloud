@@ -48,3 +48,18 @@ html {
 .ant-carousel .slick-dots li.slick-active button {
   background: #5622CF;
 }
+
+.list-dot {
+  @apply relative ml-3;
+
+  &::after {
+    content: "";
+    @apply absolute w-1 h-1 bg-brand_color -left-3 top-2;
+  }
+
+  &.white {
+    &::after {
+      @apply bg-white;
+    }
+  }
+}
