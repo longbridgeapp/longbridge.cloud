@@ -1,5 +1,5 @@
 // 投放系统
-import React, { useMemo } from 'react'
+import React, { useMemo, useRef, useState } from 'react'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -10,6 +10,8 @@ import { i18nPaths } from '@/utils/i18n-paths'
 // eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useDebounceEffect, useSize } from 'ahooks'
+import { keepSiblingsHeight } from '@/hooks/use-resize'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -24,6 +26,8 @@ export const getStaticProps = async (ctx: any) => ({
 
 const DeliverySystem: React.FC = () => {
   const i18n = useTranslation('common')
+  const marketSceneRef = useRef(null)
+  const marketSceneSize = useSize(marketSceneRef)
   /** 数据化运营方案 */
   const marketingList = useMemo(() => {
     return [
@@ -66,6 +70,19 @@ const DeliverySystem: React.FC = () => {
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
+
+  useDebounceEffect(
+    () => {
+      keepSiblingsHeight('.marketing-scene-plans', 'scene-first')
+      keepSiblingsHeight('.marketing-scene-plans', 'scene-second')
+      keepSiblingsHeight('.marketing-scene-plans', 'scene-third')
+
+      keepSiblingsHeight('.marketing-scene-version', 'version-first')
+      keepSiblingsHeight('.marketing-scene-version', 'version-second')
+    },
+    [marketSceneSize?.width],
+    { wait: 300 }
+  )
   return (
     <Layout>
       <div className="pt-[100px]">
@@ -93,14 +110,16 @@ const DeliverySystem: React.FC = () => {
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-004')}</div>
               <div className="text-4xl font-medium">{i18n.t('whale-delivery-system-005')}</div>
             </div>
-            <div className="flex flex-col justify-between gap-6 lg:flex-row">
+            <div className="flex flex-col justify-between gap-6 lg:flex-row marketing-scene-plans" ref={marketSceneRef}>
               {marketingList.map((item, index) => (
                 <div className="flex flex-col flex-1 overflow-hidden border rounded-lg border-border_color" key={index}>
-                  <div className="text-[22px] p-8 pb-0 font-medium mb-2">{item.title}</div>
-                  <div className="pb-5 mx-8 text-sm font-normal border-b border-dashed border-tag_border_color">
-                    {item.titleTips}
+                  <div className="flex flex-col scene-first">
+                    <div className="text-[22px] p-8 pb-0 font-medium mb-2">{item.title}</div>
+                    <div className="flex-1 pb-5 mx-8 text-sm font-normal border-b border-dashed border-tag_border_color">
+                      {item.titleTips}
+                    </div>
                   </div>
-                  <div className="flex-1 px-8 pb-5">
+                  <div className="flex-1 px-8 pb-5 scene-second">
                     <div className="text-base font-medium mt-[30px] mb-[10px]">{item.question}</div>
                     <ul className="flex flex-col gap-y-4">
                       {item.questionList.map((listItem, listIndex) => (
@@ -110,7 +129,7 @@ const DeliverySystem: React.FC = () => {
                       ))}
                     </ul>
                   </div>
-                  <div className="px-8 py-5 text-white bg-brand_color">
+                  <div className="px-8 py-5 text-white bg-brand_color scene-third">
                     <div className="text-base font-medium mb-[10px]">{item.resolveTitle}</div>
                     <div className="text-sm font-normal">{item.resolve}</div>
                   </div>
@@ -659,14 +678,16 @@ const DeliverySystem: React.FC = () => {
                 </defs>
               </svg>
             </div>
-            <div className="bg-[#fff] flex overflow-hidden border border-border_color">
+            <div className="bg-[#fff] flex flex-col lg:flex-row overflow-hidden border border-border_color marketing-scene-version">
               <div className="flex-1 p-10">
-                <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-030')}</div>
-                <div className="text-base font-normal border-b border-dashed pb-7 border-tag_border_color">
-                  <div>{i18n.t('whale-delivery-system-031')}</div>
-                  <div className="h-6"></div>
+                <div className="border-b border-dashed version-first border-tag_border_color">
+                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-030')}</div>
+                  <div className="text-base font-normal pb-7">
+                    <div>{i18n.t('whale-delivery-system-031')}</div>
+                    <div className="h-6"></div>
+                  </div>
                 </div>
-                <div>
+                <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
                     <li className="list-dot">{i18n.t('whale-delivery-system-033')}</li>
@@ -676,12 +697,14 @@ const DeliverySystem: React.FC = () => {
                 </div>
               </div>
               <div className="flex-1 p-10 bg-bg_color_2">
-                <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
-                <div className="text-base font-normal border-b border-dashed pb-7 border-tag_border_color">
-                  <div>{i18n.t('whale-delivery-system-037')}</div>
-                  <div>{i18n.t('whale-delivery-system-038')}</div>
+                <div className="border-b border-dashed version-first border-tag_border_color">
+                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
+                  <div className="text-base font-normal pb-7">
+                    <div>{i18n.t('whale-delivery-system-037')}</div>
+                    <div>{i18n.t('whale-delivery-system-038')}</div>
+                  </div>
                 </div>
-                <div>
+                <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
                     <li className="list-dot">{i18n.t('whale-delivery-system-040')}</li>
@@ -691,17 +714,19 @@ const DeliverySystem: React.FC = () => {
                 </div>
               </div>
               <div className="flex-1 p-10 bg-brand_color text-[#fff]">
-                <div className="text-[30px] font-semibold mb-2 flex items-center">
-                  {i18n.t('whale-delivery-system-042')}
-                  <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
-                    HOT
-                  </span>
+                <div className="border-b border-dashed version-first border-tag_border_color">
+                  <div className="text-[30px] font-semibold mb-2 flex items-center">
+                    {i18n.t('whale-delivery-system-042')}
+                    <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
+                      HOT
+                    </span>
+                  </div>
+                  <div className="text-base font-normal pb-7 ">
+                    <div>{i18n.t('whale-delivery-system-043')}</div>
+                    <div>{i18n.t('whale-delivery-system-044')}</div>
+                  </div>
                 </div>
-                <div className="text-base font-normal border-b border-dashed pb-7 border-tag_border_color">
-                  <div>{i18n.t('whale-delivery-system-043')}</div>
-                  <div>{i18n.t('whale-delivery-system-044')}</div>
-                </div>
-                <div>
+                <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
                     <li className="list-dot">{i18n.t('whale-delivery-system-045')}</li>

@@ -1,5 +1,5 @@
 // 营销系统
-import React from 'react'
+import React, { useRef } from 'react'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -10,6 +10,8 @@ import { i18nPaths } from '@/utils/i18n-paths'
 // eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useDebounceEffect, useSize } from 'ahooks'
+import { keepSiblingsHeight } from '@/hooks/use-resize'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -23,6 +25,17 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const Marketing: React.FC = () => {
+  const marketSceneRef = useRef(null)
+  const marketSceneSize = useSize(marketSceneRef)
+
+  useDebounceEffect(
+    () => {
+      keepSiblingsHeight('.marketing-version-list', 'version-first')
+    },
+    [marketSceneSize?.width],
+    { wait: 300 }
+  )
+
   const i18n = useTranslation('common')
   return (
     <Layout>
@@ -88,14 +101,16 @@ const Marketing: React.FC = () => {
                 alt=""
               />
             </div>
-            <div className="bg-[#fff] rounded-lg flex overflow-hidden">
+            <div className="bg-[#fff] rounded-lg flex marketing-version-list overflow-hidden" ref={marketSceneRef}>
               <div className="flex-1 p-10 left">
-                <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-marketing-015')}</div>
-                <div className="text-base font-normal border-b border-dashed pb-7 border-tag_border_color">
-                  <div>{i18n.t('whale-marketing-016')}</div>
-                  <div>{i18n.t('whale-marketing-017')}</div>
+                <div className="border-b border-dashed version-first border-tag_border_color">
+                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-marketing-015')}</div>
+                  <div className="text-base font-normal pb-7">
+                    <div>{i18n.t('whale-marketing-016')}</div>
+                    <div>{i18n.t('whale-marketing-017')}</div>
+                  </div>
                 </div>
-                <div>
+                <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-marketing-018')}</div>
                   <ul className="flex flex-col gap-y-4">
                     <li className="list-dot">{i18n.t('whale-marketing-019')}</li>
@@ -107,17 +122,19 @@ const Marketing: React.FC = () => {
                 </div>
               </div>
               <div className="flex-1 p-10 bg-brand_color text-[#fff]">
-                <div className="text-[30px] font-semibold mb-2 flex items-center">
-                  {i18n.t('whale-marketing-024')}
-                  <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
-                    HOT
-                  </span>
+                <div className="border-b border-dashed version-first border-tag_border_color">
+                  <div className="text-[30px] font-semibold mb-2 flex items-center">
+                    {i18n.t('whale-marketing-024')}
+                    <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
+                      HOT
+                    </span>
+                  </div>
+                  <div className="text-base font-normal pb-7">
+                    <div>{i18n.t('whale-marketing-025')}</div>
+                    <div>{i18n.t('whale-marketing-026')}</div>
+                  </div>
                 </div>
-                <div className="text-base font-normal border-b border-dashed pb-7 border-tag_border_color">
-                  <div>{i18n.t('whale-marketing-025')}</div>
-                  <div>{i18n.t('whale-marketing-026')}</div>
-                </div>
-                <div>
+                <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-marketing-018')}</div>
                   <ul className="flex flex-col gap-y-4">
                     <li className="list-dot white">{i18n.t('whale-marketing-019')}</li>
