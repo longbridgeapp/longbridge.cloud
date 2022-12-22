@@ -13,10 +13,10 @@ import IntroducingBroker from '@/pages/[locale]/solutions/introducing-broker'
 import Longport from '@/pages/[locale]/solutions/longport'
 import WhiteLabel from '@/pages/[locale]/solutions/white-label'
 import WhaleReports from '@/pages/[locale]/whale-reports'
-import Backstage from '@/pages/[locale]/backstage'
+import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
-import Community from '@/pages/[locale]/community'
-import Jettison from '@/pages/[locale]/jettison'
+import WhaleLongport from '@/pages/[locale]/longport'
+import DeliverySystem from '@/pages/[locale]/delivery-system'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -39,10 +39,10 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="about" element={<AboutPage {...pageProps} />} />
               <Route path="live" element={<LivePage {...pageProps} />} />
               <Route path="whale-reports" element={<WhaleReports {...pageProps} />} />
-              <Route path="backstage" element={<Backstage {...pageProps} />} />
+              <Route path="backoffice" element={<BackOffice {...pageProps} />} />
               <Route path="marketing" element={<Marketing {...pageProps} />} />
-              <Route path="community" element={<Community {...pageProps} />} />
-              <Route path="jettison" element={<Jettison {...pageProps} />} />
+              <Route path="longport" element={<WhaleLongport {...pageProps} />} />
+              <Route path="delivery-system" element={<DeliverySystem {...pageProps} />} />
             </Route>
           </Fragment>
         )

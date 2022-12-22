@@ -45,6 +45,22 @@ function useNavs() {
             value: '/crm',
             label: i18n.t('header_nav_005'),
           },
+          {
+            value: '/backoffice',
+            label: i18n.t('whale-backoffice-001'),
+          },
+          {
+            value: '/marketing',
+            label: i18n.t('whale-marketing-001'),
+          },
+          {
+            value: '/longport',
+            label: i18n.t('whale-community-001'),
+          },
+          {
+            value: '/delivery-system',
+            label: i18n.t('whale-delivery-system-001'),
+          },
         ],
       },
       {

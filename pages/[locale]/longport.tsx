@@ -1,6 +1,5 @@
 // 社区系统
 import React from 'react'
-// eslint-disable-next-line import/named
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -8,6 +7,7 @@ import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+// eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
@@ -22,7 +22,7 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 
-const Community: React.FC = () => {
+const Longport: React.FC = () => {
   const i18n = useTranslation('common')
   return (
     <Layout>
@@ -227,4 +227,4 @@ const Community: React.FC = () => {
   )
 }
 
-export default Community
+export default Longport
