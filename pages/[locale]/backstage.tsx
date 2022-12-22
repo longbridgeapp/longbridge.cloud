@@ -1,15 +1,15 @@
 // 后台系统
 import React from 'react'
 // eslint-disable-next-line import/named
-import { UserConfig, useTranslation } from 'next-i18next'
-import { i18nPaths } from '@/utils/i18n-paths'
-import i18nextConfig from '@/next-i18next.config'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import ImageIcon from '@/components/image-icon'
+import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
-import { CDN_IMAGES } from '@/constants'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import ImageIcon from '@/components/image-icon'
+import i18nextConfig from '@/next-i18next.config'
+import { i18nPaths } from '@/utils/i18n-paths'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -66,7 +66,10 @@ const Backstage: React.FC = () => {
               </div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/TLhxiVz6YiPiFVzd/Group_427319109.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -76,15 +79,11 @@ const Backstage: React.FC = () => {
             <div className="flex flex-col justify-between gap-8 lg:gap-36 lg:flex-row">
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-013')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-014')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-014')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-015')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-016')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-016')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-017')}</div>
@@ -92,7 +91,10 @@ const Backstage: React.FC = () => {
               </div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/64ugGy9xFLTEagdg/Group_427319108.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -117,7 +119,10 @@ const Backstage: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <img src="https://pub.lbkrs.com/files/202212/P3K4RrwMHdKnKv3Q/Group_427319186.png" alt="" />
+                <img
+                  src="https://assets.lbkrs.com/uploads/longbridge-whale/84a8997c-f2ff-46db-81a1-13af7a7ed58e/a4.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -128,15 +133,11 @@ const Backstage: React.FC = () => {
             <div className="flex flex-col justify-between gap-8 lg:gap-36 lg:flex-row">
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-031')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-032')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-032')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-033')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-034')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-034')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-035')}</div>
@@ -144,7 +145,10 @@ const Backstage: React.FC = () => {
               </div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/qQFmxf16KXvYRHLz/Group_427319159.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/fc51dcaa-a5d4-446d-b83a-b539d272d4b3/a5.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -157,25 +161,22 @@ const Backstage: React.FC = () => {
                 <div className="text-2xl font-medium">{i18n.t('whale-backstage-038')}</div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">
-                  {i18n.t('whale-backstage-039')}
-                  </span>
+                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-039')}</span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">
-                  {i18n.t('whale-backstage-040')}
-                  </span>
+                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-040')}</span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">
-                  {i18n.t('whale-backstage-041')}
-                  </span>
+                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-041')}</span>
                 </div>
               </div>
               <div>
-                <img src="https://pub.lbkrs.com/files/202212/vTDjFkFe265SDaYK/Group_427319192.png" alt="" />
+                <img
+                  src="https://assets.lbkrs.com/uploads/longbridge-whale/62d809a8-72b3-41f1-941c-4fc6aac0653f/a6.svg"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -187,9 +188,7 @@ const Backstage: React.FC = () => {
             <div className="flex flex-col justify-between gap-5 lg:gap-36 lg:flex-row">
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-043')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-044')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-044')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-045')}</div>
@@ -197,9 +196,7 @@ const Backstage: React.FC = () => {
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-047')}</div>
-                <div className="text-base font-normal text-text_color_3">
-                {i18n.t('whale-backstage-048')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-048')}</div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-049')}</div>
@@ -207,7 +204,10 @@ const Backstage: React.FC = () => {
               </div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/mVWoqMYKVAsP35aN/Group_427319157.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg"
+                alt=""
+              />
             </div>
           </div>
         </div>
