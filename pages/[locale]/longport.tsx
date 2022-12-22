@@ -45,7 +45,7 @@ const Longport: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-004')}</div>
@@ -133,7 +133,7 @@ const Longport: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-029')}</div>
@@ -143,18 +143,18 @@ const Longport: React.FC = () => {
               <div className="flex-1">
                 <img src="https://pub.lbkrs.com/files/202212/RBpWhMErPAjDhKQb/Frame_427319002.png" alt="" />
               </div>
-              <div className="flex-1">
+              <div>
                 <div className="text-[28px] font-medium mb-10">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/txcPMSuzGoyT6StG/Union.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-community-032')}
                     </span>
                   </li>
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-community-033')}
                     </span>
                   </li>
@@ -163,7 +163,7 @@ const Longport: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-community-034')}
                     </span>
                   </li>
@@ -179,19 +179,19 @@ const Longport: React.FC = () => {
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-community-036')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/mqUV14XqnvYE6YgC/customer.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-community-037')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-community-038')}
                   </span>
                 </li>

@@ -45,7 +45,7 @@ const BackOffice: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start gap-8 content min-w-[485px]">
               <div>
