@@ -22,7 +22,7 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 
-const P1: React.FC = () => {
+const Backstage: React.FC = () => {
   const i18n = useTranslation('common')
   return (
     <Layout>
@@ -33,12 +33,10 @@ const P1: React.FC = () => {
         >
           <div className="flex flex-col gap-3 main-content-width lg:gap-16 lg:flex-row ">
             <div className="flex flex-col items-start gap-8 content max-w-[530px]">
-              <div className="text-[44px] font-semibold">柜台系统后台</div>
+              <div className="text-[44px] font-semibold">{i18n.t('whale-backstage-001')}</div>
               <div className="text-lg font-normal leading-9 text-text_color_2">
-                <div>全新一代基于云原生架构的一站式交易结算系统，覆盖了从交易到结算的全部流程。</div>
-                <div>
-                  支持不同市场、多投资品、多币种的交易清算能力，具备运营卡券一体化清算能力，满足券商灵活的业务模式。
-                </div>
+                <div>{i18n.t('whale-backstage-002')}</div>
+                <div>{i18n.t('whale-backstage-003')}</div>
               </div>
               <TalkToUs className="mt-0" />
             </div>
@@ -51,20 +49,20 @@ const P1: React.FC = () => {
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start gap-8 content min-w-[485px]">
               <div>
-                <div className="mb-2 text-base text-brand_color">产品优势</div>
-                <div className="text-4xl font-medium">新一代互联网架构后台</div>
+                <div className="mb-2 text-base text-brand_color">{i18n.t('whale-backstage-004')}</div>
+                <div className="text-4xl font-medium">{i18n.t('whale-backstage-005')}</div>
               </div>
               <div>
-                <div className="mb-2 text-xl font-medium">开放灵活</div>
-                <div className="text-base font-normal">标准化的接口，各子系统灵活连接各类上下游服务</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-006')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backstage-007')}</div>
               </div>
               <div>
-                <div className="mb-2 text-xl font-medium">开放灵活</div>
-                <div className="text-base font-normal">互联网营销结合的核心业务流，尽可能自动化执行提高效率与质量 </div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-008')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backstage-009')} </div>
               </div>
               <div>
-                <div className="mb-2 text-xl font-medium">开放灵活</div>
-                <div className="text-base font-normal">提供最新最先进的线上服务，无需重新按版本部署</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-010')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backstage-011')}</div>
               </div>
             </div>
             <div>
@@ -74,23 +72,23 @@ const P1: React.FC = () => {
         </div>
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width ">
-            <div className="text-4xl font-medium">资产账本</div>
+            <div className="text-4xl font-medium">{i18n.t('whale-backstage-012')}</div>
             <div className="flex flex-col justify-between gap-8 lg:gap-36 lg:flex-row">
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">多资产种类</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-013')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  覆盖多种资产种类，前后端统一账本，避免前后端账本差异
+                {i18n.t('whale-backstage-014')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">实时更新</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-015')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  账本基于业务变动进行实时更新，满足客户即时调配资产
+                {i18n.t('whale-backstage-016')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">数据全面</div>
-                <div className="text-base font-normal text-text_color_3">前台数据更全面、准确、实时、高效</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-017')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-018')}</div>
               </div>
             </div>
             <div>
@@ -100,22 +98,22 @@ const P1: React.FC = () => {
         </div>
         <div className="py-10 main-container">
           <div className="main-content-width">
-            <div className="mb-10 text-4xl font-medium">结算系统</div>
+            <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backstage-019')}</div>
             <div className="flex flex-col justify-center gap-12 lg:items-center lg:flex-row">
               <div className="min-w-[500px]">
                 <div className="mb-10 text-[28px] font-medium">
-                  <div>结算业务流程全覆盖</div>
-                  <div>处理性能弹性扩展</div>
+                  <div>{i18n.t('whale-backstage-020')}</div>
+                  <div>{i18n.t('whale-backstage-021')}</div>
                 </div>
                 <ul className="flex flex-col text-text_color_3 gap-y-4">
-                  <li className="list-dot">统一的清算流程管理，覆盖计费、结单、OTC 补单等功能</li>
-                  <li className="list-dot">支持全球多市场的清算架构体系，可通过配置实现个性化的清算方案</li>
-                  <li className="list-dot">支持运营卡券一体化清算，满足业务运营需求</li>
-                  <li className="list-dot">计费支持多维度、多类型的个性化计费套餐设置</li>
-                  <li className="list-dot">可在前台 7x24 运转情况下完成分市场精准清算，自定义日切时间点</li>
-                  <li className="list-dot">分布式清算引擎，具备计算资源水平扩展能力</li>
-                  <li className="list-dot">高效率的清算流程，可在 20 分钟内完成十万数量级客户的证券清算日终操作</li>
-                  <li className="list-dot">高并发的结单生成方案，十万客户量级的日/月结单可在 5 分钟内生成</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-022')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-023')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-024')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-025')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-026')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-027')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-028')}</li>
+                  <li className="list-dot">{i18n.t('whale-backstage-029')}</li>
                 </ul>
               </div>
               <div>
@@ -126,23 +124,23 @@ const P1: React.FC = () => {
         </div>
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width ">
-            <div className="text-4xl font-medium">公司行动</div>
+            <div className="text-4xl font-medium">{i18n.t('whale-backstage-030')}</div>
             <div className="flex flex-col justify-between gap-8 lg:gap-36 lg:flex-row">
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">全流程解决方案</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-031')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  提供预告、登记、过户、指令、执行等系统化流程，保障方案高效准确执行
+                {i18n.t('whale-backstage-032')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">自动生成</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-033')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  系统可自动生成公司行动预告和方案信息，提高操作效率
+                {i18n.t('whale-backstage-034')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">完善报表</div>
-                <div className="text-base font-normal text-text_color_3">提供完善的报表，提高公司行动处理的准确性</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-035')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-036')}</div>
               </div>
             </div>
             <div>
@@ -153,26 +151,26 @@ const P1: React.FC = () => {
         {/*  */}
         <div className="py-10 main-container">
           <div className="main-content-width">
-            <div className="mb-10 text-4xl font-medium">会计系统</div>
+            <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backstage-037')}</div>
             <div className="flex flex-col items-start gap-12 lg:items-center lg:flex-row">
               <div className="min-w-[475px] flex flex-col gap-8">
-                <div className="text-2xl font-medium">灵活配置高效记账，快速对接财务软件</div>
+                <div className="text-2xl font-medium">{i18n.t('whale-backstage-038')}</div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
                   <span className="text-base font-normal text-text_color_3">
-                    通过规则配置，自动化记账，提高会计核算效率
+                  {i18n.t('whale-backstage-039')}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png" className="mr-8" />
                   <span className="text-base font-normal text-text_color_3">
-                    系统自动化处理，完善对账逻辑，通过记账核算保证账实平衡
+                  {i18n.t('whale-backstage-040')}
                   </span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
                   <span className="text-base font-normal text-text_color_3">
-                    标准化数据接口，具备快速对接传统财务软件的能力
+                  {i18n.t('whale-backstage-041')}
                   </span>
                 </div>
               </div>
@@ -185,27 +183,27 @@ const P1: React.FC = () => {
         {/*  */}
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width ">
-            <div className="text-4xl font-medium">报表打印</div>
+            <div className="text-4xl font-medium">{i18n.t('whale-backstage-042')}</div>
             <div className="flex flex-col justify-between gap-5 lg:gap-36 lg:flex-row">
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">文件类型全面</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-043')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  自定义模板的报表系统，支持 PDF、Excel、CSV 类型报表打印，支持批量导出策略
+                {i18n.t('whale-backstage-044')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">权限自定义</div>
-                <div className="text-base font-normal text-text_color_3">报表权限分类定义，可按角色设定数据权限</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-045')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-046')}</div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">报表种类丰富</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-047')}</div>
                 <div className="text-base font-normal text-text_color_3">
-                  支持客户、财务、交易、合规、FRR、风控、结算等七大类实时及日终清算类报表
+                {i18n.t('whale-backstage-048')}
                 </div>
               </div>
               <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">报表开发高效</div>
-                <div className="text-base font-normal text-text_color_3">基于数据中台的报表快速生产加工能力</div>
+                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backstage-049')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backstage-050')}</div>
               </div>
             </div>
             <div>
@@ -219,4 +217,4 @@ const P1: React.FC = () => {
   )
 }
 
-export default P1
+export default Backstage
