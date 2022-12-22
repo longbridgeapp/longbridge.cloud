@@ -85,7 +85,7 @@ export const HomeFeatures = () => {
                     __html: feature.title,
                   }}
                 ></h3>
-                <div className="flex justify-between items-center mt-[60px]">
+                <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center mt-[60px]">
                   <div className="left">
                     <div className="desc-list">
                       {feature.descList.map(desc => {

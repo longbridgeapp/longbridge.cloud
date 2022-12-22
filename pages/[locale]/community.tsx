@@ -1,15 +1,15 @@
 // 社区系统
 import React from 'react'
 // eslint-disable-next-line import/named
-import { UserConfig, useTranslation } from 'next-i18next'
-import { i18nPaths } from '@/utils/i18n-paths'
-import i18nextConfig from '@/next-i18next.config'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import ImageIcon from '@/components/image-icon'
+import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
-import { CDN_IMAGES } from '@/constants'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import ImageIcon from '@/components/image-icon'
+import i18nextConfig from '@/next-i18next.config'
+import { i18nPaths } from '@/utils/i18n-paths'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -125,7 +125,11 @@ const Community: React.FC = () => {
               </div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/xgPuem8BJao9XdNc/Group_427319256.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-33863adc5289/c1.svg"
+                className="w-full"
+                alt=""
+              />
             </div>
           </div>
         </div>

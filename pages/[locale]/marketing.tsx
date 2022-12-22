@@ -1,15 +1,15 @@
 // 营销系统
 import React from 'react'
 // eslint-disable-next-line import/named
-import { UserConfig, useTranslation } from 'next-i18next'
-import { i18nPaths } from '@/utils/i18n-paths'
-import i18nextConfig from '@/next-i18next.config'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import ImageIcon from '@/components/image-icon'
+import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
-import { CDN_IMAGES } from '@/constants'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import ImageIcon from '@/components/image-icon'
+import i18nextConfig from '@/next-i18next.config'
+import { i18nPaths } from '@/utils/i18n-paths'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -83,7 +83,10 @@ const Marketing: React.FC = () => {
               <div className="text-4xl font-medium">{i18n.t('whale-marketing-014')}</div>
             </div>
             <div>
-              <img src="https://pub.lbkrs.com/files/202212/LjnFBrT4hRiKd65c/Group_427319048.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/longbridge-whale/29c433e9-de02-4232-b1b2-6b57dc18e59c/b1.svg"
+                alt=""
+              />
             </div>
             <div className="bg-[#fff] rounded-lg flex overflow-hidden">
               <div className="flex-1 p-10 left">
