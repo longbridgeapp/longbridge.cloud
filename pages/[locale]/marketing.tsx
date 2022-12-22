@@ -55,7 +55,7 @@ const Marketing: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-003')}</div>
@@ -149,7 +149,7 @@ const Marketing: React.FC = () => {
           </div>
         </div>
 
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-030')}</div>
@@ -159,18 +159,18 @@ const Marketing: React.FC = () => {
               <div className="flex-1">
                 <img src="https://pub.lbkrs.com/files/202212/xTJxUzUoZzHTVdXX/Frame_427319001.png" alt="" />
               </div>
-              <div className="flex-1">
+              <div>
                 <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-032')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-marketing-033')}
                     </span>
                   </li>
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/FvC4YU2unWnUkViy/group.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-marketing-034')}
                     </span>
                   </li>
@@ -179,7 +179,7 @@ const Marketing: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-marketing-035')}
                     </span>
                   </li>
@@ -188,7 +188,7 @@ const Marketing: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-marketing-036')}
                     </span>
                   </li>
@@ -198,14 +198,14 @@ const Marketing: React.FC = () => {
           </div>
         </div>
 
-        <div className="py-10 bg-cover bg-bg_color_2 main-container lg:py-20">
+        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-3 lg:items-center main-content-width lg:flex-row">
             <div className="flex-1">
               <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-037')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-marketing-038')}
                   </span>
                 </li>
@@ -214,7 +214,7 @@ const Marketing: React.FC = () => {
                     url="https://pub.lbkrs.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
                     className="mr-8"
                   />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-marketing-039')}
                   </span>
                 </li>
@@ -226,23 +226,23 @@ const Marketing: React.FC = () => {
           </div>
         </div>
 
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-8 lg:items-center main-content-width lg:flex-row">
             <div className="flex-1">
               <img src="https://pub.lbkrs.com/files/202212/EHLGit2kRLLzeC25/Group_427319262.png" alt="" />
             </div>
-            <div className="flex-1">
+            <div>
               <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-040')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-marketing-041')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/4zxY387JjpngG9F3/code.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-marketing-042')}
                   </span>
                 </li>
@@ -251,7 +251,7 @@ const Marketing: React.FC = () => {
                     url="https://pub.lbkrs.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
                     className="mr-8"
                   />
-                  <span className="text-base font-normal text-text_color_3 max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                     {i18n.t('whale-marketing-043')}
                   </span>
                 </li>

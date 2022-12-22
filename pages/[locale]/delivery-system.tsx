@@ -86,10 +86,7 @@ const DeliverySystem: React.FC = () => {
   return (
     <Layout>
       <div className="pt-[100px]">
-        <div
-          className="py-10 bg-cover main-container lg:py-20"
-          style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
-        >
+        <div className="py-10 main-container lg:py-20" style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}>
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start flex-1 gap-8 content">
               <div className="text-[44px] font-semibold">{i18n.t('whale-delivery-system-001')}</div>
@@ -104,7 +101,7 @@ const DeliverySystem: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-004')}</div>
@@ -768,7 +765,7 @@ const DeliverySystem: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-cover main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-056')}</div>
@@ -778,7 +775,7 @@ const DeliverySystem: React.FC = () => {
               <div className="flex-1">
                 <img src="https://pub.lbkrs.com/files/202212/Bow2VnpkGjCanKRE/Frame_427319007.png" alt="" />
               </div>
-              <div className="flex flex-col flex-1 gap-4">
+              <div className="flex flex-col gap-4">
                 <div className="text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>
                 <div className="flex items-center gap-5 ">
                   <div className="text-base font-medium w-[100px]">{i18n.t('whale-delivery-system-059')}</div>
