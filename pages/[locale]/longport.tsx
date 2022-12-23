@@ -153,7 +153,7 @@ const Longport: React.FC = () => {
               <div className="flex-1">
                 <img src="https://pub.lbkrs.com/files/202212/RBpWhMErPAjDhKQb/Frame_427319002.png" alt="" />
               </div>
-              <div>
+              <div className="flex-1">
                 <div className="text-[28px] font-medium mb-10">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
