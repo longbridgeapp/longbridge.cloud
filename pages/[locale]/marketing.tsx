@@ -14,6 +14,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { keepSiblingsHeight } from '@/hooks/use-resize'
 import { Block, BlockBetween } from '@/components/block'
+import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -27,6 +28,8 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const Marketing: React.FC = () => {
+  const i18n = useTranslation('common')
+  const seoI18n = useTranslation(['seo'])
   const marketSceneRef = useRef(null)
   const marketSceneSize = useSize(marketSceneRef)
 
@@ -38,11 +41,79 @@ const Marketing: React.FC = () => {
     { wait: 300 }
   )
 
-  const marketingBanners = useMemo(() => [1], [])
+  const marketingBanners = useMemo(
+    () => [
+      {
+        img: 'https://assets.lbkrs.com/uploads/7be57578-446b-4012-8f9c-e5b6b42d5a94/Group_427319264.svg',
+        title: i18n.t('whale-marketing-045'),
+        tips: i18n.t('whale-marketing-046'),
+        data: [
+          {
+            num: 20,
+            tips: i18n.t('whale-marketing-047'),
+            unit: '%',
+          },
+          {
+            num: 30,
+            tips: i18n.t('whale-marketing-048'),
+            unit: '%',
+          },
+        ],
+      },
 
-  const i18n = useTranslation('common')
+      {
+        img: 'https://assets.lbkrs.com/uploads/5ff58d1b-6387-4be8-b108-ec768c3cb817/1.svg',
+        title: '开户入资一站式服务，平台新客快速转为熟客',
+        tips: '激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。',
+        data: [
+          {
+            num: 20,
+            tips: '入资转化率提升',
+            unit: '%',
+          },
+          {
+            num: 30,
+            tips: '交易转化率提升',
+            unit: '%',
+          },
+        ],
+      },
+      {
+        img: 'https://assets.lbkrs.com/uploads/ae1ca763-32d3-4143-b664-45192f6a4911/2.svg',
+        title: '老客带好友开启投资之旅分享转化率赛新高',
+        tips: '使用多类型邀请组件，分享率提升 60% 以上；邀请活动开户转化率、入资转化率持续居于各渠道 top 1-2',
+        data: [
+          {
+            num: 60,
+            tips: '人效提升',
+            unit: '%',
+          },
+          {
+            num: 90,
+            tips: '缩短发奖周期',
+            unit: '%',
+          },
+        ],
+      },
+      {
+        img: 'https://assets.lbkrs.com/uploads/d381b0d0-6911-470b-8d0d-e8c0b4e8cafa/3.svg',
+        title: '转仓拼团赢 AirPods Pro 人手一份皆大欢喜',
+        tips: '新老客均可参与，支持分人群设置达标金额，新客门槛低促转化，老客门槛高提升 AUM',
+        data: [
+          {
+            num: 60,
+            tips: '人效提升',
+            unit: '倍',
+          },
+        ],
+      },
+    ],
+    []
+  )
+
   return (
     <Layout>
+      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div className="pt-[100px]">
         <div
           className="py-10 bg-cover main-container lg:py-20"
@@ -264,78 +335,37 @@ const Marketing: React.FC = () => {
           </div>
         </div>
         <Carousel autoplay effect="fade" className="bg-bg_color_2">
-          <Block>
-            <BlockBetween
-              reverse
-              left={
-                <img
-                  src={'https://assets.lbkrs.com/uploads/f0ff19c0-f3a6-4c54-b1cb-75e25c616323/Group 427319264.png'}
-                  alt=""
-                />
-              }
-              right={
-                <div>
+          {marketingBanners.map((banner, index) => (
+            <Block key={index}>
+              <BlockBetween
+                reverse
+                left={<img src={banner.img} alt="" className="mx-auto" />}
+                right={
                   <div>
-                    <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
-                    <div className="mb-10 text-4xl font-medium">{i18n.t('whale-marketing-045')}</div>
-                  </div>
-                  <div className="text-base font-normal leading-7 text-text_color_3">
-                    {i18n.t('whale-marketing-046')}
-                  </div>
-                  <div className="flex items-center justify-center pt-10 lg:justify-start">
-                    <div className="border-r border-dashed border-border_color pr-14">
-                      <div className="text-brand_color">
-                        <span className="text-4xl font-medium">20</span>%
-                      </div>
-                      <div className="text-base font-normal">{i18n.t('whale-marketing-047')}</div>
+                    <div>
+                      <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
+                      <div className="mb-10 text-4xl font-medium">{banner.title}</div>
                     </div>
-                    <div className="pl-14">
-                      <div className="text-brand_color">
-                        <span className="text-4xl font-medium">30</span>%
-                      </div>
-                      <div className="text-base font-normal">{i18n.t('whale-marketing-048')}</div>
-                    </div>
-                  </div>
-                </div>
-              }
-            />
-          </Block>
-          <Block>
-            <BlockBetween
-              reverse
-              left={
-                <img
-                  src={'https://assets.lbkrs.com/uploads/f0ff19c0-f3a6-4c54-b1cb-75e25c616323/Group 427319264.png'}
-                  alt=""
-                />
-              }
-              right={
-                <div>
-                  <div>
-                    <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
-                    <div className="mb-10 text-4xl font-medium">{i18n.t('whale-marketing-045')}</div>
-                  </div>
-                  <div className="text-base font-normal leading-7 text-text_color_3">
-                    {i18n.t('whale-marketing-046')}
-                  </div>
-                  <div className="flex items-center justify-center pt-10 lg:justify-start">
-                    <div className="border-r border-dashed border-border_color pr-14">
-                      <div className="text-brand_color">
-                        <span className="text-4xl font-medium">20</span>%
-                      </div>
-                      <div className="text-base font-normal">{i18n.t('whale-marketing-047')}</div>
-                    </div>
-                    <div className="pl-14">
-                      <div className="text-brand_color">
-                        <span className="text-4xl font-medium">30</span>%
-                      </div>
-                      <div className="text-base font-normal">{i18n.t('whale-marketing-048')}</div>
+                    <div className="text-base font-normal leading-7 text-text_color_3">{banner.tips}</div>
+                    <div className="flex items-center justify-center pt-10 lg:justify-start">
+                      {banner.data.map((d, _i) => (
+                        <div
+                          className={`${_i !== 0 ? 'border-l border-dashed border-border_color pl-14' : 'pr-14'}`}
+                          key={_i}
+                        >
+                          <div className="text-brand_color">
+                            <span className="text-4xl font-medium">{d.num}</span>
+                            {d.unit}
+                          </div>
+                          <div className="text-base font-normal">{d.tips}</div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                </div>
-              }
-            />
-          </Block>
+                }
+              />
+            </Block>
+          ))}
         </Carousel>
         <WhaleOfficialFooter />
       </div>

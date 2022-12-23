@@ -12,6 +12,7 @@ import { i18nPaths } from '@/utils/i18n-paths'
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Block, BlockBetween } from '@/components/block'
+import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -26,11 +27,13 @@ export const getStaticProps = async (ctx: any) => ({
 
 const FrontDesk: React.FC = () => {
   const i18n = useTranslation('common')
+  const seoI18n = useTranslation(['seo'])
 
   const marketingBanners = useMemo(() => [1], [])
 
   return (
     <Layout>
+      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div className="pt-[100px]">
         <div
           className="py-10 bg-cover main-container lg:py-20"

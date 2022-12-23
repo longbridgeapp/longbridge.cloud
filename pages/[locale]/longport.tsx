@@ -1,7 +1,8 @@
 // 社区系统
 import React from 'react'
 import ImageIcon from '@/components/image-icon'
-import { CDN_IMAGES } from '@/constants'
+import Button from '@/components/button'
+import { CDN_IMAGES, LONGPORT_URL } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
@@ -10,6 +11,7 @@ import { i18nPaths } from '@/utils/i18n-paths'
 // eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -24,8 +26,11 @@ export const getStaticProps = async (ctx: any) => ({
 
 const Longport: React.FC = () => {
   const i18n = useTranslation('common')
+  const seoI18n = useTranslation(['seo'])
+  const openLongport = () => {}
   return (
     <Layout>
+      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div className="pt-[100px]">
         <div
           className="py-10 bg-cover main-container lg:py-20"
@@ -38,7 +43,12 @@ const Longport: React.FC = () => {
                 <div>{i18n.t('whale-community-002')}</div>
                 <div>{i18n.t('whale-community-003')}</div>
               </div>
-              <TalkToUs className="mt-0" />
+              <div className="flex items-center">
+                <Button size="medium" onClick={openLongport} link url={LONGPORT_URL}>
+                  访问社区
+                </Button>
+                <TalkToUs className="!mt-0 ml-4" />
+              </div>
             </div>
             <div className="flex-1">
               <img src="https://pub.lbkrs.com/files/202212/iEatvz7kmT1HAzmh/Frame_427318999.png" alt="" />

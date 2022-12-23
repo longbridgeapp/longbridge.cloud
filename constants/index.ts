@@ -8,3 +8,5 @@ export const CDN_IMAGES = {
   contact_us: 'https://pub.lbkrs.com/files/202212/4YS5VSBVHetn7Q1v/20221221-154725.png',
   whale_console: {},
 }
+
+export const LONGPORT_URL = 'https://longportapp.com'
