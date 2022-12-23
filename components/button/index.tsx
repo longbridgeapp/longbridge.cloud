@@ -17,7 +17,6 @@ const Button: FC<
         target="_blank"
         rel="noreferrer"
         href={url}
-        {...props}
         className={classNames(styles.button, 'primary', className, `button-${size}`, {
           disabled: disabled || loading,
         })}
