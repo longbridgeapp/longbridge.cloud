@@ -1,5 +1,6 @@
 // 营销系统
-import React, { useRef } from 'react'
+import React, { useMemo, useRef } from 'react'
+import { Carousel } from 'antd'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -12,6 +13,7 @@ import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { keepSiblingsHeight } from '@/hooks/use-resize'
+import { Block, BlockBetween } from '@/components/block'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -35,6 +37,8 @@ const Marketing: React.FC = () => {
     [marketSceneSize?.width],
     { wait: 300 }
   )
+
+  const marketingBanners = useMemo(() => [1], [])
 
   const i18n = useTranslation('common')
   return (
@@ -259,6 +263,80 @@ const Marketing: React.FC = () => {
             </div>
           </div>
         </div>
+        <Carousel autoplay effect="fade" className="bg-bg_color_2">
+          <Block>
+            <BlockBetween
+              reverse
+              left={
+                <img
+                  src={'https://assets.lbkrs.com/uploads/f0ff19c0-f3a6-4c54-b1cb-75e25c616323/Group 427319264.png'}
+                  alt=""
+                />
+              }
+              right={
+                <div>
+                  <div>
+                    <div className="mb-2 text-base text-brand_color">运营案例分享</div>
+                    <div className="mb-10 text-4xl font-medium">开户入资一站式服务，平台新客快速转为熟客</div>
+                  </div>
+                  <div className="text-base font-normal leading-7 text-text_color_3">
+                    激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。
+                  </div>
+                  <div className="flex items-center justify-center pt-10 lg:justify-start">
+                    <div className="border-r border-dashed border-border_color pr-14">
+                      <div className="text-brand_color">
+                        <span className="text-4xl font-medium">20</span>%
+                      </div>
+                      <div className="text-base font-normal">入资转化率提升</div>
+                    </div>
+                    <div className="pl-14">
+                      <div className="text-brand_color">
+                        <span className="text-4xl font-medium">30</span>%
+                      </div>
+                      <div className="text-base font-normal">交易转化率提升</div>
+                    </div>
+                  </div>
+                </div>
+              }
+            />
+          </Block>
+          <Block>
+            <BlockBetween
+              reverse
+              left={
+                <img
+                  src={'https://assets.lbkrs.com/uploads/f0ff19c0-f3a6-4c54-b1cb-75e25c616323/Group 427319264.png'}
+                  alt=""
+                />
+              }
+              right={
+                <div>
+                  <div>
+                    <div className="mb-2 text-base text-brand_color">运营案例分享</div>
+                    <div className="mb-10 text-4xl font-medium">开户入资一站式服务，平台新客快速转为熟客</div>
+                  </div>
+                  <div className="text-base font-normal leading-7 text-text_color_3">
+                    激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。
+                  </div>
+                  <div className="flex items-center justify-center pt-10 lg:justify-start">
+                    <div className="border-r border-dashed border-border_color pr-14">
+                      <div className="text-brand_color">
+                        <span className="text-4xl font-medium">20</span>%
+                      </div>
+                      <div className="text-base font-normal">入资转化率提升</div>
+                    </div>
+                    <div className="pl-14">
+                      <div className="text-brand_color">
+                        <span className="text-4xl font-medium">30</span>%
+                      </div>
+                      <div className="text-base font-normal">交易转化率提升</div>
+                    </div>
+                  </div>
+                </div>
+              }
+            />
+          </Block>
+        </Carousel>
         <WhaleOfficialFooter />
       </div>
     </Layout>
