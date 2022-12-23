@@ -276,24 +276,24 @@ const Marketing: React.FC = () => {
               right={
                 <div>
                   <div>
-                    <div className="mb-2 text-base text-brand_color">运营案例分享</div>
-                    <div className="mb-10 text-4xl font-medium">开户入资一站式服务，平台新客快速转为熟客</div>
+                    <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
+                    <div className="mb-10 text-4xl font-medium">{i18n.t('whale-marketing-045')}</div>
                   </div>
                   <div className="text-base font-normal leading-7 text-text_color_3">
-                    激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。
+                    {i18n.t('whale-marketing-046')}
                   </div>
                   <div className="flex items-center justify-center pt-10 lg:justify-start">
                     <div className="border-r border-dashed border-border_color pr-14">
                       <div className="text-brand_color">
                         <span className="text-4xl font-medium">20</span>%
                       </div>
-                      <div className="text-base font-normal">入资转化率提升</div>
+                      <div className="text-base font-normal">{i18n.t('whale-marketing-047')}</div>
                     </div>
                     <div className="pl-14">
                       <div className="text-brand_color">
                         <span className="text-4xl font-medium">30</span>%
                       </div>
-                      <div className="text-base font-normal">交易转化率提升</div>
+                      <div className="text-base font-normal">{i18n.t('whale-marketing-048')}</div>
                     </div>
                   </div>
                 </div>
@@ -312,24 +312,24 @@ const Marketing: React.FC = () => {
               right={
                 <div>
                   <div>
-                    <div className="mb-2 text-base text-brand_color">运营案例分享</div>
-                    <div className="mb-10 text-4xl font-medium">开户入资一站式服务，平台新客快速转为熟客</div>
+                    <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
+                    <div className="mb-10 text-4xl font-medium">{i18n.t('whale-marketing-045')}</div>
                   </div>
                   <div className="text-base font-normal leading-7 text-text_color_3">
-                    激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。
+                    {i18n.t('whale-marketing-046')}
                   </div>
                   <div className="flex items-center justify-center pt-10 lg:justify-start">
                     <div className="border-r border-dashed border-border_color pr-14">
                       <div className="text-brand_color">
                         <span className="text-4xl font-medium">20</span>%
                       </div>
-                      <div className="text-base font-normal">入资转化率提升</div>
+                      <div className="text-base font-normal">{i18n.t('whale-marketing-047')}</div>
                     </div>
                     <div className="pl-14">
                       <div className="text-brand_color">
                         <span className="text-4xl font-medium">30</span>%
                       </div>
-                      <div className="text-base font-normal">交易转化率提升</div>
+                      <div className="text-base font-normal">{i18n.t('whale-marketing-048')}</div>
                     </div>
                   </div>
                 </div>

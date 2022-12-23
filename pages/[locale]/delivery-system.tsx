@@ -775,7 +775,7 @@ const DeliverySystem: React.FC = () => {
               <div className="flex-1">
                 <img src="https://pub.lbkrs.com/files/202212/Bow2VnpkGjCanKRE/Frame_427319007.png" alt="" />
               </div>
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col flex-1 gap-4">
                 <div className="text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>
                 <div className="flex items-center gap-5 ">
                   <div className="text-base font-medium w-[100px]">{i18n.t('whale-delivery-system-059')}</div>
