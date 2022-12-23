@@ -4,8 +4,8 @@ import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 import { useMount } from 'ahooks'
 
-const email = 'cs@longbridge.cloud'
-const tel = ''
+const email = 'support@longbridge-inc.com'
+const tel = '400-024-2688'
 
 const Footer: FC = () => {
   const [isCN, setISCN] = useState(false)
@@ -45,16 +45,14 @@ const Footer: FC = () => {
   return (
     <footer className={classNames(styles.footer, 'main-container')}>
       <div className={classNames('main-content-width')}>
-        <div className="flex justify-between items-center">
-          <div className="flex">
-            {false && (
-              <div className="flex flex-col">
-                <span className="text-sm">{i18n.t('footer_004')}</span>
-                <a className="mt-2 font-medium" href={`tel:${tel}`}>
-                  {tel}
-                </a>
-              </div>
-            )}
+        <div className="flex items-center justify-between">
+          <div className="flex gap-14">
+            <div className="flex flex-col">
+              <span className="text-sm">{i18n.t('footer_004')}</span>
+              <a className="mt-2 font-medium" href={`tel:${tel}`}>
+                {tel}
+              </a>
+            </div>
             <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_003')}</span>
               <a className="mt-2 font-medium" href={`mailto:${email}`}>
@@ -66,20 +64,20 @@ const Footer: FC = () => {
             {false &&
               socials.map(({ icon, href }) => {
                 return (
-                  <a className="w-5 inline-block ml-7 first:ml-0" href={href} key={href}>
+                  <a className="inline-block w-5 ml-7 first:ml-0" href={href} key={href}>
                     <img src={icon} alt="" />
                   </a>
                 )
               })}
           </div>
         </div>
-        <div className="flex justify-between items-center mt-6">
+        <div className="flex items-center justify-between mt-6">
           <div className="text-xs">
             <span>{i18n.t('footer_005')}</span>
           </div>
           {isCN && (
             <div className="text-xs">
-              <a href="https://beian.miit.gov.cn" target={'_blank'}>
+              <a href="https://beian.miit.gov.cn" target={'_blank'} rel="noreferrer">
                 浙 ICP 备 19021593 号
               </a>
             </div>
@@ -88,7 +86,7 @@ const Footer: FC = () => {
             <div>
               {links.map(({ label, href }) => {
                 return (
-                  <a className="text-xs ml-12 first:ml-0" href={href} key={label}>
+                  <a className="ml-12 text-xs first:ml-0" href={href} key={label}>
                     {label}
                   </a>
                 )
