@@ -12,6 +12,7 @@ import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { keepSiblingsHeight } from '@/hooks/use-resize'
+import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -26,6 +27,7 @@ export const getStaticProps = async (ctx: any) => ({
 
 const DeliverySystem: React.FC = () => {
   const i18n = useTranslation('common')
+  const seoI18n = useTranslation(['seo'])
   const marketSceneRef = useRef(null)
   const marketSceneSize = useSize(marketSceneRef)
   /** 数据化运营方案 */
@@ -85,6 +87,7 @@ const DeliverySystem: React.FC = () => {
   )
   return (
     <Layout>
+      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div className="pt-[100px]">
         <div className="py-10 main-container lg:py-20" style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}>
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
