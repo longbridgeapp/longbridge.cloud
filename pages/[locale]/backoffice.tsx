@@ -32,7 +32,7 @@ const BackOffice: React.FC = () => {
           style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
         >
           <div className="flex flex-col gap-3 main-content-width lg:gap-16 lg:flex-row ">
-            <div className="flex flex-col items-start gap-8 content max-w-[530px]">
+            <div className="flex flex-col items-start gap-8 content lg:max-w-[530px]">
               <div className="text-[44px] font-semibold">{i18n.t('whale-backoffice-001')}</div>
               <div className="text-lg font-normal leading-9 text-text_color_2">
                 <div>{i18n.t('whale-backoffice-002')}</div>
@@ -40,12 +40,12 @@ const BackOffice: React.FC = () => {
               </div>
               <TalkToUs className="mt-0" />
             </div>
-            <div className="max-w-[620px]">
+            <div className="lg:max-w-[620px]">
               <img src="https://pub.lbkrs.com/files/202212/p2JxoPtvXNsJCunE/Group_427319260__1_.png" alt="" />
             </div>
           </div>
         </div>
-        <div className="py-10main-container lg:py-20">
+        <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start gap-8 content min-w-[485px]">
               <div>
@@ -67,6 +67,7 @@ const BackOffice: React.FC = () => {
             </div>
             <div>
               <img
+                className="mx-auto"
                 src="https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg"
                 alt=""
               />
@@ -120,6 +121,7 @@ const BackOffice: React.FC = () => {
               </div>
               <div>
                 <img
+                  className="mx-auto"
                   src="https://assets.lbkrs.com/uploads/longbridge-whale/84a8997c-f2ff-46db-81a1-13af7a7ed58e/a4.svg"
                   alt=""
                 />
@@ -156,7 +158,7 @@ const BackOffice: React.FC = () => {
         <div className="py-10 main-container">
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
-            <div className="flex flex-col items-start gap-12 lg:items-center lg:flex-row">
+            <div className="flex flex-col items-center gap-12 lg:flex-row">
               <div className="min-w-[475px] flex flex-col gap-8">
                 <div className="text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex items-center">

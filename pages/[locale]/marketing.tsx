@@ -54,7 +54,7 @@ const Marketing: React.FC = () => {
               <div className="text-lg leading-9 text-text_color_2">{i18n.t('whale-marketing-002')}</div>
               <TalkToUs className="mt-0" />
             </div>
-            <div className="max-w-[620px]">
+            <div className="lg:max-w-[620px]">
               <img src="https://pub.lbkrs.com/files/202212/nSrQZUdNJ7Y8ircg/Group_427319261.png" alt="" />
             </div>
           </div>
