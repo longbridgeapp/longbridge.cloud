@@ -58,7 +58,7 @@ const BackOffice: React.FC = () => {
         </div>
         <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start gap-8 content min-w-[485px]">
+            <div className="flex flex-col items-start gap-8 content lg:min-w-[485px]">
               <div>
                 <div className="mb-2 text-base text-brand_color">{i18n.t('whale-backoffice-004')}</div>
                 <div className="text-4xl font-medium">{i18n.t('whale-backoffice-005')}</div>
@@ -122,7 +122,7 @@ const BackOffice: React.FC = () => {
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
             <div className="flex flex-col justify-center gap-12 lg:items-center lg:flex-row">
-              <div className="min-w-[500px]">
+              <div className="lg:min-w-[500px]">
                 <div className="mb-10 text-[28px] font-medium">
                   <div>{i18n.t('whale-backoffice-020')}</div>
                   <div>{i18n.t('whale-backoffice-021')}</div>
@@ -186,7 +186,7 @@ const BackOffice: React.FC = () => {
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
             <div className="flex flex-col items-center gap-12 lg:flex-row">
-              <div className="min-w-[475px] flex flex-col gap-8">
+              <div className="lg:min-w-[475px] flex flex-col gap-8">
                 <div className="text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
