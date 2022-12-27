@@ -30,6 +30,7 @@ export const getStaticProps = async (ctx: any) => ({
 const Marketing: React.FC = () => {
   const i18n = useTranslation('common')
   const seoI18n = useTranslation(['seo'])
+  const isEN = i18n.i18n.language === 'en'
   const marketSceneRef = useRef(null)
   const marketSceneSize = useSize(marketSceneRef)
 
@@ -63,47 +64,47 @@ const Marketing: React.FC = () => {
 
       {
         img: 'https://assets.lbkrs.com/uploads/5ff58d1b-6387-4be8-b108-ec768c3cb817/1.svg',
-        title: '开户入资一站式服务，平台新客快速转为熟客',
-        tips: '激励平台老客户帮助平台递名片，吸引新客户转化，实现获客目标。',
+        title: i18n.t('whale-marketing-049'),
+        tips: i18n.t('whale-marketing-050'),
         data: [
           {
             num: 20,
-            tips: '入资转化率提升',
+            tips: i18n.t('whale-marketing-051'),
             unit: '%',
           },
           {
             num: 30,
-            tips: '交易转化率提升',
+            tips: i18n.t('whale-marketing-052'),
             unit: '%',
           },
         ],
       },
       {
         img: 'https://assets.lbkrs.com/uploads/ae1ca763-32d3-4143-b664-45192f6a4911/2.svg',
-        title: '老客带好友开启投资之旅分享转化率赛新高',
-        tips: '使用多类型邀请组件，分享率提升 60% 以上；邀请活动开户转化率、入资转化率持续居于各渠道 top 1-2',
+        title: i18n.t('whale-marketing-053'),
+        tips: i18n.t('whale-marketing-054'),
         data: [
           {
             num: 60,
-            tips: '人效提升',
+            tips: i18n.t('whale-marketing-055'),
             unit: '%',
           },
           {
             num: 90,
-            tips: '缩短发奖周期',
+            tips: i18n.t('whale-marketing-056'),
             unit: '%',
           },
         ],
       },
       {
         img: 'https://assets.lbkrs.com/uploads/d381b0d0-6911-470b-8d0d-e8c0b4e8cafa/3.svg',
-        title: '转仓拼团赢 AirPods Pro 人手一份皆大欢喜',
-        tips: '新老客均可参与，支持分人群设置达标金额，新客门槛低促转化，老客门槛高提升 AUM',
+        title: i18n.t('whale-marketing-057'),
+        tips: i18n.t('whale-marketing-058'),
         data: [
           {
             num: 60,
-            tips: '人效提升',
-            unit: '倍',
+            tips: i18n.t('whale-marketing-059'),
+            unit: i18n.t('whale-marketing-060'),
           },
         ],
       },
@@ -172,7 +173,11 @@ const Marketing: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/29c433e9-de02-4232-b1b2-6b57dc18e59c/b1.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/aef37557-38f1-4c25-b6da-c6ebc973ed5b/Group 427319048.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/29c433e9-de02-4232-b1b2-6b57dc18e59c/b1.svg'
+                }
                 alt=""
               />
             </div>

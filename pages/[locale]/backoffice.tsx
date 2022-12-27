@@ -25,6 +25,7 @@ export const getStaticProps = async (ctx: any) => ({
 
 const BackOffice: React.FC = () => {
   const i18n = useTranslation('common')
+  const isEN = i18n.i18n.language === 'en'
   const seoI18n = useTranslation(['seo'])
   return (
     <Layout>
@@ -44,7 +45,14 @@ const BackOffice: React.FC = () => {
               <TalkToUs className="mt-0" />
             </div>
             <div className="lg:max-w-[620px]">
-              <img src="https://pub.lbkrs.com/files/202212/p2JxoPtvXNsJCunE/Group_427319260__1_.png" alt="" />
+              <img
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/343d32d6-b194-48c5-93ae-485162c4b811/Group%20427318901.svg'
+                    : 'https://pub.lbkrs.com/files/202212/p2JxoPtvXNsJCunE/Group_427319260__1_.png'
+                }
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -71,7 +79,11 @@ const BackOffice: React.FC = () => {
             <div>
               <img
                 className="mx-auto"
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/b33402d9-fae6-453f-b23d-a7445a81900d/Group 427319259.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg'
+                }
                 alt=""
               />
             </div>
@@ -96,7 +108,11 @@ const BackOffice: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/d6b8fee2-191a-4041-939e-7363b82248f8/Group 427319260.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg'
+                }
                 alt=""
               />
             </div>
@@ -125,7 +141,11 @@ const BackOffice: React.FC = () => {
               <div>
                 <img
                   className="mx-auto"
-                  src="https://assets.lbkrs.com/uploads/longbridge-whale/84a8997c-f2ff-46db-81a1-13af7a7ed58e/a4.svg"
+                  src={
+                    isEN
+                      ? 'https://assets.lbkrs.com/uploads/2f5386a5-ac4f-413f-91ab-006a7bfe1cc1/Group 427319261.svg'
+                      : 'https://assets.lbkrs.com/uploads/longbridge-whale/84a8997c-f2ff-46db-81a1-13af7a7ed58e/a4.svg'
+                  }
                   alt=""
                 />
               </div>
@@ -151,7 +171,11 @@ const BackOffice: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/fc51dcaa-a5d4-446d-b83a-b539d272d4b3/a5.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/5959c7de-44dd-4685-a3a9-57e5a7bdb2fd/Group 427319262.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/fc51dcaa-a5d4-446d-b83a-b539d272d4b3/a5.svg'
+                }
                 alt=""
               />
             </div>
@@ -179,7 +203,11 @@ const BackOffice: React.FC = () => {
               </div>
               <div>
                 <img
-                  src="https://assets.lbkrs.com/uploads/longbridge-whale/62d809a8-72b3-41f1-941c-4fc6aac0653f/a6.svg"
+                  src={
+                    isEN
+                      ? 'https://assets.lbkrs.com/uploads/15e62d75-47cf-4004-b607-7aad0ce99b8a/Group 427319192.svg'
+                      : 'https://assets.lbkrs.com/uploads/longbridge-whale/62d809a8-72b3-41f1-941c-4fc6aac0653f/a6.svg'
+                  }
                   alt=""
                 />
               </div>
@@ -210,7 +238,11 @@ const BackOffice: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/8289fe94-d0a3-47d0-aca7-914fab85f9eb/Group 427319157.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg'
+                }
                 alt=""
               />
             </div>
