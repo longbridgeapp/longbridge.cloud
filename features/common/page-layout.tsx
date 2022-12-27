@@ -24,7 +24,7 @@ export const Layout: FC = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
       </Head>
       <div className="relative">
-        <div className="absolute inset-x-0 z-50">
+        <div className="sticky top-0 z-50 bg-white">
           <Header />
         </div>
         {children}

@@ -115,7 +115,7 @@ const Marketing: React.FC = () => {
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
-      <div className="pt-[100px]">
+      <div>
         <div
           className="py-10 bg-cover main-container lg:py-20"
           style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
