@@ -126,51 +126,95 @@ const Navs = () => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
 
+  console.log(navs)
+
+  const mobildNavs: any = []
+  navs.map(nav => {
+    mobildNavs.push({
+      label: nav.label,
+      value: nav.value,
+    })
+    if (nav.children.length) {
+      nav.children.map(nc => {
+        const item = mobildNavs.find((n: any) => n.value === nc.value)
+        if (!item) {
+          mobildNavs.push({
+            label: nc.label,
+            value: nc.value,
+            child: true,
+          })
+        }
+      })
+    }
+  })
+
   return (
-    <div className={classNames(styles.navs, 'flex', 'items-center')}>
-      {navs.map(nav => {
-        return (
-          <div
-            key={nav.value}
-            className={classNames('nav-item', {
-              'nav-item__selected': nav.value === selectedNav?.value,
-            })}
-          >
-            {nav.children.length > 0 && (
-              <Dropdown
-                trigger="hover"
-                onChange={path => navigate(path)}
-                className="nav-item__dropdown"
-                alwaysChildren
-                value={pathname}
-                items={nav.children}
-                renderItem={item => {
-                  return <LocaleLink to={item.value as string}>{item.label}</LocaleLink>
-                }}
-              >
-                <LocaleLink to={nav.value} className="flex items-center">
+    <>
+      <div className={classNames(styles.navs, 'items-center hidden md:flex')}>
+        {navs.map(nav => {
+          return (
+            <div
+              key={nav.value}
+              className={classNames('nav-item', {
+                'nav-item__selected': nav.value === selectedNav?.value,
+              })}
+            >
+              {nav.children.length > 0 && (
+                <Dropdown
+                  trigger="hover"
+                  onChange={path => navigate(path)}
+                  className="nav-item__dropdown"
+                  alwaysChildren
+                  value={pathname}
+                  items={nav.children}
+                  renderItem={item => {
+                    return <LocaleLink to={item.value as string}>{item.label}</LocaleLink>
+                  }}
+                >
+                  <LocaleLink to={nav.value} className="flex items-center">
+                    <span>{nav.label}</span>
+                    <div
+                      className={classNames('text-[8px] ml-1')}
+                      style={{
+                        transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`,
+                      }}
+                    >
+                      <Icon type="cart-down" />
+                    </div>
+                  </LocaleLink>
+                </Dropdown>
+              )}
+              {nav.children.length === 0 && (
+                <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
                   <span>{nav.label}</span>
-                  <div
-                    className={classNames('text-[8px] ml-1')}
-                    style={{
-                      transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`,
-                    }}
-                  >
-                    <Icon type="cart-down" />
-                  </div>
+                  {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
                 </LocaleLink>
-              </Dropdown>
-            )}
-            {nav.children.length === 0 && (
-              <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
-                <span>{nav.label}</span>
-                {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
+              )}
+            </div>
+          )
+        })}
+      </div>
+      <div className="md:hidden">
+        <Dropdown
+          trigger="hover"
+          onChange={path => navigate(path)}
+          className="nav-item__dropdown"
+          alwaysChildren
+          value={pathname}
+          items={mobildNavs}
+          renderItem={item => {
+            console.log(item.value)
+            return (
+              <LocaleLink to={item.value as string} key={item.label}>
+                <span>{item.label}</span>
               </LocaleLink>
-            )}
-          </div>
-        )
-      })}
-    </div>
+            )
+          }}
+        >
+          <img src="https://pub.lbkrs.com/static/offline/202111/oSbQhwMyjvFQzoHQ/menu.svg" alt="" />
+        </Dropdown>
+      </div>
+    </>
   )
 }
 
