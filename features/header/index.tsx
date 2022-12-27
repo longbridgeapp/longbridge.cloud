@@ -4,7 +4,7 @@ import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
 import classNames from 'classnames'
-import { FC, useMemo } from 'react'
+import { FC, MouseEvent, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReports } from '@/hooks/use-reports'
 import styles from './index.module.scss'
@@ -118,6 +118,7 @@ function useNavs() {
   }, [reports])
 }
 const Navs = () => {
+  const [expandKeys, setExpandKeys] = useState<string[]>([])
   const navs = useNavs()
   const pathname = usePurePathname()
   const navigate = useLocaleNavigate()
@@ -126,27 +127,15 @@ const Navs = () => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
 
-  console.log(navs)
-
-  const mobildNavs: any = []
-  navs.map(nav => {
-    mobildNavs.push({
-      label: nav.label,
-      value: nav.value,
-    })
-    if (nav.children.length) {
-      nav.children.map(nc => {
-        const item = mobildNavs.find((n: any) => n.value === nc.value)
-        if (!item) {
-          mobildNavs.push({
-            label: nc.label,
-            value: nc.value,
-            child: true,
-          })
-        }
-      })
+  const expandChange = (key: string, e: MouseEvent<HTMLDivElement, MouseEvent>) => {
+    e.stopPropagation()
+    if (expandKeys.includes(key)) {
+      setExpandKeys(expandKeys.filter(k => k !== key))
+    } else {
+      setExpandKeys([...expandKeys, key])
     }
-  })
+  }
+  console.log(navs)
 
   return (
     <>
@@ -196,17 +185,39 @@ const Navs = () => {
       </div>
       <div className="md:hidden">
         <Dropdown
-          trigger="hover"
+          trigger="click"
           onChange={path => navigate(path)}
-          className="nav-item__dropdown"
+          className="!bg-transparent !text-black"
           alwaysChildren
           value={pathname}
-          items={mobildNavs}
+          items={navs}
           renderItem={item => {
-            console.log(item.value)
-            return (
+            return item.children?.length ? (
+              <div className="flex flex-col">
+                <div className="flex items-center" onClick={e => expandChange(String(item.value), e)}>
+                  <span>{item.label}</span>
+                  <div
+                    className={classNames('text-[8px] ml-1')}
+                    style={{
+                      transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`,
+                    }}
+                  >
+                    <Icon type="cart-down" />
+                  </div>
+                </div>
+                {expandKeys.includes(String(item.value)) && (
+                  <div className="flex flex-col pl-2">
+                    {item.children?.map(i => (
+                      <LocaleLink to={i.value as string} key={i.label} className="py-3">
+                        {i.label}
+                      </LocaleLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
               <LocaleLink to={item.value as string} key={item.label}>
-                <span>{item.label}</span>
+                {item.label}
               </LocaleLink>
             )
           }}

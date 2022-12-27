@@ -83,9 +83,13 @@ const Dropdown: React.FC<IDropdownProps> = ({
             return (
               <div
                 key={item.value}
-                className={classNames('dropdown-menu__item', {
-                  'dropdown-menu__item--selected': item.value === value,
-                })}
+                className={classNames(
+                  'dropdown-menu__item',
+                  {
+                    'dropdown-menu__item--selected': item.value === value,
+                  },
+                  className
+                )}
                 onClick={() => handleChange(item.value)}
               >
                 {renderItem ? renderItem(item) : item.label}
