@@ -27,6 +27,7 @@ export const getStaticProps = async (ctx: any) => ({
 const Longport: React.FC = () => {
   const i18n = useTranslation('common')
   const seoI18n = useTranslation(['seo'])
+  const isEN = i18n.i18n.language === 'en'
   const openLongport = () => {}
   return (
     <Layout>
@@ -45,7 +46,7 @@ const Longport: React.FC = () => {
               </div>
               <div className="flex items-center">
                 <Button size="medium" onClick={openLongport} link url={LONGPORT_URL}>
-                  访问社区
+                  {i18n.t('whale-community-043')}
                 </Button>
                 <TalkToUs className="!mt-0 ml-4" />
               </div>
@@ -136,7 +137,11 @@ const Longport: React.FC = () => {
             </div>
             <div>
               <img
-                src="https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-33863adc5289/c1.svg"
+                src={
+                  isEN
+                    ? 'https://assets.lbkrs.com/uploads/123feb08-4083-4d72-84bd-fe33b0ca3a1b/Group 427319256.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-33863adc5289/c1.svg'
+                }
                 className="w-full"
                 alt=""
               />
