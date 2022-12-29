@@ -47,7 +47,7 @@ const Marketing: React.FC = () => {
   const marketingBanners = useMemo(
     () => [
       {
-        img: 'https://assets.lbkrs.com/uploads/5ff58d1b-6387-4be8-b108-ec768c3cb817/1.svg',
+        img: 'https://assets.lbkrs.com/uploads/b919d13c-5a71-4e79-aaa0-5c70b0ca9210/Group 427319264.png',
         title: [i18n.t('whale-marketing-049'), i18n.t('whale-marketing-061')],
         tips: i18n.t('whale-marketing-050'),
         data: [
@@ -64,7 +64,7 @@ const Marketing: React.FC = () => {
         ],
       },
       {
-        img: 'https://assets.lbkrs.com/uploads/ae1ca763-32d3-4143-b664-45192f6a4911/2.svg',
+        img: 'https://assets.lbkrs.com/uploads/93e4695d-6c96-4e67-b024-3168010ad783/Group 427319373.png',
         title: [i18n.t('whale-marketing-053'), i18n.t('whale-marketing-062')],
         tips: i18n.t('whale-marketing-054'),
         data: [
@@ -81,7 +81,7 @@ const Marketing: React.FC = () => {
         ],
       },
       {
-        img: 'https://assets.lbkrs.com/uploads/d381b0d0-6911-470b-8d0d-e8c0b4e8cafa/3.svg',
+        img: 'https://assets.lbkrs.com/uploads/48425892-cf48-44ae-87ce-c62e8ffce5e2/Group 427319374.png',
         title: [i18n.t('whale-marketing-057'), i18n.t('whale-marketing-063')],
         tips: i18n.t('whale-marketing-058'),
         data: [
@@ -93,6 +93,7 @@ const Marketing: React.FC = () => {
         ],
       },
     ],
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   )
 
@@ -122,7 +123,7 @@ const Marketing: React.FC = () => {
             </div>
             <div className="lg:max-w-[620px]">
               <img
-                src="https://assets.lbkrs.com/uploads/afd35e68-6d70-471e-810f-de42b4d38b2e/Group 427319261.png"
+                src="https://assets.lbkrs.com/uploads/d4bfcb66-28cf-4ffe-a6c4-3d772c1dca96/Group 427319261.png"
                 alt=""
               />
             </div>
@@ -235,7 +236,7 @@ const Marketing: React.FC = () => {
             <div className="flex flex-col items-start justify-between gap-3 lg:flex-row">
               <div className="flex-1">
                 <img
-                  src="https://assets.lbkrs.com/uploads/fb42db42-531c-49a5-a4ec-7737e48bb33b/Frame 427319001.png"
+                  src="https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png"
                   alt=""
                   className="lg:w-[558px]"
                 />
@@ -245,13 +246,13 @@ const Marketing: React.FC = () => {
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-marketing-033')}
                     </span>
                   </li>
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/FvC4YU2unWnUkViy/group.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-marketing-034')}
                     </span>
                   </li>
@@ -260,7 +261,7 @@ const Marketing: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-marketing-035')}
                     </span>
                   </li>
@@ -269,7 +270,7 @@ const Marketing: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-marketing-036')}
                     </span>
                   </li>
@@ -286,7 +287,7 @@ const Marketing: React.FC = () => {
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-marketing-038')}
                   </span>
                 </li>
@@ -295,7 +296,7 @@ const Marketing: React.FC = () => {
                     url="https://pub.lbkrs.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
                     className="mr-8"
                   />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-marketing-039')}
                   </span>
                 </li>
@@ -303,7 +304,7 @@ const Marketing: React.FC = () => {
             </div>
             <div className="flex-1">
               <img
-                src="https://assets.lbkrs.com/uploads/a71c18ec-1121-446a-b1c8-c1d1e0ae141b/Group 427318897.png"
+                src="https://assets.lbkrs.com/uploads/23b898a0-2e33-4fdf-8592-d5416659c69c/Group 427318897.png"
                 alt=""
                 className="lg:w-[558px]"
               />
@@ -315,7 +316,7 @@ const Marketing: React.FC = () => {
           <div className="flex flex-col gap-8 lg:items-center main-content-width lg:flex-row">
             <div className="flex-1">
               <img
-                src="https://assets.lbkrs.com/uploads/b861f4a1-04d2-478f-bc9a-f2944a188ba2/Group 427319262.png"
+                src="https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png"
                 alt=""
                 className="lg:w-[558px]"
               />
@@ -325,13 +326,13 @@ const Marketing: React.FC = () => {
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-marketing-041')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/4zxY387JjpngG9F3/code.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-marketing-042')}
                   </span>
                 </li>
@@ -340,7 +341,7 @@ const Marketing: React.FC = () => {
                     url="https://pub.lbkrs.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
                     className="mr-8"
                   />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-marketing-043')}
                   </span>
                 </li>

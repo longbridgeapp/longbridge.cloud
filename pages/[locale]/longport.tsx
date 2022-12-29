@@ -52,10 +52,7 @@ const Longport: React.FC = () => {
               </div>
             </div>
             <div className="flex-1">
-              <img
-                src="https://assets.lbkrs.com/uploads/8724e5cc-97f8-41e4-bf03-960b40cd9569/Frame 427318999.png"
-                alt=""
-              />
+              <img src="https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png" alt="" />
             </div>
           </div>
         </div>
@@ -143,7 +140,7 @@ const Longport: React.FC = () => {
                 src={
                   isEN
                     ? 'https://assets.lbkrs.com/uploads/123feb08-4083-4d72-84bd-fe33b0ca3a1b/Group 427319256.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-33863adc5289/c1.svg'
+                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-34383adc5289/c1.svg'
                 }
                 className="w-full"
                 alt=""
@@ -160,7 +157,7 @@ const Longport: React.FC = () => {
             <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
               <div className="flex-1">
                 <img
-                  src="https://assets.lbkrs.com/uploads/e10ed56f-c00c-43a8-ad39-465b60d502fe/Frame 427319002.png"
+                  src="https://assets.lbkrs.com/uploads/8c3e42e3-ce76-4f09-9688-bd741dc1244d/Frame 427319002.png"
                   alt=""
                   className="lg:w-[588px]"
                 />
@@ -173,13 +170,13 @@ const Longport: React.FC = () => {
                       url="https://assets.lbkrs.com/uploads/a8e48045-8feb-4a5e-8283-0bc248c9903a/Union.svg"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
                       {i18n.t('whale-community-032')}
                     </span>
                   </li>
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-community-033')}
                     </span>
                   </li>
@@ -188,7 +185,7 @@ const Longport: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-community-034')}
                     </span>
                   </li>
@@ -204,19 +201,19 @@ const Longport: React.FC = () => {
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
                     {i18n.t('whale-community-036')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/mqUV14XqnvYE6YgC/customer.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-community-037')}
                   </span>
                 </li>
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
+                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                     {i18n.t('whale-community-038')}
                   </span>
                 </li>
@@ -224,7 +221,7 @@ const Longport: React.FC = () => {
             </div>
             <div className="flex-1">
               <img
-                src="https://assets.lbkrs.com/uploads/7e8ce187-4397-48af-95dd-9e4f5ab2b355/Frame 427319003.png"
+                src="https://assets.lbkrs.com/uploads/5df88262-11d9-4f8b-8d92-ba11219eb598/Frame 427319003.png"
                 alt=""
                 className="lg:w-[588px]"
               />
@@ -236,7 +233,7 @@ const Longport: React.FC = () => {
           <div className="flex flex-col gap-3 main-content-width md:flex-row md:gap-48">
             <div className="flex flex-col items-center justify-center flex-1 text-center">
               <img
-                src="https://assets.lbkrs.com/uploads/2706cfcf-c071-4593-9411-b433bedb8918/Frame 427319004.png"
+                src="https://assets.lbkrs.com/uploads/2c89265e-64e5-48cd-8099-9b09cdf9f807/Frame 427319004.png"
                 alt=""
                 className="lg:w-[580px]"
               />
@@ -247,7 +244,7 @@ const Longport: React.FC = () => {
             </div>
             <div className="flex flex-col items-center justify-center flex-1 text-center">
               <img
-                src="https://assets.lbkrs.com/uploads/e94a747b-26e3-4775-a180-bf103815424d/Frame 427319005.png"
+                src="https://assets.lbkrs.com/uploads/bc64e5f9-f843-4ec3-bae7-91adc06a4862/Frame 427319005.png"
                 alt=""
                 className="lg:w-[580px]"
               />
