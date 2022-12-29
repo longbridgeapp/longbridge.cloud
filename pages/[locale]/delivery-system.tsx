@@ -104,10 +104,7 @@ const DeliverySystem: React.FC = () => {
               <TalkToUs className="mt-0" />
             </div>
             <div className="flex-1">
-              <img
-                src="https://assets.lbkrs.com/uploads/01c5f5e8-363c-434b-9001-bb99001c0f68/Frame 427319006-1.png"
-                alt=""
-              />
+              <img src="https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png" alt="" />
             </div>
           </div>
         </div>
@@ -256,7 +253,7 @@ const DeliverySystem: React.FC = () => {
             <div className="flex flex-col justify-between gap-10 lg:items-center lg:gap-40 lg:flex-row">
               <div className="flex-1">
                 <img
-                  src="https://assets.lbkrs.com/uploads/4cd154ac-ac81-40c5-a8db-6d8814a7bae9/Frame 427319007.png"
+                  src="https://assets.lbkrs.com/uploads/1e82d4e2-ca8f-463b-860a-700df8d3a8cb/Frame 427319007.png"
                   alt=""
                   className="lg:w-[530px]"
                 />

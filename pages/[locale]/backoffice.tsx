@@ -49,7 +49,7 @@ const BackOffice: React.FC = () => {
                 src={
                   isEN
                     ? 'https://assets.lbkrs.com/uploads/343d32d6-b194-48c5-93ae-485162c4b811/Group%20427318901.svg'
-                    : 'https://assets.lbkrs.com/uploads/fa2e547a-facc-458e-b1f0-0e1116257fb4/Group 427319260.png'
+                    : 'https://assets.lbkrs.com/uploads/c86d936e-3888-401f-b2d1-8f98fefd8595/Group 427319260.png'
                 }
                 alt=""
               />
@@ -121,7 +121,7 @@ const BackOffice: React.FC = () => {
         <div className="py-10 main-container lg:py-20">
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
-            <div className="flex flex-col justify-center gap-12 lg:items-start lg:flex-row">
+            <div className="flex flex-col justify-center gap-12 lg:justify-between lg:items-start lg:flex-row">
               <div className="lg:min-w-[500px]">
                 <div className="mb-10 text-[28px] font-medium">
                   <div>{i18n.t('whale-backoffice-020')}</div>
@@ -192,19 +192,25 @@ const BackOffice: React.FC = () => {
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
             <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
-              <div className="lg:min-w-[475px] flex flex-col gap-5">
+              <div className="flex flex-col gap-5">
                 <div className="mb-5 text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-039')}</span>
+                  <span className="text-base font-normal text-text_color_3 lg:w-[438px] ">
+                    {i18n.t('whale-backoffice-039')}
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-040')}</span>
+                  <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
+                    {i18n.t('whale-backoffice-040')}
+                  </span>
                 </div>
                 <div className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-041')}</span>
+                  <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
+                    {i18n.t('whale-backoffice-041')}
+                  </span>
                 </div>
               </div>
               <div>
