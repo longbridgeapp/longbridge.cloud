@@ -235,6 +235,7 @@ const Marketing: React.FC = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/fb42db42-531c-49a5-a4ec-7737e48bb33b/Frame 427319001.png"
                   alt=""
+                  className="lg:w-[558px]"
                 />
               </div>
               <div>
@@ -302,6 +303,7 @@ const Marketing: React.FC = () => {
               <img
                 src="https://assets.lbkrs.com/uploads/a71c18ec-1121-446a-b1c8-c1d1e0ae141b/Group 427318897.png"
                 alt=""
+                className="lg:w-[558px]"
               />
             </div>
           </div>
@@ -313,6 +315,7 @@ const Marketing: React.FC = () => {
               <img
                 src="https://assets.lbkrs.com/uploads/b861f4a1-04d2-478f-bc9a-f2944a188ba2/Group 427319262.png"
                 alt=""
+                className="lg:w-[558px]"
               />
             </div>
             <div>

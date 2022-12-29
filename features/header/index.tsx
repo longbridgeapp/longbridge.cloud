@@ -127,7 +127,7 @@ const Navs = () => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
 
-  const expandChange = (key: string, e: MouseEvent<HTMLDivElement, MouseEvent>) => {
+  const expandChange = (key: string, e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
     e.stopPropagation()
     if (expandKeys.includes(key)) {
       setExpandKeys(expandKeys.filter(k => k !== key))
@@ -196,7 +196,7 @@ const Navs = () => {
           value={pathname}
           items={navs}
           renderItem={item => {
-            return item.children?.length ? (
+            return item?.children?.length ? (
               <div className="flex flex-col">
                 <div className="flex items-center" onClick={e => expandChange(String(item.value), e)}>
                   <span>{item.label}</span>
@@ -211,7 +211,7 @@ const Navs = () => {
                 </div>
                 {expandKeys.includes(String(item.value)) && (
                   <div className="flex flex-col pl-2">
-                    {item.children?.map(i => (
+                    {item?.children?.map((i: any) => (
                       <LocaleLink to={i.value as string} key={i.label} className="py-3">
                         {i.label}
                       </LocaleLink>

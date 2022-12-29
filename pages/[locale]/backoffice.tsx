@@ -121,7 +121,7 @@ const BackOffice: React.FC = () => {
         <div className="py-10 main-container lg:py-20">
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
-            <div className="flex flex-col justify-center gap-12 lg:items-center lg:flex-row">
+            <div className="flex flex-col justify-center gap-12 lg:items-start lg:flex-row">
               <div className="lg:min-w-[500px]">
                 <div className="mb-10 text-[28px] font-medium">
                   <div>{i18n.t('whale-backoffice-020')}</div>
@@ -158,15 +158,21 @@ const BackOffice: React.FC = () => {
             <div className="flex flex-col justify-between gap-8 lg:gap-[150px] lg:flex-row">
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-031')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-032')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
+                  {i18n.t('whale-backoffice-032')}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-033')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-034')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
+                  {i18n.t('whale-backoffice-034')}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-035')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-036')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
+                  {i18n.t('whale-backoffice-036')}
+                </div>
               </div>
             </div>
             <div>
@@ -185,7 +191,7 @@ const BackOffice: React.FC = () => {
         <div className="py-10 main-container lg:py-20">
           <div className="main-content-width">
             <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
-            <div className="flex flex-col items-center gap-12 lg:flex-row">
+            <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
               <div className="lg:min-w-[475px] flex flex-col gap-5">
                 <div className="mb-5 text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex items-center">
@@ -221,19 +227,27 @@ const BackOffice: React.FC = () => {
             <div className="flex flex-col justify-between gap-5 lg:gap-16 lg:flex-row">
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-043')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-044')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
+                  {i18n.t('whale-backoffice-044')}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-045')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-046')}</div>
+                <div className="text-base font-normal text-text_color_3  lg:w-[246px]">
+                  {i18n.t('whale-backoffice-046')}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-047')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-048')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
+                  {i18n.t('whale-backoffice-048')}
+                </div>
               </div>
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-049')}</div>
-                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-050')}</div>
+                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
+                  {i18n.t('whale-backoffice-050')}
+                </div>
               </div>
             </div>
             <div>

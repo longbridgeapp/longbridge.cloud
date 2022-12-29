@@ -168,7 +168,7 @@ const DeliverySystem: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              <div className="flex-1 p-10 bg-bg_color_2">
+              <div className="flex-1 p-10 border-l bg-bg_color_2 border-border_color">
                 <div className="border-b border-dashed version-first border-tag_border_color">
                   <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
                   <div className="text-base font-normal pb-7">
@@ -255,6 +255,7 @@ const DeliverySystem: React.FC = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/4cd154ac-ac81-40c5-a8db-6d8814a7bae9/Frame 427319007.png"
                   alt=""
+                  className="lg:w-[530px]"
                 />
               </div>
               <div className="flex flex-col flex-1 gap-4">
