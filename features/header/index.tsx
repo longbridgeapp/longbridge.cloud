@@ -61,14 +61,14 @@ function useNavs() {
             value: '/delivery-system',
             label: i18n.t('whale-delivery-system-001'),
           },
-          {
-            value: '/retail',
-            label: '零售系统',
-          },
-          {
-            value: '/front-desk',
-            label: '柜台系统前中台',
-          },
+          // {
+          //   value: '/retail',
+          //   label: '零售系统',
+          // },
+          // {
+          //   value: '/front-desk',
+          //   label: '柜台系统前中台',
+          // },
         ],
       },
       {
