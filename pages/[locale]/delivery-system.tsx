@@ -90,7 +90,10 @@ const DeliverySystem: React.FC = () => {
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div>
-        <div className="py-10 main-container lg:py-20" style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}>
+        <div
+          className="py-10 bg-cover main-container lg:py-20"
+          style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
+        >
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start flex-1 gap-8 content">
               <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-delivery-system-001')}</div>
