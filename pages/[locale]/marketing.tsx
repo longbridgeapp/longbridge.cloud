@@ -387,7 +387,9 @@ const Marketing: React.FC = () => {
                           ))}
                         </div>
                       </div>
-                      <div className="text-base font-normal leading-7 text-text_color_3">{banner.tips}</div>
+                      <div className="text-base font-normal leading-7 text-text_color_3 lg:w-[480px]">
+                        {banner.tips}
+                      </div>
                       <div className="flex items-center justify-center pt-10 lg:justify-start">
                         {banner.data.map((d, _i) => (
                           <div
