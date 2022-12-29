@@ -93,7 +93,7 @@ const DeliverySystem: React.FC = () => {
         <div className="py-10 main-container lg:py-20" style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}>
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
             <div className="flex flex-col items-start flex-1 gap-8 content">
-              <div className="text-[44px] font-semibold">{i18n.t('whale-delivery-system-001')}</div>
+              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-delivery-system-001')}</div>
               <div className="text-lg leading-9 text-text_color_2 max-w-[500px]">
                 <div>{i18n.t('whale-delivery-system-002')}</div>
                 <div>{i18n.t('whale-delivery-system-003')}</div>
@@ -101,7 +101,10 @@ const DeliverySystem: React.FC = () => {
               <TalkToUs className="mt-0" />
             </div>
             <div className="flex-1">
-              <img src="https://pub.lbkrs.com/files/202212/4CWDZ8aWYLWNFFWi/Frame_427319006.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/01c5f5e8-363c-434b-9001-bb99001c0f68/Frame 427319006-1.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -249,7 +252,10 @@ const DeliverySystem: React.FC = () => {
             </div>
             <div className="flex flex-col justify-between gap-10 lg:items-center lg:gap-40 lg:flex-row">
               <div className="flex-1">
-                <img src="https://pub.lbkrs.com/files/202212/Bow2VnpkGjCanKRE/Frame_427319007.png" alt="" />
+                <img
+                  src="https://assets.lbkrs.com/uploads/4cd154ac-ac81-40c5-a8db-6d8814a7bae9/Frame 427319007.png"
+                  alt=""
+                />
               </div>
               <div className="flex flex-col flex-1 gap-4">
                 <div className="text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>
