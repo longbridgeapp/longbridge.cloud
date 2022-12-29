@@ -139,8 +139,8 @@ const Longport: React.FC = () => {
               <img
                 src={
                   isEN
-                    ? 'https://assets.lbkrs.com/uploads/123feb08-4083-4d72-84bd-fe33b0ca3a1b/Group 427319256.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/c95220e1-662f-45d2-922b-34383adc5289/c1.svg'
+                    ? 'https://assets.lbkrs.com/uploads/8659c6e2-9193-4618-a3fa-5d88902032fa/Group 427319377.svg'
+                    : 'https://assets.lbkrs.com/uploads/2a310f1a-a37d-4a83-8c8e-e64e734b8ea8/1.svg'
                 }
                 className="w-full"
                 alt=""

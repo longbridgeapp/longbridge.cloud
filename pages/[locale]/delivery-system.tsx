@@ -201,10 +201,10 @@ const DeliverySystem: React.FC = () => {
                 <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
-                    <li className="list-dot">{i18n.t('whale-delivery-system-045')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-041')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-046')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-047')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-045')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-041')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-046')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-047')}</li>
                   </ul>
                 </div>
               </div>
