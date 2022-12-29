@@ -97,11 +97,13 @@ const Marketing: React.FC = () => {
   )
 
   function CarouselNext() {
-    CarouselRef.current?.next()
+    const carouse = CarouselRef.current as unknown as { next: () => void }
+    carouse?.next()
   }
 
   function CarouselPrev() {
-    CarouselRef.current?.prev()
+    const carouse = CarouselRef.current as unknown as { prev: () => void }
+    carouse?.prev()
   }
 
   return (
