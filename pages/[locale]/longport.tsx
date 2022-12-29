@@ -103,7 +103,7 @@ const Longport: React.FC = () => {
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
                   url="https://pub.lbkrs.com/files/202212/eFWKfWEu5em5ugGZ/Group_627094__1_.png"
-                  className="!h-[70px] !w-auto"
+                  className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-016')}</div>
                 <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
@@ -115,7 +115,7 @@ const Longport: React.FC = () => {
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
                   url="https://pub.lbkrs.com/files/202212/hH53gGU5c81xmx6X/Group_627094__2_.png"
-                  className="!h-[70px] !w-auto"
+                  className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-020')}</div>
                 <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
@@ -127,7 +127,7 @@ const Longport: React.FC = () => {
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
                   url="https://pub.lbkrs.com/files/202212/6P9Lxdz3T3KCGSAy/Group_627094__3_.png"
-                  className="!h-[70px] !w-auto"
+                  className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-024')}</div>
                 <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
@@ -162,6 +162,7 @@ const Longport: React.FC = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/e10ed56f-c00c-43a8-ad39-465b60d502fe/Frame 427319002.png"
                   alt=""
+                  className="lg:w-[588px]"
                 />
               </div>
               <div className="flex-1">
@@ -225,6 +226,7 @@ const Longport: React.FC = () => {
               <img
                 src="https://assets.lbkrs.com/uploads/7e8ce187-4397-48af-95dd-9e4f5ab2b355/Frame 427319003.png"
                 alt=""
+                className="lg:w-[588px]"
               />
             </div>
           </div>
@@ -236,6 +238,7 @@ const Longport: React.FC = () => {
               <img
                 src="https://assets.lbkrs.com/uploads/2706cfcf-c071-4593-9411-b433bedb8918/Frame 427319004.png"
                 alt=""
+                className="lg:w-[580px]"
               />
               <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
@@ -246,6 +249,7 @@ const Longport: React.FC = () => {
               <img
                 src="https://assets.lbkrs.com/uploads/e94a747b-26e3-4775-a180-bf103815424d/Frame 427319005.png"
                 alt=""
+                className="lg:w-[580px]"
               />
               <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
