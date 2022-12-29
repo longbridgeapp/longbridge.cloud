@@ -2,6 +2,7 @@ import { FC } from 'react'
 import { FirstScreen, IFirstScreenProps } from '@/features/home/first-screen'
 import Header from '@/features/header'
 import Footer from '@/features/footer'
+import Head from 'next/head'
 
 export const PageLayout: FC<{
   screenProps: IFirstScreenProps
@@ -18,12 +19,17 @@ export const PageLayout: FC<{
 
 export const Layout: FC = ({ children }) => {
   return (
-    <div className="relative">
-      <div className="absolute inset-x-0 z-50">
-        <Header />
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      </Head>
+      <div className="relative">
+        <div className="sticky top-0 z-50 bg-white">
+          <Header />
+        </div>
+        {children}
+        <Footer />
       </div>
-      {children}
-      <Footer />
-    </div>
+    </>
   )
 }

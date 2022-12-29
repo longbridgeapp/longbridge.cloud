@@ -4,7 +4,7 @@ import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
 import classNames from 'classnames'
-import { FC, useMemo } from 'react'
+import { FC, MouseEvent, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useReports } from '@/hooks/use-reports'
 import styles from './index.module.scss'
@@ -45,6 +45,30 @@ function useNavs() {
             value: '/crm',
             label: i18n.t('header_nav_005'),
           },
+          {
+            value: '/backoffice',
+            label: i18n.t('whale-backoffice-001'),
+          },
+          {
+            value: '/marketing',
+            label: i18n.t('whale-marketing-001'),
+          },
+          {
+            value: '/longport',
+            label: i18n.t('whale-community-001'),
+          },
+          {
+            value: '/delivery-system',
+            label: i18n.t('whale-delivery-system-001'),
+          },
+          // {
+          //   value: '/retail',
+          //   label: '零售系统',
+          // },
+          // {
+          //   value: '/front-desk',
+          //   label: '柜台系统前中台',
+          // },
         ],
       },
       {
@@ -94,6 +118,7 @@ function useNavs() {
   }, [reports])
 }
 const Navs = () => {
+  const [expandKeys, setExpandKeys] = useState<string[]>([])
   const navs = useNavs()
   const pathname = usePurePathname()
   const navigate = useLocaleNavigate()
@@ -102,30 +127,79 @@ const Navs = () => {
     return navs.find(nav => nav.value === pathname || nav.children.find(child => child.value === pathname))
   }, [navs, pathname])
 
+  const expandChange = (key: string, e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
+    e.stopPropagation()
+    if (expandKeys.includes(key)) {
+      setExpandKeys(expandKeys.filter(k => k !== key))
+    } else {
+      setExpandKeys([...expandKeys, key])
+    }
+  }
+  console.log(navs)
+
   return (
-    <div className={classNames(styles.navs, 'flex', 'items-center')}>
-      {navs.map(nav => {
-        return (
-          <div
-            key={nav.value}
-            className={classNames('nav-item', {
-              'nav-item__selected': nav.value === selectedNav?.value,
-            })}
-          >
-            {nav.children.length > 0 && (
-              <Dropdown
-                trigger="hover"
-                onChange={path => navigate(path)}
-                className="nav-item__dropdown"
-                alwaysChildren
-                value={pathname}
-                items={nav.children}
-                renderItem={item => {
-                  return <LocaleLink to={item.value as string}>{item.label}</LocaleLink>
-                }}
-              >
-                <LocaleLink to={nav.value} className="flex items-center">
+    <>
+      <div className={classNames(styles.navs, 'items-center hidden md:flex')}>
+        {navs.map(nav => {
+          return (
+            <div
+              key={nav.value}
+              className={classNames('nav-item', {
+                'nav-item__selected': nav.value === selectedNav?.value,
+              })}
+            >
+              {nav.children.length > 0 && (
+                <Dropdown
+                  trigger="hover"
+                  onChange={path => navigate(path)}
+                  className="nav-item__dropdown"
+                  alwaysChildren
+                  value={pathname}
+                  items={nav.children}
+                  renderItem={item => {
+                    return (
+                      <LocaleLink to={item.value as string} className="hover:text-white">
+                        {item.label}
+                      </LocaleLink>
+                    )
+                  }}
+                >
+                  <LocaleLink to={nav.value} className="flex items-center">
+                    <span>{nav.label}</span>
+                    <div
+                      className={classNames('text-[8px] ml-1')}
+                      style={{
+                        transform: `translateY(-${i18n.i18n.language === 'en' ? 1 : 2}px)`,
+                      }}
+                    >
+                      <Icon type="cart-down" />
+                    </div>
+                  </LocaleLink>
+                </Dropdown>
+              )}
+              {nav.children.length === 0 && (
+                <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
                   <span>{nav.label}</span>
+                  {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
+                </LocaleLink>
+              )}
+            </div>
+          )
+        })}
+      </div>
+      <div className="md:hidden">
+        <Dropdown
+          trigger="click"
+          onChange={path => navigate(path)}
+          className="!bg-transparent !text-black"
+          alwaysChildren
+          value={pathname}
+          items={navs}
+          renderItem={item => {
+            return item?.children?.length ? (
+              <div className="flex flex-col">
+                <div className="flex items-center" onClick={e => expandChange(String(item.value), e)}>
+                  <span>{item.label}</span>
                   <div
                     className={classNames('text-[8px] ml-1')}
                     style={{
@@ -134,25 +208,34 @@ const Navs = () => {
                   >
                     <Icon type="cart-down" />
                   </div>
-                </LocaleLink>
-              </Dropdown>
-            )}
-            {nav.children.length === 0 && (
-              <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
-                <span>{nav.label}</span>
-                {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
+                </div>
+                {expandKeys.includes(String(item.value)) && (
+                  <div className="flex flex-col pl-2">
+                    {item?.children?.map((i: any) => (
+                      <LocaleLink to={i.value as string} key={i.label} className="py-3">
+                        {i.label}
+                      </LocaleLink>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ) : (
+              <LocaleLink to={item.value as string} key={item.label}>
+                {item.label}
               </LocaleLink>
-            )}
-          </div>
-        )
-      })}
-    </div>
+            )
+          }}
+        >
+          <img src="https://pub.lbkrs.com/static/offline/202111/oSbQhwMyjvFQzoHQ/menu.svg" alt="" />
+        </Dropdown>
+      </div>
+    </>
   )
 }
 
 const Header: FC = () => {
   return (
-    <div className={classNames(styles.header, 'flex px-10 py-8')}>
+    <div className={classNames(styles.header, 'flex px-10 py-4')}>
       <div className="logo-wrap">
         <LocaleLink className="logo" to="/">
           <Icon type="cloud-logo" className="align-top" />

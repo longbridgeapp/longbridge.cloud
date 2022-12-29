@@ -1,10 +1,9 @@
-import { FC, ReactNode } from 'react'
 import Header from '@/features/header'
-import Button from '@/components/button'
+import classNames from 'classnames'
+import { FC, ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { TalkToUs } from '../talk-to-us'
 import styles from './first-screen.module.scss'
-import classNames from 'classnames'
 
 export type IFirstScreenProps = {
   backgroundColor?: string
@@ -48,7 +47,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
               <p className=" desc">{desc}</p>
               {contactUs && <TalkToUs />}
             </div>
-            <div className="flex-1 ml-16">{cover && <img src={cover} alt="cover" />}</div>
+            <div className="flex-1 hidden ml-16 xl:block">{cover && <img src={cover} alt="cover" />}</div>
           </div>
         </div>
       </div>

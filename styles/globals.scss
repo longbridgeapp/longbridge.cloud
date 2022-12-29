@@ -1,8 +1,8 @@
-@import "tailwind.css";
-@import "./theme.scss";
+@import 'tailwind.css';
+@import './theme.scss';
 
 .main-container {
-  @apply px-[100px];
+  @apply px-8 xl:px-[100px];
 }
 .main-content-width {
   @apply max-w-7xl mx-auto;
@@ -12,7 +12,7 @@
 }
 html {
   font-family: PingFang SC;
-  min-width: 768px;
+  overflow-x: hidden;
 }
 
 * {
@@ -46,5 +46,20 @@ html {
   opacity: 0.2;
 }
 .ant-carousel .slick-dots li.slick-active button {
-  background: #5622CF;
+  background: #5622cf;
+}
+
+.list-dot {
+  @apply relative ml-3;
+
+  &::after {
+    content: '';
+    @apply absolute w-1 h-1 bg-brand_color -left-3 top-2;
+  }
+
+  &.white {
+    &::after {
+      @apply bg-white;
+    }
+  }
 }

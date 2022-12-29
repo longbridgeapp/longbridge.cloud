@@ -1,9 +1,9 @@
-import { useTranslation } from 'next-i18next'
-import { Block, BlockHeader, BlockBetween, TopBlock } from '@/components/block'
-import { TalkToUs } from '@/features/talk-to-us'
+import { Block, BlockBetween, BlockHeader, TopBlock } from '@/components/block'
 import DivideDot from '@/components/divide-dot'
+import { TalkToUs } from '@/features/talk-to-us'
 import { Carousel } from 'antd'
 import 'antd/dist/antd.css'
+import { useTranslation } from 'next-i18next'
 
 export const BG_BANNER = 'https://pub.lbkrs.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
 const IMAGE_URL = 'https://pub.lbkrs.com/files/202207/Ggr6CvK2f2jWASHe/Group_427318855.png'
@@ -86,7 +86,7 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-[50px] font-medium">
+                <div className="text-4xl xl:text-[50px] font-medium">
                   <span>{i18n.t('home_page_002')}</span>&nbsp;
                   <span className="text-text_brand_color">{i18n.t('home_page_001')}</span>
                 </div>
