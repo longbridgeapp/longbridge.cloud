@@ -157,7 +157,11 @@ const Navs = () => {
                   value={pathname}
                   items={nav.children}
                   renderItem={item => {
-                    return <LocaleLink to={item.value as string}>{item.label}</LocaleLink>
+                    return (
+                      <LocaleLink to={item.value as string} className="hover:text-white">
+                        {item.label}
+                      </LocaleLink>
+                    )
                   }}
                 >
                   <LocaleLink to={nav.value} className="flex items-center">
@@ -231,7 +235,7 @@ const Navs = () => {
 
 const Header: FC = () => {
   return (
-    <div className={classNames(styles.header, 'flex px-10 py-8')}>
+    <div className={classNames(styles.header, 'flex px-10 py-4')}>
       <div className="logo-wrap">
         <LocaleLink className="logo" to="/">
           <Icon type="cloud-logo" className="align-top" />

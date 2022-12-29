@@ -39,7 +39,7 @@ const Longport: React.FC = () => {
         >
           <div className="flex flex-col gap-8 lg:gap-36 main-content-width lg:flex-row">
             <div className="flex flex-col items-start flex-1 gap-8 content">
-              <div className="text-[44px] font-semibold">{i18n.t('whale-community-001')}</div>
+              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-community-001')}</div>
               <div className="text-lg leading-9 text-text_color_2  max-w-[500px]">
                 <div>{i18n.t('whale-community-002')}</div>
                 <div>{i18n.t('whale-community-003')}</div>
@@ -52,7 +52,10 @@ const Longport: React.FC = () => {
               </div>
             </div>
             <div className="flex-1">
-              <img src="https://pub.lbkrs.com/files/202212/iEatvz7kmT1HAzmh/Frame_427318999.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/8724e5cc-97f8-41e4-bf03-960b40cd9569/Frame 427318999.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -156,13 +159,19 @@ const Longport: React.FC = () => {
             </div>
             <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
               <div className="flex-1">
-                <img src="https://pub.lbkrs.com/files/202212/RBpWhMErPAjDhKQb/Frame_427319002.png" alt="" />
+                <img
+                  src="https://assets.lbkrs.com/uploads/e10ed56f-c00c-43a8-ad39-465b60d502fe/Frame 427319002.png"
+                  alt=""
+                />
               </div>
               <div className="flex-1">
                 <div className="text-[28px] font-medium mb-10">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/txcPMSuzGoyT6StG/Union.png" className="mr-8" />
+                    <ImageIcon
+                      url="https://assets.lbkrs.com/uploads/a8e48045-8feb-4a5e-8283-0bc248c9903a/Union.svg"
+                      className="mr-8"
+                    />
                     <span className="text-base font-normal text-text_color_3 lg:max-w-[386px] leading-7">
                       {i18n.t('whale-community-032')}
                     </span>
@@ -213,7 +222,10 @@ const Longport: React.FC = () => {
               </ul>
             </div>
             <div className="flex-1">
-              <img src="https://pub.lbkrs.com/files/202212/ngoVxzVrWcNKg8V8/Frame_427319003.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/7e8ce187-4397-48af-95dd-9e4f5ab2b355/Frame 427319003.png"
+                alt=""
+              />
             </div>
           </div>
         </div>
@@ -221,14 +233,20 @@ const Longport: React.FC = () => {
         <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-3 main-content-width md:flex-row md:gap-48">
             <div className="flex flex-col items-center justify-center flex-1 text-center">
-              <img src="https://pub.lbkrs.com/files/202212/htdSLdapVmaEN7a3/Frame_427319004.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/2706cfcf-c071-4593-9411-b433bedb8918/Frame 427319004.png"
+                alt=""
+              />
               <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                 {i18n.t('whale-community-040')}
               </div>
             </div>
             <div className="flex flex-col items-center justify-center flex-1 text-center">
-              <img src="https://pub.lbkrs.com/files/202212/urinyWrhLpdn7pvq/Frame_427319005.png" alt="" />
+              <img
+                src="https://assets.lbkrs.com/uploads/e94a747b-26e3-4775-a180-bf103815424d/Frame 427319005.png"
+                alt=""
+              />
               <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                 {i18n.t('whale-community-042')}
