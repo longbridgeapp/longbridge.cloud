@@ -15,15 +15,6 @@ function useNavs() {
 
   const i18n = useTranslation('common')
   return useMemo(() => {
-    const computedRoutes = []
-    if (!!reports?.length) {
-      computedRoutes.push({
-        value: '/whale-reports',
-        suffix: '',
-        label: i18n.t('header_nav_009'),
-        children: [],
-      })
-    }
     return [
       {
         value: '/',
@@ -103,7 +94,12 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
-      ...computedRoutes,
+      {
+        value: '/whale-reports',
+        suffix: '',
+        label: i18n.t('header_nav_009'),
+        children: [],
+      },
       // {
       //   value: '/live',
       //   label: i18n.t('header_nav_008'),
