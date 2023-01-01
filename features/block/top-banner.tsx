@@ -8,7 +8,7 @@ import { useTranslation } from 'next-i18next'
 export const BG_BANNER = 'https://pub.lbkrs.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
 const IMAGE_URL = 'https://pub.lbkrs.com/files/202207/Ggr6CvK2f2jWASHe/Group_427318855.png'
 
-export const BrokerBanner = () => {
+export const BrokerBanner = ({ img }: { img: string }) => {
   const i18n = useTranslation('common')
   return (
     <TopBlock imageUrl={BG_BANNER}>
@@ -24,14 +24,14 @@ export const BrokerBanner = () => {
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.broker-title')} />}
+          right={<img src={img || IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.broker-title')} />}
         />
       </Block>
     </TopBlock>
   )
 }
 
-export const LongportBanner = () => {
+export const LongportBanner = ({ img }: { img: string }) => {
   const i18n = useTranslation('common')
   return (
     <TopBlock imageUrl={BG_BANNER}>
@@ -47,14 +47,14 @@ export const LongportBanner = () => {
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.longport-title')} />}
+          right={<img src={img || IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.longport-title')} />}
         />
       </Block>
     </TopBlock>
   )
 }
 
-export const WhiteLabelBanner = () => {
+export const WhiteLabelBanner = ({ img }: { img: string }) => {
   const i18n = useTranslation('common')
   return (
     <TopBlock imageUrl={BG_BANNER}>
@@ -70,7 +70,7 @@ export const WhiteLabelBanner = () => {
               <TalkToUs />
             </>
           }
-          right={<img src={IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.white-label-title')} />}
+          right={<img src={img || IMAGE_URL} className="mt-5 lg:mt-0" alt={i18n.t('top-banner.white-label-title')} />}
         />
       </Block>
     </TopBlock>
