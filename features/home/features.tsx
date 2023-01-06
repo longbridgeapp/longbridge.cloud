@@ -85,14 +85,14 @@ export const HomeFeatures = () => {
                     __html: feature.title,
                   }}
                 ></h3>
-                <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center mt-[60px]">
+                <div className="flex flex-col xl:flex-row justify-center xl:justify-between items-center mt-5 xl:mt-[60px]">
                   <div className="left">
                     <div className="desc-list">
                       {feature.descList.map(desc => {
                         return (
-                          <div className="desc-item" key={desc.text}>
+                          <div className="gap-4 md:gap-8 desc-item" key={desc.text}>
                             <img
-                              className="icon"
+                              className="mx-auto icon"
                               src={desc.icon || 'https://pub.lbkrs.com/files/202205/JRr82mvwpYDoZhGL/Vector__8_.png'}
                               alt=""
                             />

@@ -1,6 +1,4 @@
 // 营销系统
-import React, { useMemo, useRef } from 'react'
-import { Carousel } from 'antd'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -8,13 +6,15 @@ import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import { Carousel } from 'antd'
+import React, { useMemo, useRef } from 'react'
 // eslint-disable-next-line import/named
+import { Block, BlockBetween } from '@/components/block'
+import { keepSiblingsHeight } from '@/hooks/use-resize'
+import { SEOMeta } from '@/utils/seo'
+import { useDebounceEffect, useSize } from 'ahooks'
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useDebounceEffect, useSize } from 'ahooks'
-import { keepSiblingsHeight } from '@/hooks/use-resize'
-import { Block, BlockBetween } from '@/components/block'
-import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -117,7 +117,7 @@ const Marketing: React.FC = () => {
         >
           <div className="flex flex-col gap-8 lg:gap-32 main-content-width lg:flex-row">
             <div className="flex flex-col items-start gap-5  max-w-[500px]">
-              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-marketing-001')}</div>
+              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-marketing-001')}</div>
               <div className="text-lg leading-9 text-text_color_2">{i18n.t('whale-marketing-002')}</div>
               <TalkToUs className="mt-5" />
             </div>
@@ -133,7 +133,7 @@ const Marketing: React.FC = () => {
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-003')}</div>
-              <div className="mb-10 text-4xl font-medium">{i18n.t('whale-marketing-004')}</div>
+              <div className="mb-10 text-xl font-medium xl:text-4xl">{i18n.t('whale-marketing-004')}</div>
             </div>
             <div className="flex flex-col items-center justify-between gap-20 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-20">
@@ -164,10 +164,10 @@ const Marketing: React.FC = () => {
           </div>
         </div>
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
-          <div className="flex flex-col gap-10 main-content-width ">
+          <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-013')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-marketing-014')}</div>
+              <div className="text-xl font-medium xl:text-4xl">{i18n.t('whale-marketing-014')}</div>
             </div>
             <div>
               <img
@@ -179,7 +179,10 @@ const Marketing: React.FC = () => {
                 alt=""
               />
             </div>
-            <div className="bg-[#fff] rounded-lg flex marketing-version-list overflow-hidden" ref={marketSceneRef}>
+            <div
+              className="flex flex-col overflow-hidden bg-white rounded-lg xl:flex-row marketing-version-list"
+              ref={marketSceneRef}
+            >
               <div className="flex-1 p-10 left">
                 <div className="border-b border-dashed version-first border-tag_border_color">
                   <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-marketing-015')}</div>
@@ -231,7 +234,7 @@ const Marketing: React.FC = () => {
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-030')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-marketing-031')}</div>
+              <div className="text-xl font-medium xl:text-4xl">{i18n.t('whale-marketing-031')}</div>
             </div>
             <div className="flex flex-col items-start justify-between gap-3 lg:flex-row">
               <div className="flex-1">
@@ -242,7 +245,7 @@ const Marketing: React.FC = () => {
                 />
               </div>
               <div>
-                <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-032')}</div>
+                <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-032')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png" className="mr-8" />
@@ -283,7 +286,7 @@ const Marketing: React.FC = () => {
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-3 lg:items-center main-content-width lg:flex-row">
             <div className="flex-1">
-              <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-037')}</div>
+              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-037')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png" className="mr-8" />
@@ -322,7 +325,7 @@ const Marketing: React.FC = () => {
               />
             </div>
             <div>
-              <div className="text-[28px] font-medium mb-10">{i18n.t('whale-marketing-040')}</div>
+              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-040')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png" className="mr-8" />
@@ -382,7 +385,7 @@ const Marketing: React.FC = () => {
                         <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-044')}</div>
                         <div className="mb-10">
                           {banner.title?.map(t => (
-                            <div className="text-4xl font-medium" key={t}>
+                            <div className="text-xl font-medium xl:text-4xl" key={t}>
                               {t}
                             </div>
                           ))}
@@ -398,7 +401,7 @@ const Marketing: React.FC = () => {
                             key={_i}
                           >
                             <div className="text-brand_color">
-                              <span className="text-4xl font-medium">{d.num}</span>
+                              <span className="text-xl font-medium xl:text-4xl">{d.num}</span>
                               {d.unit}
                             </div>
                             <div className="text-base font-normal">{d.tips}</div>

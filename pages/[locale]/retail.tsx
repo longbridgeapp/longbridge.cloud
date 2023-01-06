@@ -1,20 +1,19 @@
 // 零售终端
-import React, { useMemo, useRef } from 'react'
-import { Carousel } from 'antd'
-import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import { Carousel } from 'antd'
+import React, { useMemo, useRef } from 'react'
 // eslint-disable-next-line import/named
+import { Block, BlockBetween } from '@/components/block'
+import { keepSiblingsHeight } from '@/hooks/use-resize'
+import { SEOMeta } from '@/utils/seo'
+import { useDebounceEffect, useSize } from 'ahooks'
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useDebounceEffect, useSize } from 'ahooks'
-import { keepSiblingsHeight } from '@/hooks/use-resize'
-import { Block, BlockBetween } from '@/components/block'
-import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -123,7 +122,7 @@ const Retail: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">Whale 生态终端产品</div>
-              <div className="text-4xl font-medium">面对券商提供两类 APP 终端产品</div>
+              <div className="text-2xl xl:text-4xl font-medium">面对券商提供两类 APP 终端产品</div>
             </div>
             <div className="flex flex-col justify-between gap-6 lg:flex-row marketing-scene-plans" ref={marketSceneRef}>
               {marketingList.map((item, index) => (
@@ -167,7 +166,7 @@ const Retail: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">证券业务</div>
-              <div className="text-4xl font-medium">我们将提供的证券业务</div>
+              <div className="text-2xl xl:text-4xl font-medium">我们将提供的证券业务</div>
             </div>
             <div>
               <img
@@ -181,7 +180,7 @@ const Retail: React.FC = () => {
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">产品优势</div>
-              <div className="text-4xl font-medium">终端产品在行业的优势</div>
+              <div className="text-2xl xl:text-4xl font-medium">终端产品在行业的优势</div>
             </div>
             <div className="flex flex-col gap-3 md:flex-row md:gap-48">
               <div className="flex flex-col items-center justify-center flex-1 text-center">
@@ -189,7 +188,7 @@ const Retail: React.FC = () => {
                   src="https://assets.lbkrs.com/uploads/f8c262b4-8c76-4de6-a90e-d845cf62ec5b/Frame 427319005.svg"
                   alt=""
                 />
-                <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
+                <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
                 <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                   {i18n.t('whale-community-040')}
                 </div>
@@ -199,7 +198,7 @@ const Retail: React.FC = () => {
                   src="https://assets.lbkrs.com/uploads/a84ca15f-2e59-4447-858e-7f54f3cf2127/Frame 427319004.svg"
                   alt=""
                 />
-                <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
+                <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
                 <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                   {i18n.t('whale-community-042')}
                 </div>
@@ -220,7 +219,7 @@ const Retail: React.FC = () => {
               }
               right={
                 <div>
-                  <div className="mb-10 text-4xl font-medium">更稳定实时的数据源</div>
+                  <div className="mb-10 text-2xl xl:text-4xl font-medium">更稳定实时的数据源</div>
                   <ul className="flex flex-col text-base font-normal leading-6 gap-y-4 text-text_color_3">
                     <li className="list-dot">0 延迟的全球市场行情</li>
                     <li className="list-dot">港股、美股、沪深、新加坡、欧洲等全球核心市场行情</li>
@@ -230,13 +229,13 @@ const Retail: React.FC = () => {
                   <div className="flex items-center justify-center pt-10 lg:justify-start">
                     <div className="border-r border-dashed border-border_color pr-14">
                       <div className="text-brand_color">
-                        <span className="text-4xl font-medium">0</span>
+                        <span className="text-2xl xl:text-4xl font-medium">0</span>
                       </div>
                       <div className="text-base font-normal">延迟</div>
                     </div>
                     <div className="pl-14">
                       <div className="text-brand_color">
-                        <span className="text-4xl font-medium">5</span>+
+                        <span className="text-2xl xl:text-4xl font-medium">5</span>+
                       </div>
                       <div className="text-base font-normal">全球核心市场</div>
                     </div>

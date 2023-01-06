@@ -1,17 +1,17 @@
 // 社区系统
-import React from 'react'
-import ImageIcon from '@/components/image-icon'
 import Button from '@/components/button'
+import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES, LONGPORT_URL } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
 import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import React from 'react'
 // eslint-disable-next-line import/named
+import { SEOMeta } from '@/utils/seo'
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -38,8 +38,8 @@ const Longport: React.FC = () => {
           style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
         >
           <div className="flex flex-col gap-8 lg:gap-36 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start flex-1 gap-8 content">
-              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-community-001')}</div>
+            <div className="flex flex-col items-start flex-1 gap-4 lg:gap-8 content">
+              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-community-001')}</div>
               <div className="text-lg leading-9 text-text_color_2  max-w-[500px]">
                 <div>{i18n.t('whale-community-002')}</div>
                 <div>{i18n.t('whale-community-003')}</div>
@@ -60,7 +60,7 @@ const Longport: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-004')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-community-005')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-005')}</div>
             </div>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-10">
@@ -94,7 +94,7 @@ const Longport: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-014')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-community-015')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-015')}</div>
             </div>
             <div className="flex flex-col justify-between gap-6 md:flex-row">
               <div className="flex-1 p-8 bg-white rounded-lg">
@@ -152,7 +152,7 @@ const Longport: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-029')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-community-030')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-030')}</div>
             </div>
             <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
               <div className="flex-1">
@@ -163,7 +163,7 @@ const Longport: React.FC = () => {
                 />
               </div>
               <div className="flex-1">
-                <div className="text-[28px] font-medium mb-10">{i18n.t('whale-community-031')}</div>
+                <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon
@@ -197,7 +197,7 @@ const Longport: React.FC = () => {
         <div className="py-10 main-container bg-bg_color_2 lg:py-20">
           <div className="flex flex-col gap-3 lg:items-center main-content-width lg:flex-row">
             <div className="flex-1">
-              <div className="text-[28px] font-medium mb-10">{i18n.t('whale-community-035')}</div>
+              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-035')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png" className="mr-8" />
@@ -237,7 +237,7 @@ const Longport: React.FC = () => {
                 alt=""
                 className="lg:w-[580px]"
               />
-              <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
+              <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                 {i18n.t('whale-community-040')}
               </div>
@@ -248,7 +248,7 @@ const Longport: React.FC = () => {
                 alt=""
                 className="lg:w-[580px]"
               />
-              <div className="text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
+              <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                 {i18n.t('whale-community-042')}
               </div>

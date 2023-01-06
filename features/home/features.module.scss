@@ -20,17 +20,17 @@
     @apply inline-block max-w-full w-1/3 min-w-[200px] xl:max-w-[430px] xl:w-2/3;
   }
   .title {
-    @apply font-medium text-[36px];
+    @apply font-medium text-3xl xl:text-[36px];
   }
   .desc-list {
     .desc-item {
       @apply flex text-sm mt-6 leading-[1.7] items-start;
       color: var(--text_color_2);
       .icon {
-        @apply w-10;
+        @apply w-6 md:w-10 mt-1 md:mt-0;
       }
       .text {
-        @apply ml-8 flex-1;
+        @apply flex-1;
       }
     }
   }

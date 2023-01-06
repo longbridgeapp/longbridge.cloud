@@ -91,7 +91,7 @@ export const IndexBanner = () => {
                   <span className="text-text_brand_color">{i18n.t('home_page_001')}</span>
                 </div>
                 <DivideDot size="large" />
-                <p className="mt-6 text-xl">{i18n.t('home_page_003')}</p>
+                <p className="mt-4 text-lg xl:mt-6 xl:text-xl">{i18n.t('home_page_003')}</p>
               </>
             }
             right={

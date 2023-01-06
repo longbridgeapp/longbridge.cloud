@@ -1,6 +1,4 @@
 // 系统前中台
-import React, { useMemo } from 'react'
-import { Carousel } from 'antd'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -8,11 +6,12 @@ import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import React, { useMemo } from 'react'
 // eslint-disable-next-line import/named
-import { UserConfig, useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Block, BlockBetween } from '@/components/block'
 import { SEOMeta } from '@/utils/seo'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -67,7 +66,7 @@ const FrontDesk: React.FC = () => {
                 <div className="flex flex-col gap-10 main-content-width">
                   <div>
                     <div className="mb-2 text-base text-brand_color">产品优势</div>
-                    <div className="text-4xl font-medium">更实时更准确</div>
+                    <div className="text-2xl xl:text-4xl font-medium">更实时更准确</div>
                   </div>
 
                   <ul className="flex flex-col text-base font-normal leading-6 gap-y-4 text-text_color_3">
@@ -97,7 +96,7 @@ const FrontDesk: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">交易系统</div>
-              <div className="text-4xl font-medium">闪电下单，极致体验</div>
+              <div className="text-2xl xl:text-4xl font-medium">闪电下单，极致体验</div>
             </div>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-10">
@@ -140,7 +139,7 @@ const FrontDesk: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">风控系统</div>
-              <div className="text-4xl font-medium">全面处理各类证券交易相关风控</div>
+              <div className="text-2xl xl:text-4xl font-medium">全面处理各类证券交易相关风控</div>
             </div>
 
             <div>
@@ -156,7 +155,7 @@ const FrontDesk: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">账户系统</div>
-              <div className="text-4xl font-medium">一站式账户管理系统</div>
+              <div className="text-2xl xl:text-4xl font-medium">一站式账户管理系统</div>
             </div>
             <div className="flex flex-col gap-10 md:flex-row md:gap-48 md:items-center">
               <div>
@@ -166,7 +165,7 @@ const FrontDesk: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col gap-10 main-content-width">
-                <div className="text-4xl font-medium">打通多主体、多类型账户体系</div>
+                <div className="text-2xl xl:text-4xl font-medium">打通多主体、多类型账户体系</div>
                 <ul className="flex flex-col text-base font-normal leading-6 gap-y-4 text-text_color_3">
                   <li className="list-dot">
                     标准化 KYC 审核流程，多维度风控模型评估客户风险，满足不同国家地区合规要求
@@ -183,7 +182,7 @@ const FrontDesk: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">WTT 操作平台</div>
-              <div className="text-4xl font-medium">多合一 WTT 前台系统</div>
+              <div className="text-2xl xl:text-4xl font-medium">多合一 WTT 前台系统</div>
             </div>
             <div className="flex flex-col gap-10 md:flex-row md:gap-48 md:items-center">
               <div className="flex flex-col gap-10 lg:max-w-[485px]">
@@ -214,7 +213,7 @@ const FrontDesk: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">WTT 操作平台</div>
-              <div className="text-4xl font-medium">丰富且完善的出入金管理</div>
+              <div className="text-2xl xl:text-4xl font-medium">丰富且完善的出入金管理</div>
             </div>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-10">

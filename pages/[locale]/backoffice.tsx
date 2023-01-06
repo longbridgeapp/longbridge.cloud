@@ -1,5 +1,4 @@
 // 后台系统
-import React from 'react'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -7,10 +6,11 @@ import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import React from 'react'
 // eslint-disable-next-line import/named
+import { SEOMeta } from '@/utils/seo'
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { SEOMeta } from '@/utils/seo'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -37,7 +37,7 @@ const BackOffice: React.FC = () => {
         >
           <div className="flex flex-col gap-3 main-content-width lg:gap-16 lg:flex-row ">
             <div className="flex flex-col items-start gap-5 content lg:max-w-[530px]">
-              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-backoffice-001')}</div>
+              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-backoffice-001')}</div>
               <div className="text-lg font-normal leading-9 text-text_color_2  max-w-[500px]">
                 <div>{i18n.t('whale-backoffice-002')}</div>
                 <div>{i18n.t('whale-backoffice-003')}</div>
@@ -61,7 +61,7 @@ const BackOffice: React.FC = () => {
             <div className="flex flex-col items-start gap-8 content lg:min-w-[485px]">
               <div>
                 <div className="mb-2 text-base text-brand_color">{i18n.t('whale-backoffice-004')}</div>
-                <div className="text-4xl font-medium">{i18n.t('whale-backoffice-005')}</div>
+                <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-005')}</div>
               </div>
               <div>
                 <div className="mb-3 text-xl font-medium">{i18n.t('whale-backoffice-006')}</div>
@@ -91,7 +91,7 @@ const BackOffice: React.FC = () => {
         </div>
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-8 main-content-width ">
-            <div className="text-4xl font-medium">{i18n.t('whale-backoffice-012')}</div>
+            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-012')}</div>
             <div className="flex flex-col justify-between gap-8 lg:gap-[150px] lg:flex-row">
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-013')}</div>
@@ -120,10 +120,10 @@ const BackOffice: React.FC = () => {
         </div>
         <div className="py-10 main-container lg:py-20">
           <div className="main-content-width">
-            <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
+            <div className="mb-10 text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
             <div className="flex flex-col justify-center gap-12 lg:justify-between lg:items-start lg:flex-row">
               <div className="lg:min-w-[500px]">
-                <div className="mb-10 text-[28px] font-medium">
+                <div className="mb-10 text-2xl lg:text-[28px] font-medium">
                   <div>{i18n.t('whale-backoffice-020')}</div>
                   <div>{i18n.t('whale-backoffice-021')}</div>
                 </div>
@@ -154,7 +154,7 @@ const BackOffice: React.FC = () => {
         </div>
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width ">
-            <div className="text-4xl font-medium">{i18n.t('whale-backoffice-030')}</div>
+            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-030')}</div>
             <div className="flex flex-col justify-between gap-8 lg:gap-[150px] lg:flex-row">
               <div className="flex-1">
                 <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-031')}</div>
@@ -190,7 +190,7 @@ const BackOffice: React.FC = () => {
         {/*  */}
         <div className="py-10 main-container lg:py-20">
           <div className="main-content-width">
-            <div className="mb-10 text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
+            <div className="mb-10 text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
             <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
               <div className="flex flex-col gap-5">
                 <div className="mb-5 text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
@@ -229,7 +229,7 @@ const BackOffice: React.FC = () => {
         {/*  */}
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width ">
-            <div className="text-4xl font-medium">{i18n.t('whale-backoffice-042')}</div>
+            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-042')}</div>
             <div className="flex flex-col justify-between gap-5 lg:gap-16 lg:flex-row">
               <div className="flex-1">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-043')}</div>

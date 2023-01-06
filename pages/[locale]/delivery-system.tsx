@@ -1,5 +1,4 @@
 // 投放系统
-import React, { useMemo, useRef, useState } from 'react'
 import ImageIcon from '@/components/image-icon'
 import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
@@ -7,12 +6,13 @@ import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
+import React, { useMemo, useRef } from 'react'
 // eslint-disable-next-line import/named
-import { UserConfig, useTranslation } from 'next-i18next'
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { useDebounceEffect, useSize } from 'ahooks'
 import { keepSiblingsHeight } from '@/hooks/use-resize'
 import { SEOMeta } from '@/utils/seo'
+import { useDebounceEffect, useSize } from 'ahooks'
+import { UserConfig, useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -95,8 +95,10 @@ const DeliverySystem: React.FC = () => {
           style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
         >
           <div className="flex flex-col gap-8 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start flex-1 gap-8 content">
-              <div className="text-[44px] font-semibold mt-5">{i18n.t('whale-delivery-system-001')}</div>
+            <div className="flex flex-col items-start flex-1 gap-4 lg:gap-8 content">
+              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">
+                {i18n.t('whale-delivery-system-001')}
+              </div>
               <div className="text-lg leading-9 text-text_color_2 max-w-[500px]">
                 <div>{i18n.t('whale-delivery-system-002')}</div>
                 <div>{i18n.t('whale-delivery-system-003')}</div>
@@ -112,7 +114,7 @@ const DeliverySystem: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-004')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-delivery-system-005')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-delivery-system-005')}</div>
             </div>
             <div className="flex flex-col justify-between gap-6 lg:flex-row marketing-scene-plans" ref={marketSceneRef}>
               {marketingList.map((item, index) => (
@@ -215,7 +217,7 @@ const DeliverySystem: React.FC = () => {
           <div className="flex flex-col gap-8 main-content-width ">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-048')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-delivery-system-049')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-delivery-system-049')}</div>
             </div>
             <div className="flex flex-col justify-between gap-8 lg:gap-36 lg:flex-row">
               <div className="flex-1">
@@ -248,7 +250,7 @@ const DeliverySystem: React.FC = () => {
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-056')}</div>
-              <div className="text-4xl font-medium">{i18n.t('whale-delivery-system-057')}</div>
+              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-delivery-system-057')}</div>
             </div>
             <div className="flex flex-col justify-between gap-10 lg:items-center lg:gap-40 lg:flex-row">
               <div className="flex-1">
@@ -259,7 +261,7 @@ const DeliverySystem: React.FC = () => {
                 />
               </div>
               <div className="flex flex-col flex-1 gap-4">
-                <div className="text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>
+                <div className="text-2xl lg:text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>
                 <div className="flex items-center gap-5 ">
                   <div className="text-base font-medium w-[100px]">{i18n.t('whale-delivery-system-059')}</div>
                   <div className="flex-1 text-base font-normal text-text_color_3">
@@ -289,8 +291,8 @@ const DeliverySystem: React.FC = () => {
             <div>
               <div className="mb-2 text-sm text-brand_color">{i18n.t('whale-delivery-system-067')}</div>
               <div className="p-8 rounded-lg bg-bg_color_2">
-                <div className="flex flex-col justify-between gap-3 md:flex-row">
-                  <div className="flex justify-between flex-1 w-full gap-12">
+                <div className="flex flex-col justify-between gap-3 xl:flex-row">
+                  <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
                       <ImageIcon url="https://pub.lbkrs.com/files/202212/zFeewQW7ZHsHffbz/circle_time.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-068')}</div>
@@ -306,7 +308,7 @@ const DeliverySystem: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="flex justify-between flex-1 w-full gap-12">
+                  <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
                       <ImageIcon url="https://pub.lbkrs.com/files/202212/qYTkUnDVQamgWQVm/position.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-072')}</div>
