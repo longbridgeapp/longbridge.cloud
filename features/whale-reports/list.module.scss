@@ -1,23 +1,25 @@
-:local(.whale-report-list){
-  .report-title{
+:local(.whale-report-list) {
+  .report-title {
     @apply text-4xl font-bold border-b-2 pb-2;
   }
-  .report-wrapper{
-    @apply flex justify-between py-8 border-b ; 
-    .report{
+  .report-wrapper {
+    @apply flex-col-reverse xl:flex-row flex xl:space-x-16 justify-between py-8 border-b;
+
+    .report {
       @apply flex-1;
-      .stamp{
+      .stamp {
         @apply text-sm font-medium;
       }
-      .title{
+      .title {
         @apply text-xl mb-3 font-bold;
       }
-      .desc{
+      .desc {
         @apply text-sm text-text_color_2;
       }
     }
-    .report-image{
-      @apply rounded-lg ml-[120px] h-[160px] w-[270px] object-cover;
+
+    .report-image {
+      @apply rounded-lg h-[160px] w-[270px] object-cover mb-6 xl:mb-0 mx-auto;
     }
   }
 }

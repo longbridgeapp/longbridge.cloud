@@ -8,11 +8,9 @@
         @apply text-white;
       }
     }
-    .nav-item__dropdown {
-      @apply pr-10 lg:pr-20;
-    }
+
     .play-icon {
-      transform:  translateX(-50%) translateY(-50%) scale(0.5);
+      transform: translateX(-50%) translateY(-50%) scale(0.5);
     }
   }
 }
@@ -20,7 +18,7 @@
   .logo-wrap {
     height: 36px;
     overflow: hidden;
-    @apply flex justify-center items-center
+    @apply flex justify-center items-center;
   }
   .logo {
     font-size: 72px;

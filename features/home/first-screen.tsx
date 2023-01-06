@@ -36,7 +36,7 @@ export const FirstScreen: FC<IFirstScreenProps> = ({
     >
       <div className="section-content-container">
         <Header />
-        <div className="pt-20 pb-40 main-container">
+        <div className="py-10 xl:pt-20 xl:pb-40 main-container">
           <div className="flex items-center main-content-width">
             <div
               style={{

@@ -1,7 +1,6 @@
 import classNames from 'classnames'
 import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { PictureTextCard } from '../common/picture-text-card'
 import styles from './features.module.scss'
 
 function useFeatures() {
@@ -42,14 +41,17 @@ export const MarketFeatures = () => {
             __html: i18n.t('market_features_005'),
           }}
         ></h2>
-        <div className="flex justify-between mt-14 pl-2">
+        <div className="flex justify-between pl-2 mt-14">
           {features.map(feature => {
             return (
               <div key={feature.desc} className="feature-item">
-                 <img src={feature.picture} alt="" />
-                 <div className="desc" dangerouslySetInnerHTML={{
+                <img src={feature.picture} alt="" />
+                <div
+                  className="desc"
+                  dangerouslySetInnerHTML={{
                     __html: feature.desc,
-                 }}></div>
+                  }}
+                ></div>
               </div>
             )
           })}
@@ -99,7 +101,7 @@ export const MarketServices = () => {
             __html: i18n.t('market_features_014'),
           }}
         ></h2>
-        <div className="flex justify-between items-center mt-14">
+        <div className="flex items-center justify-between mt-14">
           <div className="flex-1">
             {services.map(service => {
               return (
@@ -107,7 +109,7 @@ export const MarketServices = () => {
                   <div className="cover">
                     <img src={service.picture} alt={service.title} />
                   </div>
-                  <div className="ml-9 flex-1">
+                  <div className="flex-1 ml-9">
                     <h3 className="title">{service.title}</h3>
                     <p className="desc">{service.desc}</p>
                   </div>

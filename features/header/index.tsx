@@ -3,10 +3,10 @@ import Icon from '@/components/icon'
 import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
+import { useReports } from '@/hooks/use-reports'
 import classNames from 'classnames'
 import { FC, MouseEvent, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useReports } from '@/hooks/use-reports'
 import styles from './index.module.scss'
 import { LocaleDropdown } from './locale-dropdown'
 
@@ -135,7 +135,7 @@ const Navs = () => {
 
   return (
     <>
-      <div className={classNames(styles.navs, 'items-center hidden md:flex')}>
+      <div className={classNames(styles.navs, 'items-center gap-14 xl:gap-20 hidden md:flex')}>
         {navs.map(nav => {
           return (
             <div
@@ -174,7 +174,7 @@ const Navs = () => {
                 </Dropdown>
               )}
               {nav.children.length === 0 && (
-                <LocaleLink className="flex items-center pr-10 lg:pr-20" to={nav.value}>
+                <LocaleLink className="flex items-center" to={nav.value}>
                   <span>{nav.label}</span>
                   {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
                 </LocaleLink>
@@ -206,7 +206,7 @@ const Navs = () => {
                   </div>
                 </div>
                 {expandKeys.includes(String(item.value)) && (
-                  <div className="flex flex-col pl-2">
+                  <div className="flex flex-col xl:pl-2">
                     {item?.children?.map((i: any) => (
                       <LocaleLink to={i.value as string} key={i.label} className="py-3">
                         {i.label}
@@ -231,7 +231,7 @@ const Navs = () => {
 
 const Header: FC = () => {
   return (
-    <div className={classNames(styles.header, 'flex px-10 py-4')}>
+    <div className={classNames(styles.header, 'flex px-6 xl:px-10 py-4')}>
       <div className="logo-wrap">
         <LocaleLink className="logo" to="/">
           <Icon type="cloud-logo" className="align-top" />

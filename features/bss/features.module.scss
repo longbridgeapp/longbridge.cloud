@@ -1,15 +1,20 @@
 :local(.features) {
-  @apply py-[60px];
+  @apply py-6 lg:py-[60px];
   .feature-item {
-    @apply flex py-10;
+    @apply flex py-10 flex-col md:flex-row;
 
     border-bottom: 1px solid var(--border_color_1);
     .left {
-      @apply w-12;
+      @apply w-12 mx-auto;
       img {
         @apply w-12;
       }
     }
+
+    .feature-item-content {
+      @apply ml-0 md:ml-8 mt-8 md:mt-0;
+    }
+
     .desc {
       @apply text-base mt-4;
 

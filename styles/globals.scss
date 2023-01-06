@@ -7,7 +7,7 @@ html:not([lang='en']) {
 }
 
 .main-container {
-  @apply px-8 xl:px-[100px];
+  @apply px-6 xl:px-[100px];
 }
 .main-content-width {
   @apply max-w-7xl mx-auto;
@@ -37,7 +37,7 @@ html {
   color: var(--text_color_1_supplement);
 }
 .text-section-title {
-  @apply text-[40px] leading-[50px] font-medium;
+  @apply text-2xl lg:text-[40px] lg:leading-[50px] font-medium;
 }
 .bg-brand_color {
   background-color: var(--brand_color);

@@ -29,7 +29,7 @@ export const TradingFeatures = () => {
   return (
     <div className="main-container">
       <div className={classNames(styles.features, 'main-content-width')}>
-        <div className="flex justify-between">
+        <div className="flex flex-col justify-between gap-6 lg:flex-row">
           {features.map(({ title, desc, picture }) => {
             return <PictureTextCard desc={desc} picture={picture} key={title} title={title} />
           })}

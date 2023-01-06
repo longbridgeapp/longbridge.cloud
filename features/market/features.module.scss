@@ -1,5 +1,5 @@
 :local(.features) {
-  @apply py-[120px];
+  @apply py-10 xl:py-[120px];
   .feature-item {
     @apply flex flex-col mr-5 last:mr-0 items-center;
 

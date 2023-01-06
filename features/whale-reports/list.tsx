@@ -1,7 +1,7 @@
+import { ReportItem } from '@/features/whale-reports/types'
+import { useReports } from '@/hooks/use-reports'
 import { FC } from 'react'
 import { useTranslation } from 'react-i18next'
-import { useReports } from '@/hooks/use-reports'
-import { ReportItem } from '@/features/whale-reports/types'
 import styles from './list.module.scss'
 
 export const WhaleReportList: FC = () => {
@@ -9,7 +9,7 @@ export const WhaleReportList: FC = () => {
   const i18n = useTranslation('common')
 
   return (
-    <div className={`${styles['whale-report-list']} main-container`}>
+    <div className={`${styles['whale-report-list']} main-container container mx-auto py-10`}>
       <div className="report-title">{i18n.t('header_nav_009')}</div>
       {reports.map((report, index) => (
         <WhaleReportItem key={index} report={report} />

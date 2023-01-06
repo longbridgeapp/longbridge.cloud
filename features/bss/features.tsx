@@ -93,10 +93,10 @@ export const BssSection: FC<{
           {features.map(feature => {
             return (
               <div className="feature-item" key={feature.title}>
-                <div className="left">
+                <div className="left feature-item-icon">
                   <img src={feature.picture} alt={feature.title} />
                 </div>
-                <div className="ml-12 flex-1">
+                <div className="flex-1 feature-item-content">
                   <h4 className="title">{feature.title}</h4>
                   <p
                     className="desc"

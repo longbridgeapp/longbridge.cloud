@@ -2,15 +2,8 @@
   @apply bg-cover;
 
   background-image: url(https://pub.lbkrs.com/files/202205/fcjpWTwywjW6RhJX/20220516-142140.png);
-  
 }
-:local(.live-page) {
-  .main-container {
-    @media screen and (max-width: 768px) {
-      @apply px-10;
-    }
-  }
-}
+
 :local(.detail) {
   @apply py-[100px];
   .desc {
@@ -25,7 +18,6 @@
     .agenda-item {
       @apply first:pl-0 max-w-[144px];
       &:first-child {
-        
       }
       .position {
         color: var(--text_color_2);
@@ -34,6 +26,6 @@
   }
 }
 :local(.guests) {
-  @apply py-[120px];
+  @apply py-10 xl:py-[120px];
   background-color: var(--bg_color_1);
 }

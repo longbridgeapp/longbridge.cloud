@@ -1,11 +1,11 @@
 :local(.first-screen) {
   @apply bg-cover;
   .desc {
-    @apply text-xl mt-6 leading-9;
+    @apply text-lg leading-8 xl:text-xl mt-6 xl:leading-9;
 
     color: var(--text_color_1_supplement);
   }
   .title {
-    @apply font-medium text-[40px] leading-tight;
+    @apply font-medium text-3xl xl:text-[40px] leading-tight;
   }
 }

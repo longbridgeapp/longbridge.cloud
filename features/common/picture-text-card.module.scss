@@ -1,5 +1,6 @@
 :local(.card) {
-  @apply flex-1 mr-5 last:mr-0;
+  @apply flex-1;
+
   border: 1px solid var(--border_color_1);
   .desc {
     @apply mt-4 text-xl font-normal;
