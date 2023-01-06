@@ -45,7 +45,7 @@
   "bss_features_021": "The three node disaster recovery capability",
   "bss_features_024": "Database-based isolation solution across the whole system, ensure data exclusiveness ",
   "bss_features_023": "Isolation solution across the whole system",
-  "trading_page_002": "WHALE Trading Platform provides customers with better experience of the securities App. Based on the core journey of users —\"Discovery → Learning → Trading\" and combined with a large amount of structured data, it lowers the threshold for users to understand and participate in trading, allowing users to more easily find investment opportunities in the US, HK, Singapore, Europe, and other international core markets.",
+  "trading_page_002": "WHALE Trading Platform provides customers with better experience of the securities App. Based on the core journey of users - \"Discovery → Learning → Trading\" and combined with a large amount of structured data, it lowers the threshold for users to understand and participate in trading, allowing users to more easily find investment opportunities in the US, HK, Singapore, Europe, and other international core markets.",
   "trading_features_002": "Supported operating systems: Windows, macOS, Linux, iOS, Android, and Web",
   "trading_features_003": "Excellent Performance",
   "trading_features_004": "The core engine is powered by Rust, which makes it robust, compact, and safe with excellent performance",
@@ -363,7 +363,6 @@
   "feedback.title": "For futher information, please fill the form below",
   "send-success": "Sent successfully",
   "send-error": "Failed to send",
-
   "whale-backoffice-001": "Comprehensive Back Office System",
   "whale-backoffice-002": "Our new generation one-stop trading and settlement system is designed to streamline and optimize the entire process from trading to settlement for brokerages. Based on cloud-native architecture, it enables efficient and flexible settlement across different markets, a variety of investment products, and multiple currencies. Its integrated coupon settlement feature allows brokerages to tailor their operations to their unique business models, making it a versatile and valuable tool for any brokerage.",
   "whale-backoffice-003": "",
@@ -414,7 +413,6 @@
   "whale-backoffice-048": "Support seven types of real-time and day-end settlement reports, including client, accounting, trading, compliance, FRR, risk control, and clearing",
   "whale-backoffice-049": "Efficient Report Development",
   "whale-backoffice-050": "Rapid production and processing capability for reports based on a data platform",
-
   "whale-marketing-001": "Marketing System",
   "whale-marketing-002": "Offer a comprehensive range of marketing services that are continually updated and improved to ensure effectiveness. These services are essential for empowering securities businesses to thrive in the digital age and drive the transformation of traditional financial companies.",
   "whale-marketing-003": "Market Pain Points",
@@ -478,7 +476,6 @@
   "whale-marketing-061": "Deposit Rapidly Convert New Clients Into Long Term Clients",
   "whale-marketing-062": "Sharing-Conversion Rate Hits A Record",
   "whale-marketing-063": "Everyone Receives One And Is Happy",
-
   "whale-community-001": "LongPort",
   "whale-community-002": "As investors migrate to more convenient and efficient online trading tools, they are increasingly relying on community discussion to aid decision-making in addition to viewing traditional market data, financial, and other information. ",
   "whale-community-003": "Whale launched LongPort in combination with its own business' long-term practice, aiming to provide a public community in SaaS. Traditional brokerages can benefit from the industry's most competitive community services without incurring the costs of industry research and the Internet approach.",
@@ -522,7 +519,6 @@
   "whale-community-041": "Independent Official Account",
   "whale-community-042": "You can create an independent official account, access or manually operate your own content through API, and limit distribution to your apps.",
   "whale-community-043": "Access Community",
-
   "whale-delivery-system-001": "Digital Marketing Platform",
   "whale-delivery-system-002": "Our digital operations platform is centered around operating strategies for the entire customer lifecycle. ",
   "whale-delivery-system-003": "By selecting appropriate touchpoint content, timing, and target audience, you can use various touchpoint channels such as App Push, Banner, Popup, SMS, Email, etc. to accurately reach out to your clients.",

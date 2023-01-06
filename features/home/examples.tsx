@@ -1,14 +1,14 @@
-import { useTranslation } from 'next-i18next'
-import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import { FC, HTMLAttributes, useEffect, useMemo, useRef, useState } from 'react'
-import { createPortal } from 'react-dom'
+import Icon from '@/components/icon'
+import { useResize } from '@/hooks/use-resize'
 import { useMount, useUpdate, useUpdateEffect } from 'ahooks'
 import classNames from 'classnames'
+import { useTranslation } from 'next-i18next'
+import { FC, HTMLAttributes, useEffect, useMemo, useRef, useState } from 'react'
+import { createPortal } from 'react-dom'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import { Swiper, SwiperSlide, useSwiper } from 'swiper/react'
 import styles from './examples.module.scss'
-import { useResize } from '@/hooks/use-resize'
-import Icon from '@/components/icon'
 
 type IExampleFunctions = {
   app: string
@@ -76,22 +76,21 @@ const Example: FC<IExampleProps> = ({ name, logo, descList, cover, functions }) 
         height,
       }}
     >
-      <div
-        className="cover"
-      >
+      <div className="cover">
         {/* Safari 下直接使用 100% 会有样式问题 */}
-        <img style={{
-          height,
-        }} src={cover} alt={name} />
+        <img
+          style={{
+            height,
+          }}
+          src={cover}
+          alt={name}
+        />
       </div>
       <div className="main">
         <div className="logo">
-          <img
-            src={logo}
-            alt={name}
-          />
+          <img src={logo} alt={name} />
         </div>
-        <h4 className="name">{name}</h4>
+        <h4 className="mt-4 text-2xl text-white">{name}</h4>
         <div>
           {descList.map(desc => {
             return (
@@ -265,7 +264,7 @@ export const HomeExamples = () => {
       <div>
         <div className="main-container !pr-0">
           <div>
-            <span className="label text-text_brand_color text-2xl">{i18n.t('home_examples_015')}</span>
+            <span className="text-2xl label text-text_brand_color">{i18n.t('home_examples_015')}</span>
             <h3 className="font-normal text-[40px] mt-6">{i18n.t('home_examples_016')}</h3>
             <div className="mt-[60px]">
               <Examples />

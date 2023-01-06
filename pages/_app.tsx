@@ -1,13 +1,13 @@
+import RouteList from '@/routes'
+import { getBasenameLocale, getLocaleHref, getSystemLanguage, isServer } from '@/utils/common'
+import { useMount } from 'ahooks'
+import Cookies from 'js-cookie'
+import { appWithTranslation } from 'next-i18next'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { BrowserRouter } from 'react-router-dom'
 import { StaticRouter } from 'react-router-dom/server'
-import { appWithTranslation } from 'next-i18next'
 import { ToastContainer } from 'react-toastify'
-import RouteList from '@/routes'
-import Cookies from 'js-cookie'
-import { useMount } from 'ahooks'
-import { getSystemLanguage, getBasenameLocale, getLocaleHref, isServer } from '@/utils/common'
 
 import '@/styles/globals.scss'
 import 'react-toastify/dist/ReactToastify.css'
@@ -29,6 +29,10 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
     const pathLocale = getBasenameLocale()
     const cookieLocale = Cookies.get('locale')
     const locale = getSystemLanguage()
+
+    // Set <html lang="en" />
+    document.querySelector('html')?.setAttribute('lang', cookieLocale || locale)
+
     if (pathLocale) {
       return
     }

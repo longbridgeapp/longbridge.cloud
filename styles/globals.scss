@@ -1,6 +1,11 @@
 @import 'tailwind.css';
 @import './theme.scss';
 
+/* 中文里面文字左右对齐 */
+html:not([lang='en']) {
+  text-align: justify;
+}
+
 .main-container {
   @apply px-8 xl:px-[100px];
 }
