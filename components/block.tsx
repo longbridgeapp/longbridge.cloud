@@ -1,5 +1,5 @@
-import React, { FC, CSSProperties, ReactNode } from 'react'
 import classNames from 'classnames'
+import { CSSProperties, FC, ReactNode } from 'react'
 
 export const Block: FC<{ className?: string; style?: CSSProperties }> = ({ children, className, style }) => {
   return (
@@ -25,7 +25,7 @@ export const BlockHeader = ({ title, desc, slogn }: { title: string; desc?: stri
 export const TopBlock: FC<{ imageUrl?: string }> = ({ children, imageUrl }) => {
   return (
     <div
-      className="pt-24 bg-cover"
+      className="bg-cover"
       style={
         imageUrl
           ? {

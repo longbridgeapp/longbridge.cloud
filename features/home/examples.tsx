@@ -262,13 +262,11 @@ export const HomeExamples = () => {
   return (
     <div className={styles.container}>
       <div>
-        <div className="main-container !pr-0">
-          <div>
-            <span className="text-2xl label text-text_brand_color">{i18n.t('home_examples_015')}</span>
-            <h3 className="font-normal text-[40px] mt-6">{i18n.t('home_examples_016')}</h3>
-            <div className="mt-[60px]">
-              <Examples />
-            </div>
+        <div className="main-container !pr-0 pt-12">
+          <div className="text-2xl label text-text_brand_color">{i18n.t('home_examples_015')}</div>
+          <h3 className="mt-6 text-4xl font-normal">{i18n.t('home_examples_016')}</h3>
+          <div className="mt-14">
+            <Examples />
           </div>
         </div>
       </div>
