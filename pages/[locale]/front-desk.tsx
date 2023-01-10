@@ -7,10 +7,10 @@ import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
 import React, { useMemo } from 'react'
-// eslint-disable-next-line import/named
+
 import { Block, BlockBetween } from '@/components/block'
 import { SEOMeta } from '@/utils/seo'
-import { UserConfig, useTranslation } from 'next-i18next'
+import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 export const getStaticPaths = () => ({
@@ -20,7 +20,7 @@ export const getStaticPaths = () => ({
 
 export const getStaticProps = async (ctx: any) => ({
   props: {
-    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig as unknown as UserConfig)),
+    ...(await serverSideTranslations(ctx?.params?.locale, ['common', 'seo'], i18nextConfig as unknown as any)),
   },
 })
 

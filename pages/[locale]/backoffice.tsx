@@ -7,8 +7,8 @@ import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
 import React from 'react'
-// eslint-disable-next-line import/named
 import { SEOMeta } from '@/utils/seo'
+// eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
