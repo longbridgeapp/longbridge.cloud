@@ -133,7 +133,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
             <Icon type="close" className="cursor-pointer hover:text-brand_color" onClick={onClose}></Icon>
           </div>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 text-left">
           {formItems.map(item => {
             const id = `form-${item.key}`
             return (
