@@ -8,8 +8,8 @@ export interface IBoxModuleProps {
 }
 const BoxModule = ({ children, label, title, className }: IBoxModuleProps) => {
   return (
-    <div className={`${className}`}>
-      <div className={`py-20 main-content-width`}>
+    <div className={`${className} px-5 lg:px-0`}>
+      <div className={`py-10 lg:py-20 main-content-width`}>
         <Title label={label} title={title} />
         {children}
       </div>

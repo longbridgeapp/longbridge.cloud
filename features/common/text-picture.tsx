@@ -6,8 +6,8 @@ const TextPicture = ({ imgUrl, list }: { imgUrl: string; list: string[] }) => {
   const i18n = useTranslation('common')
   return (
     <BoxModule>
-      <div className="flex space-x-[50px]">
-        <div className="">
+      <div className="flex lg:space-x-[50px] flex-col lg:flex-row">
+        <div className="mb-5 lg:mb-0">
           <Title
             label={i18n.t('src_pages_atm_deposit_add_single_index_8634')}
             title={i18n.t('src_pages_atm_deposit_add_single_index_8635')}
@@ -21,7 +21,7 @@ const TextPicture = ({ imgUrl, list }: { imgUrl: string; list: string[] }) => {
               )
             })}
         </div>
-        <img className="w-[640px]" src={imgUrl} alt="" />
+        <img className="w-full lg:w-[640px]" src={imgUrl} alt="" />
       </div>
     </BoxModule>
   )

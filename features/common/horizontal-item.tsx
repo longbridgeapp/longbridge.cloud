@@ -6,7 +6,7 @@ const HorizontalItem = ({
   className: string
 }) => {
   return (
-    <div className={`${className} space-x-10 flex`}>
+    <div className={`${className}  space-y-5 lg:space-y-0 lg:space-x-10 flex flex-col lg:flex-row`}>
       {list.map((item, index) => {
         return (
           <div key={index} className="flex flex-col">

@@ -4,7 +4,7 @@ interface ITextPictureSecondary {
 }
 const TextPictureSecondary = ({ item, className }: ITextPictureSecondary) => {
   return (
-    <div className={`${className} flex items-center space-x-24`}>
+    <div className={`${className} flex items-center flex-col lg:flex-row lg:space-x-24`}>
       <img className="w-[588px]" src={item?.img} alt="" />
       <div className="">
         <div className="font-medium text-[28px] mb-10">{item?.title}</div>
