@@ -187,7 +187,7 @@ export const TalkToUs = ({ className, style }: { className?: string; style?: CSS
           <TalkToUsForm onClose={onClose} />
         </FullMask>
       )}
-      <Button size="medium" className={classNames('mt-6', className)} style={style} onClick={onOpen}>
+      <Button size="medium" className={classNames('mt-10', className)} style={style} onClick={onOpen}>
         {i18n.t('talk-to-us')}
       </Button>
     </>

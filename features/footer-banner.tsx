@@ -17,7 +17,7 @@ const FooterBanner: FC<{
       <div className="main-content-width">
         <h3 className="text-3xl font-medium">{title}</h3>
         <p className="mt-5 text-xl text-text_color_1_supplement">{desc}</p>
-        <TalkToUs />
+        <TalkToUs style={{ fontWeight: 500, fontSize: '20px' }} />
       </div>
     </div>
   )

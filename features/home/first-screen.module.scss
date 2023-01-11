@@ -1,5 +1,8 @@
 :local(.first-screen) {
   @apply bg-cover;
+  .title {
+    @apply font-semibold text-[44px] leading-tight mb-5;
+  }
   .desc {
     @apply text-lg leading-8 xl:text-xl mt-6 xl:leading-9;
 

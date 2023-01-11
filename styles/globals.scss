@@ -10,7 +10,7 @@ html:not([lang='en']) {
   @apply px-6 xl:px-[100px];
 }
 .main-content-width {
-  @apply max-w-7xl mx-auto;
+  @apply max-w-[1200px] mx-auto;
 }
 .section-content-container {
   @apply max-w-[1920px] mx-auto;
@@ -66,5 +66,12 @@ html {
     &::after {
       @apply bg-white;
     }
+  }
+}
+.dot-list {
+  @apply relative ml-4;
+  &::after {
+    content: '';
+    @apply w-1 h-1 bg-[#5622CF] absolute -left-4 top-[10px];
   }
 }
