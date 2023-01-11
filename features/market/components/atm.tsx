@@ -1,33 +1,40 @@
 import BoxModule from '@/features/common/box-module'
 import Title from '@/features/common/title'
 import HorizontalItem from '@/features/common/horizontal-item'
+import { useTranslation } from 'react-i18next'
+
 import { useMemo } from 'react'
 const Risk = () => {
+  const i18n = useTranslation('common')
   const list = useMemo(() => {
     return [
       {
-        title: '丰富的出入金方式',
-        desc: '支持 FPS、eDDA、银证转账、网银转账等丰富的出入金方式',
+        title: i18n.t('src_pages_atm_deposit_add_single_index_8636'),
+        desc: i18n.t('src_pages_atm_deposit_add_single_index_8637'),
       },
       {
-        title: '多家银企直连',
-        desc: '支持 DBS 银行 - 新加坡、恒生银行、汇丰银行等，并在持续对接中',
+        title: i18n.t('src_pages_atm_deposit_add_single_index_8638'),
+        desc: i18n.t('src_pages_atm_deposit_add_single_index_8639'),
       },
       {
-        title: '快速到账',
-        desc: '支持分钟级的入金到账及出金到账能力',
+        title: i18n.t('src_pages_atm_deposit_add_single_index_8640'),
+        desc: i18n.t('src_pages_atm_deposit_add_single_index_8641'),
       },
       {
-        title: '流程完善',
-        desc: '完善的出入金审核机制，及自动化处理能力，降低人力资源投入',
+        title: i18n.t('src_pages_atm_deposit_add_single_index_8642'),
+        desc: i18n.t('src_pages_atm_deposit_add_single_index_8643'),
       },
     ]
   }, [])
   return (
-    <BoxModule className="bg-[#F8F9FA]" label={'出入金管理'} title={'丰富且完善的出入金管理'}>
+    <BoxModule
+      className="bg-[#F8F9FA]"
+      label={i18n.t('packages_xadmin_shared_config_menus_7692')}
+      title={i18n.t('src_pages_atm_deposit_add_single_index_8644')}
+    >
       <>
         <HorizontalItem className="mb-10" list={list} />
-        <img src="https://pub.lbkrs.com/static/offline/202301/tKXZrDRrwX2krTeN/Group_427319353.svg" alt="" />
+        <img src={i18n.t('packages_xadmin_shared_config_menus_7698')} alt="" />
       </>
     </BoxModule>
   )

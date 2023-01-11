@@ -1,11 +1,17 @@
 import Title from './title'
 import BoxModule from './box-module'
+import { useTranslation } from 'react-i18next'
+
 const TextPicture = ({ imgUrl, list }: { imgUrl: string; list: string[] }) => {
+  const i18n = useTranslation('common')
   return (
     <BoxModule>
       <div className="flex space-x-[50px]">
         <div className="">
-          <Title label={'产品优势'} title={'专业、极速、安全'} />
+          <Title
+            label={i18n.t('src_pages_atm_deposit_add_single_index_8634')}
+            title={i18n.t('src_pages_atm_deposit_add_single_index_8635')}
+          />
           {list &&
             list.map((item, index) => {
               return (
