@@ -95,7 +95,7 @@ const TradingDeskSystem = () => {
             )
           })}
         </div>
-
+        <Divider className="my-10" />
         <TextPictureSecondary item={sectionList02} />
         <Divider className="my-10" />
         <TextPictureSecondary className="flex-row-reverse" item={sectionList02} />
