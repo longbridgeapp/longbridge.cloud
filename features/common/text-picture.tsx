@@ -12,14 +12,16 @@ const TextPicture = ({ imgUrl, list }: { imgUrl: string; list: string[] }) => {
             label={i18n.t('src_pages_atm_deposit_add_single_index_8634')}
             title={i18n.t('src_pages_atm_deposit_add_single_index_8635')}
           />
-          {list &&
-            list.map((item, index) => {
-              return (
-                <div className="dot-list font-base leading-6 text-text_color_1_supplement" key={index}>
-                  {item}
-                </div>
-              )
-            })}
+          <div className="space-y-4">
+            {list &&
+              list.map((item, index) => {
+                return (
+                  <div className="dot-list font-base leading-6 text-text_color_1_supplement" key={index}>
+                    {item}
+                  </div>
+                )
+              })}
+          </div>
         </div>
         <img className="w-full lg:w-[640px]" src={imgUrl} alt="" />
       </div>

@@ -87,7 +87,7 @@ const TradingDeskSystem = () => {
               <div className="flex lg:block flex-col" key={index}>
                 <img className="mb-5" src={item?.img} alt="" />
                 <div className="space-y-4 lg:max-w-[498px]">
-                  <div className="text-[28px] font-medium">{item?.title}</div>
+                  <div className="text-[28px] font-medium h-16 leading-8">{item?.title}</div>
                   {item?.list &&
                     item.list.map((itm: any, idx: number) => {
                       return (
@@ -104,7 +104,7 @@ const TradingDeskSystem = () => {
         <Divider className="my-10" />
         <TextPictureSecondary item={sectionList02} />
         <Divider className="my-10" />
-        <TextPictureSecondary className="flex-row-reverse" item={sectionList03} />
+        <TextPictureSecondary className="lg:flex-row-reverse" item={sectionList03} />
       </>
     </BoxModule>
   )

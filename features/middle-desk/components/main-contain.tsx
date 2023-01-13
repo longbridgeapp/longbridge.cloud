@@ -17,7 +17,7 @@ const MainContain = ({ title, desc, img }: IMainContain) => {
           left={
             <div className="flex flex-col items-start gap-8">
               <div className="text-[44px] font-semibold">{title}</div>
-              <div className="text-lg leading-9 text-text_color_2">{desc}</div>
+              <div className="text-lg leading-9 text-text_color_1_supplement">{desc}</div>
               <TalkToUs className="mt-0" />
             </div>
           }
