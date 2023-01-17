@@ -6,7 +6,7 @@ import ProductAdvantage from '@/features/middle-desk/components/product-advantag
 import TradingDeskSystem from '@/features/middle-desk/components/trading-desk-system'
 import Risk from '@/features/middle-desk/components/risk'
 import Atm from '@/features/middle-desk/components/atm'
-import FooterBanner from '@/features/footer-banner'
+import WhaleOfficialFooter from '@/features/whale-official/footer'
 
 export const MiddleDeskContain = () => {
   const i18n = useTranslation('common')
@@ -22,7 +22,7 @@ export const MiddleDeskContain = () => {
       <TradingDeskSystem />
       <Risk />
       <Atm />
-      <FooterBanner title={i18n.t('footer-banner.1m')} desc={i18n.t('middle_desk_01')} />
+      <WhaleOfficialFooter />
     </div>
   )
 }

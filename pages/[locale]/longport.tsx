@@ -1,9 +1,7 @@
 // 社区系统
 import Button from '@/components/button'
 import ImageIcon from '@/components/image-icon'
-import { CDN_IMAGES, LONGPORT_URL } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
-import { TalkToUs } from '@/features/talk-to-us'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'

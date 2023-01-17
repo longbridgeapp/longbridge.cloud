@@ -12,7 +12,7 @@ const TextPictureSecondary = ({ item, className }: ITextPictureSecondary) => {
           {item?.list &&
             item?.list.map((_itm, index) => {
               return (
-                <div className="flex text-base text-text_color_1_supplement" key={index}>
+                <div className="flex text-base text-text_color_1_supplement items-center " key={index}>
                   <img src={_itm?.img} alt="" />
                   <div className="ml-8">{_itm?.text}</div>
                 </div>

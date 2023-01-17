@@ -11,8 +11,8 @@ const HorizontalItem = ({
         return (
           <div key={index} className="flex flex-col">
             {item?.picture && <img className="w-10 mb-3" src={item?.picture} alt="" />}
-            {item?.title && <div className="mb-2 text-xl h-12 leading-6">{item?.title}</div>}
-            {item?.desc && <div className=" text-base text-text_color_1_supplement">{item?.desc}</div>}
+            {item?.title && <div className="mb-[10px] text-xl font-medium">{item?.title}</div>}
+            {item?.desc && <div className=" text-base text-text_color_1_supplement max-w-[270px]">{item?.desc}</div>}
           </div>
         )
       })}

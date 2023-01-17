@@ -1,9 +1,5 @@
 // 系统前中台
-import ImageIcon from '@/components/image-icon'
-import { CDN_IMAGES } from '@/constants'
 import { Layout } from '@/features/common/page-layout'
-import { TalkToUs } from '@/features/talk-to-us'
-import WhaleOfficialFooter from '@/features/whale-official/footer'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
 import React, { useMemo } from 'react'
