@@ -14,6 +14,9 @@ import { SEOMeta } from '@/utils/seo'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Banner from '@/features/product/Banner'
+import Title from '@/features/product/title'
+import Box from '@/features/product/Box'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -27,8 +30,8 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const Marketing: React.FC = () => {
-  const i18n = useTranslation('common')
   const seoI18n = useTranslation(['seo'])
+  const i18n = useTranslation('common')
   const isEN = i18n.i18n.language === 'en'
   const marketSceneRef = useRef(null)
   const marketSceneSize = useSize(marketSceneRef)
@@ -106,58 +109,47 @@ const Marketing: React.FC = () => {
     carouse?.prev()
   }
 
+  const banner_props = {
+    title: i18n.t('whale-marketing-001'),
+    desc: [i18n.t('whale-marketing-002')],
+    img: {
+      'en': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
+    },
+  }
+
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div>
-        <div
-          className="py-10 bg-cover main-container lg:py-20"
-          style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
-        >
-          <div className="flex flex-col gap-8 lg:gap-32 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start gap-5  max-w-[500px]">
-              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-marketing-001')}</div>
-              <div className="text-lg leading-9 text-text_color_2">{i18n.t('whale-marketing-002')}</div>
-              <TalkToUs className="mt-5" />
-            </div>
-            <div className="lg:max-w-[620px]">
-              <img
-                src="https://assets.lbkrs.com/uploads/d4bfcb66-28cf-4ffe-a6c4-3d772c1dca96/Group 427319261.png"
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
+        <Banner {...banner_props}></Banner>
         <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-003')}</div>
               <div className="mb-10 text-xl font-medium xl:text-4xl">{i18n.t('whale-marketing-004')}</div>
             </div>
-            <div className="flex flex-col items-center justify-between gap-20 md:flex-row">
-              <div className="flex justify-between flex-1 w-full gap-20">
-                <div>
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/txiQsfkn5VULhvmi/cash_plus.png" />
-                  <div className="my-[10px] text-xl font-medium">{i18n.t('whale-marketing-005')}</div>
-                  <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-006')}</div>
-                </div>
-                <div>
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/i9JLwB1X14rHsAeH/circle_time.png" />
-                  <div className="my-[10px] text-xl font-medium">{i18n.t('whale-marketing-007')}</div>
-                  <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-008')}</div>
-                </div>
+            <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:item-center">
+              <div className="w-[270px]">
+                <ImageIcon url="https://pub.lbkrs.com/files/202212/txiQsfkn5VULhvmi/cash_plus.png" />
+                <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-005')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-006')}</div>
               </div>
-              <div className="flex justify-between flex-1 w-full gap-20">
-                <div>
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/queci6LCEx5pyxAx/customer_inquiry.png" />
-                  <div className="my-[10px] text-xl font-medium">{i18n.t('whale-marketing-009')}</div>
-                  <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-010')}</div>
-                </div>
-                <div>
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/SBeHqd6MygAG4ihj/conversion.png" />
-                  <div className="my-[10px] text-xl font-medium">{i18n.t('whale-marketing-011')}</div>
-                  <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-012')}</div>
-                </div>
+              <div className="w-[270px]">
+                <ImageIcon url="https://pub.lbkrs.com/files/202212/i9JLwB1X14rHsAeH/circle_time.png" />
+                <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-007')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-008')}</div>
+              </div>
+              <div className="w-[270px]">
+                <ImageIcon url="https://pub.lbkrs.com/files/202212/queci6LCEx5pyxAx/customer_inquiry.png" />
+                <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-009')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-010')}</div>
+              </div>
+              <div className="w-[270px]">
+                <ImageIcon url="https://pub.lbkrs.com/files/202212/SBeHqd6MygAG4ihj/conversion.png" />
+                <div className="mt-3 mb-[10px] text-xl font-medium">{i18n.t('whale-marketing-011')}</div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-012')}</div>
               </div>
             </div>
           </div>
@@ -182,17 +174,17 @@ const Marketing: React.FC = () => {
               className="flex flex-col overflow-hidden bg-white rounded-lg xl:flex-row marketing-version-list"
               ref={marketSceneRef}
             >
-              <div className="flex-1 p-10 left">
+              <div className="flex-1 p-8 left">
                 <div className="border-b border-dashed version-first border-tag_border_color">
-                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-marketing-015')}</div>
-                  <div className="text-base font-normal pb-7">
+                  <div className="text-[30px] leading-[42px] font-semibold mb-3">{i18n.t('whale-marketing-015')}</div>
+                  <div className="text-[16px] leading-[22px] font-normal mb-5">
                     <div>{i18n.t('whale-marketing-016')}</div>
                     <div>{i18n.t('whale-marketing-017')}</div>
                   </div>
                 </div>
                 <div className="version-second">
-                  <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-marketing-018')}</div>
-                  <ul className="flex flex-col gap-y-4">
+                  <div className="text-xl font-medium mt-5 mb-3">{i18n.t('whale-marketing-018')}</div>
+                  <ul className="flex flex-col gap-y-2 text-base">
                     <li className="list-dot">{i18n.t('whale-marketing-019')}</li>
                     <li className="list-dot">{i18n.t('whale-marketing-020')}</li>
                     <li className="list-dot">{i18n.t('whale-marketing-021')}</li>
@@ -201,22 +193,22 @@ const Marketing: React.FC = () => {
                   </ul>
                 </div>
               </div>
-              <div className="flex-1 p-10 bg-brand_color text-[#fff]">
+              <div className="flex-1 p-8 bg-brand_color text-[#fff]">
                 <div className="border-b border-dashed version-first border-tag_border_color">
-                  <div className="text-[30px] font-semibold mb-2 flex items-center">
+                  <div className="text-[30px] leading-[42px] font-semibold mb-3 flex items-center">
                     {i18n.t('whale-marketing-024')}
                     <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
                       HOT
                     </span>
                   </div>
-                  <div className="text-base font-normal pb-7">
+                  <div className="text-[16px] leading-[22px] font-normal mb-5">
                     <div>{i18n.t('whale-marketing-025')}</div>
                     <div>{i18n.t('whale-marketing-026')}</div>
                   </div>
                 </div>
                 <div className="version-second">
-                  <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-marketing-018')}</div>
-                  <ul className="flex flex-col gap-y-4">
+                  <div className="text-xl font-medium mt-5 mb-3">{i18n.t('whale-marketing-018')}</div>
+                  <ul className="flex flex-col gap-y-2 text-base">
                     <li className="list-dot white">{i18n.t('whale-marketing-019')}</li>
                     <li className="list-dot white">{i18n.t('whale-marketing-020')}</li>
                     <li className="list-dot white">{i18n.t('whale-marketing-027')}</li>
@@ -229,128 +221,150 @@ const Marketing: React.FC = () => {
           </div>
         </div>
 
-        <div className="py-10 main-container lg:py-20">
-          <div className="flex flex-col gap-3 main-content-width">
-            <div>
-              <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-030')}</div>
-              <div className="text-xl font-medium xl:text-4xl">{i18n.t('whale-marketing-031')}</div>
-            </div>
-            <div className="flex flex-col items-start justify-between gap-3 lg:flex-row">
-              <div className="flex-1">
-                <img
-                  src="https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png"
-                  alt=""
-                  className="lg:w-[558px]"
-                />
-              </div>
+        <Box>
+          <>
+            <div className="flex flex-col gap-8">
+              <Title label={i18n.t('whale-marketing-030')} title={i18n.t('whale-marketing-031')}></Title>
               <div>
-                <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-032')}</div>
-                <ul className="flex flex-col gap-6">
-                  <li className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                      {i18n.t('whale-marketing-033')}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/FvC4YU2unWnUkViy/group.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                      {i18n.t('whale-marketing-034')}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <ImageIcon
-                      url="https://pub.lbkrs.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
-                      className="mr-8"
+                {/* 权益平台 */}
+                <div className="flex flex-col-reverse items-start justify-between lg:flex-row">
+                  <div className="flex-1">
+                    <img
+                      src="https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png"
+                      alt=""
+                      className="lg:w-[558px]"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                      {i18n.t('whale-marketing-035')}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <ImageIcon
-                      url="https://pub.lbkrs.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
-                      className="mr-8"
+                  </div>
+                  <div>
+                    <div className="mb-10 text-[28px] leading-10 font-medium  lg:max-w-[510px]">
+                      {i18n.t('whale-marketing-032')}
+                    </div>
+                    <ul className="flex flex-col gap-6 lg:max-w-[510px]">
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
+                          {i18n.t('whale-marketing-033')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/FvC4YU2unWnUkViy/group.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
+                          {i18n.t('whale-marketing-034')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
+                          {i18n.t('whale-marketing-035')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
+                          {i18n.t('whale-marketing-036')}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <hr className="my-10"></hr>
+                {/* 活动平台 */}
+                <div className="flex flex-col lg:items-center justify-between lg:flex-row">
+                  <div className="flex-1">
+                    <div className="mb-10 text-[28px] leading-10 font-medium lg:max-w-[510px]">
+                      {i18n.t('whale-marketing-037')}
+                    </div>
+                    <ul className="flex flex-col gap-6 lg:max-w-[510px]">
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                          {i18n.t('whale-marketing-038')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                          {i18n.t('whale-marketing-039')}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="flex-1">
+                    <img
+                      src="https://assets.lbkrs.com/uploads/23b898a0-2e33-4fdf-8592-d5416659c69c/Group 427318897.png"
+                      alt=""
+                      className="lg:w-[558px]"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                      {i18n.t('whale-marketing-036')}
-                    </span>
-                  </li>
-                </ul>
+                  </div>
+                </div>
+                <hr className="my-10"></hr>
+                {/* pagehub */}
+                <div className="flex flex-col-reverse lg:items-center justify-between lg:flex-row">
+                  <div className="flex-1">
+                    <img
+                      src="https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png"
+                      alt=""
+                      className="lg:w-[558px]"
+                    />
+                  </div>
+                  <div>
+                    <div className="mb-10 text-[28px] leading-10 font-medium lg:max-w-[510px]">
+                      {i18n.t('whale-marketing-040')}
+                    </div>
+                    <ul className="flex flex-col gap-6 lg:max-w-[510px]">
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                          {i18n.t('whale-marketing-041')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/4zxY387JjpngG9F3/code.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                          {i18n.t('whale-marketing-042')}
+                        </span>
+                      </li>
+                      <li className="flex items-center">
+                        <ImageIcon
+                          url="https://pub.lbkrs.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
+                          className="mr-8"
+                        />
+                        <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                          {i18n.t('whale-marketing-043')}
+                        </span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </>
+        </Box>
 
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
-          <div className="flex flex-col gap-3 lg:items-center main-content-width lg:flex-row">
-            <div className="flex-1">
-              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-037')}</div>
-              <ul className="flex flex-col gap-6">
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-marketing-038')}
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <ImageIcon
-                    url="https://pub.lbkrs.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
-                    className="mr-8"
-                  />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-marketing-039')}
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <div className="flex-1">
-              <img
-                src="https://assets.lbkrs.com/uploads/23b898a0-2e33-4fdf-8592-d5416659c69c/Group 427318897.png"
-                alt=""
-                className="lg:w-[558px]"
-              />
-            </div>
-          </div>
-        </div>
-
-        <div className="py-10 main-container lg:py-20">
-          <div className="flex flex-col gap-8 lg:items-center main-content-width lg:flex-row">
-            <div className="flex-1">
-              <img
-                src="https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png"
-                alt=""
-                className="lg:w-[558px]"
-              />
-            </div>
-            <div>
-              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-marketing-040')}</div>
-              <ul className="flex flex-col gap-6">
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-marketing-041')}
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/4zxY387JjpngG9F3/code.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-marketing-042')}
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <ImageIcon
-                    url="https://pub.lbkrs.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
-                    className="mr-8"
-                  />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-marketing-043')}
-                  </span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
         <div className="relative">
           <div className="absolute top-0 bottom-0 left-0 right-0 main-container main-content-width">
             <div

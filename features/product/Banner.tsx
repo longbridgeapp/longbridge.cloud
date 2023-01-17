@@ -14,7 +14,7 @@ const Banner: React.FC<Props> = props => {
   const isEN = i18n.i18n.language === 'en'
   return (
     <div
-      className="py-10 bg-cover main-container lg:py-20"
+      className="py-10 bg-cover main-container lg:pt-20 lg:pb-[90px]"
       style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
     >
       <div className="flex flex-col main-content-width lg:flex-row justify-between ">
