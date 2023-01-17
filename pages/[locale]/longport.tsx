@@ -11,6 +11,9 @@ import React from 'react'
 import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Banner from '@/features/product/Banner'
+import Title from '@/features/product/title'
+import Box from '@/features/product/Box'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -24,43 +27,34 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const Longport: React.FC = () => {
-  const i18n = useTranslation('common')
   const seoI18n = useTranslation(['seo'])
+  const i18n = useTranslation('common')
   const isEN = i18n.i18n.language === 'en'
-  const openLongport = () => {}
+  const banner_porps = {
+    title: i18n.t('whale-community-001'),
+    desc: [i18n.t('whale-community-002'), i18n.t('whale-community-003')],
+    img: {
+      'en': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
+    },
+  }
+
+  const product_advantage_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/ebc0b445-7d2c-48e0-a9d8-19cfe7aea6ee/product_advantage_en.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/d0b0efb0-fba7-4625-96f9-dc1b41550b7f/product_advantage_cn.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/d0b0efb0-fba7-4625-96f9-dc1b41550b7f/product_advantage_cn.svg',
+  }
+
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div>
-        <div
-          className="py-10 bg-cover main-container lg:py-20"
-          style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
-        >
-          <div className="flex flex-col gap-8 lg:gap-36 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start flex-1 gap-4 lg:gap-8 content">
-              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-community-001')}</div>
-              <div className="text-lg leading-9 text-text_color_2  max-w-[500px]">
-                <div>{i18n.t('whale-community-002')}</div>
-                <div>{i18n.t('whale-community-003')}</div>
-              </div>
-              <div className="flex items-center">
-                <Button size="medium" onClick={openLongport} link url={LONGPORT_URL}>
-                  {i18n.t('whale-community-043')}
-                </Button>
-                <TalkToUs className="!mt-0 ml-4" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <img src="https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png" alt="" />
-            </div>
-          </div>
-        </div>
+        <Banner {...banner_porps}></Banner>
+        {/* 市场痛点 */}
         <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
-            <div>
-              <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-004')}</div>
-              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-005')}</div>
-            </div>
+            <Title label={i18n.t('whale-community-004')} title={i18n.t('whale-community-005')}></Title>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-10">
                 <div className="flex-1">
@@ -89,12 +83,10 @@ const Longport: React.FC = () => {
             </div>
           </div>
         </div>
+        {/* 产品优势 */}
         <div className="py-10 bg-bg_color_2 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
-            <div>
-              <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-014')}</div>
-              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-015')}</div>
-            </div>
+            <Title label={i18n.t('whale-community-014')} title={i18n.t('whale-community-015')}></Title>
             <div className="flex flex-col justify-between gap-6 md:flex-row">
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
@@ -102,7 +94,7 @@ const Longport: React.FC = () => {
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-016')}</div>
-                <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
+                <ul className="flex flex-col text-base gap-y-4 text-text_color_3">
                   <li className="list-dot">{i18n.t('whale-community-017')}</li>
                   <li className="list-dot">{i18n.t('whale-community-018')}</li>
                   <li className="list-dot">{i18n.t('whale-community-019')}</li>
@@ -114,7 +106,7 @@ const Longport: React.FC = () => {
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-020')}</div>
-                <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
+                <ul className="flex flex-col text-base gap-y-4 text-text_color_3">
                   <li className="list-dot">{i18n.t('whale-community-021')}</li>
                   <li className="list-dot">{i18n.t('whale-community-022')}</li>
                   <li className="list-dot">{i18n.t('whale-community-023')}</li>
@@ -126,7 +118,7 @@ const Longport: React.FC = () => {
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-024')}</div>
-                <ul className="flex flex-col text-base leading-7 gap-y-4 text-text_color_3">
+                <ul className="flex flex-col text-base gap-y-4 text-text_color_3">
                   <li className="list-dot">{i18n.t('whale-community-025')}</li>
                   <li className="list-dot">{i18n.t('whale-community-026')}</li>
                   <li className="list-dot">{i18n.t('whale-community-027')}</li>
@@ -135,25 +127,15 @@ const Longport: React.FC = () => {
               </div>
             </div>
             <div>
-              <img
-                src={
-                  isEN
-                    ? 'https://assets.lbkrs.com/uploads/8659c6e2-9193-4618-a3fa-5d88902032fa/Group 427319377.svg'
-                    : 'https://assets.lbkrs.com/uploads/2a310f1a-a37d-4a83-8c8e-e64e734b8ea8/1.svg'
-                }
-                className="w-full"
-                alt=""
-              />
+              <img src={product_advantage_img[i18n.i18n.language]} className="w-full" alt="" />
             </div>
           </div>
         </div>
+        {/* 社区优势 */}
         <div className="py-10 main-container lg:py-20">
           <div className="flex flex-col gap-10 main-content-width">
-            <div>
-              <div className="mb-2 text-base text-brand_color">{i18n.t('whale-community-029')}</div>
-              <div className="text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-030')}</div>
-            </div>
-            <div className="flex flex-col items-start justify-between gap-10 lg:flex-row">
+            <Title label={i18n.t('whale-community-029')} title={i18n.t('whale-community-030')}></Title>
+            <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
               <div className="flex-1">
                 <img
                   src="https://assets.lbkrs.com/uploads/8c3e42e3-ce76-4f09-9688-bd741dc1244d/Frame 427319002.png"
@@ -161,8 +143,8 @@ const Longport: React.FC = () => {
                   className="lg:w-[588px]"
                 />
               </div>
-              <div className="flex-1">
-                <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-031')}</div>
+              <div className="flex-1 max-w-[510px]">
+                <div className="mb-10 font-medium text-[28px] leading-10 ">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon
@@ -194,9 +176,9 @@ const Longport: React.FC = () => {
           </div>
         </div>
         <div className="py-10 main-container bg-bg_color_2 lg:py-20">
-          <div className="flex flex-col gap-3 lg:items-center main-content-width lg:flex-row">
-            <div className="flex-1">
-              <div className="mb-10 text-2xl font-medium xl:text-4xl">{i18n.t('whale-community-035')}</div>
+          <div className="flex flex-col lg:items-center main-content-width lg:flex-row lg:justify-between">
+            <div className="flex-1 max-w-[510px]">
+              <div className="mb-10 font-medium text-[28px] leading-10">{i18n.t('whale-community-035')}</div>
               <ul className="flex flex-col gap-6">
                 <li className="flex items-center">
                   <ImageIcon url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png" className="mr-8" />
@@ -218,28 +200,24 @@ const Longport: React.FC = () => {
                 </li>
               </ul>
             </div>
-            <div className="flex-1">
-              <img
-                src="https://assets.lbkrs.com/uploads/5df88262-11d9-4f8b-8d92-ba11219eb598/Frame 427319003.png"
-                alt=""
-                className="lg:w-[588px]"
-              />
-            </div>
+            <img
+              src="https://assets.lbkrs.com/uploads/5df88262-11d9-4f8b-8d92-ba11219eb598/Frame 427319003.png"
+              alt=""
+              className="lg:w-[588px]"
+            />
           </div>
         </div>
 
-        <div className="py-10 main-container lg:py-20">
-          <div className="flex flex-col gap-3 main-content-width md:flex-row md:gap-48">
+        <Box>
+          <div className="flex flex-col md:flex-row justify-between gap-10">
             <div className="flex flex-col items-center justify-center flex-1 text-center">
               <img
-                src="https://assets.lbkrs.com/uploads/2c89265e-64e5-48cd-8099-9b09cdf9f807/Frame 427319004.png"
+                src="https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg"
                 alt=""
                 className="lg:w-[580px]"
               />
-              <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-039')}</div>
-              <div className="text-base text-text_color_3  max-w-[400px] leading-7">
-                {i18n.t('whale-community-040')}
-              </div>
+              <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-039')}</div>
+              <div className="text-base text-text_color_3 max-w-[398px] leading-7">{i18n.t('whale-community-040')}</div>
             </div>
             <div className="flex flex-col items-center justify-center flex-1 text-center">
               <img
@@ -247,13 +225,13 @@ const Longport: React.FC = () => {
                 alt=""
                 className="lg:w-[580px]"
               />
-              <div className="text-2xl lg:text-[28px] font-medium mt-14 mb-4">{i18n.t('whale-community-041')}</div>
+              <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-041')}</div>
               <div className="text-base text-text_color_3  max-w-[400px] leading-7">
                 {i18n.t('whale-community-042')}
               </div>
             </div>
           </div>
-        </div>
+        </Box>
         <WhaleOfficialFooter />
       </div>
     </Layout>

@@ -417,7 +417,6 @@
   "whale-backoffice-048": "支持客户、财务、交易、合规、FRR、风控、结算等七大类实时及日终清算类报表",
   "whale-backoffice-049": "报表开发高效",
   "whale-backoffice-050": "基于数据中台的报表快速生产加工能力",
-
   "whale-marketing-001": "营销系统",
   "whale-marketing-002": "提供完整的营销服务，持续不断推出更实用的营销产品模式，为证券业务进行赋能，是传统金融业务数字化转型必不可少的市场工具",
   "whale-marketing-003": "市场痛点",
@@ -481,7 +480,6 @@
   "whale-marketing-061": "平台新客快速转为熟客",
   "whale-marketing-062": "分享转化率赛新高",
   "whale-marketing-063": "人手一份皆大欢喜",
-
   "whale-community-001": "LongPort 社区",
   "whale-community-002": "随着投资者往更便捷高效的互联网交易工具上迁移，除查看传统的行情、财务等信息外，投资者正在越来越多通过社区交流来辅助决策。",
   "whale-community-003": "Whale 结合自身业务的长期实践推出了 LongPort，旨在以 SaaS 方式提供一个公共社区。传统券商无需产研资源和互联网方法论，便可拥有行业顶尖竞争力的社区服务。",
@@ -496,7 +494,7 @@
   "whale-community-012": "团队复杂",
   "whale-community-013": "社区建设需要兼具金融和互联网双重认知的产品、研发、运营、法务团队",
   "whale-community-014": "产品优势",
-  "whale-community-015": "longPort 产品架构与优势",
+  "whale-community-015": "LongPort 产品架构与优势",
   "whale-community-016": "基于成熟的社区业务实践",
   "whale-community-017": "整体社区信息架构逻辑成熟、满足投资者对社区的全方位诉求",
   "whale-community-018": "直接通过 SaaS 提供服务，并提供内容接入的扩展能力",
@@ -525,7 +523,6 @@
   "whale-community-041": "独立官方号支持",
   "whale-community-042": "White Label App 接入方可创建独立官方账号，通过 API 接入或人工运营自有内容，并限定分发到独立 App 内",
   "whale-community-043": "访问社区",
-
   "whale-delivery-system-001": "投放系统",
   "whale-delivery-system-002": "以用户全生命周期运营为核心策略导向的数字化运营平台",
   "whale-delivery-system-003": "通过选取合适的触达内容、合理的触达时机、符合运营策略的目标人群，组合 AppPush、Banner、Popup、SMS、Email 等多种触达通道，精准触达客户。",
