@@ -21,7 +21,7 @@ const MainContain = ({ title, desc, img }: IMainContain) => {
               <TalkToUs className="mt-0" />
             </div>
           }
-          right={<img className="w-[560px]" src={img} alt="" />}
+          right={<img className="w-[620px] h-[430px]" src={img} alt="" />}
         />
       </BoxModule>
     </div>

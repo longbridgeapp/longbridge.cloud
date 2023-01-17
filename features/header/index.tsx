@@ -20,22 +20,22 @@ function useNavs() {
         value: '/',
         label: i18n.t('header_nav_001'),
         children: [
-          {
-            value: '/bss',
-            label: i18n.t('header_nav_003'),
-          },
-          {
-            value: '/trading',
-            label: i18n.t('header_nav_004'),
-          },
-          {
-            value: '/market',
-            label: i18n.t('header_nav_002'),
-          },
-          {
-            value: '/crm',
-            label: i18n.t('header_nav_005'),
-          },
+          // {
+          //   value: '/bss',
+          //   label: i18n.t('header_nav_003'),
+          // },
+          // {
+          //   value: '/trading',
+          //   label: i18n.t('header_nav_004'),
+          // },
+          // {
+          //   value: '/market',
+          //   label: i18n.t('header_nav_002'),
+          // },
+          // {
+          //   value: '/crm',
+          //   label: i18n.t('header_nav_005'),
+          // },
           {
             value: '/backoffice',
             label: i18n.t('whale-backoffice-001'),

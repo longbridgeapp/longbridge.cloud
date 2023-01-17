@@ -55,7 +55,7 @@ html {
 }
 
 .list-dot {
-  @apply relative ml-3;
+  @apply relative left-1 ml-2;
 
   &::after {
     content: '';

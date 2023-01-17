@@ -11,6 +11,9 @@ import { SEOMeta } from '@/utils/seo'
 // eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import Banner from '@/features/product/Banner'
+import Box from '@/features/product/Box'
+import Title from '@/features/product/title'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -24,110 +27,111 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const BackOffice: React.FC = () => {
+  const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   const isEN = i18n.i18n.language === 'en'
-  const seoI18n = useTranslation(['seo'])
+
+  const banner_props = {
+    title: i18n.t('whale-backoffice-001'),
+    desc: [i18n.t('whale-backoffice-002'), i18n.t('whale-backoffice-003')],
+    img: {
+      'en': 'https://assets.lbkrs.com/uploads/0919331f-42c9-487d-9fea-b5b3f6cb443c/back_office_en.svg',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/28818d26-e6e4-4d2c-a1e2-c8d72bf407bd/back_office_cn.svg',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/28818d26-e6e4-4d2c-a1e2-c8d72bf407bd/back_office_cn.svg',
+    },
+  }
+
+  const bss_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/b33402d9-fae6-453f-b23d-a7445a81900d/Group 427319259.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
+  }
+
+  const asset_book_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/d6b8fee2-191a-4041-939e-7363b82248f8/Group 427319260.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
+  }
+
+  const settlement_system_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/c978b574-109e-441b-959f-9c46e4fd1405/settlement_system_en.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
+  }
+
+  const accounting_system_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/e5e3084f-ff8a-4735-b766-7b5162185237/account_system_en.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
+  }
+
+  const report_printing_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/8289fe94-d0a3-47d0-aca7-914fab85f9eb/Group 427319157.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
+  }
+
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
       <div>
-        <div
-          className="py-10 bg-cover main-container lg:py-20"
-          style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
-        >
-          <div className="flex flex-col gap-3 main-content-width lg:gap-16 lg:flex-row ">
-            <div className="flex flex-col items-start gap-5 content lg:max-w-[530px]">
-              <div className="text-3xl xl:text-[44px] font-semibold mt-0 xl:mt-5">{i18n.t('whale-backoffice-001')}</div>
-              <div className="text-lg font-normal leading-9 text-text_color_2  max-w-[500px]">
-                <div>{i18n.t('whale-backoffice-002')}</div>
-                <div>{i18n.t('whale-backoffice-003')}</div>
-              </div>
-              <TalkToUs className="mt-5" />
-            </div>
-            <div className="lg:max-w-[620px]">
-              <img
-                src={
-                  isEN
-                    ? 'https://assets.lbkrs.com/uploads/343d32d6-b194-48c5-93ae-485162c4b811/Group%20427318901.svg'
-                    : 'https://assets.lbkrs.com/uploads/c86d936e-3888-401f-b2d1-8f98fefd8595/Group 427319260.png'
-                }
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-        <div className="py-10 main-container lg:py-20">
-          <div className="flex flex-col gap-8 main-content-width lg:flex-row">
-            <div className="flex flex-col items-start gap-8 content lg:min-w-[485px]">
-              <div>
-                <div className="mb-2 text-base text-brand_color">{i18n.t('whale-backoffice-004')}</div>
-                <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-005')}</div>
-              </div>
+        <Banner {...banner_props}></Banner>
+        <Box>
+          <div className="flex flex-col lg:flex-row justify-between">
+            <div className="flex flex-col items-start gap-10 lg:w-[510px]">
+              <Title label={i18n.t('whale-backoffice-004')} title={i18n.t('whale-backoffice-005')}></Title>
               <div>
                 <div className="mb-3 text-xl font-medium">{i18n.t('whale-backoffice-006')}</div>
                 <div className="text-base font-normal">{i18n.t('whale-backoffice-007')}</div>
               </div>
               <div>
-                <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-008')}</div>
+                <div className="mb-3 text-xl font-medium">{i18n.t('whale-backoffice-008')}</div>
                 <div className="text-base font-normal">{i18n.t('whale-backoffice-009')} </div>
               </div>
               <div>
-                <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-010')}</div>
+                <div className="mb-3 text-xl font-medium">{i18n.t('whale-backoffice-010')}</div>
                 <div className="text-base font-normal">{i18n.t('whale-backoffice-011')}</div>
               </div>
             </div>
-            <div>
-              <img
-                className="mx-auto"
-                src={
-                  isEN
-                    ? 'https://assets.lbkrs.com/uploads/b33402d9-fae6-453f-b23d-a7445a81900d/Group 427319259.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg'
-                }
-                alt=""
-              />
+            <div className="lg:w-[640px] lg:h[510px] mt-10 lg:mt-0">
+              <img className="mx-auto" src={bss_img[i18n.i18n.language]} alt="" />
             </div>
           </div>
-        </div>
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
-          <div className="flex flex-col gap-8 main-content-width ">
-            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-012')}</div>
-            <div className="flex flex-col justify-between gap-8 lg:gap-[150px] lg:flex-row">
-              <div className="flex-1">
+        </Box>
+        {/* 资产账本 */}
+        <Box className="bg-bg_color_2">
+          <div className="flex flex-col gap-8">
+            <Title title={i18n.t('whale-backoffice-012')}></Title>
+            <div className="flex flex-col justify-between gap-10 lg:flex-row">
+              <div className="flex-1 max-w-[373px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-013')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-014')}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 max-w-[373px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-015')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-016')}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 max-w-[373px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-017')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-018')}</div>
               </div>
             </div>
-            <div>
-              <img
-                src={
-                  isEN
-                    ? 'https://assets.lbkrs.com/uploads/d6b8fee2-191a-4041-939e-7363b82248f8/Group 427319260.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg'
-                }
-                alt=""
-              />
+            <div className="h-[466px]">
+              <img src={asset_book_img[i18n.i18n.language]} alt="" />
             </div>
           </div>
-        </div>
-        <div className="py-10 main-container lg:py-20">
-          <div className="main-content-width">
-            <div className="mb-10 text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-019')}</div>
+        </Box>
+        {/* 结算系统 */}
+        <Box>
+          <div className="flex flex-col gap-10">
+            <Title title={i18n.t('whale-backoffice-019')}></Title>
             <div className="flex flex-col justify-center gap-12 lg:justify-between lg:items-start lg:flex-row">
-              <div className="lg:min-w-[500px]">
-                <div className="mb-10 text-2xl lg:text-[28px] font-medium">
+              <div className="lg:w-[510px]">
+                <div className="mb-10 lg:text-[28px] left-10 font-medium">
                   <div>{i18n.t('whale-backoffice-020')}</div>
-                  <div>{i18n.t('whale-backoffice-021')}</div>
+                  {isEN && <div>{i18n.t('whale-backoffice-021')}</div>}
                 </div>
-                <ul className="flex flex-col text-text_color_3 gap-y-4">
+                <ul className="flex flex-col text-text_color_3 gap-y-4 text-base">
                   <li className="list-dot">{i18n.t('whale-backoffice-022')}</li>
                   <li className="list-dot">{i18n.t('whale-backoffice-023')}</li>
                   <li className="list-dot">{i18n.t('whale-backoffice-024')}</li>
@@ -139,40 +143,27 @@ const BackOffice: React.FC = () => {
                 </ul>
               </div>
               <div>
-                <img
-                  className="mx-auto"
-                  src={
-                    isEN
-                      ? 'https://assets.lbkrs.com/uploads/2f5386a5-ac4f-413f-91ab-006a7bfe1cc1/Group 427319261.svg'
-                      : 'https://assets.lbkrs.com/uploads/longbridge-whale/84a8997c-f2ff-46db-81a1-13af7a7ed58e/a4.svg'
-                  }
-                  alt=""
-                />
+                <img className="mx-auto" src={settlement_system_img[i18n.i18n.language]} alt="" />
               </div>
             </div>
           </div>
-        </div>
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
-          <div className="flex flex-col gap-10 main-content-width ">
-            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-030')}</div>
-            <div className="flex flex-col justify-between gap-8 lg:gap-[150px] lg:flex-row">
-              <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-031')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
-                  {i18n.t('whale-backoffice-032')}
-                </div>
+        </Box>
+        {/* 公司行动 */}
+        <Box className="bg-bg_color_2">
+          <div className="flex flex-col gap-10">
+            <Title title={i18n.t('whale-backoffice-030')}></Title>
+            <div className="flex flex-col justify-between gap-10 lg:flex-row">
+              <div className="flex-1 w-[373px]">
+                <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-031')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backoffice-032')}</div>
               </div>
-              <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-033')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
-                  {i18n.t('whale-backoffice-034')}
-                </div>
+              <div className="flex-1 w-[373px]">
+                <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-033')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backoffice-034')}</div>
               </div>
-              <div className="flex-1">
-                <div className="mb-2 text-xl font-medium">{i18n.t('whale-backoffice-035')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[276px]">
-                  {i18n.t('whale-backoffice-036')}
-                </div>
+              <div className="flex-1 w-[373px]">
+                <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-035')}</div>
+                <div className="text-base font-normal">{i18n.t('whale-backoffice-036')}</div>
               </div>
             </div>
             <div>
@@ -186,88 +177,71 @@ const BackOffice: React.FC = () => {
               />
             </div>
           </div>
-        </div>
-        {/*  */}
-        <div className="py-10 main-container lg:py-20">
-          <div className="main-content-width">
-            <div className="mb-10 text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-037')}</div>
-            <div className="flex flex-col items-center gap-12 lg:flex-row lg:items-start">
-              <div className="flex flex-col gap-5">
-                <div className="mb-5 text-2xl font-medium">{i18n.t('whale-backoffice-038')}</div>
-                <div className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:w-[438px] ">
-                    {i18n.t('whale-backoffice-039')}
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
-                    {i18n.t('whale-backoffice-040')}
-                  </span>
-                </div>
-                <div className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
-                    {i18n.t('whale-backoffice-041')}
-                  </span>
+        </Box>
+        {/* 会计系统 */}
+        <Box>
+          <div className="flex flex-col gap-y-10">
+            <Title title={i18n.t('whale-backoffice-037')}></Title>
+            <div className="flex flex-col lg:flex-row justify-between ">
+              <div className="flex flex-col lg:w-[510px]">
+                <div className="mb-10 text-[28px] leading-10 font-medium">{i18n.t('whale-backoffice-038')}</div>
+                <div className="flex flex-col gap-y-5">
+                  <div className="flex items-center">
+                    <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
+                    <span className="text-base font-normal text-text_color_3 lg:w-[438px] ">
+                      {i18n.t('whale-backoffice-039')}
+                    </span>
+                  </div>
+                  <div className="flex items-center">
+                    <ImageIcon
+                      url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png"
+                      className="mr-8"
+                    />
+                    <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
+                      {i18n.t('whale-backoffice-040')}
+                    </span>
+                  </div>
+                  <div className="flex items-center">
+                    <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
+                    <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
+                      {i18n.t('whale-backoffice-041')}
+                    </span>
+                  </div>
                 </div>
               </div>
               <div>
-                <img
-                  src={
-                    isEN
-                      ? 'https://assets.lbkrs.com/uploads/15e62d75-47cf-4004-b607-7aad0ce99b8a/Group 427319192.svg'
-                      : 'https://assets.lbkrs.com/uploads/longbridge-whale/62d809a8-72b3-41f1-941c-4fc6aac0653f/a6.svg'
-                  }
-                  alt=""
-                />
+                <img src={accounting_system_img[i18n.i18n.language]} alt="" />
               </div>
             </div>
           </div>
-        </div>
-        {/*  */}
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
-          <div className="flex flex-col gap-10 main-content-width ">
-            <div className="text-2xl xl:text-4xl font-medium">{i18n.t('whale-backoffice-042')}</div>
-            <div className="flex flex-col justify-between gap-5 lg:gap-16 lg:flex-row">
-              <div className="flex-1">
+        </Box>
+        {/* 报表打印 */}
+        <Box className="bg-bg_color_2">
+          <div className="flex flex-col gap-10">
+            <Title title={i18n.t('whale-backoffice-042')}></Title>
+            <div className="flex flex-col justify-between gap-10 lg:flex-row">
+              <div className="flex-1 lg:w-[270px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-043')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
-                  {i18n.t('whale-backoffice-044')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-044')}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 lg:w-[270px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-045')}</div>
-                <div className="text-base font-normal text-text_color_3  lg:w-[246px]">
-                  {i18n.t('whale-backoffice-046')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-046')}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 lg:w-[270px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-047')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
-                  {i18n.t('whale-backoffice-048')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-048')}</div>
               </div>
-              <div className="flex-1">
+              <div className="flex-1 lg:w-[270px]">
                 <div className="mb-[10px] text-xl font-medium">{i18n.t('whale-backoffice-049')}</div>
-                <div className="text-base font-normal text-text_color_3 lg:w-[246px]">
-                  {i18n.t('whale-backoffice-050')}
-                </div>
+                <div className="text-base font-normal text-text_color_3">{i18n.t('whale-backoffice-050')}</div>
               </div>
             </div>
             <div>
-              <img
-                src={
-                  isEN
-                    ? 'https://assets.lbkrs.com/uploads/8289fe94-d0a3-47d0-aca7-914fab85f9eb/Group 427319157.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg'
-                }
-                alt=""
-              />
+              <img src={report_printing_img[i18n.i18n.language]} alt="" />
             </div>
           </div>
-        </div>
+        </Box>
         <WhaleOfficialFooter />
       </div>
     </Layout>
