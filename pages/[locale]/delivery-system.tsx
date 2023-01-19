@@ -89,10 +89,16 @@ const DeliverySystem: React.FC = () => {
     title: i18n.t('whale-delivery-system-001'),
     desc: [i18n.t('whale-delivery-system-002'), i18n.t('whale-delivery-system-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png',
+      'en': 'https://assets.lbkrs.com/uploads/a9ddf293-32d9-4ff4-a2ea-ebae8955e83e/Digital_Marketing_Platform_en.svg',
       'zh-CN': 'https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png',
     },
+  }
+
+  const trigger_type_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/c0aef081-380a-46d4-856f-3b7ff3b01c9c/trigger_type_en.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
   }
   return (
     <Layout>
@@ -243,11 +249,7 @@ const DeliverySystem: React.FC = () => {
             </div>
             <div className="flex flex-col justify-between gap-10 lg:items-center lg:flex-row">
               <div className="flex-1">
-                <img
-                  src="https://assets.lbkrs.com/uploads/1e82d4e2-ca8f-463b-860a-700df8d3a8cb/Frame 427319007.png"
-                  alt=""
-                  className="lg:w-[530px] lg:h-[320px]"
-                />
+                <img src={trigger_type_img[i18n.i18n.language]} alt="" className="lg:w-[530px] lg:h-[320px]" />
               </div>
               <div className="flex flex-col flex-1 gap-5 max-w-[580px]">
                 <div className="text-2xl lg:text-[28px] font-medium">{i18n.t('whale-delivery-system-058')}</div>

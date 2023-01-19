@@ -7,17 +7,24 @@ import TradingDeskSystem from '@/features/middle-desk/components/trading-desk-sy
 import Risk from '@/features/middle-desk/components/risk'
 import Atm from '@/features/middle-desk/components/atm'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
+import Banner from '../product/Banner'
 
 export const MiddleDeskContain = () => {
   const i18n = useTranslation('common')
 
+  const banner_props = {
+    title: i18n.t('src_pages_atm_deposit_add_single_index_8632'),
+    desc: [i18n.t('src_pages_atm_deposit_add_single_index_8633')],
+    img: {
+      'en': 'https://pub.lbkrs.com/static/offline/202301/nzFFjZEHgk6xtdt2/2.svg',
+      'zh-CN': 'https://pub.lbkrs.com/static/offline/202301/pMBj9uXMrmTVf5tT/Frame_427319007.svg',
+      'zh-HK:': 'https://pub.lbkrs.com/static/offline/202301/pMBj9uXMrmTVf5tT/Frame_427319007.svg',
+    },
+  }
+
   return (
     <div>
-      <MainContain
-        title={i18n.t('src_pages_atm_deposit_add_single_index_8632')}
-        desc={i18n.t('src_pages_atm_deposit_add_single_index_8633')}
-        img={i18n.t('packages_xadmin_shared_config_menus_7693')}
-      />
+      <Banner {...banner_props}></Banner>
       <ProductAdvantage />
       <TradingDeskSystem />
       <Risk />
