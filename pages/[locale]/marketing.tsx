@@ -117,6 +117,17 @@ const Marketing: React.FC = () => {
     },
   }
 
+  const benefit_platform_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/49bcf33b-35ec-4b27-899d-229556bd6e59/benefit_platform_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
+  }
+
+  const pagehub_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/4c1b9963-cb0d-47aa-a829-c8975a0bb589/pagehub_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
+  }
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
@@ -227,11 +238,7 @@ const Marketing: React.FC = () => {
                 {/* 权益平台 */}
                 <div className="flex flex-col-reverse items-start justify-between lg:flex-row">
                   <div className="flex-1">
-                    <img
-                      src="https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png"
-                      alt=""
-                      className="lg:w-[558px]"
-                    />
+                    <img src={benefit_platform_img[i18n.i18n.language]} alt="" className="lg:w-[558px]" />
                   </div>
                   <div>
                     <div className="mb-10 text-[28px] leading-10 font-medium  lg:max-w-[510px]">
@@ -317,11 +324,7 @@ const Marketing: React.FC = () => {
                 {/* pagehub */}
                 <div className="flex flex-col-reverse lg:items-center justify-between lg:flex-row">
                   <div className="flex-1">
-                    <img
-                      src="https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png"
-                      alt=""
-                      className="lg:w-[558px]"
-                    />
+                    <img src={pagehub_img[i18n.i18n.language]} alt="" className="lg:w-[558px]" />
                   </div>
                   <div>
                     <div className="mb-10 text-[28px] leading-10 font-medium lg:max-w-[510px]">
