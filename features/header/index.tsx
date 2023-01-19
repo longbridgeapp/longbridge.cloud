@@ -132,7 +132,6 @@ const Navs = () => {
       setExpandKeys([...expandKeys, key])
     }
   }
-  console.log(navs)
 
   return (
     <>
@@ -141,7 +140,7 @@ const Navs = () => {
           return (
             <div
               key={nav.value}
-              className={classNames('nav-item', {
+              className={classNames('nav-item text-[16px] leading-4', {
                 'nav-item__selected': nav.value === selectedNav?.value,
               })}
             >

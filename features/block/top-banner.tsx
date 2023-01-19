@@ -86,7 +86,7 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-3xl font-medium xl:text-[45px] xl:leading-snug">
+                <div className="text-3xl font-medium xl:text-[43px] xl:leading-snug">
                   <span>{i18n.t('home_page_002')}</span>&nbsp;
                   <span className="text-text_brand_color">{i18n.t('home_page_001')}</span>
                 </div>
