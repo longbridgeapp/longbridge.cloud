@@ -32,10 +32,18 @@ const Longport: React.FC = () => {
     title: i18n.t('whale-community-001'),
     desc: [i18n.t('whale-community-002'), i18n.t('whale-community-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
+      'en': 'https://assets.lbkrs.com/uploads/19f149da-b8a2-4c54-a36c-bf8746bc357f/longpoort_banner_en.svg',
       'zh-CN': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/7033f135-f3e4-4aa3-85ae-2ce685676748/Untitled.png',
     },
+  }
+
+  const rich_and_diverse_community_features_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/fc2e4335-3018-4108-85b4-700fb51ab461/rich_and_diverse_community_features_en.svg',
+    'zh-CN':
+      'https://assets.lbkrs.com/uploads/8f1fd81e-585f-4c8e-a450-8927ef70f067/rich_and_diverse_community_features_cn.svg',
+    'zh-HK':
+      'https://assets.lbkrs.com/uploads/8f1fd81e-585f-4c8e-a450-8927ef70f067/rich_and_diverse_community_features_cn.svg',
   }
 
   const product_advantage_img: Record<string, string> = {
@@ -136,12 +144,12 @@ const Longport: React.FC = () => {
             <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
               <div className="flex-1">
                 <img
-                  src="https://assets.lbkrs.com/uploads/8c3e42e3-ce76-4f09-9688-bd741dc1244d/Frame 427319002.png"
+                  src={rich_and_diverse_community_features_img[i18n.i18n.language]}
                   alt=""
                   className="lg:w-[588px]"
                 />
               </div>
-              <div className="flex-1 max-w-[510px]">
+              <div className="flex-1 max-w-[520px]">
                 <div className="mb-10 font-medium text-[28px] leading-10 ">{i18n.t('whale-community-031')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
@@ -155,7 +163,7 @@ const Longport: React.FC = () => {
                   </li>
                   <li className="flex items-center">
                     <ImageIcon url="https://pub.lbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
                       {i18n.t('whale-community-033')}
                     </span>
                   </li>
@@ -164,7 +172,7 @@ const Longport: React.FC = () => {
                       url="https://pub.lbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
                       {i18n.t('whale-community-034')}
                     </span>
                   </li>
