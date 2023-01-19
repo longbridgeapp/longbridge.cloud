@@ -138,102 +138,112 @@ const Longport: React.FC = () => {
           </div>
         </div>
         {/* 社区优势 */}
-        <div className="py-10 main-container lg:py-20">
-          <div className="flex flex-col gap-10 main-content-width">
-            <Title label={i18n.t('whale-community-029')} title={i18n.t('whale-community-030')}></Title>
-            <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
-              <div className="flex-1">
-                <img
-                  src={rich_and_diverse_community_features_img[i18n.i18n.language]}
-                  alt=""
-                  className="lg:w-[588px]"
-                />
+        <Box>
+          <div>
+            <div className="flex flex-col gap-10">
+              <Title label={i18n.t('whale-community-029')} title={i18n.t('whale-community-030')}></Title>
+              <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+                <div className="flex-1">
+                  <img
+                    src={rich_and_diverse_community_features_img[i18n.i18n.language]}
+                    alt=""
+                    className="lg:w-[588px]"
+                  />
+                </div>
+                <div className="flex-1 max-w-[520px]">
+                  <div className="mb-10 font-medium text-[28px] leading-10 ">{i18n.t('whale-community-031')}</div>
+                  <ul className="flex flex-col gap-6">
+                    <li className="flex items-center">
+                      <ImageIcon
+                        url="https://assets.lbkrs.com/uploads/a8e48045-8feb-4a5e-8283-0bc248c9903a/Union.svg"
+                        className="mr-8"
+                      />
+                      <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
+                        {i18n.t('whale-community-032')}
+                      </span>
+                    </li>
+                    <li className="flex items-center">
+                      <ImageIcon
+                        url="https://pub.lbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png"
+                        className="mr-8"
+                      />
+                      <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
+                        {i18n.t('whale-community-033')}
+                      </span>
+                    </li>
+                    <li className="flex items-center">
+                      <ImageIcon
+                        url="https://pub.lbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
+                        className="mr-8"
+                      />
+                      <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
+                        {i18n.t('whale-community-034')}
+                      </span>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div className="flex-1 max-w-[520px]">
-                <div className="mb-10 font-medium text-[28px] leading-10 ">{i18n.t('whale-community-031')}</div>
+            </div>
+            <hr className="my-10"></hr>
+            <div className="flex flex-col lg:items-center lg:flex-row lg:justify-between">
+              <div className="flex-1 max-w-[510px]">
+                <div className="mb-10 font-medium text-[28px] leading-10">{i18n.t('whale-community-035')}</div>
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon
-                      url="https://assets.lbkrs.com/uploads/a8e48045-8feb-4a5e-8283-0bc248c9903a/Union.svg"
+                      url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png"
                       className="mr-8"
                     />
                     <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
-                      {i18n.t('whale-community-032')}
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png" className="mr-8" />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
-                      {i18n.t('whale-community-033')}
+                      {i18n.t('whale-community-036')}
                     </span>
                   </li>
                   <li className="flex items-center">
                     <ImageIcon
-                      url="https://pub.lbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
+                      url="https://pub.lbkrs.com/files/202212/mqUV14XqnvYE6YgC/customer.png"
                       className="mr-8"
                     />
-                    <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
-                      {i18n.t('whale-community-034')}
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                      {i18n.t('whale-community-037')}
+                    </span>
+                  </li>
+                  <li className="flex items-center">
+                    <ImageIcon url="https://pub.lbkrs.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
+                    <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
+                      {i18n.t('whale-community-038')}
                     </span>
                   </li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-        <div className="py-10 main-container bg-bg_color_2 lg:py-20">
-          <div className="flex flex-col lg:items-center main-content-width lg:flex-row lg:justify-between">
-            <div className="flex-1 max-w-[510px]">
-              <div className="mb-10 font-medium text-[28px] leading-10">{i18n.t('whale-community-035')}</div>
-              <ul className="flex flex-col gap-6">
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
-                    {i18n.t('whale-community-036')}
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/mqUV14XqnvYE6YgC/customer.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-community-037')}
-                  </span>
-                </li>
-                <li className="flex items-center">
-                  <ImageIcon url="https://pub.lbkrs.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
-                  <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
-                    {i18n.t('whale-community-038')}
-                  </span>
-                </li>
-              </ul>
-            </div>
-            <img
-              src="https://assets.lbkrs.com/uploads/5df88262-11d9-4f8b-8d92-ba11219eb598/Frame 427319003.png"
-              alt=""
-              className="lg:w-[588px]"
-            />
-          </div>
-        </div>
-
-        <Box>
-          <div className="flex flex-col md:flex-row justify-between gap-10">
-            <div className="flex flex-col items-center justify-center flex-1 text-center">
               <img
-                src="https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg"
+                src="https://assets.lbkrs.com/uploads/5df88262-11d9-4f8b-8d92-ba11219eb598/Frame 427319003.png"
                 alt=""
-                className="lg:w-[580px]"
+                className="lg:w-[588px]"
               />
-              <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-039')}</div>
-              <div className="text-base text-text_color_3 max-w-[398px] leading-7">{i18n.t('whale-community-040')}</div>
             </div>
-            <div className="flex flex-col items-center justify-center flex-1 text-center">
-              <img
-                src="https://assets.lbkrs.com/uploads/bc64e5f9-f843-4ec3-bae7-91adc06a4862/Frame 427319005.png"
-                alt=""
-                className="lg:w-[580px]"
-              />
-              <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-041')}</div>
-              <div className="text-base text-text_color_3  max-w-[400px] leading-7">
-                {i18n.t('whale-community-042')}
+            <hr className="my-10"></hr>
+            <div className="flex flex-col md:flex-row justify-between gap-10">
+              <div className="flex flex-col items-center justify-center flex-1 text-center">
+                <img
+                  src="https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg"
+                  alt=""
+                  className="lg:w-[580px]"
+                />
+                <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-039')}</div>
+                <div className="text-base text-text_color_3 max-w-[398px] leading-7">
+                  {i18n.t('whale-community-040')}
+                </div>
+              </div>
+              <div className="flex flex-col items-center justify-center flex-1 text-center">
+                <img
+                  src="https://assets.lbkrs.com/uploads/bc64e5f9-f843-4ec3-bae7-91adc06a4862/Frame 427319005.png"
+                  alt=""
+                  className="lg:w-[580px]"
+                />
+                <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-041')}</div>
+                <div className="text-base text-text_color_3  max-w-[400px] leading-7">
+                  {i18n.t('whale-community-042')}
+                </div>
               </div>
             </div>
           </div>
