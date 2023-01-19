@@ -52,6 +52,12 @@ const Longport: React.FC = () => {
     'zh-HK': 'https://assets.lbkrs.com/uploads/d0b0efb0-fba7-4625-96f9-dc1b41550b7f/product_advantage_cn.svg',
   }
 
+  const unique_collection_feature_img: Record<string, string> = {
+    'en': 'https://assets.lbkrs.com/uploads/10384578-cd37-48dd-81c4-9cc7bfb7b943/unique_collection_feature_en.svg',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg',
+  }
+
   return (
     <Layout>
       <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
@@ -224,11 +230,7 @@ const Longport: React.FC = () => {
             <hr className="my-10"></hr>
             <div className="flex flex-col md:flex-row justify-between gap-10">
               <div className="flex flex-col items-center justify-center flex-1 text-center">
-                <img
-                  src="https://assets.lbkrs.com/uploads/68a97a04-c237-459d-8f4a-07382cbf4e42/Frame%20427319004.svg"
-                  alt=""
-                  className="lg:w-[580px]"
-                />
+                <img src={unique_collection_feature_img[i18n.i18n.language]} alt="" className="lg:w-[580px]" />
                 <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-039')}</div>
                 <div className="text-base text-text_color_3 max-w-[398px] leading-7">
                   {i18n.t('whale-community-040')}
