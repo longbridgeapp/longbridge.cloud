@@ -5,6 +5,7 @@ import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
 import { useReports } from '@/hooks/use-reports'
 import classNames from 'classnames'
+import { t } from 'i18next'
 import { FC, MouseEvent, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
@@ -58,7 +59,7 @@ function useNavs() {
           // },
           {
             value: '/front-desk',
-            label: '柜台系统前中台',
+            label: i18n.t('whale-middle-desk-001'),
           },
         ],
       },
