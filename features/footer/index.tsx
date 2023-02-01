@@ -4,9 +4,6 @@ import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 import { useMount } from 'ahooks'
 
-const email = 'support@longbridge-inc.com'
-const tel = '400-024-2688'
-
 const Footer: FC = () => {
   const [isCN, setISCN] = useState(false)
 
@@ -37,6 +34,30 @@ const Footer: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const { emailList, telList } = useMemo(() => {
+    const emailList = [
+      {
+        label: i18n.t('footer_006'),
+        value: 'cs@longbridge.cloud',
+      },
+      {
+        label: i18n.t('footer_007'),
+        value: 'bd@longbridge.cloud',
+      },
+    ]
+    const telList = [
+      {
+        label: '',
+        value: '+852 38511712',
+      },
+      {
+        label: '',
+        value: '+852 38511713',
+      },
+    ]
+    return { emailList, telList }
+  }, [])
+
   useMount(() => {
     const isCN = window.location.hostname.includes('.cn')
     setISCN(isCN)
@@ -46,19 +67,26 @@ const Footer: FC = () => {
     <footer className={classNames(styles.footer, 'main-container')}>
       <div className={classNames('main-content-width')}>
         <div className="flex items-center justify-between">
-          <div className="flex gap-14">
-            {/* <div className="flex flex-col">
+          <div className="flex gap-16">
+            <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_004')}</span>
-              <a className="mt-2 font-medium" href={`tel:${tel}`}>
-                {tel}
-              </a>
+              {telList.map(({ value }) => (
+                <a className="mt-2 font-medium whitespace-nowrap" href={`tel:${value}`} key={value}>
+                  {value}
+                </a>
+              ))}
             </div>
             <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_003')}</span>
-              <a className="mt-2 font-medium" href={`mailto:${email}`}>
-                {email}
-              </a>
-            </div> */}
+              {emailList.map(({ label, value }) => (
+                <div key={value} className="flex flex-wrap mt-2">
+                  <span className="mr-2">{label}:</span>
+                  <a className=" font-medium" href={`mailto:${value}`}>
+                    {value}
+                  </a>
+                </div>
+              ))}
+            </div>
           </div>
           <div>
             {false &&
