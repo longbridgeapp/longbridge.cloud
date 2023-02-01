@@ -47,7 +47,7 @@ const Footer: FC = () => {
       <div className={classNames('main-content-width')}>
         <div className="flex items-center justify-between">
           <div className="flex gap-14">
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <span className="text-sm">{i18n.t('footer_004')}</span>
               <a className="mt-2 font-medium" href={`tel:${tel}`}>
                 {tel}
@@ -58,7 +58,7 @@ const Footer: FC = () => {
               <a className="mt-2 font-medium" href={`mailto:${email}`}>
                 {email}
               </a>
-            </div>
+            </div> */}
           </div>
           <div>
             {false &&
