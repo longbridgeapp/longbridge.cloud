@@ -19,6 +19,11 @@ function useNavs() {
     return [
       {
         value: '/',
+        label: i18n.t('features_header_index_2'),
+        children: [],
+      },
+      {
+        value: 'product',
         label: i18n.t('header_nav_001'),
         children: [
           // {
@@ -38,12 +43,12 @@ function useNavs() {
           //   label: i18n.t('header_nav_005'),
           // },
           {
-            value: '/backoffice',
-            label: i18n.t('whale-backoffice-001'),
+            value: '/front-desk',
+            label: i18n.t('whale-middle-desk-001'),
           },
           {
-            value: '/marketing',
-            label: i18n.t('whale-marketing-001'),
+            value: '/backoffice',
+            label: i18n.t('whale-backoffice-001'),
           },
           {
             value: '/longport',
@@ -53,13 +58,13 @@ function useNavs() {
             value: '/delivery-system',
             label: i18n.t('whale-delivery-system-001'),
           },
-          // {
-          //   value: '/retail',
-          //   label: '零售系统',
-          // },
           {
-            value: '/front-desk',
-            label: i18n.t('whale-middle-desk-001'),
+            value: '/marketing',
+            label: i18n.t('whale-marketing-001'),
+          },
+          {
+            value: '/product/retail',
+            label: i18n.t('features_header_index_3'),
           },
         ],
       },
@@ -67,6 +72,14 @@ function useNavs() {
         value: '/solutions/introducing-broker',
         label: i18n.t('header_nav_006'),
         children: [
+          {
+            value: '/solutions/app-plus',
+            label: i18n.t('features_header_index_4'),
+          },
+          {
+            value: '/solutions/securities-market',
+            label: '证券柜台解决方案',
+          },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),
@@ -75,6 +88,7 @@ function useNavs() {
           //   value: '/solutions/app',
           //   label: i18n.t('solutions_app_page_001'),
           // },
+          /** 20230216 - 三三说屏蔽的
           {
             value: '/solutions/introducing-broker',
             label: i18n.t('introducing-broker.page-title'),
@@ -86,7 +100,7 @@ function useNavs() {
           {
             value: '/solutions/white-label',
             label: i18n.t('white-label.page-title'),
-          },
+          }, */
         ],
       },
       {
@@ -160,7 +174,7 @@ const Navs = () => {
                     )
                   }}
                 >
-                  <LocaleLink to={nav.value} className="flex items-center">
+                  <div className="flex items-center">
                     <span>{nav.label}</span>
                     <div
                       className={classNames('text-[8px] ml-1')}
@@ -170,7 +184,7 @@ const Navs = () => {
                     >
                       <Icon type="cart-down" />
                     </div>
-                  </LocaleLink>
+                  </div>
                 </Dropdown>
               )}
               {nav.children.length === 0 && (

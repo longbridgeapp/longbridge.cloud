@@ -160,7 +160,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
           })}
         </div>
         {/* <p className="mb-4 text-sm text-text_color_2">{i18n.t(' 星号 (*) 的栏位为必填')}</p> */}
-        <p className="mb-4 text-sm text-text_color_2">Email: cs@Longbridge.cloud</p>
+        <p className="mb-4 text-sm text-text_color_2">Email: cs@longbridge.cloud</p>
       </div>
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full text-sm">
         {i18n.t('live_form_004')}
@@ -169,7 +169,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
   )
 }
 
-export const TalkToUs = ({ className, style }: { className?: string; style?: CSSProperties }) => {
+export const TalkToUs = ({ className, style, text }: { className?: string; style?: CSSProperties; text?: string }) => {
   const i18n = useTranslation('common')
   const [visible, setVisible] = useState(false)
 
@@ -188,7 +188,7 @@ export const TalkToUs = ({ className, style }: { className?: string; style?: CSS
         </FullMask>
       )}
       <Button size="medium" className={classNames('mt-10', className)} style={style} onClick={onOpen}>
-        {i18n.t('talk-to-us')}
+        {text || i18n.t('talk-to-us')}
       </Button>
     </>
   )

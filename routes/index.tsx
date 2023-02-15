@@ -12,12 +12,14 @@ import LivePage from '@/pages/[locale]/live'
 import IntroducingBroker from '@/pages/[locale]/solutions/introducing-broker'
 import Longport from '@/pages/[locale]/solutions/longport'
 import WhiteLabel from '@/pages/[locale]/solutions/white-label'
+import AppPlus from '@/pages/[locale]/solutions/app-plus'
+import SecuritiesMarket from '@/pages/[locale]/solutions/securities-market'
 import WhaleReports from '@/pages/[locale]/whale-reports'
 import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
 import WhaleLongport from '@/pages/[locale]/longport'
 import DeliverySystem from '@/pages/[locale]/delivery-system'
-import Retail from '@/pages/[locale]/retail'
+import Retail from '@/pages/[locale]/product/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
@@ -38,6 +40,8 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="solutions/introducing-broker" element={<IntroducingBroker {...pageProps} />} />
               <Route path="solutions/longport" element={<Longport {...pageProps} />} />
               <Route path="solutions/white-label" element={<WhiteLabel {...pageProps} />} />
+              <Route path="solutions/app-plus" element={<AppPlus {...pageProps} />} />
+              <Route path="solutions/securities-market" element={<SecuritiesMarket {...pageProps} />} />
               <Route path="about" element={<AboutPage {...pageProps} />} />
               <Route path="live" element={<LivePage {...pageProps} />} />
               <Route path="whale-reports" element={<WhaleReports {...pageProps} />} />
@@ -45,7 +49,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="marketing" element={<Marketing {...pageProps} />} />
               <Route path="longport" element={<WhaleLongport {...pageProps} />} />
               <Route path="delivery-system" element={<DeliverySystem {...pageProps} />} />
-              <Route path="retail" element={<Retail {...pageProps} />} />
+              <Route path="product/retail" element={<Retail {...pageProps} />} />
               <Route path="front-desk" element={<FrontDesk {...pageProps} />} />
             </Route>
           </Fragment>

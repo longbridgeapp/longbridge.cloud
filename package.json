@@ -53,5 +53,10 @@
     "not ie 11",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "i18nExtractor": {
+    "localePath": "./public/locales",
+    "keyPrefixMaxDepth": 5,
+    "stripKeyPrefix": ""
+  }
 }
