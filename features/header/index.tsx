@@ -87,6 +87,10 @@ function useNavs() {
             value: '/solutions/white-label',
             label: i18n.t('white-label.page-title'),
           },
+          {
+            value: '/solutions/app-plus',
+            label: '互联网 App + 解决方案',
+          },
         ],
       },
       {

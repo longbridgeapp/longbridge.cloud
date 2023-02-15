@@ -1,0 +1,27 @@
+:local(.table-wrapper) {
+  th,
+  td {
+    @apply px-5 py-3 border-b border-r border-border_color;
+  }
+  th {
+    .title {
+      @apply text-sm font-medium;
+    }
+    .subtitle {
+      @apply text-xs font-normal text-text_color_2;
+    }
+  }
+
+  tbody{
+    td{
+      @apply text-base;
+    }
+  }
+
+  th.light {
+    @apply bg-brand_color_2 text-white;
+    .subtitle{
+      @apply text-white opacity-80;
+    }
+  }
+}
