@@ -33,7 +33,7 @@ const Retail: React.FC = () => {
     title: i18n.t('features_header_index_3'),
     desc: [i18n.t('pages_locale_solutions_retail_5')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/8ae1d3ce-6ae4-4fa7-bda1-9ada3196354c/retail-banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/2cbf2f1f-0f6f-4c4e-8e6d-92e68ae356f0/retail-banner-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/8ae1d3ce-6ae4-4fa7-bda1-9ada3196354c/retail-banner.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/8ae1d3ce-6ae4-4fa7-bda1-9ada3196354c/retail-banner.png',
     },
@@ -88,7 +88,7 @@ const Retail: React.FC = () => {
       },
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/278c5a76-d094-406b-a3c5-6a3aadb1079c/banner1.png',
+      'en': 'https://assets.lbkrs.com/uploads/085917e8-5a11-46fa-9af6-5ff5f28dcaf0/banner-1-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/278c5a76-d094-406b-a3c5-6a3aadb1079c/banner1.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/278c5a76-d094-406b-a3c5-6a3aadb1079c/banner1.png',
     },
@@ -112,7 +112,7 @@ const Retail: React.FC = () => {
       },
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/d7ba0b31-3490-4161-9085-bbc2e730cbcf/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/614664b7-941e-4394-9e63-e4f851c46b72/banner-2-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/d7ba0b31-3490-4161-9085-bbc2e730cbcf/banner.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/d7ba0b31-3490-4161-9085-bbc2e730cbcf/banner.png',
     },
@@ -137,7 +137,7 @@ const Retail: React.FC = () => {
       },
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/f6ecffff-4e51-4f0e-aeb4-fbc9f40b780a/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/e7a96676-6934-481f-98a8-737989e151d5/banner-3-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/f6ecffff-4e51-4f0e-aeb4-fbc9f40b780a/banner.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/f6ecffff-4e51-4f0e-aeb4-fbc9f40b780a/banner.png',
     },
@@ -176,7 +176,7 @@ const Retail: React.FC = () => {
       },
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/46ba6579-ef04-4ade-baae-31fe099c62af/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/1eded101-8c10-44e5-aee1-c6b334742717/banner-4-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/46ba6579-ef04-4ade-baae-31fe099c62af/banner.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/46ba6579-ef04-4ade-baae-31fe099c62af/banner.png',
     },
