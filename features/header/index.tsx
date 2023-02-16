@@ -19,11 +19,11 @@ function useNavs() {
     return [
       {
         value: '/',
-        label: '首页',
+        label: i18n.t('features_header_index_2'),
         children: [],
       },
       {
-        value: '/',
+        value: 'product',
         label: i18n.t('header_nav_001'),
         children: [
           // {
@@ -63,8 +63,8 @@ function useNavs() {
             label: i18n.t('whale-marketing-001'),
           },
           {
-            value: '/retail',
-            label: '零售终端',
+            value: '/product/retail',
+            label: i18n.t('features_header_index_3'),
           },
         ],
       },
@@ -74,7 +74,7 @@ function useNavs() {
         children: [
           {
             value: '/solutions/app-plus',
-            label: '互联网 App + 解决方案',
+            label: i18n.t('features_header_index_4'),
           },
           // {
           //   value: '/solutions',

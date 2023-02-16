@@ -69,7 +69,7 @@ export const ImageAndList: React.FC<IImageAndListProps> = ({
         {/* 文字 */}
         <div className="flex flex-col items-start">
           {subTitle && <div className="mb-2 text-base font-medium text-text_color_2">{subTitle}</div>}
-          <div className="text-3xl font-semibold lg:w-[510px]">{title}</div>
+          <div className="text-3xl font-semibold lg:w-[510px] text-left">{title}</div>
           <div className="flex flex-col mt-10 text-base font-normal text-text_color_1_supplement gap-y-6">
             {desc.map((i, index) => {
               return (

@@ -18,7 +18,7 @@ import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
 import WhaleLongport from '@/pages/[locale]/longport'
 import DeliverySystem from '@/pages/[locale]/delivery-system'
-import Retail from '@/pages/[locale]/solutions/retail'
+import Retail from '@/pages/[locale]/product/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
@@ -47,7 +47,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="marketing" element={<Marketing {...pageProps} />} />
               <Route path="longport" element={<WhaleLongport {...pageProps} />} />
               <Route path="delivery-system" element={<DeliverySystem {...pageProps} />} />
-              <Route path="retail" element={<Retail {...pageProps} />} />
+              <Route path="product/retail" element={<Retail {...pageProps} />} />
               <Route path="front-desk" element={<FrontDesk {...pageProps} />} />
             </Route>
           </Fragment>

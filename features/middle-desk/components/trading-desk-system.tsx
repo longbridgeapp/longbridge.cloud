@@ -81,17 +81,17 @@ const TradingDeskSystem = () => {
       title={i18n.t('src_pages_atm_deposit_add_single_index_8677')}
     >
       <>
-        <div className="flex lg:space-x-10 flex-col lg:flex-row">
+        <div className="flex flex-col lg:space-x-10 lg:flex-row">
           {sectionList01.map((item: any, index) => {
             return (
-              <div className="flex lg:block flex-col" key={index}>
+              <div className="flex flex-col lg:block" key={index}>
                 <img className="mb-5" src={item?.img} alt="" />
                 <div className="space-y-4 lg:max-w-[498px]">
                   <div className="text-[28px] font-medium leading-10">{item?.title}</div>
                   {item?.list &&
                     item.list.map((itm: any, idx: number) => {
                       return (
-                        <div className="dot-list text-base leading-6 text-text_color_1_supplement" key="idx">
+                        <div className="text-base leading-6 dot-list text-text_color_1_supplement" key={idx}>
                           {itm}
                         </div>
                       )
