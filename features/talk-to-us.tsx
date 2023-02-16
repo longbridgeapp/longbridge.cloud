@@ -169,7 +169,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
   )
 }
 
-export const TalkToUs = ({ className, style }: { className?: string; style?: CSSProperties }) => {
+export const TalkToUs = ({ className, style, text }: { className?: string; style?: CSSProperties; text?: string }) => {
   const i18n = useTranslation('common')
   const [visible, setVisible] = useState(false)
 
@@ -188,7 +188,7 @@ export const TalkToUs = ({ className, style }: { className?: string; style?: CSS
         </FullMask>
       )}
       <Button size="medium" className={classNames('mt-10', className)} style={style} onClick={onOpen}>
-        {i18n.t('talk-to-us')}
+        {text || i18n.t('talk-to-us')}
       </Button>
     </>
   )
