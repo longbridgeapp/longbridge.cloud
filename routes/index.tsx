@@ -18,7 +18,7 @@ import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
 import WhaleLongport from '@/pages/[locale]/longport'
 import DeliverySystem from '@/pages/[locale]/delivery-system'
-import Retail from '@/pages/[locale]/retail'
+import Retail from '@/pages/[locale]/solutions/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {

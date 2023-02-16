@@ -368,7 +368,7 @@
   "feedback.title": "閣下亦可以通過以下表格和我們聯絡",
   "send-success": "發送成功",
   "send-error": "發送失敗",
-  "whale-backoffice-001": "櫃台系統後台",
+  "whale-backoffice-001": "櫃台系統 - 後台",
   "whale-backoffice-002": "全新一代基於雲原生架構的一站式交易結算系統，覆蓋了從交易到結算的全部流程。",
   "whale-backoffice-003": "支持不同市場、多投資品、多幣種的交易清算能力，具備運營卡券一體化清算能力，滿足券商靈活的業務模式。",
   "whale-backoffice-004": "產品優勢",
@@ -652,5 +652,5 @@
   "packages_xadmin_shared_config_menus_7696": "https://pub.lbkrs.com/static/offline/202301/YhFrVX4dG7RjMfRV/Frame_427319075.svg",
   "packages_xadmin_shared_config_menus_7697": "https://pub.lbkrs.com/static/offline/202301/huqvL9fEeVsZFntF/6.svg",
   "packages_xadmin_shared_config_menus_7698": "https://pub.lbkrs.com/static/offline/202301/GMu3A76tWHr6PHuJ/5.svg",
-  "whale-middle-desk-001": "櫃檯系統前中台"
+  "whale-middle-desk-001": "櫃檯系統 - 前中台"
 }

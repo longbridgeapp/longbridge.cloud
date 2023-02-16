@@ -59,8 +59,8 @@ const Compares: React.FC<{ list: ICompareProps[]; compareId: string; className?:
           )}
           {item.thirdDescription && (
             <div className="px-8 py-5 text-white bg-brand_color compare-third">
-              <div className="text-base font-medium mb-[10px]">{item.thirdTitle}</div>
-              <div className="text-sm font-normal">{item.thirdDescription}</div>
+              <div className="text-base font-normal mb-[10px]">{item.thirdTitle}</div>
+              <div className="text-xl font-medium">{item.thirdDescription}</div>
             </div>
           )}
         </div>
