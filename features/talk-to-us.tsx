@@ -160,7 +160,7 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
           })}
         </div>
         {/* <p className="mb-4 text-sm text-text_color_2">{i18n.t(' 星号 (*) 的栏位为必填')}</p> */}
-        <p className="mb-4 text-sm text-text_color_2">Email: cs@Longbridge.cloud</p>
+        <p className="mb-4 text-sm text-text_color_2">Email: cs@longbridge.cloud</p>
       </div>
       <Button loading={loading} onClick={run} disabled={disabled} size="medium" className="w-full text-sm">
         {i18n.t('live_form_004')}
