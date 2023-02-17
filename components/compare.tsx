@@ -49,11 +49,11 @@ const Compares: React.FC<{ list: ICompareProps[]; compareId: string; className?:
             </div>
           </div>
           {item.subList && (
-            <div className="flex-1 px-8 pb-5 compare-second">
+            <div className="flex-1 px-8 pb-8 compare-second">
               <div className="text-xl font-medium mt-[30px] mb-[10px]">{item.subTitle}</div>
               <ul className="flex flex-col gap-y-4">
                 {item.subList.map((subItem, subIndex) => (
-                  <li className="text-base list-dot" key={subIndex}>
+                  <li className="text-base text-left list-dot" key={subIndex}>
                     {subItem}
                   </li>
                 ))}
@@ -61,7 +61,7 @@ const Compares: React.FC<{ list: ICompareProps[]; compareId: string; className?:
             </div>
           )}
           {item.thirdDescription && (
-            <div className="px-8 py-5 text-white bg-brand_color compare-third">
+            <div className="px-8 py-8 text-white bg-brand_color compare-third">
               <div className="mb-3 text-base">{item.thirdTitle}</div>
               <div className="text-xl font-medium">{item.thirdDescription}</div>
             </div>
