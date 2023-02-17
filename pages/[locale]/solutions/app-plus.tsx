@@ -44,13 +44,14 @@ const AppPlusPage = () => {
   const content_banner_props = {
     title: '资讯社区服务',
     desc: [
-      '提供「互联网 App+」解决方案，接入实时行情、资讯，营销服务，助力零售经济商快速拓客展业。通过进行简单权益配置即可深入客户场景，轻松触达每一位客户，并结合创意生动、引人入胜的营销活动，快速找到目标客户，持续不断的赢得新客户、激发老客户，完成高效的运营转化',
+      '随着投资者往更便捷高效的互联网交易工具上迁移，除查看传统的行情、财务等信息外，投资者正在越来越多通过社区交流来辅助决策。传统券商无需产研资源和互联网方法论，便可拥有行业顶尖竞争力的社区服务。同时，提供 7*24 实时新闻资讯，满足用户对资讯的一切需求',
     ],
     img: {
       'en': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
     },
+    localLink: '/longport',
   }
   const content_banner_props_2 = {
     title: '客户营销',
@@ -62,6 +63,7 @@ const AppPlusPage = () => {
       'zh-CN': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
     },
+    localLink: '/marketing',
   }
   const content_banner_props_3 = {
     title: '支持功能定制开发',
@@ -79,7 +81,11 @@ const AppPlusPage = () => {
       title: 'LongPort',
       description: '公共品牌的证券交易系统，支持不同券商入驻，可实现即开即用，开户成功即可进行交易',
       subTitle: '适用客户',
-      subList: ['快速入驻公共品牌，更快、更易开展证券业务', '轻量、低成本的开展券商业务'],
+      subList: [
+        '快速入驻公共品牌，更快、更易开展证券业务',
+        '轻量、低成本的开展券商业务',
+        '无需承担额外技术资源成本，即可快速获客',
+      ],
     },
     {
       title: 'White Label',
@@ -99,7 +105,7 @@ const AppPlusPage = () => {
     body: [
       {
         label: '零售终端',
-        value: [['风格制定', false, true, true, true]],
+        value: [['风格定制', false, true, true, true]],
       },
       {
         label: '内容服务',
@@ -117,7 +123,7 @@ const AppPlusPage = () => {
               支持三大市场行情及基本面
             </span>,
           ],
-          ['咨询社区', true, true, true, true],
+          ['资讯社区服务', true, true, true, true],
         ],
       },
       {
@@ -125,14 +131,24 @@ const AppPlusPage = () => {
         value: [
           [
             '客户管理',
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-text_color_1">
               部分支持
             </span>,
             true,
             true,
             true,
           ],
-          ['客户营销', false, true, true, true],
+          [
+            '客户营销',
+            false,
+            <span key="line-1" className="text-text_color_1">
+              部分支持
+            </span>,
+            <span key="line-1" className="text-text_color_1">
+              部分支持
+            </span>,
+            true,
+          ],
         ],
       },
     ],
@@ -273,10 +289,10 @@ const AppPlusPage = () => {
       {
         label: '客户管理',
         value: [
-          ['客户关系', false, true, true, true],
+          ['客户关系管理', true, true, true, true],
           [
             <div key="client">
-              <div>客户系统</div>
+              <div>客服系统</div>
               <div className="mt-1 text-xs text-text_color_2">第三方服务</div>
             </div>,
             false,

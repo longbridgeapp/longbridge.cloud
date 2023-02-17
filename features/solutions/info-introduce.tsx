@@ -2,7 +2,9 @@ import React, { ReactNode } from 'react'
 import classnames from 'classnames'
 import { useTranslation } from 'react-i18next'
 import { TalkToUs } from '@/features/talk-to-us'
+import { LocaleLink } from '@/components/locale-link'
 import ImageIcon from '@/components/image-icon'
+import Button from '@/components/button'
 
 interface IInfoIntroduce {
   icon?: string
@@ -17,6 +19,7 @@ interface IImageAndTextProps {
   cover?: string
   needTalk?: boolean
   reverse?: boolean
+  localLink?: string
 }
 
 interface IImageAndListProps {
@@ -99,6 +102,7 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
   cover,
   needTalk = true,
   reverse = true,
+  localLink = '',
 }) => {
   const i18n = useTranslation('common')
   return (
@@ -119,7 +123,18 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
               })}
             </div>
           )}
-          {needTalk && <TalkToUs className="mt-10" text="了解更多" />}
+
+          {needTalk && (
+            <>
+              {localLink ? (
+                <LocaleLink className="flex items-center mt-10" to={localLink}>
+                  <Button size="medium">了解更多</Button>
+                </LocaleLink>
+              ) : (
+                <TalkToUs className="mt-10" text="了解更多" />
+              )}
+            </>
+          )}
         </div>
         {/* 图片 */}
         <div className="lg:w-[430px] ">

@@ -274,6 +274,7 @@
   "feedback.name": "姓名",
   "feedback.name-placeholder": "請輸入姓名",
   "feedback.institution": "所在公司 / 機構名稱",
+  "feedback.institution-placeholder": "請輸入公司 / 機構名稱",
   "feedback.email": "郵箱",
   "feedback.email-placeholder": "請輸入郵箱地址",
   "feedback.other": "其他訊息",
