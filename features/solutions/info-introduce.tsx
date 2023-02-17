@@ -41,7 +41,7 @@ const InfoIntroduce: React.FC<{
   return (
     <div className={classnames('flex flex-col gap-10 lg:flex-row justify-center items-center ', className)}>
       {data.map((info, index) => (
-        <div key={index} className={classnames('flex flex-col flex-1 gap-y-2', className, `max-w-[${maxWidth}px]`)}>
+        <div key={index} className={classnames('flex flex-col flex-1 gap-y-2', `max-w-[${maxWidth}px]`)}>
           {info.icon && <ImageIcon url={info.icon} className={classnames('mx-auto lg:mx-0', info.iconClass)} />}
           {info.title && (
             <div className="text-xl font-medium text-center text-text_color_1 lg:text-left">{info.title}</div>
@@ -114,10 +114,10 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
         )}
       >
         {/* 文字 */}
-        <div className="flex flex-col items-start lg:w-[618px]">
+        <div className="flex flex-col items-start lg:w-[632px]">
           {title && <div className="text-4xl font-semibold">{title}</div>}
           {desc && (
-            <div className="flex flex-col mt-5 text-base font-normal text-text_color_1_supplement gap-y-2">
+            <div className="flex flex-col mt-5 text-base font-normal text-text_color_1_supplement gap-y-4">
               {desc.map((i, index) => {
                 return <div key={index}>{i}</div>
               })}

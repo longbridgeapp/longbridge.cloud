@@ -47,6 +47,7 @@ const SecuritiesMarket: React.FC = () => {
       'zh-CN': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
     },
+    localLink: '/front-desk',
   }
   const content_banner_props_2 = {
     desc: [
@@ -62,6 +63,7 @@ const SecuritiesMarket: React.FC = () => {
       'zh-HK': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
     },
     reverse: false,
+    localLink: '/front-desk',
   }
   const content_banner_props_3 = {
     desc: [
@@ -75,6 +77,7 @@ const SecuritiesMarket: React.FC = () => {
       'zh-CN': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
     },
+    localLink: '/backoffice',
   }
 
   const table_1 = {
@@ -551,7 +554,7 @@ const SecuritiesMarket: React.FC = () => {
             <Table data={table_3} thColSpan={1} />
           </>
         </Box>
-        <Box>
+        <Box className="bg-bg_color_2">
           <>
             <Title
               label={i18n.t('pages_locale_solutions_securities_market_8909')}

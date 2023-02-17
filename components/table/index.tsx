@@ -22,8 +22,8 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
 
   return (
     <div className={classnames(styles['table-wrapper'], className)}>
-      <table className="w-full text-left border-t border-l border-border_color">
-        <thead className="sm:sticky sm:top-20">
+      <table className="w-full text-left bg-white border-t border-l border-border_color">
+        <thead className="sm:sticky sm:top-[67px]">
           <tr>
             <th colSpan={thColSpan} key={-1} className="bg-bg_table_1"></th>
             {data.heads.map((h, i) => (
@@ -52,7 +52,7 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
                     {i_0 === true ? (
                       <RightIcon key="icon" />
                     ) : i_0 === false ? (
-                      <span key="line-1" className="text-text_color_3">
+                      <span key="line-1" className="text-text_color_3_supplement">
                         －
                       </span>
                     ) : (
@@ -70,7 +70,7 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
                       {i_0 === true ? (
                         <RightIcon key="icon" />
                       ) : i_0 === false ? (
-                        <span key="line-1" className="text-text_color_3">
+                        <span key="line-1" className="text-text_color_3_supplement">
                           －
                         </span>
                       ) : (

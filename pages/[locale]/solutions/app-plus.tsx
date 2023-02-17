@@ -477,7 +477,9 @@ const AppPlusPage = () => {
               ]}
             />
             <Table data={table_2} />
-            <ImageAndText {...content_banner_props} />
+            <div className="pt-10">
+              <ImageAndText {...content_banner_props} />
+            </div>
             <Table data={table_3} />
           </>
         </Box>
@@ -507,7 +509,9 @@ const AppPlusPage = () => {
               ]}
             />
             <Table data={table_4} />
-            <ImageAndText {...content_banner_props_2} />
+            <div className="pt-10">
+              <ImageAndText {...content_banner_props_2} />
+            </div>
             <Table data={table_5} />
           </>
         </Box>
@@ -540,7 +544,7 @@ const AppPlusPage = () => {
             />
           </>
         </Box>
-        <Box>
+        <Box className="lg:py-10">
           <ImageAndText {...content_banner_props_3} />
         </Box>
         <WhaleOfficialFooter />
