@@ -99,24 +99,14 @@ const AppPlusPage = () => {
     body: [
       {
         label: '零售终端',
-        value: [
-          [
-            '风格制定',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-        ],
+        value: [['风格制定', false, true, true, true]],
       },
       {
         label: '内容服务',
         value: [
           [
             '股票数据服务',
-            <RightIcon key="icon" />,
+            true,
             <span key="line-1" className="text-text_color_1">
               支持港/沪深行情及基本面
             </span>,
@@ -127,13 +117,7 @@ const AppPlusPage = () => {
               支持三大市场行情及基本面
             </span>,
           ],
-          [
-            '咨询社区',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['咨询社区', true, true, true, true],
         ],
       },
       {
@@ -144,19 +128,11 @@ const AppPlusPage = () => {
             <span key="line-1" className="text-sm text-text_color_1">
               部分支持
             </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
-          [
-            '客户营销',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['客户营销', false, true, true, true],
         ],
       },
     ],
@@ -172,103 +148,35 @@ const AppPlusPage = () => {
       {
         label: '零售终端',
         value: [
-          [
-            '港股',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '美股',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            'A 股',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['港股', true, true, true, true],
+          ['美股', true, true, true, true],
+          ['A 股', true, true, true, true],
         ],
       },
       {
         label: '内容服务',
         value: [
-          [
-            '香港市场「标准版」',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-          ],
-          [
-            '香港市场「高级版」',
-            <RightIcon key="icon" />,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '美国市场「高级版」',
-            <RightIcon key="icon" />,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '沪深市场「标准版」',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['香港市场「标准版」', true, true, false, false],
+          ['香港市场「高级版」', true, false, true, true],
+          ['美国市场「高级版」', true, false, true, true],
+          ['沪深市场「标准版」', true, true, true, true],
         ],
       },
       {
         label: '营销服务',
         value: [
-          [
-            '港股延迟 15 min',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '港股 BMP 行情',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '美股延迟 15 min',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['港股延迟 15 min', true, true, true, true],
+          ['港股 BMP 行情', true, true, true, true],
+          ['美股延迟 15 min', true, true, true, true],
           [
             '美股 L1 Nasdaq Basic 实时',
-            <RightIcon key="icon" />,
+            true,
             <span key="line-1" className="text-sm text-text_color_1">
               用户需从行情商店购买
             </span>,
             ,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
           ],
           [
             'OPRA 期权实时行情',
@@ -290,10 +198,10 @@ const AppPlusPage = () => {
               <div>A 股中华通 L1 实时行情</div>
               <div className="mt-1 text-xs text-text_color_2">适用于 CCEP / TTEP 客户</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
+            true,
           ],
         ],
       },
@@ -310,30 +218,12 @@ const AppPlusPage = () => {
       {
         label: '资讯服务',
         value: [
-          [
-            '日常推送及运营',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '长桥资讯',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '海豚投研',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['日常推送及运营', true, true, true, true],
+          ['长桥资讯', true, true, true, true],
+          ['海豚投研', true, true, true, true],
           [
             '华尔街见闻',
-            <RightIcon key="icon" />,
+            true,
             <span key="line-1" className="text-sm text-text_color_1">
               按需采购
             </span>,
@@ -346,7 +236,7 @@ const AppPlusPage = () => {
           ],
           [
             '智通财经',
-            <RightIcon key="icon" />,
+            true,
             <span key="line-1" className="text-sm text-text_color_1">
               按需采购
             </span>,
@@ -362,27 +252,9 @@ const AppPlusPage = () => {
       {
         label: '社区服务',
         value: [
-          [
-            'KOL 精选文章',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '日常内容运营及审核',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '热点话题',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['KOL 精选文章', true, true, true, true],
+          ['日常内容运营及审核', true, true, true, true],
+          ['热点话题', true, true, true, true],
         ],
       },
     ],
@@ -398,23 +270,13 @@ const AppPlusPage = () => {
       {
         label: '客户管理',
         value: [
-          [
-            '客户关系',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['客户关系', false, true, true, true],
           [
             <div key="client">
               <div>客户系统</div>
               <div className="mt-1 text-xs text-text_color_2">第三方服务</div>
             </div>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
             <span key="line-1" className="text-sm text-text_color_1">
               按需采购
             </span>,
@@ -425,13 +287,7 @@ const AppPlusPage = () => {
               按需采购
             </span>,
           ],
-          [
-            '帮助系统',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['帮助系统', true, true, true, true],
         ],
       },
     ],
@@ -447,185 +303,39 @@ const AppPlusPage = () => {
       {
         label: '投放系统',
         value: [
-          [
-            '基础运营计划',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '智能运营计划',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '基础通道管理',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '全通道管理',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '基础用户分群',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '规则用户分群',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
+          ['基础运营计划', false, true, true, true],
+          ['智能运营计划', false, false, false, true],
+          ['基础通道管理', false, true, true, true],
+          ['全通道管理', false, false, true, true],
+          ['基础用户分群', false, true, true, true],
+          ['规则用户分群', false, false, false, true],
         ],
       },
       {
         label: '权益系统',
         value: [
-          [
-            '行情商店',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '发奖与奖励管理',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '行情卡券',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '股票现金卡券',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '平台费融资卡券',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-3" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
+          ['行情商店', true, true, true, true],
+          ['发奖与奖励管理', false, true, true, true],
+          ['行情卡券', false, true, true, true],
+          ['股票现金卡券', false, false, true, true],
+          ['平台费融资卡券', false, false, false, true],
         ],
       },
       {
         label: '活动系统',
         value: [
-          [
-            '开户入金活动',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '邀请组队活动',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-3" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
+          ['开户入金活动', false, false, true, true],
+          ['邀请组队活动', false, false, false, true],
         ],
       },
       {
         label: 'PageHub',
         value: [
-          [
-            '静态页面搭建',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '活动页面搭建',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['静态页面搭建', false, false, true, true],
+          ['活动页面搭建', false, false, true, true],
           [
             '定制化页面模版',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
             <span key="line-2" className="text-sm text-text_color_1">
               按需采购
             </span>,

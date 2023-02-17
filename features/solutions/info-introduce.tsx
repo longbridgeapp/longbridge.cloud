@@ -113,7 +113,7 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
         <div className="flex flex-col items-start lg:w-[618px]">
           {title && <div className="text-4xl font-semibold">{title}</div>}
           {desc && (
-            <div className="flex flex-col mt-5 text-base font-normal leading-8 text-text_color_1_supplement gap-y-2">
+            <div className="flex flex-col mt-5 text-base font-normal text-text_color_1_supplement gap-y-2">
               {desc.map((i, index) => {
                 return <div key={index}>{i}</div>
               })}

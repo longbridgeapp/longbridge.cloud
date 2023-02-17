@@ -4,6 +4,7 @@
  */
 import React, { ReactNode } from 'react'
 import classnames from 'classnames'
+import RightIcon from '@/components/right-icon'
 import styles from './index.module.scss'
 
 interface IBody {
@@ -41,7 +42,17 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
                   {item.label}
                 </td>
                 {item.value[0]?.map((i_0, ii) => (
-                  <td key={ii}>{i_0}</td>
+                  <td key={ii}>
+                    {i_0 === true ? (
+                      <RightIcon key="icon" />
+                    ) : i_0 === false ? (
+                      <span key="line-1" className="text-text_color_3">
+                        －
+                      </span>
+                    ) : (
+                      i_0
+                    )}
+                  </td>
                 ))}
               </tr>
             )
@@ -49,7 +60,17 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
               trs.push(
                 <tr className="row" key={`${i}-${i_more_index}`}>
                   {i_more?.map((i_0, ii) => (
-                    <td key={ii}>{i_0}</td>
+                    <td key={ii}>
+                      {i_0 === true ? (
+                        <RightIcon key="icon" />
+                      ) : i_0 === false ? (
+                        <span key="line-1" className="text-text_color_3">
+                          －
+                        </span>
+                      ) : (
+                        i_0
+                      )}
+                    </td>
                   ))}
                 </tr>
               )

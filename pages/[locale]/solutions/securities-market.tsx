@@ -13,7 +13,6 @@ import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 import InfoIntroduce, { ImageAndText, ImageAndList } from '@/features/solutions/info-introduce'
 import Table from '@/components/table'
-import RightIcon from '@/components/right-icon'
 import Compare from '@/components/compare'
 
 export const getStaticPaths = () => ({
@@ -76,9 +75,9 @@ const SecuritiesMarket: React.FC = () => {
       '丰富的各类业务、监管报表及灵活的配置的会计系统有效提高财务及结算人员工作效率',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
     },
   }
 
@@ -93,55 +92,17 @@ const SecuritiesMarket: React.FC = () => {
       {
         label: '证券市场支持',
         value: [
-          ['香港港股', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['港股暗盘', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['中华通 A 股', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['美股（含盘前盘后）', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['新加坡股', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          [
-            '基金产品',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '美股期权',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
-          ['OTC-股票（全球市场）', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          [
-            'OTC-债券',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            'OTC-其他（含衍生品）',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '美股沽空 Short Sell',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            ,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
+          ['香港港股', true, true, true],
+          ['港股暗盘', true, true, true],
+          ['中华通 A 股', true, true, true],
+          ['美股（含盘前盘后）', true, true, true],
+          ['新加坡股', true, true, true],
+          ['基金产品', false, true, true],
+          ['美股期权', false, false, true],
+          ['OTC-股票（全球市场）', true, true, true],
+          ['OTC-债券', false, true, true],
+          ['OTC-其他（含衍生品）', false, true, true],
+          ['美股沽空 Short Sell', false, true, true],
         ],
       },
       {
@@ -154,47 +115,45 @@ const SecuritiesMarket: React.FC = () => {
                 含：LO、MO、ELO、SLO、AO、ALO、Odd Lot、Manual Trade(含碎股撮合)、碎股盘与撮合、交易所批量撤单
               </div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="cn-shares">
               <div>中华通 - 基本订单</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：LO、MO</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="us-shares">
               <div>美股 - 基本订单</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：LO、MO、支持盘前盘后时段交易</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="sg-shares">
               <div>新加坡股 - 基本订单</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：LO、MO</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="long-shares">
               <div>长期单</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：GTD、GTC、FOK、IOC</div>
             </div>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             <div key="long-shares">
@@ -203,55 +162,26 @@ const SecuritiesMarket: React.FC = () => {
                 含：到价买入、到价卖出、反弹买入、回落卖出
               </div>
             </div>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
-          [
-            '篮子订单',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
-          [
-            '网格订单',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-          ],
+          ['篮子订单', false, false, true],
+          ['网格订单', false, false, true],
           [
             <div key="long-shares">
               <div>策略订单（金纳算法）</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：TWAP、VWAP</div>
             </div>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '订阅升级',
-        value: [
-          [
-            '已订阅产品的核心功能保障持续升级迭代',
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-          ],
-        ],
+        value: [['已订阅产品的核心功能保障持续升级迭代', true, true, true]],
       },
     ],
   }
@@ -275,27 +205,27 @@ const SecuritiesMarket: React.FC = () => {
                 含：市场、个股、自选、查看客户资料、委托下单、查看持仓
               </div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="special">
               <div>EP 专属港交所功能</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：人手单、批量撤单、碎股撮合</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '交易管理',
         value: [
-          ['成交补单', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['成交分配', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['订单批核', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['成交补单', true, true, true],
+          ['成交分配', true, true, true],
+          ['订单批核', true, true, true],
         ],
       },
       {
@@ -303,41 +233,37 @@ const SecuritiesMarket: React.FC = () => {
         value: [
           [
             '基金详情',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '基金交易',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '新股 IPO',
         value: [
-          ['新股详情', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['新股认购', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['新股详情', true, true, true],
+          ['新股认购', true, true, true],
         ],
       },
       {
         label: '风控管理',
         value: [
-          ['证券限制', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['Margin Call', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['证券限制', true, true, true],
+          ['Margin Call', true, true, true],
         ],
       },
       {
         label: '调账功能',
         value: [
-          ['调账查询', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['调账清算', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['调账查询', true, true, true],
+          ['调账清算', true, true, true],
         ],
       },
     ],
@@ -354,97 +280,77 @@ const SecuritiesMarket: React.FC = () => {
       {
         label: '账户管理系统',
         value: [
-          ['账户信息管理及 KYC 审核', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['柜台开户', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['账户信息管理及 KYC 审核', true, true, true],
+          ['柜台开户', true, true, true],
           [
             '线上开户及标准流程配置',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
 
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
           ],
           [
             '客户持续监察及 CDD 自动年检',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
 
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
           ],
         ],
       },
       {
         label: 'IPO 系统',
         value: [
-          ['港股 IPO 资料管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['港股 IPO 认购配售', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['单一融资渠道配置', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['港股 IPO 资料管理', true, true, true],
+          ['港股 IPO 认购配售', true, true, true],
+          ['单一融资渠道配置', true, true, true],
           [
             '美股 IPO 资料管理',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '美股 IPO 认购配售',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '全额融资认购',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '多融资渠道配置',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,
+            false,
+            true,
           ],
           [
             'IPO 认购通道外接服务',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-2" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,
+            false,
+            true,
           ],
         ],
       },
       {
         label: '出入金及资产管理系统',
         value: [
-          ['7*24 小时服务能力', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['网上转账', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['FPS 转账', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['支票', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['ATM 机', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['现金', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['手工换汇', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['跨境电子汇款 TT', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['7*24 小时服务能力', true, true, true],
+          ['网上转账', true, true, true],
+          ['FPS 转账', true, true, true],
+          ['支票', true, true, true],
+          ['ATM 机', true, true, true],
+          ['现金', true, true, true],
+          ['手工换汇', true, true, true],
+          ['跨境电子汇款 TT', true, true, true],
           // autocorrect: false
           [
             'eDDA、sDDA',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
             <span key="line-2" className="text-sm text-text_color_1_supplement">
               支持 1 eDDA
             </span>,
@@ -455,9 +361,7 @@ const SecuritiesMarket: React.FC = () => {
           // autocorrect: true
           [
             '实时银证转账平台',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
+            false,
             <span key="line-2" className="text-sm text-text_color_1_supplement">
               支持 1 银证
             </span>,
@@ -467,27 +371,21 @@ const SecuritiesMarket: React.FC = () => {
           ],
           [
             '银行账单批量配对',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '实时换汇',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '换汇对接银行 API',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
@@ -496,147 +394,106 @@ const SecuritiesMarket: React.FC = () => {
         value: [
           [
             '基金产品管理，上下架',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '风险评估',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '手工调账',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '基金认购赎回系统处理流程',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: 'OTC 系统',
         value: [
-          ['OTC 产品管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['风险评估', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['手工调账', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['OTC 产品管理', true, true, true],
+          ['风险评估', true, true, true],
+          ['手工调账', true, true, true],
           [
             'OTC 产品系统交易后端处理流程',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '风控系统',
         value: [
-          ['交易限额', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['压力测试及风控报表', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['统一风控 Margin Call 监测', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['手动平仓', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['手动授信，融资额度管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['交易限额', true, true, true],
+          ['压力测试及风控报表', true, true, true],
+          ['统一风控 Margin Call 监测', true, true, true],
+          ['手动平仓', true, true, true],
+          ['手动授信，融资额度管理', true, true, true],
           [
             <div key="base">
               <div>指数管理</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：成份股管理、haircut 管理</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             <div key="base">
               <div>风控参数设置</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：风控大盘监控</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             '批量平仓',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '自动授信，融资额度管理批量平仓自动授信，融资额度管理',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,
+           false,
+            true,
           ],
           [
             '期权风控',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,false,
+            true,
           ],
           [
             '自动平仓',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,false,
+            true,
           ],
           [
             '风险分组计算',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,false,
+            true,
           ],
           [
             'Margin Call 语音通知',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,false,
+            true,
           ],
           [
             'Margin Call 策略回测功能',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
+            false,false,
+            true,
           ],
         ],
       },
@@ -655,106 +512,96 @@ const SecuritiesMarket: React.FC = () => {
       {
         label: '公司行动系统',
         value: [
-          ['港股常见公司行动', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['美股常见公司行动', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['中华通 A 股常见公司行动', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['港股常见公司行动', true, true, true],
+          ['美股常见公司行动', true, true, true],
+          ['中华通 A 股常见公司行动', true, true, true],
           [
             '线上公司行动 - App 选股选息',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
           [
             '线上公司行动 - App 供股',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+           false,
+            true,
+            true,
           ],
           [
             <div key="base">
               <div>公司行动通知</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：结单、App、SMS、Email</div>
             </div>,
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '会计中台',
         value: [
-          ['科目属性', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['会计科目', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['分录规则', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['会计分录、明细账', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['科目属性', true, true, true],
+          ['会计科目', true, true, true],
+          ['分录规则', true, true, true],
+          ['会计分录、明细账', true, true, true],
           [
             <div key="base">
               <div>记账数据源</div>
               <div className="mt-1 text-xs text-text_color_2 lg:max-w-[484px]">含：支付流水、银行流水、人工录入</div>
             </div>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            true,
+            true,
+            true,
           ],
           [
             '银行余额自动查询',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+           false,
+            true,
+            true,
           ],
-          ['财务报表导出', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['财务报表导出', true, true, true],
         ],
       },
       {
         label: '清算系统',
         value: [
-          ['基础计费管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['市场管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['日终任务', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['对账', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['结单管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['仓位管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['一键清算', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['经纪分佣', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['基础计费管理', true, true, true],
+          ['市场管理', true, true, true],
+          ['日终任务', true, true, true],
+          ['对账', true, true, true],
+          ['结单管理', true, true, true],
+          ['仓位管理', true, true, true],
+          ['一键清算', true, true, true],
+          ['经纪分佣', true, true, true],
           [
             '阶梯计费',
-            <span key="line-1" className="text-text_color_3">
-              －
-            </span>,
-            <RightIcon key="icon" />,
-            <RightIcon key="icon" />,
+            false,
+            true,
+            true,
           ],
         ],
       },
       {
         label: '报表',
         value: [
-          ['各类业务报表', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['报表批量打印', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['各类业务报表', true, true, true],
+          ['报表批量打印', true, true, true],
         ],
       },
       {
         label: '系统用户管理',
         value: [
-          ['权限管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['管理员管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['角色管理', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['系统操作日志', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
-          ['审批流程', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />],
+          ['权限管理', true, true, true],
+          ['管理员管理', true, true, true],
+          ['角色管理', true, true, true],
+          ['系统操作日志', true, true, true],
+          ['审批流程', true, true, true],
         ],
       },
       {
         label: '监管升级服务',
-        value: [['HKEX、SFC 监管改动', <RightIcon key="icon" />, <RightIcon key="icon" />, <RightIcon key="icon" />]],
+        value: [['HKEX、SFC 监管改动', true, true, true]],
       },
     ],
   }
