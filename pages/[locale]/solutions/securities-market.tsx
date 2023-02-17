@@ -8,12 +8,10 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import Banner from '@/features/product/Banner'
-import Comment from '@/features/product/Comment'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
-import InfoIntroduce, { ImageAndText, ImageAndList } from '@/features/solutions/info-introduce'
+import InfoIntroduce, { ImageAndText } from '@/features/solutions/info-introduce'
 import Table from '@/components/table'
-import Compare from '@/components/compare'
 
 export const getStaticPaths = () => ({
   fallback: false,

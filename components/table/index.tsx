@@ -22,7 +22,7 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
   return (
     <div className={classnames(styles['table-wrapper'], className)}>
       <table className="w-full text-left border-t border-l border-border_color">
-        <thead>
+        <thead className="sticky top-20">
           <tr>
             <th colSpan={thColSpan} key={-1} className="bg-bg_table_1"></th>
             {data.heads.map((h, i) => (

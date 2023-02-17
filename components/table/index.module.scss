@@ -1,5 +1,5 @@
 :local(.table-wrapper) {
-  @apply overflow-x-auto;
+  @apply overflow-x-auto sm:overflow-visible;
   &::-webkit-scrollbar{
     @apply hidden;
   }

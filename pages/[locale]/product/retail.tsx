@@ -31,7 +31,7 @@ const Retail: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('features_header_index_3'),
-    desc: [i18n.t('pages_locale_solutions_retail_5')],
+    desc: [i18n.t('pages_locale_solutions_retail_5'), i18n.t('pages_locale_solutions_retail_5_1')],
     img: {
       'en': 'https://assets.lbkrs.com/uploads/2cbf2f1f-0f6f-4c4e-8e6d-92e68ae356f0/retail-banner-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/8ae1d3ce-6ae4-4fa7-bda1-9ada3196354c/retail-banner.png',
@@ -52,7 +52,9 @@ const Retail: React.FC = () => {
         i18n.t('pages_locale_solutions_retail_12'),
       ],
       thirdTitle: i18n.t('pages_locale_solutions_retail_13'),
-      thirdDescription: 'Mobile, Pad, Web',
+      // autocorrect:false
+      thirdDescription: 'Mobile、Pad、Web',
+      // autocorrect:true
     },
     {
       title: 'White Label',
@@ -66,7 +68,9 @@ const Retail: React.FC = () => {
         i18n.t('pages_locale_solutions_retail_19'),
       ],
       thirdTitle: i18n.t('pages_locale_solutions_retail_13'),
-      thirdDescription: 'Mobile, Pad, Desktop, Web',
+      // autocorrect:false
+      thirdDescription: 'Mobile、Pad、Desktop、Web',
+      // autocorrect:true
     },
   ]
 
