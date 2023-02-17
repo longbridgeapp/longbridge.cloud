@@ -33,9 +33,9 @@ const SecuritiesMarket: React.FC = () => {
       '方案涵盖股票、期权、基金、债券、衍生品等产品的交易清算能力；支持多市场、多样化交易模式，满足经纪商开户、登记、托管、交易、清算需求；灵活可定制的开放接口可以满足各类业务快速接入，可配置的标准业务功能和定制的专业旗舰功能，任何类型的经纪商都能确定一套适合的解决方案；基于互联网运营思维梳理的核心业务流程高度实现自动化，帮助经纪商更好的降本增效',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/67b3311b-5bfe-4306-8230-22ac7a48365c/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/67b3311b-5bfe-4306-8230-22ac7a48365c/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/67b3311b-5bfe-4306-8230-22ac7a48365c/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/8c02386b-26fe-4b9e-98b7-e093c9f72ad8/banner.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/8c02386b-26fe-4b9e-98b7-e093c9f72ad8/banner.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/8c02386b-26fe-4b9e-98b7-e093c9f72ad8/banner.png',
     },
   }
 
@@ -45,9 +45,9 @@ const SecuritiesMarket: React.FC = () => {
       '专业的行情交易工具，覆盖全市场高级行情及订单类型，以及实时的 Margin Call 检测在前台实现日常的盯盘交易、订单处理、信息查询、账目调整等操作',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/12cf7828-95b7-43bb-9e94-3ef98e6a5024/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/12cf7828-95b7-43bb-9e94-3ef98e6a5024/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/12cf7828-95b7-43bb-9e94-3ef98e6a5024/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
     },
   }
   const content_banner_props_2 = {
@@ -59,9 +59,9 @@ const SecuritiesMarket: React.FC = () => {
       '出入金方式涵盖主流的银证转帐等直连实时到账以及银行凭证关联人工操作出入账模式',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/eaf543bb-80f4-42b7-bac1-e43d8afcd27d/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
     },
     reverse: false,
   }
@@ -73,9 +73,9 @@ const SecuritiesMarket: React.FC = () => {
       '丰富的各类业务、监管报表及灵活的配置的会计系统有效提高财务及结算人员工作效率',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/6a4977a9-b0e3-4aac-ab99-d87a307cdc52/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
     },
   }
 
@@ -482,20 +482,20 @@ const SecuritiesMarket: React.FC = () => {
               descClass="text-sm text-text_color_1"
               data={[
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/f0e49593-38c7-406d-92d0-896525a4ee64/i3.png',
+                  icon: 'https://assets.lbkrs.com/uploads/8ef8a9ee-5f88-4025-b6d0-6585dbd1cc10/browser.png',
                   title: '连接环球市场',
                   description:
                     '支持港美 A 新加坡四个市场的常见交易标的，包括各场内的股票、场内外 ETF 、股票、债券交易、窝轮、牛熊证、界内证、美股期权及OTC 股票交易等',
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/d9974d44-b1a3-4398-9aa6-230c56497f6e/i1.png',
+                  icon: 'https://assets.lbkrs.com/uploads/02bf51db-ed1b-4201-a67c-7c7fbac8697b/article.png',
                   iconClass: 'w-9 h-auto',
                   title: '完整的基础订单',
                   description:
                     '覆盖交易所支持的各类包括竞价、限价等基础订单类型，提供自研市价单及常用的止盈止损条件订单，可设定 GTD/GTC 长期单及非交易时段预埋单',
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/110536eb-7663-459c-a47a-b10a16a47e46/i2.png',
+                  icon: 'https://assets.lbkrs.com/uploads/23731609-98d9-4e87-8d9f-ae7d685c2414/check.png',
                   iconClass: 'w-9 h-auto',
                   title: '专业的交易策略',
                   description:

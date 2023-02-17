@@ -24,7 +24,7 @@ const Comment: React.FC<{ data: IComment[]; className?: string }> = ({ data, cla
             alt="quote"
             className="w-5 mt-5 mb-3"
           />
-          <div className="text-base font-medium text-text_color_1_supplement">{c.description}</div>
+          <div className="text-base font-medium text-left text-text_color_1_supplement">{c.description}</div>
         </div>
       ))}
     </div>

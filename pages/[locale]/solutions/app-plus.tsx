@@ -36,9 +36,9 @@ const AppPlusPage = () => {
       '提供「互联网 App+」解决方案，接入实时行情、资讯，营销服务，助力零售经济商快速拓客展业。通过进行简单权益配置即可深入客户场景，轻松触达每一位客户，并结合创意生动、引人入胜的营销活动，快速找到目标客户，持续不断的赢得新客户、激发老客户，完成高效的运营转化',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/1c7e213c-f09d-48de-a531-4a4e3b7d7b2f/app-plus-banner-cn.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/1c7e213c-f09d-48de-a531-4a4e3b7d7b2f/app-plus-banner-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/1c7e213c-f09d-48de-a531-4a4e3b7d7b2f/app-plus-banner-cn.png',
+      'en': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
     },
   }
   const content_banner_props = {
@@ -47,9 +47,9 @@ const AppPlusPage = () => {
       '提供「互联网 App+」解决方案，接入实时行情、资讯，营销服务，助力零售经济商快速拓客展业。通过进行简单权益配置即可深入客户场景，轻松触达每一位客户，并结合创意生动、引人入胜的营销活动，快速找到目标客户，持续不断的赢得新客户、激发老客户，完成高效的运营转化',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/c99f03c1-40ad-47e5-9e15-4ae13ca2e0e9/content-img.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/c99f03c1-40ad-47e5-9e15-4ae13ca2e0e9/content-img.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/c99f03c1-40ad-47e5-9e15-4ae13ca2e0e9/content-img.png',
+      'en': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
     },
   }
   const content_banner_props_2 = {
@@ -58,9 +58,9 @@ const AppPlusPage = () => {
       '提供完整的营销服务，持续不断推出更实用的营销产品模式，为证券业务进行赋能，是传统金融业务数字化转型必不可少的市场工具。更多样化营销工具，解决券商营销过程中的「营销难、开发慢、难管理、成本高」问题',
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/77a723fc-8a14-47e5-9c8c-45fdddeafad7/content-img-22.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/77a723fc-8a14-47e5-9c8c-45fdddeafad7/content-img-22.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/77a723fc-8a14-47e5-9c8c-45fdddeafad7/content-img-22.png',
+      'en': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
     },
   }
   const content_banner_props_3 = {
@@ -442,17 +442,17 @@ const AppPlusPage = () => {
               descClass="text-sm text-text_color_1"
               data={[
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/e24d2596-f9a6-4e04-b40f-96e2deebdf50/Union.png',
+                  icon: 'https://assets.lbkrs.com/uploads/8a5b1aab-d6e7-4f5a-8460-52e1e1a51494/vote.png',
                   title: '微服务架构',
                   description: '所有服务独立化部署，保证数据安全及交付质量，持续使用更前沿的技术帮助券商互联网转型',
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/bb7f2c40-3150-415e-aa9b-60afab49d83b/Vector.png',
+                  icon: 'https://assets.lbkrs.com/uploads/edce61fc-26a5-4883-8e44-ed962d901c88/delay.png',
                   title: '快捷配置交付',
                   description: '通过配置平台进行功能配置、快捷交付，缩减了打包开发时间，更快的助您展业',
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/17e900f6-73dc-4523-98df-329cba06d834/Union (1).png',
+                  icon: 'https://assets.lbkrs.com/uploads/45105937-bc35-485f-ba65-e643946d6e63/circle_laugh.png',
                   title: '运营营销服务',
                   description: '快捷接入运营营销服务，通过多种投放通道为经纪商的互联网转型带来更精准用户触达',
                 },
