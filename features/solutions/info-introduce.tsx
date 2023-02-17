@@ -6,15 +6,17 @@ import ImageIcon from '@/components/image-icon'
 
 interface IInfoIntroduce {
   icon?: string
+  iconClass?: string
   title?: string
   description?: string
 }
 interface IImageAndTextProps {
-  title: string
-  desc: ReactNode[]
+  title?: string
+  desc?: ReactNode[]
   img: Record<string, string>
   cover?: string
   needTalk?: boolean
+  reverse?: boolean
 }
 
 interface IImageAndListProps {
@@ -37,7 +39,7 @@ const InfoIntroduce: React.FC<{
     <div className={classnames('flex flex-col gap-10 lg:flex-row justify-center items-center ', className)}>
       {data.map((info, index) => (
         <div key={index} className={classnames('flex flex-col flex-1 gap-y-2', className, `max-w-[${maxWidth}px]`)}>
-          {info.icon && <ImageIcon url={info.icon} className="mx-auto lg:mx-0" />}
+          {info.icon && <ImageIcon url={info.icon} className={classnames('mx-auto lg:mx-0', info.iconClass)} />}
           {info.title && (
             <div className="text-xl font-medium text-center text-text_color_1 lg:text-left">{info.title}</div>
           )}
@@ -90,23 +92,33 @@ export const ImageAndList: React.FC<IImageAndListProps> = ({
     </div>
   )
 }
-export const ImageAndText: React.FC<IImageAndTextProps> = ({ title, desc, img, cover, needTalk = true }) => {
+export const ImageAndText: React.FC<IImageAndTextProps> = ({
+  title,
+  desc,
+  img,
+  cover,
+  needTalk = true,
+  reverse = true,
+}) => {
   const i18n = useTranslation('common')
   return (
     <div className="py-10" style={cover ? { backgroundImage: `url('${cover}')` } : {}}>
       <div
         className={classnames(
-          'flex flex-col items-center justify-between gap-y-10 lg:flex-row-reverse main-content-width'
+          'flex flex-col items-center justify-between gap-y-10  main-content-width',
+          `lg:flex-row${reverse ? '-reverse' : ''}`
         )}
       >
         {/* 文字 */}
         <div className="flex flex-col items-start lg:w-[618px]">
-          <div className="text-[44px] leading-[62px] font-semibold">{title}</div>
-          <div className="mt-5 text-lg font-normal leading-8 text-text_color_1_supplement">
-            {desc.map((i, index) => {
-              return <div key={index}>{i}</div>
-            })}
-          </div>
+          {title && <div className="text-4xl font-semibold">{title}</div>}
+          {desc && (
+            <div className="flex flex-col mt-5 text-base font-normal leading-8 text-text_color_1_supplement gap-y-2">
+              {desc.map((i, index) => {
+                return <div key={index}>{i}</div>
+              })}
+            </div>
+          )}
           {needTalk && <TalkToUs className="mt-10" text="了解更多" />}
         </div>
         {/* 图片 */}

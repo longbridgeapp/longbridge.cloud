@@ -76,6 +76,10 @@ function useNavs() {
             value: '/solutions/app-plus',
             label: i18n.t('features_header_index_4'),
           },
+          {
+            value: '/solutions/securities-market',
+            label: '证券柜台解决方案',
+          },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),

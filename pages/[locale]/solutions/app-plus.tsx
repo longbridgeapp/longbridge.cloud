@@ -10,6 +10,7 @@ import PageDivide from '@/features/solutions/page-divide'
 import InfoIntroduce, { ImageAndText } from '@/features/solutions/info-introduce'
 import Compare from '@/components/compare'
 import Table from '@/components/table'
+import RightIcon from '@/components/right-icon'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
@@ -25,15 +26,6 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 
-const RightIcon = () => {
-  return (
-    <img
-      src="https://assets.lbkrs.com/uploads/1e54e225-a8f6-42e5-af0a-eb2410a4f8be/vector.png"
-      alt=""
-      className="w-4"
-    />
-  )
-}
 const AppPlusPage = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
@@ -651,111 +643,113 @@ const AppPlusPage = () => {
   return (
     <Layout>
       <SEOMeta title={seoI18n.t('solutions-app.title')} description={seoI18n.t('solutions-app.description')} />
-      <Banner {...banner_props}></Banner>
-      <Box>
-        <>
-          <Title label="互联网 App + 解决方案" title="助力零售经纪商快速展业，轻松赢得增长转化"></Title>
-          <Compare className="my-10" compareId="app-plus" list={compareList} />
-          <Table data={table_1} />
-          <div className="flex pt-4 text-text_color_2 gap-x-1">
-            <span>*</span>
-            <div className="max-w-[780px] text-xs">
-              <div className="font-medium">White Label 产品体系面向客户提供三种版本：标准版、专业版、旗舰版</div>
-              标准版：港美 A 市场基本交易服务 ｜专业版：满足现代化的证券交易服务 ｜ 旗舰版：具备规模化运营营销需求
+      <div>
+        <Banner {...banner_props}></Banner>
+        <Box>
+          <>
+            <Title label="互联网 App + 解决方案" title="助力零售经纪商快速展业，轻松赢得增长转化"></Title>
+            <Compare className="my-10" compareId="app-plus" list={compareList} />
+            <Table data={table_1} />
+            <div className="flex pt-4 text-text_color_2 gap-x-1">
+              <span>*</span>
+              <div className="max-w-[780px] text-xs">
+                <div className="font-medium">White Label 产品体系面向客户提供三种版本：标准版、专业版、旗舰版</div>
+                标准版：港美 A 市场基本交易服务 ｜专业版：满足现代化的证券交易服务 ｜ 旗舰版：具备规模化运营营销需求
+              </div>
             </div>
-          </div>
-        </>
-      </Box>
-      <PageDivide
-        cover="https://assets.lbkrs.com/uploads/14a70dd4-5460-4fce-9011-8005e18f3127/content-service.png"
-        subTitle="一站式数据及内容服务"
-        title="内容服务"
-      />
-      <Box>
-        <>
-          <Title title="股票数据服务"></Title>
-          <InfoIntroduce
-            className="my-8"
-            data={[
-              {
-                title: '行情授权',
-                description: '一站式解决行情授权问题，数据覆盖面广，评级全面且独立',
-              },
-              {
-                title: '稳定行情',
-                description: '提供香港、美国、A股，三大核心市场实时行情、延迟行情及BMP行情',
-              },
-              {
-                title: '衍生功能',
-                description: '更丰富全面的证券基本面数据，开放机构观点、估值分析、股价趋势、智能选股等特色功能',
-              },
-            ]}
-          />
-          <Table data={table_2} />
-          <ImageAndText {...content_banner_props} />
-          <Table data={table_3} />
-        </>
-      </Box>
-      <PageDivide
-        cover="https://assets.lbkrs.com/uploads/7e4af769-fe55-44af-a67a-5b9470dba92d/sale-service.png"
-        subTitle="致力于为证券业务进行赋能"
-        title="营销服务"
-      />
-      <Box>
-        <>
-          <Title title="客户管理"></Title>
-          <InfoIntroduce
-            className="my-8"
-            data={[
-              {
-                title: '精准定位',
-                description: '利用专业工具帮助您真正了解客户需求，更便捷的寻找并定位到最有价值的客户',
-              },
-              {
-                title: '高效转化',
-                description: '高效完成客户转化、客户关系维护，节约更多客户维护人工成本',
-              },
-              {
-                title: '帮助系统',
-                description: '释放证券业务相关知识库，使新手用户更快了解券商业务及平台运营活动功能',
-              },
-            ]}
-          />
-          <Table data={table_4} />
-          <ImageAndText {...content_banner_props_2} />
-          <Table data={table_5} />
-        </>
-      </Box>
-      <Box className="bg-bg_color_2">
-        <>
-          <Title title="解决方案在科技行业内的优势" label="方案优势"></Title>
-          <InfoIntroduce
-            className="mt-8"
-            descClass="text-sm text-text_color_1"
-            data={[
-              {
-                icon: 'https://assets.lbkrs.com/uploads/e24d2596-f9a6-4e04-b40f-96e2deebdf50/Union.png',
-                title: '微服务架构',
-                description: '所有服务独立化部署，保证数据安全及交付质量，持续使用更前沿的技术帮助券商互联网转型',
-              },
-              {
-                icon: 'https://assets.lbkrs.com/uploads/bb7f2c40-3150-415e-aa9b-60afab49d83b/Vector.png',
-                title: '快捷配置交付',
-                description: '通过配置平台进行功能配置、快捷交付，缩减了打包开发时间，更快的助您展业',
-              },
-              {
-                icon: 'https://assets.lbkrs.com/uploads/17e900f6-73dc-4523-98df-329cba06d834/Union (1).png',
-                title: '运营营销服务',
-                description: '快捷接入运营营销服务，通过多种投放通道为经纪商的互联网转型带来更精准用户触达',
-              },
-            ]}
-          />
-        </>
-      </Box>
-      <Box>
-        <ImageAndText {...content_banner_props_3} />
-      </Box>
-      <WhaleOfficialFooter />
+          </>
+        </Box>
+        <PageDivide
+          cover="https://assets.lbkrs.com/uploads/14a70dd4-5460-4fce-9011-8005e18f3127/content-service.png"
+          subTitle="一站式数据及内容服务"
+          title="内容服务"
+        />
+        <Box>
+          <>
+            <Title title="股票数据服务"></Title>
+            <InfoIntroduce
+              className="my-8"
+              data={[
+                {
+                  title: '行情授权',
+                  description: '一站式解决行情授权问题，数据覆盖面广，评级全面且独立',
+                },
+                {
+                  title: '稳定行情',
+                  description: '提供香港、美国、A股，三大核心市场实时行情、延迟行情及BMP行情',
+                },
+                {
+                  title: '衍生功能',
+                  description: '更丰富全面的证券基本面数据，开放机构观点、估值分析、股价趋势、智能选股等特色功能',
+                },
+              ]}
+            />
+            <Table data={table_2} />
+            <ImageAndText {...content_banner_props} />
+            <Table data={table_3} />
+          </>
+        </Box>
+        <PageDivide
+          cover="https://assets.lbkrs.com/uploads/7e4af769-fe55-44af-a67a-5b9470dba92d/sale-service.png"
+          subTitle="致力于为证券业务进行赋能"
+          title="营销服务"
+        />
+        <Box>
+          <>
+            <Title title="客户管理"></Title>
+            <InfoIntroduce
+              className="my-8"
+              data={[
+                {
+                  title: '精准定位',
+                  description: '利用专业工具帮助您真正了解客户需求，更便捷的寻找并定位到最有价值的客户',
+                },
+                {
+                  title: '高效转化',
+                  description: '高效完成客户转化、客户关系维护，节约更多客户维护人工成本',
+                },
+                {
+                  title: '帮助系统',
+                  description: '释放证券业务相关知识库，使新手用户更快了解券商业务及平台运营活动功能',
+                },
+              ]}
+            />
+            <Table data={table_4} />
+            <ImageAndText {...content_banner_props_2} />
+            <Table data={table_5} />
+          </>
+        </Box>
+        <Box className="bg-bg_color_2">
+          <>
+            <Title title="解决方案在科技行业内的优势" label="方案优势"></Title>
+            <InfoIntroduce
+              className="mt-8"
+              descClass="text-sm text-text_color_1"
+              data={[
+                {
+                  icon: 'https://assets.lbkrs.com/uploads/e24d2596-f9a6-4e04-b40f-96e2deebdf50/Union.png',
+                  title: '微服务架构',
+                  description: '所有服务独立化部署，保证数据安全及交付质量，持续使用更前沿的技术帮助券商互联网转型',
+                },
+                {
+                  icon: 'https://assets.lbkrs.com/uploads/bb7f2c40-3150-415e-aa9b-60afab49d83b/Vector.png',
+                  title: '快捷配置交付',
+                  description: '通过配置平台进行功能配置、快捷交付，缩减了打包开发时间，更快的助您展业',
+                },
+                {
+                  icon: 'https://assets.lbkrs.com/uploads/17e900f6-73dc-4523-98df-329cba06d834/Union (1).png',
+                  title: '运营营销服务',
+                  description: '快捷接入运营营销服务，通过多种投放通道为经纪商的互联网转型带来更精准用户触达',
+                },
+              ]}
+            />
+          </>
+        </Box>
+        <Box>
+          <ImageAndText {...content_banner_props_3} />
+        </Box>
+        <WhaleOfficialFooter />
+      </div>
     </Layout>
   )
 }

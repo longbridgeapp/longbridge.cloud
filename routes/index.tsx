@@ -13,6 +13,7 @@ import IntroducingBroker from '@/pages/[locale]/solutions/introducing-broker'
 import Longport from '@/pages/[locale]/solutions/longport'
 import WhiteLabel from '@/pages/[locale]/solutions/white-label'
 import AppPlus from '@/pages/[locale]/solutions/app-plus'
+import SecuritiesMarket from '@/pages/[locale]/solutions/securities-market'
 import WhaleReports from '@/pages/[locale]/whale-reports'
 import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
@@ -40,6 +41,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="solutions/longport" element={<Longport {...pageProps} />} />
               <Route path="solutions/white-label" element={<WhiteLabel {...pageProps} />} />
               <Route path="solutions/app-plus" element={<AppPlus {...pageProps} />} />
+              <Route path="solutions/securities-market" element={<SecuritiesMarket {...pageProps} />} />
               <Route path="about" element={<AboutPage {...pageProps} />} />
               <Route path="live" element={<LivePage {...pageProps} />} />
               <Route path="whale-reports" element={<WhaleReports {...pageProps} />} />

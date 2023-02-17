@@ -201,21 +201,25 @@ const Retail: React.FC = () => {
               data={[
                 {
                   icon: 'https://assets.lbkrs.com/uploads/2487aaf2-d82f-4b9b-8e47-c27b50e968b7/Union (2).png',
+                  iconClass: 'w-[30px] h-auto',
                   title: 'Mobile',
                   description: i18n.t('pages_locale_solutions_retail_39'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/6cb133cb-fe21-4b12-9109-8843159271eb/Union (3).png',
+                  iconClass: 'w-9 h-auto',
                   title: 'Pad',
                   description: i18n.t('pages_locale_solutions_retail_40'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/ca30756a-195c-4023-9f5d-4c2b2ff664fd/Vector (1).png',
+                  iconClass: 'h-auto',
                   title: 'Web',
                   description: i18n.t('pages_locale_solutions_retail_41'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/fff6b0a5-3cb5-424d-a7b4-f9a6819bf38c/Vector (2).png',
+                  iconClass: 'h-auto',
                   title: 'Desktop',
                   description: i18n.t('pages_locale_solutions_retail_42'),
                 },
