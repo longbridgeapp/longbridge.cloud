@@ -136,6 +136,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
+    colRatio: [15, 17, 17, 17, 17, 17],
   }
   const table_2 = {
     heads: [
@@ -206,6 +207,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
+    colRatio: [14, 18, 17, 17, 17, 17],
   }
   const table_3 = {
     heads: [
@@ -258,6 +260,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
+    colRatio: [14, 18, 17, 17, 17, 17],
   }
   const table_4 = {
     heads: [
@@ -291,6 +294,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
+    colRatio: [14, 18, 17, 17, 17, 17],
   }
   const table_5 = {
     heads: [
@@ -349,6 +353,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
+    colRatio: [14, 18, 17, 17, 17, 17],
   }
   return (
     <Layout>

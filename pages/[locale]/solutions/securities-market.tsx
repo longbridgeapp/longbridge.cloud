@@ -182,6 +182,7 @@ const SecuritiesMarket: React.FC = () => {
         value: [['已订阅产品的核心功能保障持续升级迭代', true, true, true]],
       },
     ],
+    colRatio: [14, 44, 14, 14, 14],
   }
 
   const table_2 = {
@@ -229,18 +230,8 @@ const SecuritiesMarket: React.FC = () => {
       {
         label: '基金管理',
         value: [
-          [
-            '基金详情',
-            false,
-            true,
-            true,
-          ],
-          [
-            '基金交易',
-            false,
-            true,
-            true,
-          ],
+          ['基金详情', false, true, true],
+          ['基金交易', false, true, true],
         ],
       },
       {
@@ -265,6 +256,7 @@ const SecuritiesMarket: React.FC = () => {
         ],
       },
     ],
+    colRatio: [14, 44, 14, 14, 14],
   }
   const table_3 = {
     heads: [
@@ -273,27 +265,14 @@ const SecuritiesMarket: React.FC = () => {
       { title: '专业版', light: true },
       { title: '旗舰版', light: true },
     ],
-
     body: [
       {
         label: '账户管理系统',
         value: [
           ['账户信息管理及 KYC 审核', true, true, true],
           ['柜台开户', true, true, true],
-          [
-            '线上开户及标准流程配置',
-            false,
-
-            true,
-            true,
-          ],
-          [
-            '客户持续监察及 CDD 自动年检',
-            false,
-
-            true,
-            true,
-          ],
+          ['线上开户及标准流程配置', false, true, true],
+          ['客户持续监察及 CDD 自动年检', false, true, true],
         ],
       },
       {
@@ -302,36 +281,11 @@ const SecuritiesMarket: React.FC = () => {
           ['港股 IPO 资料管理', true, true, true],
           ['港股 IPO 认购配售', true, true, true],
           ['单一融资渠道配置', true, true, true],
-          [
-            '美股 IPO 资料管理',
-            false,
-            true,
-            true,
-          ],
-          [
-            '美股 IPO 认购配售',
-            false,
-            true,
-            true,
-          ],
-          [
-            '全额融资认购',
-            false,
-            true,
-            true,
-          ],
-          [
-            '多融资渠道配置',
-            false,
-            false,
-            true,
-          ],
-          [
-            'IPO 认购通道外接服务',
-            false,
-            false,
-            true,
-          ],
+          ['美股 IPO 资料管理', false, true, true],
+          ['美股 IPO 认购配售', false, true, true],
+          ['全额融资认购', false, true, true],
+          ['多融资渠道配置', false, false, true],
+          ['IPO 认购通道外接服务', false, false, true],
         ],
       },
       {
@@ -367,53 +321,18 @@ const SecuritiesMarket: React.FC = () => {
               支持 2 银证
             </span>,
           ],
-          [
-            '银行账单批量配对',
-            false,
-            true,
-            true,
-          ],
-          [
-            '实时换汇',
-            false,
-            true,
-            true,
-          ],
-          [
-            '换汇对接银行 API',
-            false,
-            true,
-            true,
-          ],
+          ['银行账单批量配对', false, true, true],
+          ['实时换汇', false, true, true],
+          ['换汇对接银行 API', false, true, true],
         ],
       },
       {
         label: '基金系统',
         value: [
-          [
-            '基金产品管理，上下架',
-            false,
-            true,
-            true,
-          ],
-          [
-            '风险评估',
-            false,
-            true,
-            true,
-          ],
-          [
-            '手工调账',
-            false,
-            true,
-            true,
-          ],
-          [
-            '基金认购赎回系统处理流程',
-            false,
-            true,
-            true,
-          ],
+          ['基金产品管理，上下架', false, true, true],
+          ['风险评估', false, true, true],
+          ['手工调账', false, true, true],
+          ['基金认购赎回系统处理流程', false, true, true],
         ],
       },
       {
@@ -422,12 +341,7 @@ const SecuritiesMarket: React.FC = () => {
           ['OTC 产品管理', true, true, true],
           ['风险评估', true, true, true],
           ['手工调账', true, true, true],
-          [
-            'OTC 产品系统交易后端处理流程',
-            false,
-            true,
-            true,
-          ],
+          ['OTC 产品系统交易后端处理流程', false, true, true],
         ],
       },
       {
@@ -456,46 +370,17 @@ const SecuritiesMarket: React.FC = () => {
             true,
             true,
           ],
-          [
-            '批量平仓',
-            false,
-            true,
-            true,
-          ],
-          [
-            '自动授信，融资额度管理批量平仓自动授信，融资额度管理',
-            false,
-           false,
-            true,
-          ],
-          [
-            '期权风控',
-            false,false,
-            true,
-          ],
-          [
-            '自动平仓',
-            false,false,
-            true,
-          ],
-          [
-            '风险分组计算',
-            false,false,
-            true,
-          ],
-          [
-            'Margin Call 语音通知',
-            false,false,
-            true,
-          ],
-          [
-            'Margin Call 策略回测功能',
-            false,false,
-            true,
-          ],
+          ['批量平仓', false, true, true],
+          ['自动授信，融资额度管理批量平仓自动授信，融资额度管理', false, false, true],
+          ['期权风控', false, false, true],
+          ['自动平仓', false, false, true],
+          ['风险分组计算', false, false, true],
+          ['Margin Call 语音通知', false, false, true],
+          ['Margin Call 策略回测功能', false, false, true],
         ],
       },
     ],
+    colRatio: [14, 44, 14, 14, 14],
   }
 
   const table_4 = {
@@ -505,7 +390,6 @@ const SecuritiesMarket: React.FC = () => {
       { title: '专业版', light: true },
       { title: '旗舰版', light: true },
     ],
-
     body: [
       {
         label: '公司行动系统',
@@ -513,18 +397,8 @@ const SecuritiesMarket: React.FC = () => {
           ['港股常见公司行动', true, true, true],
           ['美股常见公司行动', true, true, true],
           ['中华通 A 股常见公司行动', true, true, true],
-          [
-            '线上公司行动 - App 选股选息',
-            false,
-            true,
-            true,
-          ],
-          [
-            '线上公司行动 - App 供股',
-           false,
-            true,
-            true,
-          ],
+          ['线上公司行动 - App 选股选息', false, true, true],
+          ['线上公司行动 - App 供股', false, true, true],
           [
             <div key="base">
               <div>公司行动通知</div>
@@ -552,12 +426,7 @@ const SecuritiesMarket: React.FC = () => {
             true,
             true,
           ],
-          [
-            '银行余额自动查询',
-           false,
-            true,
-            true,
-          ],
+          ['银行余额自动查询', false, true, true],
           ['财务报表导出', true, true, true],
         ],
       },
@@ -572,12 +441,7 @@ const SecuritiesMarket: React.FC = () => {
           ['仓位管理', true, true, true],
           ['一键清算', true, true, true],
           ['经纪分佣', true, true, true],
-          [
-            '阶梯计费',
-            false,
-            true,
-            true,
-          ],
+          ['阶梯计费', false, true, true],
         ],
       },
       {
@@ -602,6 +466,7 @@ const SecuritiesMarket: React.FC = () => {
         value: [['HKEX、SFC 监管改动', true, true, true]],
       },
     ],
+    colRatio: [14, 44, 14, 14, 14],
   }
 
   return (

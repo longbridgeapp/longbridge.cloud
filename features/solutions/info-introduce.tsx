@@ -75,7 +75,7 @@ export const ImageAndList: React.FC<IImageAndListProps> = ({
           <div className="flex flex-col mt-10 text-base font-normal text-text_color_1_supplement gap-y-6">
             {desc.map((i, index) => {
               return (
-                <div key={index} className="flex items-start gap-x-8">
+                <div key={index} className="flex items-center gap-x-8">
                   {i?.icon && <ImageIcon url={i?.icon} className="w-8 !h-auto" />}
                   {i?.text && <div className="lg:w-[438px]">{i?.text}</div>}
                 </div>

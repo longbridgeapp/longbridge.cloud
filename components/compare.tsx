@@ -38,19 +38,22 @@ const Compares: React.FC<{ list: ICompareProps[]; compareId: string; className?:
       ref={compareSceneRef}
     >
       {list.map((item, index) => (
-        <div className="flex flex-col flex-1 overflow-hidden border rounded-lg border-border_color" key={index}>
+        <div
+          className="flex flex-col flex-1 overflow-hidden bg-white border rounded-lg border-border_color"
+          key={index}
+        >
           <div className="flex flex-col compare-first">
-            <div className="text-[22px] p-8 pb-0 font-medium mb-2">{item.title}</div>
+            <div className="text-[30px] p-8 pb-0 font-semibold mb-2">{item.title}</div>
             <div className="flex-1 pb-5 mx-8 text-base font-normal border-b border-dashed border-tag_border_color text-text_color_1">
               {item.description}
             </div>
           </div>
           {item.subList && (
             <div className="flex-1 px-8 pb-5 compare-second">
-              <div className="text-base font-medium mt-[30px] mb-[10px]">{item.subTitle}</div>
+              <div className="text-xl font-medium mt-[30px] mb-[10px]">{item.subTitle}</div>
               <ul className="flex flex-col gap-y-4">
                 {item.subList.map((subItem, subIndex) => (
-                  <li className="list-dot" key={subIndex}>
+                  <li className="text-base list-dot" key={subIndex}>
                     {subItem}
                   </li>
                 ))}
@@ -59,7 +62,7 @@ const Compares: React.FC<{ list: ICompareProps[]; compareId: string; className?:
           )}
           {item.thirdDescription && (
             <div className="px-8 py-5 text-white bg-brand_color compare-third">
-              <div className="text-base font-normal mb-[10px]">{item.thirdTitle}</div>
+              <div className="mb-3 text-base">{item.thirdTitle}</div>
               <div className="text-xl font-medium">{item.thirdDescription}</div>
             </div>
           )}

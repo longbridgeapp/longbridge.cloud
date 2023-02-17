@@ -14,6 +14,7 @@ interface IBody {
 interface ITable {
   heads: { title?: ReactNode; subTitle?: ReactNode; light?: boolean }[]
   body: IBody[]
+  colRatio?: number[] // 每一行比例配置
 }
 
 const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> = props => {
@@ -38,11 +39,16 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
             const trs = []
             trs.push(
               <tr className="row" key={i}>
-                <td rowSpan={item.value?.length} className="text-base font-medium text-text_color_1" key="label">
+                <td
+                  rowSpan={item.value?.length}
+                  className="text-base font-medium text-text_color_1"
+                  key="label"
+                  style={data.colRatio?.[0] ? { width: `${data.colRatio[0]}%` } : {}}
+                >
                   {item.label}
                 </td>
                 {item.value[0]?.map((i_0, ii) => (
-                  <td key={ii}>
+                  <td key={ii} style={data.colRatio?.[ii + 1] ? { width: `${data.colRatio[ii + 1]}%` } : {}}>
                     {i_0 === true ? (
                       <RightIcon key="icon" />
                     ) : i_0 === false ? (
