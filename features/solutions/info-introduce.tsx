@@ -80,7 +80,7 @@ export const ImageAndList: React.FC<IImageAndListProps> = ({
               return (
                 <div key={index} className="flex items-center gap-x-8">
                   {i?.icon && <ImageIcon url={i?.icon} className="w-8 !h-auto" />}
-                  {i?.text && <div className="lg:w-[438px]">{i?.text}</div>}
+                  {i?.text && <div className="lg:w-[438px] text-left">{i?.text}</div>}
                 </div>
               )
             })}
