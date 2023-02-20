@@ -205,25 +205,25 @@ const Retail: React.FC = () => {
               data={[
                 {
                   icon: 'https://assets.lbkrs.com/uploads/4473ab05-1c98-45c3-a458-177d18ecf2b4/phone.png',
-                  iconClass: '!w-[30px] !h-auto',
+                  iconClass: '!w-12 !h-auto',
                   title: 'Mobile',
                   description: i18n.t('pages_locale_solutions_retail_39'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/d6d9f7ef-beaf-4c81-929d-b431035e7c6e/phone-1.png',
-                  iconClass: '!w-9 !h-auto',
+                  iconClass: '!w-12 !h-auto',
                   title: 'Pad',
                   description: i18n.t('pages_locale_solutions_retail_40'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/dca5243b-1b57-4929-8c35-35b82cbb78a3/camera-1.png',
-                  iconClass: '!h-auto',
+                  iconClass: '!w-12 !h-auto',
                   title: 'Web',
                   description: i18n.t('pages_locale_solutions_retail_41'),
                 },
                 {
                   icon: 'https://assets.lbkrs.com/uploads/32606e58-d50d-4a20-8aa3-0ce088eb0aa5/camera.png',
-                  iconClass: '!h-auto',
+                  iconClass: '!w-12 !h-auto',
                   title: 'Desktop',
                   description: i18n.t('pages_locale_solutions_retail_42'),
                 },
