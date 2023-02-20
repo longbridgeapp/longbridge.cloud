@@ -150,7 +150,7 @@ const DeliverySystem: React.FC = () => {
             <div className="bg-[#fff] flex flex-col lg:flex-row overflow-hidden border border-border_color marketing-scene-version">
               <div className="flex-1 p-10">
                 <div className="border-b border-dashed version-first border-tag_border_color">
-                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-030')}</div>
+                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
                   <div className="text-base font-normal pb-7 text-text_color_1_supplement">
                     <div>{i18n.t('whale-delivery-system-031')}</div>
                     <div className="h-6"></div>
@@ -167,7 +167,7 @@ const DeliverySystem: React.FC = () => {
               </div>
               <div className="flex-1 p-10 border-l bg-bg_color_2 border-border_color">
                 <div className="border-b border-dashed version-first border-tag_border_color">
-                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
+                  <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-042')}</div>
                   <div className="text-base font-normal pb-7 text-text_color_1_supplement">
                     <div>{i18n.t('whale-delivery-system-037')}</div>
                     <div>{i18n.t('whale-delivery-system-038')}</div>
@@ -185,7 +185,7 @@ const DeliverySystem: React.FC = () => {
               <div className="flex-1 p-10 bg-brand_color text-[#fff]">
                 <div className="border-b border-dashed version-first border-tag_border_color">
                   <div className="text-[30px] font-semibold mb-2 flex items-center">
-                    {i18n.t('whale-delivery-system-042')}
+                    {i18n.t('pages_locale_solutions_securities_market_8783')}
                     <span className="text-xl text-white font-semibold px-2 py-[2px] rounded rounded-bl-none bg-[#7947FF] ml-4">
                       HOT
                     </span>
