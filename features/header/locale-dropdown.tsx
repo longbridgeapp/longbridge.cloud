@@ -26,13 +26,15 @@ export const LocaleDropdown: FC = () => {
     ]
   }, [])
   const { i18n } = useTranslation('common')
-  const [locale, setLocale] = useState(i18n.language || Cookies.get('locale'))
+  const [locale, setLocale] = useState(i18n.language) // || Cookies.get('locale')
   const onChange = (value: string) => {
+    // if (Cookies.get('locale') !== value) {
+    //   Cookies.set('locale', value, {
+    //     domain: getRootDomain(location.hostname),
+    //     expires: 7,
+    //   })
+    // }
     const pathLocale = getBasenameLocale()
-    Cookies.set('locale', value, {
-      domain: getRootDomain(location.hostname),
-      expires: 7,
-    })
     setLocale(value)
     location.href = getLocaleHref(pathLocale!, value)
   }

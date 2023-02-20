@@ -41,7 +41,6 @@ export function getLocaleHref(pathLocale: string, locale: string) {
   } else {
     pathname = `/${locale}${pathname}`
   }
-  pathname = pathname.replace('/zh-HK', '')
   const url = new URL(location.href)
   url.pathname = pathname
   return url.toString()

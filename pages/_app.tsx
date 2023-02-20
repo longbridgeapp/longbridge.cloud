@@ -28,24 +28,23 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
 
   useMount(() => {
     const pathLocale = getBasenameLocale()
-    const cookieLocale = Cookies.get('locale')
-    const locale = getSystemLanguage()
+    // const cookieLocale = Cookies.get('locale')
+    // const locale = getSystemLanguage()
 
     // Set <html lang="en" />
-    const _locale = pathLocale || cookieLocale || locale || 'zh-HK'
+    const _locale = pathLocale || 'zh-HK'
     document.querySelector('html')?.setAttribute('lang', _locale)
-
     if (pathLocale) {
-      if (pathLocale !== cookieLocale) {
-        Cookies.set('locale', pathLocale, {
-          domain: getRootDomain(location.hostname),
-          expires: 7,
-        })
-      }
+      // if (pathLocale !== cookieLocale) {
+      //   Cookies.set('locale', pathLocale, {
+      //     domain: getRootDomain(location.hostname),
+      //     expires: 7,
+      //   })
+      // }
       return
     }
     if (_locale) {
-      location.href = getLocaleHref(pathLocale, locale)
+      location.href = getLocaleHref(pathLocale, _locale)
     }
   })
 
