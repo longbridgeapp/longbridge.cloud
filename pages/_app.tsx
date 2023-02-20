@@ -1,19 +1,19 @@
 import RouteList from '@/routes'
-import {getBasenameLocale, getLocaleHref, getSystemLanguage, isServer} from '@/utils/common'
-import {useMount} from 'ahooks'
+import { getBasenameLocale, getLocaleHref, getSystemLanguage, isServer, getRootDomain } from '@/utils/common'
+import { useMount } from 'ahooks'
 import Cookies from 'js-cookie'
-import {appWithTranslation} from 'next-i18next'
-import type {AppProps} from 'next/app'
+import { appWithTranslation } from 'next-i18next'
+import type { AppProps } from 'next/app'
 import Head from 'next/head'
-import {BrowserRouter} from 'react-router-dom'
-import {StaticRouter} from 'react-router-dom/server'
-import {ToastContainer} from 'react-toastify'
+import { BrowserRouter } from 'react-router-dom'
+import { StaticRouter } from 'react-router-dom/server'
+import { ToastContainer } from 'react-toastify'
 
 import '@/styles/globals.scss'
 import 'react-toastify/dist/ReactToastify.css'
-import Script from "next/script";
+import Script from 'next/script'
 
-const AppWithTranslation = appWithTranslation(({Component, pageProps, router}: AppProps) => {
+const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }: AppProps) => {
   const nextRouter = (
     <StaticRouter location={router.asPath}>
       {/* @ts-ignore */}
@@ -22,7 +22,7 @@ const AppWithTranslation = appWithTranslation(({Component, pageProps, router}: A
   )
   const feRouter = (
     <BrowserRouter>
-      <RouteList pageProps={pageProps}/>
+      <RouteList pageProps={pageProps} />
     </BrowserRouter>
   )
 
@@ -32,17 +32,23 @@ const AppWithTranslation = appWithTranslation(({Component, pageProps, router}: A
     const locale = getSystemLanguage()
 
     // Set <html lang="en" />
-    document.querySelector('html')?.setAttribute('lang', cookieLocale || locale)
+    const _locale = pathLocale || cookieLocale || locale || 'zh-HK'
+    document.querySelector('html')?.setAttribute('lang', _locale)
 
     if (pathLocale) {
+      if (pathLocale !== cookieLocale) {
+        Cookies.set('locale', pathLocale, {
+          domain: getRootDomain(location.hostname),
+          expires: 7,
+        })
+      }
       return
     }
-    if (!cookieLocale && locale !== 'zh-HK') {
+    if (_locale) {
       location.href = getLocaleHref(pathLocale, locale)
-    } else if (cookieLocale && cookieLocale !== 'zh-HK') {
-      location.href = getLocaleHref(pathLocale, cookieLocale)
     }
   })
+
   useMount(() => {
     const bindEventListener = function (type: string) {
       const historyEvent = (history as any)[type]
@@ -69,11 +75,14 @@ const AppWithTranslation = appWithTranslation(({Component, pageProps, router}: A
   return (
     <div className="app">
       <Head>
-        <script src={'https://static.lbkrs.com/npm/sensorsdata@1.16.10.min.js'} defer/>
-        <link rel="icon" type="image/x-icon" href="https://pub.lbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png"/>
+        <script src={'https://static.lbkrs.com/npm/sensorsdata@1.16.10.min.js'} defer />
+        <link rel="icon" type="image/x-icon" href="https://pub.lbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
       </Head>
-      <Script id="sensors-inject" strategy="afterInteractive" dangerouslySetInnerHTML={{
-        __html: `
+      <Script
+        id="sensors-inject"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
             const sensors = window['sensorsDataAnalytic201505'];
             sensors.init({
               server_url: 'https://event-tracking.lbkrs.com/sa?project=whale_pro',
@@ -86,9 +95,9 @@ const AppWithTranslation = appWithTranslation(({Component, pageProps, router}: A
             sensors.quick('autoTrack');
             window['sensors'] = sensors;
           `,
-      }}>
-      </Script>
-      <ToastContainer position="top-center" theme="colored" hideProgressBar/>
+        }}
+      ></Script>
+      <ToastContainer position="top-center" theme="colored" hideProgressBar />
       {isServer() ? nextRouter : feRouter}
     </div>
   )
