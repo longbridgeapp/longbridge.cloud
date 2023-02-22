@@ -205,8 +205,10 @@ const AppPlusPage = () => {
         label: i18n.t('pages_locale_solutions_app_plus_8702'),
         value: [
           [i18n.t('pages_locale_solutions_app_plus_8710'), true, true, true, true],
+          [i18n.t('pages_locale_solutions_app_plus_8710_1'), true, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8711'), true, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8712'), true, true, true, true],
+          [i18n.t('pages_locale_solutions_app_plus_8712_1'), true, true, true, true],
           [
             i18n.t('pages_locale_solutions_app_plus_8713'),
             true,
