@@ -989,5 +989,19 @@
   "pages_locale_solutions_securities_market_8910_29": "含：支付流水、銀行流水、人工錄入",
   "pages_locale_solutions_securities_market_8910_30": "Whale 證券櫃台解決方案面向客户提供三種版本：標準版、專業版、旗艦版",
   "pages_locale_solutions_securities_market_8910_31": "標準版：基本的美港 A 股交易能力 ｜ 專業版：現代化的證券交易能力 ｜ 旗艦版：具有互聯網營銷、機構服務能力的合作伙伴",
-  "pages_locale_solutions_securities_market_8910_111": "港股 - 基本訂單"
+  "pages_locale_solutions_securities_market_8910_111": "港股 - 基本訂單",
+  "whale-delivery-system-076": "支持 定時單次/重複計劃",
+  "whale-delivery-system-077": "支持 SMS、Email、Push 觸達",
+  "whale-delivery-system-078": "支持 CSV 導入、預置標籤分群",
+  "whale-delivery-system-079": "支持 SMS、Email、Push 模版",
+  "whale-delivery-system-080": "構建標準投放能力，多通道觸達用户",
+  "whale-delivery-system-081": "支持",
+  "whale-delivery-system-082": "全部功能",
+  "whale-delivery-system-083": "增加 獲取型計劃",
+  "whale-delivery-system-084": "增加 Banner、Popup 觸達",
+  "whale-delivery-system-085": "增加 Banner、Popup 模版",
+  "whale-delivery-system-086": "構建智能投放能力，助力核心運營目標達成",
+  "whale-delivery-system-087": "增加 觸發型計劃",
+  "whale-delivery-system-088": "增加 非預置標籤擴展服務",
+  "whale-delivery-system-089": "增加 A/B test 等功能"
 }

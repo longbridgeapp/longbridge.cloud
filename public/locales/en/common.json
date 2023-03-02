@@ -985,5 +985,19 @@
   "pages_locale_solutions_securities_market_8910_29": "含：支付流水、银行流水、人工录入",
   "pages_locale_solutions_securities_market_8910_30": "Whale 证券柜台解决方案面向客户提供三种版本：标准版、专业版、旗舰版",
   "pages_locale_solutions_securities_market_8910_31": "标准版：基本的美港 A 股交易能力 ｜ 专业版：现代化的证券交易能力 ｜ 旗舰版：具有互联网营销、机构服务能力的合作伙伴",
-  "pages_locale_solutions_securities_market_8910_111": "港股 - 基本订单"
+  "pages_locale_solutions_securities_market_8910_111": "港股 - 基本订单",
+  "whale-delivery-system-076": "Supports periodic single/repeat scheduling",
+  "whale-delivery-system-077": "Supports SMS, Email, Push channels",
+  "whale-delivery-system-078": "Supports CSV import and preset label groups",
+  "whale-delivery-system-079": "Supports SMS, Email, Push templates",
+  "whale-delivery-system-080": "Develop standard marketing capability and push users via multiple channels",
+  "whale-delivery-system-081": "Supports",
+  "whale-delivery-system-082": "full function",
+  "whale-delivery-system-083": "Added acquisition plan",
+  "whale-delivery-system-084": "Added Banner, Popup touch",
+  "whale-delivery-system-085": "Added Banner, Popup templates",
+  "whale-delivery-system-086": "Supports Standard and  Pro full function",
+  "whale-delivery-system-087": "Added trigger plan",
+  "whale-delivery-system-088": "Added non-preset label extension service",
+  "whale-delivery-system-089": "Added functions such as A/B test"
 }

@@ -153,15 +153,15 @@ const DeliverySystem: React.FC = () => {
                   <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-036')}</div>
                   <div className="text-base font-normal pb-7 text-text_color_1_supplement">
                     <div>{i18n.t('whale-delivery-system-031')}</div>
-                    <div className="h-6"></div>
                   </div>
                 </div>
                 <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4 ">
-                    <li className="list-dot">{i18n.t('whale-delivery-system-033')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-034')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-035')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-076')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-077')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-078')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-079')}</li>
                   </ul>
                 </div>
               </div>
@@ -170,15 +170,22 @@ const DeliverySystem: React.FC = () => {
                   <div className="text-[30px] font-semibold mb-2">{i18n.t('whale-delivery-system-042')}</div>
                   <div className="text-base font-normal pb-7 text-text_color_1_supplement">
                     <div>{i18n.t('whale-delivery-system-037')}</div>
-                    <div>{i18n.t('whale-delivery-system-038')}</div>
+                    <div>{i18n.t('whale-delivery-system-080')}</div>
                   </div>
                 </div>
                 <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
-                    <li className="list-dot">{i18n.t('whale-delivery-system-040')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-041')}</li>
-                    <li className="list-dot">{i18n.t('whale-delivery-system-035')}</li>
+                    <li className="flex items-center list-dot">
+                      {i18n.t('whale-delivery-system-081')}
+                      <span className="text-base font-semibold bg-white px-1 py-[2px] mx-2">
+                        {i18n.t('whale-delivery-system-036')}
+                      </span>
+                      {i18n.t('whale-delivery-system-082')}
+                    </li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-083')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-084')}</li>
+                    <li className="list-dot">{i18n.t('whale-delivery-system-085')}</li>
                   </ul>
                 </div>
               </div>
@@ -192,16 +199,25 @@ const DeliverySystem: React.FC = () => {
                   </div>
                   <div className="text-base font-normal pb-7 opacity-80">
                     <div>{i18n.t('whale-delivery-system-043')}</div>
-                    <div>{i18n.t('whale-delivery-system-044')}</div>
+                    <div>{i18n.t('whale-delivery-system-086')}</div>
                   </div>
                 </div>
                 <div className="version-second">
                   <div className="text-xl font-medium mt-[30px] mb-[10px]">{i18n.t('whale-delivery-system-032')}</div>
                   <ul className="flex flex-col gap-y-4">
-                    <li className="list-dot white">{i18n.t('whale-delivery-system-045')}</li>
-                    <li className="list-dot white">{i18n.t('whale-delivery-system-041')}</li>
-                    <li className="list-dot white">{i18n.t('whale-delivery-system-046')}</li>
-                    <li className="list-dot white">{i18n.t('whale-delivery-system-047')}</li>
+                    <li className="flex items-center list-dot white">
+                      {i18n.t('whale-delivery-system-081')}
+                      <span className="text-base font-semibold bg-[#7947FF] px-1 py-[2px] mx-2">
+                        {i18n.t('whale-delivery-system-036')}
+                      </span>
+                      <span className="text-base font-semibold bg-[#7947FF] px-1 py-[2px] mr-2">
+                        {i18n.t('whale-delivery-system-042')}
+                      </span>
+                      {i18n.t('whale-delivery-system-082')}
+                    </li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-087')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-088')}</li>
+                    <li className="list-dot white">{i18n.t('whale-delivery-system-089')}</li>
                   </ul>
                 </div>
               </div>
