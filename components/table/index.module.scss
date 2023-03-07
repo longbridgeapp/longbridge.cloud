@@ -9,7 +9,7 @@
   }
   th {
     .title {
-      @apply text-sm font-medium;
+      @apply text-sm font-normal;
     }
     .subtitle {
       @apply text-xs font-normal text-text_color_2;
@@ -23,7 +23,7 @@
   }
 
   th.light {
-    @apply bg-brand_color_2 text-white;
+    @apply bg-brand_color_2 text-white border-brand_color border-t;
     .subtitle{
       @apply text-white opacity-80;
     }

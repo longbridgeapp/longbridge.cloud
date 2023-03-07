@@ -655,6 +655,7 @@
   "packages_xadmin_shared_config_menus_7698": "https://pub.lbkrs.com/static/offline/202301/tKXZrDRrwX2krTeN/Group_427319353.svg",
   "features_header_index_2": "首页",
   "features_header_index_3": "零售终端",
+  "features_header_index_retail_terminal": "零售终端",
   "features_header_index_4": "互联网 App + 解决方案",
   "pages_locale_solutions_retail_5": "更简洁的操作界面，承载多样功能，致力于为用户提供更优的交易体验。以「发现 → 认知 → 交易」为基础，结合大量的结构化数据，支持搭建更多样化的选股工具，降低用户认知和投资交易的门槛。",
   "pages_locale_solutions_retail_5_1": "支持多种终端：Mobile、Pad、Desktop、Web",
@@ -738,6 +739,7 @@
   "pages_locale_solutions_app_plus_8699": "风格定制",
   "pages_locale_solutions_app_plus_8700": "内容服务",
   "pages_locale_solutions_app_plus_8701": "股票数据服务",
+  "pages_locale_solutions_app_plus_8701_4": "股票数据服务",
   "pages_locale_solutions_app_plus_8701_1": "支持港/沪深行情及基本面",
   "pages_locale_solutions_app_plus_8701_2": "支持三大市场行情及基本面",
   "pages_locale_solutions_app_plus_8701_3": "部分支持",
@@ -767,6 +769,7 @@
   "pages_locale_solutions_app_plus_8723": "热点话题",
   "pages_locale_solutions_app_plus_8724": "客户关系管理",
   "pages_locale_solutions_app_plus_8725": "帮助系统",
+  "pages_locale_solutions_app_plus_8726_1": "投放系统",
   "pages_locale_solutions_app_plus_8726": "基础运营计划",
   "pages_locale_solutions_app_plus_8727": "智能运营计划",
   "pages_locale_solutions_app_plus_8728": "基础通道管理",
@@ -774,6 +777,7 @@
   "pages_locale_solutions_app_plus_8730": "基础用户分群",
   "pages_locale_solutions_app_plus_8731": "规则用户分群",
   "pages_locale_solutions_app_plus_8732": "权益系统",
+  "pages_locale_solutions_app_plus_8733_1": "行情商店",
   "pages_locale_solutions_app_plus_8733": "发奖与奖励管理",
   "pages_locale_solutions_app_plus_8734": "行情卡券",
   "pages_locale_solutions_app_plus_8735": "股票现金卡券",
@@ -813,6 +817,8 @@
   "pages_locale_solutions_app_plus_8763_6": "第三方服务",
   "pages_locale_solutions_app_plus_8763_7": "White Label 产品体系面向客户提供三种版本：标准版、专业版、旗舰版",
   "pages_locale_solutions_app_plus_8763_8": "标准版：港美 A 市场基本交易服务 ｜专业版：满足现代化的证券交易服务 ｜ 旗舰版：具备规模化运营营销需求",
+  "pages_locale_solutions_app_plus_8763_9": "客户管理",
+  "pages_locale_solutions_app_plus_8763_9_1": "活动系统",
   "pages_locale_solutions_securities_market_8769": "证券柜台解决方案",
   "pages_locale_solutions_securities_market_8770": "方案涵盖股票、期权、基金、债券、衍生品等产品的交易清算能力；支持多市场、多样化交易模式，满足经纪商开户、登记、托管、交易、清算需求；灵活可定制的开放接口可以满足各类业务快速接入，可配置的标准业务功能和定制的专业旗舰功能，任何类型的经纪商都能确定一套适合的解决方案；基于互联网运营思维梳理的核心业务流程高度实现自动化，帮助经纪商更好的降本增效",
   "pages_locale_solutions_securities_market_8771": "Windows / macOS / Linux 多终端支持，根据操作员自身操作习惯自定义面板组件和内容排布，设置不同操作快捷键，支持全键盘操作",
@@ -1000,5 +1006,6 @@
   "whale-delivery-system-086": "构建智能投放能力，助力核心运营目标达成",
   "whale-delivery-system-087": "增加 触发型计划",
   "whale-delivery-system-088": "增加 非预置标签扩展服务",
-  "whale-delivery-system-089": "增加 A/B test 等功能"
+  "whale-delivery-system-089": "增加 A/B test 等功能",
+  "features_solutions_info_introduce_891112": "了解更多"
 }

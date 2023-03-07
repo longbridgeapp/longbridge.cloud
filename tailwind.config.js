@@ -1,4 +1,5 @@
 const { themeReplacements } = require('./tailwind-theme-replacements')
+const plugin = require('tailwindcss/plugin')
 
 module.exports = {
   content: [
@@ -9,8 +10,13 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        ...themeReplacements()
+        ...themeReplacements(),
       },
-    }
-  }
+    },
+  },
+  plugins: [
+    plugin(function ({ addVariant }) {
+      addVariant('en', '.en &')
+    }),
+  ],
 }

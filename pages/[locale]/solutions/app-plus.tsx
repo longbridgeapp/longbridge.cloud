@@ -29,6 +29,7 @@ export const getStaticProps = async (ctx: any) => ({
 const AppPlusPage = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
+  const isEn = i18n.i18n.language === 'en'
 
   const banner_props = {
     title: i18n.t('features_header_index_4'),
@@ -114,7 +115,7 @@ const AppPlusPage = () => {
     ],
     body: [
       {
-        label: i18n.t('features_header_index_3'),
+        label: i18n.t('features_header_index_retail_terminal'),
         value: [[i18n.t('pages_locale_solutions_app_plus_8699'), false, true, true, true]],
       },
       {
@@ -123,13 +124,13 @@ const AppPlusPage = () => {
           [
             i18n.t('pages_locale_solutions_app_plus_8701'),
             true,
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_1')}
             </span>,
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_2')}
             </span>,
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_2')}
             </span>,
           ],
@@ -141,7 +142,7 @@ const AppPlusPage = () => {
         value: [
           [
             i18n.t('one-stop.custom-manager.title'),
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_3')}
             </span>,
             true,
@@ -151,10 +152,10 @@ const AppPlusPage = () => {
           [
             i18n.t('pages_locale_solutions_app_plus_8681'),
             false,
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_3')}
             </span>,
-            <span key="line-1" className="text-text_color_1">
+            <span key="line-1" className="text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8701_3')}
             </span>,
             true,
@@ -162,7 +163,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
-    colRatio: [15, 17, 17, 17, 17, 17],
+    colRatio: isEn ? [15, 25, 15, 15, 15, 15] : [15, 17, 17, 17, 17, 17],
   }
   const table_2 = {
     heads: [
@@ -185,7 +186,7 @@ const AppPlusPage = () => {
     ],
     body: [
       {
-        label: i18n.t('features_header_index_3'),
+        label: i18n.t('features_header_index_retail_terminal'),
         value: [
           [i18n.t('pages_locale_solutions_app_plus_8703'), true, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8704'), true, true, true, true],
@@ -212,7 +213,7 @@ const AppPlusPage = () => {
           [
             i18n.t('pages_locale_solutions_app_plus_8713'),
             true,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_1')}
             </span>,
             ,
@@ -221,16 +222,16 @@ const AppPlusPage = () => {
           ],
           [
             i18n.t('pages_locale_solutions_app_plus_8714'),
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-2" className="text-sm text-text_color_1">
+            <span key="line-2" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-3" className="text-sm text-text_color_1">
+            <span key="line-3" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-4" className="text-sm text-text_color_1">
+            <span key="line-4" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
           ],
@@ -247,7 +248,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
-    colRatio: [14, 18, 17, 17, 17, 17],
+    colRatio: isEn ? [14, 24, 15.5, 15.5, 15.5, 15.5] : [14, 18, 17, 17, 17, 17],
   }
   const table_3 = {
     heads: [
@@ -278,26 +279,26 @@ const AppPlusPage = () => {
           [
             i18n.t('pages_locale_solutions_app_plus_8718'),
             true,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
           ],
           [
             i18n.t('pages_locale_solutions_app_plus_8719'),
             true,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
           ],
@@ -312,7 +313,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
-    colRatio: [14, 18, 17, 17, 17, 17],
+    colRatio: isEn ? [14, 24, 15.5, 15.5, 15.5, 15.5] : [14, 18, 17, 17, 17, 17],
   }
   const table_4 = {
     heads: [
@@ -344,13 +345,13 @@ const AppPlusPage = () => {
               <div className="mt-1 text-xs text-text_color_2">{i18n.t('pages_locale_solutions_app_plus_8763_6')}</div>
             </div>,
             false,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-1" className="text-sm text-text_color_1">
+            <span key="line-1" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
           ],
@@ -358,7 +359,7 @@ const AppPlusPage = () => {
         ],
       },
     ],
-    colRatio: [14, 18, 17, 17, 17, 17],
+    colRatio: isEn ? [14, 24, 15.5, 15.5, 15.5, 15.5] : [14, 18, 17, 17, 17, 17],
   }
   const table_5 = {
     heads: [
@@ -381,7 +382,7 @@ const AppPlusPage = () => {
     ],
     body: [
       {
-        label: i18n.t('whale-delivery-system-001'),
+        label: i18n.t('pages_locale_solutions_app_plus_8726_1'),
         value: [
           [i18n.t('pages_locale_solutions_app_plus_8726'), false, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8727'), false, false, false, true],
@@ -394,7 +395,7 @@ const AppPlusPage = () => {
       {
         label: i18n.t('pages_locale_solutions_app_plus_8732'),
         value: [
-          [i18n.t('market_features_008'), true, true, true, true],
+          [i18n.t('pages_locale_solutions_app_plus_8733_1'), true, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8733'), false, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8734'), false, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8735'), false, false, true, true],
@@ -402,7 +403,7 @@ const AppPlusPage = () => {
         ],
       },
       {
-        label: i18n.t('customer-management.item-12'),
+        label: i18n.t('pages_locale_solutions_app_plus_8763_9_1'),
         value: [
           [i18n.t('pages_locale_solutions_app_plus_8737'), false, false, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8738'), false, false, false, true],
@@ -416,20 +417,20 @@ const AppPlusPage = () => {
           [
             i18n.t('pages_locale_solutions_app_plus_8741'),
             false,
-            <span key="line-2" className="text-sm text-text_color_1">
+            <span key="line-2" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-3" className="text-sm text-text_color_1">
+            <span key="line-3" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
-            <span key="line-4" className="text-sm text-text_color_1">
+            <span key="line-4" className="text-sm text-text_color_1_supplement">
               {i18n.t('pages_locale_solutions_app_plus_8763_2')}
             </span>,
           ],
         ],
       },
     ],
-    colRatio: [14, 18, 17, 17, 17, 17],
+    colRatio: isEn ? [14, 24, 15.5, 15.5, 15.5, 15.5] : [14, 18, 17, 17, 17, 17],
   }
   return (
     <Layout>
@@ -460,7 +461,7 @@ const AppPlusPage = () => {
         />
         <Box>
           <>
-            <Title title={i18n.t('pages_locale_solutions_app_plus_8701')}></Title>
+            <Title title={i18n.t('pages_locale_solutions_app_plus_8701_4')}></Title>
             <InfoIntroduce
               className="my-8"
               data={[
@@ -475,6 +476,7 @@ const AppPlusPage = () => {
                 {
                   title: i18n.t('pages_locale_solutions_app_plus_8748'),
                   description: i18n.t('pages_locale_solutions_app_plus_8749'),
+                  className: 'en:xl:-ml-10',
                 },
               ]}
             />
@@ -492,7 +494,7 @@ const AppPlusPage = () => {
         />
         <Box>
           <>
-            <Title title={i18n.t('one-stop.custom-manager.title')}></Title>
+            <Title title={i18n.t('pages_locale_solutions_app_plus_8763_9')}></Title>
             <InfoIntroduce
               className="my-8"
               data={[
@@ -524,8 +526,8 @@ const AppPlusPage = () => {
               label={i18n.t('pages_locale_solutions_app_plus_8757')}
             ></Title>
             <InfoIntroduce
-              className="mt-8"
-              descClass="text-sm text-text_color_1"
+              className="mt-10"
+              descClass="text-sm text-text_color_1_supplement"
               data={[
                 {
                   icon: 'https://assets.lbkrs.com/uploads/8a5b1aab-d6e7-4f5a-8460-52e1e1a51494/vote.png',

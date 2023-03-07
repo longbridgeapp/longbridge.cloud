@@ -26,6 +26,7 @@ export const getStaticProps = async (ctx: any) => ({
 const SecuritiesMarket: React.FC = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
+  const isEn = i18n.i18n.language === 'en'
 
   const banner_props = {
     title: i18n.t('pages_locale_solutions_securities_market_8769'),
@@ -502,8 +503,8 @@ const SecuritiesMarket: React.FC = () => {
               title={i18n.t('pages_locale_solutions_securities_market_8898')}
             />
             <InfoIntroduce
-              className="my-8"
-              descClass="text-sm text-text_color_1"
+              className="!items-start my-8"
+              descClass="text-sm text-text_color_1_supplement"
               data={[
                 {
                   icon: 'https://assets.lbkrs.com/uploads/8ef8a9ee-5f88-4025-b6d0-6585dbd1cc10/browser.png',

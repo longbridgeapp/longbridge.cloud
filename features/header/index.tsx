@@ -78,7 +78,7 @@ function useNavs() {
           },
           {
             value: '/solutions/securities-market',
-            label: '证券柜台解决方案',
+            label: i18n.t('pages_locale_solutions_securities_market_8769'),
           },
           // {
           //   value: '/solutions',

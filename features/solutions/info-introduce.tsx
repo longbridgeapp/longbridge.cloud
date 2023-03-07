@@ -11,6 +11,7 @@ interface IInfoIntroduce {
   iconClass?: string
   title?: string
   description?: string
+  className?: string
 }
 interface IImageAndTextProps {
   title?: string
@@ -39,9 +40,12 @@ const InfoIntroduce: React.FC<{
   descClass?: string
 }> = ({ className, data, maxWidth = 374, descClass = 'text-base text-text_color_2' }) => {
   return (
-    <div className={classnames('flex flex-col gap-10 lg:flex-row justify-center items-center ', className)}>
+    <div className={classnames('flex flex-col gap-10 lg:flex-row justify-center items-start', className)}>
       {data.map((info, index) => (
-        <div key={index} className={classnames('flex flex-col flex-1 gap-y-2', `max-w-[${maxWidth}px]`)}>
+        <div
+          key={index}
+          className={classnames('flex flex-col flex-1 gap-y-2', `max-w-[${maxWidth}px]`, info.className)}
+        >
           {info.icon && <ImageIcon url={info.icon} className={classnames('mx-auto lg:mx-0', info.iconClass)} />}
           {info.title && (
             <div className="text-xl font-medium text-center text-text_color_1 lg:text-left">{info.title}</div>
@@ -85,7 +89,7 @@ export const ImageAndList: React.FC<IImageAndListProps> = ({
               )
             })}
           </div>
-          {needTalk && <TalkToUs className="mt-10" text="了解更多" />}
+          {needTalk && <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />}
         </div>
         {/* 图片 */}
         <div className="lg:w-[484px] ">
@@ -128,10 +132,10 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
             <>
               {localLink ? (
                 <LocaleLink className="flex items-center mt-10" to={localLink}>
-                  <Button size="medium">了解更多</Button>
+                  <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
                 </LocaleLink>
               ) : (
-                <TalkToUs className="mt-10" text="了解更多" />
+                <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />
               )}
             </>
           )}

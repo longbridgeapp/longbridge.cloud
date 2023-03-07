@@ -33,7 +33,11 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
 
     // Set <html lang="en" />
     const _locale = pathLocale || 'zh-HK'
-    document.querySelector('html')?.setAttribute('lang', _locale)
+    const html = document.querySelector('html')
+    if (html) {
+      html?.setAttribute('lang', _locale)
+      html.classList.add(_locale)
+    }
     if (pathLocale) {
       // if (pathLocale !== cookieLocale) {
       //   Cookies.set('locale', pathLocale, {

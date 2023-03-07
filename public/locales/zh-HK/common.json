@@ -655,6 +655,7 @@
   "whale-middle-desk-001": "櫃台系統 - 前中台",
   "features_header_index_2": "首頁",
   "features_header_index_3": "零售終端",
+  "features_header_index_retail_terminal": "零售終端",
   "features_header_index_4": "互聯網 App + 解決方案",
   "pages_locale_solutions_retail_5": "更簡潔的操作界面，承載多樣功能，致力於為用户提供更優的交易體驗。以「發現 → 認知 → 交易」為基礎，結合大量的結構化數據，支持搭建更多樣化的選股工具，降低用户認知和投資交易的門檻。",
   "pages_locale_solutions_retail_5_1": "支持多種終端：Mobile、Pad、Desktop、Web",
@@ -740,6 +741,7 @@
   "pages_locale_solutions_app_plus_8699": "風格定製",
   "pages_locale_solutions_app_plus_8700": "內容服務",
   "pages_locale_solutions_app_plus_8701": "股票數據服務",
+  "pages_locale_solutions_app_plus_8701_4": "股票數據服務",
   "pages_locale_solutions_app_plus_8701_1": "支持港/滬深行情及基本面",
   "pages_locale_solutions_app_plus_8701_2": "支持三大市場行情及基本面",
   "pages_locale_solutions_app_plus_8701_3": "部分支持",
@@ -769,6 +771,7 @@
   "pages_locale_solutions_app_plus_8723": "熱點話題",
   "pages_locale_solutions_app_plus_8724": "客户關係管理",
   "pages_locale_solutions_app_plus_8725": "幫助系統",
+  "pages_locale_solutions_app_plus_8726_1": "投放系統",
   "pages_locale_solutions_app_plus_8726": "基礎運營計劃",
   "pages_locale_solutions_app_plus_8727": "智能運營計劃",
   "pages_locale_solutions_app_plus_8728": "基礎通道管理",
@@ -776,6 +779,7 @@
   "pages_locale_solutions_app_plus_8730": "基礎用户分羣",
   "pages_locale_solutions_app_plus_8731": "規則用户分羣",
   "pages_locale_solutions_app_plus_8732": "權益系統",
+  "pages_locale_solutions_app_plus_8733_1": "行情商店",
   "pages_locale_solutions_app_plus_8733": "發獎與獎勵管理",
   "pages_locale_solutions_app_plus_8734": "行情卡券",
   "pages_locale_solutions_app_plus_8735": "股票現金卡券",
@@ -815,6 +819,8 @@
   "pages_locale_solutions_app_plus_8763_6": "第三方服務",
   "pages_locale_solutions_app_plus_8763_7": "White Label 產品體系面向客户提供三種版本：標準版、專業版、旗艦版",
   "pages_locale_solutions_app_plus_8763_8": "標準版：港美 A 市場基本交易服務 ｜專業版：滿足現代化的證券交易服務 ｜ 旗艦版：具備規模化運營營銷需求",
+  "pages_locale_solutions_app_plus_8763_9": "客户管理",
+  "pages_locale_solutions_app_plus_8763_9_1": "活動系統",
   "pages_locale_solutions_securities_market_8769": "證券櫃台解決方案",
   "pages_locale_solutions_securities_market_8770": "方案涵蓋股票、期權、基金、債券、衍生品等產品的交易清算能力；支持多市場、多樣化交易模式，滿足經紀商開户、登記、託管、交易、清算需求；靈活可定製的開放接口可以滿足各類業務快速接入，可配置的標準業務功能和定製的專業旗艦功能，任何類型的經紀商都能確定一套適合的解決方案；基於互聯網運營思維梳理的核心業務流程高度實現自動化，幫助經紀商更好的降本增效",
   "pages_locale_solutions_securities_market_8771": "Windows / macOS / Linux 多終端支持，根據操作員自身操作習慣自定義面板組件和內容排布，設置不同操作快捷鍵，支持全鍵盤操作",
@@ -1002,5 +1008,6 @@
   "whale-delivery-system-086": "構建智能投放能力，助力核心運營目標達成",
   "whale-delivery-system-087": "增加 觸發型計劃",
   "whale-delivery-system-088": "增加 非預置標籤擴展服務",
-  "whale-delivery-system-089": "增加 A/B test 等功能"
+  "whale-delivery-system-089": "增加 A/B test 等功能",
+  "features_solutions_info_introduce_891112": "瞭解更多"
 }

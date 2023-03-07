@@ -48,7 +48,11 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
                   {item.label}
                 </td>
                 {item.value[0]?.map((i_0, ii) => (
-                  <td key={ii} style={data.colRatio?.[ii + 1] ? { width: `${data.colRatio[ii + 1]}%` } : {}}>
+                  <td
+                    className="!text-sm"
+                    key={ii}
+                    style={data.colRatio?.[ii + 1] ? { width: `${data.colRatio[ii + 1]}%` } : {}}
+                  >
                     {i_0 === true ? (
                       <RightIcon key="icon" />
                     ) : i_0 === false ? (
@@ -66,7 +70,7 @@ const Table: React.FC<{ data: ITable; className?: string; thColSpan?: number }> 
               trs.push(
                 <tr className="row" key={`${i}-${i_more_index}`}>
                   {i_more?.map((i_0, ii) => (
-                    <td key={ii}>
+                    <td key={ii} className="!text-sm">
                       {i_0 === true ? (
                         <RightIcon key="icon" />
                       ) : i_0 === false ? (
