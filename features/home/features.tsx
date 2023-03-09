@@ -33,10 +33,6 @@ function useFeatures() {
         title: i18n.t('home_features_003'),
         descList: [
           {
-            icon: 'https://pub.lbkrs.com/files/202205/tesS1cgTQyNAo98W/Vector-6.png',
-            text: i18n.t('home_features_004'),
-          },
-          {
             icon: 'https://pub.lbkrs.com/files/202205/kzuByaLHaXwqbFot/Vector-9.png',
             text: i18n.t('home_features_004_2'),
           },
