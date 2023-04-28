@@ -1,11 +1,13 @@
 import classNames from 'classnames'
-import { FC, useEffect, useMemo, useState } from 'react'
+import { FC, useMemo, useState } from 'react'
+import { getSupportLinks } from '@/services'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
-import { useMount } from 'ahooks'
+import { useMount, useAsyncEffect } from 'ahooks'
 
 const Footer: FC = () => {
   const [isCN, setISCN] = useState(false)
+  const [legalTermsUrl, setLegalTermsUrl] = useState()
 
   const i18n = useTranslation('common')
   const socials = useMemo(() => {
@@ -58,6 +60,16 @@ const Footer: FC = () => {
     return { emailList, telList }
   }, [])
 
+  const fetchLegalTerms = async () => {
+    const key = 'legal_terms'
+    const data = await getSupportLinks(i18n.i18n.language)
+    setLegalTermsUrl(data.urls[key])
+  }
+
+  useAsyncEffect(async () => {
+    await fetchLegalTerms()
+  }, [i18n.i18n.language])
+
   useMount(() => {
     const isCN = window.location.hostname.includes('.cn')
     setISCN(isCN)
@@ -97,6 +109,11 @@ const Footer: FC = () => {
                   </a>
                 )
               })}
+            {legalTermsUrl && (
+              <a href={legalTermsUrl} target="_blank" rel="noreferrer">
+                {i18n.t('footer_008')}
+              </a>
+            )}
           </div>
         </div>
         <div className="flex items-center justify-between mt-6">
