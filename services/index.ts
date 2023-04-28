@@ -4,6 +4,15 @@ if (process.env.PROXY === 'prod') {
   host = 'https://m.lbkrs.com/api/forward'
 }
 
+// 获取 html 上的语言
+export const getHtmlLang = () => {
+  const html = document.querySelector('html')
+  if (html) {
+    return html.getAttribute('lang') || 'zh-CN'
+  }
+  return 'zh-CN'
+}
+
 async function transformRes(res: any) {
   if (res.ok) {
     const data = await res.json()
@@ -132,19 +141,19 @@ export const getAppConfig = async (keys: string[]): Promise<any> => {
 }
 
 /**
- * 
+ *
  * 获取帮助中心链接
  * https://api.devops.longbridge-inc.com/independent/#/home/api_studio/inside/api/detail?apiID=5027&projectHashKey=apis&spaceKey=LMsAkPRfb875391c87089bec29fd47a8c28481845f4ec47
  */
-export const getSupportLinks = async (language) => {
-  const resp= await fetch(`${host}/support/topic_url`, {
+export const getSupportLinks = async () => {
+  const resp = await fetch(`${host}/support/topic_url`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',
       'Accept': 'application/json, text/plain, */*',
       'account-channel': 'lb',
       'org-id': '1',
-      'Accept-Language': language
+      'Accept-Language': getHtmlLang(),
     },
   })
   return transformRes(resp)

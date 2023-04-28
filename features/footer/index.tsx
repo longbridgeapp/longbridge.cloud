@@ -62,13 +62,13 @@ const Footer: FC = () => {
 
   const fetchLegalTerms = async () => {
     const key = 'legal_terms'
-    const data = await getSupportLinks(i18n.i18n.language)
+    const data = await getSupportLinks()
     setLegalTermsUrl(data.urls[key])
   }
 
   useAsyncEffect(async () => {
     await fetchLegalTerms()
-  }, [i18n.i18n.language])
+  }, [])
 
   useMount(() => {
     const isCN = window.location.hostname.includes('.cn')
