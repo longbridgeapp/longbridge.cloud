@@ -1,16 +1,9 @@
+import { getBasenameLocale } from '@/utils/common'
+
 let host = 'https://m.longbridge.xyz/api/forward'
 
 if (process.env.PROXY === 'prod') {
   host = 'https://m.lbkrs.com/api/forward'
-}
-
-// 获取 html 上的语言
-export const getHtmlLang = () => {
-  const html = document.querySelector('html')
-  if (html) {
-    return html.getAttribute('lang') || 'zh-CN'
-  }
-  return 'zh-CN'
 }
 
 async function transformRes(res: any) {
@@ -153,7 +146,7 @@ export const getSupportLinks = async () => {
       'Accept': 'application/json, text/plain, */*',
       'account-channel': 'lb',
       'org-id': '1',
-      'Accept-Language': getHtmlLang(),
+      'Accept-Language': getBasenameLocale(),
     },
   })
   return transformRes(resp)

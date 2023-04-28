@@ -4,6 +4,7 @@ import { getSupportLinks } from '@/services'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 import { useMount, useAsyncEffect } from 'ahooks'
+import { getBasenameLocale } from '@/utils/common'
 
 const Footer: FC = () => {
   const [isCN, setISCN] = useState(false)
@@ -68,7 +69,7 @@ const Footer: FC = () => {
 
   useAsyncEffect(async () => {
     await fetchLegalTerms()
-  }, [])
+  }, [getBasenameLocale()])
 
   useMount(() => {
     const isCN = window.location.hostname.includes('.cn')
