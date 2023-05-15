@@ -389,7 +389,7 @@ const AppPlusPage = () => {
           [i18n.t('pages_locale_solutions_app_plus_8728'), false, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8729'), false, false, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8730'), false, true, true, true],
-          [i18n.t('pages_locale_solutions_app_plus_8731'), false, false, false, true],
+          [i18n.t('pages_locale_solutions_app_plus_8731'), false, false, true, true],
         ],
       },
       {
