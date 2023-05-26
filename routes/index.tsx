@@ -21,6 +21,7 @@ import WhaleLongport from '@/pages/[locale]/longport'
 import DeliverySystem from '@/pages/[locale]/delivery-system'
 import Retail from '@/pages/[locale]/product/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
+import VirtualAssetTradingSystem from '@/pages/[locale]/virtual-asset-trading-system'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -51,6 +52,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="delivery-system" element={<DeliverySystem {...pageProps} />} />
               <Route path="product/retail" element={<Retail {...pageProps} />} />
               <Route path="front-desk" element={<FrontDesk {...pageProps} />} />
+              <Route path="virtual-asset-trading-system" element={<VirtualAssetTradingSystem {...pageProps} />} />
             </Route>
           </Fragment>
         )
