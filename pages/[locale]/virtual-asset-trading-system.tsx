@@ -2,6 +2,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import i18nextConfig from '@/next-i18next.config'
 import { NextSeo } from 'next-seo'
 import { i18nPaths } from '@/utils/i18n-paths'
+import { useEffect, useRef } from 'react'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -15,6 +16,32 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const VirtualAssetTradingSystem = () => {
+  // 监听 iframe 加载完成，设置 iframe 高度
+  const iframeRef = useRef<HTMLIFrameElement>(null)
+
+  useEffect(() => {
+    if (!iframeRef.current) return
+    const iframe = iframeRef.current
+    const handleIframeLoad = () => {
+      const doc = iframe.contentDocument || iframe.contentWindow?.document
+      const requestFullScreen =
+        doc?.documentElement.requestFullscreen ||
+        // @ts-ignore
+        doc?.documentElement?.webkitRequestFullScreen ||
+        // @ts-ignore
+        doc?.documentElement?.mozRequestFullScreen ||
+        // @ts-ignore
+        doc?.documentElement?.msRequestFullscreen
+      if (requestFullScreen) {
+        requestFullScreen.call(doc.documentElement)
+      }
+    }
+    iframe.addEventListener('load', handleIframeLoad)
+    return () => {
+      iframe.removeEventListener('load', handleIframeLoad)
+    }
+  }, [])
+
   return (
     <>
       <NextSeo
@@ -36,11 +63,14 @@ const VirtualAssetTradingSystem = () => {
           cardType: 'summary_large_image',
         }}
       />
-      <iframe
-        src="https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb"
-        width="100%"
-        height="100%"
-      />
+      <div className="w-full h-screen">
+        <iframe
+          ref={iframeRef}
+          src="https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb"
+          width="100%"
+          height="100%"
+        />
+      </div>
     </>
   )
 }
