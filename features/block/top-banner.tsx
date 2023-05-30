@@ -80,7 +80,31 @@ export const WhiteLabelBanner = ({ img }: { img: string }) => {
 export const IndexBanner = () => {
   const i18n = useTranslation('common')
   return (
-    <Carousel className="bg-cover" autoplay style={{ backgroundImage: `url(${BG_BANNER})` }} effect="fade">
+    <Carousel className="bg-cover" autoplay effect="fade">
+      <TopBlock imageUrl={'https://pub.lbkrs.com/files/202305/GRqP6wxewMDmMQZk/banner600.png'}>
+        <Block>
+          <BlockBetween
+            left={
+              <>
+                <div className="text-text_color_2 text-3xl mb-3">{'Whale 將推出全港首個面向券商的'}</div>
+                <div className="text-white text-[54px] leading-[68px]">
+                  <div>{'7x24 一站式虛擬資產'}</div>
+                  <div>{'交易解決方案'}</div>
+                </div>
+                <button
+                  className="w-[120px] bg-brand_color h-[44px] mt-[32px]"
+                  onClick={() => {
+                    window.open('https://longbridgewhale.com/zh-HK/virtual-asset-trading-system', '_blank')
+                  }}
+                >
+                  <div className="text-white text-lg">{'立即登記'}</div>
+                </button>
+              </>
+            }
+            right={<div className="h-[420px] w-[580px]"></div>}
+          ></BlockBetween>
+        </Block>
+      </TopBlock>
       <TopBlock imageUrl={BG_BANNER}>
         <Block>
           <BlockBetween
@@ -95,11 +119,13 @@ export const IndexBanner = () => {
               </>
             }
             right={
-              <img
-                src={'https://pub.lbkrs.com/files/202207/yGQxErdGoofNJhoh/header_img.png'}
-                className="mt-5 lg:mt-0"
-                alt={i18n.t('top-banner.broker-title')}
-              />
+              <div className="h-[420px] w-[580px] flex flex-col justify-center">
+                <img
+                  src={'https://pub.lbkrs.com/files/202207/yGQxErdGoofNJhoh/header_img.png'}
+                  className="mt-5 lg:mt-0"
+                  alt={i18n.t('top-banner.broker-title')}
+                />
+              </div>
             }
           />
         </Block>
