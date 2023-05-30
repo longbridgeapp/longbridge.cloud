@@ -86,10 +86,10 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_2 text-3xl mb-3">{'Whale 將推出全港首個面向券商的'}</div>
+                <div className="text-text_color_2 text-3xl mb-3">{i18n.t('features_block_top_banner_891113')}</div>
                 <div className="text-white text-[54px] leading-[68px]">
-                  <div>{'7x24 一站式虛擬資產'}</div>
-                  <div>{'交易解決方案'}</div>
+                  <div>{i18n.t('features_block_top_banner_891114')}</div>
+                  <div>{i18n.t('features_block_top_banner_891115')}</div>
                 </div>
                 <button
                   className="w-[120px] bg-brand_color h-[44px] mt-[32px]"
@@ -97,7 +97,7 @@ export const IndexBanner = () => {
                     window.open('https://longbridgewhale.com/zh-HK/virtual-asset-trading-system', '_blank')
                   }}
                 >
-                  <div className="text-white text-lg">{'立即登記'}</div>
+                  <div className="text-white text-lg">{i18n.t('features_block_top_banner_891116')}</div>
                 </button>
               </>
             }
