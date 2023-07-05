@@ -79,9 +79,10 @@ export const WhiteLabelBanner = ({ img }: { img: string }) => {
 
 export const IndexBanner = () => {
   const i18n = useTranslation('common')
+  const isEn = i18n.i18n.language === 'en'
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
-      <TopBlock imageUrl={'https://pub.lbkrs.com/files/202305/GRqP6wxewMDmMQZk/banner600.png'}>
+      <TopBlock imageUrl={'https://pub.lbkrs.com/files/202307/pTm9TxRfNqszWivn/20230704-180041.jpeg'}>
         <Block>
           <BlockBetween
             left={
@@ -89,12 +90,15 @@ export const IndexBanner = () => {
                 <div className="text-text_color_2 text-3xl mb-3">{i18n.t('features_block_top_banner_891113')}</div>
                 <div className="text-white text-[54px] leading-[68px]">
                   <div>{i18n.t('features_block_top_banner_891114')}</div>
-                  <div>{i18n.t('features_block_top_banner_891115')}</div>
+                  {!isEn && <div>{i18n.t('features_block_top_banner_891115')}</div>}
                 </div>
                 <button
                   className="w-[120px] bg-brand_color h-[44px] mt-[32px]"
                   onClick={() => {
-                    window.open('https://longbridgewhale.com/zh-HK/virtual-asset-trading-system', '_blank')
+                    window.open(
+                      'https://mp.weixin.qq.com/s?__biz=Mzg5NDk3OTg0Ng==&mid=2247483698&idx=1&sn=cc8417052ae4a24815bec0726a5a9104&chksm=c0161b5bf761924da8b820d5af7cd32aeda0d74482205c2e91131d4b0811b70efd7728fb3f13#rd',
+                      '_blank'
+                    )
                   }}
                 >
                   <div className="text-white text-lg">{i18n.t('features_block_top_banner_891116')}</div>
