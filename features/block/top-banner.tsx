@@ -82,7 +82,10 @@ export const IndexBanner = () => {
   const isEn = i18n.i18n.language === 'en'
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
-      <TopBlock imageUrl={'https://pub.lbkrs.com/files/202307/pTm9TxRfNqszWivn/20230704-180041.jpeg'}>
+      <TopBlock
+        imageUrl={'https://pub.lbkrs.com/files/202307/37trM6xxUDNZ5huZ/banner600.png'}
+        className="bg-repeat-round"
+      >
         <Block>
           <BlockBetween
             left={

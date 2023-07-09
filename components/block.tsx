@@ -22,10 +22,10 @@ export const BlockHeader = ({ title, desc, slogn }: { title: string; desc?: stri
 }
 
 // 需要预留顶部导航距离
-export const TopBlock: FC<{ imageUrl?: string }> = ({ children, imageUrl }) => {
+export const TopBlock: FC<{ imageUrl?: string; className?: string }> = ({ children, imageUrl, className }) => {
   return (
     <div
-      className="bg-cover"
+      className={classNames('bg-cover', className)}
       style={
         imageUrl
           ? {
