@@ -80,6 +80,10 @@ function useNavs() {
             value: '/solutions/securities-market',
             label: i18n.t('pages_locale_solutions_securities_market_8769'),
           },
+          {
+            value: '/solutions/virtual-assets',
+            label: i18n.t('features_header_index_891113')
+          },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),
