@@ -45,11 +45,11 @@ const VirtualAssetTradingSystem = () => {
   return (
     <>
       <NextSeo
-        title={'7x24 一站式虛擬資產 交易解決方案'}
-        description={'7x24 一站式虛擬資產 交易解決方案'}
+        title={'7×24 一站式虛擬資產 交易解決方案'}
+        description={'7×24 一站式虛擬資產 交易解決方案'}
         openGraph={{
           title: 'Whale 將推出全港首個面向券商的',
-          description: '7x24 一站式虛擬資產 交易解決方案',
+          description: '7×24 一站式虛擬資產 交易解決方案',
           url: 'https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
           images: [
             {
