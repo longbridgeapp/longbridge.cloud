@@ -14,6 +14,7 @@ import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
 import TextPictureSecondary from '@/features/common/text-picture-secondary'
+import PictureTextBorderCard from '@/features/common/picture-text-bordercard'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -75,13 +76,13 @@ const VirtualAssets = () => {
       i18n.t('pages_locale_solutions_virtual_assets_891144'),
       i18n.t('pages_locale_solutions_virtual_assets_891145'),
       i18n.t('pages_locale_solutions_virtual_assets_891146'),
-      i18n.t('pages_locale_solutions_securities_market_8781')
+      i18n.t('pages_locale_solutions_securities_market_8781'),
     ],
     img: {
       'en': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
-    }
+    },
   }
 
   const table_1 = {
@@ -158,11 +159,13 @@ const VirtualAssets = () => {
           [
             <div>
               <div>{i18n.t('pages_locale_solutions_virtual_assets_891142')}</div>
-              <div className="text-text_color_2 text-xs">{i18n.t('pages_locale_solutions_securities_market_8910_4')}</div>
+              <div className="text-text_color_2 text-xs">
+                {i18n.t('pages_locale_solutions_securities_market_8910_4')}
+              </div>
             </div>,
             true,
             true,
-          ]
+          ],
         ],
       },
       {
@@ -185,11 +188,19 @@ const VirtualAssets = () => {
           [i18n.t('pages_locale_solutions_securities_market_8837'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8838'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8839'), true, true],
-          ['eDDA, sDDA', false, <span className='text-text_color_1_supplement'>{i18n.t('pages_locale_solutions_securities_market_8910_18')}</span>],
+          [
+            'eDDA, sDDA',
+            false,
+            <span className="text-text_color_1_supplement">
+              {i18n.t('pages_locale_solutions_securities_market_8910_18')}
+            </span>,
+          ],
           [
             i18n.t('pages_locale_solutions_securities_market_8840'),
             false,
-            <span className='text-text_color_1_supplement'>{i18n.t('pages_locale_solutions_securities_market_8910_20')}</span>
+            <span className="text-text_color_1_supplement">
+              {i18n.t('pages_locale_solutions_securities_market_8910_20')}
+            </span>,
           ],
           [i18n.t('pages_locale_solutions_securities_market_8841'), false, true],
           [i18n.t('pages_locale_solutions_securities_market_8842'), false, true],
@@ -244,10 +255,16 @@ const VirtualAssets = () => {
           [i18n.t('pages_locale_solutions_securities_market_8872'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8873'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8874'), true, true],
-          [<div>
-            <div>{i18n.t('pages_locale_solutions_securities_market_8910_28')}</div>
-            <div className="text-text_color_2 text-xs">{i18n.t('pages_locale_solutions_securities_market_8910_29')}</div>
-          </div>, true, true],
+          [
+            <div>
+              <div>{i18n.t('pages_locale_solutions_securities_market_8910_28')}</div>
+              <div className="text-text_color_2 text-xs">
+                {i18n.t('pages_locale_solutions_securities_market_8910_29')}
+              </div>
+            </div>,
+            true,
+            true,
+          ],
           [i18n.t('pages_locale_solutions_securities_market_8875'), false, true],
           [i18n.t('pages_locale_solutions_securities_market_8876'), true, true],
         ],
@@ -263,7 +280,7 @@ const VirtualAssets = () => {
           [i18n.t('pages_locale_solutions_securities_market_8882'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8883'), true, true],
           [i18n.t('pages_locale_solutions_securities_market_8884'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8885'), false, true]
+          [i18n.t('pages_locale_solutions_securities_market_8885'), false, true],
         ],
       },
       {
@@ -285,9 +302,7 @@ const VirtualAssets = () => {
       },
       {
         label: i18n.t('pages_locale_solutions_securities_market_8895'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8896'), true, true]
-        ],
+        value: [[i18n.t('pages_locale_solutions_securities_market_8896'), true, true]],
       },
     ],
     colRatio: [14, 58, 14, 14],
@@ -296,44 +311,33 @@ const VirtualAssets = () => {
   const contentServicesList = useMemo(() => {
     return [
       {
-        img: i18n.t('packages_xadmin_shared_config_menus_7695'),
+        img: 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg' || i18n.t('packages_xadmin_shared_config_menus_7695'),
         title: i18n.t('pages_locale_solutions_virtual_assets_891115'),
-        desc: i18n.t('pages_locale_solutions_virtual_assets_891116'),
         list: [
           {
-            img: 'https://assets.lbkrs.com/uploads/e4b7bd59-f3f2-494c-acff-a2d81cf9dced/stock.png',
-            imgStyle: { height: '40px' },
             text: i18n.t('pages_locale_solutions_virtual_assets_891117'),
           },
           {
-            img: 'https://pub.lbkrs.com/static/offline/202301/mys4LWQux88M2Krv/watchlist.svg',
             text: i18n.t('pages_locale_solutions_virtual_assets_891118'),
           },
           {
-            img: 'https://pub.lbkrs.com/static/offline/202301/ZAYUDeSYBek5GGNn/vote.svg',
             text: i18n.t('pages_locale_solutions_virtual_assets_891119'),
           },
         ],
       },
       {
-        img: i18n.t('packages_xadmin_shared_config_menus_7695'),
+        img:'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg' || i18n.t('packages_xadmin_shared_config_menus_7695'),
         title: i18n.t('pages_locale_solutions_virtual_assets_891115'),
         className: 'lg:flex-row-reverse',
         button: <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />,
         list: [
           {
-            img: 'https://assets.lbkrs.com/uploads/9d219389-d790-4d3d-b910-74b8d55ec60a/broadcasting.png',
-            imgStyle: { height: '40px' },
             text: i18n.t('pages_locale_solutions_virtual_assets_891120'),
           },
           {
-            img: 'https://pub.lbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png',
-            imgStyle: { height: '40px' },
             text: i18n.t('pages_locale_solutions_virtual_assets_891121'),
           },
           {
-            img: 'https://assets.lbkrs.com/uploads/c71ee5c1-41b1-4fea-b4ac-f75d9ee9502d/add_dividing_line.png',
-            imgStyle: { height: '40px' },
             text: i18n.t('pages_locale_solutions_virtual_assets_891122'),
           },
         ],
@@ -400,18 +404,11 @@ const VirtualAssets = () => {
               label={i18n.t('pages_locale_solutions_app_plus_8700')}
               title={i18n.t('pages_locale_solutions_app_plus_8743')}
             ></Title>
-            {contentServicesList.map((it, index) => {
-              return (
-                <div
-                  className={classNames({
-                    'pb-10 pt-10': true,
-                    'border-solid border-b border-y-#EAEBEC': index !== contentServicesList.length - 1,
-                  })}
-                >
-                  <TextPictureSecondary key={index} item={it} className={it.className} button={it.button} />
-                </div>
-              )
-            })}
+            <div className="flex flex-col lg:space-x-10 lg:flex-row mt-10 gap-y-5">
+              {contentServicesList.map((item: any, index) => {
+                return <PictureTextBorderCard item={item} key={index} />
+              })}
+            </div>
           </>
         </Box>
         <Box className="bg-bg_color_2">
@@ -427,8 +424,9 @@ const VirtualAssets = () => {
                     'pb-10 pt-10': true,
                     'border-solid border-b border-y-#EAEBEC': index !== tradeServiceList.length - 1,
                   })}
+                  key={index}
                 >
-                  <TextPictureSecondary key={index} item={it} className={it.className} button={it.button} />
+                  <TextPictureSecondary item={it} className={it.className} button={it.button} />
                 </div>
               )
             })}
