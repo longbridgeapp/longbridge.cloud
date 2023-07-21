@@ -203,7 +203,7 @@ const AppPlusPage = () => {
         ],
       },
       {
-        label: i18n.t('pages_locale_solutions_app_plus_8702'),
+        label: i18n.t('pages_locale_solutions_app_plus_891149'),
         value: [
           [i18n.t('pages_locale_solutions_app_plus_8710'), true, true, true, true],
           [i18n.t('pages_locale_solutions_app_plus_8710_1'), true, true, true, true],

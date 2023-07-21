@@ -21,6 +21,11 @@ interface IImageAndTextProps {
   needTalk?: boolean
   reverse?: boolean
   localLink?: string
+  tips?: string
+  subTitle?: string
+  showDot?: boolean
+  titleClassName?: string
+  imgClassName?: string
 }
 
 interface IImageAndListProps {
@@ -106,7 +111,12 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
   cover,
   needTalk = true,
   reverse = true,
+  showDot = false,
   localLink = '',
+  tips,
+  subTitle = '',
+  titleClassName = '',
+  imgClassName = '',
 }) => {
   const i18n = useTranslation('common')
   return (
@@ -119,11 +129,24 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
       >
         {/* 文字 */}
         <div className="flex flex-col items-start lg:w-[632px]">
-          {title && <div className="text-4xl font-semibold">{title}</div>}
+          {!!tips && <div className="text-brand_color mb-2">{tips}</div>}
+          {!!title && <div className={`text-4xl font-semibold ${titleClassName}`}>{title}</div>}
+          {!!subTitle && <div className="font-medium mt-2 text-base">{subTitle}</div>}
           {desc && (
             <div className="flex flex-col mt-5 text-base font-normal text-text_color_1_supplement gap-y-4">
               {desc.map((i, index) => {
-                return <div key={index}>{i}</div>
+                return (
+                  <div
+                    key={index}
+                    className={classnames({
+                      'pl-2.5 relative': showDot,
+                      "before:content-[''] before:inline-block before:w-[4px] before:h-[4px] before:bg-brand_color before:rounded-full before:absolute before:left-0 before:top-2.5":
+                        showDot,
+                    })}
+                  >
+                    {i}
+                  </div>
+                )
               })}
             </div>
           )}
@@ -141,7 +164,7 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
           )}
         </div>
         {/* 图片 */}
-        <div className="lg:w-[430px] ">
+        <div className={`sm:w-[430px] w-[100%] ${imgClassName}`}>
           <img src={img[i18n.i18n.language] || img['zh-CN']} alt="" />
         </div>
       </div>

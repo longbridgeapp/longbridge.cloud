@@ -1,0 +1,82 @@
+import { useTranslation } from 'next-i18next'
+import { useMemo } from 'react'
+import { Carousel } from 'antd'
+
+const HomeExamples = () => {
+  const i18n = useTranslation('common')
+  const list = useMemo(() => {
+    return [
+      {
+        title: i18n.t('features_home_home_examples_891131'),
+        desc: i18n.t('features_home_home_examples_891132'),
+        content: i18n.t('features_home_home_examples_891133'),
+        name: i18n.t('features_home_home_examples_891134'),
+        position: i18n.t('features_home_home_examples_891135'),
+        company: i18n.t('features_home_home_examples_891136'),
+      },
+      {
+        title: i18n.t('features_home_home_examples_891131'),
+        desc: i18n.t('features_home_home_examples_891132'),
+        content: i18n.t('features_home_home_examples_891137'),
+        name: i18n.t('features_home_home_examples_891138'),
+        position: i18n.t('features_home_home_examples_891135'),
+        company: i18n.t('features_home_home_examples_891139'),
+      },
+      // {
+      //   title: i18n.t('features_home_home_examples_891131'),
+      //   desc: i18n.t('features_home_home_examples_891132'),
+      //   content: i18n.t('features_home_home_examples_891140'),
+      //   name: 'Mark',
+      //   position: i18n.t('features_home_home_examples_891141'),
+      //   company: i18n.t('features_home_home_examples_891142'),
+      // },
+    ]
+  }, [])
+  return (
+    <div>
+      <style>
+        {`
+            .examples-section button {
+              background: rgba(255, 255, 255, 0.3) !important
+            }
+            
+            .examples-section .slick-active button {
+              background: #ffffff !important
+            }
+            `}
+      </style>
+      <Carousel className="examples-section bg-cover" autoplay={true} autoplaySpeed={5000} effect="fade">
+        {list.map((item, index) => {
+          return (
+            <div className="h-[522px]" key={index}>
+              <div className="h-[522px] bg-[#5622CF] border-box pt-10 sm:pt-20 bg-no-repeat bg-right-top bg-[length:56%_522px]" style={{ backgroundImage: `url('https://pub.lbkrs.com/files/202307/P5TtXZEMWM4h37W2/bg-image2.png')` }}>
+                <div className="text-[#ffffff] text-2xl sm:text-4xl text-center font-semibold border-box px-5">{item.title}</div>
+                <div className="text-center mt-4 text-lg sm:text-xl text-[#ffffff] border-box px-5">{item.desc}</div>
+                <div className="relative mt-[20px] md:mt-[50px] lg:mt-[70px] xl:mt-[70px] 2xl:mt-[70px] w-[49%] m-auto text-[#ffffff] min-w-[370px] px-3">
+                  <div className="leading-7 skew-x-[-6deg]">{item.content}</div>
+                  <div className="text-right mt-2">
+                    <span className="mr-3 font-semibold">{item.name}</span>
+                    <span>{item.position}</span>
+                  </div>
+                  <div className="text-right">{item.company}</div>
+                  <img
+                    className="h-[28px] absolute top-[4px] left-[-58px]"
+                    src="https://pub.lbkrs.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
+                    alt=""
+                  />
+                  <img
+                    className="h-[28px] absolute top-[8px] right-[-58px] rotate-180"
+                    src="https://pub.lbkrs.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          )
+        })}
+      </Carousel>
+    </div>
+  )
+}
+
+export default HomeExamples
