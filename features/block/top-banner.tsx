@@ -89,7 +89,7 @@ export const IndexBanner = () => {
   }
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
-      <TopBlock
+      {/* <TopBlock
         imageUrl={'https://pub.lbkrs.com/files/202307/37trM6xxUDNZ5huZ/banner600.png'}
         className="bg-repeat-round"
       >
@@ -118,7 +118,7 @@ export const IndexBanner = () => {
             right={<div className="h-[420px] w-[580px]"></div>}
           ></BlockBetween>
         </Block>
-      </TopBlock>
+      </TopBlock> */}
       <TopBlock
         imageUrl={'https://assets.lbkrs.com/uploads/e1c18bfe-100d-4870-91dc-915c751edf64/va-banner600.png'}
         className="bg-repeat-round"
