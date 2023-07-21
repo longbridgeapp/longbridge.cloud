@@ -78,3 +78,11 @@ html {
     @apply w-1 h-1 bg-[#5622CF] absolute -left-4 top-[10px];
   }
 }
+
+.round-dot-list {
+  @apply relative ml-4;
+  &::after {
+    content: '';
+    @apply w-1 h-1 rounded-full bg-[#5622CF] absolute -left-4 top-[10px];
+  }
+}

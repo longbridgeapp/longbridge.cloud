@@ -55,6 +55,10 @@ function useNavs() {
             label: i18n.t('whale-community-001'),
           },
           {
+            value: '/product/portai',
+            label: 'PortAI',
+          },
+          {
             value: '/delivery-system',
             label: i18n.t('whale-delivery-system-001'),
           },
@@ -79,6 +83,10 @@ function useNavs() {
           {
             value: '/solutions/securities-market',
             label: i18n.t('pages_locale_solutions_securities_market_8769'),
+          },
+          {
+            value: '/solutions/virtual-assets',
+            label: i18n.t('features_header_index_891113')
           },
           // {
           //   value: '/solutions',

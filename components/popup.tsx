@@ -1,16 +1,20 @@
 import React, { FC, ReactNode, useCallback, useState } from 'react'
-import classNames from 'classnames'
+import { Modal } from 'antd'
 
 export const FullMask: FC<{ transparent?: boolean }> = ({ children, transparent = false }) => {
   return (
-    <div
-      className={classNames('fixed inset-0 p-5 flex justify-center items-center z-50')}
-      style={{
-        backgroundColor: transparent ? '' : 'rgba(0,0,0,.5)',
-      }}
+    <Modal
+      width={375}
+      open={true}
+      footer={null}
+      closable={false}
+      getContainer={'#__next'}
+      className="custom-full-mask"
+      bodyStyle={{ padding: 0 }}
+      maskStyle={{ backgroundColor: transparent ? 'transparent' : 'rgba(0,0,0,.5)' }}
     >
       {children}
-    </div>
+    </Modal>
   )
 }
 
