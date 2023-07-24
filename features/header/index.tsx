@@ -196,7 +196,7 @@ const Navs = () => {
                 </Dropdown>
               )}
               {nav.children.length === 0 && (
-                <LocaleLink className="flex items-center" to={nav.value}>
+                <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value}>
                   <span>{nav.label}</span>
                   {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
                 </LocaleLink>
