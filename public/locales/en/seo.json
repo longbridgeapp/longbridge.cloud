@@ -10,7 +10,7 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "market": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "WHALE Market Data",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
@@ -20,7 +20,7 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "bss": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "WHALE BSS",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
@@ -35,7 +35,7 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "solutions-app": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "\"Internet App Plus\" Solution",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
@@ -50,42 +50,52 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System, portai"
   },
   "crm": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "WHALE CRM",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "whale-reports": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "News & Media",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "backoffice": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "Comprehensive Back Office System",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "marketing": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "Marketing System",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "longport": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "LongPort",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "delivery-system": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "Digital Marketing Platform",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "retail": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "Trading Platforms",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "front-desk": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "Front & Middle Office System",
+    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+  },
+  "securities-market" :{
+    "title": "Trading Platform Solution",
+    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+  },
+  "introducing-broker": {
+    "title": "Introducing Broker One-Stop Solution",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   }

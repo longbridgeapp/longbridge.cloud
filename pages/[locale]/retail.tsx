@@ -190,7 +190,7 @@ const Retail: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('retail.title')} description={seoI18n.t('retail.description')} />
       <div>
         <Banner {...banner_props}></Banner>
         <Box>

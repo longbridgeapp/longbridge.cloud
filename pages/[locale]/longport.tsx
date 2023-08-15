@@ -60,7 +60,7 @@ const Longport: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('longport.title')} description={seoI18n.t('longport.description')} />
       <div>
         <Banner {...banner_porps}></Banner>
         {/* 市场痛点 */}

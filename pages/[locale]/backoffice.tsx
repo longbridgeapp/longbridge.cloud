@@ -71,7 +71,7 @@ const BackOffice: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('backoffice.title')} description={seoI18n.t('backoffice.description')} />
       <div>
         <Banner {...banner_props}></Banner>
         <Box>
