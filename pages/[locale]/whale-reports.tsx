@@ -20,7 +20,7 @@ const WhaleReportPage = () => {
   const seoI18n = useTranslation(['seo'])
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('whale-reports.title')} description={seoI18n.t('whale-reports.description')} />
       <WhaleReportList />
     </Layout>
   )

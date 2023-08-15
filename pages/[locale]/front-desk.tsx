@@ -28,7 +28,7 @@ const FrontDesk: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('front-desk.title')} description={seoI18n.t('front-desk.description')} />
       <MiddleDeskContain />
     </Layout>
   )

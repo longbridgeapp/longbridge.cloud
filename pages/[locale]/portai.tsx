@@ -203,7 +203,7 @@ const PortAI: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('portai.title')} description={seoI18n.t('portai.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('portai.title')} description={seoI18n.t('portai.description')} />
       <div>
       <Banner {...banner_props}></Banner>
         <div className="py-10 main-container lg:py-20">

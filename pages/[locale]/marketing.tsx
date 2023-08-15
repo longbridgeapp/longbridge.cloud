@@ -130,7 +130,7 @@ const Marketing: React.FC = () => {
   }
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('marketing.title')} description={seoI18n.t('marketing.description')} />
       <div>
         <Banner {...banner_props}></Banner>
         <div className="py-10 main-container lg:py-20">

@@ -102,7 +102,7 @@ const DeliverySystem: React.FC = () => {
   }
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('delivery-system.title')} description={seoI18n.t('delivery-system.description')} />
       <div>
         <Banner {...banner_porps}></Banner>
         <div className="py-10 main-container lg:py-20">

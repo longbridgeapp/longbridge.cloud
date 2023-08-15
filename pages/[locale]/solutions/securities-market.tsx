@@ -493,7 +493,7 @@ const SecuritiesMarket: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={true} title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta indexTitle={false} title={seoI18n.t('securities-market.title')} description={seoI18n.t('securities-market.description')} />
       <div>
         <Banner {...banner_props}></Banner>
         <Box>

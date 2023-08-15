@@ -36,7 +36,7 @@ const IntroducingPage = () => {
 
   return (
     <Layout>
-      <SEOMeta title={seoI18n.t('tdk.title')} description={seoI18n.t('tdk.description')} />
+      <SEOMeta title={seoI18n.t('introducing-broker.title')} description={seoI18n.t('introducing-broker.description')} />
       <BrokerBanner img={isEn ? IMAGE_URL_EN : isHK ? IMAGE_URL_HK : IMAGE_URL} />
       <BrokerOneStop />
       <LongPortApp name="LongPort App" slogn={i18n.t('longport-app.slogn')} />
