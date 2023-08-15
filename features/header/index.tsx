@@ -55,7 +55,7 @@ function useNavs() {
             label: i18n.t('whale-community-001'),
           },
           {
-            value: '/product/portai',
+            value: '/portai',
             label: 'PortAI',
           },
           {
@@ -67,7 +67,7 @@ function useNavs() {
             label: i18n.t('whale-marketing-001'),
           },
           {
-            value: '/product/retail',
+            value: '/retail',
             label: i18n.t('features_header_index_3'),
           },
         ],

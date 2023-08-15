@@ -7,7 +7,7 @@
   "about": {
     "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
     "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統",
-    "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
+    "title": "關於 LONGBRIDGE WHALE"
   },
   "bss": {
     "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
@@ -30,14 +30,14 @@
     "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
   },
   "virtual-assets": {
-    "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
-    "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統",
-    "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
+    "description": "Whale 作為香港市場第一家可用的虛擬資產解決方案提供商，提供包括行情數據、社區資訊、交易、清結算等一站式解決方案，可滿足客户在虛擬資產市場展業的全部需要。同時提供標準版和專業版兩個版本，供客户根據自身不同需求選擇適合自身的解決方案。Whale 同時提供證券解決方案客户在原有方案上進行升級，增加虛擬資產模塊，增加產品競爭力。",
+    "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統，虛擬資產",
+    "title": "虛擬資產解決方案"
   },
   "portai": {
-    "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
-    "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統",
-    "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
+    "description": "Whale 結合最前沿的大語言模型成果和自身業務的長期實踐推出了 PortAI，旨在以 SaaS 方式提供 AI 投資知識服務。傳統券商無需產研資源和人工智能領域儲備，便可擁有行業 Top 競爭力的 AI 服務。",
+    "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統，portai",
+    "title": "PortAI：AI 投資知識服務平台"
   },
   "solutions": {
     "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
@@ -50,9 +50,9 @@
     "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
   },
   "trading": {
-    "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
+    "description": "WHALE Trading Platform 為客户提供了更優體驗的證券 App，以用户「發現 → 認知 → 交易」的核心旅程為基礎，結合大量的結構化數據，降低用户認知和投資交易的門檻，讓用户在美股、港股、新加坡、歐洲等全球核心市場更容易發現投資機會。",
     "keywords": "LONGBRIDGE，WHALE，SaaS，互聯網證券，證券交易系統，BSS Vendor，經紀自設系統",
-    "title": "LONGBRIDGE WHALE - 一站式互聯網證券交易雲服務"
+    "title": "WHALE Trading Platform"
   },
   "whale-reports": {
     "description": "WHALE 為券商提供一站式、開箱即用的產品和解決方案，所有系統均基於雲原生架構，券商可以根據實際業務需求靈活選擇。\n更低成本、更具競爭力的產品體驗，點擊免費試用！",
