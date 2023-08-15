@@ -25,13 +25,13 @@
     "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
   },
   "about": {
-    "title": "LONGBRIDGE WHALE - 一站式互联网证券交易云服务",
+    "title": "关于 LONGBRIDGE WHALE",
     "description": "WHALE 为券商提供一站式、开箱即用的产品和解决方案，所有系统均基于云原生架构，券商可以根据实际业务需求灵活选择。更低成本、更具竞争力的产品体验，点击免费试用！",
     "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
   },
   "trading": {
-    "title": "LONGBRIDGE WHALE - 一站式互联网证券交易云服务",
-    "description": "WHALE 为券商提供一站式、开箱即用的产品和解决方案，所有系统均基于云原生架构，券商可以根据实际业务需求灵活选择。更低成本、更具竞争力的产品体验，点击免费试用！",
+    "title": "WHALE Trading Platform",
+    "description": "WHALE Trading Platform 为客户提供了更优体验的证券 App，以用户「发现 → 认知 → 交易」的核心旅程为基础，结合大量的结构化数据，降低用户认知和投资交易的门槛，让用户在美股、港股、新加坡、欧洲等全球核心市场更容易发现投资机会。",
     "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
   },
   "solutions-app": {
@@ -40,14 +40,14 @@
     "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
   },
   "virtual-assets": {
-    "title": "LONGBRIDGE WHALE - 一站式互联网证券交易云服务",
-    "description": "WHALE 为券商提供一站式、开箱即用的产品和解决方案，所有系统均基于云原生架构，券商可以根据实际业务需求灵活选择。更低成本、更具竞争力的产品体验，点击免费试用！",
-    "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
+    "title": "虚拟资产解决方案",
+    "description": "Whale 作为香港市场第一家可用的虚拟资产解决方案提供商，提供包括行情数据、社区资讯、交易、清结算等一站式解决方案，可满足客户在虚拟资产市场展业的全部需要。同时提供标准版和专业版两个版本，供客户根据自身不同需求选择适合自身的解决方案。Whale 同时提供证券解决方案客户在原有方案上进行升级，增加虚拟资产模块，增加产品竞争力。",
+    "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统，虚拟资产"
   },
   "portai": {
-    "title": "LONGBRIDGE WHALE - 一站式互联网证券交易云服务",
-    "description": "WHALE 为券商提供一站式、开箱即用的产品和解决方案，所有系统均基于云原生架构，券商可以根据实际业务需求灵活选择。更低成本、更具竞争力的产品体验，点击免费试用！",
-    "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统"
+    "title": "PortAI：AI 投资知识服务平台",
+    "description": "Whale 结合最前沿的大语言模型成果和自身业务的长期实践推出了 PortAI，旨在以 SaaS 方式提供 AI 投资知识服务。传统券商无需产研资源和人工智能领域储备，便可拥有行业 Top 竞争力的 AI 服务。",
+    "keywords": "LONGBRIDGE，WHALE，SaaS，互联网证券，证券交易系统，BSS Vendor，经纪自设系统，portai"
   },
   "crm": {
     "title": "LONGBRIDGE WHALE - 一站式互联网证券交易云服务",

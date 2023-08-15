@@ -20,10 +20,10 @@ import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
 import WhaleLongport from '@/pages/[locale]/longport'
 import DeliverySystem from '@/pages/[locale]/delivery-system'
-import Retail from '@/pages/[locale]/product/retail'
+import Retail from '@/pages/[locale]/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
 import VirtualAssetTradingSystem from '@/pages/[locale]/virtual-asset-trading-system'
-import PortAI from '@/pages/[locale]/product/portai'
+import PortAI from '@/pages/[locale]/portai'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -52,9 +52,9 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="backoffice" element={<BackOffice {...pageProps} />} />
               <Route path="marketing" element={<Marketing {...pageProps} />} />
               <Route path="longport" element={<WhaleLongport {...pageProps} />} />
-              <Route path="product/portai" element={<PortAI {...pageProps} />} />
+              <Route path="portai" element={<PortAI {...pageProps} />} />
               <Route path="delivery-system" element={<DeliverySystem {...pageProps} />} />
-              <Route path="product/retail" element={<Retail {...pageProps} />} />
+              <Route path="retail" element={<Retail {...pageProps} />} />
               <Route path="front-desk" element={<FrontDesk {...pageProps} />} />
               <Route path="virtual-asset-trading-system" element={<VirtualAssetTradingSystem {...pageProps} />} />
             </Route>

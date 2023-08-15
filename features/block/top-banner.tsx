@@ -152,7 +152,7 @@ export const IndexBanner = () => {
                 <div className="text-white text-[48px] leading-[68px] w-auto sm:w-[650px]">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
                 </div>
-                <LocaleLink className="flex items-center mt-10" to={'/product/portai'}>
+                <LocaleLink className="flex items-center mt-10" to="/portai">
                   <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
                 </LocaleLink>
               </>

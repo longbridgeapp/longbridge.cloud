@@ -25,13 +25,13 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "about": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
+    "title": "About LONGBRIDGE WHALE",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "trading": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
-    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "title": "WHALE Trading Platform",
+    "description": "WHALE Trading Platform provides customers with better experience of the securities App. Based on the core journey of users - \"Discovery → Learning → Trading\" and combined with a large amount of structured data, it lowers the threshold for users to understand and participate in trading, allowing users to more easily find investment opportunities in the US, HK, Singapore, Europe, and other international core markets.",
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "solutions-app": {
@@ -40,14 +40,14 @@
     "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "virtual-assets": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
-    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
-    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+    "title": "Virtual Asset Solution",
+    "description": "Whale, as the first provider of virtual asset solutions in the Hong Kong market, offers one-stop services that cover market data, community & news, trading, clearing & settlement, fulfilling all the requirements of our clients for thriving in the virtual asset market. Our solution comes in two versions, Standard and Professional, allowing clients to select the solution that aligns perfectly with their unique needs. Additionally, Whale facilitates the upgrade of our securities solution by integrating a virtual asset module, thereby enhancing product competitiveness to a new height.",
+    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System, Virtual Asset"
   },
   "portai": {
-    "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
-    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
-    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+    "title": "PortAI: AI-powered Investment Knowledge Platform",
+    "description": "To tackle this challenge, Whale combines state-of-the-art advancements in large language models with its extensive industry expertise to introduce PortAI, aiming to provide AI investment knowledge services based on SaaS. With PortAI, traditional brokers can now harness the power of industry-leading AI services without the need for in-house research resources or expertise in the field of artificial intelligence.",
+    "keywords": "LONGBRIDGE, WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System, portai"
   },
   "crm": {
     "title": "LONGBRIDGE WHALE - One-Stop Internet Securities Trading Cloud Service",
