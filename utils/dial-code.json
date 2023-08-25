@@ -1,0 +1,2216 @@
+[
+  {
+    "country_name": "中国",
+    "code": "CN",
+    "dial_code": "+86",
+    "index": "Z",
+    "alias_en": "China",
+    "alias_hk": "中國",
+    "pinyin": "zhong guo"
+  },
+  {
+    "country_name": "中国香港",
+    "code": "HK",
+    "dial_code": "+852",
+    "index": "Z",
+    "alias_en": "Hong Kong,China",
+    "alias_hk": "中國香港",
+    "pinyin": "zhong guo xiang gang"
+  },
+  {
+    "country_name": "中国澳门",
+    "code": "MO",
+    "dial_code": "+853",
+    "index": "Z",
+    "alias_en": "Macao,China",
+    "alias_hk": "中國澳門",
+    "pinyin": "zhong guo ao men"
+  },
+  {
+    "country_name": "中国台湾",
+    "code": "TW",
+    "dial_code": "+886",
+    "index": "Z",
+    "alias_en": "Taiwan,China",
+    "alias_hk": "中國台灣",
+    "pinyin": "zhong guo tai wan"
+  },
+  {
+    "country_name": "新加坡",
+    "code": "SG",
+    "dial_code": "+65",
+    "index": "X",
+    "alias_en": "Singapore",
+    "alias_hk": "新加坡",
+    "pinyin": "xin jia po"
+  },
+  {
+    "country_name": "美国",
+    "code": "US",
+    "dial_code": "+1",
+    "index": "M",
+    "alias_en": "America",
+    "alias_hk": "美國",
+    "pinyin": "mei guo"
+  },
+  {
+    "country_name": "阿尔巴尼亚",
+    "code": "AL",
+    "dial_code": "+355",
+    "index": "A",
+    "alias_en": "Albania",
+    "alias_hk": "阿爾巴尼亞",
+    "pinyin": "a er ba ni ya"
+  },
+  {
+    "country_name": "阿尔及利亚",
+    "code": "DZ",
+    "dial_code": "+213",
+    "index": "A",
+    "alias_en": "Algeria",
+    "alias_hk": "阿爾及利亞",
+    "pinyin": "a er ji li ya"
+  },
+  {
+    "country_name": "阿富汗",
+    "code": "AF",
+    "dial_code": "+93",
+    "index": "A",
+    "alias_en": "Afghanistan",
+    "alias_hk": "阿富汗",
+    "pinyin": "a fu han"
+  },
+  {
+    "country_name": "阿根廷",
+    "code": "AR",
+    "dial_code": "+54",
+    "index": "A",
+    "alias_en": "Argentina",
+    "alias_hk": "阿根廷",
+    "pinyin": "a gen ting"
+  },
+  {
+    "country_name": "爱尔兰",
+    "code": "IE",
+    "dial_code": "+353",
+    "index": "A",
+    "alias_en": "Ireland",
+    "alias_hk": "愛爾蘭",
+    "pinyin": "ai er lan"
+  },
+  {
+    "country_name": "埃及",
+    "code": "EG",
+    "dial_code": "+20",
+    "index": "A",
+    "alias_en": "Egypt",
+    "alias_hk": "埃及",
+    "pinyin": "ai ji"
+  },
+  {
+    "country_name": "埃塞俄比亚",
+    "code": "ET",
+    "dial_code": "+251",
+    "index": "A",
+    "alias_en": "Ethiopia",
+    "alias_hk": "埃塞俄比亞",
+    "pinyin": "ai sai e bi ya"
+  },
+  {
+    "country_name": "爱沙尼亚",
+    "code": "EE",
+    "dial_code": "+372",
+    "index": "A",
+    "alias_en": "Estonia",
+    "alias_hk": "愛沙尼亞",
+    "pinyin": "ai sha ni ya"
+  },
+  {
+    "country_name": "阿联酋",
+    "code": "AE",
+    "dial_code": "+971",
+    "index": "A",
+    "alias_en": "United Arab Emirates",
+    "alias_hk": "阿聯酋",
+    "pinyin": "a lian qiu"
+  },
+  {
+    "country_name": "阿鲁巴",
+    "code": "AW",
+    "dial_code": "+297",
+    "index": "A",
+    "alias_en": "Aruba",
+    "alias_hk": "阿魯巴",
+    "pinyin": "a lu ba"
+  },
+  {
+    "country_name": "阿曼",
+    "code": "OM",
+    "dial_code": "+968",
+    "index": "A",
+    "alias_en": "Oman",
+    "alias_hk": "阿曼",
+    "pinyin": "a man"
+  },
+  {
+    "country_name": "安道尔",
+    "code": "AD",
+    "dial_code": "+376",
+    "index": "A",
+    "alias_en": "Andorra",
+    "alias_hk": "安道爾",
+    "pinyin": "an dao er"
+  },
+  {
+    "country_name": "安哥拉",
+    "code": "AO",
+    "dial_code": "+244",
+    "index": "A",
+    "alias_en": "Angola",
+    "alias_hk": "安哥拉",
+    "pinyin": "an ge la"
+  },
+  {
+    "country_name": "安圭拉",
+    "code": "AI",
+    "dial_code": "+1264",
+    "index": "A",
+    "alias_en": "Anguilla",
+    "alias_hk": "安圭拉",
+    "pinyin": "an gui la"
+  },
+  {
+    "country_name": "安提瓜和巴布达",
+    "code": "AG",
+    "dial_code": "+1268",
+    "index": "A",
+    "alias_en": "Antigua & Barbuda",
+    "alias_hk": "安提瓜和巴布達",
+    "pinyin": "an ti gua he ba bu da"
+  },
+  {
+    "country_name": "澳大利亚",
+    "code": "AU",
+    "dial_code": "+61",
+    "index": "A",
+    "alias_en": "Australia",
+    "alias_hk": "澳大利亞",
+    "pinyin": "ao da li ya"
+  },
+  {
+    "country_name": "奥地利",
+    "code": "AT",
+    "dial_code": "+43",
+    "index": "A",
+    "alias_en": "Austria",
+    "alias_hk": "奧地利",
+    "pinyin": "ao di li"
+  },
+  {
+    "country_name": "奥兰群岛",
+    "code": "AX",
+    "dial_code": "+358",
+    "index": "A",
+    "alias_en": "Aland Island",
+    "alias_hk": "奧蘭羣島",
+    "pinyin": "ao lan qun dao"
+  },
+  {
+    "country_name": "阿塞拜疆",
+    "code": "AZ",
+    "dial_code": "+994",
+    "index": "A",
+    "alias_en": "Azerbaijan",
+    "alias_hk": "阿塞拜疆",
+    "pinyin": "a sai bai jiang"
+  },
+  {
+    "country_name": "巴巴多斯",
+    "code": "BB",
+    "dial_code": "+1246",
+    "index": "B",
+    "alias_en": "Barbados",
+    "alias_hk": "巴巴多斯",
+    "pinyin": "ba ba duo si"
+  },
+  {
+    "country_name": "巴布亚新几内亚",
+    "code": "PG",
+    "dial_code": "+675",
+    "index": "B",
+    "alias_en": "Papua New Guinea",
+    "alias_hk": "巴布亞新幾內亞",
+    "pinyin": "ba bu ya xin ji nei ya"
+  },
+  {
+    "country_name": "巴哈马",
+    "code": "BS",
+    "dial_code": "+1242",
+    "index": "B",
+    "alias_en": "Bahamas",
+    "alias_hk": "巴哈馬",
+    "pinyin": "ba ha ma"
+  },
+  {
+    "country_name": "白俄罗斯",
+    "code": "BY",
+    "dial_code": "+375",
+    "index": "B",
+    "alias_en": "Belarus",
+    "alias_hk": "白俄羅斯",
+    "pinyin": "bai e luo si"
+  },
+  {
+    "country_name": "百慕大",
+    "code": "BM",
+    "dial_code": "+1441",
+    "index": "B",
+    "alias_en": "Bermuda",
+    "alias_hk": "百慕大",
+    "pinyin": "bai mu da"
+  },
+  {
+    "country_name": "巴基斯坦",
+    "code": "PK",
+    "dial_code": "+92",
+    "index": "B",
+    "alias_en": "Pakistan",
+    "alias_hk": "巴基斯坦",
+    "pinyin": "ba ji si tan"
+  },
+  {
+    "country_name": "巴拉圭",
+    "code": "PY",
+    "dial_code": "+595",
+    "index": "B",
+    "alias_en": "Paraguay",
+    "alias_hk": "巴拉圭",
+    "pinyin": "ba la gui"
+  },
+  {
+    "country_name": "巴勒斯坦",
+    "code": "PS",
+    "dial_code": "+970",
+    "index": "B",
+    "alias_en": "Palestinian territories",
+    "alias_hk": "巴勒斯坦",
+    "pinyin": "ba le si tan"
+  },
+  {
+    "country_name": "巴林",
+    "code": "BH",
+    "dial_code": "+973",
+    "index": "B",
+    "alias_en": "Bahrain",
+    "alias_hk": "巴林",
+    "pinyin": "ba lin"
+  },
+  {
+    "country_name": "巴拿马",
+    "code": "PA",
+    "dial_code": "+507",
+    "index": "B",
+    "alias_en": "Panama",
+    "alias_hk": "巴拿馬",
+    "pinyin": "ba na ma"
+  },
+  {
+    "country_name": "保加利亚",
+    "code": "BG",
+    "dial_code": "+359",
+    "index": "B",
+    "alias_en": "Bulgaria",
+    "alias_hk": "保加利亞",
+    "pinyin": "bao jia li ya"
+  },
+  {
+    "country_name": "巴西",
+    "code": "BR",
+    "dial_code": "+55",
+    "index": "B",
+    "alias_en": "Brazil",
+    "alias_hk": "巴西",
+    "pinyin": "ba xi"
+  },
+  {
+    "country_name": "北马里亚纳群岛",
+    "code": "MP",
+    "dial_code": "+1670",
+    "index": "B",
+    "alias_en": "Northern Mariana Islands",
+    "alias_hk": "北马里亞納羣島",
+    "pinyin": "bei ma li ya na qun dao"
+  },
+  {
+    "country_name": "贝宁",
+    "code": "BJ",
+    "dial_code": "+229",
+    "index": "B",
+    "alias_en": "Benin",
+    "alias_hk": "貝寧",
+    "pinyin": "bei ning"
+  },
+  {
+    "country_name": "比利时",
+    "code": "BE",
+    "dial_code": "+32",
+    "index": "B",
+    "alias_en": "Belgium",
+    "alias_hk": "比利時",
+    "pinyin": "bi li shi"
+  },
+  {
+    "country_name": "冰岛",
+    "code": "IS",
+    "dial_code": "+354",
+    "index": "B",
+    "alias_en": "Iceland",
+    "alias_hk": "冰島",
+    "pinyin": "bing dao"
+  },
+  {
+    "country_name": "博茨瓦纳",
+    "code": "BW",
+    "dial_code": "+267",
+    "index": "B",
+    "alias_en": "Botswana",
+    "alias_hk": "博茨瓦納",
+    "pinyin": "bo ci wa na"
+  },
+  {
+    "country_name": "波多黎各",
+    "code": "PR",
+    "dial_code": "+1939",
+    "index": "B",
+    "alias_en": "Puerto Rico",
+    "alias_hk": "波多黎各",
+    "pinyin": "bo duo li ge"
+  },
+  {
+    "country_name": "波黑",
+    "code": "BA",
+    "dial_code": "+387",
+    "index": "B",
+    "alias_en": "Bosnia & Herzegovina",
+    "alias_hk": "波黑",
+    "pinyin": "bo hei"
+  },
+  {
+    "country_name": "波兰",
+    "code": "PL",
+    "dial_code": "+48",
+    "index": "B",
+    "alias_en": "Poland",
+    "alias_hk": "波蘭",
+    "pinyin": "bo lan"
+  },
+  {
+    "country_name": "玻利维亚",
+    "code": "BO",
+    "dial_code": "+591",
+    "index": "B",
+    "alias_en": "Bolivia",
+    "alias_hk": "玻利維亞",
+    "pinyin": "bo li wei ya"
+  },
+  {
+    "country_name": "伯利兹",
+    "code": "BZ",
+    "dial_code": "+501",
+    "index": "B",
+    "alias_en": "Belize",
+    "alias_hk": "伯利茲",
+    "pinyin": "bo li zi"
+  },
+  {
+    "country_name": "不丹",
+    "code": "BT",
+    "dial_code": "+975",
+    "index": "B",
+    "alias_en": "Bhutan",
+    "alias_hk": "不丹",
+    "pinyin": "bu dan"
+  },
+  {
+    "country_name": "布基纳法索",
+    "code": "BF",
+    "dial_code": "+226",
+    "index": "B",
+    "alias_en": "Burkina",
+    "alias_hk": "布基納法索",
+    "pinyin": "bu ji na fa suo"
+  },
+  {
+    "country_name": "布隆迪",
+    "code": "BI",
+    "dial_code": "+257",
+    "index": "B",
+    "alias_en": "Burundi",
+    "alias_hk": "布隆迪",
+    "pinyin": "bu long di"
+  },
+  {
+    "country_name": "布韦岛",
+    "code": "BV",
+    "dial_code": "+47",
+    "index": "B",
+    "alias_en": "Bouvet Island",
+    "alias_hk": "布韋島",
+    "pinyin": "bu wei dao"
+  },
+  {
+    "country_name": "朝鲜",
+    "code": "KP",
+    "dial_code": "+850",
+    "index": "C",
+    "alias_en": "North Korea",
+    "alias_hk": "朝鮮",
+    "pinyin": "chao xian"
+  },
+  {
+    "country_name": "赤道几内亚",
+    "code": "GQ",
+    "dial_code": "+240",
+    "index": "C",
+    "alias_en": "Equatorial Guinea",
+    "alias_hk": "赤道幾內亞",
+    "pinyin": "chi dao ji nei ya"
+  },
+  {
+    "country_name": "丹麦",
+    "code": "DK",
+    "dial_code": "+45",
+    "index": "D",
+    "alias_en": "Denmark",
+    "alias_hk": "丹麥",
+    "pinyin": "dan mai"
+  },
+  {
+    "country_name": "德国",
+    "code": "DE",
+    "dial_code": "+49",
+    "index": "D",
+    "alias_en": "Germany",
+    "alias_hk": "德國",
+    "pinyin": "de guo"
+  },
+  {
+    "country_name": "东帝汶",
+    "code": "TL",
+    "dial_code": "+670",
+    "index": "D",
+    "alias_en": "Timor-Leste (East Timor)",
+    "alias_hk": "東帝汶",
+    "pinyin": "dong di wen"
+  },
+  {
+    "country_name": "多哥",
+    "code": "TG",
+    "dial_code": "+228",
+    "index": "D",
+    "alias_en": "Togo",
+    "alias_hk": "多哥",
+    "pinyin": "duo ge"
+  },
+  {
+    "country_name": "多米尼加",
+    "code": "DO",
+    "dial_code": "+1849",
+    "index": "D",
+    "alias_en": "Dominican Republic",
+    "alias_hk": "多米尼加",
+    "pinyin": "duo mi ni jia"
+  },
+  {
+    "country_name": "多米尼克",
+    "code": "DM",
+    "dial_code": "+1767",
+    "index": "D",
+    "alias_en": "Dominica",
+    "alias_hk": "多米尼克",
+    "pinyin": "duo mi ni ke"
+  },
+  {
+    "country_name": "厄瓜多尔",
+    "code": "EC",
+    "dial_code": "+593",
+    "index": "E",
+    "alias_en": "Ecuador",
+    "alias_hk": "厄瓜多爾",
+    "pinyin": "e gua duo er"
+  },
+  {
+    "country_name": "厄立特里亚",
+    "code": "ER",
+    "dial_code": "+291",
+    "index": "E",
+    "alias_en": "Eritrea",
+    "alias_hk": "厄立特里亞",
+    "pinyin": "e li te li ya"
+  },
+  {
+    "country_name": "俄罗斯",
+    "code": "RU",
+    "dial_code": "+7",
+    "index": "E",
+    "alias_en": "Russian Federation",
+    "alias_hk": "俄羅斯",
+    "pinyin": "e luo si"
+  },
+  {
+    "country_name": "法国",
+    "code": "FR",
+    "dial_code": "+33",
+    "index": "F",
+    "alias_en": "France",
+    "alias_hk": "法國",
+    "pinyin": "fa guo"
+  },
+  {
+    "country_name": "法罗群岛",
+    "code": "FO",
+    "dial_code": "+298",
+    "index": "F",
+    "alias_en": "Faroe Islands",
+    "alias_hk": "法羅羣島",
+    "pinyin": "fa luo qun dao"
+  },
+  {
+    "country_name": "梵蒂冈",
+    "code": "VA",
+    "dial_code": "+379",
+    "index": "F",
+    "alias_en": "Vatican City (The Holy See)",
+    "alias_hk": "梵蒂岡",
+    "pinyin": "fan di gang"
+  },
+  {
+    "country_name": "法属波利尼西亚",
+    "code": "PF",
+    "dial_code": "+689",
+    "index": "F",
+    "alias_en": "French polynesia",
+    "alias_hk": "法屬波利尼西亞",
+    "pinyin": "fa shu bo li ni xi ya"
+  },
+  {
+    "country_name": "法属圭亚那",
+    "code": "GF",
+    "dial_code": "+594",
+    "index": "F",
+    "alias_en": "French Guiana",
+    "alias_hk": "法屬圭亞那",
+    "pinyin": "fa shu gui ya na"
+  },
+  {
+    "country_name": "法属南部领地",
+    "code": "TF",
+    "dial_code": "+33",
+    "index": "F",
+    "alias_en": "French Southern Territories",
+    "alias_hk": "法屬南部領地",
+    "pinyin": "fa shu nan bu ling di"
+  },
+  {
+    "country_name": "法属圣马丁",
+    "code": "MF",
+    "dial_code": "+590",
+    "index": "F",
+    "alias_en": "Saint Martin (France)",
+    "alias_hk": "法屬聖馬丁",
+    "pinyin": "fa shu sheng ma ding"
+  },
+  {
+    "country_name": "斐济群岛",
+    "code": "FJ",
+    "dial_code": "+679",
+    "index": "F",
+    "alias_en": "Fiji",
+    "alias_hk": "斐濟羣島",
+    "pinyin": "fei ji qun dao"
+  },
+  {
+    "country_name": "菲律宾",
+    "code": "PH",
+    "dial_code": "+63",
+    "index": "F",
+    "alias_en": "The Philippines",
+    "alias_hk": "菲律賓",
+    "pinyin": "fei lv bin"
+  },
+  {
+    "country_name": "芬兰",
+    "code": "FI",
+    "dial_code": "+358",
+    "index": "F",
+    "alias_en": "Finland",
+    "alias_hk": "芬蘭",
+    "pinyin": "fen lan"
+  },
+  {
+    "country_name": "佛得角",
+    "code": "CV",
+    "dial_code": "+238",
+    "index": "F",
+    "alias_en": "Cape Verde",
+    "alias_hk": "佛得角",
+    "pinyin": "fo de jiao"
+  },
+  {
+    "country_name": "冈比亚",
+    "code": "GM",
+    "dial_code": "+220",
+    "index": "G",
+    "alias_en": "Gambia",
+    "alias_hk": "岡比亞",
+    "pinyin": "gang bi ya"
+  },
+  {
+    "country_name": "刚果（布）",
+    "code": "CG",
+    "dial_code": "+242",
+    "index": "G",
+    "alias_en": "Republic of the Congo",
+    "alias_hk": "剛果（布）",
+    "pinyin": "gang guo bu"
+  },
+  {
+    "country_name": "刚果（金）",
+    "code": "CD",
+    "dial_code": "+243",
+    "index": "G",
+    "alias_en": "Democratic Republic of the Congo",
+    "alias_hk": "剛果（金）",
+    "pinyin": "gang guo jin"
+  },
+  {
+    "country_name": "格陵兰",
+    "code": "GL",
+    "dial_code": "+299",
+    "index": "G",
+    "alias_en": "Greenland",
+    "alias_hk": "格陵蘭",
+    "pinyin": "ge ling lan"
+  },
+  {
+    "country_name": "格林纳达",
+    "code": "GD",
+    "dial_code": "+1473",
+    "index": "G",
+    "alias_en": "Grenada",
+    "alias_hk": "格林納達",
+    "pinyin": "ge lin na da"
+  },
+  {
+    "country_name": "格鲁吉亚",
+    "code": "GE",
+    "dial_code": "+995",
+    "index": "G",
+    "alias_en": "Georgia",
+    "alias_hk": "格魯吉亞",
+    "pinyin": "ge lu ji ya"
+  },
+  {
+    "country_name": "哥伦比亚",
+    "code": "CO",
+    "dial_code": "+57",
+    "index": "G",
+    "alias_en": "Colombia",
+    "alias_hk": "哥倫比亞",
+    "pinyin": "ge lun bi ya"
+  },
+  {
+    "country_name": "根西岛",
+    "code": "GG",
+    "dial_code": "+44",
+    "index": "G",
+    "alias_en": "Guernsey",
+    "alias_hk": "根西島",
+    "pinyin": "gen xi dao"
+  },
+  {
+    "country_name": "哥斯达黎加",
+    "code": "CR",
+    "dial_code": "+506",
+    "index": "G",
+    "alias_en": "Costa Rica",
+    "alias_hk": "哥斯達黎加",
+    "pinyin": "ge si da li jia"
+  },
+  {
+    "country_name": "瓜德罗普",
+    "code": "GP",
+    "dial_code": "+590",
+    "index": "G",
+    "alias_en": "Guadeloupe",
+    "alias_hk": "瓜德羅普",
+    "pinyin": "gua de luo pu"
+  },
+  {
+    "country_name": "关岛",
+    "code": "GU",
+    "dial_code": "+1671",
+    "index": "G",
+    "alias_en": "Guam",
+    "alias_hk": "關島",
+    "pinyin": "guan dao"
+  },
+  {
+    "country_name": "古巴",
+    "code": "CU",
+    "dial_code": "+53",
+    "index": "G",
+    "alias_en": "Cuba",
+    "alias_hk": "古巴",
+    "pinyin": "gu ba"
+  },
+  {
+    "country_name": "圭亚那",
+    "code": "GY",
+    "dial_code": "+595",
+    "index": "G",
+    "alias_en": "Guyana",
+    "alias_hk": "圭亞那",
+    "pinyin": "gui ya na"
+  },
+  {
+    "country_name": "海地",
+    "code": "HT",
+    "dial_code": "+509",
+    "index": "H",
+    "alias_en": "Haiti",
+    "alias_hk": "海地",
+    "pinyin": "hai di"
+  },
+  {
+    "country_name": "韩国",
+    "code": "KR",
+    "dial_code": "+82",
+    "index": "H",
+    "alias_en": "South Korea",
+    "alias_hk": "韓國",
+    "pinyin": "han guo"
+  },
+  {
+    "country_name": "哈萨克斯坦",
+    "code": "KZ",
+    "dial_code": "+7",
+    "index": "H",
+    "alias_en": "Kazakhstan",
+    "alias_hk": "哈薩克斯坦",
+    "pinyin": "ha sa ke si tan"
+  },
+  {
+    "country_name": "赫德岛和麦克唐纳群岛",
+    "code": "HM",
+    "dial_code": "+672",
+    "index": "H",
+    "alias_en": "Heard Island and McDonald Islands",
+    "alias_hk": "赫德島和麥克唐納羣島",
+    "pinyin": "he de dao he mai ke tang na qun dao"
+  },
+  {
+    "country_name": "黑山",
+    "code": "ME",
+    "dial_code": "+382",
+    "index": "H",
+    "alias_en": "Montenegro",
+    "alias_hk": "黑山",
+    "pinyin": "hei shan"
+  },
+  {
+    "country_name": "荷兰",
+    "code": "NL",
+    "dial_code": "+31",
+    "index": "H",
+    "alias_en": "Netherlands",
+    "alias_hk": "荷蘭",
+    "pinyin": "he lan"
+  },
+  {
+    "country_name": "荷兰加勒比区",
+    "code": "BQ",
+    "dial_code": "+599",
+    "index": "H",
+    "alias_en": "Caribbean Netherlands",
+    "alias_hk": "荷蘭加勒比區",
+    "pinyin": "he lan jia le bi qu"
+  },
+  {
+    "country_name": "荷属圣马丁",
+    "code": "SX",
+    "dial_code": "+1721",
+    "index": "H",
+    "alias_en": "Sint Maarten",
+    "alias_hk": "荷屬聖馬丁",
+    "pinyin": "he shu sheng ma ding"
+  },
+  {
+    "country_name": "洪都拉斯",
+    "code": "HN",
+    "dial_code": "+504",
+    "index": "H",
+    "alias_en": "Honduras",
+    "alias_hk": "洪都拉斯",
+    "pinyin": "hong dou la si"
+  },
+  {
+    "country_name": "加纳",
+    "code": "GH",
+    "dial_code": "+233",
+    "index": "J",
+    "alias_en": "Ghana",
+    "alias_hk": "加納",
+    "pinyin": "jia na"
+  },
+  {
+    "country_name": "加拿大",
+    "code": "CA",
+    "dial_code": "+1",
+    "index": "J",
+    "alias_en": "Canada",
+    "alias_hk": "加拿大",
+    "pinyin": "jia na da"
+  },
+  {
+    "country_name": "柬埔寨",
+    "code": "KH",
+    "dial_code": "+855",
+    "index": "J",
+    "alias_en": "Cambodia",
+    "alias_hk": "柬埔寨",
+    "pinyin": "jian pu zhai"
+  },
+  {
+    "country_name": "加蓬",
+    "code": "GA",
+    "dial_code": "+241",
+    "index": "J",
+    "alias_en": "Gabon",
+    "alias_hk": "加蓬",
+    "pinyin": "jia peng"
+  },
+  {
+    "country_name": "吉布提",
+    "code": "DJ",
+    "dial_code": "+253",
+    "index": "J",
+    "alias_en": "Djibouti",
+    "alias_hk": "吉布提",
+    "pinyin": "ji bu ti"
+  },
+  {
+    "country_name": "捷克",
+    "code": "CZ",
+    "dial_code": "+420",
+    "index": "J",
+    "alias_en": "Czech Republic",
+    "alias_hk": "捷克",
+    "pinyin": "jie ke"
+  },
+  {
+    "country_name": "吉尔吉斯斯坦",
+    "code": "KG",
+    "dial_code": "+996",
+    "index": "J",
+    "alias_en": "Kyrgyzstan",
+    "alias_hk": "吉爾吉斯斯坦",
+    "pinyin": "ji er ji si si tan"
+  },
+  {
+    "country_name": "基里巴斯",
+    "code": "KI",
+    "dial_code": "+686",
+    "index": "J",
+    "alias_en": "Kiribati",
+    "alias_hk": "基里巴斯",
+    "pinyin": "ji li ba si"
+  },
+  {
+    "country_name": "津巴布韦",
+    "code": "ZW",
+    "dial_code": "+263",
+    "index": "J",
+    "alias_en": "Zimbabwe",
+    "alias_hk": "津巴布韋",
+    "pinyin": "jin ba bu wei"
+  },
+  {
+    "country_name": "几内亚",
+    "code": "GN",
+    "dial_code": "+224",
+    "index": "J",
+    "alias_en": "Guinea",
+    "alias_hk": "幾內亞",
+    "pinyin": "ji nei ya"
+  },
+  {
+    "country_name": "几内亚比绍",
+    "code": "GW",
+    "dial_code": "+245",
+    "index": "J",
+    "alias_en": "Guinea-Bissau",
+    "alias_hk": "幾內亞比紹",
+    "pinyin": "ji nei ya bi shao"
+  },
+  {
+    "country_name": "开曼群岛",
+    "code": "KY",
+    "dial_code": "+345",
+    "index": "K",
+    "alias_en": "Cayman Islands",
+    "alias_hk": "開曼羣島",
+    "pinyin": "kai man qun dao"
+  },
+  {
+    "country_name": "喀麦隆",
+    "code": "CM",
+    "dial_code": "+237",
+    "index": "K",
+    "alias_en": "Cameroon",
+    "alias_hk": "喀麥隆",
+    "pinyin": "ka mai long"
+  },
+  {
+    "country_name": "卡塔尔",
+    "code": "QA",
+    "dial_code": "+974",
+    "index": "K",
+    "alias_en": "Qatar",
+    "alias_hk": "卡塔爾",
+    "pinyin": "ka ta er"
+  },
+  {
+    "country_name": "科科斯群岛",
+    "code": "CC",
+    "dial_code": "+61",
+    "index": "K",
+    "alias_en": "Cocos (Keeling) Islands",
+    "alias_hk": "科科斯羣島",
+    "pinyin": "ke ke si qun dao"
+  },
+  {
+    "country_name": "克罗地亚",
+    "code": "HR",
+    "dial_code": "+385",
+    "index": "K",
+    "alias_en": "Croatia",
+    "alias_hk": "克羅地亞",
+    "pinyin": "ke luo di ya"
+  },
+  {
+    "country_name": "科摩罗",
+    "code": "KM",
+    "dial_code": "+269",
+    "index": "K",
+    "alias_en": "The Comoros",
+    "alias_hk": "科摩羅",
+    "pinyin": "ke mo luo"
+  },
+  {
+    "country_name": "肯尼亚",
+    "code": "KE",
+    "dial_code": "+254",
+    "index": "K",
+    "alias_en": "Kenya",
+    "alias_hk": "肯尼亞",
+    "pinyin": "ken ni ya"
+  },
+  {
+    "country_name": "科特迪瓦",
+    "code": "CI",
+    "dial_code": "+225",
+    "index": "K",
+    "alias_en": "Cote d'Ivoire",
+    "alias_hk": "科特迪瓦",
+    "pinyin": "ke te di wa"
+  },
+  {
+    "country_name": "科威特",
+    "code": "KW",
+    "dial_code": "+965",
+    "index": "K",
+    "alias_en": "Kuwait",
+    "alias_hk": "科威特",
+    "pinyin": "ke wei te"
+  },
+  {
+    "country_name": "库克群岛",
+    "code": "CK",
+    "dial_code": "+682",
+    "index": "K",
+    "alias_en": "Cook Islands",
+    "alias_hk": "庫克羣島",
+    "pinyin": "ku ke qun dao"
+  },
+  {
+    "country_name": "库拉索",
+    "code": "CW",
+    "dial_code": "+5999",
+    "index": "K",
+    "alias_en": "Curacao",
+    "alias_hk": "庫拉索",
+    "pinyin": "ku la suo"
+  },
+  {
+    "country_name": "莱索托",
+    "code": "LS",
+    "dial_code": "+266",
+    "index": "L",
+    "alias_en": "Lesotho",
+    "alias_hk": "萊索托",
+    "pinyin": "lai suo tuo"
+  },
+  {
+    "country_name": "老挝",
+    "code": "LA",
+    "dial_code": "+856",
+    "index": "L",
+    "alias_en": "Laos",
+    "alias_hk": "老撾",
+    "pinyin": "lao wo"
+  },
+  {
+    "country_name": "拉脱维亚",
+    "code": "LV",
+    "dial_code": "+371",
+    "index": "L",
+    "alias_en": "Latvia",
+    "alias_hk": "拉脱維亞",
+    "pinyin": "la tuo wei ya"
+  },
+  {
+    "country_name": "黎巴嫩",
+    "code": "LB",
+    "dial_code": "+961",
+    "index": "L",
+    "alias_en": "Lebanon",
+    "alias_hk": "黎巴嫩",
+    "pinyin": "li ba nen"
+  },
+  {
+    "country_name": "利比里亚",
+    "code": "LR",
+    "dial_code": "+231",
+    "index": "L",
+    "alias_en": "Liberia",
+    "alias_hk": "利比里亞",
+    "pinyin": "li bi li ya"
+  },
+  {
+    "country_name": "利比亚",
+    "code": "LY",
+    "dial_code": "+218",
+    "index": "L",
+    "alias_en": "Libya",
+    "alias_hk": "利比亞",
+    "pinyin": "li bi ya"
+  },
+  {
+    "country_name": "列支敦士登",
+    "code": "LI",
+    "dial_code": "+423",
+    "index": "L",
+    "alias_en": "Liechtenstein",
+    "alias_hk": "列支敦士登",
+    "pinyin": "lie zhi dun shi deng"
+  },
+  {
+    "country_name": "立陶宛",
+    "code": "LT",
+    "dial_code": "+370",
+    "index": "L",
+    "alias_en": "Lithuania",
+    "alias_hk": "立陶宛",
+    "pinyin": "li tao wan"
+  },
+  {
+    "country_name": "留尼汪",
+    "code": "RE",
+    "dial_code": "+262",
+    "index": "L",
+    "alias_en": "Réunion",
+    "alias_hk": "留尼汪",
+    "pinyin": "liu ni wang"
+  },
+  {
+    "country_name": "罗马尼亚",
+    "code": "RO",
+    "dial_code": "+40",
+    "index": "L",
+    "alias_en": "Romania",
+    "alias_hk": "羅馬尼亞",
+    "pinyin": "luo ma ni ya"
+  },
+  {
+    "country_name": "卢森堡",
+    "code": "LU",
+    "dial_code": "+352",
+    "index": "L",
+    "alias_en": "Luxembourg",
+    "alias_hk": "盧森堡",
+    "pinyin": "lu sen bao"
+  },
+  {
+    "country_name": "卢旺达",
+    "code": "RW",
+    "dial_code": "+250",
+    "index": "L",
+    "alias_en": "Rwanda",
+    "alias_hk": "盧旺達",
+    "pinyin": "lu wang da"
+  },
+  {
+    "country_name": "马达加斯加",
+    "code": "MG",
+    "dial_code": "+261",
+    "index": "M",
+    "alias_en": "Madagascar",
+    "alias_hk": "馬達加斯加",
+    "pinyin": "ma da jia si jia"
+  },
+  {
+    "country_name": "马恩岛",
+    "code": "IM",
+    "dial_code": "+44",
+    "index": "M",
+    "alias_en": "Isle of Man",
+    "alias_hk": "馬恩島",
+    "pinyin": "ma en dao"
+  },
+  {
+    "country_name": "马尔代夫",
+    "code": "MV",
+    "dial_code": "+960",
+    "index": "M",
+    "alias_en": "Maldives",
+    "alias_hk": "馬爾代夫",
+    "pinyin": "ma er dai fu"
+  },
+  {
+    "country_name": "马耳他",
+    "code": "MT",
+    "dial_code": "+356",
+    "index": "M",
+    "alias_en": "Malta",
+    "alias_hk": "馬耳他",
+    "pinyin": "ma er ta"
+  },
+  {
+    "country_name": "马尔维纳斯群岛（福克兰）",
+    "code": "FK",
+    "dial_code": "+500",
+    "index": "M",
+    "alias_en": "Falkland Islands",
+    "alias_hk": "馬爾維納斯羣島（福克蘭）",
+    "pinyin": "ma er wei na si qun dao fu ke lan"
+  },
+  {
+    "country_name": "马来西亚",
+    "code": "MY",
+    "dial_code": "+60",
+    "index": "M",
+    "alias_en": "Malaysia",
+    "alias_hk": "馬來西亞",
+    "pinyin": "ma lai xi ya"
+  },
+  {
+    "country_name": "马拉维",
+    "code": "MW",
+    "dial_code": "+265",
+    "index": "M",
+    "alias_en": "Malawi",
+    "alias_hk": "馬拉維",
+    "pinyin": "ma la wei"
+  },
+  {
+    "country_name": "马里",
+    "code": "ML",
+    "dial_code": "+223",
+    "index": "M",
+    "alias_en": "Mali",
+    "alias_hk": "馬裏",
+    "pinyin": "ma li"
+  },
+  {
+    "country_name": "毛里求斯",
+    "code": "MU",
+    "dial_code": "+230",
+    "index": "M",
+    "alias_en": "Mauritius",
+    "alias_hk": "毛里求斯",
+    "pinyin": "mao li qiu si"
+  },
+  {
+    "country_name": "毛里塔尼亚",
+    "code": "MR",
+    "dial_code": "+222",
+    "index": "M",
+    "alias_en": "Mauritania",
+    "alias_hk": "毛里塔尼亞",
+    "pinyin": "mao li ta ni ya"
+  },
+  {
+    "country_name": "马其顿",
+    "code": "MK",
+    "dial_code": "+389",
+    "index": "M",
+    "alias_en": "Republic of Macedonia (FYROM)",
+    "alias_hk": "馬其頓",
+    "pinyin": "ma qi dun"
+  },
+  {
+    "country_name": "马绍尔群岛",
+    "code": "MH",
+    "dial_code": "+692",
+    "index": "M",
+    "alias_en": "Marshall islands",
+    "alias_hk": "馬紹爾羣島",
+    "pinyin": "ma shao er qun dao"
+  },
+  {
+    "country_name": "马提尼克",
+    "code": "MQ",
+    "dial_code": "+596",
+    "index": "M",
+    "alias_en": "Martinique",
+    "alias_hk": "馬提尼克",
+    "pinyin": "ma ti ni ke"
+  },
+  {
+    "country_name": "马约特",
+    "code": "YT",
+    "dial_code": "+262",
+    "index": "M",
+    "alias_en": "Mayotte",
+    "alias_hk": "馬約特",
+    "pinyin": "ma yue te"
+  },
+  {
+    "country_name": "蒙古国",
+    "code": "MN",
+    "dial_code": "+976",
+    "index": "M",
+    "alias_en": "Mongolia",
+    "alias_hk": "蒙古國",
+    "pinyin": "meng gu guo"
+  },
+  {
+    "country_name": "孟加拉",
+    "code": "BD",
+    "dial_code": "+880",
+    "index": "M",
+    "alias_en": "Bangladesh",
+    "alias_hk": "孟加拉",
+    "pinyin": "meng jia la"
+  },
+  {
+    "country_name": "蒙塞拉特岛",
+    "code": "MS",
+    "dial_code": "+1664",
+    "index": "M",
+    "alias_en": "Montserrat",
+    "alias_hk": "蒙塞拉特島",
+    "pinyin": "meng sai la te dao"
+  },
+  {
+    "country_name": "缅甸",
+    "code": "MM",
+    "dial_code": "+95",
+    "index": "M",
+    "alias_en": "Myanmar (Burma)",
+    "alias_hk": "緬甸",
+    "pinyin": "mian dian"
+  },
+  {
+    "country_name": "密克罗尼西亚联邦",
+    "code": "FM",
+    "dial_code": "+691",
+    "index": "M",
+    "alias_en": "Federated States of Micronesia",
+    "alias_hk": "密克羅尼西亞聯邦",
+    "pinyin": "mi ke luo ni xi ya lian bang"
+  },
+  {
+    "country_name": "秘鲁",
+    "code": "PE",
+    "dial_code": "+51",
+    "index": "M",
+    "alias_en": "Peru",
+    "alias_hk": "秘魯",
+    "pinyin": "bi lu"
+  },
+  {
+    "country_name": "摩尔多瓦",
+    "code": "MD",
+    "dial_code": "+373",
+    "index": "M",
+    "alias_en": "Moldova",
+    "alias_hk": "摩爾多瓦",
+    "pinyin": "mo er duo wa"
+  },
+  {
+    "country_name": "摩洛哥",
+    "code": "MA",
+    "dial_code": "+212",
+    "index": "M",
+    "alias_en": "Morocco",
+    "alias_hk": "摩洛哥",
+    "pinyin": "mo luo ge"
+  },
+  {
+    "country_name": "摩纳哥",
+    "code": "MC",
+    "dial_code": "+377",
+    "index": "M",
+    "alias_en": "Monaco",
+    "alias_hk": "摩納哥",
+    "pinyin": "mo na ge"
+  },
+  {
+    "country_name": "莫桑比克",
+    "code": "MZ",
+    "dial_code": "+258",
+    "index": "M",
+    "alias_en": "Mozambique",
+    "alias_hk": "莫桑比克",
+    "pinyin": "mo sang bi ke"
+  },
+  {
+    "country_name": "墨西哥",
+    "code": "MX",
+    "dial_code": "+52",
+    "index": "M",
+    "alias_en": "Mexico",
+    "alias_hk": "墨西哥",
+    "pinyin": "mo xi ge"
+  },
+  {
+    "country_name": "纳米比亚",
+    "code": "NA",
+    "dial_code": "+264",
+    "index": "N",
+    "alias_en": "Namibia",
+    "alias_hk": "納米比亞",
+    "pinyin": "na mi bi ya"
+  },
+  {
+    "country_name": "南非",
+    "code": "ZA",
+    "dial_code": "+27",
+    "index": "N",
+    "alias_en": "South Africa",
+    "alias_hk": "南非",
+    "pinyin": "nan fei"
+  },
+  {
+    "country_name": "南极洲",
+    "code": "AQ",
+    "dial_code": "+672",
+    "index": "N",
+    "alias_en": "Antarctica",
+    "alias_hk": "南極洲",
+    "pinyin": "nan ji zhou"
+  },
+  {
+    "country_name": "南乔治亚岛和南桑威奇群岛",
+    "code": "GS",
+    "dial_code": "+500",
+    "index": "N",
+    "alias_en": "South Georgia and the South Sandwich Islands",
+    "alias_hk": "南喬治亞島和南桑威奇羣島",
+    "pinyin": "nan qiao zhi ya dao he nan sang wei qi qun dao"
+  },
+  {
+    "country_name": "南苏丹",
+    "code": "SS",
+    "dial_code": "+211",
+    "index": "N",
+    "alias_en": "South Sudan",
+    "alias_hk": "南蘇丹",
+    "pinyin": "nan su dan"
+  },
+  {
+    "country_name": "瑙鲁",
+    "code": "NR",
+    "dial_code": "+674",
+    "index": "N",
+    "alias_en": "Nauru",
+    "alias_hk": "瑙魯",
+    "pinyin": "nao lu"
+  },
+  {
+    "country_name": "尼泊尔",
+    "code": "NP",
+    "dial_code": "+977",
+    "index": "N",
+    "alias_en": "Nepal",
+    "alias_hk": "尼泊爾",
+    "pinyin": "ni bo er"
+  },
+  {
+    "country_name": "尼加拉瓜",
+    "code": "NI",
+    "dial_code": "+505",
+    "index": "N",
+    "alias_en": "Nicaragua",
+    "alias_hk": "尼加拉瓜",
+    "pinyin": "ni jia la gua"
+  },
+  {
+    "country_name": "尼日尔",
+    "code": "NE",
+    "dial_code": "+227",
+    "index": "N",
+    "alias_en": "Niger",
+    "alias_hk": "尼日爾",
+    "pinyin": "ni ri er"
+  },
+  {
+    "country_name": "尼日利亚",
+    "code": "NG",
+    "dial_code": "+234",
+    "index": "N",
+    "alias_en": "Nigeria",
+    "alias_hk": "尼日利亞",
+    "pinyin": "ni ri li ya"
+  },
+  {
+    "country_name": "纽埃",
+    "code": "NU",
+    "dial_code": "+683",
+    "index": "N",
+    "alias_en": "Niue",
+    "alias_hk": "紐埃",
+    "pinyin": "niu ai"
+  },
+  {
+    "country_name": "诺福克岛",
+    "code": "NF",
+    "dial_code": "+672",
+    "index": "N",
+    "alias_en": "Norfolk Island",
+    "alias_hk": "諾福克島",
+    "pinyin": "nuo fu ke dao"
+  },
+  {
+    "country_name": "挪威",
+    "code": "NO",
+    "dial_code": "+47",
+    "index": "N",
+    "alias_en": "Norway",
+    "alias_hk": "挪威",
+    "pinyin": "nuo wei"
+  },
+  {
+    "country_name": "帕劳",
+    "code": "PW",
+    "dial_code": "+680",
+    "index": "P",
+    "alias_en": "Palau",
+    "alias_hk": "帕勞",
+    "pinyin": "pa lao"
+  },
+  {
+    "country_name": "皮特凯恩群岛",
+    "code": "PN",
+    "dial_code": "+872",
+    "index": "P",
+    "alias_en": "Pitcairn Islands",
+    "alias_hk": "皮特凱恩羣島",
+    "pinyin": "pi te kai en qun dao"
+  },
+  {
+    "country_name": "葡萄牙",
+    "code": "PT",
+    "dial_code": "+351",
+    "index": "P",
+    "alias_en": "Portugal",
+    "alias_hk": "葡萄牙",
+    "pinyin": "pu tao ya"
+  },
+  {
+    "country_name": "日本",
+    "code": "JP",
+    "dial_code": "+81",
+    "index": "R",
+    "alias_en": "Japan",
+    "alias_hk": "日本",
+    "pinyin": "ri ben"
+  },
+  {
+    "country_name": "瑞典",
+    "code": "SE",
+    "dial_code": "+46",
+    "index": "R",
+    "alias_en": "Sweden",
+    "alias_hk": "瑞典",
+    "pinyin": "rui dian"
+  },
+  {
+    "country_name": "瑞士",
+    "code": "CH",
+    "dial_code": "+41",
+    "index": "R",
+    "alias_en": "Switzerland",
+    "alias_hk": "瑞士",
+    "pinyin": "rui shi"
+  },
+  {
+    "country_name": "萨尔瓦多",
+    "code": "SV",
+    "dial_code": "+503",
+    "index": "S",
+    "alias_en": "El Salvador",
+    "alias_hk": "薩爾瓦多",
+    "pinyin": "sa er wa duo"
+  },
+  {
+    "country_name": "塞尔维亚",
+    "code": "RS",
+    "dial_code": "+381",
+    "index": "S",
+    "alias_en": "Serbia",
+    "alias_hk": "塞爾維亞",
+    "pinyin": "sai er wei ya"
+  },
+  {
+    "country_name": "塞拉利昂",
+    "code": "SL",
+    "dial_code": "+232",
+    "index": "S",
+    "alias_en": "Sierra Leone",
+    "alias_hk": "塞拉利昂",
+    "pinyin": "sai la li ang"
+  },
+  {
+    "country_name": "塞内加尔",
+    "code": "SN",
+    "dial_code": "+221",
+    "index": "S",
+    "alias_en": "Senegal",
+    "alias_hk": "塞內加爾",
+    "pinyin": "sai nei jia er"
+  },
+  {
+    "country_name": "塞浦路斯",
+    "code": "CY",
+    "dial_code": "+357",
+    "index": "S",
+    "alias_en": "Cyprus",
+    "alias_hk": "塞浦路斯",
+    "pinyin": "sai pu lu si"
+  },
+  {
+    "country_name": "塞舌尔",
+    "code": "SC",
+    "dial_code": "+248",
+    "index": "S",
+    "alias_en": "Seychelles",
+    "alias_hk": "塞舌爾",
+    "pinyin": "sai she er"
+  },
+  {
+    "country_name": "萨摩亚",
+    "code": "WS",
+    "dial_code": "+685",
+    "index": "S",
+    "alias_en": "Samoa",
+    "alias_hk": "薩摩亞",
+    "pinyin": "sa mo ya"
+  },
+  {
+    "country_name": "沙特阿拉伯",
+    "code": "SA",
+    "dial_code": "+966",
+    "index": "S",
+    "alias_en": "Saudi Arabia",
+    "alias_hk": "沙特阿拉伯",
+    "pinyin": "sha te a la bo"
+  },
+  {
+    "country_name": "圣巴泰勒米岛",
+    "code": "BL",
+    "dial_code": "+590",
+    "index": "S",
+    "alias_en": "Saint Barthélemy",
+    "alias_hk": "聖巴泰勒米島",
+    "pinyin": "sheng ba tai le mi dao"
+  },
+  {
+    "country_name": "圣诞岛",
+    "code": "CX",
+    "dial_code": "+61",
+    "index": "S",
+    "alias_en": "Christmas Island",
+    "alias_hk": "聖誕島",
+    "pinyin": "sheng dan dao"
+  },
+  {
+    "country_name": "圣多美和普林西比",
+    "code": "ST",
+    "dial_code": "+239",
+    "index": "S",
+    "alias_en": "Sao Tome & Principe",
+    "alias_hk": "聖多美和普林西比",
+    "pinyin": "sheng duo mei he pu lin xi bi"
+  },
+  {
+    "country_name": "圣赫勒拿",
+    "code": "SH",
+    "dial_code": "+290",
+    "index": "S",
+    "alias_en": "St. Helena & Dependencies",
+    "alias_hk": "聖赫勒拿",
+    "pinyin": "sheng he le na"
+  },
+  {
+    "country_name": "圣基茨和尼维斯",
+    "code": "KN",
+    "dial_code": "+1 869",
+    "index": "S",
+    "alias_en": "St. Kitts & Nevis",
+    "alias_hk": "聖基茨和尼維斯",
+    "pinyin": "sheng ji ci he ni wei si"
+  },
+  {
+    "country_name": "圣卢西亚",
+    "code": "LC",
+    "dial_code": "+1758",
+    "index": "S",
+    "alias_en": "St. Lucia",
+    "alias_hk": "聖盧西亞",
+    "pinyin": "sheng lu xi ya"
+  },
+  {
+    "country_name": "圣马力诺",
+    "code": "SM",
+    "dial_code": "+378",
+    "index": "S",
+    "alias_en": "San Marino",
+    "alias_hk": "聖馬力諾",
+    "pinyin": "sheng ma li nuo"
+  },
+  {
+    "country_name": "圣皮埃尔和密克隆",
+    "code": "PM",
+    "dial_code": "+508",
+    "index": "S",
+    "alias_en": "Saint-Pierre and Miquelon",
+    "alias_hk": "聖皮埃爾和密克隆",
+    "pinyin": "sheng pi ai er he mi ke long"
+  },
+  {
+    "country_name": "圣文森特和格林纳丁斯",
+    "code": "VC",
+    "dial_code": "+1784",
+    "index": "S",
+    "alias_en": "St. Vincent & the Grenadines",
+    "alias_hk": "聖文森特和格林納丁斯",
+    "pinyin": "sheng wen sen te he ge lin na ding si"
+  },
+  {
+    "country_name": "斯里兰卡",
+    "code": "LK",
+    "dial_code": "+94",
+    "index": "S",
+    "alias_en": "Sri Lanka",
+    "alias_hk": "斯里蘭卡",
+    "pinyin": "si li lan ka"
+  },
+  {
+    "country_name": "斯洛伐克",
+    "code": "SK",
+    "dial_code": "+421",
+    "index": "S",
+    "alias_en": "Slovakia",
+    "alias_hk": "斯洛伐克",
+    "pinyin": "si luo fa ke"
+  },
+  {
+    "country_name": "斯洛文尼亚",
+    "code": "SI",
+    "dial_code": "+386",
+    "index": "S",
+    "alias_en": "Slovenia",
+    "alias_hk": "斯洛文尼亞",
+    "pinyin": "si luo wen ni ya"
+  },
+  {
+    "country_name": "斯瓦尔巴群岛和扬马延岛",
+    "code": "SJ",
+    "dial_code": "+47",
+    "index": "S",
+    "alias_en": "Svalbard and Jan Mayen",
+    "alias_hk": "斯瓦爾巴羣島和揚馬延島",
+    "pinyin": "si wa er ba qun dao he yang ma yan dao"
+  },
+  {
+    "country_name": "斯威士兰",
+    "code": "SZ",
+    "dial_code": "+268",
+    "index": "S",
+    "alias_en": "Swaziland",
+    "alias_hk": "斯威士蘭",
+    "pinyin": "si wei shi lan"
+  },
+  {
+    "country_name": "苏丹",
+    "code": "SD",
+    "dial_code": "+249",
+    "index": "S",
+    "alias_en": "Sudan",
+    "alias_hk": "蘇丹",
+    "pinyin": "su dan"
+  },
+  {
+    "country_name": "苏里南",
+    "code": "SR",
+    "dial_code": "+597",
+    "index": "S",
+    "alias_en": "Suriname",
+    "alias_hk": "蘇里南",
+    "pinyin": "su li nan"
+  },
+  {
+    "country_name": "所罗门群岛",
+    "code": "SB",
+    "dial_code": "+677",
+    "index": "S",
+    "alias_en": "Solomon Islands",
+    "alias_hk": "所羅門羣島",
+    "pinyin": "suo luo men qun dao"
+  },
+  {
+    "country_name": "索马里",
+    "code": "SO",
+    "dial_code": "+252",
+    "index": "S",
+    "alias_en": "Somalia",
+    "alias_hk": "索馬里",
+    "pinyin": "suo ma li"
+  },
+  {
+    "country_name": "泰国",
+    "code": "TH",
+    "dial_code": "+66",
+    "index": "T",
+    "alias_en": "Thailand",
+    "alias_hk": "泰國",
+    "pinyin": "tai guo"
+  },
+  {
+    "country_name": "塔吉克斯坦",
+    "code": "TJ",
+    "dial_code": "+992",
+    "index": "T",
+    "alias_en": "Tajikistan",
+    "alias_hk": "塔吉克斯坦",
+    "pinyin": "ta ji ke si tan"
+  },
+  {
+    "country_name": "汤加",
+    "code": "TO",
+    "dial_code": "+676",
+    "index": "T",
+    "alias_en": "Tonga",
+    "alias_hk": "湯加",
+    "pinyin": "tang jia"
+  },
+  {
+    "country_name": "坦桑尼亚",
+    "code": "TZ",
+    "dial_code": "+255",
+    "index": "T",
+    "alias_en": "Tanzania",
+    "alias_hk": "坦桑尼亞",
+    "pinyin": "tan sang ni ya"
+  },
+  {
+    "country_name": "特克斯和凯科斯群岛",
+    "code": "TC",
+    "dial_code": "+1649",
+    "index": "T",
+    "alias_en": "Turks & Caicos Islands",
+    "alias_hk": "特克斯和凱科斯羣島",
+    "pinyin": "te ke si he kai ke si qun dao"
+  },
+  {
+    "country_name": "特立尼达和多巴哥",
+    "code": "TT",
+    "dial_code": "+1868",
+    "index": "T",
+    "alias_en": "Trinidad & Tobago",
+    "alias_hk": "特立尼達和多巴哥",
+    "pinyin": "te li ni da he duo ba ge"
+  },
+  {
+    "country_name": "土耳其",
+    "code": "TR",
+    "dial_code": "+90",
+    "index": "T",
+    "alias_en": "Turkey",
+    "alias_hk": "土耳其",
+    "pinyin": "tu er qi"
+  },
+  {
+    "country_name": "土库曼斯坦",
+    "code": "TM",
+    "dial_code": "+993",
+    "index": "T",
+    "alias_en": "Turkmenistan",
+    "alias_hk": "土庫曼斯坦",
+    "pinyin": "tu ku man si tan"
+  },
+  {
+    "country_name": "突尼斯",
+    "code": "TN",
+    "dial_code": "+216",
+    "index": "T",
+    "alias_en": "Tunisia",
+    "alias_hk": "突尼斯",
+    "pinyin": "tu ni si"
+  },
+  {
+    "country_name": "托克劳",
+    "code": "TK",
+    "dial_code": "+690",
+    "index": "T",
+    "alias_en": "Tokelau",
+    "alias_hk": "托克勞",
+    "pinyin": "tuo ke lao"
+  },
+  {
+    "country_name": "图瓦卢",
+    "code": "TV",
+    "dial_code": "+688",
+    "index": "T",
+    "alias_en": "Tuvalu",
+    "alias_hk": "圖瓦盧",
+    "pinyin": "tu wa lu"
+  },
+  {
+    "country_name": "瓦利斯和富图纳",
+    "code": "WF",
+    "dial_code": "+681",
+    "index": "W",
+    "alias_en": "Wallis and Futuna",
+    "alias_hk": "瓦利斯和富圖納",
+    "pinyin": "wa li si he fu tu na"
+  },
+  {
+    "country_name": "瓦努阿图",
+    "code": "VU",
+    "dial_code": "+678",
+    "index": "W",
+    "alias_en": "Vanuatu",
+    "alias_hk": "瓦努阿圖",
+    "pinyin": "wa nu a tu"
+  },
+  {
+    "country_name": "危地马拉",
+    "code": "GT",
+    "dial_code": "+502",
+    "index": "W",
+    "alias_en": "Guatemala",
+    "alias_hk": "危地馬拉",
+    "pinyin": "wei di ma la"
+  },
+  {
+    "country_name": "委内瑞拉",
+    "code": "VE",
+    "dial_code": "+58",
+    "index": "W",
+    "alias_en": "Venezuela",
+    "alias_hk": "委內瑞拉",
+    "pinyin": "wei nei rui la"
+  },
+  {
+    "country_name": "文莱",
+    "code": "BN",
+    "dial_code": "+673",
+    "index": "W",
+    "alias_en": "Brunei",
+    "alias_hk": "文萊",
+    "pinyin": "wen lai"
+  },
+  {
+    "country_name": "乌干达",
+    "code": "UG",
+    "dial_code": "+256",
+    "index": "W",
+    "alias_en": "Uganda",
+    "alias_hk": "烏干達",
+    "pinyin": "wu gan da"
+  },
+  {
+    "country_name": "乌克兰",
+    "code": "UA",
+    "dial_code": "+380",
+    "index": "W",
+    "alias_en": "Ukraine",
+    "alias_hk": "烏克蘭",
+    "pinyin": "wu ke lan"
+  },
+  {
+    "country_name": "乌拉圭",
+    "code": "UY",
+    "dial_code": "+598",
+    "index": "W",
+    "alias_en": "Uruguay",
+    "alias_hk": "烏拉圭",
+    "pinyin": "wu lɑ gui"
+  },
+  {
+    "country_name": "乌兹别克斯坦",
+    "code": "UZ",
+    "dial_code": "+998",
+    "index": "W",
+    "alias_en": "Uzbekistan",
+    "alias_hk": "烏茲別克斯坦",
+    "pinyin": "wu zi bie ke si tan"
+  },
+  {
+    "country_name": "西班牙",
+    "code": "ES",
+    "dial_code": "+34",
+    "index": "X",
+    "alias_en": "Spain",
+    "alias_hk": "西班牙",
+    "pinyin": "xi ban ya"
+  },
+  {
+    "country_name": "希腊",
+    "code": "GR",
+    "dial_code": "+30",
+    "index": "X",
+    "alias_en": "Greece",
+    "alias_hk": "希臘",
+    "pinyin": "xi la"
+  },
+  {
+    "country_name": "新喀里多尼亚",
+    "code": "NC",
+    "dial_code": "+687",
+    "index": "X",
+    "alias_en": "New Caledonia",
+    "alias_hk": "新喀里多尼亞",
+    "pinyin": "xin ka li duo ni ya"
+  },
+  {
+    "country_name": "新西兰",
+    "code": "NZ",
+    "dial_code": "+64",
+    "index": "X",
+    "alias_en": "New Zealand",
+    "alias_hk": "新西蘭",
+    "pinyin": "xin xi lan"
+  },
+  {
+    "country_name": "匈牙利",
+    "code": "HU",
+    "dial_code": "+36",
+    "index": "X",
+    "alias_en": "Hungary",
+    "alias_hk": "匈牙利",
+    "pinyin": "xiong ya li"
+  },
+  {
+    "country_name": "西撒哈拉",
+    "code": "EH",
+    "dial_code": "+21228",
+    "index": "X",
+    "alias_en": "Western Sahara",
+    "alias_hk": "西撒哈拉",
+    "pinyin": "xi sa ha la"
+  },
+  {
+    "country_name": "叙利亚",
+    "code": "SY",
+    "dial_code": "+963",
+    "index": "X",
+    "alias_en": "Syria",
+    "alias_hk": "敍利亞",
+    "pinyin": "xu li ya"
+  },
+  {
+    "country_name": "牙买加",
+    "code": "JM",
+    "dial_code": "+1876",
+    "index": "Y",
+    "alias_en": "Jamaica",
+    "alias_hk": "牙買加",
+    "pinyin": "ya mai jia"
+  },
+  {
+    "country_name": "亚美尼亚",
+    "code": "AM",
+    "dial_code": "+374",
+    "index": "Y",
+    "alias_en": "Armenia",
+    "alias_hk": "亞美尼亞",
+    "pinyin": "ya mei ni ya"
+  },
+  {
+    "country_name": "也门",
+    "code": "YE",
+    "dial_code": "+967",
+    "index": "Y",
+    "alias_en": "Yemen",
+    "alias_hk": "也門",
+    "pinyin": "ye men"
+  },
+  {
+    "country_name": "意大利",
+    "code": "IT",
+    "dial_code": "+39",
+    "index": "Y",
+    "alias_en": "Italy",
+    "alias_hk": "意大利",
+    "pinyin": "yi da li"
+  },
+  {
+    "country_name": "伊拉克",
+    "code": "IQ",
+    "dial_code": "+964",
+    "index": "Y",
+    "alias_en": "Iraq",
+    "alias_hk": "伊拉克",
+    "pinyin": "yi la ke"
+  },
+  {
+    "country_name": "伊朗",
+    "code": "IR",
+    "dial_code": "+98",
+    "index": "Y",
+    "alias_en": "Iran",
+    "alias_hk": "伊朗",
+    "pinyin": "yi lang"
+  },
+  {
+    "country_name": "印度",
+    "code": "IN",
+    "dial_code": "+91",
+    "index": "Y",
+    "alias_en": "India",
+    "alias_hk": "印度",
+    "pinyin": "yin du"
+  },
+  {
+    "country_name": "英国",
+    "code": "GB",
+    "dial_code": "+44",
+    "index": "Y",
+    "alias_en": "Great Britain (United Kingdom; England)",
+    "alias_hk": "英國",
+    "pinyin": "ying guo"
+  },
+  {
+    "country_name": "英属维尔京群岛",
+    "code": "VG",
+    "dial_code": "+1284",
+    "index": "Y",
+    "alias_en": "British Virgin Islands",
+    "alias_hk": "英屬維爾京羣島",
+    "pinyin": "ying shu wei er jing qun dao"
+  },
+  {
+    "country_name": "英属印度洋领地",
+    "code": "IO",
+    "dial_code": "+246",
+    "index": "Y",
+    "alias_en": "British Indian Ocean Territory",
+    "alias_hk": "英屬印度洋領地",
+    "pinyin": "ying shu yin du yang ling di"
+  },
+  {
+    "country_name": "印尼",
+    "code": "ID",
+    "dial_code": "+62",
+    "index": "Y",
+    "alias_en": "Indonesia",
+    "alias_hk": "印尼",
+    "pinyin": "yin ni"
+  },
+  {
+    "country_name": "以色列",
+    "code": "IL",
+    "dial_code": "+972",
+    "index": "Y",
+    "alias_en": "Israel",
+    "alias_hk": "以色列",
+    "pinyin": "yi se lie"
+  },
+  {
+    "country_name": "约旦",
+    "code": "JO",
+    "dial_code": "+962",
+    "index": "Y",
+    "alias_en": "Jordan",
+    "alias_hk": "約旦",
+    "pinyin": "yue dan"
+  },
+  {
+    "country_name": "越南",
+    "code": "VN",
+    "dial_code": "+84",
+    "index": "Y",
+    "alias_en": "Vietnam",
+    "alias_hk": "越南",
+    "pinyin": "yue nan"
+  },
+  {
+    "country_name": "赞比亚",
+    "code": "ZM",
+    "dial_code": "+260",
+    "index": "Z",
+    "alias_en": "Zambia",
+    "alias_hk": "贊比亞",
+    "pinyin": "zan bi ya"
+  },
+  {
+    "country_name": "泽西岛",
+    "code": "JE",
+    "dial_code": "+44",
+    "index": "Z",
+    "alias_en": "Jersey",
+    "alias_hk": "澤西島",
+    "pinyin": "ze xi dao"
+  },
+  {
+    "country_name": "乍得",
+    "code": "TD",
+    "dial_code": "+235",
+    "index": "Z",
+    "alias_en": "Chad",
+    "alias_hk": "乍得",
+    "pinyin": "zha de"
+  },
+  {
+    "country_name": "直布罗陀",
+    "code": "GI",
+    "dial_code": "+350",
+    "index": "Z",
+    "alias_en": "Gibraltar",
+    "alias_hk": "直布羅陀",
+    "pinyin": "zhi bu luo tuo"
+  },
+  {
+    "country_name": "智利",
+    "code": "CL",
+    "dial_code": "+56",
+    "index": "Z",
+    "alias_en": "Chile",
+    "alias_hk": "智利",
+    "pinyin": "zhi li"
+  },
+  {
+    "country_name": "中非",
+    "code": "CF",
+    "dial_code": "+236",
+    "index": "Z",
+    "alias_en": "Central African Republic",
+    "alias_hk": "中非",
+    "pinyin": "zhong fei"
+  }
+]

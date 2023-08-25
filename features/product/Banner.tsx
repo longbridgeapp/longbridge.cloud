@@ -2,11 +2,12 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { CDN_IMAGES } from '@/constants'
 import { TalkToUs } from '../talk-to-us'
+import ExperienceDemo from '../experience-demo'
 interface Props {
   title: string
   subtitle?: string
   desc: string[]
-  img: Record<string, string>;
+  img: Record<string, string>
   imgClassName?: string
 }
 
@@ -29,10 +30,13 @@ const Banner: React.FC<Props> = props => {
               return <div key={index}>{i}</div>
             })}
           </div>
-          <TalkToUs className="mt-10" />
+          <div className="flex space-x-5">
+            <TalkToUs className="mt-10" />
+            <ExperienceDemo />
+          </div>
         </div>
         {/* 图片 */}
-        <div className={`lg:w-[620px] lg:h-[430px] ${imgClassName}`}>
+        <div className={`lg:w-[620px] lg:h-[430px] flex flex-col justify-center ${imgClassName}`}>
           <img src={img[i18n.i18n.language] || img['zh-CN']} alt="" />
         </div>
       </div>

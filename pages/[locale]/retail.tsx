@@ -33,9 +33,9 @@ const Retail: React.FC = () => {
     title: i18n.t('features_header_index_3'),
     desc: [i18n.t('pages_locale_solutions_retail_5'), i18n.t('pages_locale_solutions_retail_5_1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/baf373df-6394-4c22-8b43-7e13cbfbf456/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/651bb137-be72-4f73-baec-aa5a8d63ab12/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/651bb137-be72-4f73-baec-aa5a8d63ab12/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/a5b18322-a757-4f1b-ab26-6da257b769bf/retail-en.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/cabe8fa7-c654-4675-8cea-0da32ebf9415/retail-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/6de9fb75-8cf3-43e4-9f67-cdfe34ef7dd8/retail-hk.png',
     },
   }
 
