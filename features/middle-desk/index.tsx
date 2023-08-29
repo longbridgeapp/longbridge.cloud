@@ -16,9 +16,9 @@ export const MiddleDeskContain = () => {
     title: i18n.t('src_pages_atm_deposit_add_single_index_8632'),
     desc: [i18n.t('src_pages_atm_deposit_add_single_index_8633')],
     img: {
-      'en': 'https://pub.lbkrs.com/static/offline/202301/nzFFjZEHgk6xtdt2/2.svg',
-      'zh-CN': 'https://pub.lbkrs.com/static/offline/202301/pMBj9uXMrmTVf5tT/Frame_427319007.svg',
-      'zh-HK:': 'https://pub.lbkrs.com/static/offline/202301/pMBj9uXMrmTVf5tT/Frame_427319007.svg',
+      'en': 'https://assets.lbkrs.com/uploads/d4eb19ff-7abe-4fdc-8db1-4267c17e1fa7/front-desk-en.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/d24e1500-e729-4615-a441-a3114e6de491/front-desk-cn.png',
+      'zh-HK:': 'https://assets.lbkrs.com/uploads/0c54b42c-cd82-484d-99c9-d488282a11c0/front-desk-hk.png',
     },
   }
 

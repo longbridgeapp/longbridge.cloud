@@ -1,13 +1,15 @@
 import React, { FC, ReactNode, useCallback, useState } from 'react'
 import { Modal } from 'antd'
 
-export const FullMask: FC<{ transparent?: boolean }> = ({ children, transparent = false }) => {
+export const FullMask: FC<{ transparent?: boolean; width?: number; maskClosable?: boolean; onCancel?: () => void}> = ({ children, transparent = false, width = 375, maskClosable = false, onCancel }) => {
   return (
     <Modal
-      width={375}
+      width={width}
       open={true}
       footer={null}
       closable={false}
+      maskClosable={maskClosable}
+      onCancel={onCancel}
       getContainer={'#__next'}
       className="custom-full-mask"
       bodyStyle={{ padding: 0 }}

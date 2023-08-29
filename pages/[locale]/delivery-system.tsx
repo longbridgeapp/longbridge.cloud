@@ -89,9 +89,9 @@ const DeliverySystem: React.FC = () => {
     title: i18n.t('whale-delivery-system-001'),
     desc: [i18n.t('whale-delivery-system-002'), i18n.t('whale-delivery-system-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/a9ddf293-32d9-4ff4-a2ea-ebae8955e83e/Digital_Marketing_Platform_en.svg',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/c29968f5-9d36-4de0-a644-967dc61b4472/Untitled-1.png',
+      'en': 'https://assets.lbkrs.com/uploads/64160666-01a6-4fb2-8d36-3632f7a5daee/delivery-system-en.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/1e5be30d-30f6-44a4-9e64-ac491961554c/delivery-system-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/e194b27b-533a-4f25-b21c-97c0466bfdb2/delivery-system-hk.png',
     },
   }
 

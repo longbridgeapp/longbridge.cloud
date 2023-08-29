@@ -111,9 +111,9 @@ const Marketing: React.FC = () => {
     title: i18n.t('whale-marketing-001'),
     desc: [i18n.t('whale-marketing-002')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/1f4269fb-362c-4d4a-877c-b5ea25a7cda9/marketing_banner_cn.svg',
+      'en': 'https://assets.lbkrs.com/uploads/554fb6ad-e8f6-4e19-a736-88b77491c7f5/marketing-en.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/67a88485-bf1b-4cab-8659-4920a5a24b78/marketing-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/aac7580e-5b22-43f4-a28e-1a4ea5924f12/marketing-hk.png',
     },
   }
 

@@ -169,6 +169,81 @@ const TalkToUsForm = ({ onClose }: { onClose: () => void }) => {
   )
 }
 
+const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
+  const i18n = useTranslation('common')
+  const [formItems, update, formValue] = useFormItems()
+
+  const contactList = useMemo(() => {
+    return [
+      {
+        icon: 'https://assets.lbkrs.com/uploads/ad7e7b52-7110-475f-b072-3643193779d9/union1.png',
+        title: i18n.t('features_talk_to_us_891117'),
+        tags: [i18n.t('features_talk_to_us_891118'), i18n.t('features_talk_to_us_891119'), i18n.t('features_talk_to_us_891120')],
+        phone: '+852 3851 1713',
+        email: 'bd@longbridge.cloud',
+      },
+      {
+        icon: 'https://assets.lbkrs.com/uploads/0c34320c-c99c-434f-88a9-b9a7b80b721c/broker.png',
+        title: i18n.t('features_talk_to_us_891121'),
+        tags: [i18n.t('features_talk_to_us_891122'), i18n.t('features_talk_to_us_891123')],
+        phone: '+852 3851 1712',
+        email: 'cs@longbridge.cloud',
+      },
+    ]
+  }, [])
+
+  return (
+    <div className="">
+      <div className="flex justify-between p-6 pb-[19px] border-b ">
+        <div>
+          <h3 className="text-xl font-bold">{i18n.t('features_talk_to_us_891124')}</h3>
+          <h3 className="text-xl font-bold">{i18n.t('features_talk_to_us_891125')}</h3>
+        </div>
+        <div>
+          <Icon
+            type="close"
+            style={{ fontSize: '20px' }}
+            className="cursor-pointer hover:text-brand_color"
+            onClick={onClose}
+          ></Icon>
+        </div>
+      </div>
+      {!!contactList?.length &&
+        <div className='px-6 pb-5'>
+          {
+            contactList.map((item, index) => {
+              return (
+                <div className="py-5 border-b last:border-b-0" key={index}>
+                  <div className="flex items-center">
+                    <img src={item.icon} alt="" className="w-5 mr-2" />
+                    <span className="text-base text-brand_color font-medium">{item.title}</span>
+                  </div>
+                  {!!item?.tags?.length && (
+                    <div className="flex items-center text-[11px] text-brand_color flex-wrap">
+                      {item.tags.map((it, i) => {
+                        return (
+                          <div className="px-1 py-[3px] bg-[#5622CF]/[.1] mt-2 mr-2 last:mr-0" key={i}>
+                            {it}
+                          </div>
+                        )
+                      })}
+                    </div>
+                  )}
+                  <div className="pt-3 font-medium">
+                    {i18n.t('features_talk_to_us_891126')}<span>{item.phone}</span>
+                  </div>
+                  <div className="pt-3 font-medium">
+                    {i18n.t('features_talk_to_us_891127')}<span>{item.email}</span>
+                  </div>
+                </div>
+              )
+            })
+          }
+          </div>}
+    </div>
+  )
+}
+
 export const TalkToUs = ({ className, style, text }: { className?: string; style?: CSSProperties; text?: string }) => {
   const i18n = useTranslation('common')
   const [visible, setVisible] = useState(false)
@@ -183,8 +258,8 @@ export const TalkToUs = ({ className, style, text }: { className?: string; style
   return (
     <>
       {visible && (
-        <FullMask>
-          <TalkToUsForm onClose={onClose} />
+        <FullMask width={324} maskClosable={false}>
+          <PhoneTalkToUs onClose={onClose} />
         </FullMask>
       )}
       <Button size="medium" className={classNames('mt-10', className)} style={style} onClick={onOpen}>

@@ -35,9 +35,9 @@ const AppPlusPage = () => {
     title: i18n.t('features_header_index_4'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8678')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/933aac3f-2728-4338-8148-9effdb0b503b/banner.png',
+      'en': 'https://assets.lbkrs.com/uploads/925313bd-e134-4d2f-b824-747e748829a9/app-plus-en.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/641fe78a-11d3-4c8b-bb84-710c9fb59696/app-plus-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/fb7df7a5-7c0e-4fe1-94dc-c8d5b75459f4/app-plus-hk.png',
     },
   }
   const content_banner_props = {
