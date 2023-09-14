@@ -5,10 +5,6 @@
 html:not([lang='en']) {
   text-align: justify;
 }
-html[lang='en'] {
-  @apply tracking-tighter;
-}
-
 .main-container {
   @apply px-6 xl:px-[100px];
 }
