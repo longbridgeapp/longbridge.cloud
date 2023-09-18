@@ -100,6 +100,21 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
           `,
         }}
       ></Script>
+      <Script id="google-source" src="https://www.googletagmanager.com/gtag/js?id=G-K537QXZ7MV" async></Script>
+      <Script
+        id="google-tag"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            <!-- Google tag (gtag.js) -->
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'G-K537QXZ7MV');
+          `,
+        }}
+      ></Script>
       <ToastContainer position="top-center" theme="colored" hideProgressBar />
       {isServer() ? nextRouter : feRouter}
     </div>
