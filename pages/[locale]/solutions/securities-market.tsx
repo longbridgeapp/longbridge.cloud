@@ -7,7 +7,7 @@ import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 import InfoIntroduce, { ImageAndText } from '@/features/solutions/info-introduce'
@@ -30,11 +30,14 @@ const SecuritiesMarket: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('pages_locale_solutions_securities_market_8769'),
-    desc: [i18n.t('pages_locale_solutions_securities_market_8770')],
+    desc: [
+      i18n.t('pages_locale_solutions_securities_market_8770'),
+      i18n.t('pages_locale_solutions_securities_market_8770-1'),
+    ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/99924828-2d17-4014-b037-ba0b029c7d58/securities-market-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/cea6c8b9-da54-4d65-9290-0568f9a8f939/securities-market-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/2d98797a-d3a4-4d6d-855b-e189312b6d43/securities-market-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/dad46b40-d456-44a9-9404-ecb2be03f6ea/gui-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
     },
   }
 
@@ -493,7 +496,11 @@ const SecuritiesMarket: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={false} title={seoI18n.t('securities-market.title')} description={seoI18n.t('securities-market.description')} />
+      <SEOMeta
+        indexTitle={false}
+        title={seoI18n.t('securities-market.title')}
+        description={seoI18n.t('securities-market.description')}
+      />
       <div>
         <Banner {...banner_props}></Banner>
         <Box>

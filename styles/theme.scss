@@ -16,4 +16,65 @@
   --disabled_color_1: #777d82;
   --error_color_1: #f5222d;
   --bg_table_1:#F2F5F8;
+
+  --bg-color: #F5F6F6;
+  --front-bg-color-2: #FAFAFA;
+  --front-bg-color-1: #FFFFFF;
+  --front-bg-color1: #FFFFFF;
+  --front-bg-color: #F5F6F6;
+  --tag-bg-color: #F5F6F6;
+  --line-color: #EAEBEC;
+  --tag-border-color: #C7CACC;
+  --text-color-3: #AFB3B6;
+  --text-color-2: #82888D;
+  --text-color-1-supplement: #464F56;
+  --text-color-1: #000000;
+  --link-text-color: #37A0FF;
+  --environment-text-color-3: #FFFFFF;
+  --environment-text-color-2: #F5F6F6;
+  --environment-text-color-1: #1F2A32;
+  --wtt-brand-color: #5622cf;
+  --brand-color: #37A0FF;
+  --brand-color-2: #FF4040;
+  --brand-color-3: #FFC700;
+  --up-color: #FF5000;
+  --down-color: #00B99A;
+  --list-bg-color: #FFFFFF;
+
+  /* 项目私有色，在项目中重置 */
+  --private-color: #FFFFFF;
+  --private-color-1: #FFFFFF;
+  --private-color-2: #FFFFFF;
 }
+
+:root[theme='dark'] {
+  --bg-color: #07121C;
+  --front-bg-color-2: #141F28;
+  --front-bg-color-1: #1A252E;
+  --front-bg-color1: #1A252E;
+  --front-bg-color: #2A343C;
+  --tag-bg-color: #2A343C;
+  --line-color: #384149;
+  --tag-border-color: #424B53;
+  --text-color-3: #61686E;
+  --text-color-2: #82888D;
+  --text-color-1-supplement: #CFD1D3;
+  --text-color-1: #FFFFFF;
+  --link-text-color: #37A0FF;
+  --environment-text-color-3: #FFFFFF;
+  --environment-text-color-2: #F5F6F6;
+  --environment-text-color-1: #1F2A32;
+  --wtt-brand-color: #5622cf;
+  --brand-color: #37A0FF;
+  --brand-color-2: #FF4040;
+  --brand-color-3: #FFC700;
+  --up-color: #FF5000;
+  --down-color: #00B99A;
+  --list-bg-color: #2A343C;
+
+  /* 项目私有色，在项目中重置 */
+  --private-color: #FFFFFF;
+  --private-color-1: #FFFFFF;
+  --private-color-2: #FFFFFF;
+}
+

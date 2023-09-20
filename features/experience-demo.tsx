@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import { useTranslation } from 'next-i18next'
 import { FullMask } from '@/components/popup'
+import Button from '@/components/button'
 import Icon from '@/components/icon'
+import classnames from 'classnames'
 
 const formInfo: any = {
   'zh-HK': 'https://longbridge.feishu.cn/share/base/form/shrcnhxdx8hRz3BYtrdTA8qO1Vb?lang=zh-HK',
@@ -19,10 +21,10 @@ const DemoForm = () => {
   )
 }
 
-const ExperienceDemo = () => {
+const ExperienceDemo = ({ className = '' }) => {
   const [visible, setVisible] = useState(false)
   const i18n = useTranslation('common')
-  
+
   return (
     <>
       {visible && (
@@ -37,12 +39,16 @@ const ExperienceDemo = () => {
           </div>
         </FullMask>
       )}
-      <div
-        className="cursor-pointer mt-10 border border-brand_color text-brand_color h-[42px] px-2.5 flex items-center justify-center hover:text-brand_color_2 hover:border-brand_color_2"
+      <Button
+        size="medium"
+        className={classnames(
+          '!bg-transparent cursor-pointer mt-10 border border-brand_color !text-brand_color h-[42px] px-2.5 flex items-center justify-center hover:text-brand_color_2 hover:border-brand_color_2',
+          className
+        )}
         onClick={() => setVisible(true)}
       >
         {i18n.t('features_experience_demo_891117')}
-      </div>
+      </Button>
     </>
   )
 }

@@ -7,7 +7,7 @@ import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Comment from '@/features/product/Comment'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
@@ -33,9 +33,9 @@ const Retail: React.FC = () => {
     title: i18n.t('features_header_index_3'),
     desc: [i18n.t('pages_locale_solutions_retail_5'), i18n.t('pages_locale_solutions_retail_5_1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/a5b18322-a757-4f1b-ab26-6da257b769bf/retail-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/cabe8fa7-c654-4675-8cea-0da32ebf9415/retail-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/6de9fb75-8cf3-43e4-9f67-cdfe34ef7dd8/retail-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/93f0319f-cb73-48fb-b9a7-e7251575e5aa/sell-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/b88c90a4-c192-4012-a523-c59c2bb51dee/sell-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/93f0319f-cb73-48fb-b9a7-e7251575e5aa/sell-hk.png',
     },
   }
 

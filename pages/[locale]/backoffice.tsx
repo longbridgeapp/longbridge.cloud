@@ -9,7 +9,7 @@ import { SEOMeta } from '@/utils/seo'
 // eslint-disable-next-line import/named
 import { UserConfig, useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 
@@ -33,9 +33,9 @@ const BackOffice: React.FC = () => {
     title: i18n.t('whale-backoffice-001'),
     desc: [i18n.t('whale-backoffice-002'), i18n.t('whale-backoffice-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/e64e66bd-85cf-4166-b923-38774b5bb651/backoffice-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/e0555a10-8f9c-4bc4-a515-757bdcc98611/backoffice-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/3a1e79e8-bda9-41e0-a670-479e65c9f93f/backoffice-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/19e70656-1fa3-4f0a-9c7b-c5e90b11693b/back-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/6aceb73c-8c0a-4cf7-8eae-c4f82ecbb15e/back-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/19e70656-1fa3-4f0a-9c7b-c5e90b11693b/back-hk.png',
     },
   }
 
@@ -71,11 +71,15 @@ const BackOffice: React.FC = () => {
 
   return (
     <Layout>
-      <SEOMeta indexTitle={false} title={seoI18n.t('backoffice.title')} description={seoI18n.t('backoffice.description')} />
+      <SEOMeta
+        indexTitle={false}
+        title={seoI18n.t('backoffice.title')}
+        description={seoI18n.t('backoffice.description')}
+      />
       <div>
         <Banner {...banner_props}></Banner>
         <Box>
-          <div className="flex flex-col lg:flex-row justify-between">
+          <div className="flex flex-col justify-between lg:flex-row">
             <div className="flex flex-col items-start gap-10 lg:w-[510px]">
               <Title label={i18n.t('whale-backoffice-004')} title={i18n.t('whale-backoffice-005')}></Title>
               <div>
@@ -129,7 +133,7 @@ const BackOffice: React.FC = () => {
                   <div>{i18n.t('whale-backoffice-020')}</div>
                   {isEN && <div>{i18n.t('whale-backoffice-021')}</div>}
                 </div>
-                <ul className="flex flex-col text-text_color_3 gap-y-4 text-base">
+                <ul className="flex flex-col text-base text-text_color_3 gap-y-4">
                   <li className="list-dot">{i18n.t('whale-backoffice-022')}</li>
                   <li className="list-dot">{i18n.t('whale-backoffice-023')}</li>
                   <li className="list-dot">{i18n.t('whale-backoffice-024')}</li>
@@ -180,7 +184,7 @@ const BackOffice: React.FC = () => {
         <Box>
           <div className="flex flex-col gap-y-10">
             <Title title={i18n.t('whale-backoffice-037')}></Title>
-            <div className="flex flex-col lg:flex-row justify-between ">
+            <div className="flex flex-col justify-between lg:flex-row ">
               <div className="flex flex-col lg:w-[510px]">
                 <div className="mb-10 text-[28px] leading-10 font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex flex-col gap-y-5">

@@ -12,7 +12,7 @@ import { SEOMeta } from '@/utils/seo'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Title from '@/features/product/title'
 import Box from '@/features/product/Box'
 
@@ -109,11 +109,11 @@ const Marketing: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('whale-marketing-001'),
-    desc: [i18n.t('whale-marketing-002')],
+    desc: [i18n.t('whale-marketing-002'), i18n.t('whale-marketing-002-1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/554fb6ad-e8f6-4e19-a736-88b77491c7f5/marketing-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/67a88485-bf1b-4cab-8659-4920a5a24b78/marketing-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/aac7580e-5b22-43f4-a28e-1a4ea5924f12/marketing-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/ec0dec43-1234-474d-b117-a201ed1db401/market-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
     },
   }
 
@@ -130,10 +130,14 @@ const Marketing: React.FC = () => {
   }
   return (
     <Layout>
-      <SEOMeta indexTitle={false} title={seoI18n.t('marketing.title')} description={seoI18n.t('marketing.description')} />
+      <SEOMeta
+        indexTitle={false}
+        title={seoI18n.t('marketing.title')}
+        description={seoI18n.t('marketing.description')}
+      />
       <div>
         <Banner {...banner_props}></Banner>
-        <div className="py-10 main-container lg:py-20">
+        <div className="py-10 main-container">
           <div className="flex flex-col gap-3 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-003')}</div>
@@ -163,7 +167,7 @@ const Marketing: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
+        <div className="py-10 bg-bg_color_2 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-013')}</div>
@@ -192,8 +196,8 @@ const Marketing: React.FC = () => {
                   </div>
                 </div>
                 <div className="version-second">
-                  <div className="text-xl font-medium mt-5 mb-3">{i18n.t('whale-marketing-018')}</div>
-                  <ul className="flex flex-col gap-y-2 text-base">
+                  <div className="mt-5 mb-3 text-xl font-medium">{i18n.t('whale-marketing-018')}</div>
+                  <ul className="flex flex-col text-base gap-y-2">
                     <li className="list-dot">{i18n.t('whale-marketing-019')}</li>
                     <li className="list-dot">{i18n.t('whale-marketing-020')}</li>
                     <li className="list-dot">{i18n.t('whale-marketing-021')}</li>
@@ -216,8 +220,8 @@ const Marketing: React.FC = () => {
                   </div>
                 </div>
                 <div className="version-second">
-                  <div className="text-xl font-medium mt-5 mb-3">{i18n.t('whale-marketing-018')}</div>
-                  <ul className="flex flex-col gap-y-2 text-base">
+                  <div className="mt-5 mb-3 text-xl font-medium">{i18n.t('whale-marketing-018')}</div>
+                  <ul className="flex flex-col text-base gap-y-2">
                     <li className="list-dot white">{i18n.t('whale-marketing-019')}</li>
                     <li className="list-dot white">{i18n.t('whale-marketing-020')}</li>
                     <li className="list-dot white">{i18n.t('whale-marketing-027')}</li>
@@ -286,7 +290,7 @@ const Marketing: React.FC = () => {
                 </div>
                 <hr className="my-10"></hr>
                 {/* 活动平台 */}
-                <div className="flex flex-col lg:items-center justify-between lg:flex-row">
+                <div className="flex flex-col justify-between lg:items-center lg:flex-row">
                   <div className="flex-1">
                     <div className="mb-10 text-[28px] leading-10 font-medium lg:max-w-[510px]">
                       {i18n.t('whale-marketing-037')}
@@ -322,7 +326,7 @@ const Marketing: React.FC = () => {
                 </div>
                 <hr className="my-10"></hr>
                 {/* pagehub */}
-                <div className="flex flex-col-reverse lg:items-center justify-between lg:flex-row">
+                <div className="flex flex-col-reverse justify-between lg:items-center lg:flex-row">
                   <div className="flex-1">
                     <img src={pagehub_img[i18n.i18n.language]} alt="" className="lg:w-[558px]" />
                   </div>

@@ -8,7 +8,7 @@ import React, { useMemo, useRef } from 'react'
 import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Title from '@/features/product/title'
 import Box from '@/features/product/Box'
 import { ImageAndText } from '@/features/solutions/info-introduce'
@@ -39,12 +39,12 @@ const PortAI: React.FC = () => {
     return {
       title: 'PortAI',
       subtitle: i18n.t('pages_locale_product_port_ai_891113'),
-      imgClassName: 'flex flex-row items-center border-box pl-12',
+      // imgClassName: 'flex flex-row items-center border-box pl-12',
       desc: [i18n.t('pages_locale_product_port_ai_891114'), i18n.t('pages_locale_product_port_ai_891115')],
       img: {
-        'en': 'https://pub.lbkrs.com/files/202307/AFMGJGNrzJv86N8X/portai-banner-en.png',
-        'zh-CN': ' https://pub.lbkrs.com/files/202307/NYMfjoRXFwdxAdfx/portai-banner-cn.png',
-        'zh-HK': 'https://pub.lbkrs.com/files/202307/WyQ4KagPSv6TJh9c/portai-banner-hk.png',
+        'en': 'https://assets.lbkrs.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
+        'zh-CN': 'https://assets.lbkrs.com/uploads/0dc4246c-53ab-4d09-8cc9-0c144bfbc530/portai-cn.png',
+        'zh-HK': 'https://assets.lbkrs.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
       },
     }
   }, [])
@@ -79,7 +79,7 @@ const PortAI: React.FC = () => {
           i18n.t('pages_locale_product_portai_891117'),
           i18n.t('pages_locale_product_portai_891118'),
           i18n.t('pages_locale_product_portai_891119'),
-          i18n.t('pages_locale_product_portai_891120')
+          i18n.t('pages_locale_product_portai_891120'),
         ],
       },
       {
@@ -90,7 +90,7 @@ const PortAI: React.FC = () => {
           i18n.t('pages_locale_product_port_ai_891124'),
           i18n.t('pages_locale_product_port_ai_891125'),
           i18n.t('pages_locale_product_portai_891121'),
-          i18n.t('pages_locale_product_portai_891122')
+          i18n.t('pages_locale_product_portai_891122'),
         ],
       },
     ]
@@ -110,7 +110,7 @@ const PortAI: React.FC = () => {
           desc: [
             i18n.t('pages_locale_product_portai_891124'),
             i18n.t('pages_locale_product_portai_891125'),
-            i18n.t('pages_locale_product_portai_891126')
+            i18n.t('pages_locale_product_portai_891126'),
           ],
           img: {
             'en': 'https://assets.lbkrs.com/uploads/ae3d6a4b-abde-47ee-bb1a-ba610a9764c1/1-portai-im-en.png',
@@ -130,7 +130,7 @@ const PortAI: React.FC = () => {
           desc: [
             i18n.t('pages_locale_product_portai_891127'),
             i18n.t('pages_locale_product_portai_891128'),
-            i18n.t('pages_locale_product_portai_891129')
+            i18n.t('pages_locale_product_portai_891129'),
           ],
           img: {
             'en': 'https://assets.lbkrs.com/uploads/bbcc742b-580f-4e20-b8b0-6682d9c55258/2en.png',
@@ -148,10 +148,7 @@ const PortAI: React.FC = () => {
           needTalk: false,
           showDot: true,
           tips: i18n.t('pages_locale_product_port_ai_891128'),
-          desc: [
-            i18n.t('pages_locale_product_portai_891131'),
-            i18n.t('pages_locale_product_portai_891132')
-          ],
+          desc: [i18n.t('pages_locale_product_portai_891131'), i18n.t('pages_locale_product_portai_891132')],
           img: {
             'en': 'https://assets.lbkrs.com/uploads/82d8aace-7a07-420f-8527-f3a46722561d/3en.png',
             'zh-CN': 'https://assets.lbkrs.com/uploads/01f1e9c9-53f5-46ef-b17d-72215e02a790/3cn.png',
@@ -171,7 +168,7 @@ const PortAI: React.FC = () => {
           desc: [
             i18n.t('pages_locale_product_portai_891134'),
             i18n.t('pages_locale_product_portai_891135'),
-            i18n.t('pages_locale_product_portai_891136')
+            i18n.t('pages_locale_product_portai_891136'),
           ],
           img: {
             'en': 'https://assets.lbkrs.com/uploads/6d9cc7f1-f186-402c-b332-f12aeb81f475/4en.png',
@@ -184,39 +181,36 @@ const PortAI: React.FC = () => {
   }, [])
 
   const markeImgTextProps = useMemo(() => {
-    return  {
-        title: i18n.t('pages_locale_product_portai_891137'),
-        imgClassName: '!w-[530px]',
-        needTalk: false,
-        tips: i18n.t('pages_locale_product_portai_891138'),
-        desc: [
-          i18n.t('pages_locale_product_portai_891139'),
-          i18n.t('pages_locale_product_portai_891140')
-        ],
-        img: {
-          'en': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
-          'zh-CN': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
-          'zh-HK': 'https://assets.lbkrs.com/uploads/9f4446cf-cf82-4b72-a775-bbc4caa261cd/portai-hk.svg',
-        },
-      }
+    return {
+      title: i18n.t('pages_locale_product_portai_891137'),
+      imgClassName: '!w-[530px]',
+      needTalk: false,
+      tips: i18n.t('pages_locale_product_portai_891138'),
+      desc: [i18n.t('pages_locale_product_portai_891139'), i18n.t('pages_locale_product_portai_891140')],
+      img: {
+        'en': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
+        'zh-CN': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
+        'zh-HK': 'https://assets.lbkrs.com/uploads/9f4446cf-cf82-4b72-a775-bbc4caa261cd/portai-hk.svg',
+      },
+    }
   }, [])
 
   return (
     <Layout>
       <SEOMeta indexTitle={false} title={seoI18n.t('portai.title')} description={seoI18n.t('portai.description')} />
       <div>
-      <Banner {...banner_props}></Banner>
-        <div className="py-10 main-container lg:py-20">
+        <Banner {...banner_props}></Banner>
+        <div className="pb-10 main-container">
           <div className="flex flex-col gap-3 main-content-width">
-            <ImageAndText {...markeImgTextProps}/>
-            <hr className="border-border_color mb-20 mt-10" />
+            <ImageAndText {...markeImgTextProps} />
+            <hr className="mt-10 mb-20 border-border_color" />
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-marketing-003')}</div>
               <div className="mb-10 text-4xl font-medium xl:text-4xl">
                 {i18n.t('pages_locale_product_port_ai_891137')}
               </div>
             </div>
-            <div className="flex flex-wrap flex-row items-start justify-between gap-10 md:flex-row md:item-center">
+            <div className="flex flex-row flex-wrap items-start justify-between gap-10 md:flex-row md:item-center">
               {marketPainPoints.map((item, index) => {
                 return (
                   <div className="w-[100%] sm:w-[30%]" key={index}>
@@ -229,7 +223,7 @@ const PortAI: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
+        <div className="py-10 bg-bg_color_2 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <Title
               label={i18n.t('pages_locale_product_port_ai_891138')}

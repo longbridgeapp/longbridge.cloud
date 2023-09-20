@@ -4,7 +4,7 @@ import { CSSProperties, FC, ReactNode } from 'react'
 export const Block: FC<{ className?: string; style?: CSSProperties }> = ({ children, className, style }) => {
   return (
     <div className={classNames('main-container', className)} style={style}>
-      <div className="py-10 lg:py-20">
+      <div className="py-10">
         <div className="main-content-width">{children}</div>
       </div>
     </div>

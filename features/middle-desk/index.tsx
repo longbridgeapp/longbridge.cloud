@@ -7,18 +7,21 @@ import TradingDeskSystem from '@/features/middle-desk/components/trading-desk-sy
 import Risk from '@/features/middle-desk/components/risk'
 import Atm from '@/features/middle-desk/components/atm'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import Banner from '../product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 
 export const MiddleDeskContain = () => {
   const i18n = useTranslation('common')
 
   const banner_props = {
     title: i18n.t('src_pages_atm_deposit_add_single_index_8632'),
-    desc: [i18n.t('src_pages_atm_deposit_add_single_index_8633')],
+    desc: [
+      i18n.t('src_pages_atm_deposit_add_single_index_8633'),
+      i18n.t('src_pages_atm_deposit_add_single_index_8633-1'),
+    ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/d4eb19ff-7abe-4fdc-8db1-4267c17e1fa7/front-desk-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/d24e1500-e729-4615-a441-a3114e6de491/front-desk-cn.png',
-      'zh-HK:': 'https://assets.lbkrs.com/uploads/0c54b42c-cd82-484d-99c9-d488282a11c0/front-desk-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/d9cb12ae-de8a-47b6-a037-c4d76adb98b1/gui-center-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/24c9673e-c245-4a2f-911b-36a3e58a727e/gui-center-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/d9cb12ae-de8a-47b6-a037-c4d76adb98b1/gui-center-hk.png',
     },
   }
 

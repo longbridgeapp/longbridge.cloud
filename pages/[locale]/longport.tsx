@@ -9,7 +9,7 @@ import React from 'react'
 import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import Title from '@/features/product/title'
 import Box from '@/features/product/Box'
 
@@ -32,9 +32,9 @@ const Longport: React.FC = () => {
     title: i18n.t('whale-community-001'),
     desc: [i18n.t('whale-community-002'), i18n.t('whale-community-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/d1cc2671-1973-4361-90d9-963ada7f63fa/port-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/3f691442-5f50-4302-907c-a8f728c84798/port-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/91b679ba-73c9-47f2-a326-8315cb921b19/port-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/9665e264-c5ba-473b-a734-bbc84e189249/longport-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/6360d4fd-e09c-46ca-bb08-b7ecba1e24b5/longport-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/9665e264-c5ba-473b-a734-bbc84e189249/longport-hk.png',
     },
   }
 
@@ -64,7 +64,7 @@ const Longport: React.FC = () => {
       <div>
         <Banner {...banner_porps}></Banner>
         {/* 市场痛点 */}
-        <div className="py-10 main-container lg:py-20">
+        <div className="py-10 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <Title label={i18n.t('whale-community-004')} title={i18n.t('whale-community-005')}></Title>
             <div className="flex flex-col justify-between gap-10 md:flex-row">
@@ -96,7 +96,7 @@ const Longport: React.FC = () => {
           </div>
         </div>
         {/* 产品优势 */}
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
+        <div className="py-10 bg-bg_color_2 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <Title label={i18n.t('whale-community-014')} title={i18n.t('whale-community-015')}></Title>
             <div className="flex flex-col justify-between gap-6 md:flex-row">
@@ -228,7 +228,7 @@ const Longport: React.FC = () => {
               />
             </div>
             <hr className="my-10"></hr>
-            <div className="flex flex-col md:flex-row justify-between gap-10">
+            <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex flex-col items-center justify-center flex-1 text-center">
                 <img src={unique_collection_feature_img[i18n.i18n.language]} alt="" className="lg:w-[580px]" />
                 <div className="text-2xl lg:text-[28px] font-medium mt-5 mb-4">{i18n.t('whale-community-039')}</div>

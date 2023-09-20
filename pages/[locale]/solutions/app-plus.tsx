@@ -5,7 +5,7 @@ import { i18nPaths } from '@/utils/i18n-paths'
 import i18nextConfig from '@/next-i18next.config'
 import { SEOMeta } from '@/utils/seo'
 import { Layout } from '@/features/common/page-layout'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 import PageDivide from '@/features/solutions/page-divide'
 import InfoIntroduce, { ImageAndText } from '@/features/solutions/info-introduce'
 import Compare from '@/components/compare'
@@ -33,11 +33,11 @@ const AppPlusPage = () => {
 
   const banner_props = {
     title: i18n.t('features_header_index_4'),
-    desc: [i18n.t('pages_locale_solutions_app_plus_8678')],
+    desc: [i18n.t('pages_locale_solutions_app_plus_8678'), i18n.t('pages_locale_solutions_app_plus_8678-1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/925313bd-e134-4d2f-b824-747e748829a9/app-plus-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/641fe78a-11d3-4c8b-bb84-710c9fb59696/app-plus-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/fb7df7a5-7c0e-4fe1-94dc-c8d5b75459f4/app-plus-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/d878a06c-689e-48fd-bffb-f26aacff40ba/app-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
     },
   }
   const content_banner_props = {

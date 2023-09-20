@@ -10,7 +10,7 @@ import { SEOMeta } from '@/utils/seo'
 import { useDebounceEffect, useSize } from 'ahooks'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import Banner from '@/features/product/Banner'
+import { NewBanner as Banner } from '@/features/product/Banner'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -85,13 +85,13 @@ const DeliverySystem: React.FC = () => {
     { wait: 300 }
   )
 
-  const banner_porps = {
+  const banner_props = {
     title: i18n.t('whale-delivery-system-001'),
-    desc: [i18n.t('whale-delivery-system-002'), i18n.t('whale-delivery-system-003')],
+    desc: [`${i18n.t('whale-delivery-system-002')}${i18n.t('whale-delivery-system-003')}`],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/64160666-01a6-4fb2-8d36-3632f7a5daee/delivery-system-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/1e5be30d-30f6-44a4-9e64-ac491961554c/delivery-system-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/e194b27b-533a-4f25-b21c-97c0466bfdb2/delivery-system-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
+      'zh-CN': 'https://assets.lbkrs.com/uploads/bc81a240-bdb5-47d5-901a-a0646c09a617/tou-cn.png',
+      'zh-HK': 'https://assets.lbkrs.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
     },
   }
 
@@ -102,10 +102,14 @@ const DeliverySystem: React.FC = () => {
   }
   return (
     <Layout>
-      <SEOMeta indexTitle={false} title={seoI18n.t('delivery-system.title')} description={seoI18n.t('delivery-system.description')} />
+      <SEOMeta
+        indexTitle={false}
+        title={seoI18n.t('delivery-system.title')}
+        description={seoI18n.t('delivery-system.description')}
+      />
       <div>
-        <Banner {...banner_porps}></Banner>
-        <div className="py-10 main-container lg:py-20">
+        <Banner {...banner_props}></Banner>
+        <div className="py-10 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-004')}</div>
@@ -224,7 +228,7 @@ const DeliverySystem: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 bg-bg_color_2 main-container lg:py-20">
+        <div className="py-10 bg-bg_color_2 main-container">
           <div className="flex flex-col gap-8 main-content-width ">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-048')}</div>
@@ -257,7 +261,7 @@ const DeliverySystem: React.FC = () => {
             </div>
           </div>
         </div>
-        <div className="py-10 main-container lg:py-20">
+        <div className="py-10 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <div>
               <div className="mb-2 text-base text-brand_color">{i18n.t('whale-delivery-system-056')}</div>
