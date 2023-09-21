@@ -89,7 +89,7 @@ export const IndexBanner = () => {
   }
   return (
     <Carousel className="bg-cover" effect="fade">
-      <TopBlock className="bg-repeat-round bg-[#0B0550]">
+      <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
             left={
@@ -107,24 +107,23 @@ export const IndexBanner = () => {
               <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
                 <img
                   src="https://assets.lbkrs.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
-                  // className="h-[420px]"
                   alt="va"
-                  className="mt-5 lg:mt-0"
+                  className="lg:absolute top-0 bottom-0 h-full w-auto object-cover"
                 />
               </div>
             }
           ></BlockBetween>
         </Block>
       </TopBlock>
-      <TopBlock className="bg-repeat-round bg-[#0B0550]">
+      <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3 sm:whitespace-nowrap">
+                <div className="text-text_color_3_supplement text-3xl mb-3">
                   {i18n.t('pages_locale_product_portai_891115')}
                 </div>
-                <div className="text-white text-[48px] leading-[68px] w-auto sm:w-[650px]">
+                <div className="text-white text-[48px] leading-[68px]">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
                 </div>
                 <LocaleLink className="flex items-center mt-10" to="/portai">
@@ -136,9 +135,8 @@ export const IndexBanner = () => {
               <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
                 <img
                   src="https://assets.lbkrs.com/uploads/c5c9454b-3451-43ab-9466-66e5f7da53ec/ai.png"
-                  // className="h-[420px]"
                   alt="ai"
-                  className="mt-5 lg:mt-0"
+                  className="lg:absolute top-0 bottom-0 h-full w-auto object-cover"
                 />
               </div>
             }
