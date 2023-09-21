@@ -94,8 +94,10 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3">{i18n.t('home_top_banner_text_1')}</div>
-                <div className="text-white text-[54px] leading-[68px]">
+                <div className="text-text_color_3_supplement text-3xl mb-3 text-left">
+                  {i18n.t('home_top_banner_text_1')}
+                </div>
+                <div className="text-white text-[54px] leading-[68px]text-left">
                   <div>{i18n.t('home_top_banner_text_2')}</div>
                 </div>
                 <LocaleLink className="flex items-center mt-10" to={'/solutions/virtual-assets'}>
@@ -120,10 +122,10 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3">
+                <div className="text-text_color_3_supplement text-3xl mb-3 text-left">
                   {i18n.t('pages_locale_product_portai_891115')}
                 </div>
-                <div className="text-white text-[48px] leading-[68px]">
+                <div className="text-white text-[48px] leading-[68px] text-left">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
                 </div>
                 <LocaleLink className="flex items-center mt-10" to="/portai">
