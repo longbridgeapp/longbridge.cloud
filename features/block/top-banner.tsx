@@ -88,7 +88,7 @@ export const IndexBanner = () => {
     'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png'
   }
   return (
-    <Carousel className="bg-cover" effect="fade">
+    <Carousel className="bg-cover" autoplay effect="fade">
       <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
