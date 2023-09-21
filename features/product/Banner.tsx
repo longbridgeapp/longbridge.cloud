@@ -19,9 +19,9 @@ const Banner: React.FC<Props> = props => {
   return (
     <div
       className="py-10 bg-cover main-container lg:pt-20 lg:pb-[90px]"
-      style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
+      // style={{ backgroundImage: `url('${CDN_IMAGES.banner_bg}')` }}
     >
-      <div className="flex flex-col items-center justify-between main-content-width lg:flex-row ">
+      <div className="flex flex-col items-center justify-between main-content-width lg:flex-row lg:space-x-[170px]">
         {/* 文字 */}
         <div className="flex flex-col items-start lg:w-[550px]">
           <h1 className="text-[44px] leading-[62px] font-semibold">{title}</h1>
