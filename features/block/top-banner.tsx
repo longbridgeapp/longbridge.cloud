@@ -88,41 +88,8 @@ export const IndexBanner = () => {
     'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png'
   }
   return (
-    <Carousel className="bg-cover" autoplay effect="fade">
-      {/* <TopBlock
-        imageUrl={'https://pub.lbkrs.com/files/202307/37trM6xxUDNZ5huZ/banner600.png'}
-        className="bg-repeat-round"
-      >
-        <Block>
-          <BlockBetween
-            left={
-              <>
-                <div className="text-text_color_3_supplement text-3xl mb-3">{i18n.t('features_block_top_banner_891113')}</div>
-                <div className="text-white text-[54px] leading-[68px]">
-                  <div>{i18n.t('features_block_top_banner_891114')}</div>
-                  {!isEn && <div>{i18n.t('features_block_top_banner_891115')}</div>}
-                </div>
-                <button
-                  className="w-[120px] bg-brand_color h-[44px] mt-[32px]"
-                  onClick={() => {
-                    window.open(
-                      'https://mp.weixin.qq.com/s?__biz=Mzg5NDk3OTg0Ng==&mid=2247483698&idx=1&sn=cc8417052ae4a24815bec0726a5a9104&chksm=c0161b5bf761924da8b820d5af7cd32aeda0d74482205c2e91131d4b0811b70efd7728fb3f13#rd',
-                      '_blank'
-                    )
-                  }}
-                >
-                  <div className="text-white text-lg">{i18n.t('features_block_top_banner_891116')}</div>
-                </button>
-              </>
-            }
-            right={<div className="h-[420px] w-[580px]"></div>}
-          ></BlockBetween>
-        </Block>
-      </TopBlock> */}
-      <TopBlock
-        imageUrl={'https://assets.lbkrs.com/uploads/e1c18bfe-100d-4870-91dc-915c751edf64/va-banner600.png'}
-        className="bg-repeat-round"
-      >
+    <Carousel className="bg-cover" effect="fade">
+      <TopBlock className="bg-repeat-round bg-[#0B0550]">
         <Block>
           <BlockBetween
             left={
@@ -136,19 +103,27 @@ export const IndexBanner = () => {
                 </LocaleLink>
               </>
             }
-            right={<div className="h-[420px] w-[580px]"></div>}
+            right={
+              <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
+                <img
+                  src="https://assets.lbkrs.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
+                  // className="h-[420px]"
+                  alt="va"
+                  className="mt-5 lg:mt-0"
+                />
+              </div>
+            }
           ></BlockBetween>
         </Block>
       </TopBlock>
-      <TopBlock
-        imageUrl={'https://assets.lbkrs.com/uploads/89124ed6-e713-44e0-bc93-42acac1a4398/portai-banner600.png'}
-        className="bg-repeat-round"
-      >
+      <TopBlock className="bg-repeat-round bg-[#0B0550]">
         <Block>
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3 sm:whitespace-nowrap">{i18n.t('pages_locale_product_portai_891115')}</div>
+                <div className="text-text_color_3_supplement text-3xl mb-3 sm:whitespace-nowrap">
+                  {i18n.t('pages_locale_product_portai_891115')}
+                </div>
                 <div className="text-white text-[48px] leading-[68px] w-auto sm:w-[650px]">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
                 </div>
@@ -157,7 +132,16 @@ export const IndexBanner = () => {
                 </LocaleLink>
               </>
             }
-            right={<div className="h-[420px] w-[580px]"></div>}
+            right={
+              <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
+                <img
+                  src="https://assets.lbkrs.com/uploads/c5c9454b-3451-43ab-9466-66e5f7da53ec/ai.png"
+                  // className="h-[420px]"
+                  alt="ai"
+                  className="mt-5 lg:mt-0"
+                />
+              </div>
+            }
           ></BlockBetween>
         </Block>
       </TopBlock>
