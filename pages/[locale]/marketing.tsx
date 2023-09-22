@@ -109,9 +109,9 @@ const Marketing: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('whale-marketing-001'),
-    desc: [i18n.t('whale-marketing-002'), i18n.t('whale-marketing-002-1')],
+    desc: [i18n.t('whale-marketing-002')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/d8571f11-c55d-4f4e-afee-3ce8daf2f606/market-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/ec0dec43-1234-474d-b117-a201ed1db401/market-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
     },

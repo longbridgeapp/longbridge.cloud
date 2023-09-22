@@ -87,9 +87,13 @@ const DeliverySystem: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('whale-delivery-system-001'),
-    desc: [`${i18n.t('whale-delivery-system-002')}${i18n.t('whale-delivery-system-003')}`],
+    desc: [
+      i18n.t('whale-delivery-system-002'),
+      i18n.t('whale-delivery-system-002-1'),
+      i18n.t('whale-delivery-system-003'),
+    ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/38f64ce1-2ce9-4913-8e28-7a4a48ae9a33/tou-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/bc81a240-bdb5-47d5-901a-a0646c09a617/tou-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
     },

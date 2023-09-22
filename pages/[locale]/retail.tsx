@@ -31,9 +31,9 @@ const Retail: React.FC = () => {
 
   const banner_props = {
     title: i18n.t('features_header_index_3'),
-    desc: [i18n.t('pages_locale_solutions_retail_5'), i18n.t('pages_locale_solutions_retail_5_1')],
+    desc: [i18n.t('pages_locale_solutions_retail_5')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/93f0319f-cb73-48fb-b9a7-e7251575e5aa/sell-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/27d72c4e-f5b7-4f7d-8ec6-7a3394b3dfe1/sell-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/b88c90a4-c192-4012-a523-c59c2bb51dee/sell-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/93f0319f-cb73-48fb-b9a7-e7251575e5aa/sell-hk.png',
     },

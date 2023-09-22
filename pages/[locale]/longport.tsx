@@ -32,7 +32,7 @@ const Longport: React.FC = () => {
     title: i18n.t('whale-community-001'),
     desc: [i18n.t('whale-community-002'), i18n.t('whale-community-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/9665e264-c5ba-473b-a734-bbc84e189249/longport-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/8c35f363-598b-4631-a197-b6d88a626bb2/longport-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/6360d4fd-e09c-46ca-bb08-b7ecba1e24b5/longport-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/9665e264-c5ba-473b-a734-bbc84e189249/longport-hk.png',
     },

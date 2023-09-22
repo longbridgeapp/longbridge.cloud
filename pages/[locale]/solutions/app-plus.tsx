@@ -35,7 +35,7 @@ const AppPlusPage = () => {
     title: i18n.t('features_header_index_4'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8678'), i18n.t('pages_locale_solutions_app_plus_8678-1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/925d4d7b-79cb-444b-822b-a6d22c6e3125/app-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/d878a06c-689e-48fd-bffb-f26aacff40ba/app-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
     },

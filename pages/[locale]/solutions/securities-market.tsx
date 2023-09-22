@@ -35,7 +35,7 @@ const SecuritiesMarket: React.FC = () => {
       i18n.t('pages_locale_solutions_securities_market_8770-1'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
+      'en': 'https://assets.lbkrs.com/uploads/397d2db1-3a6a-4092-bd0b-03dbf6dc7e6e/gui-en.png',
       'zh-CN': 'https://assets.lbkrs.com/uploads/dad46b40-d456-44a9-9404-ecb2be03f6ea/gui-cn.png',
       'zh-HK': 'https://assets.lbkrs.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
     },

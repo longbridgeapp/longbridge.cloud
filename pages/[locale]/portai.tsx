@@ -42,7 +42,7 @@ const PortAI: React.FC = () => {
       // imgClassName: 'flex flex-row items-center border-box pl-12',
       desc: [i18n.t('pages_locale_product_port_ai_891114'), i18n.t('pages_locale_product_port_ai_891115')],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
+        'en': 'https://assets.lbkrs.com/uploads/0cd583d7-315a-4f4a-99b2-dbfbfd0315e9/portai-en.png',
         'zh-CN': 'https://assets.lbkrs.com/uploads/0dc4246c-53ab-4d09-8cc9-0c144bfbc530/portai-cn.png',
         'zh-HK': 'https://assets.lbkrs.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
       },
