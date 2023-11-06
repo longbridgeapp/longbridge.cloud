@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { useEffect, useState } from 'react'
 
 // @ts-ignore
-export const LocaleLink = (props: LinkProps & { pageUrl?: string }) => {
+export const LocaleLink = (props: { to?: string; children?: any; pageUrl?: string; [key: string]: any }) => {
   const { to, children, pageUrl, ...other } = props
   const { i18n } = useTranslation('common')
   const localePrefix = i18n.language === 'zh-HK' ? '' : `/${i18n.language}`
