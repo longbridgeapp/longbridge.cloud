@@ -14,7 +14,7 @@ export const LocaleLink = (props: LinkProps & { pageUrl?: string }) => {
     const isLocal = location.hostname
     const origin = isLocal ? 'https://cloud.longbridge.xyz' : ''
     setPageUrlLink(`${origin}/${i18n.language}${pageUrl}`)
-  }, [])
+  }, [pageUrl, i18n.language])
 
   if (!pageUrl || isServer()) {
     return (
