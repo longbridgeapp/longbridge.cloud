@@ -1,4 +1,4 @@
-import { Link, LinkProps } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import { isServer } from '@/utils/common'
 import { useTranslation } from 'next-i18next'
 import { useEffect, useState } from 'react'
