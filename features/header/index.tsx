@@ -112,6 +112,12 @@ function useNavs() {
         ],
       },
       {
+        value: '',
+        pageUrl: '/api',
+        label: 'API',
+        children: [],
+      },
+      {
         value: '/about',
         suffix: '',
         label: i18n.t('header_nav_007'),
@@ -196,7 +202,7 @@ const Navs = () => {
                 </Dropdown>
               )}
               {nav.children.length === 0 && (
-                <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value}>
+                <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value} pageUrl={nav.pageUrl}>
                   <span>{nav.label}</span>
                   {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
                 </LocaleLink>
