@@ -51,6 +51,7 @@ html {
 .ant-carousel .slick-dots li button {
   background: #000000;
   opacity: 0.2;
+  @apply relative after:absolute after:bottom-0 after:left-0 after:h-6 after:w-full after:top-1/2 after:transform after:-translate-y-1/2;
 }
 .ant-carousel .slick-dots li.slick-active button {
   background: #5622cf;
