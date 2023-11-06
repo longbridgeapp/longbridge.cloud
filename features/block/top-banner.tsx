@@ -88,13 +88,13 @@ export const IndexBanner = () => {
     'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png'
   }
   return (
-    <Carousel className="bg-cover" autoplay effect="fade">
+    <Carousel className="bg-cover" effect="fade">
       <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3 text-left">
+                <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
                   {i18n.t('home_top_banner_text_1')}
                 </div>
                 <div className="text-white text-[54px] leading-[68px]text-left">
@@ -110,7 +110,7 @@ export const IndexBanner = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
                   alt="va"
-                  className="lg:absolute top-0 bottom-0 h-full w-auto object-cover"
+                  className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
                 />
               </div>
             }
@@ -122,8 +122,9 @@ export const IndexBanner = () => {
           <BlockBetween
             left={
               <>
-                <div className="text-text_color_3_supplement text-3xl mb-3 text-left">
+                <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
                   {i18n.t('pages_locale_product_portai_891115')}
+                  <div>{i18n.t('pages_locale_product_portai_891115_1')}</div>
                 </div>
                 <div className="text-white text-[48px] leading-[68px] text-left">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
@@ -138,7 +139,7 @@ export const IndexBanner = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/c5c9454b-3451-43ab-9466-66e5f7da53ec/ai.png"
                   alt="ai"
-                  className="lg:absolute top-0 bottom-0 h-full w-auto object-cover"
+                  className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
                 />
               </div>
             }

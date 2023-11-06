@@ -15,7 +15,7 @@ import WhiteLabel from '@/pages/[locale]/solutions/white-label'
 import AppPlus from '@/pages/[locale]/solutions/app-plus'
 import SecuritiesMarket from '@/pages/[locale]/solutions/securities-market'
 import VirtualAssets from '@/pages/[locale]/solutions/virtual-assets'
-import WhaleReports from '@/pages/[locale]/whale-reports'
+import WhaleReports from '@/pages/[locale]/reports'
 import BackOffice from '@/pages/[locale]/backoffice'
 import Marketing from '@/pages/[locale]/marketing'
 import WhaleLongport from '@/pages/[locale]/longport'
@@ -49,6 +49,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="about" element={<AboutPage {...pageProps} />} />
               <Route path="live" element={<LivePage {...pageProps} />} />
               <Route path="whale-reports" element={<WhaleReports {...pageProps} />} />
+              <Route path="reports" element={<WhaleReports {...pageProps} />} />
               <Route path="backoffice" element={<BackOffice {...pageProps} />} />
               <Route path="marketing" element={<Marketing {...pageProps} />} />
               <Route path="longport" element={<WhaleLongport {...pageProps} />} />
