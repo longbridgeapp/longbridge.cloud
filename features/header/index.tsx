@@ -4,6 +4,7 @@ import { LocaleLink } from '@/components/locale-link'
 import { useLocaleNavigate } from '@/hooks/use-locale-navigate'
 import { usePurePathname } from '@/hooks/use-pure-pathname'
 import { useReports } from '@/hooks/use-reports'
+import { getContactFormUrl } from '@/utils/common'
 import classNames from 'classnames'
 import { t } from 'i18next'
 import { FC, MouseEvent, useMemo, useState } from 'react'
@@ -86,7 +87,7 @@ function useNavs() {
           },
           {
             value: '/solutions/virtual-assets',
-            label: i18n.t('features_header_index_891113')
+            label: i18n.t('features_header_index_891113'),
           },
           // {
           //   value: '/solutions',
@@ -116,6 +117,13 @@ function useNavs() {
         suffix: '',
         label: i18n.t('header_nav_007'),
         children: [],
+      },
+      {
+        value: getContactFormUrl(i18n.i18n.language),
+        suffix: '',
+        label: i18n.t('talk-to-us'),
+        children: [],
+        rawValue: true,
       },
       {
         value: '/whale-reports',
@@ -176,7 +184,11 @@ const Navs = () => {
                   items={nav.children}
                   renderItem={item => {
                     return (
-                      <LocaleLink to={item.value as string} className="hover:text-white">
+                      <LocaleLink
+                        to={item.value as string}
+                        rawValue={item.rawValue as boolean}
+                        className="hover:text-white"
+                      >
                         {item.label}
                       </LocaleLink>
                     )
@@ -196,7 +208,7 @@ const Navs = () => {
                 </Dropdown>
               )}
               {nav.children.length === 0 && (
-                <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value}>
+                <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value} rawValue={nav.rawValue}>
                   <span>{nav.label}</span>
                   {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
                 </LocaleLink>
@@ -230,7 +242,7 @@ const Navs = () => {
                 {expandKeys.includes(String(item.value)) && (
                   <div className="flex flex-col xl:pl-2">
                     {item?.children?.map((i: any) => (
-                      <LocaleLink to={i.value as string} key={i.label} className="py-3">
+                      <LocaleLink to={i.value as string} rawValue={i.rawValue} key={i.label} className="py-3">
                         {i.label}
                       </LocaleLink>
                     ))}
@@ -238,7 +250,7 @@ const Navs = () => {
                 )}
               </div>
             ) : (
-              <LocaleLink to={item.value as string} key={item.label}>
+              <LocaleLink to={item.value as string} rawValue={item.rawValue} key={item.label}>
                 {item.label}
               </LocaleLink>
             )

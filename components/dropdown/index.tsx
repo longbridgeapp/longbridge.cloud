@@ -5,6 +5,7 @@ import styles from './index.module.scss'
 import Icon from '../icon'
 
 type IItem = {
+  rawValue?: boolean
   children?: any
   label: string
   shortLabel?: string | React.ReactNode

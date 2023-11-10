@@ -1,5 +1,5 @@
 import { CDN_IMAGES } from '@/constants'
-import { TalkToUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs } from '@/features/talk-to-us'
 import ExperienceDemo from '@/features/experience-demo'
 import { useTranslation } from 'next-i18next'
 import React from 'react'
@@ -17,8 +17,7 @@ const WhaleOfficialFooter: React.FC = () => {
           {i18n.t('footer-banner.item-2')}
         </div>
         <div className="flex space-x-5">
-          <TalkToUs />
-          <ExperienceDemo />
+          <ContactUs />
         </div>
       </div>
     </div>

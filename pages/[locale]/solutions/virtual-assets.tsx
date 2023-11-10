@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
-import { TalkToUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs } from '@/features/talk-to-us'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { i18nPaths } from '@/utils/i18n-paths'
@@ -131,7 +131,7 @@ const VirtualAssets = () => {
           [
             <div key="basic">
               <div>{i18n.t('pages_locale_solutions_securities_market_8910_14')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_15')}
               </div>
             </div>,
@@ -141,7 +141,7 @@ const VirtualAssets = () => {
           [
             <div key="ep">
               <div>{i18n.t('pages_locale_solutions_securities_market_8910_16')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_17')}
               </div>
             </div>,
@@ -192,7 +192,7 @@ const VirtualAssets = () => {
           [
             <div key="base-order">
               <div>{i18n.t('pages_locale_solutions_virtual_assets_891142')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_4')}
               </div>
             </div>,
@@ -251,7 +251,7 @@ const VirtualAssets = () => {
           [
             <div key="haircut">
               <div>{i18n.t('pages_locale_solutions_securities_market_8910_22')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_23')}
               </div>
             </div>,
@@ -261,7 +261,7 @@ const VirtualAssets = () => {
           [
             <div key="risk-control">
               <div>{i18n.t('pages_locale_solutions_securities_market_8910_24')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_25')}
               </div>
             </div>,
@@ -291,7 +291,7 @@ const VirtualAssets = () => {
           [
             <div key="data-source">
               <div>{i18n.t('pages_locale_solutions_securities_market_8910_28')}</div>
-              <div className="text-text_color_2 text-xs">
+              <div className="text-xs text-text_color_2">
                 {i18n.t('pages_locale_solutions_securities_market_8910_29')}
               </div>
             </div>,
@@ -362,7 +362,7 @@ const VirtualAssets = () => {
         img: contentImgMap.right[i18n.i18n.language],
         title: i18n.t('pages_locale_solutions_app_plus_8679'),
         className: 'lg:flex-row-reverse',
-        button: <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />,
+        button: <ContactUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />,
         list: [
           {
             text: i18n.t('pages_locale_solutions_virtual_assets_891120'),
@@ -437,7 +437,7 @@ const VirtualAssets = () => {
               label={i18n.t('pages_locale_solutions_app_plus_8700')}
               title={i18n.t('pages_locale_solutions_app_plus_8743')}
             ></Title>
-            <div className="flex flex-col lg:space-x-10 lg:flex-row mt-10 gap-y-5">
+            <div className="flex flex-col mt-10 lg:space-x-10 lg:flex-row gap-y-5">
               {contentServicesList.map((item: any, index) => {
                 return <PictureTextBorderCard item={item} key={index} />
               })}
@@ -472,17 +472,17 @@ const VirtualAssets = () => {
               title={i18n.t('pages_locale_solutions_virtual_assets_891134')}
             ></Title>
             <div className="pt-10">
-              <ImageAndText {...content_banner_props} />
+              <ImageAndText {...content_banner_props} needContact needTalk={false} />
             </div>
             <Table data={table_1} thColSpan={1} />
             <hr className="mt-20 border-[#EAEBEC]"></hr>
             <div className="pt-10">
-              <ImageAndText {...content_banner_props_2} />
+              <ImageAndText {...content_banner_props_2} needContact needTalk={false} />
             </div>
             <Table data={table_2} thColSpan={1} />
             <hr className="mt-20 border-[#EAEBEC]"></hr>
             <div className="pt-10">
-              <ImageAndText {...content_banner_props_3} />
+              <ImageAndText {...content_banner_props_3} needContact needTalk={false} />
             </div>
             <Table data={table_3} thColSpan={1} />
           </>

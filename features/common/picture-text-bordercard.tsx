@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next'
-import { TalkToUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs } from '@/features/talk-to-us'
 interface Iprops {
   item: { title: string; img: string; list: { img?: string; text: string; imgStyle?: Object }[] }
 }
@@ -8,7 +8,7 @@ const PictureTextBorderCard = ({ item }: Iprops) => {
   const i18n = useTranslation('common')
 
   return (
-    <div className="flex flex-col lg:block rounded-md border-border_color border-solid border m-auto">
+    <div className="flex flex-col m-auto border border-solid rounded-md lg:block border-border_color">
       <div className="max-w-[588px] rounded-t-lg overflow-hidden">
         <img src={item?.img} alt="" />
       </div>
@@ -22,7 +22,7 @@ const PictureTextBorderCard = ({ item }: Iprops) => {
               </div>
             )
           })}
-        <TalkToUs className="mt-8" text={i18n.t('features_solutions_info_introduce_891112')} />
+        <ContactUs className="mt-8" text={i18n.t('features_solutions_info_introduce_891112')} />
       </div>
     </div>
   )

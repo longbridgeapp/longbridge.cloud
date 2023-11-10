@@ -21,7 +21,7 @@ const HomeCombination = () => {
 
   return (
     <Box>
-      <ImageAndText {...contentInfo} />
+      <ImageAndText {...contentInfo} needTalk={false} needContact />
     </Box>
   )
 }

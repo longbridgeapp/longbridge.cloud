@@ -7,6 +7,7 @@ import { feedback } from '@/services'
 import classNames from 'classnames'
 import Icon from '@/components/icon'
 import { toast } from 'react-toastify'
+import { getContactFormUrl } from '@/utils/common'
 import styles from './talk-to-us.module.scss'
 
 function useFormItems() {
@@ -178,7 +179,11 @@ const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
       {
         icon: 'https://assets.lbkrs.com/uploads/ad7e7b52-7110-475f-b072-3643193779d9/union1.png',
         title: i18n.t('features_talk_to_us_891117'),
-        tags: [i18n.t('features_talk_to_us_891118'), i18n.t('features_talk_to_us_891119'), i18n.t('features_talk_to_us_891120')],
+        tags: [
+          i18n.t('features_talk_to_us_891118'),
+          i18n.t('features_talk_to_us_891119'),
+          i18n.t('features_talk_to_us_891120'),
+        ],
         phone: '+852 3851 1713',
         email: 'bd@longbridge.cloud',
       },
@@ -208,38 +213,39 @@ const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
           ></Icon>
         </div>
       </div>
-      {!!contactList?.length &&
-        <div className='px-6 pb-5'>
-          {
-            contactList.map((item, index) => {
-              return (
-                <div className="py-5 border-b last:border-b-0" key={index}>
-                  <div className="flex items-center">
-                    <img src={item.icon} alt="" className="w-5 mr-2" />
-                    <span className="text-base text-brand_color font-medium">{item.title}</span>
-                  </div>
-                  {!!item?.tags?.length && (
-                    <div className="flex items-center text-[11px] text-brand_color flex-wrap">
-                      {item.tags.map((it, i) => {
-                        return (
-                          <div className="px-1 py-[3px] bg-[#5622CF]/[.1] mt-2 mr-2 last:mr-0" key={i}>
-                            {it}
-                          </div>
-                        )
-                      })}
-                    </div>
-                  )}
-                  <div className="pt-3 font-medium">
-                    {i18n.t('features_talk_to_us_891126')}<span>{item.phone}</span>
-                  </div>
-                  <div className="pt-3 font-medium">
-                    {i18n.t('features_talk_to_us_891127')}<span>{item.email}</span>
-                  </div>
+      {!!contactList?.length && (
+        <div className="px-6 pb-5">
+          {contactList.map((item, index) => {
+            return (
+              <div className="py-5 border-b last:border-b-0" key={index}>
+                <div className="flex items-center">
+                  <img src={item.icon} alt="" className="w-5 mr-2" />
+                  <span className="text-base font-medium text-brand_color">{item.title}</span>
                 </div>
-              )
-            })
-          }
-          </div>}
+                {!!item?.tags?.length && (
+                  <div className="flex items-center text-[11px] text-brand_color flex-wrap">
+                    {item.tags.map((it, i) => {
+                      return (
+                        <div className="px-1 py-[3px] bg-[#5622CF]/[.1] mt-2 mr-2 last:mr-0" key={i}>
+                          {it}
+                        </div>
+                      )
+                    })}
+                  </div>
+                )}
+                <div className="pt-3 font-medium">
+                  {i18n.t('features_talk_to_us_891126')}
+                  <span>{item.phone}</span>
+                </div>
+                <div className="pt-3 font-medium">
+                  {i18n.t('features_talk_to_us_891127')}
+                  <span>{item.email}</span>
+                </div>
+              </div>
+            )
+          })}
+        </div>
+      )}
     </div>
   )
 }
@@ -266,5 +272,16 @@ export const TalkToUs = ({ className, style, text }: { className?: string; style
         {text || i18n.t('talk-to-us')}
       </Button>
     </>
+  )
+}
+
+export const ContactUs = ({ className, style }: any) => {
+  const i18n = useTranslation('common')
+  return (
+    <a href={getContactFormUrl(i18n.i18n.language)} target='_blank' rel="noreferrer">
+      <Button size="medium" className={classNames('mt-10', className)} style={style}>
+        {i18n.t('talk-to-us')}
+      </Button>
+    </a>
   )
 }
