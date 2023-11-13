@@ -186,6 +186,7 @@ const Navs = () => {
                     return (
                       <LocaleLink
                         to={item.value as string}
+                        // @ts-ignore
                         rawValue={item.rawValue as boolean}
                         className="hover:text-white"
                       >
@@ -208,6 +209,7 @@ const Navs = () => {
                 </Dropdown>
               )}
               {nav.children.length === 0 && (
+                // @ts-ignore
                 <LocaleLink className="flex items-center hover:text-brand_color" to={nav.value} rawValue={nav.rawValue}>
                   <span>{nav.label}</span>
                   {nav.suffix && <span className="ml-2">{nav.suffix}</span>}
@@ -242,6 +244,7 @@ const Navs = () => {
                 {expandKeys.includes(String(item.value)) && (
                   <div className="flex flex-col xl:pl-2">
                     {item?.children?.map((i: any) => (
+                      // @ts-ignore
                       <LocaleLink to={i.value as string} rawValue={i.rawValue} key={i.label} className="py-3">
                         {i.label}
                       </LocaleLink>
@@ -250,6 +253,7 @@ const Navs = () => {
                 )}
               </div>
             ) : (
+              // @ts-ignore
               <LocaleLink to={item.value as string} rawValue={item.rawValue} key={item.label}>
                 {item.label}
               </LocaleLink>
