@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import classnames from 'classnames'
 import { useTranslation } from 'react-i18next'
-import { TalkToUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs } from '@/features/talk-to-us'
 import { LocaleLink } from '@/components/locale-link'
 import ImageIcon from '@/components/image-icon'
 import Button from '@/components/button'
@@ -19,6 +19,7 @@ interface IImageAndTextProps {
   img: Record<string, string>
   cover?: string
   needTalk?: boolean
+  needContact?: boolean
   reverse?: boolean
   localLink?: string
   tips?: string
@@ -110,6 +111,7 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
   img,
   cover,
   needTalk = true,
+  needContact = false,
   reverse = true,
   showDot = false,
   localLink = '',
@@ -129,9 +131,9 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
       >
         {/* 文字 */}
         <div className="flex flex-col items-start lg:w-[632px]">
-          {!!tips && <div className="text-brand_color mb-2">{tips}</div>}
+          {!!tips && <div className="mb-2 text-brand_color">{tips}</div>}
           {!!title && <div className={`text-4xl font-semibold ${titleClassName}`}>{title}</div>}
-          {!!subTitle && <div className="font-medium mt-2 text-base">{subTitle}</div>}
+          {!!subTitle && <div className="mt-2 text-base font-medium">{subTitle}</div>}
           {desc && (
             <div className="flex flex-col mt-5 text-base font-normal text-text_color_1_supplement gap-y-4">
               {desc.map((i, index) => {
@@ -151,17 +153,20 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
             </div>
           )}
 
-          {needTalk && (
-            <>
-              {localLink ? (
-                <LocaleLink className="flex items-center mt-10" to={localLink}>
-                  <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
-                </LocaleLink>
-              ) : (
-                <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />
-              )}
-            </>
-          )}
+          <div className="flex space-x-4">
+            {needTalk && (
+              <>
+                {localLink ? (
+                  <LocaleLink className="flex items-center mt-10" to={localLink}>
+                    <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
+                  </LocaleLink>
+                ) : (
+                  <TalkToUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />
+                )}
+              </>
+            )}
+            {needContact && <ContactUs />}
+          </div>
         </div>
         {/* 图片 */}
         <div className={`sm:w-[430px] w-[100%] ${imgClassName}`}>

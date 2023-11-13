@@ -362,7 +362,7 @@
   "terminal.item-4": "港美 A 股實時行情，專業行情圖、行情分析、畫線工具、多檔高級行情",
   "terminal.item-6": "支持 IPO 認購、Margin Call、成交分配等操作員功能",
   "terminal.item-8": "靈活的面板配置能力，根據交易員習慣方便定製界面",
-  "footer-banner.1m": "在 1 分鐘內開始",
+  "footer-banner.1m": "在 1 分鐘內開始，親身感受 Whale 帶來的數字化超凡體驗",
   "footer-banner.item-1": "Whale Introducing Broker 解決方案，是面向全披露介紹經紀商的一站式解決方案。\n介紹經紀商無需自設經紀系統，即可完成客户開户、交易、計費等全過程，並且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易員終端",
   "footer-banner.item-2": "Whale 面向零售經紀商提供一站式解決方案，包含 App、交易、風控、清結算、CRM、投放營銷等前中後台系統。終端服務均支持接入實時行情、資訊、基本面等數據服務，提供股票、輪證、基金、期權、虛擬資產等多類交易品種。通過 Whale SaaS 服務可快速搭建完整的證券業務系統，同時支持進行便捷的客户管理，精準的營銷投放。如您有更多需求，可直接聯繫我們，將全程為您解答。",
   "footer-banner.item-3": "White Label 一站式解決方案，是面向大規模及超大規模零售經紀商一站式解決方案。\n零售經紀商可以通過 SaaS 服務快速搭建完整的證券業務系統，完成開户、交易、風控、出入金、清結算等業務，並且可以通過獨立品牌的白標 app 服務最終客户，通過完整的營銷系統完成高效的獲客及轉化",
@@ -1210,5 +1210,11 @@
   "features_talk_to_us_891125": "共同邁向數字化未來",
   "features_talk_to_us_891126": "諮詢電話：",
   "features_talk_to_us_891127": "諮詢郵箱：",
-  "features_experience_demo_891117": "免費體驗"
+  "features_experience_demo_891117": "免費體驗",
+  "features_footer_index_891117": "電話：",
+  "features_footer_index_891118": "郵箱：",
+  "features_footer_index_891119": "售前諮詢",
+  "features_footer_index_891121": "售後支持",
+  "features_footer_index_891123": "領英",
+  "features_footer_index_891124": "微信訂閲號"
 }

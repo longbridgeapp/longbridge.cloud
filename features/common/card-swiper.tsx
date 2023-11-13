@@ -72,11 +72,11 @@ const CardSwiper = (props: IProps) => {
           ? dataSource.map((item, index) => {
               return (
                 <div key={index}>
-                  <ImageAndText {...item.contentInfo} />
+                  <ImageAndText {...item.contentInfo} needContact />
                   {!!item?.footerList?.length ? (
                     <>
                       <hr className="border-border_color" />
-                      <div className="flex justify-between mt-10 flex-wrap gap-y-5">
+                      <div className="flex flex-wrap justify-between mt-10 gap-y-5">
                         {item.footerList.map((it, i) => {
                           return (
                             <div className="w-[100%] min-w-[250px] sm:w-[40%] md:w-[40%] lg:w-[19%]" key={i}>

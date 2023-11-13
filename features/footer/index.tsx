@@ -62,6 +62,34 @@ const Footer: FC = () => {
     return { emailList, telList }
   }, [])
 
+  const { frontSell, sellEnd } = useMemo(() => {
+    const frontSell = [
+      {
+        label: i18n.t('features_footer_index_891117'),
+        value: '+852 3851 1713',
+        type: 'tel:',
+      },
+      {
+        label: i18n.t('features_footer_index_891118'),
+        value: 'bd@longbridge.cloud',
+        type: 'mailto:',
+      },
+    ]
+    const sellEnd = [
+      {
+        label: i18n.t('features_footer_index_891117'),
+        value: '+852 3851 1712',
+        type: 'tel:',
+      },
+      {
+        label: i18n.t('features_footer_index_891118'),
+        value: 'cs@longbridge.cloud',
+        type: 'mailto:',
+      },
+    ]
+    return { frontSell, sellEnd }
+  }, [])
+
   const fetchLegalTerms = async () => {
     const key = 'legal_terms'
     const data = await getSupportLinks()
@@ -80,59 +108,78 @@ const Footer: FC = () => {
   return (
     <footer className={classNames(styles.footer, 'main-container')}>
       <div className={classNames('main-content-width')}>
-        <div className="text-text_color_1_supplement text-2xl font-semibold">{i18n.t('features_footer_index_891113')}</div>
-        <div className="text-text_color_2 text-base mt-2">{i18n.t('features_footer_index_891114')}</div>
-        <div className="flex items-end justify-between mt-4 sm:mt-10 flex-wrap">
-          <div className="flex gap-x-24 gap-y-4 sm:gap-y-8 flex-wrap">
-            <div className="flex flex-col">
-              <span className="text-sm">{i18n.t('footer_004')}</span>
-              <div className="flex">
-                {telList.map(({ value }) => (
-                  <a className="mt-2 font-medium whitespace-nowrap mr-6" href={`tel:${value}`} key={value}>
+        <div className="flex flex-col space-y-10 md:flex-row md:space-x-10 xl:space-x-40 md:space-y-0">
+          <div className="text-2xl font-semibold text-text_color_1_supplement">{i18n.t('talk-to-us')}</div>
+          <div className="flex flex-col flex-1 space-y-10 md:justify-between md:flex-row md:space-y-0">
+            <div className="">
+              <div className="text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891119')}
+              </div>
+              <div
+                className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
+                  'flex space-x-4': i18n.i18n.language !== 'en',
+                })}
+              >
+                <div>{i18n.t('features_talk_to_us_891118')}</div>
+                <div>{i18n.t('features_talk_to_us_891119')}</div>
+                <div>{i18n.t('features_talk_to_us_891120')}</div>
+              </div>
+              <div className="flex flex-col space-y-3">
+                {frontSell.map(({ label, value, type }) => (
+                  <a className="text-xs font-normal whitespace-nowrap" href={`${type}${value}`} key={value}>
+                    {label}
                     {value}
                   </a>
                 ))}
               </div>
             </div>
-            <div className="flex flex-col">
-              <span className="text-sm">{i18n.t('footer_003')}</span>
-              <div className="flex flex-wrap">
-                {emailList.map(({ label, value }) => (
-                  <div key={value} className="flex flex-wrap mt-2 mr-6 flex-nowrap">
-                    <span className="mr-2">{label}:</span>
-                    <a className=" font-medium" href={`mailto:${value}`}>
-                      {value}
-                    </a>
-                  </div>
+            <div className="">
+              <div className="text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891121')}
+              </div>
+              <div
+                className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
+                  'flex space-x-4': i18n.i18n.language !== 'en',
+                })}
+              >
+                <div>{i18n.t('features_talk_to_us_891122')}</div>
+                <div>{i18n.t('features_talk_to_us_891123')}</div>
+              </div>
+              <div className="flex flex-col space-y-3">
+                {sellEnd.map(({ label, value, type }) => (
+                  <a className="text-xs font-normal whitespace-nowrap" href={`${type}${value}`} key={value}>
+                    {label}
+                    {value}
+                  </a>
                 ))}
               </div>
             </div>
-          </div>
-          {
-            false && <div>
-              {
-                socials.map(({ icon, href }) => {
-                  return (
-                    <a className="inline-block w-5 ml-7 first:ml-0" href={href} key={href}>
-                      <img src={icon} alt="" />
-                    </a>
-                  )
-                })
-              }
+            <div className="">
+              <div className="mb-3 text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891123')}
+              </div>
+              <div>
+                <a href="https://www.linkedin.com/company/longbridgewhale" target="_blank" rel="noreferrer">
+                  <img className="h-5" alt="" src="https://pub.lbkrs.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
+                </a>
+              </div>
             </div>
-          }
-          <div className='flex mt-4 sm:mt-10 justify-end'>
-            <a href='https://www.linkedin.com/company/longbridgewhale' target='_blank'>
-              <img className='h-5' src="https://pub.lbkrs.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
-            </a>
-            <Popover content={<div>
-              <img src="https://pub.lbkrs.com/files/202307/P5kvx1NsfPmWfqVZ/qrcode.svg" alt="" />
-              <div className='w-[110px] text-center text-xs text-text_color_2'>Longbridge Whale 公众号</div>
-            </div>}>
-              <img className='h-5 ml-6' src="https://assets.lbkrs.com/uploads/b2a6886f-9fdd-4353-a703-c4d19ecb7881/wechat.png" />
-            </Popover>
+            <div className="">
+              <div className="mb-3 text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891124')}
+              </div>
+              <div>
+                <img
+                  src="https://assets.lbkrs.com/uploads/ca78ddab-b8a5-4ae8-881b-e08b4a8df37f/whale-official.png"
+                  alt=""
+                  className="w-24"
+                />
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+      <div className={classNames('main-content-width')}>
         <hr className="mt-6 border-[#EAEBEC]"></hr>
         <div className="flex items-center justify-between mt-6">
           <div className="text-xs text-text_color_3_supplement">

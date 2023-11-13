@@ -1,7 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { CDN_IMAGES } from '@/constants'
-import { TalkToUs } from '../talk-to-us'
+import { TalkToUs, ContactUs } from '../talk-to-us'
 import ExperienceDemo from '../experience-demo'
 import classnames from 'classnames'
 interface Props {
@@ -32,8 +32,8 @@ const Banner: React.FC<Props> = props => {
             })}
           </div>
           <div className="flex space-x-5">
-            <TalkToUs className="mt-10" />
-            <ExperienceDemo />
+            <ContactUs className="mt-10" />
+            {/* <ExperienceDemo /> */}
           </div>
         </div>
         {/* 图片 */}
@@ -63,8 +63,8 @@ export const NewBanner: React.FC<Props> = props => {
               })}
             </div>
             <div className="flex mt-6 space-x-5">
-              <TalkToUs className="h-10 mt-0" />
-              <ExperienceDemo className="h-[40px] mt-0" />
+              <ContactUs className="h-10 mt-0" />
+              {/* <ExperienceDemo className="h-[40px] mt-0" /> */}
             </div>
           </div>
         </div>

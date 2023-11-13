@@ -19,7 +19,7 @@ const HomeSolutionSwiper = () => {
             'zh-CN': 'https://assets.lbkrs.com/uploads/f39c82d2-7399-4cd8-8068-b32fe3995f16/index-app-cn.png',
             'zh-HK': 'https://assets.lbkrs.com/uploads/60a2d7b5-21df-4a30-9d4a-96649ee7afdb/index-app-hk.png',
           },
-          // localLink: '/longport',
+          localLink: '/solutions/app-plus',
         },
         footerList: [
           {
@@ -55,6 +55,7 @@ const HomeSolutionSwiper = () => {
             'zh-CN': 'https://assets.lbkrs.com/uploads/dc64d811-35ef-4dbf-bc0d-5e63b1d0be1a/counter-solution-cn.png',
             'zh-HK': 'https://assets.lbkrs.com/uploads/9b132d84-4dc5-49f1-8026-53b461d4fdf7/counter-solution-hk.png',
           },
+          localLink: '/solutions/securities-market',
         },
         footerList: [
           {
@@ -85,6 +86,7 @@ const HomeSolutionSwiper = () => {
             'zh-CN': 'https://assets.lbkrs.com/uploads/b708ac39-814b-422e-9dbe-28c2ea702b25/index-vm-cn.png',
             'zh-HK': 'https://assets.lbkrs.com/uploads/a7160398-c431-42e8-b122-edefb33a96e1/index-vm-hk.png',
           },
+          localLink: '/solutions/virtual-assets',
         },
         footerList: [
           {

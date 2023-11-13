@@ -357,7 +357,7 @@
   "terminal.item-6": "支持 IPO 认购、Margin Call、成交分配等操作员功能",
   "terminal.item-7": "交易员定制",
   "terminal.item-8": "灵活的面板配置能力，根据交易员习惯方便定制界面",
-  "footer-banner.1m": "在 1 分钟内开始",
+  "footer-banner.1m": "在 1 分钟内开始，亲身感受 Whale 带来的数字化超凡体验",
   "footer-banner.item-1": "Whale Introducing Broker 解决方案，是面向全披露介绍经纪商的一站式解决方案。介绍经纪商无需自设经纪系统，即可完成客户开户、交易、计费等全过程，并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端",
   "footer-banner.item-2": "LongPort 一站式解决方案，是面向中等规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，便捷的管理客户。并且可以使用新一代的 LongPort App 及 Whale Trade Terminal 交易员终端",
   "footer-banner.item-3": "White Label 一站式解决方案，是面向大规模及超大规模零售经纪商一站式解决方案。零售经纪商可以通过 SaaS 服务快速搭建完整的证券业务系统，完成开户、交易、风控、出入金、清结算等业务，并且可以通过独立品牌的白标 app 服务最终客户，通过完整的营销系统完成高效的获客及转化",
@@ -992,5 +992,13 @@
   "pages_locale_product_portai_891115": "香港第一個基於大語言模型的「FinancialGPT」",
   "pages_locale_product_portai_891115_1": "",
   "pages_locale_product_portai_891116": "PortAI：面向券商的「AI 投資知識服務平台」",
-  "features_home_home_solution_swiperx": "专业的行情及交易工具"
+  "features_home_home_solution_swiperx": "专业的行情及交易工具",
+  "features_footer_index_891117": "电话：",
+  "features_footer_index_891118": "邮箱：",
+  "features_footer_index_891119": "售前咨询",
+  "features_footer_index_891120": "解決方案咨詢 產品功能介紹 免費 Demo 演示",
+  "features_footer_index_891121": "售后支持",
+  "features_footer_index_891122": "技術咨詢和支持 產品培訓和答疑",
+  "features_footer_index_891123": "领英",
+  "features_footer_index_891124": "微信订阅号"
 }

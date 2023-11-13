@@ -1,6 +1,6 @@
 import { Block, BlockBetween, BlockHeader, TopBlock } from '@/components/block'
 import DivideDot from '@/components/divide-dot'
-import { TalkToUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs } from '@/features/talk-to-us'
 import { LocaleLink } from '@/components/locale-link'
 import Button from '@/components/button'
 import { Carousel } from 'antd'
@@ -82,10 +82,10 @@ export const WhiteLabelBanner = ({ img }: { img: string }) => {
 export const IndexBanner = () => {
   const i18n = useTranslation('common')
   const isEn = i18n.i18n.language === 'en'
-  const bannerMap:any = {
+  const bannerMap: any = {
     'en': 'https://pub.lbkrs.com/files/202307/Nk95eVCroahcrRaP/HOME-BANNER-EN.png',
     'zh-CN': 'https://pub.lbkrs.com/files/202307/sJXSzDtouVe9vH3E/HOME-BANNER-CN.png',
-    'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png'
+    'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png',
   }
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
@@ -100,9 +100,12 @@ export const IndexBanner = () => {
                 <div className="text-white text-[54px] leading-[68px]text-left">
                   <div>{i18n.t('home_top_banner_text_2')}</div>
                 </div>
-                <LocaleLink className="flex items-center mt-10" to={'/solutions/virtual-assets'}>
-                  <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
-                </LocaleLink>
+                <div className="flex space-x-4">
+                  <LocaleLink className="flex items-center mt-10" to={'/solutions/virtual-assets'}>
+                    <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
+                  </LocaleLink>
+                  <ContactUs />
+                </div>
               </>
             }
             right={
@@ -129,9 +132,12 @@ export const IndexBanner = () => {
                 <div className="text-white text-[48px] leading-[68px] text-left">
                   <div>{i18n.t('pages_locale_product_portai_891116')}</div>
                 </div>
-                <LocaleLink className="flex items-center mt-10" to="/portai">
-                  <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
-                </LocaleLink>
+                <div className="flex space-x-4">
+                  <LocaleLink className="flex items-center mt-10" to="/portai">
+                    <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
+                  </LocaleLink>
+                  <ContactUs />
+                </div>
               </>
             }
             right={
@@ -156,6 +162,9 @@ export const IndexBanner = () => {
                   <span>{i18n.t('features_block_top_banner_891147')}</span>
                 </div>
                 <p className="mt-4 text-lg xl:mt-6 xl:text-xl">{i18n.t('features_block_top_banner_891148')}</p>
+                <div className="flex">
+                  <ContactUs />
+                </div>
               </>
             }
             right={
