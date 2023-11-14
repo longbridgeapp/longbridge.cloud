@@ -88,7 +88,7 @@ export const IndexBanner = () => {
     'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png',
   }
   return (
-    <Carousel className="bg-cover" autoplay effect="fade">
+    <Carousel className="bg-cover" effect="fade">
       <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
@@ -126,7 +126,7 @@ export const IndexBanner = () => {
             left={
               <>
                 <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
-                  {i18n.t('pages_locale_product_portai_891115')}
+                  <div className="md:whitespace-nowrap">{i18n.t('pages_locale_product_portai_891115')}</div>
                   <div>{i18n.t('pages_locale_product_portai_891115_1')}</div>
                 </div>
                 <div className="text-white text-[48px] leading-[68px] text-left">
