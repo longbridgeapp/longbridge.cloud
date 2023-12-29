@@ -52,11 +52,11 @@ const Footer: FC = () => {
     const telList = [
       {
         label: '',
-        value: '+852 38511712',
+        value: '+852 38511722',
       },
       {
         label: '',
-        value: '+852 38511713',
+        value: '+852 38511711',
       },
     ]
     return { emailList, telList }
@@ -66,7 +66,7 @@ const Footer: FC = () => {
     const frontSell = [
       {
         label: i18n.t('features_footer_index_891117'),
-        value: '+852 3851 1713',
+        value: '+852 3851 1711',
         type: 'tel:',
       },
       {
@@ -78,7 +78,7 @@ const Footer: FC = () => {
     const sellEnd = [
       {
         label: i18n.t('features_footer_index_891117'),
-        value: '+852 3851 1712',
+        value: '+852 3851 1722',
         type: 'tel:',
       },
       {

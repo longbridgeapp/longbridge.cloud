@@ -184,14 +184,14 @@ const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
           i18n.t('features_talk_to_us_891119'),
           i18n.t('features_talk_to_us_891120'),
         ],
-        phone: '+852 3851 1713',
+        phone: '+852 3851 1711',
         email: 'bd@longbridge.cloud',
       },
       {
         icon: 'https://assets.lbkrs.com/uploads/0c34320c-c99c-434f-88a9-b9a7b80b721c/broker.png',
         title: i18n.t('features_talk_to_us_891121'),
         tags: [i18n.t('features_talk_to_us_891122'), i18n.t('features_talk_to_us_891123')],
-        phone: '+852 3851 1712',
+        phone: '+852 3851 1722',
         email: 'cs@longbridge.cloud',
       },
     ]
