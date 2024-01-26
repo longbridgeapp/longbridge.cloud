@@ -1,8 +1,9 @@
-import { FC } from 'react'
+import { FC, useEffect } from 'react'
 import { FirstScreen, IFirstScreenProps } from '@/features/home/first-screen'
 import Header from '@/features/header'
 import Footer from '@/features/footer'
 import Head from 'next/head'
+import { loadHighlight } from '@/utils/common'
 
 export const PageLayout: FC<{
   screenProps: IFirstScreenProps
@@ -18,6 +19,9 @@ export const PageLayout: FC<{
 }
 
 export const Layout: FC = ({ children }) => {
+  useEffect(() => {
+    loadHighlight('.highlight-container')
+  }, [])
   return (
     <>
       <Head>
@@ -27,7 +31,7 @@ export const Layout: FC = ({ children }) => {
         <div className="sticky top-0 z-50 bg-white">
           <Header />
         </div>
-        {children}
+        <div className="highlight-container">{children}</div>
         <Footer />
       </div>
     </>

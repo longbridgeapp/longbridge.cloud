@@ -64,3 +64,47 @@ export const getContactFormUrl = (locale = 'en') => {
   }
   return formInfo[locale] || formInfo['en']
 }
+
+export const loadScript = (src: string) => {
+  return new Promise(resolve => {
+    const script: any = document.createElement('script')
+    script.type = 'text/javascript'
+    script.src = src
+    document.body.appendChild(script)
+    if (script.readyState) {
+      // IE
+      script.onreadystatechange = function () {
+        if (script.readyState === 'loaded' || script.readyState === 'complete') {
+          script.onreadystatechange = null
+          resolve(script)
+        }
+      }
+    } else {
+      // 其他浏览器
+      script.onload = function () {
+        resolve(script)
+      }
+    }
+  })
+}
+
+let highlightIsLoaded = false
+export const loadHighlight = async (container = '') => {
+  if (!container) return
+  if (!highlightIsLoaded) {
+    await loadScript('https://assets.lbkrs.com/pkg/highlight/x-highlight.js')
+  }
+  highlightIsLoaded = true
+  const xHighlights = document.querySelectorAll('.doc-highlight')
+  xHighlights.forEach(xHighlight => {
+    document.body.removeChild(xHighlight)
+  })
+
+  setTimeout(() => {
+    const newHighlightDom = document.createElement('x-highlight')
+    newHighlightDom.setAttribute('container', container)
+    newHighlightDom.className = 'doc-highlight'
+
+    document.body.appendChild(newHighlightDom)
+  }, 0)
+}
