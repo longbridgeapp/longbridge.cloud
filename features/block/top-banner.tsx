@@ -87,8 +87,52 @@ export const IndexBanner = () => {
     'zh-CN': 'https://pub.lbkrs.com/files/202307/sJXSzDtouVe9vH3E/HOME-BANNER-CN.png',
     'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png',
   }
+  const whaleLink: any = {
+    'en': 'https://longbridge.feishu.cn/share/base/form/shrcnK8sJRAth64pgtY51fhafyd?lang=en',
+    'zh-CN': 'https://longbridge.feishu.cn/share/base/form/shrcnnAhb5g9S5xhFdXQnqNwoqc',
+    'zh-HK': 'https://longbridge.feishu.cn/share/base/form/shrcnj0fuzuoItVbdd6EBYRkyLg?lang=zh-HK',
+  }
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
+      <TopBlock
+        className="relative bg-center bg-no-repeat"
+        imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
+      >
+        <Block>
+          <BlockBetween
+            left={
+              <>
+                <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
+                  <div>Zero to One</div>
+                  <div className="text-white text-[54px] leading-[68px] text-left">Security as a Service</div>
+                </div>
+                <div className="text-3xl text-text_color_3_supplement">
+                  <div>{i18n.t('pages_locale_product_portai_891141')}</div>
+                </div>
+                <div className="flex space-x-4">
+                  <LocaleLink
+                    className="flex items-center mt-10"
+                    // @ts-ignore
+                    rawValue={true}
+                    to={whaleLink[i18n.i18n.language || 'zh-HK']}
+                  >
+                    <Button size="medium">{i18n.t('pages_locale_product_portai_891143')}</Button>
+                  </LocaleLink>
+                </div>
+              </>
+            }
+            right={
+              <div className="h-[430px] sm:w-[527px] flex flex-col justify-center items-center">
+                <img
+                  src="https://assets.lbkrs.com/uploads/014eaa0f-5468-42a1-a28b-bbb40c9d4263/whale.png"
+                  alt="ai"
+                  className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
+                />
+              </div>
+            }
+          ></BlockBetween>
+        </Block>
+      </TopBlock>
       <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
@@ -113,38 +157,6 @@ export const IndexBanner = () => {
                 <img
                   src="https://assets.lbkrs.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
                   alt="va"
-                  className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
-                />
-              </div>
-            }
-          ></BlockBetween>
-        </Block>
-      </TopBlock>
-      <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
-        <Block>
-          <BlockBetween
-            left={
-              <>
-                <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
-                  <div className="md:whitespace-nowrap">{i18n.t('pages_locale_product_portai_891115')}</div>
-                  <div>{i18n.t('pages_locale_product_portai_891115_1')}</div>
-                </div>
-                <div className="text-white text-[48px] leading-[68px] text-left">
-                  <div>{i18n.t('pages_locale_product_portai_891116')}</div>
-                </div>
-                <div className="flex space-x-4">
-                  <LocaleLink className="flex items-center mt-10" to="/portai">
-                    <Button size="medium">{i18n.t('features_solutions_info_introduce_891112')}</Button>
-                  </LocaleLink>
-                  <ContactUs />
-                </div>
-              </>
-            }
-            right={
-              <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
-                <img
-                  src="https://assets.lbkrs.com/uploads/c5c9454b-3451-43ab-9466-66e5f7da53ec/ai.png"
-                  alt="ai"
                   className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
                 />
               </div>
