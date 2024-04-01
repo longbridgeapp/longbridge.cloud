@@ -104,7 +104,7 @@ export const IndexBanner = () => {
               <>
                 <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
                   <div>Zero to One</div>
-                  <div className="text-white text-[54px] leading-[68px] text-left">Security as a Service</div>
+                  <div className="text-white text-[54px] leading-[68px] text-left">Securities as a Service</div>
                 </div>
                 <div className="text-3xl text-text_color_3_supplement">
                   <div>{i18n.t('pages_locale_product_portai_891141')}</div>
