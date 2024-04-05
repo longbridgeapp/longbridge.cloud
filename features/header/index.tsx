@@ -71,6 +71,10 @@ function useNavs() {
             value: '/retail',
             label: i18n.t('features_header_index_3'),
           },
+          {
+            value: '/account',
+            label: i18n.t('features_header_index_891125'),
+          },
         ],
       },
       {

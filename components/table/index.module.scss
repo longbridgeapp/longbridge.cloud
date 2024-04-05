@@ -28,4 +28,16 @@
       @apply text-white opacity-80;
     }
   }
+  // 普通表格的样式
+  &.normal-table {
+    th {
+      .title {
+        @apply font-medium text-sm;
+      }
+    }
+
+    td.label {
+      @apply text-sm;
+    }
+  }
 }

@@ -1,0 +1,21 @@
+:local(.dot-list) {
+  @apply grid gap-4;
+
+  grid-template-columns: repeat(var(--cols-sm, 1), minmax(0, 1fr));
+  .list-item {
+    @apply text-text_color_1_supplement text-base ml-0 flex ;
+
+    .dot {
+      @apply w-1 h-1 bg-[#5622CF] mr-4 translate-y-[10px];
+    }
+
+    .content {
+      @apply w-0 flex-1;
+    }
+
+   
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(var(--cols-lg, 1), minmax(0, 1fr));
+  }
+}
