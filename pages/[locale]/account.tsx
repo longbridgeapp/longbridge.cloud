@@ -191,7 +191,11 @@ const AccountPage = () => {
     colRatio: [15, 15, 15, 15, 40],
   }
   // 认证方式特点
-  const authenticFeatures = [i18n.t('pages_locale_account_q6xztqsz2o'), i18n.t('pages_locale_account_4nor_psfcz')]
+  const authenticFeatures = [
+    i18n.t('pages_locale_account_q6xztqsz2o'),
+    i18n.t('pages_locale_account_891125'),
+    i18n.t('pages_locale_account_4nor_psfcz'),
+  ]
   const kycFeatures = [
     i18n.t('pages_locale_account_9wbv9delxg'),
     i18n.t('pages_locale_account_wr9896jqjt'),
