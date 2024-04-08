@@ -93,6 +93,10 @@ function useNavs() {
             value: '/solutions/virtual-assets',
             label: i18n.t('features_header_index_891113'),
           },
+          {
+            value: '/solutions/brokerages',
+            label: i18n.t('pages_brokerages0'),
+          },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),

@@ -1,11 +1,11 @@
 const fs = require('fs')
 
-const dir = './account'
+const dir = './brokerages'
 const cn = fs.readFileSync(`./texts/${dir}/cn.txt`, 'utf8')
 const en = fs.readFileSync(`./texts/${dir}/en.txt`, 'utf8')
 const hk = fs.readFileSync(`./texts/${dir}/hk.txt`, 'utf8')
 
-const keyPrefix = 'account_'
+const keyPrefix = 'brokerages'
 
 function txtToJson (txt) {
   const json = {}
@@ -29,9 +29,9 @@ function writeToLocale (locale, json) {
   Object.assign(localeJson, json)
   fs.writeFileSync(localePath, JSON.stringify(localeJson, null, 2))
 }
-// writeToLocale('zh-CN', jsonCn)
-// writeToLocale('en', jsonEn)
-// writeToLocale('zh-HK', jsonHk)
+writeToLocale('zh-CN', jsonCn)
+writeToLocale('en', jsonEn)
+writeToLocale('zh-HK', jsonHk)
 function writeToLocaleByCn (locale, json) {
   const localePath = `../public/locales/${locale}/common.json`
   const localeCnJson = JSON.parse(fs.readFileSync('../public/locales/zh-CN/common.json', 'utf8'))
@@ -52,4 +52,4 @@ function writeToLocaleByCn (locale, json) {
   })
   fs.writeFileSync(localePath, JSON.stringify(localeJson, null, 2))
 }
-writeToLocaleByCn('zh-HK', jsonHk)
+// writeToLocaleByCn('zh-HK', jsonHk)

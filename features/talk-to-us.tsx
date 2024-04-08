@@ -278,10 +278,23 @@ export const TalkToUs = ({ className, style, text }: { className?: string; style
 export const ContactUs = ({ className, style }: any) => {
   const i18n = useTranslation('common')
   return (
-    <a href={getContactFormUrl(i18n.i18n.language)} target='_blank' rel="noreferrer">
+    <a href={getContactFormUrl(i18n.i18n.language)} target="_blank" rel="noreferrer">
       <Button size="medium" className={classNames('mt-10', className)} style={style}>
         {i18n.t('talk-to-us')}
       </Button>
+    </a>
+  )
+}
+export const ContactUsGhost = ({ className, style }: any) => {
+  const i18n = useTranslation('common')
+  return (
+    <a
+      href={getContactFormUrl(i18n.i18n.language)}
+      target="_blank"
+      rel="noreferrer"
+      className="text-white border-white border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white"
+    >
+      {i18n.t('talk-to-us')}
     </a>
   )
 }
