@@ -7,6 +7,9 @@ import { useTranslation } from 'react-i18next'
 import Title from '../common/title'
 import Link from 'next/link'
 import classNames from 'classnames'
+import { Block, BlockBetween, TopBlock } from '@/components/block'
+import { ContactUsGhost } from '../talk-to-us'
+import { FC, ReactNode } from 'react'
 
 export const BrokeragesTabs = () => {
   const i18n = useTranslation('common')
@@ -108,44 +111,26 @@ export const BrokeragesTabs = () => {
   )
 }
 
-export const BrokeragesCards = () => {
-  const i18n = useTranslation('common')
+export type IBrokeragesCardsProps = {
+  cards: {
+    label: ReactNode
+    title: string
+    desc: string
+    icon?: string
+  }[]
+  /** 带上了 grid 和间距，需要自己定义列数分配 */
+  className?: string
+}
 
-  const cards = [
-    {
-      label: '30%',
-      title: i18n.t('pages_brokerages24'),
-      desc: i18n.t('pages_brokerages26'),
-      icon: 'https://assets.lbkrs.com/uploads/9d4ae70b-785c-4f3d-a13d-12da76647b65/card_icon_1.png',
-    },
-    {
-      label: '50%',
-      title: i18n.t('pages_brokerages27'),
-      desc: i18n.t('pages_brokerages29'),
-      icon: 'https://assets.lbkrs.com/uploads/45edcb2d-436a-48e7-abbe-c46bfdcf4976/card_icon_2.png',
-    },
-    {
-      label: '100+',
-      title: i18n.t('pages_brokerages30'),
-      desc: i18n.t('pages_brokerages32'),
-      icon: 'https://assets.lbkrs.com/uploads/cbb946d4-6a40-4034-a5a7-099109d48cc7/card_icon_3.png',
-    },
-    {
-      label: '60+',
-      title: i18n.t('pages_brokerages33'),
-      desc: i18n.t('pages_brokerages35'),
-      icon: 'https://assets.lbkrs.com/uploads/aaf9664b-b81d-4867-a90a-95a6ce2ddd2e/card_icon_4.png',
-    },
-  ]
-
+export const BrokeragesCards: FC<IBrokeragesCardsProps> = ({ cards, className }) => {
   return (
-    <div className="grid lg:grid-cols-2 gap-x-8 gap-y-9">
+    <div className={classNames('grid gap-x-8 gap-y-9', className)}>
       {cards.map(card => {
         return (
           <div key={card.title} className="bg-white rounded-lg p-8 pr-6">
             <div className="flex justify-between items-center mb-4">
               <span className="text-[60px] font-bold leading-[72px] text-brand_color">{card.label}</span>
-              <img className="w-[72px]" src={card.icon} alt=""></img>
+              {card.icon && <img className="w-[72px]" src={card.icon} alt=""></img>}
             </div>
             <div className="text-xl font-medium mb-2">{card.title}</div>
             <div className="text-text_color_1_supplement">{card.desc}</div>
@@ -305,7 +290,7 @@ export const BrokeragesProductsTable = () => {
   return (
     <div>
       <Title title={i18n.t('pages_brokerages52')} />
-      <div className="grid grid-cols-[auto_1fr] text-base gap-x-10 gap-y-8 lg:gap-x-[110px]">
+      <div className="grid grid-cols-[auto_1fr] text-base gap-x-4 sm:gap-x-8 gap-y-8 lg:gap-x-[110px]">
         {products.map((product, index) => {
           return (
             <>
@@ -335,5 +320,57 @@ export const BrokeragesProductsTable = () => {
         })}
       </div>
     </div>
+  )
+}
+
+export type ISolutionBannerProps = {
+  label: ReactNode
+  title: string
+  /** 中文下换行 */
+  secondLineTitle: string
+  desc: string
+}
+export const SolutionBanner = (props: ISolutionBannerProps) => {
+  return (
+    <TopBlock
+      className="relative bg-center bg-no-repeat"
+      imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
+    >
+      <Block className="py-10 md:py-[72px] px-6 md:px-0">
+        <BlockBetween
+          left={
+            <>
+              <div className="mb-3 text-xl text-left text-text_color_3_supplement">
+                <div className="text-brand_color_3 mb-2">{props.label}</div>
+                <div className="text-white text-3xl lg:text-[40px] lg:leading-[56px] text-left font-semibold">
+                  <span className=" lg:whitespace-nowrap lg:en:whitespace-normal">{props.title}</span>
+                  {props.secondLineTitle && (
+                    <>
+                      <br />
+                      <span>{props.secondLineTitle}</span>
+                    </>
+                  )}
+                </div>
+              </div>
+              <div className="text-base text-text_color_3_supplement mb-10">
+                <div>{props.desc}</div>
+              </div>
+              <div className="flex space-x-4">
+                <ContactUsGhost />
+              </div>
+            </>
+          }
+          right={
+            <div className="relative mt-10 lg:mt-0 w-full">
+              <img
+                src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
+                alt="zero to one"
+                className="right-0 object-cover w-4/5 lg:w-[380px] xl:w-[428px] lg:absolute top-1/2 lg:-translate-y-1/2"
+              />
+            </div>
+          }
+        ></BlockBetween>
+      </Block>
+    </TopBlock>
   )
 }

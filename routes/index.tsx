@@ -26,6 +26,7 @@ import VirtualAssetTradingSystem from '@/pages/[locale]/virtual-asset-trading-sy
 import PortAI from '@/pages/[locale]/portai'
 import Account from '@/pages/[locale]/account'
 import Brokerages from '@/pages/[locale]/solutions/brokerages'
+import SmallBrokeragesPage from '@/pages/[locale]/solutions/small-brokerages'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -62,6 +63,7 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="virtual-asset-trading-system" element={<VirtualAssetTradingSystem {...pageProps} />} />
               <Route path="account" element={<Account {...pageProps} />} />
               <Route path="solutions/brokerages" element={<Brokerages {...pageProps} />} />
+              <Route path="solutions/small-brokerages" element={<SmallBrokeragesPage {...pageProps} />} />
             </Route>
           </Fragment>
         )

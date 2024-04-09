@@ -97,6 +97,10 @@ function useNavs() {
             value: '/solutions/brokerages',
             label: i18n.t('pages_brokerages0'),
           },
+          {
+            value: '/solutions/small-brokerages',
+            label: i18n.t('pages_small_brokerages001'),
+          },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),

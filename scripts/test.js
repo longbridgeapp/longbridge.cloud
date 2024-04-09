@@ -1,11 +1,11 @@
 const fs = require('fs')
 
-const dir = './brokerages'
+const dir = './small-brokerages'
 const cn = fs.readFileSync(`./texts/${dir}/cn.txt`, 'utf8')
 const en = fs.readFileSync(`./texts/${dir}/en.txt`, 'utf8')
 const hk = fs.readFileSync(`./texts/${dir}/hk.txt`, 'utf8')
 
-const keyPrefix = 'brokerages'
+const keyPrefix = 'small-brokerages'
 
 function txtToJson (txt) {
   const json = {}
@@ -23,10 +23,29 @@ const jsonCn = txtToJson(cn)
 const jsonEn = txtToJson(en)
 const jsonHk = txtToJson(hk)
 
+const localeJsonMap = {}
+function getLocaleJson(locale) {
+  const localePath = `../public/locales/${locale}/common.json`
+  const localeJson = localeJsonMap[locale] || JSON.parse(fs.readFileSync(localePath, 'utf8'))
+  localeJsonMap[locale] = localeJson
+
+  return localeJson
+}
+function getLocaleValueExists(locale, value) {
+  const localeJson = getLocaleJson(locale)
+  const localeJsonValues = Object.values(localeJson)
+ return localeJsonValues.find(a => a === value)
+}
+
 function writeToLocale (locale, json) {
   const localePath = `../public/locales/${locale}/common.json`
-  const localeJson = JSON.parse(fs.readFileSync(localePath, 'utf8'))
-  Object.assign(localeJson, json)
+  const localeJson = getLocaleJson(locale)
+  Object.keys(json).forEach(key => {
+    if (getLocaleValueExists(locale, json[key])) {
+      return
+    }
+    localeJson[key] = json[key]
+  })
   fs.writeFileSync(localePath, JSON.stringify(localeJson, null, 2))
 }
 writeToLocale('zh-CN', jsonCn)
@@ -34,8 +53,8 @@ writeToLocale('en', jsonEn)
 writeToLocale('zh-HK', jsonHk)
 function writeToLocaleByCn (locale, json) {
   const localePath = `../public/locales/${locale}/common.json`
-  const localeCnJson = JSON.parse(fs.readFileSync('../public/locales/zh-CN/common.json', 'utf8'))
-  const localeJson = JSON.parse(fs.readFileSync(localePath, 'utf8'))
+  const localeCnJson = getLocaleJson('zh-CN')
+  const localeJson = getLocaleJson(locale)
   const localeCnValue = Object.keys(localeCnJson).map(key => {
     return {
       key,
