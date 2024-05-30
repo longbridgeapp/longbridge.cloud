@@ -19,6 +19,7 @@ export const Combine = ({ list, className }: ICombineProps) => {
         cols={{
           lg: 4,
           sm: 2,
+          xs: 1,
         }}
       />
     </div>

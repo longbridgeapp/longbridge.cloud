@@ -7,8 +7,9 @@ export interface IDotListProps {
   className?: string
   // 配置不同屏幕下的列数分配
   cols?: {
-    lg: number
-    sm: number
+    lg?: number
+    sm?: number
+    xs?: number
   }
 }
 export default function DotList({ list, className, cols }: IDotListProps) {
@@ -19,6 +20,7 @@ export default function DotList({ list, className, cols }: IDotListProps) {
         // @ts-ignore
         '--cols-lg': cols?.lg || 1,
         '--cols-sm': cols?.sm || 1,
+        '--cols-xs': cols?.xs || 1,
       }}
     >
       {list.map((subItem, subIndex) => (
