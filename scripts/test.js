@@ -1,13 +1,13 @@
 const fs = require('fs')
 
-const dir = './small-brokerages'
+const dir = './virtual_assets'
 const cn = fs.readFileSync(`./texts/${dir}/cn.txt`, 'utf8')
 const en = fs.readFileSync(`./texts/${dir}/en.txt`, 'utf8')
 const hk = fs.readFileSync(`./texts/${dir}/hk.txt`, 'utf8')
 
-const keyPrefix = 'small-brokerages'
+const keyPrefix = 'virtual_assets'
 
-function txtToJson (txt) {
+function txtToJson(txt) {
   const json = {}
   txt.split('\n').forEach((line, index) => {
     if (!line) {
@@ -34,10 +34,10 @@ function getLocaleJson(locale) {
 function getLocaleValueExists(locale, value) {
   const localeJson = getLocaleJson(locale)
   const localeJsonValues = Object.values(localeJson)
- return localeJsonValues.find(a => a === value)
+  return localeJsonValues.find(a => a === value)
 }
 
-function writeToLocale (locale, json) {
+function writeToLocale(locale, json) {
   const localePath = `../public/locales/${locale}/common.json`
   const localeJson = getLocaleJson(locale)
   Object.keys(json).forEach(key => {
@@ -51,14 +51,14 @@ function writeToLocale (locale, json) {
 writeToLocale('zh-CN', jsonCn)
 writeToLocale('en', jsonEn)
 writeToLocale('zh-HK', jsonHk)
-function writeToLocaleByCn (locale, json) {
+function writeToLocaleByCn(locale, json) {
   const localePath = `../public/locales/${locale}/common.json`
   const localeCnJson = getLocaleJson('zh-CN')
   const localeJson = getLocaleJson(locale)
   const localeCnValue = Object.keys(localeCnJson).map(key => {
     return {
       key,
-      value: localeCnJson[key]
+      value: localeCnJson[key],
     }
   })
   Object.keys(json).forEach(key => {

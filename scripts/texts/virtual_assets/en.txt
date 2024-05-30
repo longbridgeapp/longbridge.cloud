@@ -1,0 +1,47 @@
+The First Virtual Asset Trading Solution for the Hong Kong Market
+A 24/7 One-stop Virtual Asset Trading Solution
+As the first available provider of virtual asset solutions in the Hong Kong market, Whale offers a one-stop solution that includes market data, community information, trading, clearing, and more, meeting all the needs of clients in the virtual asset market. Virtual asset modules can be added to the securities trading system to quickly expand new businesses.
+Content Services - One-stop Data and Content Services
+Market Data Services
+Provides real-time market data with high speed, already integrated with HashKey and OSL exchanges
+Offers nearly 24-hour intraday trends, complete historical K-line data, and detailed trade records
+Provides up to 50 levels of depth data for ordering books
+Information Community Services
+Aggregates information from mainstream global digital currency media
+Flexible content distribution with compliance review based on regions
+7×24 continuous reporting
+Trading Services - Secure, Compliant, and Convenient Trading Experience
+Supports continuous 7×24 reporting
+Already integrated with HashKey and OSL exchanges
+Supports various order types such as limit orders, market orders, and long-term orders
+Account Services - Virtual Asset Accounts
+Comprehensive compliance support for virtual asset accounts
+A single account system supports both virtual asset and stock trading, eliminating the need for duplicate personal information filling
+Automated KYC verification process with instant generation of approval results, enabling account opening in as fast as 3 minutes
+Flexible switching between asset accounts, enabling instant fund transfers between stock and virtual asset accounts
+Retail App - Cross-platform Support for Virtual Asset Trading
+Supports mobile phones and pads with iOS and Android systems
+Supports all computer terminals such as Windows, macOS, Linux, and web terminals
+The same app supports both stock and virtual asset trading simultaneously
+Counter System - Comprehensive Support for Virtual Asset Counters
+Trading System
+Professional market trading tools fully support virtual asset market data, order placement, and asset inquiries, allowing traders/brokers to switch between stock and virtual asset trading seamlessly
+Unified asset management and high-performance trading risk control processing, providing excellent user experience, fast processing, and continuous 7×24 service capability
+Back-end Settlement System
+The clearing system supports uninterrupted clearing and settlement for 7×24 trading, already integrated with HashKey and OSL
+Various fees related to virtual asset trading, custody, and platform fees are supported, allowing flexible configurations for stock and virtual asset markets within a single counter
+The reporting system is compliant with SFC's virtual asset-related regulatory policies, supporting over 100 reports in categories such as clients, finance, trading, compliance, risk control, and settlement
+Whale provides professional solutions and products to cater to your diverse business needs:
+"Internet App Plus" Solution
+Trading Platform Solution
+Wealth Management Solution
+US Stock & Option Solution
+Virtual Asset Solution
+Counter System - Front/Middle Office
+Counter System - Back Office
+LongPort Community
+PortAI
+Digital Marketing Platform
+User Growth System
+Whale Trading Platfrom
+CRM & Account System

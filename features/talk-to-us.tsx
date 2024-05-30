@@ -1,4 +1,4 @@
-import React, { useState, createElement, useMemo, useCallback, CSSProperties } from 'react'
+import React, { useState, createElement, useMemo, useCallback, CSSProperties, ReactNode } from 'react'
 import Button from '@/components/button'
 import { useTranslation } from 'next-i18next'
 import { FullMask } from '@/components/popup'
@@ -274,27 +274,42 @@ export const TalkToUs = ({ className, style, text }: { className?: string; style
     </>
   )
 }
-
-export const ContactUs = ({ className, style }: any) => {
+export type IContactUsProps = {
+  className?: string
+  style?: CSSProperties
+  text?: string
+  children?: ReactNode
+}
+export const ContactUs = ({ className, style, text, children }: IContactUsProps) => {
   const i18n = useTranslation('common')
   return (
     <a href={getContactFormUrl(i18n.i18n.language)} target="_blank" rel="noreferrer">
-      <Button size="medium" className={classNames('mt-10', className)} style={style}>
-        {i18n.t('talk-to-us')}
-      </Button>
+      {children || (
+        <Button size="medium" className={classNames('mt-10', className)} style={style}>
+          {text || i18n.t('talk-to-us')}
+        </Button>
+      )}
     </a>
   )
 }
-export const ContactUsGhost = ({ className, style }: any) => {
+export const ContactUsGhost = ({ text }: IContactUsProps) => {
   const i18n = useTranslation('common')
   return (
-    <a
-      href={getContactFormUrl(i18n.i18n.language)}
-      target="_blank"
-      rel="noreferrer"
-      className="text-white border-white border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white"
-    >
-      {i18n.t('talk-to-us')}
-    </a>
+    <ContactUs>
+      <div className="text-white border-white border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white">
+        {text || i18n.t('talk-to-us')}
+      </div>
+    </ContactUs>
+  )
+}
+
+export const ContactUsBlack = ({ text }: IContactUsProps) => {
+  const i18n = useTranslation('common')
+  return (
+    <ContactUs>
+      <div className=" border-text-color-1 border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white">
+        {text || i18n.t('talk-to-us')}
+      </div>
+    </ContactUs>
   )
 }

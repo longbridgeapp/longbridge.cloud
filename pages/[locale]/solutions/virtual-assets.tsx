@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
-import { TalkToUs, ContactUs } from '@/features/talk-to-us'
+import { TalkToUs, ContactUs, ContactUsBlack } from '@/features/talk-to-us'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import { i18nPaths } from '@/utils/i18n-paths'
@@ -13,8 +13,10 @@ import Table from '@/components/table'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
 import WhaleOfficialFooter from '@/features/whale-official/footer'
-import TextPictureSecondary from '@/features/common/text-picture-secondary'
+import TextPictureSecondary, { ITextPictureSecondary } from '@/features/common/text-picture-secondary'
 import PictureTextBorderCard from '@/features/common/picture-text-bordercard'
+import { SolutionBanner } from '@/features/solutions/brokerages'
+import { Combine } from '@/features/solutions/combine'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -50,6 +52,16 @@ const tradeServiceImgMap: any = {
     'en': 'https://assets.lbkrs.com/uploads/968e6dbd-2e92-4f88-9158-230ae8ce96ee/va-account-en.png',
     'zh-CN': 'https://assets.lbkrs.com/uploads/48bb744c-0d5d-46dd-bd65-e9ebbef01ce1/va-account-cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/b5da436e-4f53-444f-8679-3c7adf15ce98/va-account-hk.png',
+  },
+  trade2: {
+    'en': 'https://assets.lbkrs.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
+  },
+  backend: {
+    'en': 'https://assets.lbkrs.com/uploads/0757c3ee-6639-4a11-a9e9-a0eacefb9d40/back-office-en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/388bc672-1105-4fa9-a241-52debb4b8475/back-office-cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/c1a88c8e-df0b-4379-b52a-3955993c6c66/back-office-hk.png',
   },
 }
 
@@ -126,64 +138,7 @@ const VirtualAssets = () => {
     ],
     body: [
       {
-        label: i18n.t('pages_locale_solutions_securities_market_8801'),
-        value: [
-          [
-            <div key="basic">
-              <div>{i18n.t('pages_locale_solutions_securities_market_8910_14')}</div>
-              <div className="text-xs text-text_color_2">
-                {i18n.t('pages_locale_solutions_securities_market_8910_15')}
-              </div>
-            </div>,
-            true,
-            true,
-          ],
-          [
-            <div key="ep">
-              <div>{i18n.t('pages_locale_solutions_securities_market_8910_16')}</div>
-              <div className="text-xs text-text_color_2">
-                {i18n.t('pages_locale_solutions_securities_market_8910_17')}
-              </div>
-            </div>,
-            true,
-            true,
-          ],
-        ],
-      },
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8802'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8803'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8804'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8805'), true, true],
-        ],
-      },
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8812'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8813'), true, true],
-          ['Margin Call', true, true],
-        ],
-      },
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8814'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8815'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8816'), true, true],
-        ],
-      },
-    ],
-    colRatio: [14, 58, 14, 14],
-  }
-  const table_2 = {
-    heads: [
-      { title: i18n.t('pages_locale_solutions_securities_market_8782') },
-      { title: i18n.t('pages_locale_solutions_app_plus_8694'), light: true },
-      { title: i18n.t('pages_locale_solutions_app_plus_8696'), light: true },
-    ],
-    body: [
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8801'),
+        label: i18n.t('pages_locale_solutions_virtual_assets_8911213'),
         value: [[i18n.t('pages_locale_solutions_virtual_assets_891141'), true, true]],
       },
       {
@@ -199,45 +154,6 @@ const VirtualAssets = () => {
             true,
             true,
           ],
-        ],
-      },
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8817'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8818'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8819'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8820'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8821'), false, true],
-        ],
-      },
-      {
-        label: i18n.t('pages_locale_solutions_securities_market_8831'),
-        value: [
-          [i18n.t('pages_locale_solutions_securities_market_8832'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8833'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8834'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8835'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8836'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8837'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8838'), true, true],
-          [i18n.t('pages_locale_solutions_securities_market_8839'), true, true],
-          [
-            'eDDA, sDDA',
-            false,
-            <span className="text-text_color_1_supplement" key="eDDA-sDDA">
-              {i18n.t('pages_locale_solutions_securities_market_8910_18')}
-            </span>,
-          ],
-          [
-            i18n.t('pages_locale_solutions_securities_market_8840'),
-            false,
-            <span className="text-text_color_1_supplement" key="sa-1">
-              {i18n.t('pages_locale_solutions_securities_market_8910_20')}
-            </span>,
-          ],
-          [i18n.t('pages_locale_solutions_securities_market_8841'), false, true],
-          [i18n.t('pages_locale_solutions_securities_market_8842'), false, true],
-          [i18n.t('pages_locale_solutions_securities_market_8843'), false, true],
         ],
       },
       {
@@ -274,13 +190,43 @@ const VirtualAssets = () => {
     ],
     colRatio: [14, 58, 14, 14],
   }
-  const table_3 = {
+  const table_2 = {
     heads: [
       { title: i18n.t('pages_locale_solutions_securities_market_8782') },
       { title: i18n.t('pages_locale_solutions_app_plus_8694'), light: true },
       { title: i18n.t('pages_locale_solutions_app_plus_8696'), light: true },
     ],
     body: [
+      {
+        label: i18n.t('pages_locale_solutions_securities_market_8831'),
+        value: [
+          [i18n.t('pages_locale_solutions_securities_market_8832'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8833'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8834'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8835'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8836'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8837'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8838'), true, true],
+          [i18n.t('pages_locale_solutions_securities_market_8839'), true, true],
+          [
+            'eDDA, sDDA',
+            false,
+            <span className="text-text_color_1_supplement" key="eDDA-sDDA">
+              {i18n.t('pages_locale_solutions_securities_market_8910_18')}
+            </span>,
+          ],
+          [
+            i18n.t('pages_locale_solutions_securities_market_8840'),
+            false,
+            <span className="text-text_color_1_supplement" key="sa-1">
+              {i18n.t('pages_locale_solutions_securities_market_8910_20')}
+            </span>,
+          ],
+          [i18n.t('pages_locale_solutions_securities_market_8841'), false, true],
+          [i18n.t('pages_locale_solutions_securities_market_8842'), false, true],
+          [i18n.t('pages_locale_solutions_securities_market_8843'), false, true],
+        ],
+      },
       {
         label: i18n.t('pages_locale_solutions_securities_market_8870'),
         value: [
@@ -345,16 +291,16 @@ const VirtualAssets = () => {
     return [
       {
         img: contentImgMap.left[i18n.i18n.language],
-        title: i18n.t('pages_locale_solutions_virtual_assets_891115'),
+        title: i18n.t('market_features_006'),
         list: [
           {
-            text: i18n.t('pages_locale_solutions_virtual_assets_891117'),
+            text: i18n.t('pages_virtual_assets5'),
           },
           {
-            text: i18n.t('pages_locale_solutions_virtual_assets_891118'),
+            text: i18n.t('pages_virtual_assets6'),
           },
           {
-            text: i18n.t('pages_locale_solutions_virtual_assets_891119'),
+            text: i18n.t('pages_virtual_assets7'),
           },
         ],
       },
@@ -365,13 +311,13 @@ const VirtualAssets = () => {
         button: <ContactUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />,
         list: [
           {
-            text: i18n.t('pages_locale_solutions_virtual_assets_891120'),
+            text: i18n.t('pages_virtual_assets9'),
           },
           {
             text: i18n.t('pages_locale_solutions_virtual_assets_891121'),
           },
           {
-            text: i18n.t('pages_locale_solutions_virtual_assets_891122'),
+            text: i18n.t('pages_virtual_assets11'),
           },
         ],
       },
@@ -382,55 +328,111 @@ const VirtualAssets = () => {
     return [
       {
         img: tradeServiceImgMap.trade[i18n.i18n.language],
-        title: i18n.t('pages_locale_solutions_virtual_assets_891125'),
+        title: i18n.t('pages_locale_solutions_virtual_assets_891123'),
+        desc: i18n.t('pages_locale_solutions_virtual_assets_891124'),
         button: undefined,
         list: [
           {
-            img: 'https://pub.lbkrs.com/static/offline/202301/DJpxkYQF5MzQjqQ8/list.svg',
-            text: i18n.t('pages_locale_solutions_virtual_assets_891126'),
+            text: i18n.t('pages_virtual_assets13'),
           },
           {
-            img: 'https://assets.lbkrs.com/uploads/3532eeb3-0628-446e-af01-a32e500fafdb/pl_analysis.png',
-            imgStyle: { height: '40px' },
-            text: i18n.t('pages_locale_solutions_virtual_assets_891127'),
+            text: i18n.t('pages_virtual_assets14'),
           },
           {
-            img: 'https://pub.lbkrs.com/static/offline/202301/hhec68Xh6JMi6MHY/list_record.svg',
             text: i18n.t('pages_locale_solutions_virtual_assets_891128'),
           },
         ],
       },
       {
         img: tradeServiceImgMap.account[i18n.i18n.language],
-        title: i18n.t('pages_locale_solutions_virtual_assets_891129'),
+        title: i18n.t('pages_virtual_assets16'),
+        desc: i18n.t('pages_locale_solutions_virtual_assets_891129'),
         className: 'lg:flex-row-reverse',
         button: undefined,
         list: [
           {
-            img: 'https://assets.lbkrs.com/uploads/4863c2a8-9bbf-45ee-ac60-294f2461edec/report.png',
-            imgStyle: { height: '40px' },
             text: i18n.t('pages_locale_solutions_virtual_assets_891130'),
           },
           {
-            img: 'https://assets.lbkrs.com/uploads/8d8724e7-26a5-4528-9f89-d59a4d193e35/aim.png',
-            imgStyle: { height: '40px' },
-            text: i18n.t('pages_locale_solutions_virtual_assets_891131'),
+            text: i18n.t('pages_locale_solutions_virtual_assets_891132'),
           },
           {
-            img: 'https://assets.lbkrs.com/uploads/0c34320c-c99c-434f-88a9-b9a7b80b721c/broker.png',
-            imgStyle: { height: '40px' },
-            text: i18n.t('pages_locale_solutions_virtual_assets_891132'),
+            text: i18n.t('pages_virtual_assets19'),
+          },
+          {
+            text: i18n.t('pages_virtual_assets20'),
+          },
+        ],
+      },
+      {
+        img: tradeServiceImgMap.account[i18n.i18n.language],
+        title: i18n.t('pages_virtual_assets21'),
+        desc: i18n.t('pages_virtual_assets21_1'),
+        button: undefined,
+        list: [
+          {
+            text: i18n.t('pages_virtual_assets22'),
+          },
+          {
+            text: i18n.t('pages_virtual_assets23'),
+          },
+          {
+            text: i18n.t('pages_virtual_assets24'),
           },
         ],
       },
     ]
   }, [])
 
+  const trade: ITextPictureSecondary = {
+    item: {
+      img: tradeServiceImgMap.trade2[i18n.i18n.language],
+      desc: i18n.t('pages_small_brokerages10'),
+      list: [
+        {
+          text: i18n.t('pages_locale_solutions_virtual_assets_891136'),
+        },
+        {
+          text: i18n.t('pages_locale_solutions_virtual_assets_891139'),
+        },
+      ],
+    },
+  }
+  const backend: ITextPictureSecondary = {
+    item: {
+      img: tradeServiceImgMap.backend[i18n.i18n.language],
+      desc: i18n.t('pages_brokerages48'),
+      list: [
+        {
+          text: i18n.t('pages_virtual_assets30'),
+        },
+        {
+          text: i18n.t('pages_locale_solutions_virtual_assets_891145'),
+        },
+        {
+          text: i18n.t('pages_locale_solutions_virtual_assets_891146'),
+        },
+      ],
+    },
+  }
+  const combineList = [
+    i18n.t('pages_virtual_assets34'),
+    i18n.t('pages_virtual_assets35'),
+    i18n.t('pages_virtual_assets36'),
+    i18n.t('pages_virtual_assets37'),
+    i18n.t('pages_virtual_assets38'),
+  ]
+
   return (
     <Layout>
       <SEOMeta title={seoI18n.t('virtual-assets.title')} description={seoI18n.t('virtual-assets.description')} />
       <div>
-        <Banner {...banner_props}></Banner>
+        <SolutionBanner
+          label={i18n.t('pages_virtual_assets0')}
+          title={i18n.t('pages_virtual_assets1')}
+          secondLineTitle=""
+          desc={i18n.t('pages_virtual_assets2')}
+        />
         <Box>
           <>
             <Title
@@ -444,48 +446,60 @@ const VirtualAssets = () => {
             </div>
           </>
         </Box>
-        <Box className="bg-bg_color_2">
+        {tradeServiceList.map((it, index) => {
+          return (
+            <Box
+              className={classNames({
+                'bg-bg_color_2': index % 2 === 0,
+              })}
+              key={index}
+            >
+              <div
+                className={classNames({
+                  'pb-10 pt-10': true,
+                  'border-solid border-b border-y-#EAEBEC': index !== tradeServiceList.length - 1,
+                })}
+              >
+                <TextPictureSecondary withDotList item={it} className={it.className} button={it.button} />
+              </div>
+            </Box>
+          )
+        })}
+
+        <Box>
           <>
-            <Title
-              label={i18n.t('pages_locale_solutions_virtual_assets_891123')}
-              title={i18n.t('pages_locale_solutions_virtual_assets_891124')}
-            ></Title>
-            {tradeServiceList.map((it, index) => {
-              return (
-                <div
-                  className={classNames({
-                    'pb-10 pt-10': true,
-                    'border-solid border-b border-y-#EAEBEC': index !== tradeServiceList.length - 1,
-                  })}
-                  key={index}
-                >
-                  <TextPictureSecondary item={it} className={it.className} button={it.button} />
+            <Title label={i18n.t('pages_brokerages21')} title={i18n.t('pages_brokerages22')}></Title>
+            <TextPictureSecondary
+              className="py-10"
+              {...trade}
+              withDotList
+              descClassName="!font-medium !text-[28px] !leading-10"
+              button={
+                <div className="flex mt-6">
+                  <ContactUsBlack text={i18n.t('features_solutions_info_introduce_891112')} />
                 </div>
-              )
-            })}
+              }
+            />
+
+            <Table data={table_1} thColSpan={1} />
+            <hr className="mt-20 border-[#EAEBEC]"></hr>
+            <TextPictureSecondary
+              className="py-10 flex-row-reverse"
+              {...backend}
+              withDotList
+              descClassName="!font-medium !text-[28px] !leading-10"
+              button={
+                <div className="flex mt-6">
+                  <ContactUsBlack text={i18n.t('features_solutions_info_introduce_891112')} />
+                </div>
+              }
+            />
+            <hr className=" border-[#EAEBEC]"></hr>
+            <Table data={table_2} thColSpan={1} />
           </>
         </Box>
         <Box>
-          <>
-            <Title
-              label={i18n.t('pages_locale_solutions_virtual_assets_891133')}
-              title={i18n.t('pages_locale_solutions_virtual_assets_891134')}
-            ></Title>
-            <div className="pt-10">
-              <ImageAndText {...content_banner_props} needContact needTalk={false} />
-            </div>
-            <Table data={table_1} thColSpan={1} />
-            <hr className="mt-20 border-[#EAEBEC]"></hr>
-            <div className="pt-10">
-              <ImageAndText {...content_banner_props_2} needContact needTalk={false} />
-            </div>
-            <Table data={table_2} thColSpan={1} />
-            <hr className="mt-20 border-[#EAEBEC]"></hr>
-            <div className="pt-10">
-              <ImageAndText {...content_banner_props_3} needContact needTalk={false} />
-            </div>
-            <Table data={table_3} thColSpan={1} />
-          </>
+          <Combine list={combineList} />
         </Box>
         <WhaleOfficialFooter />
       </div>
