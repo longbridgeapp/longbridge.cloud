@@ -28,12 +28,20 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 /** 将数组转换为换行 jsx */
-function arrayToLineJsx(arr: any[]) {
+function arrayToLineJsx(arr: any[], space?: number) {
   return arr.map((item, index) => {
     return (
       <>
         {item}
-        {index !== arr.length - 1 && <br />}
+        {index !== arr.length - 1 && space ? (
+          <div
+            style={{
+              height: `${space}px`,
+            }}
+          ></div>
+        ) : (
+          <br />
+        )}
       </>
     )
   })
@@ -153,7 +161,7 @@ const AccountPage = () => {
               i18n.t('pages_locale_account_zzbn1ewozq'),
             ]),
             {
-              children: i18n.t('pages_locale_account_qmeyjkhag3'),
+              children: arrayToLineJsx(i18n.t('pages_locale_account_qmeyjkhag3').split('\n'), 16),
               rowSpan: 3,
             },
           ],
@@ -197,9 +205,9 @@ const AccountPage = () => {
     i18n.t('pages_locale_account_4nor_psfcz'),
   ]
   const kycFeatures = [
-    i18n.t('pages_locale_account_9wbv9delxg'),
-    i18n.t('pages_locale_account_wr9896jqjt'),
-    i18n.t('pages_locale_account_dgdwciqpht'),
+    i18n.t('pages_locale_account_4nor_psfcz1'),
+    i18n.t('pages_locale_account_4nor_psfcz2'),
+    i18n.t('pages_locale_account_4nor_psfcz3'),
   ]
 
   const authenticAdvantages: IAdvantageProps['data'] = [
@@ -267,10 +275,17 @@ const AccountPage = () => {
             <Compare className="mt-10" compareId="account-1" list={compareList} />
           </>
         </Box>
-        <Box>
+        <Box className="whitespace-pre-line">
           <>
             <h4 className="text-[28px] font-medium">{i18n.t('pages_locale_account_bq7ra1bxr5')}</h4>
-            <DotList className="mt-6 mb-10" list={authenticFeatures} />
+            <DotList
+              cols={{
+                sm: 1,
+                lg: 2,
+              }}
+              className="mt-6 mb-10"
+              list={authenticFeatures}
+            />
             <Table data={table_1} thColSpan={0} className="normal-table" />
           </>
         </Box>
@@ -281,7 +296,7 @@ const AccountPage = () => {
               className="hidden lg:block absolute right-0 bottom-0 -z-10 w-1/3"
               alt=""
             />
-            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_uxkv0spgsc')}</h4>
+            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_891128')}</h4>
             <Advantage data={authenticAdvantages} />
           </div>
         </Box>
@@ -301,7 +316,7 @@ const AccountPage = () => {
                 sm: 1,
               }}
             />
-            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_uxkv0spgsc')}</h4>
+            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_891129')}</h4>
             <Advantage data={kycAdvantages} />
           </>
         </Box>
