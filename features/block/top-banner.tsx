@@ -107,7 +107,8 @@ export const IndexBanner = () => {
                   <div className="text-white text-[54px] leading-[68px] text-left">Securities as a Service</div>
                 </div>
                 <div className="text-3xl text-text_color_3_supplement">
-                  <div>{i18n.t('pages_locale_product_portai_891141')}</div>
+                  <div>Longbridge Whale Novel Solutions Launch 2024</div>
+                  {/* <div>{i18n.t('pages_locale_product_portai_891141')}</div> */}
                 </div>
                 <div className="flex space-x-4">
                   <LocaleLink
