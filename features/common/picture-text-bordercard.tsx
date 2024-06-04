@@ -8,8 +8,8 @@ const PictureTextBorderCard = ({ item }: Iprops) => {
   const i18n = useTranslation('common')
 
   return (
-    <div className="flex flex-col m-auto border border-solid rounded-md lg:block border-border_color">
-      <div className="max-w-[588px] rounded-t-lg overflow-hidden">
+    <div className="w-full border border-solid rounded-md lg:block border-border_color">
+      <div className="w-full lg:max-w-[588px] rounded-t-lg overflow-hidden">
         <img src={item?.img} alt="" />
       </div>
       <div className="max-w-[588px] box-border pt-8 pl-10 pr-10 pb-10">
