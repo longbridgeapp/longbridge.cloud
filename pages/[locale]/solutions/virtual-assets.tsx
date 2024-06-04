@@ -439,7 +439,7 @@ const VirtualAssets = () => {
               label={i18n.t('pages_locale_solutions_app_plus_8700')}
               title={i18n.t('pages_locale_solutions_app_plus_8743')}
             ></Title>
-            <div className="flex flex-col mt-10 lg:space-x-10 lg:flex-row gap-y-5">
+            <div className="flex flex-col mt-10 lg:space-x-10 lg:flex-row gap-y-5 lg:gap-y-0">
               {contentServicesList.map((item: any, index) => {
                 return <PictureTextBorderCard item={item} key={index} />
               })}
