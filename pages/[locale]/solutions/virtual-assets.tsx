@@ -54,6 +54,11 @@ const tradeServiceImgMap: any = {
     'zh-HK': 'https://assets.lbkrs.com/uploads/b5da436e-4f53-444f-8679-3c7adf15ce98/va-account-hk.png',
   },
   trade2: {
+    'en': 'https://assets.lbkrs.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
+  },
+  trade3: {
     'en': 'https://assets.lbkrs.com/uploads/0bd6da77-eede-4722-82d7-b865bad90105/va_trade_en.png',
     'zh-CN': 'https://assets.lbkrs.com/uploads/7607fc4e-f459-4b8b-aac7-1ce735ff1a0d/va_trade_cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/c93c0cce-3421-4564-a76c-9d77728300f5/va_trade_hk.png',
@@ -246,8 +251,7 @@ const VirtualAssets = () => {
       },
       {
         img: contentImgMap.right[i18n.i18n.language],
-        title: i18n.t('pages_locale_solutions_app_plus_8679'),
-        className: 'lg:flex-row-reverse',
+        title: i18n.t('pages_locale_solutions_app_plus_8679_1'),
         button: <ContactUs className="mt-10" text={i18n.t('features_solutions_info_introduce_891112')} />,
         list: [
           {
@@ -305,7 +309,7 @@ const VirtualAssets = () => {
         ],
       },
       {
-        img: tradeServiceImgMap.account[i18n.i18n.language],
+        img: tradeServiceImgMap.trade3[i18n.i18n.language],
         title: i18n.t('pages_virtual_assets21'),
         desc: i18n.t('pages_virtual_assets21_1'),
         button: undefined,
@@ -399,7 +403,12 @@ const VirtualAssets = () => {
                   'pb-10 pt-10': true,
                 })}
               >
-                <TextPictureSecondary withDotList item={it} className={it.className} button={it.button} />
+                <TextPictureSecondary
+                  withDotList
+                  item={it}
+                  className={it.className || 'md:space-x-12 xl:space-x-24'}
+                  button={it.button}
+                />
               </div>
             </Box>
           )
