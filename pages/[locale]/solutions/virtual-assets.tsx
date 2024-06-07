@@ -16,7 +16,7 @@ import WhaleOfficialFooter from '@/features/whale-official/footer'
 import TextPictureSecondary, { ITextPictureSecondary } from '@/features/common/text-picture-secondary'
 import PictureTextBorderCard from '@/features/common/picture-text-bordercard'
 import { SolutionBanner } from '@/features/solutions/brokerages'
-import { Combine } from '@/features/solutions/combine'
+import { Combine, ProductsTable } from '@/features/solutions/combine'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -31,14 +31,14 @@ export const getStaticProps = async (ctx: any) => ({
 
 const contentImgMap: any = {
   left: {
-    'en': 'https://assets.lbkrs.com/uploads/065d9e0e-2402-430c-9d05-c7cf5b867503/va-en-left.png',
-    'zh-CN': 'https://pub.lbkrs.com/files/202307/UHwkpFpRDXmsVhg4/data-service.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/5835efd1-0bce-49ef-9451-26b82b5f7120/va-hk-left.png',
+    'en': 'https://assets.lbkrs.com/uploads/07f79a53-6a99-4a7e-9704-f465af105ac5/va_trade_2_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/8d35f52e-5d73-4b47-b74a-0e41f1e6775b/va_trade_2_cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/d93a0fac-0f4e-4e0b-8b82-c01ffdc46ddb/va_trade_2_hk.png',
   },
   right: {
-    'en': 'https://assets.lbkrs.com/uploads/a844ba08-262c-449e-91d8-8397ad95449d/va-en-right.png',
-    'zh-CN': 'https://pub.lbkrs.com/files/202307/bAaqzTaLBy1AcDzx/message-service.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/db7e571d-14ca-4107-980b-588e64beb6aa/va-hk-right.png',
+    'en': 'https://assets.lbkrs.com/uploads/c8bad460-8818-4c32-995f-afc4ac3353eb/va_account_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/8fbdc86b-65e4-4366-98b8-5d6c7b6166ea/va_account_cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/d5a5c257-c358-411a-b1bb-98ef1396ff1f/va_account_hk.png',
   },
 }
 
@@ -54,9 +54,9 @@ const tradeServiceImgMap: any = {
     'zh-HK': 'https://assets.lbkrs.com/uploads/b5da436e-4f53-444f-8679-3c7adf15ce98/va-account-hk.png',
   },
   trade2: {
-    'en': 'https://assets.lbkrs.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
+    'en': 'https://assets.lbkrs.com/uploads/0bd6da77-eede-4722-82d7-b865bad90105/va_trade_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/7607fc4e-f459-4b8b-aac7-1ce735ff1a0d/va_trade_cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/c93c0cce-3421-4564-a76c-9d77728300f5/va_trade_hk.png',
   },
   backend: {
     'en': 'https://assets.lbkrs.com/uploads/0757c3ee-6639-4a11-a9e9-a0eacefb9d40/back-office-en.png',
@@ -69,66 +69,6 @@ const VirtualAssets = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   const isEn = i18n.i18n.language === 'en'
-
-  const banner_props = {
-    title: i18n.t('features_header_index_891113'),
-    imgClassName: 'lg:w-[790px]',
-    desc: [i18n.t('pages_locale_solutions_virtual_assets_891114')],
-    img: {
-      'en': 'https://assets.lbkrs.com/uploads/36951dbe-8428-4eae-ad37-c6e140bed7fb/va-banner-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/f09bda78-1d6c-478c-a76b-21fc77786985/va-banner-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/07551b92-c8a1-4486-9eb2-93dbd5cda67d/va-banner-hk.png',
-    },
-  }
-  const content_banner_props = {
-    title: i18n.t('pages_locale_solutions_virtual_assets_891135'),
-    titleClassName: '!text-[28px]',
-    imgClassName: '!w-[530px]',
-    desc: [
-      i18n.t('pages_locale_solutions_securities_market_8771'),
-      i18n.t('pages_locale_solutions_virtual_assets_891136'),
-    ],
-    img: {
-      'en': 'https://assets.lbkrs.com/uploads/bafba5af-ca6f-4f3e-83a9-ab94c2b390f2/front-office-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/6451fab9-3be0-41cc-a469-cfcb6d1597a8/front-office-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/19802a24-608e-4981-812e-8cde8fe420f5/front-office-hk.png',
-    },
-    // localLink: '/longport',
-  }
-  const content_banner_props_2 = {
-    title: i18n.t('pages_locale_solutions_virtual_assets_891137'),
-    titleClassName: '!text-[28px]',
-    imgClassName: '!w-[530px]',
-    desc: [
-      i18n.t('pages_locale_solutions_securities_market_8773'),
-      i18n.t('pages_locale_solutions_virtual_assets_891138'),
-      i18n.t('pages_locale_solutions_virtual_assets_891139'),
-      i18n.t('pages_locale_solutions_securities_market_8777'),
-      i18n.t('pages_locale_solutions_virtual_assets_891140'),
-    ],
-    reverse: false,
-    img: {
-      'en': 'https://assets.lbkrs.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
-    },
-  }
-  const content_banner_props_3 = {
-    title: i18n.t('pages_locale_solutions_virtual_assets_891143'),
-    titleClassName: '!text-[28px]',
-    imgClassName: '!w-[530px]',
-    desc: [
-      i18n.t('pages_locale_solutions_virtual_assets_891144'),
-      i18n.t('pages_locale_solutions_virtual_assets_891145'),
-      i18n.t('pages_locale_solutions_virtual_assets_891146'),
-      i18n.t('pages_locale_solutions_securities_market_8781'),
-    ],
-    img: {
-      'en': 'https://assets.lbkrs.com/uploads/0757c3ee-6639-4a11-a9e9-a0eacefb9d40/back-office-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/388bc672-1105-4fa9-a241-52debb4b8475/back-office-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/c1a88c8e-df0b-4379-b52a-3955993c6c66/back-office-hk.png',
-    },
-  }
 
   const table_1 = {
     heads: [
@@ -433,7 +373,7 @@ const VirtualAssets = () => {
           secondLineTitle=""
           desc={i18n.t('pages_virtual_assets2')}
         />
-        <Box>
+        <Box className="lg:py-20">
           <>
             <Title
               label={i18n.t('pages_locale_solutions_app_plus_8700')}
@@ -457,7 +397,6 @@ const VirtualAssets = () => {
               <div
                 className={classNames({
                   'pb-10 pt-10': true,
-                  'border-solid border-b border-y-#EAEBEC': index !== tradeServiceList.length - 1,
                 })}
               >
                 <TextPictureSecondary withDotList item={it} className={it.className} button={it.button} />
@@ -466,7 +405,7 @@ const VirtualAssets = () => {
           )
         })}
 
-        <Box>
+        <Box className="lg:py-20">
           <>
             <Title label={i18n.t('pages_brokerages21')} title={i18n.t('pages_brokerages22')}></Title>
             <TextPictureSecondary
@@ -498,8 +437,8 @@ const VirtualAssets = () => {
             <Table data={table_2} thColSpan={1} />
           </>
         </Box>
-        <Box>
-          <Combine list={combineList} />
+        <Box className="bg-bg_color_2 lg:py-20">
+          <ProductsTable />
         </Box>
         <WhaleOfficialFooter />
       </div>

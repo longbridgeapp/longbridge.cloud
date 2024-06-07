@@ -300,7 +300,7 @@ const AccountPage = () => {
             <Advantage data={authenticAdvantages} />
           </div>
         </Box>
-        <Box className="bg-bg_color_2 !pt-20">
+        <Box className="bg-bg_color_2 lg:py-20">
           <>
             <Title
               title={i18n.t('pages_locale_account_kypkif5l_6')}
