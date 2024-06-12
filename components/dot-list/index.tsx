@@ -15,7 +15,7 @@ export interface IDotListProps {
 export default function DotList({ list, className, cols }: IDotListProps) {
   return (
     <ul
-      className={classNames(className, styles['dot-list'])}
+      className={classNames(className, 'text-base', styles['dot-list'])}
       style={{
         // @ts-ignore
         '--cols-lg': cols?.lg || 1,

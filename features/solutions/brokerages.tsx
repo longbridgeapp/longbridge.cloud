@@ -173,7 +173,7 @@ export const BrokeragesProducts = () => {
 
   return (
     <div>
-      <Title title={i18n.i18n.t('pages_brokerages43')} />
+      <Title title={i18n.t('pages_brokerages43')} />
       <div className="grid lg:grid-cols-2 gap-x-[120px] gap-y-9">
         {products.map((product, index) => {
           return (

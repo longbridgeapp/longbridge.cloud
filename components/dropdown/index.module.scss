@@ -32,7 +32,7 @@
   .dropdown-menu__item {
     @apply px-5 py-3 cursor-pointer text-black font-normal;
 
-    transition: all 0.2s;
+    transition: background-color 0.2s;
     &:hover,
     &.dropdown-menu__item--selected {
       @apply text-white;

@@ -6,18 +6,38 @@ export interface ITextPictureSecondary {
   button?: JSX.Element
   withDotList?: boolean
   descClassName?: string
-  item: { img: string; title?: string; desc?: string; list: { img?: string; text: string; imgStyle?: Object }[] }
+  titleWrapperClassName?: string
+  item: {
+    img: string
+    imgWidth?: number
+    title?: string
+    desc?: string
+    list: { img?: string; text: string; imgStyle?: Object }[]
+  }
 }
-const TextPictureSecondary = ({ item, descClassName, withDotList, className, button }: ITextPictureSecondary) => {
+const TextPictureSecondary = ({
+  item,
+  titleWrapperClassName,
+  descClassName,
+  withDotList,
+  className,
+  button,
+}: ITextPictureSecondary) => {
   return (
     <div className={`${className} flex items-center flex-col lg:flex-row justify-between `}>
-      <img className="w-[588px]" src={item?.img} alt="" />
+      <img
+        style={{
+          width: `${item.imgWidth ? item.imgWidth : '588'}px`,
+        }}
+        src={item?.img}
+        alt=""
+      />
       <div
         className={classNames({
           'flex-1 w-full lg:px-4': withDotList,
         })}
       >
-        <div className="font-medium text-[28px] mb-10">
+        <div className={classNames('font-medium text-[28px] mb-10', titleWrapperClassName)}>
           <span
             className={classNames({
               'text-brand_color text-xl': withDotList,

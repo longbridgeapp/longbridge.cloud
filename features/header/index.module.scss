@@ -1,6 +1,8 @@
 :local(.navs) {
   .nav-item {
-    @apply transition-all text-black font-medium;
+    @apply text-black font-medium;
+
+    transition: background-color cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
     &.nav-item__selected,
     &:hover {
       color: var(--brand_color);

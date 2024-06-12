@@ -3,7 +3,7 @@
 
   grid-template-columns: repeat(var(--cols-xs, 1), minmax(0, 1fr));
   .list-item {
-    @apply text-text_color_1_supplement text-base ml-0 flex;
+    @apply text-text_color_1_supplement  ml-0 flex;
 
     .dot {
       @apply w-1.5 h-1.5 bg-[#5622CF] mr-4;
