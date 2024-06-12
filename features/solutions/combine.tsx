@@ -80,7 +80,7 @@ export const ProductsTable = ({ products: propsProducts, className }: IProductsT
                 {product.list.map((item, index) => {
                   return (
                     <div key={index} className="flex">
-                      <div className="w-1.5 h-1.5 bg-brand_color mr-4 mt-2"></div>
+                      <div className="w-1.5 h-1.5 bg-brand_color mr-4 mt-[9px]"></div>
                       <div className="w-0 flex-1">{item}</div>
                     </div>
                   )

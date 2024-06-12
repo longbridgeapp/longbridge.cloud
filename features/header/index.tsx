@@ -16,6 +16,7 @@ function useNavs() {
   const [reports] = useReports()
 
   const i18n = useTranslation('common')
+  const seoI18n = useTranslation('seo')
   return useMemo(() => {
     return [
       {
@@ -92,6 +93,10 @@ function useNavs() {
           {
             value: '/solutions/virtual-assets',
             label: i18n.t('features_header_index_891113'),
+          },
+          {
+            value: '/solutions/us-stock',
+            label: seoI18n.t('us-stock.title'),
           },
           // {
           //   value: '/solutions/brokerages',
@@ -234,7 +239,6 @@ const Navs = () => {
       <div className="md:hidden">
         <Dropdown
           trigger="click"
-          onChange={path => navigate(path)}
           className="!bg-transparent !text-black"
           alwaysChildren
           value={pathname}

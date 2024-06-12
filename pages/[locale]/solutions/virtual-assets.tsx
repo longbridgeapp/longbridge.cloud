@@ -359,14 +359,6 @@ const VirtualAssets = () => {
       ],
     },
   }
-  const combineList = [
-    i18n.t('pages_virtual_assets34'),
-    i18n.t('pages_virtual_assets35'),
-    i18n.t('pages_virtual_assets36'),
-    i18n.t('pages_virtual_assets37'),
-    i18n.t('pages_virtual_assets38'),
-  ]
-
   return (
     <Layout>
       <SEOMeta title={seoI18n.t('virtual-assets.title')} description={seoI18n.t('virtual-assets.description')} />
