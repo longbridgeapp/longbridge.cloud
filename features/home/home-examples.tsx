@@ -1,6 +1,8 @@
 import { useTranslation } from 'next-i18next'
-import { useMemo } from 'react'
+import { useEffect, useMemo, useRef, useState } from 'react'
 import { Carousel } from 'antd'
+import { useSafeState, useSize } from 'ahooks'
+import { useCarouserAutoHeight } from '@/hooks/use-resize'
 
 const HomeExamples = () => {
   const i18n = useTranslation('common')
@@ -9,10 +11,10 @@ const HomeExamples = () => {
       {
         title: i18n.t('features_home_home_examples_891131'),
         desc: i18n.t('features_home_home_examples_891132'),
-        content: i18n.t('features_home_home_examples_891133'),
-        name: i18n.t('features_home_home_examples_891134'),
-        position: i18n.t('features_home_home_examples_891135'),
-        company: i18n.t('features_home_home_examples_891136'),
+        content: i18n.t('pages_example0'),
+        position: i18n.t('pages_example1'),
+        name: '',
+        company: i18n.t('pages_example2'),
       },
       {
         title: i18n.t('features_home_home_examples_891131'),
@@ -32,8 +34,9 @@ const HomeExamples = () => {
       // },
     ]
   }, [])
+  const { containerRef, height } = useCarouserAutoHeight()
   return (
-    <div>
+    <div ref={containerRef}>
       <style>
         {`
             .examples-section button {
@@ -48,9 +51,17 @@ const HomeExamples = () => {
       <Carousel className="examples-section bg-cover" autoplay={true} autoplaySpeed={5000} effect="fade">
         {list.map((item, index) => {
           return (
-            <div className="h-[522px]" key={index}>
-              <div className="h-[522px] bg-[#5622CF] border-box pt-10 sm:pt-20 bg-no-repeat bg-right-top bg-[length:56%_522px]" style={{ backgroundImage: `url('https://pub.lbkrs.com/files/202307/P5TtXZEMWM4h37W2/bg-image2.png')` }}>
-                <div className="text-[#ffffff] text-2xl sm:text-4xl text-center font-semibold border-box px-5">{item.title}</div>
+            <div className="" key={index}>
+              <div
+                className="py-10 sm:py-20 bg-[#5622CF] border-box bg-no-repeat bg-right-top bg-[length:56%_522px]"
+                style={{
+                  backgroundImage: `url('https://pub.lbkrs.com/files/202307/P5TtXZEMWM4h37W2/bg-image2.png')`,
+                  height,
+                }}
+              >
+                <div className="text-[#ffffff] text-2xl sm:text-4xl text-center font-semibold border-box px-5">
+                  {item.title}
+                </div>
                 <div className="text-center mt-4 text-lg sm:text-xl text-[#ffffff] border-box px-5">{item.desc}</div>
                 <div className="relative mt-[20px] md:mt-[50px] lg:mt-[70px] xl:mt-[70px] 2xl:mt-[70px] w-[49%] m-auto text-[#ffffff] min-w-[370px] px-3">
                   <div className="leading-7 skew-x-[-6deg]">{item.content}</div>
