@@ -1,6 +1,6 @@
 import { isServer } from '@/utils/common'
-import { useDebounceFn, useSafeState } from 'ahooks'
-import { useEffect } from 'react'
+import { useDebounceFn, useSafeState, useSize } from 'ahooks'
+import { useEffect, useRef } from 'react'
 
 export function useResize() {
   const [width, setWidth] = useSafeState(isServer() ? 1920 : window.innerWidth)
@@ -38,5 +38,30 @@ export function keepSiblingsHeight(wrapperClass: string, className: string) {
       const _dom = d as HTMLElement
       _dom.style.height = `${maxHeight}px`
     })
+  }
+}
+/** 动态计算走马灯组件高度，让内部高度自适应 */
+export function useCarouserAutoHeight() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const { width: bodyWidth } = useSize(typeof window === 'undefined' ? null : document.body) || {}
+  const [useFixedHeight, setUseFixedHeight] = useSafeState(false)
+  const { run: onResize } = useDebounceFn(
+    () => {
+      setUseFixedHeight(false)
+      setTimeout(() => {
+        setUseFixedHeight(true)
+      }, 100)
+    },
+    {
+      wait: 300,
+    }
+  )
+  useEffect(() => {
+    onResize()
+  }, [bodyWidth])
+
+  return {
+    containerRef,
+    height: useFixedHeight && containerRef.current ? `${containerRef.current.clientHeight}px` : 'auto',
   }
 }
