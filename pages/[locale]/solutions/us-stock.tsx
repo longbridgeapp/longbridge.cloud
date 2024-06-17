@@ -46,9 +46,9 @@ const contentImgMap: any = {
 
 const tradeServiceImgMap: any = {
   architecture: {
-    'en': 'https://assets.lbkrs.com/uploads/a3e4ab6a-cd78-4728-a140-0352f3d857f6/us_stock_architecture_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/229f5665-3e8d-4568-8527-eada1462e737/us_stock_architecture_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/728234fc-c4c1-4986-a68d-1c6123ed606c/us_stock_architecture_hk.png',
+    'en': 'https://assets.lbkrs.com/uploads/b700c9ea-7862-446e-bc15-46ab08ce5b48/us_stock_architecture_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/a73b7d34-7661-4bd4-a848-521198c56003/us_stock_architecture_cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/c3141781-ae69-44a7-89f5-732df94b9993/us_stock_architecture_hk.png',
   },
   backend: {
     'en': 'https://assets.lbkrs.com/uploads/f45ba9d3-ef22-4d24-bf02-b7c978c00bd1/backend_en.png',
@@ -207,6 +207,9 @@ const UsStock = () => {
         },
         {
           text: i18n.t('pages_us_stock55'),
+        },
+        {
+          text: i18n.t('pages_us_stock56'),
         },
       ],
     },

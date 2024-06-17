@@ -361,7 +361,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
             </>
           }
           right={
-            <div className="relative mt-10 lg:mt-0 w-full">
+            <div className="relative mt-10 lg:mt-0 w-full xl:ml-16">
               <img
                 src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
                 alt="zero to one"
