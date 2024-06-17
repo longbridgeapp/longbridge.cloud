@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import Title from '../common/title'
 import classNames from 'classnames'
+import { LocaleLink } from '@/components/locale-link'
 
 export type ICombineProps = {
   className?: string
@@ -30,7 +31,10 @@ export type IProductsTableProps = {
   className?: string
   products?: {
     label: string
-    list: ReactNode[]
+    list: {
+      title: ReactNode
+      link: string
+    }[]
   }[]
 }
 export const ProductsTable = ({ products: propsProducts, className }: IProductsTableProps) => {
@@ -39,24 +43,63 @@ export const ProductsTable = ({ products: propsProducts, className }: IProductsT
     {
       label: i18n.t('whale-delivery-system-028'),
       list: [
-        i18n.t('pages_virtual_assets34'),
-        i18n.t('pages_virtual_assets35'),
-        i18n.t('pages_virtual_assets36'),
-        i18n.t('pages_virtual_assets37'),
-        i18n.t('pages_virtual_assets38'),
+        {
+          title: i18n.t('pages_virtual_assets34'),
+          link: '/solutions/app-plus',
+        },
+        {
+          title: i18n.t('pages_virtual_assets35'),
+          link: '/solutions/securities-market',
+        },
+        {
+          title: i18n.t('pages_virtual_assets36'),
+          link: '',
+        },
+        {
+          title: i18n.t('pages_virtual_assets37'),
+          link: '/solutions/us-stock',
+        },
+        {
+          title: i18n.t('pages_virtual_assets38'),
+          link: '/solutions/virtual-assets',
+        },
       ],
     },
     {
       label: i18n.t('pages_brokerages64'),
       list: [
-        i18n.t('pages_brokerages65'),
-        i18n.t('pages_brokerages66'),
-        i18n.t('pages_brokerages67'),
-        'PortAI',
-        i18n.t('pages_brokerages69'),
-        i18n.t('pages_brokerages70'),
-        i18n.t('pages_brokerages71'),
-        i18n.t('pages_brokerages72'),
+        {
+          title: i18n.t('pages_brokerages65'),
+          link: '/front-desk',
+        },
+        {
+          title: i18n.t('pages_brokerages66'),
+          link: '/backoffice',
+        },
+        {
+          title: i18n.t('pages_brokerages67'),
+          link: '/longport',
+        },
+        {
+          title: 'PortAI',
+          link: '/portai',
+        },
+        {
+          title: i18n.t('pages_brokerages69'),
+          link: '/delivery-system',
+        },
+        {
+          title: i18n.t('pages_brokerages70'),
+          link: '/marketing',
+        },
+        {
+          title: i18n.t('pages_brokerages71'),
+          link: '/retail',
+        },
+        {
+          title: i18n.t('pages_brokerages72'),
+          link: '/account',
+        },
       ],
     },
   ]
@@ -79,10 +122,10 @@ export const ProductsTable = ({ products: propsProducts, className }: IProductsT
               >
                 {product.list.map((item, index) => {
                   return (
-                    <div key={index} className="flex">
+                    <LocaleLink to={item.link} key={index} className="flex">
                       <div className="w-1.5 h-1.5 bg-brand_color mr-4 mt-[9px]"></div>
-                      <div className="w-0 flex-1">{item}</div>
-                    </div>
+                      <div className="w-0 flex-1">{item.title}</div>
+                    </LocaleLink>
                   )
                 })}
                 {index < products.length - 1 && (
