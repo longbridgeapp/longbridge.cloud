@@ -289,17 +289,6 @@ const AccountPage = () => {
             <Table data={table_1} thColSpan={0} className="normal-table" />
           </>
         </Box>
-        <Box className="!pb-0">
-          <div className="relative pb-10">
-            <img
-              src="https://assets.lbkrs.com/uploads/5fcf34dd-a67a-41cb-b6d3-24bdaf0ad13d/bg_1.png"
-              className="hidden lg:block absolute right-0 bottom-0 -z-10 w-1/3"
-              alt=""
-            />
-            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_891128')}</h4>
-            <Advantage data={authenticAdvantages} />
-          </div>
-        </Box>
         <Box className="bg-bg_color_2 lg:py-20">
           <>
             <Title
@@ -309,15 +298,13 @@ const AccountPage = () => {
             <Compare className="mt-10 mb-20" compareId="account-1" list={compareList2} />
             <h4 className="text-[28px] font-medium">{i18n.t('pages_locale_account_jxkghpeogl')}</h4>
             <DotList
-              className="mt-6 mb-20"
+              className="mt-6"
               list={kycFeatures}
               cols={{
                 lg: 2,
                 sm: 1,
               }}
             />
-            <h4 className="text-[28px] font-medium mb-8">{i18n.t('pages_locale_account_891129')}</h4>
-            <Advantage data={kycAdvantages} />
           </>
         </Box>
         <WhaleOfficialFooterNew />
