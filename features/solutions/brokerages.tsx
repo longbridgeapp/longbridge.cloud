@@ -336,14 +336,14 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
       className="relative bg-center bg-no-repeat"
       imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
     >
-      <Block className="py-10 md:py-[72px] px-6 md:px-0">
+      <Block className={classNames(styles['solution-banner'], 'py-10 md:py-[72px] px-6 md:px-0')}>
         <BlockBetween
           left={
             <>
               <div className="mb-3 text-xl text-left text-text_color_3_supplement">
                 <div className="text-brand_color_3 mb-2">{props.label}</div>
                 <div className="text-white text-3xl lg:text-[40px] lg:leading-[56px] text-left font-semibold">
-                  <span className=" lg:whitespace-nowrap lg:en:whitespace-normal">{props.title}</span>
+                  <span className="xl:whitespace-nowrap xl:en:whitespace-normal">{props.title}</span>
                   {props.secondLineTitle && (
                     <>
                       <br />
@@ -361,13 +361,11 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
             </>
           }
           right={
-            <div className="relative mt-10 lg:mt-0 w-full xl:ml-16">
-              <img
-                src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
-                alt="zero to one"
-                className="right-0 object-cover w-4/5 lg:w-[380px] xl:w-[428px] lg:absolute top-1/2 lg:-translate-y-1/2"
-              />
-            </div>
+            <img
+              src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
+              alt="zero to one"
+              className="right-0 object-cover w-4/5 md:w-[380px] xl:w-[428px]  mt-10 lg:mt-0  xl:ml-16"
+            />
           }
         ></BlockBetween>
       </Block>

@@ -58,9 +58,9 @@ export const BlockBetween = ({
         className
       )}
     >
-      <div className="flex-1">{left}</div>
+      <div className="flex-1 block-left">{left}</div>
       <div className="mr-10"></div>
-      <div className="flex-1">{right}</div>
+      <div className="flex-1 block-right">{right}</div>
     </div>
   )
 }
