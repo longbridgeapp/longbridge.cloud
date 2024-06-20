@@ -41,7 +41,7 @@ export const ProductsTable = ({ products: propsProducts, className }: IProductsT
   const i18n = useTranslation('common')
   const products = propsProducts || [
     {
-      label: i18n.t('whale-delivery-system-028'),
+      label: i18n.t('footer_table_1'),
       list: [
         {
           title: i18n.t('pages_virtual_assets34'),

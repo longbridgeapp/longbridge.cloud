@@ -409,7 +409,7 @@ const VirtualAssets = () => {
         <Box className="lg:py-20">
           <>
             <Title
-              label={i18n.t('pages_locale_solutions_virtual_assets_891133')}
+              label={i18n.t('pages_locale_solutions_virtual_assets_23')}
               title={i18n.t('pages_virtual_assets39')}
             ></Title>
             <TextPictureSecondary
