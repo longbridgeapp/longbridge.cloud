@@ -12,6 +12,9 @@
     .ant-tabs-ink-bar {
       @apply bg-brand_color scale-x-75;
     }
+    .ant-tabs-nav {
+      @apply mb-10;
+    }
 
     .ant-tabs-nav-more {
       @apply hidden;

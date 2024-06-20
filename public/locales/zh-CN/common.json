@@ -1502,6 +1502,7 @@
   "pages_locale_solutions_virtual_assets_23": "柜台系统",
   "pages_wm0": "Whale 一站式财富管理解决方案",
   "pages_wm0_1": "一站式线上化的财富管理平台",
+  "pages_wm0_2": "一站式财富管理解决方案",
   "pages_wm1": "Whale 一站式财富管理解决方案，为券商提供结构性产品和债券的上架、询价、风控、交易、结算及生命周期管理等一体化线上服务，并支持投资移民业务发展，覆盖客户服务、财务管理、交易执行、风控和清算交收等场景。",
   "pages_wm2": "客户对线上化服务需求强劲，\n金融产品缺乏网上一体化服务",
   "pages_wm3": "越来越多的客户倾向于使用网上金融服务，但目前市场上许多关键的线上服务需求尚未得到充分满足。",
@@ -1577,5 +1578,10 @@
   "pages_wm80": "全面连接财富管理生态圈，打通上下游供应链",
   "pages_example0": "Longbridge Whale 及其重要合作伙伴 CGS International Holdings 荣获 2024 年《亚洲银行家》香港卓越零售金融和技术创新奖的“最佳财富管理技术实施奖”。Galaxy Global 由中国银河证券的香港国际子公司与 Longbridge Technology 合作开发。通过专注于持续的技术创新和安全性，Galaxy Global 旨在设立交易技术的新标准。",
   "pages_example1": "报道者：亚洲银行家",
-  "pages_example2": "奖项颁发者：TAB Global"
+  "pages_example2": "奖项颁发者：TAB Global",
+  "pages_wm64": "现成产品直接获取",
+  "pages_wm34": "客户对线上化服务需求强劲，金融产品缺乏网上一体化服务",
+  "pages_wm156": "全面连接财富管理生态圈",
+  "pages_wm157": "自动化和集中化管理",
+  "pages_wm158": "合规风险控制和客户体验提升"
 }

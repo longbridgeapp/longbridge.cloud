@@ -99,7 +99,7 @@ function useNavs() {
           },
           {
             value: '/solutions/wealth-management',
-            label: i18n.t('一站式财富管理解决方案'),
+            label: i18n.t('pages_wm0_2'),
           },
           // {
           //   value: '/solutions/brokerages',

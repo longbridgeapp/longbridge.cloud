@@ -20,5 +20,13 @@
   }
   @screen lg {
     grid-template-columns: repeat(var(--cols-lg, 1), minmax(0, 1fr));
+    &.lg-with-flex {
+      @apply flex gap-0;
+      .list-item {
+        .content {
+          @apply w-auto;
+        }
+      }
+    }
   }
 }
