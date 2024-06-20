@@ -16,7 +16,6 @@ function useNavs() {
   const [reports] = useReports()
 
   const i18n = useTranslation('common')
-  const seoI18n = useTranslation('seo')
   return useMemo(() => {
     return [
       {
@@ -74,7 +73,7 @@ function useNavs() {
           },
           {
             value: '/account',
-            label: i18n.t('features_header_index_891125'),
+            label: i18n.t('pages_virtual_assets40'),
           },
         ],
       },
@@ -96,7 +95,11 @@ function useNavs() {
           },
           {
             value: '/solutions/us-stock',
-            label: seoI18n.t('us-stock.title'),
+            label: i18n.t('pages_us_stock80'),
+          },
+          {
+            value: '/solutions/wealth-management',
+            label: i18n.t('一站式财富管理解决方案'),
           },
           // {
           //   value: '/solutions/brokerages',

@@ -1287,7 +1287,7 @@
   "pages_brokerages1_1": "助您持续赢得业务增长",
   "pages_brokerages2": "Whale 助力快速增长期的券商突破发展瓶颈，采用 Whale 新一代数字化证券交易解决方案，获得领先市场的竞争力，在显著降低 IT 系统成本的同时，定制差异化竞争产品和功能，打造具有全球影响力的品牌，实现跨越式增长。",
   "pages_brokerages3": "白标定制 White Label",
-  "pages_brokerages4": "体验领先行业的 White Label，<br />帮助券商构建全球影响力品牌",
+  "pages_brokerages4": "体验领先行业的 White Label，\n帮助券商构建全球影响力品牌",
   "pages_brokerages5": "White Label App 灵活快速打造独立且全面的品牌形象",
   "pages_brokerages6": "丰富的内容及平台运营能力，构建了用户“发现 - 认知 - 交易“的完整交易闭环",
   "pages_brokerages7": "40 万 + 的用户构成了香港第二大证券交易社区，活跃的客户激发了大量的投资灵感",
@@ -1431,6 +1431,7 @@
   "pages_virtual_assets37": "美股及美股期权解决方案",
   "pages_virtual_assets38": "虚拟资产交易解决方案",
   "pages_virtual_assets39": "全方位支持虚拟资产的柜台系统",
+  "pages_virtual_assets40": "账户管理系统",
   "pages_locale_solutions_virtual_assets_8911213": "市场支持",
   "pages_us_stock0": "Whale 一站式美股及美股期权解决方案",
   "pages_us_stock1": "落地快、成本低，获得强大的美股交易能力",
@@ -1495,5 +1496,8 @@
   "pages_us_stock90": "新客户：",
   "pages_us_stock91": "与第三方股票柜台融合对接",
   "pages_us_stock78": "一站式解决方案，",
-  "pages_us_stock79": "覆盖业务场景全链路"
+  "pages_us_stock79": "覆盖业务场景全链路",
+  "pages_us_stock80": "一站式美股及美股期权解决方案",
+  "footer_table_1": "解决方案",
+  "pages_locale_solutions_virtual_assets_23": "柜台系统"
 }

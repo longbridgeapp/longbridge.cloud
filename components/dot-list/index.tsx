@@ -11,8 +11,9 @@ export interface IDotListProps {
     sm?: number
     xs?: number
   }
+  dot?: ReactNode
 }
-export default function DotList({ list, className, cols }: IDotListProps) {
+export default function DotList({ list, className, cols, dot }: IDotListProps) {
   return (
     <ul
       className={classNames(className, 'text-base', styles['dot-list'])}
@@ -25,7 +26,7 @@ export default function DotList({ list, className, cols }: IDotListProps) {
     >
       {list.map((subItem, subIndex) => (
         <li className="list-item" key={subIndex}>
-          <span className="dot"></span>
+          {dot || <span className="dot"></span>}
           <span className="content">{subItem}</span>
         </li>
       ))}

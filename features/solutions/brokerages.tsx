@@ -68,8 +68,6 @@ export const BrokeragesTabs = () => {
     <div className={styles['tabs-wrapper']}>
       <Tabs
         items={tabs.map(tab => {
-          const titleParagraphs = tab.title.split('<br />')
-
           return {
             label: tab.tabTitle,
             key: tab.key,
@@ -78,17 +76,7 @@ export const BrokeragesTabs = () => {
                 <div className="flex-1">
                   <div className="text-xl text-brand_color mb-2">{tab.label}</div>
                   <div className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8">
-                    <div className="hidden lg:block">
-                      {titleParagraphs.map((item, index) => {
-                        return (
-                          <>
-                            {item}
-                            {index !== titleParagraphs.length - 1 && <br />}
-                          </>
-                        )
-                      })}
-                    </div>
-                    <div className="lg:hidden">{tab.title.replaceAll('<br />', '')}</div>
+                    <div className="whitespace-pre-line">{tab.title}</div>
                   </div>
                   <div>
                     <DotList list={tab.features} />

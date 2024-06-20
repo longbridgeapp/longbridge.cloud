@@ -1287,7 +1287,7 @@
   "pages_brokerages1_1": "助您持續贏得業務增長",
   "pages_brokerages2": "Whale 助力快速增長期的券商突破發展瓶頸，採用 Whale 新一代數字化證券交易解決方案，獲得領先市場的競爭力，在顯著降低 IT 系統成本的同時，定製差異化競爭產品和功能，打造具有全球影響力的品牌，實現跨越式增長。",
   "pages_brokerages3": "白標定製 App",
-  "pages_brokerages4": "體驗領先行業的 White Label，<br />幫助券商建立全球影響力品牌",
+  "pages_brokerages4": "體驗領先行業的 White Label，\n幫助券商建立全球影響力品牌",
   "pages_brokerages5": "White Label App 靈活快速打造獨立且全面的品牌形象",
   "pages_brokerages6": "豐富的內容及平台營運能力，建構了用戶「發現 - 認知 - 交易」的完整交易閉環",
   "pages_brokerages7": "40 萬 + 的用戶構成了香港第二大證券交易社區，活躍的客戶激發了大量的投資靈感",
@@ -1507,5 +1507,9 @@
   "pages_us_stock91": "與第三方股票櫃台融合對接",
   "pages_us_stock78": "一站式解決方案，",
   "pages_us_stock79": "覆蓋業務場景全鏈路",
-  "pages_virtual_assets39": "全方位支持虛擬資產的櫃台系統"
+  "pages_virtual_assets39": "全方位支持虛擬資產的櫃台系統",
+  "pages_us_stock80": "一站式美股及美股期權解決方案",
+  "pages_virtual_assets40": "賬戶管理系統",
+  "footer_table_1": "解決方案",
+  "pages_locale_solutions_virtual_assets_23": "櫃台系統"
 }
