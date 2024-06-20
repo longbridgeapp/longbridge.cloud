@@ -20,6 +20,7 @@ import { Combine, ProductsTable } from '@/features/solutions/combine'
 import { HorizontalAdvantage, IAdvantageProps } from '@/features/product/Advantage'
 import DotList from '@/components/dot-list'
 import { WealthManagementTabs } from '@/features/solutions/wealth-management'
+import Carousel from 'antd/lib/carousel'
 
 export const getStaticPaths = () => ({
   fallback: false,
@@ -123,141 +124,69 @@ const WealthManagement = () => {
   const solutions = [
     {
       icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
-      title: i18n.t('pages_us_stock19'),
-      problems: [i18n.t('pages_us_stock21'), i18n.t('pages_us_stock22'), i18n.t('pages_us_stock23')],
-      solutions: [i18n.t('pages_us_stock21'), i18n.t('pages_us_stock22'), i18n.t('pages_us_stock23')],
+      title: i18n.t('pages_wm6'),
+      problems: [i18n.t('pages_wm7'), i18n.t('pages_wm8'), i18n.t('pages_wm9'), i18n.t('pages_wm10')],
+      solutions: [i18n.t('pages_wm12'), i18n.t('pages_wm13'), i18n.t('pages_wm14')],
+    },
+    {
+      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      title: i18n.t('pages_wm15'),
+      problems: [i18n.t('pages_wm16'), i18n.t('pages_wm17')],
+      solutions: [i18n.t('pages_wm19'), i18n.t('pages_wm20'), i18n.t('pages_wm21')],
+    },
+    {
+      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      title: i18n.t('pages_wm22'),
+      problems: [i18n.t('pages_wm23'), i18n.t('pages_wm24'), i18n.t('pages_wm25')],
+      solutions: [i18n.t('pages_wm27'), i18n.t('pages_wm28'), i18n.t('pages_wm28')],
+    },
+    {
+      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      title: i18n.t('pages_wm30'),
+      problems: [i18n.t('pages_wm31'), i18n.t('pages_wm32'), i18n.t('pages_wm33')],
+      solutions: [i18n.t('pages_wm35'), i18n.t('pages_wm36')],
+    },
+    {
+      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      title: i18n.t('pages_wm37'),
+      problems: [i18n.t('pages_wm38')],
+      solutions: [i18n.t('pages_wm40'), i18n.t('pages_wm41'), i18n.t('pages_wm42')],
+    },
+    {
+      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      title: i18n.t('pages_wm43'),
+      problems: [i18n.t('pages_wm44'), i18n.t('pages_wm45')],
+      solutions: [i18n.t('pages_wm47')],
     },
   ]
-  const tradeServiceList = [
-    {
-      img: 'https://assets.lbkrs.com/uploads/974fd067-5e4a-497d-b4bd-c85ef3b118f0/stock.png',
-      desc: i18n.t('pages_us_stock37'),
-      button: undefined,
-      imgWidth: 530,
-      className: '',
-      list: [
-        {
-          text: i18n.t('pages_us_stock38'),
-        },
-        {
-          text: i18n.t('pages_us_stock39'),
-        },
-      ],
-    },
-    {
-      img: tradeServiceImgMap.order[i18n.i18n.language],
-      desc: i18n.t('pages_us_stock40'),
-      button: undefined,
-      imgWidth: 530,
-      className: 'lg:flex-row-reverse',
-      list: [
-        {
-          text: i18n.t('pages_us_stock41'),
-        },
-        {
-          text: i18n.t('pages_us_stock42'),
-        },
-      ],
-    },
-    {
-      img: tradeServiceImgMap.option[i18n.i18n.language],
-      desc: i18n.t('pages_locale_solutions_securities_market_8791'),
-      button: undefined,
-      imgWidth: 530,
-      list: [
-        {
-          text: i18n.t('pages_us_stock44'),
-        },
-        {
-          text: i18n.t('pages_us_stock45'),
-        },
-        {
-          text: i18n.t('pages_us_stock46'),
-        },
-        {
-          text: i18n.t('pages_us_stock47'),
-        },
-      ],
-    },
-    {
-      img: tradeServiceImgMap.overnight[i18n.i18n.language],
-      desc: i18n.t('pages_us_stock48'),
-      button: undefined,
-      imgWidth: 530,
-      className: 'lg:flex-row-reverse',
-      list: [
-        {
-          text: i18n.t('pages_us_stock49'),
-        },
-        {
-          text: i18n.t('pages_us_stock50'),
-        },
-        {
-          text: i18n.t('pages_us_stock51'),
-        },
-      ],
-    },
-    {
-      img: tradeServiceImgMap.trading_desk[i18n.i18n.language],
-      desc: i18n.t('pages_us_stock52'),
-      button: undefined,
-      imgWidth: 530,
-      list: [
-        {
-          text: i18n.t('pages_us_stock53'),
-        },
-        {
-          text: i18n.t('pages_us_stock54'),
-        },
-        {
-          text: i18n.t('pages_us_stock55'),
-        },
-        {
-          text: i18n.t('pages_us_stock56'),
-        },
-      ],
-    },
-    {
-      img: tradeServiceImgMap.backend[i18n.i18n.language],
-      desc: i18n.t('pages_us_stock57'),
-      button: undefined,
-      imgWidth: 530,
-      className: 'lg:flex-row-reverse',
-      list: [
-        {
-          text: i18n.t('whale-backoffice-024'),
-        },
-        {
-          text: i18n.t('pages_us_stock59'),
-        },
-        {
-          text: i18n.t('pages_us_stock60'),
-        },
-      ],
-    },
-  ]
-  const f = '客户对线上化服务需求强劲，\n金融产品缺乏网上一体化服务'
-  const dotNode = <div className="w-0.5 h-0.5 translate-y-3 rounded-full bg-text_color_1_supplement mr-2"></div>
+  const solutionsNode = solutions.map(solution => {
+    return (
+      <div key={solution.title} className=" rounded-lg p-8 bg-front-bg-color-1 ">
+        <img src={solution.icon} className="w-10 h-10 mb-4" alt="" />
+        <div className="whitespace-pre-line font-medium text-xl mb-2">{solution.title}</div>
+        <div></div>
+        <SolutionList list={solution.problems} />
+        <div className="text-brand_color text-base leading-7 font-medium mt-4">{i18n.t('pages_wm11')}</div>
+        <SolutionList list={solution.solutions} />
+      </div>
+    )
+  })
 
   return (
     <Layout>
       <SEOMeta title={seoI18n.t('us-stock.title')} description={seoI18n.t('us-stock.description')} />
       <div>
         <SolutionBanner
-          label={i18n.t('pages_us_stock0')}
-          title={i18n.t('pages_us_stock1')}
+          label={i18n.t('pages_wm0')}
+          title={i18n.t('pages_wm0_1')}
           secondLineTitle=""
-          desc={i18n.t('pages_us_stock2')}
+          desc={i18n.t('pages_wm1')}
         />
         <Box className="lg:py-20 ">
           <div className="lg:flex justify-between items-center">
             <div className="mb-10 lg:mb-0 lg:flex-1 whitespace-pre-line">
-              <Title
-                className="mb-5"
-                title={f}
-                desc="越来越多的客户倾向于使用网上金融服务，但目前市场上许多关键的线上服务需求尚未得到充分满足。"
-              />
-              <div className="text-xs text-text_color_2">* 数据来源：毕马威《2023 年香港私人财富管理报告》</div>
+              <Title className="mb-5" title={i18n.t('pages_wm2')} desc={i18n.t('pages_wm3')} />
+              <div className="text-xs text-text_color_2">* {i18n.t('pages_wm4')}</div>
             </div>
             <div className="lg:flex-1 ml-10">收到了副驾驶</div>
           </div>
@@ -265,21 +194,11 @@ const WealthManagement = () => {
 
         <Box className="lg:py-20 bg-bg_color_2">
           <>
-            <Title className="mb-10" title={i18n.t('pages_us_stock17')} />
-            <div className="grid lg:grid-cols-3 gap-7">
-              {solutions.map(solution => {
-                return (
-                  <div key={solution.title} className=" rounded-lg p-8 bg-front-bg-color-1 ">
-                    <img src={solution.icon} className="w-10 h-10 mb-4" alt="" />
-                    <div className="whitespace-pre-line font-medium text-xl mb-2">{solution.title}</div>
-                    <div></div>
-                    <SolutionList list={solution.problems} />
-                    <div className="text-brand_color text-base leading-7 font-medium mt-4">{'Whale 如何解决：'}</div>
-                    <SolutionList list={solution.solutions} />
-                  </div>
-                )
-              })}
-            </div>
+            <Title className="mb-10" title={i18n.t('pages_wm5')} />
+            <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-7">{solutionsNode}</div>
+            <Carousel className="md:!hidden" autoplay={true} autoplaySpeed={5000} effect="fade">
+              {solutionsNode}
+            </Carousel>
           </>
         </Box>
         <Box className="lg:py-20">
