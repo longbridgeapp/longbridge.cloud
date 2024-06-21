@@ -296,7 +296,7 @@ export const ContactUsGhost = ({ text }: IContactUsProps) => {
   const i18n = useTranslation('common')
   return (
     <ContactUs>
-      <div className="text-white border-white border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white">
+      <div className="text-white border-white border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white hover:opacity-80">
         {text || i18n.t('talk-to-us')}
       </div>
     </ContactUs>
@@ -307,7 +307,17 @@ export const ContactUsBlack = ({ text }: IContactUsProps) => {
   const i18n = useTranslation('common')
   return (
     <ContactUs>
-      <div className=" border-text-color-1 border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white">
+      <div className=" border-text-color-1 border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white hover:opacity-80">
+        {text || i18n.t('talk-to-us')}
+      </div>
+    </ContactUs>
+  )
+}
+export const ContactUsBorder = ({ text, className }: IContactUsProps) => {
+  const i18n = useTranslation('common')
+  return (
+    <ContactUs className={className}>
+      <div className="border-brand_color text-brand_color border px-8 py-2.5 hover:bg-brand_color hover:border-brand_color hover:text-white hover:opacity-80">
         {text || i18n.t('talk-to-us')}
       </div>
     </ContactUs>

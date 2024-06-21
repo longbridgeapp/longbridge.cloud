@@ -86,3 +86,39 @@ html {
     @apply w-1 h-1 rounded-full bg-[#5622CF] absolute -left-4 top-[10px];
   }
 }
+// 统一 tab 样式
+.cloud-tabs-wrapper {
+  .ant-tabs {
+    &.ant-tabs-top {
+      .ant-tabs-nav {
+        &::before {
+          @apply border-b-tag-border-color border-b-[0.5px];
+        }
+      }
+    }
+    .ant-tabs-tab {
+      @apply text-base font-medium text-text_color_2 pt-0;
+
+      &.ant-tabs-tab-active {
+        .ant-tabs-tab-btn {
+          @apply text-text-color-1;
+        }
+      }
+    }
+    .ant-tabs-ink-bar {
+      @apply bg-brand_color scale-x-75;
+    }
+    .ant-tabs-nav {
+      @apply mb-10;
+    }
+
+    .ant-tabs-nav-more {
+      @apply hidden;
+    }
+  }
+  &.tabs-wrapper-only-header {
+    .ant-tabs-nav {
+      @apply mb-0;
+    }
+  }
+}

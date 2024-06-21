@@ -1,8 +1,9 @@
-import { FC, HTMLAttributes, useRef } from 'react'
+import { FC, HTMLAttributes, ReactNode, useEffect, useRef, useState } from 'react'
 import classNames from 'classnames'
 import Icon from '@/components/icon'
 import { Carousel } from 'antd'
 import { ImageAndText } from '@/features/solutions/info-introduce'
+import type { CarouselRef } from 'antd/lib/carousel'
 interface IProps {
   effect?: 'scrollx' | 'fade'
   autoplaySpeed?: number
@@ -10,6 +11,10 @@ interface IProps {
     contentInfo: { title: string; desc: string[]; img: any }
     footerList?: { title: string; text: string; img: string }[]
   }[]
+  arrowVisible?: boolean
+  onActiveChange?: (index: number) => void
+  activeIndex?: number
+  needContact?: ReactNode
 }
 
 const Arrow: FC<
@@ -46,17 +51,27 @@ const Arrow: FC<
 
 const CardSwiper = (props: IProps) => {
   const { dataSource = [], effect = 'scrollx', autoplaySpeed = 5000 } = props
-  const CarouselRef = useRef(null)
+  const CarouselRef = useRef<CarouselRef>(null)
 
   function CarouselNext() {
-    const carouse = CarouselRef.current as unknown as { next: () => void }
+    const carouse = CarouselRef.current
     carouse?.next()
   }
 
   function CarouselPrev() {
-    const carouse = CarouselRef.current as unknown as { prev: () => void }
+    const carouse = CarouselRef.current
     carouse?.prev()
   }
+  const [activeIndex, setActiveIndex] = useState(0)
+  useEffect(() => {
+    props.onActiveChange?.(activeIndex)
+  }, [activeIndex])
+  useEffect(() => {
+    if (activeIndex !== undefined) {
+      const carouse = CarouselRef.current
+      carouse?.goTo?.(props.activeIndex!)
+    }
+  }, [props.activeIndex])
 
   return (
     <div className="relative">
@@ -67,12 +82,13 @@ const CardSwiper = (props: IProps) => {
         dots={false}
         ref={CarouselRef}
         autoplaySpeed={autoplaySpeed}
+        beforeChange={(_, next) => setActiveIndex(next)}
       >
         {dataSource && !!dataSource.length
           ? dataSource.map((item, index) => {
               return (
                 <div key={index}>
-                  <ImageAndText {...item.contentInfo} needContact />
+                  <ImageAndText {...item.contentInfo} needContact={props.needContact || true} />
                   {!!item?.footerList?.length ? (
                     <>
                       <hr className="border-border_color" />
@@ -94,10 +110,12 @@ const CardSwiper = (props: IProps) => {
             })
           : null}
       </Carousel>
-      <div className="buttons absolute z-[1] top-[133px] w-full">
-        <Arrow isLeft disabled={false} onClick={CarouselPrev} />
-        <Arrow isLeft={false} disabled={false} onClick={CarouselNext} />
-      </div>
+      {props.arrowVisible !== false && (
+        <div className="buttons absolute z-[1] top-[133px] w-full">
+          <Arrow isLeft disabled={false} onClick={CarouselPrev} />
+          <Arrow isLeft={false} disabled={false} onClick={CarouselNext} />
+        </div>
+      )}
     </div>
   )
 }
