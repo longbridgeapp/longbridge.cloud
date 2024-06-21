@@ -1,5 +1,4 @@
 import { Tabs } from 'antd'
-import styles from './wealth-management.module.scss'
 import DotList from '@/components/dot-list'
 import { useTranslation } from 'react-i18next'
 
@@ -25,14 +24,14 @@ const tabImg = [
     'zh-HK': 'https://assets.lbkrs.com/uploads/f6954967-ae9f-4cd9-bd73-e65989d5ddba/tab4_hk.png',
   },
   {
-    'en': 'https://assets.lbkrs.com/uploads/f43bb647-9414-43e5-9f70-7fd60b06a8e2/tab5_en.png',
+    'en': 'https://assets.lbkrs.com/uploads/a0d274d6-b369-4acc-831b-52cf9213c3ba/tab5_en.png',
     'zh-CN': 'https://assets.lbkrs.com/uploads/ab5a6810-dcdc-41ec-bd9f-7ae703a7f008/tab5_cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/9dd6659c-033e-4061-a407-838e4764b0b3/tab5_hk.png',
   },
   {
-    'en': '',
-    'zh-CN': '',
-    'zh-HK': '',
+    'en': 'https://assets.lbkrs.com/uploads/fdaeadc8-6018-43fc-81ec-26b226a9b9c1/tab6_en.png',
+    'zh-CN': 'https://assets.lbkrs.com/uploads/c2ffb072-0bd9-4d51-93bf-d7e02f4537e1/tab6_cn.png',
+    'zh-HK': 'https://assets.lbkrs.com/uploads/ada5fee9-18ab-41d8-a8c3-df96802caa75/tab6_hk.png',
   },
 ] as any[]
 
@@ -93,7 +92,7 @@ export const WealthManagementTabs = () => {
     },
   ]
   return (
-    <div className={styles['tabs-wrapper']}>
+    <div className="cloud-tabs-wrapper">
       <Tabs
         items={tabs.map((tab, index) => {
           return {

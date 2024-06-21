@@ -65,7 +65,7 @@ export const BrokeragesTabs = () => {
     },
   ]
   return (
-    <div className={styles['tabs-wrapper']}>
+    <div className="cloud-tabs-wrapper">
       <Tabs
         items={tabs.map(tab => {
           return {
@@ -324,7 +324,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
       className="relative bg-center bg-no-repeat"
       imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
     >
-      <Block className={classNames(styles['solution-banner'], 'py-10 md:py-[72px] px-6 md:px-0')}>
+      <Block className={classNames(styles['solution-banner'], 'py-10 md:lg-[72px] px-6 md:px-0')}>
         <BlockBetween
           left={
             <>
@@ -352,7 +352,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
             <img
               src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
               alt="zero to one"
-              className="right-0 object-cover w-4/5 md:w-[380px] xl:w-[428px]  mt-10 lg:mt-0  xl:ml-16"
+              className="right-0 object-cover w-4/5 mx-auto lg:w-[380px] xl:w-[428px]  mt-10 lg:mt-0  xl:ml-16"
             />
           }
         ></BlockBetween>

@@ -19,7 +19,7 @@ interface IImageAndTextProps {
   img: Record<string, string>
   cover?: string
   needTalk?: boolean
-  needContact?: boolean
+  needContact?: boolean | ReactNode
   reverse?: boolean
   localLink?: string
   tips?: string
@@ -165,7 +165,7 @@ export const ImageAndText: React.FC<IImageAndTextProps> = ({
                 )}
               </>
             )}
-            {needContact && <ContactUs />}
+            {needContact === true ? <ContactUs /> : needContact || <></>}
           </div>
         </div>
         {/* 图片 */}

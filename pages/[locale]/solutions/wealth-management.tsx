@@ -68,19 +68,19 @@ const WealthManagement = () => {
 
   const solutions = [
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/d6c30b54-fa8b-423c-923e-6365e762a3c0/icon1.png',
       title: i18n.t('pages_wm6'),
       problems: [i18n.t('pages_wm7'), i18n.t('pages_wm8'), i18n.t('pages_wm9'), i18n.t('pages_wm10')],
       solutions: [i18n.t('pages_wm12'), i18n.t('pages_wm13'), i18n.t('pages_wm14')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/946462be-42e8-4643-8432-4b3e2e76513c/icon2.png',
       title: i18n.t('pages_wm15'),
       problems: [i18n.t('pages_wm16'), i18n.t('pages_wm17')],
       solutions: [i18n.t('pages_wm19'), i18n.t('pages_wm20'), i18n.t('pages_wm21')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/51b979b6-f3b1-40a6-9dce-89095838497c/icon3.png',
       title: i18n.t('pages_wm22'),
       problems: [i18n.t('pages_wm23'), i18n.t('pages_wm24'), i18n.t('pages_wm25')],
       solutions: [i18n.t('pages_wm27'), i18n.t('pages_wm28'), i18n.t('pages_wm29')],
@@ -92,13 +92,13 @@ const WealthManagement = () => {
       solutions: [i18n.t('pages_wm35'), i18n.t('pages_wm36')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/acc62b79-5109-4a2f-9c8a-b559affc3a4a/icon5.png',
       title: i18n.t('pages_wm37'),
       problems: [i18n.t('pages_wm38')],
       solutions: [i18n.t('pages_wm40'), i18n.t('pages_wm41'), i18n.t('pages_wm42')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
       title: i18n.t('pages_wm43'),
       problems: [i18n.t('pages_wm44'), i18n.t('pages_wm45')],
       solutions: [i18n.t('pages_wm47')],
@@ -162,6 +162,7 @@ const WealthManagement = () => {
         </Box>
         <Box className="lg:py-20">
           <>
+            <Title className="mb-10" title={i18n.t('pages_wm48')} />
             <WealthManagementTabs />
             <hr className="border-border_color my-10 lg:my-20" />
             <Title className="mb-10" title={i18n.t('pages_wm80')} />
