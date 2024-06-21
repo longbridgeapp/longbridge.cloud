@@ -163,11 +163,7 @@ const WealthManagement = () => {
         <Box className="lg:py-20">
           <>
             <WealthManagementTabs />
-          </>
-        </Box>
-        <hr className="border-border_color" />
-        <Box className="lg:py-20">
-          <>
+            <hr className="border-border_color my-10 lg:my-20" />
             <Title className="mb-10" title={i18n.t('pages_wm80')} />
             <img alt="" src={tradeServiceImgMap.chains[i18n.i18n.language]} />
             <DotList className={classNames('lg-with-flex lg:space-x-12 mt-10 lg:en:space-x-4')} list={list2} />
