@@ -37,7 +37,7 @@ const tradeServiceImgMap = {
   chains: {
     'zh-CN': 'https://assets.lbkrs.com/uploads/0c9a823d-ddf9-4126-927f-3f75ff7f7284/chains_cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/670dff11-0929-4585-8710-4540cfc5fe7b/chains_hk.png',
-    'en': 'https://assets.lbkrs.com/uploads/41c009e5-c25c-47b4-b7f0-f449b9a3db68/chains_en.png',
+    'en': 'https://assets.lbkrs.com/uploads/9a32a46b-d8ce-40d8-bcf6-112deaaafbe3/chains_en.png',
   } as Record<string, string>,
   chart: {
     'zh-CN': 'https://assets.lbkrs.com/uploads/6985b0eb-370a-4407-aa99-8d901f3fa692/chart_cn.png',
@@ -52,8 +52,8 @@ function SolutionList({ list }: { list: string[] }) {
       {list.map(item => {
         return (
           <div className="flex text-base leading-7 " key={item}>
-            <div className="w-0.5 h-0.5 translate-y-3 rounded-full bg-text_color_1_supplement mr-2"></div>
-            <div>{item}</div>
+            <div className="w-0.5 h-0.5 translate-y-3 rounded-full bg-text_color_1_supplement mr-2 flex-shrink-0"></div>
+            <div className="w-0 flex-1 text-text_color_1_supplement">{item}</div>
           </div>
         )
       })}
@@ -86,23 +86,23 @@ const WealthManagement = () => {
       solutions: [i18n.t('pages_wm27'), i18n.t('pages_wm28'), i18n.t('pages_wm29')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/ace54dbf-d4d3-4530-9ae6-c1aeac861c4c/solution_us_stock_advantage_5.png',
+      icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
       title: i18n.t('pages_wm30'),
       problems: [i18n.t('pages_wm31'), i18n.t('pages_wm32'), i18n.t('pages_wm33')],
       solutions: [i18n.t('pages_wm35'), i18n.t('pages_wm36')],
     },
-    {
-      icon: 'https://assets.lbkrs.com/uploads/acc62b79-5109-4a2f-9c8a-b559affc3a4a/icon5.png',
-      title: i18n.t('pages_wm37'),
-      problems: [i18n.t('pages_wm38')],
-      solutions: [i18n.t('pages_wm40'), i18n.t('pages_wm41'), i18n.t('pages_wm42')],
-    },
-    {
-      icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
-      title: i18n.t('pages_wm43'),
-      problems: [i18n.t('pages_wm44'), i18n.t('pages_wm45')],
-      solutions: [i18n.t('pages_wm47')],
-    },
+    // {
+    //   icon: 'https://assets.lbkrs.com/uploads/acc62b79-5109-4a2f-9c8a-b559affc3a4a/icon5.png',
+    //   title: i18n.t('pages_wm37'),
+    //   problems: [i18n.t('pages_wm38')],
+    //   solutions: [i18n.t('pages_wm40'), i18n.t('pages_wm41'), i18n.t('pages_wm42')],
+    // },
+    // {
+    //   icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
+    //   title: i18n.t('pages_wm43'),
+    //   problems: [i18n.t('pages_wm44'), i18n.t('pages_wm45')],
+    //   solutions: [i18n.t('pages_wm47')],
+    // },
   ]
   const { containerRef, height } = useCarouserAutoHeight()
   const getSolutionsNode = (inCarousel = false) => {
@@ -110,16 +110,18 @@ const WealthManagement = () => {
       return (
         <div key={solution.title} className="rounded-lg  bg-front-bg-color-1">
           <div
-            className=" p-8"
+            className="flex p-8"
             style={{
               height: inCarousel ? height : undefined,
             }}
           >
-            <img src={solution.icon} className="w-10 h-10 mb-4" alt="" />
-            <div className="whitespace-pre-line font-medium text-xl mb-2">{solution.title}</div>
-            <SolutionList list={solution.problems} />
-            <div className="text-brand_color text-base leading-7 font-medium mt-4">{i18n.t('pages_wm11')}</div>
-            <SolutionList list={solution.solutions} />
+            <img src={solution.icon} className="w-10 h-10 mb-4 mr-6 flex-shrink-0" alt="" />
+            <div className="flex-1">
+              <div className="whitespace-pre-line font-medium text-xl mb-2">{solution.title}</div>
+              <SolutionList list={solution.problems} />
+              <div className="text-brand_color text-base leading-7 font-medium mt-4">{i18n.t('pages_wm11')}</div>
+              <SolutionList list={solution.solutions} />
+            </div>
           </div>
         </div>
       )
@@ -152,7 +154,7 @@ const WealthManagement = () => {
         <Box className="lg:py-20 bg-bg_color_2">
           <>
             <Title className="mb-10" title={i18n.t('pages_wm5')} />
-            <div className="hidden md:grid md:grid-cols-2 xl:grid-cols-3 gap-7">{getSolutionsNode()}</div>
+            <div className="hidden md:grid md:grid-cols-2 gap-7">{getSolutionsNode()}</div>
             <div ref={containerRef}>
               <Carousel className="md:!hidden" autoplay={true} autoplaySpeed={5000} effect="fade">
                 {getSolutionsNode(true)}
@@ -167,7 +169,6 @@ const WealthManagement = () => {
             <hr className="border-border_color my-10 lg:my-20" />
             <Title className="mb-10" title={i18n.t('pages_wm80')} />
             <img alt="" src={tradeServiceImgMap.chains[i18n.i18n.language]} />
-            <DotList className={classNames('lg-with-flex lg:space-x-12 mt-10 lg:en:space-x-4')} list={list2} />
           </>
         </Box>
         <Box className="bg-bg_color_2 lg:py-20">
