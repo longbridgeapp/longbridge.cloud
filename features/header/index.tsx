@@ -95,11 +95,11 @@ function useNavs() {
           },
           {
             value: '/solutions/us-stock',
-            label: i18n.t('pages_us_stock80'),
+            label: i18n.t('pages_virtual_assets37_1'),
           },
           {
             value: '/solutions/wealth-management',
-            label: i18n.t('pages_wm0_2'),
+            label: i18n.t('pages_virtual_assets36_1'),
           },
           // {
           //   value: '/solutions/brokerages',

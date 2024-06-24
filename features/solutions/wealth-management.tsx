@@ -19,7 +19,7 @@ const tabImg = [
     'zh-HK': 'https://assets.lbkrs.com/uploads/140b936e-d5fa-4838-8862-384d07ccb6ca/tab3_hk.png',
   },
   {
-    'en': 'https://assets.lbkrs.com/uploads/0487d579-09e7-41b9-bc17-5831d992f399/tab4_en.png',
+    'en': 'https://assets.lbkrs.com/uploads/3ced3d83-9934-402d-8213-10a8ac166136/tab4_en.png',
     'zh-CN': 'https://assets.lbkrs.com/uploads/d35734da-3914-4db1-9c21-67090313bd14/tab4_cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/f6954967-ae9f-4cd9-bd73-e65989d5ddba/tab4_hk.png',
   },
