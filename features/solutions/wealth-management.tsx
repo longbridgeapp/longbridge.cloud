@@ -101,7 +101,7 @@ export const WealthManagementTabs = () => {
             children: (
               <div className="md:flex justify-between items-center">
                 {tab.features && (
-                  <div className="flex-1">
+                  <div className="flex-1 md:mr-20 xl:mr-[140px]">
                     <div className="text-2xl lg:text-3xl xl:text-4xl font-semibold mb-8">
                       <div className="whitespace-pre-line">{tab.title}</div>
                     </div>
@@ -114,7 +114,7 @@ export const WealthManagementTabs = () => {
                     </div>
                   </div>
                 )}
-                <div className="flex-1 mt-10 md:mt-0 md:ml-20 xl:ml-[140px]">
+                <div className="flex-1 mt-10 md:mt-0">
                   <img
                     alt={tab.title}
                     src={typeof tabImg[index] === 'string' ? tabImg[index] : tabImg[index][i18n.i18n.language as never]}

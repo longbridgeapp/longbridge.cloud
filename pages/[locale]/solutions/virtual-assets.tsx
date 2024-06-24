@@ -331,6 +331,7 @@ const VirtualAssets = () => {
   const trade: ITextPictureSecondary = {
     item: {
       img: tradeServiceImgMap.trade2[i18n.i18n.language],
+      imgWidth: 530,
       desc: i18n.t('pages_small_brokerages10'),
       list: [
         {
@@ -345,6 +346,7 @@ const VirtualAssets = () => {
   const backend: ITextPictureSecondary = {
     item: {
       img: tradeServiceImgMap.backend[i18n.i18n.language],
+      imgWidth: 530,
       desc: i18n.t('pages_brokerages48'),
       list: [
         {
@@ -416,6 +418,7 @@ const VirtualAssets = () => {
               className="py-10"
               {...trade}
               withDotList
+              titleWrapperClassName="!mb-6"
               descClassName="!font-medium !text-[28px] !leading-10"
               button={
                 <div className="flex mt-6">
@@ -427,8 +430,9 @@ const VirtualAssets = () => {
             <Table data={table_1} thColSpan={1} />
             <hr className="mt-20 border-[#EAEBEC]"></hr>
             <TextPictureSecondary
-              className="py-10 flex-row-reverse"
+              className="py-10 lg:flex-row-reverse"
               {...backend}
+              titleWrapperClassName="!mb-6"
               withDotList
               descClassName="!font-medium !text-[28px] !leading-10"
               button={
