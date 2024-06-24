@@ -42,7 +42,7 @@ const tradeServiceImgMap = {
   chart: {
     'zh-CN': 'https://assets.lbkrs.com/uploads/6985b0eb-370a-4407-aa99-8d901f3fa692/chart_cn.png',
     'zh-HK': 'https://assets.lbkrs.com/uploads/bb42eb5c-a6d3-4ea9-9d64-9282c5cf894b/chart_hk.png',
-    'en': 'https://assets.lbkrs.com/uploads/3589a769-1f7a-47a0-ad91-ed98ad38ed35/chart_en.png',
+    'en': 'https://assets.lbkrs.com/uploads/1553baed-03be-474f-99ce-014babd03727/chart_en.png',
   } as Record<string, string>,
 }
 

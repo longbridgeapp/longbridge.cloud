@@ -124,7 +124,7 @@ export const ProductsTable = ({ products: propsProducts, className }: IProductsT
                   return (
                     <LocaleLink to={item.link} key={index} className="flex">
                       <div className="w-1.5 h-1.5 bg-brand_color mr-4 mt-[9px]"></div>
-                      <div className="w-0 flex-1">{item.title}</div>
+                      <div className="w-0 flex-1 text-text_color_1_supplement">{item.title}</div>
                     </LocaleLink>
                   )
                 })}

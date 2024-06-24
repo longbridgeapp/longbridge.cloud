@@ -330,7 +330,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
             <>
               <div className="mb-3 text-xl text-left text-text_color_3_supplement">
                 <div className="text-brand_color_3 mb-2">{props.label}</div>
-                <div className="text-white text-3xl lg:text-[40px] lg:leading-[56px] text-left font-semibold">
+                <div className="text-white text-3xl lg:text-[40px] lg:leading-[56px] en:lg:leading-[44px] text-left font-semibold">
                   <span className="xl:whitespace-nowrap xl:en:whitespace-normal">{props.title}</span>
                   {props.secondLineTitle && (
                     <>
