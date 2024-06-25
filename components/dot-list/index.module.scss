@@ -1,0 +1,24 @@
+:local(.dot-list) {
+  @apply grid gap-4;
+
+  grid-template-columns: repeat(var(--cols-xs, 1), minmax(0, 1fr));
+  .list-item {
+    @apply text-text_color_1_supplement  ml-0 flex;
+
+    .dot {
+      @apply w-1.5 h-1.5 bg-[#5622CF] mr-4;
+      // 默认行高为 1.5em
+      transform: translateY(calc(0.75em - 3px));
+    }
+
+    .content {
+      @apply w-0 flex-1;
+    }
+  }
+  @screen sm {
+    grid-template-columns: repeat(var(--cols-sm, 1), minmax(0, 1fr));
+  }
+  @screen lg {
+    grid-template-columns: repeat(var(--cols-lg, 1), minmax(0, 1fr));
+  }
+}
