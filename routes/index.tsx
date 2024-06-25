@@ -24,6 +24,11 @@ import Retail from '@/pages/[locale]/retail'
 import FrontDesk from '@/pages/[locale]/front-desk'
 import VirtualAssetTradingSystem from '@/pages/[locale]/virtual-asset-trading-system'
 import PortAI from '@/pages/[locale]/portai'
+import Account from '@/pages/[locale]/account'
+import Brokerages from '@/pages/[locale]/solutions/brokerages'
+import SmallBrokeragesPage from '@/pages/[locale]/solutions/small-brokerages'
+import UsStock from '@/pages/[locale]/solutions/us-stock'
+import WealthManagement from '@/pages/[locale]/solutions/wealth-management'
 
 export const RouteList = ({ pageProps }: { pageProps: any }) => {
   return (
@@ -58,6 +63,11 @@ export const RouteList = ({ pageProps }: { pageProps: any }) => {
               <Route path="retail" element={<Retail {...pageProps} />} />
               <Route path="front-desk" element={<FrontDesk {...pageProps} />} />
               <Route path="virtual-asset-trading-system" element={<VirtualAssetTradingSystem {...pageProps} />} />
+              <Route path="account" element={<Account {...pageProps} />} />
+              <Route path="solutions/brokerages" element={<Brokerages {...pageProps} />} />
+              <Route path="solutions/small-brokerages" element={<SmallBrokeragesPage {...pageProps} />} />
+              <Route path="solutions/us-stock" element={<UsStock {...pageProps} />} />
+              <Route path="solutions/wealth-management" element={<WealthManagement {...pageProps} />} />
             </Route>
           </Fragment>
         )

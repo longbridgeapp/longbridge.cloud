@@ -1,8 +1,12 @@
 import CardSwiper from '@/features/common/card-swiper'
 import Box from '@/features/product/Box'
 import Title from '@/features/product/title'
-import { useMemo } from 'react'
+import { useMemo, useRef, useState } from 'react'
 import { useTranslation } from 'next-i18next'
+import { Tabs } from 'antd'
+import { ContactUsBorder } from '../talk-to-us'
+import { ImageAndText } from '../solutions/info-introduce'
+import { useHover, useInterval } from 'ahooks'
 
 const HomeSolutionSwiper = () => {
   const i18n = useTranslation('common')
@@ -21,28 +25,7 @@ const HomeSolutionSwiper = () => {
           },
           localLink: '/solutions/app-plus',
         },
-        footerList: [
-          {
-            title: 'White Label',
-            text: i18n.t('features_home_home_solution_swiper_891114'),
-            img: 'https://pub.lbkrs.com/files/202307/mfzkNAXKBe3hK388/White_Label.png',
-          },
-          {
-            title: 'LongPort',
-            text: i18n.t('features_home_home_solution_swiper_891115'),
-            img: 'https://pub.lbkrs.com/files/202307/n196sKhL8ABvKu74/LongPort.png',
-          },
-          {
-            title: i18n.t('features_home_home_solution_swiper_891116'),
-            text: i18n.t('features_home_home_solution_swiper_891117'),
-            img: 'https://pub.lbkrs.com/files/202307/UcnyYwjQNxRXR16y/service.png',
-          },
-          {
-            title: i18n.t('features_home_home_solution_swiper_891118'),
-            text: i18n.t('features_home_home_solution_swiper_891119'),
-            img: 'https://pub.lbkrs.com/files/202307/w3HXUTzP8bWFWBWD/tools.png',
-          },
-        ],
+        title: i18n.t('features_header_index_4_1'),
       },
       {
         contentInfo: {
@@ -57,30 +40,44 @@ const HomeSolutionSwiper = () => {
           },
           localLink: '/solutions/securities-market',
         },
-        footerList: [
-          {
-            title: i18n.t('features_home_home_solution_swiperx'),
-            text: i18n.t('features_home_home_solution_swiper_891153'),
-            img: 'https://pub.lbkrs.com/files/202307/vmLRv9aMdn1fR8dq/Group_627094.png',
+        title: i18n.t('pages_locale_solutions_virtual_assets_891133'),
+      },
+      {
+        contentInfo: {
+          title: i18n.t('pages_virtual_assets37'),
+          titleClassName: '!text-[28px]',
+          imgClassName: '!sm:w-[530px]',
+          desc: [i18n.t('pages_us_stock2')],
+          img: {
+            'en': 'https://assets.lbkrs.com/uploads/7731d8d7-f128-48d8-b611-1c61e7756241/option_en.png',
+            'zh-CN': 'https://assets.lbkrs.com/uploads/ccf3862a-6e06-4a48-94e0-c27fc200c23b/option_cn.png',
+            'zh-HK': 'https://assets.lbkrs.com/uploads/1c0d69d2-8caf-40ea-83d6-03c57c3aa468/option_hk.png',
           },
-          {
-            title: i18n.t('pages_locale_solutions_securities_market_8908'),
-            text: i18n.t('features_home_home_solution_swiper_891154'),
-            img: 'https://pub.lbkrs.com/files/202307/oK6qoyLPWpXtXBhi/Group_627429.png',
+          localLink: '/solutions/us-stock',
+        },
+        title: i18n.t('pages_virtual_assets37_1'),
+      },
+      {
+        contentInfo: {
+          title: i18n.t('pages_virtual_assets36'),
+          titleClassName: '!text-[28px]',
+          imgClassName: '!sm:w-[530px]',
+          desc: [i18n.t('pages_wm1')],
+          img: {
+            'en': 'https://assets.lbkrs.com/uploads/259f1573-bfca-4e61-b056-3b39a10a45b6/wm.png',
+            'zh-CN': 'https://assets.lbkrs.com/uploads/259f1573-bfca-4e61-b056-3b39a10a45b6/wm.png',
+            'zh-HK': 'https://assets.lbkrs.com/uploads/259f1573-bfca-4e61-b056-3b39a10a45b6/wm.png',
           },
-          {
-            title: i18n.t('pages_locale_solutions_securities_market_8910'),
-            text: i18n.t('features_home_home_solution_swiper_891155'),
-            img: 'https://pub.lbkrs.com/files/202307/W28YAhKckAz8S658/Group_627429-1.png',
-          },
-        ],
+          localLink: '/solutions/us-stock',
+        },
+        title: i18n.t('pages_virtual_assets36_1'),
       },
       {
         contentInfo: {
           title: i18n.t('features_home_home_solution_swiper_891156'),
           titleClassName: '!text-[28px]',
           imgClassName: '!sm:w-[530px]',
-          desc: [i18n.t('features_home_home_solution_swiper_891157')],
+          desc: [i18n.t('pages_virtual_assets2')],
           img: {
             'en': 'https://assets.lbkrs.com/uploads/a968e994-5361-4f5f-a5d5-b530358a877c/index-vm-en.png',
             'zh-CN': 'https://assets.lbkrs.com/uploads/b708ac39-814b-422e-9dbe-28c2ea702b25/index-vm-cn.png',
@@ -88,37 +85,54 @@ const HomeSolutionSwiper = () => {
           },
           localLink: '/solutions/virtual-assets',
         },
-        footerList: [
-          {
-            title: i18n.t('pages_locale_solutions_virtual_assets_891115'),
-            text: i18n.t('features_home_home_solution_swiper_891159'),
-            img: ' https://pub.lbkrs.com/files/202307/KibYddqCGyi4gUJa/Group_627094.png',
-          },
-          {
-            title: i18n.t('pages_locale_solutions_app_plus_8679'),
-            text: i18n.t('features_home_home_solution_swiper_891160'),
-            img: 'https://pub.lbkrs.com/files/202307/CF2qKVfm4bcWkDEM/Group_627429.png',
-          },
-          {
-            title: i18n.t('features_home_home_solution_swiper_891161'),
-            text: i18n.t('features_home_home_solution_swiper_891162'),
-            img: 'https://pub.lbkrs.com/files/202307/VfQwHaBv7b2ct914/Group_627429-1.png',
-          },
-          {
-            title: i18n.t('features_home_home_solution_swiper_891163'),
-            text: i18n.t('features_home_home_solution_swiper_891164'),
-            img: 'https://pub.lbkrs.com/files/202307/3gBW1LqA1eD3UyUW/Group_627096.png',
-          },
-        ],
+        title: i18n.t('pages_locale_solutions_virtual_assets_891141'),
       },
     ]
   }, [])
+  const [activeIndex, setActiveIndex] = useState(0)
+  const onTabChange = (key: string) => {
+    setActiveIndex(dataSource.findIndex(item => item.title === key))
+  }
+  const domRef = useRef<HTMLDivElement>(null)
+  const isHovering = useHover(domRef)
+  useInterval(() => {
+    if (isHovering) {
+      return
+    }
+    setActiveIndex(activeIndex === dataSource.length - 1 ? 0 : activeIndex + 1)
+  }, 5000)
+
   return (
-    <Box className="bg-bg_color_2">
-      <>
-        <Title label={i18n.t('whale-delivery-system-028')} title={i18n.t('pages_locale_index_891113')}></Title>
-        <CardSwiper dataSource={dataSource} />
-      </>
+    <Box className="lg:pt-20 !pb-10 bg-bg_color_2 cloud-tabs-wrapper tabs-wrapper-only-header">
+      <div ref={domRef}>
+        <Title
+          className="mb-10"
+          label={i18n.t('whale-delivery-system-028')}
+          title={i18n.t('pages_locale_index_891113')}
+        ></Title>
+        <Tabs
+          activeKey={dataSource[activeIndex].title}
+          onChange={onTabChange}
+          items={dataSource.map((tab, index) => {
+            return {
+              label: tab.title,
+              key: tab.title,
+              children: (
+                <div key={index}>
+                  <ImageAndText
+                    {...tab.contentInfo}
+                    needContact={
+                      <div className="mt-10">
+                        <ContactUsBorder />
+                      </div>
+                    }
+                  />
+                </div>
+              ),
+            }
+          })}
+        ></Tabs>
+      </div>
     </Box>
   )
 }

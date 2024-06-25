@@ -89,13 +89,28 @@
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
-  "securities-market" :{
+  "securities-market": {
     "title": "Trading Platform Solution",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   },
   "introducing-broker": {
     "title": "Introducing Broker One-Stop Solution",
+    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+  },
+  "brokerages": {
+    "title": "One-Stop Solution for Well-established Brokerages",
+    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+  },
+  "account": {
+    "title": "Customer management and account system",
+    "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
+    "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
+  },
+  "us-stock": {
+    "title": "One-Stop US Stock & Option Solution",
     "description": "WHALE provides one-stop products and solutions for brokers. All systems are based on cloud-native architecture. Join to get a lower cost and more competitive product experience. Pay only for what you need. ",
     "keywords": "WHALE, SaaS, Internet Securities, Securities Trading System, BSS Vendor, Broker Supplied System"
   }

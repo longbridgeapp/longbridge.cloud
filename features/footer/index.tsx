@@ -109,7 +109,6 @@ const Footer: FC = () => {
     <footer className={classNames(styles.footer, 'main-container')}>
       <div className={classNames('main-content-width')}>
         <div className="flex flex-col space-y-10 md:flex-row md:space-x-10 xl:space-x-40 md:space-y-0">
-          <div className="text-2xl font-semibold text-text_color_1_supplement">{i18n.t('talk-to-us')}</div>
           <div className="flex flex-col flex-1 space-y-10 md:justify-between md:flex-row md:space-y-0">
             <div className="">
               <div className="text-sm font-medium text-text_color_1_supplement">

@@ -71,6 +71,10 @@ function useNavs() {
             value: '/retail',
             label: i18n.t('features_header_index_3'),
           },
+          {
+            value: '/account',
+            label: i18n.t('pages_virtual_assets40'),
+          },
         ],
       },
       {
@@ -89,6 +93,22 @@ function useNavs() {
             value: '/solutions/virtual-assets',
             label: i18n.t('features_header_index_891113'),
           },
+          {
+            value: '/solutions/us-stock',
+            label: i18n.t('pages_virtual_assets37_1'),
+          },
+          {
+            value: '/solutions/wealth-management',
+            label: i18n.t('pages_virtual_assets36_1'),
+          },
+          // {
+          //   value: '/solutions/brokerages',
+          //   label: i18n.t('pages_brokerages0'),
+          // },
+          // {
+          //   value: '/solutions/small-brokerages',
+          //   label: i18n.t('pages_small_brokerages001'),
+          // },
           // {
           //   value: '/solutions',
           //   label: i18n.t('solutions_page_001'),
@@ -222,7 +242,6 @@ const Navs = () => {
       <div className="md:hidden">
         <Dropdown
           trigger="click"
-          onChange={path => navigate(path)}
           className="!bg-transparent !text-black"
           alwaysChildren
           value={pathname}
