@@ -139,6 +139,13 @@ function useNavs() {
         children: [],
       },
       {
+        value: "/docs",
+        suffix: '',
+        label: i18n.t('help-docs'),
+        children: [],
+        rawValue: true,
+      },
+      {
         value: getContactFormUrl(i18n.i18n.language),
         suffix: '',
         label: i18n.t('talk-to-us'),
