@@ -94,46 +94,6 @@ export const IndexBanner = () => {
   }
   return (
     <Carousel className="bg-cover" autoplay effect="fade">
-      <TopBlock
-        className="relative bg-center bg-no-repeat"
-        imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
-      >
-        <Block>
-          <BlockBetween
-            left={
-              <>
-                <div className="mb-3 text-3xl text-left text-text_color_3_supplement">
-                  <div>Zero to One</div>
-                  <div className="text-white text-[54px] leading-[68px] text-left">Securities as a Service</div>
-                </div>
-                <div className="text-3xl text-text_color_3_supplement">
-                  <div>Longbridge Whale Novel Solutions Launch 2024</div>
-                  {/* <div>{i18n.t('pages_locale_product_portai_891141')}</div> */}
-                </div>
-                <div className="flex space-x-4">
-                  <LocaleLink
-                    className="flex items-center mt-10"
-                    // @ts-ignore
-                    rawValue={true}
-                    to={whaleLink[i18n.i18n.language || 'zh-HK']}
-                  >
-                    <Button size="medium">{i18n.t('pages_locale_product_portai_891143')}</Button>
-                  </LocaleLink>
-                </div>
-              </>
-            }
-            right={
-              <div className="h-[430px] sm:w-[527px] flex flex-col justify-center items-center">
-                <img
-                  src="https://assets.lbkrs.com/uploads/014eaa0f-5468-42a1-a28b-bbb40c9d4263/whale.png"
-                  alt="ai"
-                  className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
-                />
-              </div>
-            }
-          ></BlockBetween>
-        </Block>
-      </TopBlock>
       <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
