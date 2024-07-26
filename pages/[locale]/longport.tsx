@@ -70,24 +70,24 @@ const Longport: React.FC = () => {
             <div className="flex flex-col justify-between gap-10 md:flex-row">
               <div className="flex justify-between flex-1 w-full gap-10">
                 <div className="flex-1">
-                  <ImageIcon url="https://pub.lbctrl.com/files/202212/6LEMm55Ga2GVCmBF/browser.png" />
+                  <ImageIcon url="https://pub.pbkrs.com/files/202212/6LEMm55Ga2GVCmBF/browser.png" />
                   <div className="mt-4 mb-2 text-xl font-medium">{i18n.t('whale-community-006')}</div>
                   <div className="text-base font-normal text-text_color_3">{i18n.t('whale-community-007')}</div>
                 </div>
                 <div className="flex-1">
-                  <ImageIcon url="https://pub.lbctrl.com/files/202212/Qb1GKG5GL2c1mJVU/circle_up.png" />
+                  <ImageIcon url="https://pub.pbkrs.com/files/202212/Qb1GKG5GL2c1mJVU/circle_up.png" />
                   <div className="mt-4 mb-2 text-xl font-medium">{i18n.t('whale-community-008')}</div>
                   <div className="text-base font-normal text-text_color_3">{i18n.t('whale-community-009')}</div>
                 </div>
               </div>
               <div className="flex justify-between flex-1 w-full gap-10">
                 <div className="flex-1">
-                  <ImageIcon url="https://pub.lbctrl.com/files/202212/Xkw3C35uSEWgMeoU/camera.png" />
+                  <ImageIcon url="https://pub.pbkrs.com/files/202212/Xkw3C35uSEWgMeoU/camera.png" />
                   <div className="mt-4 mb-2 text-xl font-medium">{i18n.t('whale-community-010')}</div>
                   <div className="text-base font-normal text-text_color_3">{i18n.t('whale-community-011')}</div>
                 </div>
                 <div className="flex-1">
-                  <ImageIcon url="https://pub.lbctrl.com/files/202212/m74gCXLM8mkqXxYK/broker.png" />
+                  <ImageIcon url="https://pub.pbkrs.com/files/202212/m74gCXLM8mkqXxYK/broker.png" />
                   <div className="mt-4 mb-2 text-xl font-medium">{i18n.t('whale-community-012')}</div>
                   <div className="text-base font-normal text-text_color_3">{i18n.t('whale-community-013')}</div>
                 </div>
@@ -102,7 +102,7 @@ const Longport: React.FC = () => {
             <div className="flex flex-col justify-between gap-6 md:flex-row">
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
-                  url="https://pub.lbctrl.com/files/202212/eFWKfWEu5em5ugGZ/Group_627094__1_.png"
+                  url="https://pub.pbkrs.com/files/202212/eFWKfWEu5em5ugGZ/Group_627094__1_.png"
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-016')}</div>
@@ -114,7 +114,7 @@ const Longport: React.FC = () => {
               </div>
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
-                  url="https://pub.lbctrl.com/files/202212/hH53gGU5c81xmx6X/Group_627094__2_.png"
+                  url="https://pub.pbkrs.com/files/202212/hH53gGU5c81xmx6X/Group_627094__2_.png"
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-020')}</div>
@@ -126,7 +126,7 @@ const Longport: React.FC = () => {
               </div>
               <div className="flex-1 p-8 bg-white rounded-lg">
                 <ImageIcon
-                  url="https://pub.lbctrl.com/files/202212/6P9Lxdz3T3KCGSAy/Group_627094__3_.png"
+                  url="https://pub.pbkrs.com/files/202212/6P9Lxdz3T3KCGSAy/Group_627094__3_.png"
                   className="!h-[56px] !w-auto"
                 />
                 <div className="mt-8 mb-4 text-xl font-medium">{i18n.t('whale-community-024')}</div>
@@ -170,7 +170,7 @@ const Longport: React.FC = () => {
                     </li>
                     <li className="flex items-center">
                       <ImageIcon
-                        url="https://pub.lbctrl.com/files/202212/FAoH4Cthd3zTonKb/diamond.png"
+                        url="https://pub.pbkrs.com/files/202212/FAoH4Cthd3zTonKb/diamond.png"
                         className="mr-8"
                       />
                       <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
@@ -179,7 +179,7 @@ const Longport: React.FC = () => {
                     </li>
                     <li className="flex items-center">
                       <ImageIcon
-                        url="https://pub.lbctrl.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
+                        url="https://pub.pbkrs.com/files/202212/wFfpmGp5yV1ciYDP/list_record.png"
                         className="mr-8"
                       />
                       <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
@@ -197,7 +197,7 @@ const Longport: React.FC = () => {
                 <ul className="flex flex-col gap-6">
                   <li className="flex items-center">
                     <ImageIcon
-                      url="https://pub.lbctrl.com/files/202212/SWrinzC21He7nzq7/eyes_open.png"
+                      url="https://pub.pbkrs.com/files/202212/SWrinzC21He7nzq7/eyes_open.png"
                       className="mr-8"
                     />
                     <span className="text-base font-normal text-text_color_3 lg:max-w-[448px] leading-7">
@@ -206,7 +206,7 @@ const Longport: React.FC = () => {
                   </li>
                   <li className="flex items-center">
                     <ImageIcon
-                      url="https://pub.lbctrl.com/files/202212/mqUV14XqnvYE6YgC/customer.png"
+                      url="https://pub.pbkrs.com/files/202212/mqUV14XqnvYE6YgC/customer.png"
                       className="mr-8"
                     />
                     <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -214,7 +214,7 @@ const Longport: React.FC = () => {
                     </span>
                   </li>
                   <li className="flex items-center">
-                    <ImageIcon url="https://pub.lbctrl.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
+                    <ImageIcon url="https://pub.pbkrs.com/files/202212/Mhvn1KWFHt6mvhr1/option.png" className="mr-8" />
                     <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
                       {i18n.t('whale-community-038')}
                     </span>

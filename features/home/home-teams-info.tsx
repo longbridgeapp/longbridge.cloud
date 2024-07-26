@@ -9,27 +9,27 @@ const HomeTeamsInfo = () => {
   const list = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbctrl.com/files/202307/nnswNVEqxchGE7yH/hk-stock-exchange.png',
+        img: 'https://pub.pbkrs.com/files/202307/nnswNVEqxchGE7yH/hk-stock-exchange.png',
         title: i18n.t('features_home_home_teams_info_891140'),
         desc: [i18n.t('features_home_home_teams_info_891141')],
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/oK6qoyLPWpXtXBhi/Group_627429.png',
+        img: 'https://pub.pbkrs.com/files/202307/oK6qoyLPWpXtXBhi/Group_627429.png',
         title: i18n.t('features_home_home_teams_info_891142'),
         desc: [i18n.t('features_home_home_teams_info_891143')],
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/2VbdgeKexzufQnUJ/cnas.png',
+        img: 'https://pub.pbkrs.com/files/202307/2VbdgeKexzufQnUJ/cnas.png',
         title: 'CNAS/UKAS/IAF',
         desc: [i18n.t('features_home_home_teams_info_891144'), i18n.t('features_home_home_teams_info_891145')],
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/bmMsHj89Qt54NP69/independent-patent.png',
+        img: 'https://pub.pbkrs.com/files/202307/bmMsHj89Qt54NP69/independent-patent.png',
         title: i18n.t('features_home_home_teams_info_891146'),
         desc: [i18n.t('features_home_home_teams_info_891147'), i18n.t('features_home_home_teams_info_891148')],
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/QDVKrbamDMT3tKMz/brand-honors.png',
+        img: 'https://pub.pbkrs.com/files/202307/QDVKrbamDMT3tKMz/brand-honors.png',
         title: i18n.t('features_home_home_teams_info_891149'),
         desc: [i18n.t('features_home_home_teams_info_891150')],
       },

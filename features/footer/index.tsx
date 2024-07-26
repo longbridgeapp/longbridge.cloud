@@ -15,11 +15,11 @@ const Footer: FC = () => {
   const socials = useMemo(() => {
     return [
       {
-        icon: 'https://pub.lbctrl.com/files/202205/sBLHLyL1a9FVES4t/facebook.png',
+        icon: 'https://pub.pbkrs.com/files/202205/sBLHLyL1a9FVES4t/facebook.png',
         href: '',
       },
       {
-        icon: 'https://pub.lbctrl.com/files/202205/itdFKSrQxHZCyuXD/twiiter.png',
+        icon: 'https://pub.pbkrs.com/files/202205/itdFKSrQxHZCyuXD/twiiter.png',
         href: '',
       },
     ]
@@ -159,7 +159,7 @@ const Footer: FC = () => {
               </div>
               <div>
                 <a href="https://www.linkedin.com/company/longbridgewhale" target="_blank" rel="noreferrer">
-                  <img className="h-5" alt="" src="https://pub.lbctrl.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
+                  <img className="h-5" alt="" src="https://pub.pbkrs.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
                 </a>
               </div>
             </div>

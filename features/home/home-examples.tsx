@@ -55,7 +55,7 @@ const HomeExamples = () => {
               <div
                 className="py-10 sm:py-20 bg-[#5622CF] border-box bg-no-repeat bg-right-top bg-[length:56%_522px]"
                 style={{
-                  backgroundImage: `url('https://pub.lbctrl.com/files/202307/P5TtXZEMWM4h37W2/bg-image2.png')`,
+                  backgroundImage: `url('https://pub.pbkrs.com/files/202307/P5TtXZEMWM4h37W2/bg-image2.png')`,
                   height,
                 }}
               >
@@ -72,12 +72,12 @@ const HomeExamples = () => {
                   <div className="text-right">{item.company}</div>
                   <img
                     className="h-[28px] absolute top-[4px] left-[-58px]"
-                    src="https://pub.lbctrl.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
+                    src="https://pub.pbkrs.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
                     alt=""
                   />
                   <img
                     className="h-[28px] absolute top-[8px] right-[-58px] rotate-180"
-                    src="https://pub.lbctrl.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
+                    src="https://pub.pbkrs.com/files/202307/RRP218xfnRXMubmx/quotation-mark.png"
                     alt=""
                   />
                 </div>

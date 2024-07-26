@@ -189,14 +189,14 @@ const BackOffice: React.FC = () => {
                 <div className="mb-10 text-[28px] leading-10 font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex flex-col gap-y-5">
                   <div className="flex items-center">
-                    <ImageIcon url="https://pub.lbctrl.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
+                    <ImageIcon url="https://pub.pbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px] ">
                       {i18n.t('whale-backoffice-039')}
                     </span>
                   </div>
                   <div className="flex items-center">
                     <ImageIcon
-                      url="https://pub.lbctrl.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png"
+                      url="https://pub.pbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png"
                       className="mr-8"
                     />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
@@ -204,7 +204,7 @@ const BackOffice: React.FC = () => {
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <ImageIcon url="https://pub.lbctrl.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
+                    <ImageIcon url="https://pub.pbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
                       {i18n.t('whale-backoffice-041')}
                     </span>

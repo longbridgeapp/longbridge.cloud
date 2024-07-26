@@ -24,7 +24,7 @@ const AboutPage = () => {
     <PageLayout
       screenProps={{
         contentFLex: '10',
-        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
+        backgroundImage: 'url(https://pub.pbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
         title: i18n.t('about_page_001'),
         desc: (
           <span>

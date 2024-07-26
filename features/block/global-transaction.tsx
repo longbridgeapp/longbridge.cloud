@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { Block, BlockHeader, BlockBetween } from '@/components/block'
 import Icon from '@/components/icon'
 
-const IMAGE_URL = 'https://pub.lbctrl.com/files/202207/7AK4zA3KmTnJcQZs/Group_627466.png'
+const IMAGE_URL = 'https://pub.pbkrs.com/files/202207/7AK4zA3KmTnJcQZs/Group_627466.png'
 
 const GlobalTransaction = () => {
   const i18n = useTranslation('common')

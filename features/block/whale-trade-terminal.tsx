@@ -12,22 +12,22 @@ const WhaleTradeTerminal = () => {
   const list = useMemo(() => {
     return [
       {
-        image_url: 'https://pub.lbctrl.com/files/202207/bS6wAwyj44TqQugX/1.png',
+        image_url: 'https://pub.pbkrs.com/files/202207/bS6wAwyj44TqQugX/1.png',
         title: i18n.t('terminal.item-1'),
         desc: i18n.t('terminal.item-2'),
       },
       {
-        image_url: 'https://pub.lbctrl.com/files/202207/1Xh6KA4ZiDgS6wqh/2.png',
+        image_url: 'https://pub.pbkrs.com/files/202207/1Xh6KA4ZiDgS6wqh/2.png',
         title: i18n.t('terminal.item-3'),
         desc: i18n.t('terminal.item-4'),
       },
       {
-        image_url: 'https://pub.lbctrl.com/files/202207/oKC2gczcinhaLLom/3.png',
+        image_url: 'https://pub.pbkrs.com/files/202207/oKC2gczcinhaLLom/3.png',
         title: i18n.t('terminal.item-5'),
         desc: i18n.t('terminal.item-6'),
       },
       {
-        image_url: 'https://pub.lbctrl.com/files/202207/3PzbFjF7TfVMu5nU/4.png',
+        image_url: 'https://pub.pbkrs.com/files/202207/3PzbFjF7TfVMu5nU/4.png',
         title: i18n.t('terminal.item-7'),
         desc: i18n.t('terminal.item-8'),
       },

@@ -27,10 +27,10 @@ const TradingPage = () => {
     <PageLayout
       screenProps={{
         contactUs: true,
-        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
+        backgroundImage: 'url(https://pub.pbkrs.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
         title: i18n.t('trading_page_001'),
         desc: i18n.t('trading_page_002'),
-        cover: 'https://pub.lbctrl.com/files/202205/Gm8Kw2xQbkwo7TXs/trading_header.png',
+        cover: 'https://pub.pbkrs.com/files/202205/Gm8Kw2xQbkwo7TXs/trading_header.png',
       }}
     >
       <SEOMeta title={seoI18n.t('trading.title')} description={seoI18n.t('trading.description')} />

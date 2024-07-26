@@ -15,9 +15,9 @@ import { ImageAndText } from '@/features/solutions/info-introduce'
 import CardSwiper from '@/features/common/card-swiper'
 
 const product_advantage_img: Record<string, string> = {
-  'en': 'https://pub.lbctrl.com/files/202307/wpQUnihfi1t94wFt/portai-table-en.svg',
-  'zh-CN': 'https://pub.lbctrl.com/files/202307/CGPSYMsG9vE6RETk/portai-table-cn.svg',
-  'zh-HK': 'https://pub.lbctrl.com/files/202307/YJsaFtN8LCkaRSFb/portai-table-hk.svg',
+  'en': 'https://pub.pbkrs.com/files/202307/wpQUnihfi1t94wFt/portai-table-en.svg',
+  'zh-CN': 'https://pub.pbkrs.com/files/202307/CGPSYMsG9vE6RETk/portai-table-cn.svg',
+  'zh-HK': 'https://pub.pbkrs.com/files/202307/YJsaFtN8LCkaRSFb/portai-table-hk.svg',
 }
 export const getStaticPaths = () => ({
   fallback: false,
@@ -52,17 +52,17 @@ const PortAI: React.FC = () => {
   const marketPainPoints = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbctrl.com/files/202307/KyhPqkDbbdt4x9an/high-cost.png',
+        img: 'https://pub.pbkrs.com/files/202307/KyhPqkDbbdt4x9an/high-cost.png',
         title: i18n.t('whale-community-006'),
         desc: i18n.t('pages_locale_product_port_ai_891116'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/omS3ouK5RUFPkYGU/weak-competitiveness.png',
+        img: 'https://pub.pbkrs.com/files/202307/omS3ouK5RUFPkYGU/weak-competitiveness.png',
         title: i18n.t('whale-community-008'),
         desc: i18n.t('pages_locale_product_port_ai_891117'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/nHpWmeRrpFivnGR7/.png',
+        img: 'https://pub.pbkrs.com/files/202307/nHpWmeRrpFivnGR7/.png',
         title: i18n.t('whale-community-012'),
         desc: i18n.t('pages_locale_product_port_ai_891118'),
       },
@@ -72,8 +72,8 @@ const PortAI: React.FC = () => {
   const advantageList = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbctrl.com/files/202307/iWH4QZnXe4TRYnaM/product-desigin-1.png',
-        rightImg: 'https://pub.lbctrl.com/files/202307/konaXHRhgiZPEuuV/product-desigin-2.png',
+        img: 'https://pub.pbkrs.com/files/202307/iWH4QZnXe4TRYnaM/product-desigin-1.png',
+        rightImg: 'https://pub.pbkrs.com/files/202307/konaXHRhgiZPEuuV/product-desigin-2.png',
         title: i18n.t('pages_locale_product_port_ai_891119'),
         desc: [
           i18n.t('pages_locale_product_portai_891117'),
@@ -83,9 +83,9 @@ const PortAI: React.FC = () => {
         ],
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/oKZwiwD9H6Wm1i2d/out-of-the-box-1.png',
+        img: 'https://pub.pbkrs.com/files/202307/oKZwiwD9H6Wm1i2d/out-of-the-box-1.png',
         title: i18n.t('whale-community-024'),
-        rightImg: 'https://pub.lbctrl.com/files/202307/SPWJPf5aSKUSvLAP/out-of-the-box-2.png',
+        rightImg: 'https://pub.pbkrs.com/files/202307/SPWJPf5aSKUSvLAP/out-of-the-box-2.png',
         desc: [
           i18n.t('pages_locale_product_port_ai_891124'),
           i18n.t('pages_locale_product_port_ai_891125'),
