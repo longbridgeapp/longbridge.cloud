@@ -15,22 +15,22 @@ function useFeatures() {
       {
         title: i18n.t('crm_page_001'),
         desc: i18n.t('crm_page_002'),
-        picture: 'https://pub.lbctrl.com/files/202205/UR6qffqL4krfeNuB/Vector__12_.png',
+        picture: 'https://pub.pbkrs.com/files/202205/UR6qffqL4krfeNuB/Vector__12_.png',
       },
       {
         title: i18n.t('crm_page_003'),
         desc: i18n.t('crm_page_004'),
-        picture: 'https://pub.lbctrl.com/files/202205/FvV7aZauLSUfqFjf/Vector__13_.png',
+        picture: 'https://pub.pbkrs.com/files/202205/FvV7aZauLSUfqFjf/Vector__13_.png',
       },
       {
         title: i18n.t('crm_page_005'),
         desc: i18n.t('crm_page_006'),
-        picture: 'https://pub.lbctrl.com/files/202205/nYkoKAQfXUpC8aGZ/Vector__14_.png',
+        picture: 'https://pub.pbkrs.com/files/202205/nYkoKAQfXUpC8aGZ/Vector__14_.png',
       },
       {
         title: i18n.t('crm_page_007'),
         desc: i18n.t('crm_page_008'),
-        picture: 'https://pub.lbctrl.com/files/202205/ZnaK9tRK2iv2RwR9/Vector__15_.png',
+        picture: 'https://pub.pbkrs.com/files/202205/ZnaK9tRK2iv2RwR9/Vector__15_.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -55,10 +55,10 @@ const CrmPage = () => {
     <PageLayout
       screenProps={{
         contactUs: true,
-        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/P6diSwqwKAq21wRK/crm.png)',
+        backgroundImage: 'url(https://pub.pbkrs.com/files/202205/P6diSwqwKAq21wRK/crm.png)',
         title: i18n.t('crm_page_009'),
         desc: i18n.t('crm_page_0010'),
-        cover: 'https://pub.lbctrl.com/files/202205/j4vR5MN24LYt7Kyb/crm-header.png',
+        cover: 'https://pub.pbkrs.com/files/202205/j4vR5MN24LYt7Kyb/crm-header.png',
       }}
     >
       <SEOMeta title={seoI18n.t('crm.title')} description={seoI18n.t('crm.description')} />

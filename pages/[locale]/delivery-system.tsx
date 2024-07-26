@@ -319,14 +319,14 @@ const DeliverySystem: React.FC = () => {
                 <div className="flex flex-col justify-between gap-3 xl:flex-row">
                   <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbctrl.com/files/202212/zFeewQW7ZHsHffbz/circle_time.png" />
+                      <ImageIcon url="https://pub.pbkrs.com/files/202212/zFeewQW7ZHsHffbz/circle_time.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-068')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-069')}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbctrl.com/files/202212/3P85SNLi9ddXX921/me.png" />
+                      <ImageIcon url="https://pub.pbkrs.com/files/202212/3P85SNLi9ddXX921/me.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-070')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-071')}
@@ -335,14 +335,14 @@ const DeliverySystem: React.FC = () => {
                   </div>
                   <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbctrl.com/files/202212/qYTkUnDVQamgWQVm/position.png" />
+                      <ImageIcon url="https://pub.pbkrs.com/files/202212/qYTkUnDVQamgWQVm/position.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-072')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-073')}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbctrl.com/files/202212/bRjNqPJ7wb6faVwb/aim.png" />
+                      <ImageIcon url="https://pub.pbkrs.com/files/202212/bRjNqPJ7wb6faVwb/aim.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-074')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-075')}

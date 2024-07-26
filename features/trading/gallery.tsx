@@ -10,11 +10,11 @@ function useFeatures() {
     return [
       {
         desc: i18n.t('trading_gallery_001'),
-        picture: 'https://pub.lbctrl.com/files/202205/bPJymyB54gXuempu/trading_03.png',
+        picture: 'https://pub.pbkrs.com/files/202205/bPJymyB54gXuempu/trading_03.png',
       },
       {
         desc: i18n.t('trading_gallery_002'),
-        picture: 'https://pub.lbctrl.com/files/202205/ZwPGQKodXsg1tssZ/trading_04.png',
+        picture: 'https://pub.pbkrs.com/files/202205/ZwPGQKodXsg1tssZ/trading_04.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps

@@ -10,7 +10,7 @@ export const SEOMeta: FC<NextSeoProps & { url?: string; indexTitle?: boolean }> 
     url,
     images: [
       {
-        url: 'https://pub.lbctrl.com/files/202205/bHQKu1TbTP5prjuH/preview.png',
+        url: 'https://pub.pbkrs.com/files/202205/bHQKu1TbTP5prjuH/preview.png',
       },
     ],
     site_name: 'Longbridge Whale',

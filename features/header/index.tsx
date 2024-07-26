@@ -286,7 +286,7 @@ const Navs = () => {
             )
           }}
         >
-          <img src="https://pub.lbctrl.com/static/offline/202111/oSbQhwMyjvFQzoHQ/menu.svg" alt="" />
+          <img src="https://pub.pbkrs.com/static/offline/202111/oSbQhwMyjvFQzoHQ/menu.svg" alt="" />
         </Dropdown>
       </div>
     </>

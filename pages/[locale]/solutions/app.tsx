@@ -23,7 +23,7 @@ const AppSolutionPage = () => {
   return (
     <PageLayout
       screenProps={{
-        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/r5fRPnErr61CDvy7/.png)',
+        backgroundImage: 'url(https://pub.pbkrs.com/files/202205/r5fRPnErr61CDvy7/.png)',
         title: i18n.t('solutions_app_page_001'),
         contentFLex: '30',
         desc: i18n.t('solutions_app_page_002'),

@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next'
 import { Block, BlockHeader, BlockBetween } from '@/components/block'
 import Icon from '@/components/icon'
 
-const IMAGE_URL = 'https://pub.lbctrl.com/files/202207/H2KHstvbtQhWzHgC/Group_427318854.png'
+const IMAGE_URL = 'https://pub.pbkrs.com/files/202207/H2KHstvbtQhWzHgC/Group_427318854.png'
 
 const LongPortApp = ({ name, slogn }: { name: string; slogn: string }) => {
   const i18n = useTranslation('common')

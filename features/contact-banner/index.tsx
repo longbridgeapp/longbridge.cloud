@@ -14,7 +14,7 @@ const ContactBanner: FC<{
     <div
       className="main-container py-[72px] bg-cover"
       style={{
-        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/F7iG2C1JNusS7NiW/Group_626630.png)',
+        backgroundImage: 'url(https://pub.pbkrs.com/files/202205/F7iG2C1JNusS7NiW/Group_626630.png)',
       }}
     >
       <div className="main-content-width">

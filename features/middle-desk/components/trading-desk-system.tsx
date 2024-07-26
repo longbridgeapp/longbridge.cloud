@@ -9,7 +9,7 @@ const TradingDeskSystem = () => {
   const sectionList01 = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbctrl.com/static/offline/202301/xt62YraKZZG8ypWA/Frame_427319006.svg',
+        img: 'https://pub.pbkrs.com/static/offline/202301/xt62YraKZZG8ypWA/Frame_427319006.svg',
         title: i18n.t('src_pages_atm_deposit_add_single_index_8659'),
         list: [
           i18n.t('src_pages_atm_deposit_add_single_index_8660'),
@@ -18,7 +18,7 @@ const TradingDeskSystem = () => {
         ],
       },
       {
-        img: 'https://pub.lbctrl.com/static/offline/202301/JMEzTGTMU93CW49z/Frame_427319008.svg',
+        img: 'https://pub.pbkrs.com/static/offline/202301/JMEzTGTMU93CW49z/Frame_427319008.svg',
         title: i18n.t('src_pages_atm_deposit_add_single_index_8663'),
         list: [
           i18n.t('src_pages_atm_deposit_add_single_index_8664'),
@@ -35,15 +35,15 @@ const TradingDeskSystem = () => {
       title: i18n.t('src_pages_atm_deposit_add_single_index_8667'),
       list: [
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/DJpxkYQF5MzQjqQ8/list.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/DJpxkYQF5MzQjqQ8/list.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8668'),
         },
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/hhec68Xh6JMi6MHY/list_record.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/hhec68Xh6JMi6MHY/list_record.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8669'),
         },
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/8r21WddwVCdKvW8n/market.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/8r21WddwVCdKvW8n/market.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8670'),
         },
       ],
@@ -56,19 +56,19 @@ const TradingDeskSystem = () => {
       title: i18n.t('src_pages_atm_deposit_add_single_index_8671'),
       list: [
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/Ze5bxSCNooyh4UNS/feed.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/Ze5bxSCNooyh4UNS/feed.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8672'),
         },
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/xgCrXorxFmhxM4Kv/keyboard.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/xgCrXorxFmhxM4Kv/keyboard.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8673'),
         },
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/mys4LWQux88M2Krv/watchlist.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/mys4LWQux88M2Krv/watchlist.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8674'),
         },
         {
-          img: 'https://pub.lbctrl.com/static/offline/202301/ZAYUDeSYBek5GGNn/vote.svg',
+          img: 'https://pub.pbkrs.com/static/offline/202301/ZAYUDeSYBek5GGNn/vote.svg',
           text: i18n.t('src_pages_atm_deposit_add_single_index_8675'),
         },
       ],

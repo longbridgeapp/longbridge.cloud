@@ -6,7 +6,7 @@ import { TalkToUs } from '../talk-to-us'
 import Icon from '@/components/icon'
 import Styles from './customer-management.module.scss'
 
-const BACKGROUND_URL = 'https://pub.lbctrl.com/files/202207/4HBZ4vvcEniJQXur/Group_427318856.png'
+const BACKGROUND_URL = 'https://pub.pbkrs.com/files/202207/4HBZ4vvcEniJQXur/Group_427318856.png'
 
 const IMAGE_URL =
   'https://assets.lbctrl.com/uploads/a99641f2-03a8-4f4e-a404-40d5f951a6e3/img_v2_9a346330-7aa2-4cb8-a38d-cb128cc7fadg.png'
@@ -105,7 +105,7 @@ export const BrokerManagement = () => {
 
 export const LongPortManagement = () => <BrokerManagement />
 
-const IMAGE_URL_WHITE_LABEL = 'https://pub.lbctrl.com/files/202207/9qmLkU3d53VTM3H3/Group_627339.png'
+const IMAGE_URL_WHITE_LABEL = 'https://pub.pbkrs.com/files/202207/9qmLkU3d53VTM3H3/Group_627339.png'
 
 export const WhiteLabelManagement = () => {
   const i18n = useTranslation('common')

@@ -76,7 +76,7 @@ export const LiveVideo = () => {
         {((liveInfoLoaded && !started) || ended) && (
           <>
             <div className="absolute flex flex-col items-center justify-center -translate-y-1/2 top-1/2">
-              <img className="w-[73px]" src="https://pub.lbctrl.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
+              <img className="w-[73px]" src="https://pub.pbkrs.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
               <div className="px-5 text-center mt-14">
                 {ended ? i18n.t('live_video_001') : succeed ? i18n.t('live_video_002') : i18n.t('live_video_003')}
               </div>

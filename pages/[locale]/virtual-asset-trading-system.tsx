@@ -53,7 +53,7 @@ const VirtualAssetTradingSystem = () => {
           url: 'https://longbridgewhale.activity.wbrks.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
           images: [
             {
-              url: 'https://pub.lbctrl.com/files/202305/smtJobvVG139kuLz/20230526-150057.png',
+              url: 'https://pub.pbkrs.com/files/202305/smtJobvVG139kuLz/20230526-150057.png',
             },
           ],
         }}

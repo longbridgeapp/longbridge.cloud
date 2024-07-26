@@ -9,32 +9,32 @@ const HomeCoreAdvantages = () => {
   const list = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbctrl.com/files/202307/BiXGQ5mYG3aLnWpw/.png',
+        img: 'https://pub.pbkrs.com/files/202307/BiXGQ5mYG3aLnWpw/.png',
         title: i18n.t('features_home_home_core_advantages_891117'),
         desc: i18n.t('features_home_home_core_advantages_891118'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/oJpcMCaxHVG8FZrS/.png',
+        img: 'https://pub.pbkrs.com/files/202307/oJpcMCaxHVG8FZrS/.png',
         title: i18n.t('features_home_home_core_advantages_891119'),
         desc: i18n.t('features_home_home_core_advantages_891120'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/oGhfiA6CudYn2QZR/.png',
+        img: 'https://pub.pbkrs.com/files/202307/oGhfiA6CudYn2QZR/.png',
         title: i18n.t('features_home_home_core_advantages_891121'),
         desc: i18n.t('features_home_home_core_advantages_891122'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/nHpWmeRrpFivnGR7/.png',
+        img: 'https://pub.pbkrs.com/files/202307/nHpWmeRrpFivnGR7/.png',
         title: i18n.t('features_home_home_core_advantages_891123'),
         desc: i18n.t('features_home_home_core_advantages_891124'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/KAwddhou1m3uveXL/_SaaS.png',
+        img: 'https://pub.pbkrs.com/files/202307/KAwddhou1m3uveXL/_SaaS.png',
         title: i18n.t('features_home_home_core_advantages_891125'),
         desc: i18n.t('features_home_home_core_advantages_891126'),
       },
       {
-        img: 'https://pub.lbctrl.com/files/202307/t4KQ4o9csQDLbUDm/.png',
+        img: 'https://pub.pbkrs.com/files/202307/t4KQ4o9csQDLbUDm/.png',
         title: i18n.t('features_home_home_core_advantages_891127'),
         desc: i18n.t('features_home_home_core_advantages_891128'),
       },
@@ -42,10 +42,10 @@ const HomeCoreAdvantages = () => {
   }, [])
 
   return (
-    // https://pub.lbctrl.com/files/202307/ZFxUXG2ty4kXW1mP/bg-image.png
+    // https://pub.pbkrs.com/files/202307/ZFxUXG2ty4kXW1mP/bg-image.png
     <Box
       className="bg-bg_color_2 bg-no-repeat bg-right-top bg-[length:717px_393px]"
-      backgroundImage="https://pub.lbctrl.com/files/202307/zfP6yEtKhFSMFSdB/bg-image.png"
+      backgroundImage="https://pub.pbkrs.com/files/202307/zfP6yEtKhFSMFSdB/bg-image.png"
     >
       <>
         <Title
