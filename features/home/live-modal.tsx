@@ -10,14 +10,14 @@ import { isServer } from '@/utils/common'
 
 const pictures = {
   mobile: {
-    'en': 'https://pub.lbkrs.com/files/202205/ozAiPfqNHb4WuFeT/PopupMobileEnglish.png',
-    'zh-CN': 'https://pub.lbkrs.com/files/202205/1GUZ7UJHtB5DV63J/PopupMobileChinese.png',
-    'zh-HK': 'https://pub.lbkrs.com/files/202205/K7xkvP5Wi11Au5BP/PopupMobileChineseTr.png',
+    'en': 'https://pub.lbctrl.com/files/202205/ozAiPfqNHb4WuFeT/PopupMobileEnglish.png',
+    'zh-CN': 'https://pub.lbctrl.com/files/202205/1GUZ7UJHtB5DV63J/PopupMobileChinese.png',
+    'zh-HK': 'https://pub.lbctrl.com/files/202205/K7xkvP5Wi11Au5BP/PopupMobileChineseTr.png',
   },
   pc: {
-    'en': 'https://pub.lbkrs.com/files/202205/1hTPugDXvqG9vPb2/PopupWebEnglish.png',
-    'zh-CN': 'https://pub.lbkrs.com/files/202205/uxLZPiVtgnYsTBAN/PopupWebChinese.png',
-    'zh-HK': 'https://pub.lbkrs.com/files/202205/QUX5kNpgghaWRDrd/PopupWebChineseTr.png',
+    'en': 'https://pub.lbctrl.com/files/202205/1hTPugDXvqG9vPb2/PopupWebEnglish.png',
+    'zh-CN': 'https://pub.lbctrl.com/files/202205/uxLZPiVtgnYsTBAN/PopupWebChinese.png',
+    'zh-HK': 'https://pub.lbctrl.com/files/202205/QUX5kNpgghaWRDrd/PopupWebChineseTr.png',
   },
 } as any
 

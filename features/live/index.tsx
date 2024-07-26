@@ -19,19 +19,19 @@ function useAgendas(): IAgendaProps[] {
     return [
       {
         content: i18n.t('live_index_004'),
-        icon: 'https://pub.lbkrs.com/files/202205/ZbHvsYTuz69qULDK/live_home.png',
+        icon: 'https://pub.lbctrl.com/files/202205/ZbHvsYTuz69qULDK/live_home.png',
       },
       {
         content: i18n.t('live_index_008'),
-        icon: 'https://pub.lbkrs.com/files/202205/KGLZ6id8wdWBWHwj/stock.png',
+        icon: 'https://pub.lbctrl.com/files/202205/KGLZ6id8wdWBWHwj/stock.png',
       },
       {
         content: i18n.t('live_index_035'),
-        icon: 'https://pub.lbkrs.com/files/202205/49Bgxj45qsgtHMV2/quote.png',
+        icon: 'https://pub.lbctrl.com/files/202205/49Bgxj45qsgtHMV2/quote.png',
       },
       {
         content: i18n.t('live_index_010'),
-        icon: 'https://pub.lbkrs.com/files/202205/hfwcRkwpkWsgKYiH/encyclopedia.png',
+        icon: 'https://pub.lbctrl.com/files/202205/hfwcRkwpkWsgKYiH/encyclopedia.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -53,7 +53,7 @@ const Agenda: FC<
       </div>
       {showLine && (
         <div className="mx-4 w-14">
-          <img src="https://pub.lbkrs.com/files/202205/qPh3hGsxawvM2FQe/Vector_276.png" alt="" />
+          <img src="https://pub.lbctrl.com/files/202205/qPh3hGsxawvM2FQe/Vector_276.png" alt="" />
         </div>
       )}
     </>
@@ -143,7 +143,7 @@ const Detail = () => {
               </div>
             </div>
             <div className="flex-1 ml-10">
-              <img src="https://pub.lbkrs.com/files/202205/nRzqH899MYacvpDP/Group_627269.png" alt="" />
+              <img src="https://pub.lbctrl.com/files/202205/nRzqH899MYacvpDP/Group_627269.png" alt="" />
             </div>
           </div>
         </div>

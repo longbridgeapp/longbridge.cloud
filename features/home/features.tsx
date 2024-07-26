@@ -11,55 +11,55 @@ function useFeatures() {
         title: i18n.t('home_features_001'),
         descList: [
           {
-            icon: 'https://pub.lbkrs.com/files/202205/reubR26xbGa1RTnG/Vector-2.png',
+            icon: 'https://pub.lbctrl.com/files/202205/reubR26xbGa1RTnG/Vector-2.png',
             text: i18n.t('home_features_002'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/mFNuiUbcScnEcpwd/Vector-4.png',
+            icon: 'https://pub.lbctrl.com/files/202205/mFNuiUbcScnEcpwd/Vector-4.png',
             text: i18n.t('home_features_002_2'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/LvxeJkgDcK8Sn6VL/Vector-5.png',
+            icon: 'https://pub.lbctrl.com/files/202205/LvxeJkgDcK8Sn6VL/Vector-5.png',
             text: i18n.t('home_features_002_3'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/y6ZqqnSVQftKQNsa/Vector-3.png',
+            icon: 'https://pub.lbctrl.com/files/202205/y6ZqqnSVQftKQNsa/Vector-3.png',
             text: i18n.t('home_features_002_4'),
           },
         ],
-        picture: 'https://pub.lbkrs.com/files/202207/sM4h3JKELaG6JDSg/img_1.png',
+        picture: 'https://pub.lbctrl.com/files/202207/sM4h3JKELaG6JDSg/img_1.png',
       },
       {
         title: i18n.t('home_features_003'),
         descList: [
           {
-            icon: 'https://pub.lbkrs.com/files/202205/kzuByaLHaXwqbFot/Vector-9.png',
+            icon: 'https://pub.lbctrl.com/files/202205/kzuByaLHaXwqbFot/Vector-9.png',
             text: i18n.t('home_features_004_2'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/QXHpc4zibnvo7388/Vector-7.png',
+            icon: 'https://pub.lbctrl.com/files/202205/QXHpc4zibnvo7388/Vector-7.png',
             text: i18n.t('home_features_004_3'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/yj9YoSgRSTBv5bG8/Vector-8.png',
+            icon: 'https://pub.lbctrl.com/files/202205/yj9YoSgRSTBv5bG8/Vector-8.png',
             text: i18n.t('home_features_004_4'),
           },
         ],
-        picture: 'https://pub.lbkrs.com/files/202205/ERHi6CkxKPta3tQC/02.png',
+        picture: 'https://pub.lbctrl.com/files/202205/ERHi6CkxKPta3tQC/02.png',
       },
       {
         title: i18n.t('home_features_005'),
         descList: [
           {
-            icon: 'https://pub.lbkrs.com/files/202205/vaukh5PLh8a1cCYb/Vector-1.png',
+            icon: 'https://pub.lbctrl.com/files/202205/vaukh5PLh8a1cCYb/Vector-1.png',
             text: i18n.t('home_features_006'),
           },
           {
-            icon: 'https://pub.lbkrs.com/files/202205/tsu54ZS1Q71QpdBj/Vector.png',
+            icon: 'https://pub.lbctrl.com/files/202205/tsu54ZS1Q71QpdBj/Vector.png',
             text: i18n.t('home_features_006_2'),
           },
         ],
-        picture: 'https://pub.lbkrs.com/files/202207/XsGgnV2wjAUbS2Gk/img_3.png',
+        picture: 'https://pub.lbctrl.com/files/202207/XsGgnV2wjAUbS2Gk/img_3.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -89,7 +89,7 @@ export const HomeFeatures = () => {
                           <div className="gap-4 md:gap-8 desc-item" key={desc.text}>
                             <img
                               className="mx-auto icon"
-                              src={desc.icon || 'https://pub.lbkrs.com/files/202205/JRr82mvwpYDoZhGL/Vector__8_.png'}
+                              src={desc.icon || 'https://pub.lbctrl.com/files/202205/JRr82mvwpYDoZhGL/Vector__8_.png'}
                               alt=""
                             />
                             <div className="text">{desc.text}</div>

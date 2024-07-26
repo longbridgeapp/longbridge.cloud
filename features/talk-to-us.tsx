@@ -177,7 +177,7 @@ const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
   const contactList = useMemo(() => {
     return [
       {
-        icon: 'https://assets.lbkrs.com/uploads/ad7e7b52-7110-475f-b072-3643193779d9/union1.png',
+        icon: 'https://assets.lbctrl.com/uploads/ad7e7b52-7110-475f-b072-3643193779d9/union1.png',
         title: i18n.t('features_talk_to_us_891117'),
         tags: [
           i18n.t('features_talk_to_us_891118'),
@@ -188,7 +188,7 @@ const PhoneTalkToUs = ({ onClose }: { onClose: () => void }) => {
         email: 'bd@longbridge.cloud',
       },
       {
-        icon: 'https://assets.lbkrs.com/uploads/0c34320c-c99c-434f-88a9-b9a7b80b721c/broker.png',
+        icon: 'https://assets.lbctrl.com/uploads/0c34320c-c99c-434f-88a9-b9a7b80b721c/broker.png',
         title: i18n.t('features_talk_to_us_891121'),
         tags: [i18n.t('features_talk_to_us_891122'), i18n.t('features_talk_to_us_891123')],
         phone: '+852 3851 1722',

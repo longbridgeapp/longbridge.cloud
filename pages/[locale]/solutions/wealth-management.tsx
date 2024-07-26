@@ -35,14 +35,14 @@ export const getStaticProps = async (ctx: any) => ({
 })
 const tradeServiceImgMap = {
   chains: {
-    'zh-CN': 'https://assets.lbkrs.com/uploads/0c9a823d-ddf9-4126-927f-3f75ff7f7284/chains_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/670dff11-0929-4585-8710-4540cfc5fe7b/chains_hk.png',
-    'en': 'https://assets.lbkrs.com/uploads/9a32a46b-d8ce-40d8-bcf6-112deaaafbe3/chains_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/0c9a823d-ddf9-4126-927f-3f75ff7f7284/chains_cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/670dff11-0929-4585-8710-4540cfc5fe7b/chains_hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/9a32a46b-d8ce-40d8-bcf6-112deaaafbe3/chains_en.png',
   } as Record<string, string>,
   chart: {
-    'zh-CN': 'https://assets.lbkrs.com/uploads/6985b0eb-370a-4407-aa99-8d901f3fa692/chart_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/bb42eb5c-a6d3-4ea9-9d64-9282c5cf894b/chart_hk.png',
-    'en': 'https://assets.lbkrs.com/uploads/1553baed-03be-474f-99ce-014babd03727/chart_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/6985b0eb-370a-4407-aa99-8d901f3fa692/chart_cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/bb42eb5c-a6d3-4ea9-9d64-9282c5cf894b/chart_hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/1553baed-03be-474f-99ce-014babd03727/chart_en.png',
   } as Record<string, string>,
 }
 
@@ -68,37 +68,37 @@ const WealthManagement = () => {
 
   const solutions = [
     {
-      icon: 'https://assets.lbkrs.com/uploads/d6c30b54-fa8b-423c-923e-6365e762a3c0/icon1.png',
+      icon: 'https://assets.lbctrl.com/uploads/d6c30b54-fa8b-423c-923e-6365e762a3c0/icon1.png',
       title: i18n.t('pages_wm6'),
       problems: [i18n.t('pages_wm7'), i18n.t('pages_wm8'), i18n.t('pages_wm9'), i18n.t('pages_wm10')],
       solutions: [i18n.t('pages_wm12'), i18n.t('pages_wm13'), i18n.t('pages_wm14')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/946462be-42e8-4643-8432-4b3e2e76513c/icon2.png',
+      icon: 'https://assets.lbctrl.com/uploads/946462be-42e8-4643-8432-4b3e2e76513c/icon2.png',
       title: i18n.t('pages_wm15'),
       problems: [i18n.t('pages_wm16'), i18n.t('pages_wm17')],
       solutions: [i18n.t('pages_wm19'), i18n.t('pages_wm20'), i18n.t('pages_wm21')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/51b979b6-f3b1-40a6-9dce-89095838497c/icon3.png',
+      icon: 'https://assets.lbctrl.com/uploads/51b979b6-f3b1-40a6-9dce-89095838497c/icon3.png',
       title: i18n.t('pages_wm22'),
       problems: [i18n.t('pages_wm23'), i18n.t('pages_wm24'), i18n.t('pages_wm25')],
       solutions: [i18n.t('pages_wm27'), i18n.t('pages_wm28'), i18n.t('pages_wm29')],
     },
     {
-      icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
+      icon: 'https://assets.lbctrl.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
       title: i18n.t('pages_wm30'),
       problems: [i18n.t('pages_wm31'), i18n.t('pages_wm32'), i18n.t('pages_wm33')],
       solutions: [i18n.t('pages_wm35'), i18n.t('pages_wm36')],
     },
     // {
-    //   icon: 'https://assets.lbkrs.com/uploads/acc62b79-5109-4a2f-9c8a-b559affc3a4a/icon5.png',
+    //   icon: 'https://assets.lbctrl.com/uploads/acc62b79-5109-4a2f-9c8a-b559affc3a4a/icon5.png',
     //   title: i18n.t('pages_wm37'),
     //   problems: [i18n.t('pages_wm38')],
     //   solutions: [i18n.t('pages_wm40'), i18n.t('pages_wm41'), i18n.t('pages_wm42')],
     // },
     // {
-    //   icon: 'https://assets.lbkrs.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
+    //   icon: 'https://assets.lbctrl.com/uploads/de848b51-bcaa-454e-a0ad-78bb6e3c40ba/icon4.png',
     //   title: i18n.t('pages_wm43'),
     //   problems: [i18n.t('pages_wm44'), i18n.t('pages_wm45')],
     //   solutions: [i18n.t('pages_wm47')],

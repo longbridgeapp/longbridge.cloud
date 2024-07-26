@@ -20,7 +20,7 @@ const Comment: React.FC<{ data: IComment[]; className?: string }> = ({ data, cla
             </div>
           </div>
           <img
-            src="https://assets.lbkrs.com/uploads/e0597802-dd9a-4917-bd23-5e79fbafef0b/quote.png"
+            src="https://assets.lbctrl.com/uploads/e0597802-dd9a-4917-bd23-5e79fbafef0b/quote.png"
             alt="quote"
             className="w-5 mt-5 mb-3"
           />

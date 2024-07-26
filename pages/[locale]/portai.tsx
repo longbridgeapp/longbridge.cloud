@@ -15,9 +15,9 @@ import { ImageAndText } from '@/features/solutions/info-introduce'
 import CardSwiper from '@/features/common/card-swiper'
 
 const product_advantage_img: Record<string, string> = {
-  'en': 'https://pub.lbkrs.com/files/202307/wpQUnihfi1t94wFt/portai-table-en.svg',
-  'zh-CN': 'https://pub.lbkrs.com/files/202307/CGPSYMsG9vE6RETk/portai-table-cn.svg',
-  'zh-HK': 'https://pub.lbkrs.com/files/202307/YJsaFtN8LCkaRSFb/portai-table-hk.svg',
+  'en': 'https://pub.lbctrl.com/files/202307/wpQUnihfi1t94wFt/portai-table-en.svg',
+  'zh-CN': 'https://pub.lbctrl.com/files/202307/CGPSYMsG9vE6RETk/portai-table-cn.svg',
+  'zh-HK': 'https://pub.lbctrl.com/files/202307/YJsaFtN8LCkaRSFb/portai-table-hk.svg',
 }
 export const getStaticPaths = () => ({
   fallback: false,
@@ -42,9 +42,9 @@ const PortAI: React.FC = () => {
       // imgClassName: 'flex flex-row items-center border-box pl-12',
       desc: [i18n.t('pages_locale_product_port_ai_891114'), i18n.t('pages_locale_product_port_ai_891115')],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/0cd583d7-315a-4f4a-99b2-dbfbfd0315e9/portai-en.png',
-        'zh-CN': 'https://assets.lbkrs.com/uploads/0dc4246c-53ab-4d09-8cc9-0c144bfbc530/portai-cn.png',
-        'zh-HK': 'https://assets.lbkrs.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
+        'en': 'https://assets.lbctrl.com/uploads/0cd583d7-315a-4f4a-99b2-dbfbfd0315e9/portai-en.png',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/0dc4246c-53ab-4d09-8cc9-0c144bfbc530/portai-cn.png',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/0de904d4-924f-4203-a9b3-fd3203aded2b/portai-hk.png',
       },
     }
   }, [])
@@ -52,17 +52,17 @@ const PortAI: React.FC = () => {
   const marketPainPoints = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbkrs.com/files/202307/KyhPqkDbbdt4x9an/high-cost.png',
+        img: 'https://pub.lbctrl.com/files/202307/KyhPqkDbbdt4x9an/high-cost.png',
         title: i18n.t('whale-community-006'),
         desc: i18n.t('pages_locale_product_port_ai_891116'),
       },
       {
-        img: 'https://pub.lbkrs.com/files/202307/omS3ouK5RUFPkYGU/weak-competitiveness.png',
+        img: 'https://pub.lbctrl.com/files/202307/omS3ouK5RUFPkYGU/weak-competitiveness.png',
         title: i18n.t('whale-community-008'),
         desc: i18n.t('pages_locale_product_port_ai_891117'),
       },
       {
-        img: 'https://pub.lbkrs.com/files/202307/nHpWmeRrpFivnGR7/.png',
+        img: 'https://pub.lbctrl.com/files/202307/nHpWmeRrpFivnGR7/.png',
         title: i18n.t('whale-community-012'),
         desc: i18n.t('pages_locale_product_port_ai_891118'),
       },
@@ -72,8 +72,8 @@ const PortAI: React.FC = () => {
   const advantageList = useMemo(() => {
     return [
       {
-        img: 'https://pub.lbkrs.com/files/202307/iWH4QZnXe4TRYnaM/product-desigin-1.png',
-        rightImg: 'https://pub.lbkrs.com/files/202307/konaXHRhgiZPEuuV/product-desigin-2.png',
+        img: 'https://pub.lbctrl.com/files/202307/iWH4QZnXe4TRYnaM/product-desigin-1.png',
+        rightImg: 'https://pub.lbctrl.com/files/202307/konaXHRhgiZPEuuV/product-desigin-2.png',
         title: i18n.t('pages_locale_product_port_ai_891119'),
         desc: [
           i18n.t('pages_locale_product_portai_891117'),
@@ -83,9 +83,9 @@ const PortAI: React.FC = () => {
         ],
       },
       {
-        img: 'https://pub.lbkrs.com/files/202307/oKZwiwD9H6Wm1i2d/out-of-the-box-1.png',
+        img: 'https://pub.lbctrl.com/files/202307/oKZwiwD9H6Wm1i2d/out-of-the-box-1.png',
         title: i18n.t('whale-community-024'),
-        rightImg: 'https://pub.lbkrs.com/files/202307/SPWJPf5aSKUSvLAP/out-of-the-box-2.png',
+        rightImg: 'https://pub.lbctrl.com/files/202307/SPWJPf5aSKUSvLAP/out-of-the-box-2.png',
         desc: [
           i18n.t('pages_locale_product_port_ai_891124'),
           i18n.t('pages_locale_product_port_ai_891125'),
@@ -113,9 +113,9 @@ const PortAI: React.FC = () => {
             i18n.t('pages_locale_product_portai_891126'),
           ],
           img: {
-            'en': 'https://assets.lbkrs.com/uploads/ae3d6a4b-abde-47ee-bb1a-ba610a9764c1/1-portai-im-en.png',
-            'zh-CN': 'https://assets.lbkrs.com/uploads/2451f75c-0a84-40a2-a0fc-115c6e529337/1-portai-im-cn.png',
-            'zh-HK': 'https://assets.lbkrs.com/uploads/b0dd4e67-76ab-4971-97e6-dd9df29949b7/1-portai-im-hk.png',
+            'en': 'https://assets.lbctrl.com/uploads/ae3d6a4b-abde-47ee-bb1a-ba610a9764c1/1-portai-im-en.png',
+            'zh-CN': 'https://assets.lbctrl.com/uploads/2451f75c-0a84-40a2-a0fc-115c6e529337/1-portai-im-cn.png',
+            'zh-HK': 'https://assets.lbctrl.com/uploads/b0dd4e67-76ab-4971-97e6-dd9df29949b7/1-portai-im-hk.png',
           },
         },
       },
@@ -133,9 +133,9 @@ const PortAI: React.FC = () => {
             i18n.t('pages_locale_product_portai_891129'),
           ],
           img: {
-            'en': 'https://assets.lbkrs.com/uploads/bbcc742b-580f-4e20-b8b0-6682d9c55258/2en.png',
-            'zh-CN': 'https://assets.lbkrs.com/uploads/e050c533-d82e-400e-8d2a-f210f089ab4d/2cn.png',
-            'zh-HK': 'https://assets.lbkrs.com/uploads/bda8507f-e54b-4f44-9ab9-cf9792e302b3/2hk.png',
+            'en': 'https://assets.lbctrl.com/uploads/bbcc742b-580f-4e20-b8b0-6682d9c55258/2en.png',
+            'zh-CN': 'https://assets.lbctrl.com/uploads/e050c533-d82e-400e-8d2a-f210f089ab4d/2cn.png',
+            'zh-HK': 'https://assets.lbctrl.com/uploads/bda8507f-e54b-4f44-9ab9-cf9792e302b3/2hk.png',
           },
         },
       },
@@ -150,9 +150,9 @@ const PortAI: React.FC = () => {
           tips: i18n.t('pages_locale_product_port_ai_891128'),
           desc: [i18n.t('pages_locale_product_portai_891131'), i18n.t('pages_locale_product_portai_891132')],
           img: {
-            'en': 'https://assets.lbkrs.com/uploads/82d8aace-7a07-420f-8527-f3a46722561d/3en.png',
-            'zh-CN': 'https://assets.lbkrs.com/uploads/01f1e9c9-53f5-46ef-b17d-72215e02a790/3cn.png',
-            'zh-HK': 'https://assets.lbkrs.com/uploads/9f40a494-7d90-48e5-8eeb-2ff7461a6e66/3hk.png',
+            'en': 'https://assets.lbctrl.com/uploads/82d8aace-7a07-420f-8527-f3a46722561d/3en.png',
+            'zh-CN': 'https://assets.lbctrl.com/uploads/01f1e9c9-53f5-46ef-b17d-72215e02a790/3cn.png',
+            'zh-HK': 'https://assets.lbctrl.com/uploads/9f40a494-7d90-48e5-8eeb-2ff7461a6e66/3hk.png',
           },
         },
       },
@@ -171,9 +171,9 @@ const PortAI: React.FC = () => {
             i18n.t('pages_locale_product_portai_891136'),
           ],
           img: {
-            'en': 'https://assets.lbkrs.com/uploads/6d9cc7f1-f186-402c-b332-f12aeb81f475/4en.png',
-            'zh-CN': 'https://assets.lbkrs.com/uploads/74de6dba-f611-4f87-a8aa-afc8faebb5a0/4cn.png',
-            'zh-HK': 'https://assets.lbkrs.com/uploads/121d7e25-f8ce-4f6c-a918-834e9b0dc9a2/4hk.png',
+            'en': 'https://assets.lbctrl.com/uploads/6d9cc7f1-f186-402c-b332-f12aeb81f475/4en.png',
+            'zh-CN': 'https://assets.lbctrl.com/uploads/74de6dba-f611-4f87-a8aa-afc8faebb5a0/4cn.png',
+            'zh-HK': 'https://assets.lbctrl.com/uploads/121d7e25-f8ce-4f6c-a918-834e9b0dc9a2/4hk.png',
           },
         },
       },
@@ -188,9 +188,9 @@ const PortAI: React.FC = () => {
       tips: i18n.t('pages_locale_product_portai_891138'),
       desc: [i18n.t('pages_locale_product_portai_891139'), i18n.t('pages_locale_product_portai_891140')],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
-        'zh-CN': 'https://assets.lbkrs.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
-        'zh-HK': 'https://assets.lbkrs.com/uploads/9f4446cf-cf82-4b72-a775-bbc4caa261cd/portai-hk.svg',
+        'en': 'https://assets.lbctrl.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/a69620d5-621a-415f-b57a-e46f8fdb85c4/portai-cn.svg',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/9f4446cf-cf82-4b72-a775-bbc4caa261cd/portai-hk.svg',
       },
     }
   }, [])

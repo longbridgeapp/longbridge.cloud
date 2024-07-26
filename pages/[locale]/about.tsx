@@ -24,18 +24,14 @@ const AboutPage = () => {
     <PageLayout
       screenProps={{
         contentFLex: '10',
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
+        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/YU2Z37iWrsLLrxEc/.png)',
         title: i18n.t('about_page_001'),
         desc: (
           <span>
             {i18n.t('solutions_page_002')}
             <br />
-            <span className="inline-block mt-4">
-              {i18n.t('about_page_002')}
-            </span>
-            <span className="inline-block mt-4">
-              {i18n.t('about_page_003')}
-            </span>
+            <span className="inline-block mt-4">{i18n.t('about_page_002')}</span>
+            <span className="inline-block mt-4">{i18n.t('about_page_003')}</span>
           </span>
         ),
       }}

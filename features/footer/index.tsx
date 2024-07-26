@@ -15,11 +15,11 @@ const Footer: FC = () => {
   const socials = useMemo(() => {
     return [
       {
-        icon: 'https://pub.lbkrs.com/files/202205/sBLHLyL1a9FVES4t/facebook.png',
+        icon: 'https://pub.lbctrl.com/files/202205/sBLHLyL1a9FVES4t/facebook.png',
         href: '',
       },
       {
-        icon: 'https://pub.lbkrs.com/files/202205/itdFKSrQxHZCyuXD/twiiter.png',
+        icon: 'https://pub.lbctrl.com/files/202205/itdFKSrQxHZCyuXD/twiiter.png',
         href: '',
       },
     ]
@@ -159,7 +159,7 @@ const Footer: FC = () => {
               </div>
               <div>
                 <a href="https://www.linkedin.com/company/longbridgewhale" target="_blank" rel="noreferrer">
-                  <img className="h-5" alt="" src="https://pub.lbkrs.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
+                  <img className="h-5" alt="" src="https://pub.lbctrl.com/files/202307/dgDMvF2uhbvCAkUf/linkin.svg" />
                 </a>
               </div>
             </div>
@@ -169,7 +169,7 @@ const Footer: FC = () => {
               </div>
               <div>
                 <img
-                  src="https://assets.lbkrs.com/uploads/ca78ddab-b8a5-4ae8-881b-e08b4a8df37f/whale-official.png"
+                  src="https://assets.lbctrl.com/uploads/ca78ddab-b8a5-4ae8-881b-e08b4a8df37f/whale-official.png"
                   alt=""
                   className="w-24"
                 />
@@ -182,7 +182,7 @@ const Footer: FC = () => {
         <hr className="mt-6 border-[#EAEBEC]"></hr>
         <div className="flex items-center justify-between mt-6">
           <div className="text-xs text-text_color_3_supplement">
-            <div dangerouslySetInnerHTML={{__html: i18n.t('footer_005')}}/>
+            <div dangerouslySetInnerHTML={{ __html: i18n.t('footer_005') }} />
           </div>
           {isCN && (
             <div className="text-xs text-text_color_3_supplement">

@@ -25,17 +25,18 @@ const BssPage = () => {
     <PageLayout
       screenProps={{
         contactUs: true,
-        contentFLex: i18n.i18n.language === 'en' ?  '3' : '1',
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/SSpgCXC62ZPfstQ2/bss.png)',
+        contentFLex: i18n.i18n.language === 'en' ? '3' : '1',
+        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/SSpgCXC62ZPfstQ2/bss.png)',
         title: i18n.t('bss_page_003'),
-        desc: i18n.t(
-          'bss_page_001'
-        ),
+        desc: i18n.t('bss_page_001'),
       }}
     >
       <SEOMeta title={seoI18n.t('bss.title')} description={seoI18n.t('bss.description')} />
       <BssFeatures />
-      <ContactBanner title={i18n.t('bss_page_002')} desc={i18n.t('Try Whale Bss for free, and explore all the tools and services you need to start')} />
+      <ContactBanner
+        title={i18n.t('bss_page_002')}
+        desc={i18n.t('Try Whale Bss for free, and explore all the tools and services you need to start')}
+      />
     </PageLayout>
   )
 }

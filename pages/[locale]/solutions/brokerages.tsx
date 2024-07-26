@@ -40,25 +40,25 @@ const BrokeragesPage = () => {
       label: '30%',
       title: i18n.t('pages_brokerages24'),
       desc: i18n.t('pages_brokerages26'),
-      icon: 'https://assets.lbkrs.com/uploads/9d4ae70b-785c-4f3d-a13d-12da76647b65/card_icon_1.png',
+      icon: 'https://assets.lbctrl.com/uploads/9d4ae70b-785c-4f3d-a13d-12da76647b65/card_icon_1.png',
     },
     {
       label: '50%',
       title: i18n.t('pages_brokerages27'),
       desc: i18n.t('pages_brokerages29'),
-      icon: 'https://assets.lbkrs.com/uploads/45edcb2d-436a-48e7-abbe-c46bfdcf4976/card_icon_2.png',
+      icon: 'https://assets.lbctrl.com/uploads/45edcb2d-436a-48e7-abbe-c46bfdcf4976/card_icon_2.png',
     },
     {
       label: '100+',
       title: i18n.t('pages_brokerages30'),
       desc: i18n.t('pages_brokerages32'),
-      icon: 'https://assets.lbkrs.com/uploads/cbb946d4-6a40-4034-a5a7-099109d48cc7/card_icon_3.png',
+      icon: 'https://assets.lbctrl.com/uploads/cbb946d4-6a40-4034-a5a7-099109d48cc7/card_icon_3.png',
     },
     {
       label: '60+',
       title: i18n.t('pages_brokerages33'),
       desc: i18n.t('pages_brokerages35'),
-      icon: 'https://assets.lbkrs.com/uploads/aaf9664b-b81d-4867-a90a-95a6ce2ddd2e/card_icon_4.png',
+      icon: 'https://assets.lbctrl.com/uploads/aaf9664b-b81d-4867-a90a-95a6ce2ddd2e/card_icon_4.png',
     },
   ]
 

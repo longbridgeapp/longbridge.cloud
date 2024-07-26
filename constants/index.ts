@@ -4,8 +4,8 @@ export const SUCCEED_KEY = 'SUCCEED_KEY'
 export const STARTED_SUCCEED_KEY = 'STARTED_SUCCEED_KEY'
 
 export const CDN_IMAGES = {
-  banner_bg: 'https://pub.lbkrs.com/files/202212/XsbU1kVPJpAZmhM3/Frame_626643.png',
-  contact_us: 'https://pub.lbkrs.com/files/202212/4YS5VSBVHetn7Q1v/20221221-154725.png',
+  banner_bg: 'https://pub.lbctrl.com/files/202212/XsbU1kVPJpAZmhM3/Frame_626643.png',
+  contact_us: 'https://pub.lbctrl.com/files/202212/4YS5VSBVHetn7Q1v/20221221-154725.png',
   whale_console: {},
 }
 

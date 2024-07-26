@@ -9,7 +9,7 @@ function useSections() {
     return [
       {
         title: i18n.t('solutions_features_001'),
-        picture: 'https://pub.lbkrs.com/files/202205/78iwM4XxJkpDfBZk/Vector-1.png',
+        picture: 'https://pub.lbctrl.com/files/202205/78iwM4XxJkpDfBZk/Vector-1.png',
         features: [
           i18n.t('solutions_features_002'),
           i18n.t('solutions_features_003'),
@@ -19,7 +19,7 @@ function useSections() {
       },
       {
         title: i18n.t('solutions_features_007'),
-        picture: 'https://pub.lbkrs.com/files/202205/nD8KJU7wNcny2Dh1/Vector-2.png',
+        picture: 'https://pub.lbctrl.com/files/202205/nD8KJU7wNcny2Dh1/Vector-2.png',
         features: [
           i18n.t('solutions_features_008'),
           i18n.t('solutions_features_005'),
@@ -30,7 +30,7 @@ function useSections() {
       },
       {
         title: i18n.t('solutions_features_012'),
-        picture: 'https://pub.lbkrs.com/files/202205/S1kDuN3w4EPuWjMD/Vector-3.png',
+        picture: 'https://pub.lbctrl.com/files/202205/S1kDuN3w4EPuWjMD/Vector-3.png',
         features: [
           i18n.t('solutions_features_013'),
           i18n.t('solutions_features_014'),
@@ -40,7 +40,7 @@ function useSections() {
       },
       {
         title: i18n.t('solutions_features_017'),
-        picture: 'https://pub.lbkrs.com/files/202205/p6ym1pc6CQrKz6aw/Vector-4.png',
+        picture: 'https://pub.lbctrl.com/files/202205/p6ym1pc6CQrKz6aw/Vector-4.png',
         features: [
           i18n.t('solutions_features_018'),
           i18n.t('solutions_features_019'),
@@ -50,7 +50,7 @@ function useSections() {
       },
       {
         title: i18n.t('solutions_features_022'),
-        picture: 'https://pub.lbkrs.com/files/202205/q8y6r4HAFL52kZUK/Vector-5.png',
+        picture: 'https://pub.lbctrl.com/files/202205/q8y6r4HAFL52kZUK/Vector-5.png',
         features: [
           i18n.t('solutions_features_023'),
           i18n.t('solutions_features_024'),
@@ -60,7 +60,7 @@ function useSections() {
       },
       {
         title: i18n.t('solutions_features_027'),
-        picture: 'https://pub.lbkrs.com/files/202205/STxVfAJAXTU7QDii/Vector-6.png',
+        picture: 'https://pub.lbctrl.com/files/202205/STxVfAJAXTU7QDii/Vector-6.png',
         features: [
           i18n.t('solutions_features_028'),
           i18n.t('solutions_features_029'),

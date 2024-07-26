@@ -24,9 +24,9 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 
-const IMAGE_URL = 'https://assets.lbkrs.com/uploads/d0341695-65fe-426a-b624-8f0118399116/Group 427318956.png'
-const IMAGE_URL_HK = 'https://assets.lbkrs.com/uploads/75231795-165f-4036-86d4-0f6b926f43b6/Group 427318957.png'
-const IMAGE_URL_EN = 'https://assets.lbkrs.com/uploads/ee190a03-9f8b-4ae6-8aea-72529ee9b5e1/Group 427318958.png'
+const IMAGE_URL = 'https://assets.lbctrl.com/uploads/d0341695-65fe-426a-b624-8f0118399116/Group 427318956.png'
+const IMAGE_URL_HK = 'https://assets.lbctrl.com/uploads/75231795-165f-4036-86d4-0f6b926f43b6/Group 427318957.png'
+const IMAGE_URL_EN = 'https://assets.lbctrl.com/uploads/ee190a03-9f8b-4ae6-8aea-72529ee9b5e1/Group 427318958.png'
 
 const WhaleIntroducingPage = () => {
   const seoI18n = useTranslation(['seo'])

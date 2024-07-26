@@ -31,42 +31,42 @@ export const getStaticProps = async (ctx: any) => ({
 
 const contentImgMap: any = {
   left: {
-    'en': 'https://assets.lbkrs.com/uploads/07f79a53-6a99-4a7e-9704-f465af105ac5/va_trade_2_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/8d35f52e-5d73-4b47-b74a-0e41f1e6775b/va_trade_2_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/d93a0fac-0f4e-4e0b-8b82-c01ffdc46ddb/va_trade_2_hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/07f79a53-6a99-4a7e-9704-f465af105ac5/va_trade_2_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/8d35f52e-5d73-4b47-b74a-0e41f1e6775b/va_trade_2_cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/d93a0fac-0f4e-4e0b-8b82-c01ffdc46ddb/va_trade_2_hk.png',
   },
   right: {
-    'en': 'https://assets.lbkrs.com/uploads/c8bad460-8818-4c32-995f-afc4ac3353eb/va_account_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/8fbdc86b-65e4-4366-98b8-5d6c7b6166ea/va_account_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/d5a5c257-c358-411a-b1bb-98ef1396ff1f/va_account_hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/c8bad460-8818-4c32-995f-afc4ac3353eb/va_account_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/8fbdc86b-65e4-4366-98b8-5d6c7b6166ea/va_account_cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/d5a5c257-c358-411a-b1bb-98ef1396ff1f/va_account_hk.png',
   },
 }
 
 const tradeServiceImgMap: any = {
   trade: {
-    'en': 'https://assets.lbkrs.com/uploads/a47816f4-0063-4198-98cf-ef8926308c07/va-trade-en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/af3a35a1-af6a-4185-b993-608d6660572c/va-trade-cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/f1d670fd-830a-4917-96a8-f5d28229e03b/va-trade-hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/a47816f4-0063-4198-98cf-ef8926308c07/va-trade-en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/af3a35a1-af6a-4185-b993-608d6660572c/va-trade-cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/f1d670fd-830a-4917-96a8-f5d28229e03b/va-trade-hk.png',
   },
   account: {
-    'en': 'https://assets.lbkrs.com/uploads/968e6dbd-2e92-4f88-9158-230ae8ce96ee/va-account-en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/48bb744c-0d5d-46dd-bd65-e9ebbef01ce1/va-account-cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/b5da436e-4f53-444f-8679-3c7adf15ce98/va-account-hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/968e6dbd-2e92-4f88-9158-230ae8ce96ee/va-account-en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/48bb744c-0d5d-46dd-bd65-e9ebbef01ce1/va-account-cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/b5da436e-4f53-444f-8679-3c7adf15ce98/va-account-hk.png',
   },
   trade2: {
-    'en': 'https://assets.lbkrs.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/654fc15d-4262-42ed-a5f5-0f4da47dd032/middle-office-en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/ec1cd6f4-090a-4f4c-b4b4-c6e3c267c82c/middle-office-cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/7c1a0dbb-54b5-485c-9f9f-ef583e1285a3/middle-office-hk.png',
   },
   trade3: {
-    'en': 'https://assets.lbkrs.com/uploads/0bd6da77-eede-4722-82d7-b865bad90105/va_trade_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/7607fc4e-f459-4b8b-aac7-1ce735ff1a0d/va_trade_cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/c93c0cce-3421-4564-a76c-9d77728300f5/va_trade_hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/0bd6da77-eede-4722-82d7-b865bad90105/va_trade_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/7607fc4e-f459-4b8b-aac7-1ce735ff1a0d/va_trade_cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/c93c0cce-3421-4564-a76c-9d77728300f5/va_trade_hk.png',
   },
   backend: {
-    'en': 'https://assets.lbkrs.com/uploads/0757c3ee-6639-4a11-a9e9-a0eacefb9d40/back-office-en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/388bc672-1105-4fa9-a241-52debb4b8475/back-office-cn.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/c1a88c8e-df0b-4379-b52a-3955993c6c66/back-office-hk.png',
+    'en': 'https://assets.lbctrl.com/uploads/0757c3ee-6639-4a11-a9e9-a0eacefb9d40/back-office-en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/388bc672-1105-4fa9-a241-52debb4b8475/back-office-cn.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/c1a88c8e-df0b-4379-b52a-3955993c6c66/back-office-hk.png',
   },
 }
 

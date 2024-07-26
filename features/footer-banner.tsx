@@ -11,7 +11,7 @@ const FooterBanner: FC<{
     <div
       className="main-container py-[72px] bg-cover"
       style={{
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202207/6k3zHTMe9QJfFUho/.png)',
+        backgroundImage: 'url(https://pub.lbctrl.com/files/202207/6k3zHTMe9QJfFUho/.png)',
       }}
     >
       <div className="main-content-width">

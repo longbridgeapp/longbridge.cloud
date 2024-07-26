@@ -35,9 +35,9 @@ const SecuritiesMarket: React.FC = () => {
       i18n.t('pages_locale_solutions_securities_market_8770-1'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/397d2db1-3a6a-4092-bd0b-03dbf6dc7e6e/gui-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/dad46b40-d456-44a9-9404-ecb2be03f6ea/gui-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
+      'en': 'https://assets.lbctrl.com/uploads/397d2db1-3a6a-4092-bd0b-03dbf6dc7e6e/gui-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/dad46b40-d456-44a9-9404-ecb2be03f6ea/gui-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/674592d1-f750-4b9c-8fac-12393d2e2ccc/gui-hk.png',
     },
   }
 
@@ -47,9 +47,9 @@ const SecuritiesMarket: React.FC = () => {
       i18n.t('pages_locale_solutions_securities_market_8772'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
+      'en': 'https://assets.lbctrl.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/78af0dc4-64af-4ed9-87b7-836c2968aac3/1.png',
     },
     localLink: '/front-desk',
   }
@@ -62,9 +62,9 @@ const SecuritiesMarket: React.FC = () => {
       i18n.t('pages_locale_solutions_securities_market_8777'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
+      'en': 'https://assets.lbctrl.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/d2aefe30-2812-4475-92b6-462da5e7c85c/2.png',
     },
     reverse: false,
     localLink: '/front-desk',
@@ -77,9 +77,9 @@ const SecuritiesMarket: React.FC = () => {
       i18n.t('pages_locale_solutions_securities_market_8781'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
+      'en': 'https://assets.lbctrl.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/f259549c-8d6b-4707-9c36-76254d787f15/3.png',
     },
     localLink: '/backoffice',
   }
@@ -514,18 +514,18 @@ const SecuritiesMarket: React.FC = () => {
               descClass="text-sm text-text_color_1_supplement"
               data={[
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/8ef8a9ee-5f88-4025-b6d0-6585dbd1cc10/browser.png',
+                  icon: 'https://assets.lbctrl.com/uploads/8ef8a9ee-5f88-4025-b6d0-6585dbd1cc10/browser.png',
                   title: i18n.t('pages_locale_solutions_securities_market_8899'),
                   description: i18n.t('pages_locale_solutions_securities_market_8900'),
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/02bf51db-ed1b-4201-a67c-7c7fbac8697b/article.png',
+                  icon: 'https://assets.lbctrl.com/uploads/02bf51db-ed1b-4201-a67c-7c7fbac8697b/article.png',
                   iconClass: 'w-9 h-auto',
                   title: i18n.t('pages_locale_solutions_securities_market_8901'),
                   description: i18n.t('pages_locale_solutions_securities_market_8902'),
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/23731609-98d9-4e87-8d9f-ae7d685c2414/check.png',
+                  icon: 'https://assets.lbctrl.com/uploads/23731609-98d9-4e87-8d9f-ae7d685c2414/check.png',
                   iconClass: 'w-9 h-auto',
                   title: i18n.t('pages_locale_solutions_securities_market_8903'),
                   description: i18n.t('pages_locale_solutions_securities_market_8904'),
