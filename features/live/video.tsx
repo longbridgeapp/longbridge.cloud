@@ -72,35 +72,34 @@ export const LiveVideo = () => {
   const liveInfoLoaded = !!liveInfo.m3u8_live_url
   return (
     <div className={styles.video}>
-        <div className="top">
-          {(liveInfoLoaded && !started || ended) && (
-            <>
-              <div className="absolute flex flex-col items-center justify-center -translate-y-1/2 top-1/2">
-                <img className="w-[73px]" src="https://pub.lbkrs.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
-                <div className="px-5 text-center mt-14">
-                  {ended ? i18n.t('live_video_001') : succeed ? i18n.t('live_video_002') : i18n.t('live_video_003')}
+      <div className="top">
+        {((liveInfoLoaded && !started) || ended) && (
+          <>
+            <div className="absolute flex flex-col items-center justify-center -translate-y-1/2 top-1/2">
+              <img className="w-[73px]" src="https://pub.lbctrl.com/files/202205/17ffUtUkXgorB2EU/Frame.png" alt="" />
+              <div className="px-5 text-center mt-14">
+                {ended ? i18n.t('live_video_001') : succeed ? i18n.t('live_video_002') : i18n.t('live_video_003')}
+              </div>
+            </div>
+            {!started && (
+              <div className="countdown">
+                <span>{i18n.t('live_video_006')}</span>
+                <div className="flex items-center ml-3">
+                  <span className="number">{fillZero(days)}</span>
+                  <span>{i18n.t('live_video_007')}</span>
+                  <span className="number">{fillZero(hours)}</span>:<span className="number">{fillZero(minutes)}</span>:
+                  <span className="number">{fillZero(seconds)}</span>
                 </div>
               </div>
-              {!started && (
-                <div className="countdown">
-                  <span>{i18n.t('live_video_006')}</span>
-                  <div className="flex items-center ml-3">
-                    <span className="number">{fillZero(days)}</span>
-                    <span>{i18n.t('live_video_007')}</span>
-                    <span className="number">{fillZero(hours)}</span>:
-                    <span className="number">{fillZero(minutes)}</span>:
-                    <span className="number">{fillZero(seconds)}</span>
-                  </div>
-                </div>
-              )}
-            </>
-          )}
-          {liveInfoLoaded && started && liveInfo.replay_url && (
-            <div className="absolute inset-0 flex flex-col flex-1 w-full h-full video-box">
-              <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
-            </div>
-          )}
-        </div>
+            )}
+          </>
+        )}
+        {liveInfoLoaded && started && liveInfo.replay_url && (
+          <div className="absolute inset-0 flex flex-col flex-1 w-full h-full video-box">
+            <video ref={videoRef} className="video-js vjs-big-play-centered"></video>
+          </div>
+        )}
+      </div>
 
       <div className="py-6 bg-white px-7">
         <h3 className="text-2xl font-medium">{i18n.t('live_video_004')}</h3>

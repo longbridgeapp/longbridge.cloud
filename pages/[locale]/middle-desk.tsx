@@ -25,10 +25,10 @@ const MiddleDesk = () => {
     <PageLayout
       screenProps={{
         contactUs: true,
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
+        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/PSuwFHTnMt9yq7MF/trading_platform.png)',
         title: '柜台系统前中台',
         desc: '覆盖多地区、多市场的开户、交易、风控、出入金等证券投资业务处理能力。具备统一的资产管理与高性能的交易风控处理能力，持续打造一套体验佳、处理快、保障 7×24 小时连续运行的证券前中台系统。',
-        cover: 'https://pub.lbkrs.com/static/offline/202301/DSu9V71MZQ64i2Lb/Frame_427318999.svg',
+        cover: 'https://pub.lbctrl.com/static/offline/202301/DSu9V71MZQ64i2Lb/Frame_427318999.svg',
       }}
     >
       <SEOMeta

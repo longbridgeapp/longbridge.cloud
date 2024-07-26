@@ -93,16 +93,16 @@ const DeliverySystem: React.FC = () => {
       i18n.t('whale-delivery-system-003'),
     ],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/38f64ce1-2ce9-4913-8e28-7a4a48ae9a33/tou-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/bc81a240-bdb5-47d5-901a-a0646c09a617/tou-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
+      'en': 'https://assets.lbctrl.com/uploads/38f64ce1-2ce9-4913-8e28-7a4a48ae9a33/tou-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/bc81a240-bdb5-47d5-901a-a0646c09a617/tou-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/40851a1b-01b9-4bab-9cd1-50aa1177ee0e/tou-hk.png',
     },
   }
 
   const trigger_type_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/c0aef081-380a-46d4-856f-3b7ff3b01c9c/trigger_type_en.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
+    'en': 'https://assets.lbctrl.com/uploads/c0aef081-380a-46d4-856f-3b7ff3b01c9c/trigger_type_en.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/2bc3caca-2a84-45a0-99b3-0b60179d57fc/trigger_type_cn.svg',
   }
   return (
     <Layout>
@@ -149,8 +149,8 @@ const DeliverySystem: React.FC = () => {
               <img
                 src={
                   isEN
-                    ? 'https://assets.lbkrs.com/uploads/df08f364-ed9e-4654-a77d-315299ccfce5/Group 427319219.svg'
-                    : 'https://assets.lbkrs.com/uploads/da3cbba8-81e1-4b30-a148-facfd1ec5c07/Group 427319219 (1).svg'
+                    ? 'https://assets.lbctrl.com/uploads/df08f364-ed9e-4654-a77d-315299ccfce5/Group 427319219.svg'
+                    : 'https://assets.lbctrl.com/uploads/da3cbba8-81e1-4b30-a148-facfd1ec5c07/Group 427319219 (1).svg'
                 }
                 alt=""
               />
@@ -256,8 +256,8 @@ const DeliverySystem: React.FC = () => {
               <img
                 src={
                   isEN
-                    ? 'https://assets.lbkrs.com/uploads/53f0c1e6-f4eb-483e-a2f0-fc44ffde55d6/Group 427319377.svg'
-                    : 'https://assets.lbkrs.com/uploads/6ae41b4b-bed2-448f-806c-17bd46d9e6ad/pic.svg'
+                    ? 'https://assets.lbctrl.com/uploads/53f0c1e6-f4eb-483e-a2f0-fc44ffde55d6/Group 427319377.svg'
+                    : 'https://assets.lbctrl.com/uploads/6ae41b4b-bed2-448f-806c-17bd46d9e6ad/pic.svg'
                 }
                 className="w-full"
                 alt=""
@@ -319,14 +319,14 @@ const DeliverySystem: React.FC = () => {
                 <div className="flex flex-col justify-between gap-3 xl:flex-row">
                   <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbkrs.com/files/202212/zFeewQW7ZHsHffbz/circle_time.png" />
+                      <ImageIcon url="https://pub.lbctrl.com/files/202212/zFeewQW7ZHsHffbz/circle_time.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-068')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-069')}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbkrs.com/files/202212/3P85SNLi9ddXX921/me.png" />
+                      <ImageIcon url="https://pub.lbctrl.com/files/202212/3P85SNLi9ddXX921/me.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-070')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-071')}
@@ -335,14 +335,14 @@ const DeliverySystem: React.FC = () => {
                   </div>
                   <div className="flex flex-col justify-between flex-1 w-full gap-12 md:flex-row">
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbkrs.com/files/202212/qYTkUnDVQamgWQVm/position.png" />
+                      <ImageIcon url="https://pub.lbctrl.com/files/202212/qYTkUnDVQamgWQVm/position.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-072')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-073')}
                       </div>
                     </div>
                     <div className="flex-1">
-                      <ImageIcon url="https://pub.lbkrs.com/files/202212/bRjNqPJ7wb6faVwb/aim.png" />
+                      <ImageIcon url="https://pub.lbctrl.com/files/202212/bRjNqPJ7wb6faVwb/aim.png" />
                       <div className="my-3 text-xl font-medium">{i18n.t('whale-delivery-system-074')}</div>
                       <div className="text-base font-normal text-text_color_3">
                         {i18n.t('whale-delivery-system-075')}

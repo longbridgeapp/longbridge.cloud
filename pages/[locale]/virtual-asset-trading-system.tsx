@@ -50,23 +50,23 @@ const VirtualAssetTradingSystem = () => {
         openGraph={{
           title: 'Whale 將推出全港首個面向券商的',
           description: '7×24 一站式虛擬資產 交易解決方案',
-          url: 'https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
+          url: 'https://longbridgewhale.activity.wbrks.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
           images: [
             {
-              url: 'https://pub.lbkrs.com/files/202305/smtJobvVG139kuLz/20230526-150057.png',
+              url: 'https://pub.lbctrl.com/files/202305/smtJobvVG139kuLz/20230526-150057.png',
             },
           ],
         }}
         twitter={{
           handle: '@longbridgeapp',
-          site: 'https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
+          site: 'https://longbridgewhale.activity.wbrks.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb',
           cardType: 'summary_large_image',
         }}
       />
       <div className="w-full h-screen">
         <iframe
           ref={iframeRef}
-          src="https://activity.lbkrs.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb"
+          src="https://longbridgewhale.activity.wbrks.com/pages/longbridge/1968/index.html?app_id=longbridge&org_id=1&account_channel=lb"
           width="100%"
           height="100%"
         />

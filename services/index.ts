@@ -3,7 +3,7 @@ import { getBasenameLocale } from '@/utils/common'
 let host = 'https://m.longbridge.xyz/api/forward'
 
 if (process.env.PROXY === 'prod') {
-  host = 'https://m.lbkrs.com/api/forward'
+  host = 'https://m.lbctrl.com/api/forward'
 }
 
 async function transformRes(res: any) {

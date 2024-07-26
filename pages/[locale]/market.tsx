@@ -26,12 +26,11 @@ const MarketPage = () => {
       screenProps={{
         contactUs: true,
         contentFLex: '30',
-        backgroundImage: 'url(https://pub.lbkrs.com/files/202205/h3NVqR1SHi2NMSL1/market_data.png)',
+        backgroundImage: 'url(https://pub.lbctrl.com/files/202205/h3NVqR1SHi2NMSL1/market_data.png)',
         title: i18n.t('market_page_001'),
         desc: i18n.t('market_page_002'),
       }}
     >
-      
       <SEOMeta title={seoI18n.t('market.title')} description={seoI18n.t('market.description')} />
       <MarketFeatures />
       <MarketServices />

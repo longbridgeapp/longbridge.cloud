@@ -27,9 +27,9 @@ export const BrokeragesTabs = () => {
         i18n.t('pages_brokerages8'),
       ],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/7d87e234-aea8-4cba-8206-1baa60aaa571/tab1_en.png',
-        'zh-CN': 'https://assets.lbkrs.com/uploads/831e7c65-2c62-43fe-bba4-12331b2d8b87/tab1_cn.png',
-        'zh-HK': 'https://assets.lbkrs.com/uploads/c9500dcb-2293-4955-874f-2df8e494a5bb/tab1_hk.png',
+        'en': 'https://assets.lbctrl.com/uploads/7d87e234-aea8-4cba-8206-1baa60aaa571/tab1_en.png',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/831e7c65-2c62-43fe-bba4-12331b2d8b87/tab1_cn.png',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/c9500dcb-2293-4955-874f-2df8e494a5bb/tab1_hk.png',
       },
     },
     {
@@ -46,9 +46,9 @@ export const BrokeragesTabs = () => {
         i18n.t('pages_brokerages15'),
       ],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/16ba6734-159a-4cc1-8c31-1539a959660a/tab2_en.png',
-        'zh-CN': 'https://assets.lbkrs.com/uploads/4457e1b5-ca0d-4462-bb2f-954ac7435854/tab2_cn.png',
-        'zh-HK': 'https://assets.lbkrs.com/uploads/16c7189a-b9b2-4be2-a889-3e2f9881fe1f/tab2_hk.png',
+        'en': 'https://assets.lbctrl.com/uploads/16ba6734-159a-4cc1-8c31-1539a959660a/tab2_en.png',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/4457e1b5-ca0d-4462-bb2f-954ac7435854/tab2_cn.png',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/16c7189a-b9b2-4be2-a889-3e2f9881fe1f/tab2_hk.png',
       },
     },
     {
@@ -58,9 +58,9 @@ export const BrokeragesTabs = () => {
       label: 'SaaS',
       features: [i18n.t('pages_brokerages18'), i18n.t('pages_brokerages19'), i18n.t('pages_brokerages20')],
       img: {
-        'en': 'https://assets.lbkrs.com/uploads/3aa174da-a339-4db8-9add-a9270c67feef/tab3_en.png',
-        'zh-CN': 'https://assets.lbkrs.com/uploads/a9d190cb-b7aa-4050-ade2-87ef02a06d44/tab3_cn.png',
-        'zh-HK': 'https://assets.lbkrs.com/uploads/cef4d5ae-f17f-45d8-8601-2dd9203dacb3/tab3_hk.png',
+        'en': 'https://assets.lbctrl.com/uploads/3aa174da-a339-4db8-9add-a9270c67feef/tab3_en.png',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/a9d190cb-b7aa-4050-ade2-87ef02a06d44/tab3_cn.png',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/cef4d5ae-f17f-45d8-8601-2dd9203dacb3/tab3_hk.png',
       },
     },
   ]
@@ -137,25 +137,25 @@ export const BrokeragesProducts = () => {
       href: '',
       title: i18n.t('pages_brokerages44'),
       desc: i18n.t('pages_brokerages45'),
-      icon: 'https://assets.lbkrs.com/uploads/36bd9d17-101e-486d-9d49-65bf0c7b29fe/product_icon_1.png',
+      icon: 'https://assets.lbctrl.com/uploads/36bd9d17-101e-486d-9d49-65bf0c7b29fe/product_icon_1.png',
     },
     {
       href: '',
       title: i18n.t('pages_brokerages46'),
       desc: i18n.t('pages_brokerages47'),
-      icon: 'https://assets.lbkrs.com/uploads/99f5e51c-e95b-491f-898f-5f9d532974b2/product_icon_2.png',
+      icon: 'https://assets.lbctrl.com/uploads/99f5e51c-e95b-491f-898f-5f9d532974b2/product_icon_2.png',
     },
     {
       href: '',
       title: i18n.t('pages_brokerages48'),
       desc: i18n.t('pages_brokerages49'),
-      icon: 'https://assets.lbkrs.com/uploads/70f0488f-ce43-430c-bb5d-8d267a2a1fa8/product_icon_3.png',
+      icon: 'https://assets.lbctrl.com/uploads/70f0488f-ce43-430c-bb5d-8d267a2a1fa8/product_icon_3.png',
     },
     {
       href: '',
       title: i18n.t('pages_brokerages50'),
       desc: i18n.t('pages_brokerages51'),
-      icon: 'https://assets.lbkrs.com/uploads/ef467b8a-ec44-4317-993a-adb054c352b4/product_icon_4.png',
+      icon: 'https://assets.lbctrl.com/uploads/ef467b8a-ec44-4317-993a-adb054c352b4/product_icon_4.png',
     },
   ]
 
@@ -175,7 +175,7 @@ export const BrokeragesProducts = () => {
                     <span className="text-xl font-medium ">{product.title}</span>
                     <img
                       className="w-4"
-                      src="https://assets.lbkrs.com/uploads/9d03a248-374a-4571-adbf-bca395be5da7/arrow_right.png"
+                      src="https://assets.lbctrl.com/uploads/9d03a248-374a-4571-adbf-bca395be5da7/arrow_right.png"
                       alt="arrow"
                     />
                   </div>
@@ -214,7 +214,7 @@ export const BrokeragesQuotes = () => {
       <div className="flex items-start">
         <img
           className="w-9"
-          src="https://assets.lbkrs.com/uploads/49e40771-a895-4676-9e6f-a6cadfc81ba9/quote_left.png"
+          src="https://assets.lbctrl.com/uploads/49e40771-a895-4676-9e6f-a6cadfc81ba9/quote_left.png"
           alt="left-quote"
         />
         {quotes.map(quote => {
@@ -230,7 +230,7 @@ export const BrokeragesQuotes = () => {
         })}
         <img
           className="w-9"
-          src="https://assets.lbkrs.com/uploads/d2cc5c37-0167-4c18-9b4b-72c7f49e6249/quote_right.png"
+          src="https://assets.lbctrl.com/uploads/d2cc5c37-0167-4c18-9b4b-72c7f49e6249/quote_right.png"
           alt="right-quote"
         />
       </div>
@@ -322,7 +322,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
   return (
     <TopBlock
       className="relative bg-center bg-no-repeat"
-      imageUrl="https://assets.lbkrs.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
+      imageUrl="https://assets.lbctrl.com/uploads/785c8bd0-f6d4-4876-964c-dbae5fa95d61/whale_bg.jpg"
     >
       <Block className={classNames(styles['solution-banner'], 'py-10 md:lg-[72px] px-6 md:px-0')}>
         <BlockBetween
@@ -350,7 +350,7 @@ export const SolutionBanner = (props: ISolutionBannerProps) => {
           }
           right={
             <img
-              src="https://assets.lbkrs.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
+              src="https://assets.lbctrl.com/uploads/198945cf-126e-4ff7-8f9e-47a5408254a7/slogan.png"
               alt="zero to one"
               className="right-0 object-cover w-4/5 mx-auto lg:w-[380px] xl:w-[428px]  mt-10 lg:mt-0  xl:ml-16"
             />

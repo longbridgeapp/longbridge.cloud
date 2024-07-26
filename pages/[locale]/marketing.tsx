@@ -47,7 +47,7 @@ const Marketing: React.FC = () => {
   const marketingBanners = useMemo(
     () => [
       {
-        img: 'https://assets.lbkrs.com/uploads/b919d13c-5a71-4e79-aaa0-5c70b0ca9210/Group 427319264.png',
+        img: 'https://assets.lbctrl.com/uploads/b919d13c-5a71-4e79-aaa0-5c70b0ca9210/Group 427319264.png',
         title: [i18n.t('whale-marketing-049'), i18n.t('whale-marketing-061')],
         tips: i18n.t('whale-marketing-050'),
         data: [
@@ -64,7 +64,7 @@ const Marketing: React.FC = () => {
         ],
       },
       {
-        img: 'https://assets.lbkrs.com/uploads/93e4695d-6c96-4e67-b024-3168010ad783/Group 427319373.png',
+        img: 'https://assets.lbctrl.com/uploads/93e4695d-6c96-4e67-b024-3168010ad783/Group 427319373.png',
         title: [i18n.t('whale-marketing-053'), i18n.t('whale-marketing-062')],
         tips: i18n.t('whale-marketing-054'),
         data: [
@@ -81,7 +81,7 @@ const Marketing: React.FC = () => {
         ],
       },
       {
-        img: 'https://assets.lbkrs.com/uploads/48425892-cf48-44ae-87ce-c62e8ffce5e2/Group 427319374.png',
+        img: 'https://assets.lbctrl.com/uploads/48425892-cf48-44ae-87ce-c62e8ffce5e2/Group 427319374.png',
         title: [i18n.t('whale-marketing-057'), i18n.t('whale-marketing-063')],
         tips: i18n.t('whale-marketing-058'),
         data: [
@@ -111,22 +111,22 @@ const Marketing: React.FC = () => {
     title: i18n.t('whale-marketing-001'),
     desc: [i18n.t('whale-marketing-002')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/d8571f11-c55d-4f4e-afee-3ce8daf2f606/market-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/ec0dec43-1234-474d-b117-a201ed1db401/market-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
+      'en': 'https://assets.lbctrl.com/uploads/d8571f11-c55d-4f4e-afee-3ce8daf2f606/market-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/ec0dec43-1234-474d-b117-a201ed1db401/market-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/82124c04-ff1d-4a8f-abe5-9365688b5b59/market-hk.png',
     },
   }
 
   const benefit_platform_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/49bcf33b-35ec-4b27-899d-229556bd6e59/benefit_platform_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
+    'en': 'https://assets.lbctrl.com/uploads/49bcf33b-35ec-4b27-899d-229556bd6e59/benefit_platform_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/76321e0d-f4f7-4a42-83b5-8ee8563e54ac/Frame 427319001.png',
   }
 
   const pagehub_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/4c1b9963-cb0d-47aa-a829-c8975a0bb589/pagehub_en.png',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
+    'en': 'https://assets.lbctrl.com/uploads/4c1b9963-cb0d-47aa-a829-c8975a0bb589/pagehub_en.png',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/a525e048-16ab-4881-84b3-4105fd9e6c95/Group 427319262.png',
   }
   return (
     <Layout>
@@ -145,22 +145,22 @@ const Marketing: React.FC = () => {
             </div>
             <div className="flex flex-col items-start justify-between gap-10 md:flex-row md:item-center">
               <div className="w-[270px]">
-                <ImageIcon url="https://pub.lbkrs.com/files/202212/txiQsfkn5VULhvmi/cash_plus.png" />
+                <ImageIcon url="https://pub.lbctrl.com/files/202212/txiQsfkn5VULhvmi/cash_plus.png" />
                 <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-005')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-006')}</div>
               </div>
               <div className="w-[270px]">
-                <ImageIcon url="https://pub.lbkrs.com/files/202212/i9JLwB1X14rHsAeH/circle_time.png" />
+                <ImageIcon url="https://pub.lbctrl.com/files/202212/i9JLwB1X14rHsAeH/circle_time.png" />
                 <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-007')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-008')}</div>
               </div>
               <div className="w-[270px]">
-                <ImageIcon url="https://pub.lbkrs.com/files/202212/queci6LCEx5pyxAx/customer_inquiry.png" />
+                <ImageIcon url="https://pub.lbctrl.com/files/202212/queci6LCEx5pyxAx/customer_inquiry.png" />
                 <div className="mt-3 mb-[10px]  text-xl font-medium">{i18n.t('whale-marketing-009')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-010')}</div>
               </div>
               <div className="w-[270px]">
-                <ImageIcon url="https://pub.lbkrs.com/files/202212/SBeHqd6MygAG4ihj/conversion.png" />
+                <ImageIcon url="https://pub.lbctrl.com/files/202212/SBeHqd6MygAG4ihj/conversion.png" />
                 <div className="mt-3 mb-[10px] text-xl font-medium">{i18n.t('whale-marketing-011')}</div>
                 <div className="text-base font-normal text-text_color_3">{i18n.t('whale-marketing-012')}</div>
               </div>
@@ -177,8 +177,8 @@ const Marketing: React.FC = () => {
               <img
                 src={
                   isEN
-                    ? 'https://assets.lbkrs.com/uploads/aef37557-38f1-4c25-b6da-c6ebc973ed5b/Group 427319048.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/29c433e9-de02-4232-b1b2-6b57dc18e59c/b1.svg'
+                    ? 'https://assets.lbctrl.com/uploads/aef37557-38f1-4c25-b6da-c6ebc973ed5b/Group 427319048.svg'
+                    : 'https://assets.lbctrl.com/uploads/longbridge-whale/29c433e9-de02-4232-b1b2-6b57dc18e59c/b1.svg'
                 }
                 alt=""
               />
@@ -251,7 +251,7 @@ const Marketing: React.FC = () => {
                     <ul className="flex flex-col gap-6 lg:max-w-[510px]">
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/jrd4MwQBxQbkuoay/copy.png"
+                          url="https://pub.lbctrl.com/files/202212/jrd4MwQBxQbkuoay/copy.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
@@ -260,7 +260,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/FvC4YU2unWnUkViy/group.png"
+                          url="https://pub.lbctrl.com/files/202212/FvC4YU2unWnUkViy/group.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
@@ -269,7 +269,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
+                          url="https://pub.lbctrl.com/files/202212/M2m5UXvQmU45xHip/task_center.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
@@ -278,7 +278,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
+                          url="https://pub.lbctrl.com/files/202212/jJruyCm1HZzpRQ6u/portfolo_settiongs.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 leading-7 lg:max-w-[438px]">
@@ -298,7 +298,7 @@ const Marketing: React.FC = () => {
                     <ul className="flex flex-col gap-6 lg:max-w-[510px]">
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/1jphbciCdpEftiBF/treeview.png"
+                          url="https://pub.lbctrl.com/files/202212/1jphbciCdpEftiBF/treeview.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -307,7 +307,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
+                          url="https://pub.lbctrl.com/files/202212/z4whtrr6ABmv5bNv/translate_to_en.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -318,7 +318,7 @@ const Marketing: React.FC = () => {
                   </div>
                   <div className="flex-1">
                     <img
-                      src="https://assets.lbkrs.com/uploads/23b898a0-2e33-4fdf-8592-d5416659c69c/Group 427318897.png"
+                      src="https://assets.lbctrl.com/uploads/23b898a0-2e33-4fdf-8592-d5416659c69c/Group 427318897.png"
                       alt=""
                       className="lg:w-[558px]"
                     />
@@ -337,7 +337,7 @@ const Marketing: React.FC = () => {
                     <ul className="flex flex-col gap-6 lg:max-w-[510px]">
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/P6JcUv69nJFnTx3b/list.png"
+                          url="https://pub.lbctrl.com/files/202212/P6JcUv69nJFnTx3b/list.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -346,7 +346,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/4zxY387JjpngG9F3/code.png"
+                          url="https://pub.lbctrl.com/files/202212/4zxY387JjpngG9F3/code.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -355,7 +355,7 @@ const Marketing: React.FC = () => {
                       </li>
                       <li className="flex items-center">
                         <ImageIcon
-                          url="https://pub.lbkrs.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
+                          url="https://pub.lbctrl.com/files/202212/fU72Gy3aB5WdFU77/translation_EN-CN.png"
                           className="mr-8"
                         />
                         <span className="text-base font-normal text-text_color_3 lg:max-w-[438px] leading-7">
@@ -377,7 +377,7 @@ const Marketing: React.FC = () => {
               className="absolute right-0 z-10 hidden transform -translate-y-1/2 cursor-pointer md:block top-1/2"
             >
               <img
-                src="https://assets.lbkrs.com/uploads/4b9c7528-e536-4679-8ae1-e399540e5028/Group 427319056.svg"
+                src="https://assets.lbctrl.com/uploads/4b9c7528-e536-4679-8ae1-e399540e5028/Group 427319056.svg"
                 alt=""
               />
             </div>
@@ -386,7 +386,7 @@ const Marketing: React.FC = () => {
               className="absolute left-0 z-10 hidden transform -translate-y-1/2 cursor-pointer md:block top-1/2"
             >
               <img
-                src="https://assets.lbkrs.com/uploads/dc9cb6e2-df38-44e5-9d2a-9f4b6c2c70e3/Group 427319372.svg"
+                src="https://assets.lbctrl.com/uploads/dc9cb6e2-df38-44e5-9d2a-9f4b6c2c70e3/Group 427319372.svg"
                 alt=""
               />
             </div>

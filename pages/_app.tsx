@@ -78,8 +78,8 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
   return (
     <div className="app">
       <Head>
-        <script src={'https://static.lbkrs.com/npm/sensorsdata@1.16.10.min.js'} defer />
-        <link rel="icon" type="image/x-icon" href="https://pub.lbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
+        <script src={'https://static.lbctrl.com/npm/sensorsdata@1.16.10.min.js'} defer />
+        <link rel="icon" type="image/x-icon" href="https://pub.lbctrl.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
       </Head>
       <Script
         id="sensors-inject"
@@ -88,7 +88,7 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
           __html: `
             const sensors = window['sensorsDataAnalytic201505'];
             sensors.init({
-              server_url: 'https://event-tracking.lbkrs.com/sa?project=whale_pro',
+              server_url: 'https://event-tracking.lbctrl.com/sa?project=whale_pro',
               heatmap:{scroll_notice_map:'not_collect'},
               is_track_single_page:true,
               use_client_time:true,

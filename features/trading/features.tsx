@@ -11,12 +11,12 @@ function useFeatures() {
       {
         title: i18n.t('trading_features_001'),
         desc: i18n.t('trading_features_002'),
-        picture: 'https://pub.lbkrs.com/files/202205/Yn7V5uB8HwfU6Bxv/trading_01.png',
+        picture: 'https://pub.lbctrl.com/files/202205/Yn7V5uB8HwfU6Bxv/trading_01.png',
       },
       {
         title: i18n.t('trading_features_003'),
         desc: i18n.t('trading_features_004'),
-        picture: 'https://pub.lbkrs.com/files/202205/s6sc711cqvkgotT8/trading_02.png',
+        picture: 'https://pub.lbctrl.com/files/202205/s6sc711cqvkgotT8/trading_02.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps

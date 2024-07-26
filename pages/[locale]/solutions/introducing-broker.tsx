@@ -24,9 +24,9 @@ export const getStaticProps = async (ctx: any) => ({
   },
 })
 
-const IMAGE_URL = 'https://assets.lbkrs.com/uploads/0109b1b6-f936-4dd8-9fd7-a3eedabcd48e/Group 427318855.png'
-const IMAGE_URL_HK = 'https://assets.lbkrs.com/uploads/bc8f15e6-2bda-4e62-bdfa-d5be1821ecc5/Group 427318856.png'
-const IMAGE_URL_EN = 'https://assets.lbkrs.com/uploads/7fcf772f-818c-4e5b-b23f-539d4ae5c032/Group 427318857.png'
+const IMAGE_URL = 'https://assets.lbctrl.com/uploads/0109b1b6-f936-4dd8-9fd7-a3eedabcd48e/Group 427318855.png'
+const IMAGE_URL_HK = 'https://assets.lbctrl.com/uploads/bc8f15e6-2bda-4e62-bdfa-d5be1821ecc5/Group 427318856.png'
+const IMAGE_URL_EN = 'https://assets.lbctrl.com/uploads/7fcf772f-818c-4e5b-b23f-539d4ae5c032/Group 427318857.png'
 
 const IntroducingPage = () => {
   const seoI18n = useTranslation(['seo'])

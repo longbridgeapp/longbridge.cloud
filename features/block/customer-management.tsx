@@ -6,14 +6,14 @@ import { TalkToUs } from '../talk-to-us'
 import Icon from '@/components/icon'
 import Styles from './customer-management.module.scss'
 
-const BACKGROUND_URL = 'https://pub.lbkrs.com/files/202207/4HBZ4vvcEniJQXur/Group_427318856.png'
+const BACKGROUND_URL = 'https://pub.lbctrl.com/files/202207/4HBZ4vvcEniJQXur/Group_427318856.png'
 
 const IMAGE_URL =
-  'https://assets.lbkrs.com/uploads/a99641f2-03a8-4f4e-a404-40d5f951a6e3/img_v2_9a346330-7aa2-4cb8-a38d-cb128cc7fadg.png'
+  'https://assets.lbctrl.com/uploads/a99641f2-03a8-4f4e-a404-40d5f951a6e3/img_v2_9a346330-7aa2-4cb8-a38d-cb128cc7fadg.png'
 const IMAGE_URL_HK =
-  'https://assets.lbkrs.com/uploads/778b1866-c29b-4ac8-aaaf-a3d4453e1c2a/img_v2_9e4c45de-5a4a-4618-9ad1-0ee112398e4g.png'
+  'https://assets.lbctrl.com/uploads/778b1866-c29b-4ac8-aaaf-a3d4453e1c2a/img_v2_9e4c45de-5a4a-4618-9ad1-0ee112398e4g.png'
 const IMAGE_URL_EN =
-  'https://assets.lbkrs.com/uploads/1d732acd-69a7-439d-b622-9c87bfeedf4e/img_v2_403ee996-de80-4035-bbe9-274454571e5g.png'
+  'https://assets.lbctrl.com/uploads/1d732acd-69a7-439d-b622-9c87bfeedf4e/img_v2_403ee996-de80-4035-bbe9-274454571e5g.png'
 
 const CustomerManagement = ({
   list,
@@ -105,7 +105,7 @@ export const BrokerManagement = () => {
 
 export const LongPortManagement = () => <BrokerManagement />
 
-const IMAGE_URL_WHITE_LABEL = 'https://pub.lbkrs.com/files/202207/9qmLkU3d53VTM3H3/Group_627339.png'
+const IMAGE_URL_WHITE_LABEL = 'https://pub.lbctrl.com/files/202207/9qmLkU3d53VTM3H3/Group_627339.png'
 
 export const WhiteLabelManagement = () => {
   const i18n = useTranslation('common')

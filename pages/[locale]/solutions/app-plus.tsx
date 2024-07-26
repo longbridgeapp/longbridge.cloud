@@ -35,18 +35,18 @@ const AppPlusPage = () => {
     title: i18n.t('features_header_index_4'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8678'), i18n.t('pages_locale_solutions_app_plus_8678-1')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/925d4d7b-79cb-444b-822b-a6d22c6e3125/app-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/d878a06c-689e-48fd-bffb-f26aacff40ba/app-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
+      'en': 'https://assets.lbctrl.com/uploads/925d4d7b-79cb-444b-822b-a6d22c6e3125/app-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/d878a06c-689e-48fd-bffb-f26aacff40ba/app-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/2d3668e4-34ad-442c-90c5-b895249c7f6e/app-hk.png',
     },
   }
   const content_banner_props = {
     title: i18n.t('pages_locale_solutions_app_plus_8679'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8680')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
+      'en': 'https://assets.lbctrl.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/b5b87228-6917-455e-b44e-af25af5fed8f/1.png',
     },
     localLink: '/longport',
   }
@@ -54,9 +54,9 @@ const AppPlusPage = () => {
     title: i18n.t('pages_locale_solutions_app_plus_8681'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8682')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
+      'en': 'https://assets.lbctrl.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/36406d45-4586-49e2-92a8-31fce7d6618e/2.png',
     },
     localLink: '/marketing',
   }
@@ -64,9 +64,9 @@ const AppPlusPage = () => {
     title: i18n.t('pages_locale_solutions_app_plus_8683'),
     desc: [i18n.t('pages_locale_solutions_app_plus_8684')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
+      'en': 'https://assets.lbctrl.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/df49d156-cbbe-4489-b77a-585ba7d763fe/content-img-3.png',
     },
     needTalk: false,
   }
@@ -455,7 +455,7 @@ const AppPlusPage = () => {
           </>
         </Box>
         <PageDivide
-          cover="https://assets.lbkrs.com/uploads/14a70dd4-5460-4fce-9011-8005e18f3127/content-service.png"
+          cover="https://assets.lbctrl.com/uploads/14a70dd4-5460-4fce-9011-8005e18f3127/content-service.png"
           subTitle={i18n.t('pages_locale_solutions_app_plus_8743')}
           title={i18n.t('pages_locale_solutions_app_plus_8700')}
         />
@@ -488,7 +488,7 @@ const AppPlusPage = () => {
           </>
         </Box>
         <PageDivide
-          cover="https://assets.lbkrs.com/uploads/7e4af769-fe55-44af-a67a-5b9470dba92d/sale-service.png"
+          cover="https://assets.lbctrl.com/uploads/7e4af769-fe55-44af-a67a-5b9470dba92d/sale-service.png"
           subTitle={i18n.t('pages_locale_solutions_app_plus_8750')}
           title={i18n.t('pages_locale_solutions_app_plus_8702')}
         />
@@ -530,17 +530,17 @@ const AppPlusPage = () => {
               descClass="text-sm text-text_color_1_supplement"
               data={[
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/8a5b1aab-d6e7-4f5a-8460-52e1e1a51494/vote.png',
+                  icon: 'https://assets.lbctrl.com/uploads/8a5b1aab-d6e7-4f5a-8460-52e1e1a51494/vote.png',
                   title: i18n.t('pages_locale_solutions_app_plus_8758'),
                   description: i18n.t('pages_locale_solutions_app_plus_8759'),
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/edce61fc-26a5-4883-8e44-ed962d901c88/delay.png',
+                  icon: 'https://assets.lbctrl.com/uploads/edce61fc-26a5-4883-8e44-ed962d901c88/delay.png',
                   title: i18n.t('pages_locale_solutions_app_plus_8760'),
                   description: i18n.t('pages_locale_solutions_app_plus_8761'),
                 },
                 {
-                  icon: 'https://assets.lbkrs.com/uploads/45105937-bc35-485f-ba65-e643946d6e63/circle_laugh.png',
+                  icon: 'https://assets.lbctrl.com/uploads/45105937-bc35-485f-ba65-e643946d6e63/circle_laugh.png',
                   title: i18n.t('pages_locale_solutions_app_plus_8762'),
                   description: i18n.t('pages_locale_solutions_app_plus_8763'),
                 },

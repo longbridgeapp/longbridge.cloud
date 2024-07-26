@@ -7,8 +7,8 @@ import { Carousel } from 'antd'
 import 'antd/dist/antd.css'
 import { useTranslation } from 'next-i18next'
 
-export const BG_BANNER = 'https://pub.lbkrs.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
-const IMAGE_URL = 'https://pub.lbkrs.com/files/202207/Ggr6CvK2f2jWASHe/Group_427318855.png'
+export const BG_BANNER = 'https://pub.lbctrl.com/files/202207/g1pGdC8PkwxTaqmw/trading_platform.png'
+const IMAGE_URL = 'https://pub.lbctrl.com/files/202207/Ggr6CvK2f2jWASHe/Group_427318855.png'
 
 export const BrokerBanner = ({ img }: { img: string }) => {
   const i18n = useTranslation('common')
@@ -83,9 +83,9 @@ export const IndexBanner = () => {
   const i18n = useTranslation('common')
   const isEn = i18n.i18n.language === 'en'
   const bannerMap: any = {
-    'en': 'https://pub.lbkrs.com/files/202307/Nk95eVCroahcrRaP/HOME-BANNER-EN.png',
-    'zh-CN': 'https://pub.lbkrs.com/files/202307/sJXSzDtouVe9vH3E/HOME-BANNER-CN.png',
-    'zh-HK': 'https://pub.lbkrs.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png',
+    'en': 'https://pub.lbctrl.com/files/202307/Nk95eVCroahcrRaP/HOME-BANNER-EN.png',
+    'zh-CN': 'https://pub.lbctrl.com/files/202307/sJXSzDtouVe9vH3E/HOME-BANNER-CN.png',
+    'zh-HK': 'https://pub.lbctrl.com/files/202307/9sSnVNABHuv6VARt/HOME-BANNER-HK.png',
   }
   const whaleLink: any = {
     'en': 'https://longbridge.feishu.cn/share/base/form/shrcnK8sJRAth64pgtY51fhafyd?lang=en',
@@ -116,7 +116,7 @@ export const IndexBanner = () => {
             right={
               <div className="h-[430px] sm:w-[527px] flex flex-col justify-center">
                 <img
-                  src="https://assets.lbkrs.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
+                  src="https://assets.lbctrl.com/uploads/c8bc35cf-c93d-419f-a703-23e1d3cb52dc/va.png"
                   alt="va"
                   className="top-0 bottom-0 object-cover w-auto h-full lg:absolute"
                 />

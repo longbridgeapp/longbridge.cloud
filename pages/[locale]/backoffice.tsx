@@ -33,40 +33,40 @@ const BackOffice: React.FC = () => {
     title: i18n.t('whale-backoffice-001'),
     desc: [i18n.t('whale-backoffice-002'), i18n.t('whale-backoffice-003')],
     img: {
-      'en': 'https://assets.lbkrs.com/uploads/f81f49f0-15b2-40a4-b43c-4176751af462/back-en.png',
-      'zh-CN': 'https://assets.lbkrs.com/uploads/6aceb73c-8c0a-4cf7-8eae-c4f82ecbb15e/back-cn.png',
-      'zh-HK': 'https://assets.lbkrs.com/uploads/19e70656-1fa3-4f0a-9c7b-c5e90b11693b/back-hk.png',
+      'en': 'https://assets.lbctrl.com/uploads/f81f49f0-15b2-40a4-b43c-4176751af462/back-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/6aceb73c-8c0a-4cf7-8eae-c4f82ecbb15e/back-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/19e70656-1fa3-4f0a-9c7b-c5e90b11693b/back-hk.png',
     },
   }
 
   const bss_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/b33402d9-fae6-453f-b23d-a7445a81900d/Group 427319259.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
+    'en': 'https://assets.lbctrl.com/uploads/b33402d9-fae6-453f-b23d-a7445a81900d/Group 427319259.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/longbridge-whale/55f7fd97-0b35-49d0-b901-65e216407d8a/a1.svg',
   }
 
   const asset_book_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/d6b8fee2-191a-4041-939e-7363b82248f8/Group 427319260.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
+    'en': 'https://assets.lbctrl.com/uploads/d6b8fee2-191a-4041-939e-7363b82248f8/Group 427319260.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/longbridge-whale/16f8fd13-6684-4096-a7e2-8db057a4e169/a2.svg',
   }
 
   const settlement_system_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/c978b574-109e-441b-959f-9c46e4fd1405/settlement_system_en.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
+    'en': 'https://assets.lbctrl.com/uploads/c978b574-109e-441b-959f-9c46e4fd1405/settlement_system_en.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/00a0bc28-b362-459b-9fd6-7763ccc7de8e/settlement_system_cn.svg',
   }
 
   const accounting_system_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/e5e3084f-ff8a-4735-b766-7b5162185237/account_system_en.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
+    'en': 'https://assets.lbctrl.com/uploads/e5e3084f-ff8a-4735-b766-7b5162185237/account_system_en.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/cd481590-7003-4536-878e-f851e4a8aa0e/account_system_cn.svg',
   }
 
   const report_printing_img: Record<string, string> = {
-    'en': 'https://assets.lbkrs.com/uploads/8289fe94-d0a3-47d0-aca7-914fab85f9eb/Group 427319157.svg',
-    'zh-CN': 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
-    'zh-HK': 'https://assets.lbkrs.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
+    'en': 'https://assets.lbctrl.com/uploads/8289fe94-d0a3-47d0-aca7-914fab85f9eb/Group 427319157.svg',
+    'zh-CN': 'https://assets.lbctrl.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
+    'zh-HK': 'https://assets.lbctrl.com/uploads/longbridge-whale/51175fd0-5e84-41a3-9fa0-0cc6985a726a/a7.svg',
   }
 
   return (
@@ -172,8 +172,8 @@ const BackOffice: React.FC = () => {
               <img
                 src={
                   isEN
-                    ? 'https://assets.lbkrs.com/uploads/5959c7de-44dd-4685-a3a9-57e5a7bdb2fd/Group 427319262.svg'
-                    : 'https://assets.lbkrs.com/uploads/longbridge-whale/fc51dcaa-a5d4-446d-b83a-b539d272d4b3/a5.svg'
+                    ? 'https://assets.lbctrl.com/uploads/5959c7de-44dd-4685-a3a9-57e5a7bdb2fd/Group 427319262.svg'
+                    : 'https://assets.lbctrl.com/uploads/longbridge-whale/fc51dcaa-a5d4-446d-b83a-b539d272d4b3/a5.svg'
                 }
                 alt=""
               />
@@ -189,14 +189,14 @@ const BackOffice: React.FC = () => {
                 <div className="mb-10 text-[28px] leading-10 font-medium">{i18n.t('whale-backoffice-038')}</div>
                 <div className="flex flex-col gap-y-5">
                   <div className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
+                    <ImageIcon url="https://pub.lbctrl.com/files/202212/Uoz4JvFGpFNxGF7f/pen.png" className="mr-8" />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px] ">
                       {i18n.t('whale-backoffice-039')}
                     </span>
                   </div>
                   <div className="flex items-center">
                     <ImageIcon
-                      url="https://pub.lbkrs.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png"
+                      url="https://pub.lbctrl.com/files/202212/xWEQJZ6PzZuHbnHc/treeview.png"
                       className="mr-8"
                     />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
@@ -204,7 +204,7 @@ const BackOffice: React.FC = () => {
                     </span>
                   </div>
                   <div className="flex items-center">
-                    <ImageIcon url="https://pub.lbkrs.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
+                    <ImageIcon url="https://pub.lbctrl.com/files/202212/q2xDeZMTLrzfQuE6/unlock.png" className="mr-8" />
                     <span className="text-base font-normal text-text_color_3 lg:w-[438px]">
                       {i18n.t('whale-backoffice-041')}
                     </span>

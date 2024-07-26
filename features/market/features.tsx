@@ -9,19 +9,19 @@ function useFeatures() {
     return [
       {
         desc: i18n.t('market_features_001'),
-        picture: 'https://pub.lbkrs.com/files/202205/LVsNBrP3ompLpDgd/Vector-2.png',
+        picture: 'https://pub.lbctrl.com/files/202205/LVsNBrP3ompLpDgd/Vector-2.png',
       },
       {
         desc: i18n.t('market_features_002'),
-        picture: 'https://pub.lbkrs.com/files/202205/23g4qBbMdubKuuyy/Vector.png',
+        picture: 'https://pub.lbctrl.com/files/202205/23g4qBbMdubKuuyy/Vector.png',
       },
       {
         desc: i18n.t('market_features_003'),
-        picture: 'https://pub.lbkrs.com/files/202205/WbN7RYmYgDnN4nP7/Vector-1.png',
+        picture: 'https://pub.lbctrl.com/files/202205/WbN7RYmYgDnN4nP7/Vector-1.png',
       },
       {
         desc: i18n.t('market_features_004'),
-        picture: 'https://pub.lbkrs.com/files/202205/RhiQGzGZSsn2rB8P/Vector-3.png',
+        picture: 'https://pub.lbctrl.com/files/202205/RhiQGzGZSsn2rB8P/Vector-3.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -67,22 +67,22 @@ function useServices() {
       {
         title: i18n.t('market_features_006'),
         desc: i18n.t('market_features_007'),
-        picture: 'https://pub.lbkrs.com/files/202205/tBYE9zxz9wvojoHb/Vector.png',
+        picture: 'https://pub.lbctrl.com/files/202205/tBYE9zxz9wvojoHb/Vector.png',
       },
       {
         title: i18n.t('market_features_008'),
         desc: i18n.t('market_features_009'),
-        picture: 'https://pub.lbkrs.com/files/202205/ipYi7bC7b9rkm6gR/Vector__1_.png',
+        picture: 'https://pub.lbctrl.com/files/202205/ipYi7bC7b9rkm6gR/Vector__1_.png',
       },
       {
         title: i18n.t('market_features_010'),
         desc: i18n.t('market_features_011'),
-        picture: 'https://pub.lbkrs.com/files/202205/hkk7u7VYvA1223Kt/Vector__2_.png',
+        picture: 'https://pub.lbctrl.com/files/202205/hkk7u7VYvA1223Kt/Vector__2_.png',
       },
       {
         title: i18n.t('market_features_012'),
         desc: i18n.t('market_features_013'),
-        picture: 'https://pub.lbkrs.com/files/202205/3p1Qa4T8k3rLN6LL/Vector__3_.png',
+        picture: 'https://pub.lbctrl.com/files/202205/3p1Qa4T8k3rLN6LL/Vector__3_.png',
       },
     ]
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -118,7 +118,7 @@ export const MarketServices = () => {
             })}
           </div>
           <div className="flex-1 ml-40">
-            <img src="https://pub.lbkrs.com/files/202205/sZodMjdoZiq5MRif/Group_626641.png" alt="" />
+            <img src="https://pub.lbctrl.com/files/202205/sZodMjdoZiq5MRif/Group_626641.png" alt="" />
           </div>
         </div>
       </div>
