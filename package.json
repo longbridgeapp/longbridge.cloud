@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=3003",
-    "dev:prod": "PROXY=prod next dev --port=3003",
+    "dev": "next dev --port=3000",
+    "dev:prod": "PROXY=prod next dev --port=3000",
     "build": "next build && next export && yarn normalize-asset-path",
     "normalize-asset-path": "node ./normalize-asset-path",
     "start": "next start",
