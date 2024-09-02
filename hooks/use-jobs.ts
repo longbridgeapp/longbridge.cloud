@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { useSafeState } from 'ahooks'
 import { getAppConfig } from '@/services'
+// @ts-ignore
 import get from 'lodash/get'
 
 /**

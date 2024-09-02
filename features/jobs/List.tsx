@@ -1,5 +1,6 @@
 import { JobItem, CityItem } from '@/hooks/use-jobs'
 import React from 'react'
+// @ts-ignore
 import get from 'lodash/get'
 import { useTranslation } from 'next-i18next'
 import { FullMask } from '@/components/popup'
@@ -16,7 +17,7 @@ const JobList: React.FC<JobProps> = props => {
   const language = i18n.i18n?.language
   const { jobs, cities } = props
   const [visible, setVisible] = React.useState(false)
-  const [detailJob, setDetailJob] = React.useState()
+  const [detailJob, setDetailJob] = React.useState<JobItem>()
 
   const getLocation = (_cities: string) => {
     const city = _cities
@@ -31,7 +32,7 @@ const JobList: React.FC<JobProps> = props => {
     return city.join(' ')
   }
 
-  const handleJob = job => {
+  const handleJob = (job: JobItem) => {
     setDetailJob(job)
     setVisible(true)
   }
