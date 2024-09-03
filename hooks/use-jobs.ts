@@ -29,9 +29,11 @@ export interface CityItem {
 }
 let jobsState: JobItem[] = []
 const filterSite = 'whale'
+const DefaultEmail = 'recruit@longbridge.sg'
 export function useJobs() {
   const [jobs, setJobs] = useSafeState<JobItem[]>(jobsState)
   const [cities, setCities] = useSafeState<CityItem[]>([])
+  const [email, setEmail] = useSafeState<string>(DefaultEmail)
 
   useEffect(() => {
     if (!!jobsState.length) return
@@ -45,10 +47,11 @@ export function useJobs() {
     if (_jobConfig) {
       const whaleJobs = get(_jobConfig, 'jobs', []).filter((job: JobItem) => job.site === filterSite)
       setCities(get(_jobConfig, 'cities', []))
+      setEmail(get(_jobConfig, `emails.${filterSite}`, DefaultEmail))
       setJobs(whaleJobs)
       jobsState = whaleJobs
     }
   }
 
-  return [jobs, cities, setJobs] as const
+  return [jobs, cities, email, setJobs] as const
 }

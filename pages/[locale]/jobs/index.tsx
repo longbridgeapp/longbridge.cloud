@@ -21,7 +21,7 @@ export const getStaticProps = async (ctx: any) => ({
 })
 
 const Jobs: React.FC = () => {
-  const [jobs, cities] = useJobs()
+  const [jobs, cities, email] = useJobs()
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   return (
@@ -30,7 +30,7 @@ const Jobs: React.FC = () => {
       <JobBanner />
       <div className="py-5 job-wrapper main-container">
         <div className="main-content-width">
-          <JobList jobs={jobs} cities={cities} />
+          <JobList jobs={jobs} cities={cities} email={email} />
         </div>
       </div>
     </Layout>
