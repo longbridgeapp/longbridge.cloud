@@ -74,6 +74,10 @@ function useNavs() {
             value: '/account',
             label: i18n.t('pages_virtual_assets40'),
           },
+          {
+            value: '/wealth-management',
+            label: i18n.t('pages_virtual_assets36_1'),
+          },
         ],
       },
       {

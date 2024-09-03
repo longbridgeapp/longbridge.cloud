@@ -1,0 +1,10 @@
+:local(.job-detail-modal) {
+  .ant-modal-content {
+    @apply rounded-lg;
+    .job-detail {
+      &::-webkit-scrollbar {
+        @apply hidden;
+      }
+    }
+  }
+}

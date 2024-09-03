@@ -79,6 +79,10 @@ const Footer: FC = () => {
         label: i18n.t('header_nav_009'),
         value: '/whale-reports',
       },
+      {
+        label: i18n.t('features_footer_index_891179'),
+        value: '/jobs',
+      },
     ]
     return { frontSell, sellEnd, cooperation, aboutUs }
   }, [])
