@@ -11,11 +11,12 @@ import { Modal } from 'antd'
 interface JobProps {
   jobs: JobItem[]
   cities: CityItem[]
+  email: string
 }
 const JobList: React.FC<JobProps> = props => {
   const i18n = useTranslation('common')
   const language = i18n.i18n?.language
-  const { jobs, cities } = props
+  const { jobs, cities, email } = props
   const [visible, setVisible] = React.useState(false)
   const [detailJob, setDetailJob] = React.useState<JobItem>()
 
@@ -98,9 +99,22 @@ const JobList: React.FC<JobProps> = props => {
                 </div>
                 <div className="location">
                   <div className="mb-4 text-lg font-medium text-text_color_1">Work Location</div>
-                  <div className="my-2 text-base font-medium location text-text-color-1">
+                  <div className="my-2 text-base font-medium location text-text_color_1_supplement">
                     {getLocation(get(detailJob, 'cities'))}
                   </div>
+                </div>
+                <div className="py-5 mt-4 border-t email border-line-color">
+                  <div className="mb-4 text-lg font-medium text-text_color_1">Please send your resume to:</div>
+                  <a
+                    href={`mailto:recruit@longbridge.sg?subject=apply - ${get(
+                      detailJob,
+                      `title.${language}`,
+                      get(detailJob, 'title')
+                    )}`}
+                    className="my-2 text-lg font-medium location text-brand_color hover:text-brand_color"
+                  >
+                    {email}
+                  </a>
                 </div>
               </div>
             </div>
