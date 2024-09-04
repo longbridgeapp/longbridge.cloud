@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port=3002",
-    "dev:prod": "PROXY=prod next dev --port=3002",
+    "dev": "next dev --port=3000",
+    "dev:prod": "PROXY=prod next dev --port=3000",
     "build": "next build && next export && yarn normalize-asset-path",
     "normalize-asset-path": "node ./normalize-asset-path",
     "start": "next start",
@@ -14,6 +14,7 @@
     "@ant-design/icons": "4.5.0",
     "@ant-design/pro-card": "1.18.34",
     "@ant-design/pro-layout": "6.34.9",
+    "@supabase/supabase-js": "^2.45.2",
     "ahooks": "^3.3.10",
     "antd": "4.23.3",
     "classnames": "^2.3.1",

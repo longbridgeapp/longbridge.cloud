@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
 import { useMount, useAsyncEffect } from 'ahooks'
 import { getBasenameLocale } from '@/utils/common'
-import { Popover } from 'antd'
+import { LocaleLink } from '@/components/locale-link'
 
 const Footer: FC = () => {
   const [isCN, setISCN] = useState(false)
@@ -38,31 +38,7 @@ const Footer: FC = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  const { emailList, telList } = useMemo(() => {
-    const emailList = [
-      {
-        label: i18n.t('footer_006'),
-        value: 'cs@longbridge.cloud',
-      },
-      {
-        label: i18n.t('footer_007'),
-        value: 'bd@longbridge.cloud',
-      },
-    ]
-    const telList = [
-      {
-        label: '',
-        value: '+852 38511722',
-      },
-      {
-        label: '',
-        value: '+852 38511711',
-      },
-    ]
-    return { emailList, telList }
-  }, [])
-
-  const { frontSell, sellEnd } = useMemo(() => {
+  const { frontSell, sellEnd, cooperation, aboutUs } = useMemo(() => {
     const frontSell = [
       {
         label: i18n.t('features_footer_index_891117'),
@@ -87,7 +63,28 @@ const Footer: FC = () => {
         type: 'mailto:',
       },
     ]
-    return { frontSell, sellEnd }
+    const cooperation = [
+      {
+        label: i18n.t('features_footer_index_891118'),
+        value: 'brand@longbridge.sg',
+        type: 'mailto:',
+      },
+    ]
+    const aboutUs = [
+      {
+        label: i18n.t('header_nav_007'),
+        value: '/about',
+      },
+      {
+        label: i18n.t('header_nav_009'),
+        value: '/whale-reports',
+      },
+      {
+        label: i18n.t('features_footer_index_891179'),
+        value: '/jobs',
+      },
+    ]
+    return { frontSell, sellEnd, cooperation, aboutUs }
   }, [])
 
   const fetchLegalTerms = async () => {
@@ -116,7 +113,7 @@ const Footer: FC = () => {
               </div>
               <div
                 className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
-                  'flex space-x-4': i18n.i18n.language !== 'en',
+                  'flex space-x-2': i18n.i18n.language !== 'en',
                 })}
               >
                 <div>{i18n.t('features_talk_to_us_891118')}</div>
@@ -138,7 +135,7 @@ const Footer: FC = () => {
               </div>
               <div
                 className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
-                  'flex space-x-4': i18n.i18n.language !== 'en',
+                  'flex space-x-2': i18n.i18n.language !== 'en',
                 })}
               >
                 <div>{i18n.t('features_talk_to_us_891122')}</div>
@@ -150,6 +147,31 @@ const Footer: FC = () => {
                     {label}
                     {value}
                   </a>
+                ))}
+              </div>
+            </div>
+            <div className="">
+              <div className="mb-3 text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891125')}
+              </div>
+              <div className="flex flex-col space-y-3">
+                {cooperation.map(({ label, value, type }) => (
+                  <a className="text-xs font-normal whitespace-nowrap" href={`${type}${value}`} key={value}>
+                    {label}
+                    {value}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="">
+              <div className="mb-3 text-sm font-medium text-text_color_1_supplement">
+                {i18n.t('features_footer_index_891126')}
+              </div>
+              <div className="flex flex-col space-y-3 ">
+                {aboutUs.map(({ label, value }) => (
+                  <LocaleLink to={value} key={value}>
+                    <span className="text-[12px]">{label}</span>
+                  </LocaleLink>
                 ))}
               </div>
             </div>
