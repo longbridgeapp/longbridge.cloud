@@ -6,7 +6,6 @@ import { usePurePathname } from '@/hooks/use-pure-pathname'
 import { useReports } from '@/hooks/use-reports'
 import { getContactFormUrl } from '@/utils/common'
 import classNames from 'classnames'
-import { t } from 'i18next'
 import { FC, MouseEvent, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import styles from './index.module.scss'
@@ -18,11 +17,11 @@ function useNavs() {
   const i18n = useTranslation('common')
   return useMemo(() => {
     return [
-      {
-        value: '/',
-        label: i18n.t('features_header_index_2'),
-        children: [],
-      },
+      // {
+      //   value: '/',
+      //   label: i18n.t('features_header_index_2'),
+      //   children: [],
+      // },
       {
         value: 'product',
         label: i18n.t('header_nav_001'),
@@ -74,6 +73,10 @@ function useNavs() {
           {
             value: '/account',
             label: i18n.t('pages_virtual_assets40'),
+          },
+          {
+            value: '/wealth-management',
+            label: i18n.t('pages_virtual_assets36_1'),
           },
         ],
       },
@@ -138,20 +141,20 @@ function useNavs() {
         label: i18n.t('header_nav_007'),
         children: [],
       },
-      {
-        value: "/docs",
-        suffix: '',
-        label: i18n.t('help-docs'),
-        children: [],
-        rawValue: true,
-      },
-      {
-        value: getContactFormUrl(i18n.i18n.language),
-        suffix: '',
-        label: i18n.t('talk-to-us'),
-        children: [],
-        rawValue: true,
-      },
+      // {
+      //   value: "/docs",
+      //   suffix: '',
+      //   label: i18n.t('help-docs'),
+      //   children: [],
+      //   rawValue: true,
+      // },
+      // {
+      //   value: getContactFormUrl(i18n.i18n.language),
+      //   suffix: '',
+      //   label: i18n.t('talk-to-us'),
+      //   children: [],
+      //   rawValue: true,
+      // },
       {
         value: '/whale-reports',
         suffix: '',
