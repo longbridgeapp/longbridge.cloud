@@ -1,5 +1,5 @@
 :local(.footer) {
-  @apply py-12;
+  @apply py-12 bg-bg_color_2;
   color: var(--text_color_2);
   a {
     &:hover {

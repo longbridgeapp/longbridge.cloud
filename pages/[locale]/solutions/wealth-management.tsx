@@ -1,3 +1,4 @@
+// 解决方案-wealth-management
 import React, { useMemo } from 'react'
 import classNames from 'classnames'
 import { TalkToUs, ContactUs, ContactUsBlack } from '@/features/talk-to-us'
@@ -61,7 +62,7 @@ function SolutionList({ list }: { list: string[] }) {
   )
 }
 
-const WealthManagement = () => {
+const SolutionWealthManagement = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
   const isEn = i18n.i18n.language === 'en'
@@ -179,4 +180,4 @@ const WealthManagement = () => {
     </Layout>
   )
 }
-export default WealthManagement
+export default SolutionWealthManagement

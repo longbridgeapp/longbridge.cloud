@@ -1,0 +1,63 @@
+:local(.contact-form) {
+  .form-row {
+    @apply w-[100%] flex;
+    .ant-form-item {
+      @apply w-[94%];
+      &.half {
+        @apply w-[46%] mr-[2%] mb-4;
+      }
+
+      .ant-form-item-required::before {
+        content: none;
+      }
+      .ant-form-item-required::after {
+        display: inline-block;
+        margin-right: 4px;
+        color: var(--brand_color);
+        font-size: 14px;
+        font-family: SimSun, sans-serif;
+        line-height: 1;
+        content: '*';
+      }
+
+      .ant-form-item-label {
+        @apply pb-1;
+      }
+      .ant-input {
+        @apply h-[36px];
+      }
+      .ant-picker {
+        @apply h-[36px] w-[100%];
+      }
+      .submit {
+        @apply text-white bg-brand_color w-[100%] h-[40px];
+      }
+      .policy-link {
+        @apply text-brand_color underline;
+      }
+    }
+  }
+
+  .ant-tabs-tab {
+    @apply text-[24px] pt-0;
+  }
+  .ant-tabs-tab .ant-tabs-tab-btn {
+    @apply text-[#929BA4];
+  }
+  .ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn {
+    // @apply text-[#929BA4];
+    @apply text-[#000000];
+  }
+  .ant-tabs-tab {
+    background: none;
+  }
+  .ant-tabs-ink-bar {
+    background: none;
+  }
+  .ant-tabs-top > .ant-tabs-nav::before,
+  .ant-tabs-bottom > .ant-tabs-nav::before,
+  .ant-tabs-top > div > .ant-tabs-nav::before,
+  .ant-tabs-bottom > div > .ant-tabs-nav::before {
+    border-bottom: 1px solid #c2c4c5;
+  }
+}
