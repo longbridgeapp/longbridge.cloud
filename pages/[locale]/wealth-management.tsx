@@ -137,18 +137,16 @@ const Retail: React.FC = () => {
           backgroundImage="https://pub.pbkrs.com/files/202307/zfP6yEtKhFSMFSdB/bg-image.png"
         >
           <>
-            <div className="flex flex-col gap-10">
+            <div className="flex flex-col gap-10 mb-4">
               <Title
                 label={i18n.t('pages_locale_wealth_management_891143')}
                 title={i18n.t('pages_locale_wealth_management_891144')}
               ></Title>
-              <div>{i18n.t('pages_locale_wealth_management_891145')}</div>
-              <div className="flex flex-col items-center justify-between gap-10 lg:flex-row">
+              <div className="mb-4">{i18n.t('pages_locale_wealth_management_891145')}</div>
+              <div className="flex flex-col justify-between gap-10 lg:flex-row">
                 <div className="flex-1">
                   <img
-                    src={
-                      'https://assets.lbctrl.com/uploads/8f1fd81e-585f-4c8e-a450-8927ef70f067/rich_and_diverse_community_features_cn.svg'
-                    }
+                    src={'https://assets.lbctrl.com/uploads/888cf881-50ca-46fa-a745-b859b1bff86b/connectivity.png'}
                     alt=""
                     className="lg:w-[588px]"
                   />
