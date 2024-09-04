@@ -1,0 +1,27 @@
+:local(.carousel-card) {
+  @apply relative;
+
+  .title {
+    @apply text-white text-center text-[36px] mb-4;
+  }
+  .btn-area {
+    @apply absolute h-[52px] mt-[90px] left-0 right-0 flex items-center justify-center;
+  }
+
+  .sub-title {
+    @apply text-white text-[32px] mb-10;
+  }
+  .desc {
+    @apply text-white text-[16px] mr-[60px] ml-[60px];
+  }
+  .btn {
+    @apply absolute z-10 hidden cursor-pointer md:inline-flex w-[32px] h-[32px] bg-white items-center justify-center rounded-[16px];
+    color: var(--brand_color);
+  }
+  .next-btn {
+    @apply right-0;
+  }
+  .pre-btn {
+    @apply left-0;
+  }
+}
