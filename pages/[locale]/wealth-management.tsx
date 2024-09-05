@@ -3,7 +3,7 @@ import { Layout } from '@/features/common/page-layout'
 import i18nextConfig from '@/next-i18next.config'
 import { i18nPaths } from '@/utils/i18n-paths'
 import ImageIcon from '@/components/image-icon'
-import React, { useEffect, useMemo } from 'react'
+import React, { useMemo } from 'react'
 import { SEOMeta } from '@/utils/seo'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
@@ -28,20 +28,8 @@ const Retail: React.FC = () => {
   const seoI18n = useTranslation(['seo'])
   const i18n = useTranslation('common')
 
-  // img[i18n.i18n.language] || img['zh-CN'] 这样用！
-  const banner_props = {
-    title: i18n.t('pages_locale_wealth_management_891127'),
-    desc: [i18n.t('pages_locale_wealth_management_891128')],
-    img: {
-      'en': 'https://assets.lbctrl.com/uploads/0e2fa625-47ff-45fe-a33b-ad67abdc2287/wealth-management-cn.png',
-      'zh-CN': 'https://assets.lbctrl.com/uploads/0e2fa625-47ff-45fe-a33b-ad67abdc2287/wealth-management-cn.png',
-      'zh-HK': 'https://assets.lbctrl.com/uploads/0e2fa625-47ff-45fe-a33b-ad67abdc2287/wealth-management-cn.png',
-    },
-  }
-
-  // 轮播描述
   const carouselTitle = i18n.t('pages_locale_wealth_management_891152')
-  const { carouselContents } = useMemo(() => {
+  const { carouselContents, bannerProps, connectivityImgs } = useMemo(() => {
     const carouselContents = [
       {
         title: i18n.t('pages_locale_wealth_management_891153'),
@@ -60,7 +48,22 @@ const Retail: React.FC = () => {
         desc: i18n.t('pages_locale_wealth_management_891160'),
       },
     ]
-    return { carouselContents }
+    const bannerProps = {
+      title: i18n.t('pages_locale_wealth_management_891127'),
+      desc: [i18n.t('pages_locale_wealth_management_891128')],
+      img: {
+        'en': 'https://assets.lbctrl.com/uploads/d08934b6-253e-44b0-802e-ad1c10ad05f9/wealth-management-en.png',
+        'zh-CN': 'https://assets.lbctrl.com/uploads/8abee0a0-6231-4e5b-a1a7-30eba715d3d4/wealth-management-cn.png',
+        'zh-HK': 'https://assets.lbctrl.com/uploads/2fa29e8d-41dc-43da-a9d8-4395395af783/wealth-management-hk.png',
+      },
+    }
+
+    const connectivityImgs: any = {
+      'en': 'https://assets.lbctrl.com/uploads/2d8d4333-12de-4183-8378-235e47a30953/connectivity-en.png',
+      'zh-CN': 'https://assets.lbctrl.com/uploads/c02ee6ac-22ed-4d68-839c-4750998531c1/connectivity-cn.png',
+      'zh-HK': 'https://assets.lbctrl.com/uploads/483b8e24-1971-40c0-a7e5-7bf271402278/connectivity-hk.png',
+    }
+    return { carouselContents, bannerProps, connectivityImgs }
   }, [])
 
   return (
@@ -71,7 +74,7 @@ const Retail: React.FC = () => {
         description={seoI18n.t('wealth-management.description')}
       />
       <div>
-        <Banner {...banner_props}></Banner>
+        <Banner {...bannerProps}></Banner>
         <div className="py-10 main-container">
           <div className="flex flex-col gap-10 main-content-width">
             <Title
@@ -146,7 +149,7 @@ const Retail: React.FC = () => {
               <div className="flex flex-col justify-between gap-10 lg:flex-row">
                 <div className="flex-1">
                   <img
-                    src={'https://assets.lbctrl.com/uploads/888cf881-50ca-46fa-a745-b859b1bff86b/connectivity.png'}
+                    src={connectivityImgs[i18n.i18n.language] || connectivityImgs['zh-CN']}
                     alt=""
                     className="lg:w-[588px]"
                   />

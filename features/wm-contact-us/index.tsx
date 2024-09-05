@@ -61,7 +61,7 @@ const ContactUs = () => {
   return (
     <Box>
       <>
-        <div className={classNames('flex flex-wrap justify-between', styles['contact-us'])}>
+        <div className={classNames(styles['contact-us'])}>
           <div className="w-[100%] md:w-[44%]">
             <div className="title">{i18n.t('talk-to-us')}</div>
             {contactUsInfo.map(({ title, children }) => {

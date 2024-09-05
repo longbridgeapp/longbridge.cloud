@@ -1,4 +1,5 @@
 :local(.contact-us) {
+  @apply flex flex-wrap justify-between flex-col-reverse md:flex-row;
   .title {
     @apply text-[24px] mb-4;
   }
