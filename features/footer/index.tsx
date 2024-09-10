@@ -54,6 +54,11 @@ const Footer: FC = () => {
     const sellEnd = [
       {
         label: i18n.t('features_footer_index_891117'),
+        value: '+65 9297 0216',
+        type: 'tel:',
+      },
+      {
+        label: i18n.t('features_footer_index_891117'),
         value: '+852 3851 1711',
         type: 'tel:',
       },
