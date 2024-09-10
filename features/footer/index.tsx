@@ -54,12 +54,12 @@ const Footer: FC = () => {
     const sellEnd = [
       {
         label: i18n.t('features_footer_index_891117'),
-        value: '+852 3851 1722',
+        value: '+852 3851 1711',
         type: 'tel:',
       },
       {
         label: i18n.t('features_footer_index_891118'),
-        value: 'cs@longbridge.cloud',
+        value: 'bd@longbridge.sg',
         type: 'mailto:',
       },
     ]
@@ -111,14 +111,19 @@ const Footer: FC = () => {
               <div className="text-sm font-medium text-text_color_1_supplement">
                 {i18n.t('features_footer_index_891119')}
               </div>
-              <div
-                className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
-                  'flex space-x-2': i18n.i18n.language !== 'en',
-                })}
-              >
-                <div>{i18n.t('features_talk_to_us_891118')}</div>
-                <div>{i18n.t('features_talk_to_us_891119')}</div>
-                <div>{i18n.t('features_talk_to_us_891120')}</div>
+              <div className={'mt-1 mb-4 text-xs text-text_color_2 flex space-x-2'}>
+                {i18n.i18n.language === 'en' ? (
+                  <>
+                    <div>Talk to Experts</div>
+                    <div className="ml-3">Ask for Free Demo</div>
+                  </>
+                ) : (
+                  <>
+                    <div>{i18n.t('features_talk_to_us_891118')}</div>
+                    <div>{i18n.t('features_talk_to_us_891119')}</div>
+                    <div>{i18n.t('features_talk_to_us_891120')}</div>
+                  </>
+                )}
               </div>
               <div className="flex flex-col space-y-3">
                 {frontSell.map(({ label, value, type }) => (
@@ -133,13 +138,18 @@ const Footer: FC = () => {
               <div className="text-sm font-medium text-text_color_1_supplement">
                 {i18n.t('features_footer_index_891121')}
               </div>
-              <div
-                className={classNames('mt-1 mb-4 text-xs text-text_color_2', {
-                  'flex space-x-2': i18n.i18n.language !== 'en',
-                })}
-              >
-                <div>{i18n.t('features_talk_to_us_891122')}</div>
-                <div>{i18n.t('features_talk_to_us_891123')}</div>
+              <div className={'mt-1 mb-4 text-xs text-text_color_2 flex space-x-2'}>
+                {i18n.i18n.language === 'en' ? (
+                  <>
+                    <div>Talk to Experts</div>
+                    <div className="ml-3">Ask for Free Demo</div>
+                  </>
+                ) : (
+                  <>
+                    <div>{i18n.t('features_talk_to_us_891122')}</div>
+                    <div>{i18n.t('features_talk_to_us_891123')}</div>
+                  </>
+                )}
               </div>
               <div className="flex flex-col space-y-3">
                 {sellEnd.map(({ label, value, type }) => (

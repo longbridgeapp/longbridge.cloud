@@ -76,7 +76,7 @@ function useNavs() {
           },
           {
             value: '/wealth-management',
-            label: i18n.t('pages_virtual_assets36_1'),
+            label: i18n.t('features_wm_contact_us_index_891189'),
           },
         ],
       },
