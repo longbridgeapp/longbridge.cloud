@@ -31,8 +31,13 @@ const CarouselCard = ({ title, list }: ICarouselCardProps) => {
   }
 
   return (
-    <div className={classNames(styles['carousel-card'])}>
-      <Box className="bg-brand_color">
+    <div
+      className={classNames(styles['carousel-card'])}
+      style={{
+        backgroundImage: `url('https://assets.lbctrl.com/uploads/cdedbefb-6bd5-49aa-871b-aa48f8329edf/purple-bg.png');`,
+      }}
+    >
+      <Box>
         <div className="relative">
           <div className="title">{title}</div>
           <div className="btn-area">

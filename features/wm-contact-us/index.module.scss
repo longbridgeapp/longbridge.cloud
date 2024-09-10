@@ -1,7 +1,7 @@
 :local(.contact-us) {
   @apply flex flex-wrap justify-between flex-col-reverse md:flex-row;
   .title {
-    @apply text-[24px] mb-4;
+    @apply text-[24px] mb-6 font-bold;
   }
   .sub-title {
     @apply text-sm mb-3 font-medium text-text_color_1_supplement;
@@ -10,10 +10,12 @@
     @apply flex flex-col items-baseline space-y-3 mb-6;
   }
   .label {
-    @apply text-xs font-normal;
-    color: var(--text_color_2);
+    @apply text-xs font-normal text-text_color_2;
     &:hover {
-      color: var(--brand_color);
+      @apply text-brand_color;
+    }
+    & > a:hover {
+      @apply text-brand_color;
     }
   }
   .img-container {
