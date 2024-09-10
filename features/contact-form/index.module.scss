@@ -60,4 +60,10 @@
   .ant-tabs-bottom > div > .ant-tabs-nav::before {
     border-bottom: 1px solid #c2c4c5;
   }
+  .ant-checkbox + span {
+    @apply text-text-color-2;
+  }
+  .ant-form-item-label > label {
+    @apply text-text_color_3;
+  }
 }

@@ -1,5 +1,5 @@
 :local(.carousel-card) {
-  @apply relative;
+  @apply relative bg-brand_color bg-right-top bg-no-repeat bg-[length:1045px_500px] md:bg-[length:853px_408px] bg-blend-lighten;
 
   .title {
     @apply text-white text-center text-[36px] mb-4;
