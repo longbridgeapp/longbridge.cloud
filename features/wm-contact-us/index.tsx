@@ -29,31 +29,31 @@ const ContactUs = () => {
           },
         ],
       },
-      {
-        title: i18n.t('features_wm_contact_us_index_891163'),
-        children: [
-          {
-            label: i18n.t('features_footer_index_891118'),
-            value: 'bd@longbridge.sg',
-            type: 'mailto:',
-          },
-          {
-            label: i18n.t('features_footer_index_891117'),
-            value: '+65 9297 0216',
-            type: 'tel:',
-          },
-          {
-            label: i18n.t('features_footer_index_891117'),
-            value: '+852 3851 1711',
-            type: 'tel:',
-          },
-          {
-            label: i18n.t('features_wm_contact_us_index_891161'),
-            value: i18n.t('features_wm_contact_us_index_891181'),
-            type: '',
-          },
-        ],
-      },
+      // {
+      //   title: i18n.t('features_wm_contact_us_index_891163'),
+      //   children: [
+      //     {
+      //       label: i18n.t('features_footer_index_891118'),
+      //       value: 'bd@longbridge.sg',
+      //       type: 'mailto:',
+      //     },
+      //     {
+      //       label: i18n.t('features_footer_index_891117'),
+      //       value: '+65 9297 0216',
+      //       type: 'tel:',
+      //     },
+      //     {
+      //       label: i18n.t('features_footer_index_891117'),
+      //       value: '+852 3851 1711',
+      //       type: 'tel:',
+      //     },
+      //     {
+      //       label: i18n.t('features_wm_contact_us_index_891161'),
+      //       value: i18n.t('features_wm_contact_us_index_891181'),
+      //       type: '',
+      //     },
+      //   ],
+      // },
     ]
     return contactUsInfo
   }, [])
@@ -79,24 +79,37 @@ const ContactUs = () => {
                 )
               )
               return (
-                <div key={title}>
+                <div key={title} className="mb-8">
                   <div className="sub-title">{title}</div>
                   <div className="label-container">{childrenNodes}</div>
                 </div>
               )
             })}
+            <div className="mb-8">
+              <div className="sub-title">{i18n.t('features_wm_contact_us_index_891163')}</div>
+              <div className="label-container">
+                <a className="label" href={'mailto:bd@longbridge.sg'}>
+                  {i18n.t('features_footer_index_891118')}
+                  {'bd@longbridge.sg'}
+                </a>
+                <span className="label">
+                  {i18n.t('features_footer_index_891117')}
+                  <a href={'tel:+65 9297 0216'}>{'+65 9297 0216'}</a>
+                  <span>{' / '}</span>
+                  <a href={'tel:+852 3851 1711'}>{'+852 3851 1711'}</a>
+                </span>
+                <span className="label">
+                  {i18n.t('features_wm_contact_us_index_891161')}
+                  {i18n.t('features_wm_contact_us_index_891181')}
+                </span>
+              </div>
+            </div>
             <div
               className="img-container"
               style={{
                 backgroundImage: `url(https://assets.lbctrl.com/uploads/092de69e-b447-4cc7-96e7-c59486745724/bg-earth.png)`,
               }}
-            >
-              {/* <img
-                className=""
-                src="https://assets.lbctrl.com/uploads/092de69e-b447-4cc7-96e7-c59486745724/bg-earth.png"
-                alt=""
-              /> */}
-            </div>
+            ></div>
           </div>
           <div className="w-[100%] md:w-[50%]">
             <ContactForm />
