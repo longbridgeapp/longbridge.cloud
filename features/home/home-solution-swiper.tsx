@@ -68,7 +68,7 @@ const HomeSolutionSwiper = () => {
             'zh-CN': 'https://assets.lbctrl.com/uploads/259f1573-bfca-4e61-b056-3b39a10a45b6/wm.png',
             'zh-HK': 'https://assets.lbctrl.com/uploads/259f1573-bfca-4e61-b056-3b39a10a45b6/wm.png',
           },
-          localLink: '/solutions/us-stock',
+          localLink: '/solutions/wealth-management',
         },
         title: i18n.t('pages_virtual_assets36_1'),
       },
