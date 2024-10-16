@@ -1,15 +1,10 @@
 import { Form, Tabs, Input, Button, DatePicker, TimePicker, Checkbox, message } from 'antd'
-import { createClient } from '@supabase/supabase-js'
 import styles from './index.module.scss'
 import { useMemo, useState } from 'react'
 import { useTranslation } from 'next-i18next'
 // @ts-ignore
 import debounce from 'lodash/debounce'
-
-const supabaseUrl = 'https://fttapltgubuovrbvgvjg.supabase.co'
-const supabaseKey =
-  'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ0dGFwbHRndWJ1b3ZyYnZndmpnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MjQ5MjE0MDAsImV4cCI6MjA0MDQ5NzQwMH0.5lpEBaKxHXoQfE-rJksy9Et-e5A3EXUzkTc52lGpAyc'
-const supabaseClient = createClient(supabaseUrl, supabaseKey)
+import { submitContactUsForm } from '@/services'
 
 type IPrivacyPolicy = { [key: string]: string }
 
@@ -32,7 +27,6 @@ const ContactForm = () => {
   }
 
   const handleSubmit = () => {
-    if (!supabaseClient) return
     if (isLoading) return
 
     const {
@@ -73,18 +67,16 @@ const ContactForm = () => {
       } else {
         delete insertData.enquiry_type
         delete insertData.description
-        const { time } = insertData
+        const { date, time } = insertData
+        insertData.date = date.format('YYYY-MM-DD')
         insertData.time = time.format('HH:mm')
       }
-      const { data, error } = await supabaseClient.from('contact_us').insert([insertData])
-      if (!error) {
-        message.success(i18n.t('features_contact_form_index_891178'))
-      }
+      await submitContactUsForm(insertData)
 
       setIsLoading(false)
       return
     } catch (err) {
-      console.log('submit form error:', err)
+      // console.log('submit form error:', err)
     }
 
     setIsLoading(false)
