@@ -78,7 +78,7 @@ const AppWithTranslation = appWithTranslation(({ Component, pageProps, router }:
   return (
     <div className="app">
       <Head>
-        <script src={'https://static.lbctrl.com/npm/sensorsdata@1.16.10.min.js'} defer />
+        <script src={'https://assets.lbctrl.com/pkg/sensorsdata/1.21.13.min.js'} defer />
         <link rel="icon" type="image/x-icon" href="https://pub.pbkrs.com/files/202205/xAwaQmCk1cD1AUsm/favicon.png" />
       </Head>
       <Script
