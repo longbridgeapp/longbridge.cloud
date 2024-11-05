@@ -53,13 +53,12 @@ export const BlockBetween = ({
   return (
     <div
       className={classNames(
-        'flex items-center pb-5 :lg:pb-10 lg:flex-row',
+        'flex items-center pb-5 :lg:pb-10 lg:flex-row lg:space-x-10 space-y-5 lg:space-y-0',
         reverse ? 'flex-col-reverse' : 'flex-col',
         className
       )}
     >
       <div className="flex-1 block-left">{left}</div>
-      <div className="mr-10"></div>
       <div className="flex-1 block-right">{right}</div>
     </div>
   )
