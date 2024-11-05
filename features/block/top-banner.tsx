@@ -99,7 +99,7 @@ export const IndexBanner = () => {
     'zh-HK': 'https://assets.lbctrl.com/uploads/ca6da519-38f0-4291-89d7-79a76cef327c/sc_tc.png',
   }
   return (
-    <Carousel className="bg-cover" effect="fade">
+    <Carousel className="bg-cover" autoplay effect="fade">
       <TopBlock
         className="relative bg-center bg-no-repeat"
         imageUrl="https://assets.lbctrl.com/uploads/88cd3d2c-343f-49e1-a236-aa9ef8eecb96/zero.png"
