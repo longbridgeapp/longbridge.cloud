@@ -104,7 +104,7 @@ export const IndexBanner = () => {
         className="relative bg-center bg-no-repeat"
         imageUrl="https://assets.lbctrl.com/uploads/88cd3d2c-343f-49e1-a236-aa9ef8eecb96/zero.png"
       >
-        <Block className={classNames('py-10 md:lg-[72px] px-6 md:px-0')}>
+        <Block className={classNames('py-10 lg:max-h-[530px] px-6 md:px-0')}>
           <BlockBetween
             left={
               <>
@@ -117,11 +117,11 @@ export const IndexBanner = () => {
                   <img
                     src="https://assets.lbctrl.com/uploads/deac44c1-b518-46ee-8b1c-8fb70d9ea2a3/zero.png"
                     alt="zero"
-                    className="w-48 h-auto lg:w-80"
+                    className="w-48 h-auto lg:w-52 xl:w-60"
                   />
                   <div
                     className={classNames('font-bold text-7xl text-brand_color', {
-                      'relative xl:-left-10 text-6xl': isEn,
+                      'relative xl:-left-6 text-6xl': isEn,
                     })}
                   >
                     {i18n.t('features_block_top_banner_891192')}
@@ -164,7 +164,7 @@ export const IndexBanner = () => {
                   </div>
                 )}
                 {isEn ? (
-                  <div className="my-8 text-2xl font-normal text-front-bg-color-1">
+                  <div className="my-4 text-2xl font-normal xl:my-8 text-front-bg-color-1">
                     Flexible Platform Fees Based on Transaction Volume
                   </div>
                 ) : (
@@ -200,7 +200,7 @@ export const IndexBanner = () => {
                 >
                   {i18n.t('features_block_top_banner_891200')}
                 </Button>
-                <div className="absolute self-end text-sm font-thin text-front-bg-color-1 bottom-4 right-4 left-4 md:relative md:-bottom-20 md:left-0">
+                <div className="absolute self-end text-sm font-thin text-front-bg-color-1 bottom-4 right-4 left-4 md:relative md:-bottom-10 xl:-bottom-20 md:left-0">
                   <sup>*</sup>
                   {i18n.t('features_block_top_banner_891201')}
                 </div>
