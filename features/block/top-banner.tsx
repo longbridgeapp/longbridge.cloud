@@ -189,6 +189,115 @@ export const IndexBanner = () => {
           ></BlockBetween>
         </Block>
       </TopBlock>
+      <TopBlock
+        className="relative bg-center bg-no-repeat"
+        imageUrl="https://assets.lbctrl.com/uploads/88cd3d2c-343f-49e1-a236-aa9ef8eecb96/zero.png"
+      >
+        <Block className={classNames('py-10 md:lg-[72px] px-6 md:px-0')}>
+          <BlockBetween
+            left={
+              <>
+                <div
+                  className={classNames(
+                    'flex flex-col items-center',
+                    isEn ? 'xl:flex-row  xl:items-end' : 'md:flex-row  md:items-end'
+                  )}
+                >
+                  <img
+                    src="https://assets.lbctrl.com/uploads/deac44c1-b518-46ee-8b1c-8fb70d9ea2a3/zero.png"
+                    alt="zero"
+                    className="w-48 h-auto lg:w-80"
+                  />
+                  <div
+                    className={classNames('font-bold text-7xl text-brand_color', {
+                      'relative xl:-left-10 text-6xl': isEn,
+                    })}
+                  >
+                    {i18n.t('features_block_top_banner_891192')}
+                  </div>
+                </div>
+                {isEn && (
+                  <div className="mt-4 text-3xl font-medium text-front-bg-color-1">
+                    to Expand Your Brokerage Business Online
+                  </div>
+                )}
+              </>
+            }
+            right={
+              <div>
+                <div className="text-3xl font-normal md:text-5xl text-front-bg-color-1">
+                  {i18n.t('features_block_top_banner_891193')}
+                  {isEn && (
+                    <span>
+                      <sup>*</sup>:
+                    </span>
+                  )}
+                </div>
+                {isEn ? (
+                  <div className="mt-4">
+                    <span className="mr-2 text-6xl font-extrabold text-brand_color">ZERO</span>
+                    <span className="text-3xl font-normal text-front-bg-color-1">
+                      System Fees for HK Securities Trading{' '}
+                    </span>
+                  </div>
+                ) : (
+                  <div className="flex flex-col mt-4 mb-6 text-4xl font-bold md:text-6xl text-front-bg-color-1 xl:flex-row xl:space-x-4">
+                    <span>{i18n.t('features_block_top_banner_891194')}</span>
+                    <span>
+                      <span>{i18n.t('features_block_top_banner_891192')}</span>
+                      <span className="text-brand_color">
+                        {i18n.t('features_block_top_banner_891195')}
+                        <sup>*</sup>
+                      </span>
+                    </span>
+                  </div>
+                )}
+                {isEn ? (
+                  <div className="my-8 text-2xl font-normal text-front-bg-color-1">
+                    Flexible Platform Fees Based on Transaction Volume
+                  </div>
+                ) : (
+                  <ul className="mb-6">
+                    <li className="mb-4">
+                      <div className="flex flex-col items-start xl:space-x-2 xl:items-center xl:flex-row">
+                        <span className="text-xl font-bold text-brand_color">
+                          {i18n.t('features_block_top_banner_891196')}
+                        </span>
+                        <span className="text-sm font-bold text-white">
+                          {i18n.t('features_block_top_banner_891197')}
+                        </span>
+                      </div>
+                    </li>
+                    <li>
+                      <div className="flex flex-col items-start md:space-x-2 md:items-center md:flex-row">
+                        <span className="text-xl font-bold text-brand_color">
+                          {i18n.t('features_block_top_banner_891198')}
+                        </span>
+                        <span className="text-sm font-bold text-white">
+                          {i18n.t('features_block_top_banner_891199')}
+                        </span>
+                      </div>
+                    </li>
+                  </ul>
+                )}
+
+                <Button
+                  link
+                  url="https://longbridge.feishu.cn/share/base/form/shrcnOorQd1IMb0pcb26rYCSvrh"
+                  size="medium"
+                  className="!bg-transparent border-2 border-front-bg-color-1 justify-self-start"
+                >
+                  {i18n.t('features_block_top_banner_891200')}
+                </Button>
+                <div className="absolute self-end text-sm font-thin text-front-bg-color-1 bottom-4 right-4 left-4 md:relative md:-bottom-20 md:left-[unset]">
+                  <sup>*</sup>
+                  {i18n.t('features_block_top_banner_891201')}
+                </div>
+              </div>
+            }
+          ></BlockBetween>
+        </Block>
+      </TopBlock>
     </Carousel>
   )
 }
