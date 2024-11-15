@@ -34,7 +34,7 @@ const ContactUs = () => {
       //   children: [
       //     {
       //       label: i18n.t('features_footer_index_891118'),
-      //       value: 'bd@longbridge.sg',
+      //       value: 'wm@longbridge.cloud',
       //       type: 'mailto:',
       //     },
       //     {
@@ -88,9 +88,9 @@ const ContactUs = () => {
             <div className="mb-8">
               <div className="sub-title">{i18n.t('features_wm_contact_us_index_891163')}</div>
               <div className="label-container">
-                <a className="label" href={'mailto:bd@longbridge.sg'}>
+                <a className="label" href={'mailto:wm@longbridge.cloud'}>
                   {i18n.t('features_footer_index_891118')}
-                  {'bd@longbridge.sg'}
+                  {'wm@longbridge.cloud'}
                 </a>
                 <span className="label">
                   {i18n.t('features_footer_index_891117')}
