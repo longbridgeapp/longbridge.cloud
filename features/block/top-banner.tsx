@@ -179,7 +179,7 @@ export const IndexBanner = () => {
                         </span>
                       </div>
                     </li>
-                    <li>
+                    {/* <li>
                       <div className="flex flex-col items-start md:space-x-2 md:items-center md:flex-row">
                         <span className="text-xl font-bold text-brand_color">
                           {i18n.t('features_block_top_banner_891198')}
@@ -188,18 +188,25 @@ export const IndexBanner = () => {
                           {i18n.t('features_block_top_banner_891199')}
                         </span>
                       </div>
-                    </li>
+                    </li> */}
                   </ul>
                 )}
 
-                <Button
-                  link
-                  url="https://longbridge.feishu.cn/share/base/form/shrcnOorQd1IMb0pcb26rYCSvrh"
-                  size="medium"
-                  className="!bg-transparent border-2 border-front-bg-color-1 justify-self-start"
-                >
-                  {i18n.t('features_block_top_banner_891200')}
-                </Button>
+                <div className="flex items-center space-x-12">
+                  <Button
+                    link
+                    url="https://longbridge.feishu.cn/share/base/form/shrcnOorQd1IMb0pcb26rYCSvrh"
+                    size="medium"
+                    className="!bg-transparent border-2 border-front-bg-color-1 justify-self-start"
+                  >
+                    {i18n.t('features_block_top_banner_891200')}
+                  </Button>
+                  <img
+                    src="https://assets.lbctrl.com/uploads/a7cf0138-5514-4d2a-9e44-e4d78e8aef06/coffee.png"
+                    alt="coffee"
+                    className="h-12"
+                  />
+                </div>
                 <div className="absolute self-end text-sm font-thin text-front-bg-color-1 bottom-4 right-4 left-4 md:relative md:-bottom-10 xl:-bottom-20 md:left-0">
                   <sup>*</sup>
                   {i18n.t('features_block_top_banner_891201')}
@@ -209,7 +216,7 @@ export const IndexBanner = () => {
           ></BlockBetween>
         </Block>
       </TopBlock>
-      <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
+      {/* <TopBlock className="bg-repeat-round bg-[#0B0550] relative">
         <Block>
           <BlockBetween
             left={
@@ -297,7 +304,7 @@ export const IndexBanner = () => {
             }
           ></BlockBetween>
         </Block>
-      </TopBlock>
+      </TopBlock> */}
     </Carousel>
   )
 }
