@@ -64,7 +64,7 @@ const Footer: FC = () => {
       },
       {
         label: i18n.t('features_footer_index_891118'),
-        value: 'bd@longbridge.sg',
+        value: 'wm@longbridge.cloud',
         type: 'mailto:',
       },
     ]
