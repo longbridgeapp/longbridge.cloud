@@ -22,11 +22,11 @@ const ContactUs = () => {
             value: '+852 3851 1711',
             type: 'tel:',
           },
-          {
-            label: i18n.t('features_wm_contact_us_index_891161'),
-            value: i18n.t('features_wm_contact_us_index_891180'),
-            type: '',
-          },
+          // {
+          //   label: i18n.t('features_wm_contact_us_index_891161'),
+          //   value: i18n.t('features_wm_contact_us_index_891180'),
+          //   type: '',
+          // },
         ],
       },
       // {
@@ -98,10 +98,10 @@ const ContactUs = () => {
                   <span>{' / '}</span>
                   <a href={'tel:+852 3851 1711'}>{'+852 3851 1711'}</a>
                 </span>
-                <span className="label">
+                {/* <span className="label">
                   {i18n.t('features_wm_contact_us_index_891161')}
                   {i18n.t('features_wm_contact_us_index_891181')}
-                </span>
+                </span> */}
               </div>
             </div>
             <div

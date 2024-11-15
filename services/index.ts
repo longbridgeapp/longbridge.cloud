@@ -151,3 +151,27 @@ export const getSupportLinks = async () => {
   })
   return transformRes(resp)
 }
+
+type FormData = {
+  full_name: string
+  phone: string
+  email: string
+  company: string
+  job_title: string
+  region: string
+  enquiry_type: string
+  description: string
+  date: string
+  time: string
+}
+const FeishuWebhookUrl = 'https://longbridge.feishu.cn/base/automation/webhook/event/QIbCandqswNUIPhcN3Zck1DWnkg'
+export const submitContactUsForm = async (data: FormData) => {
+  const _data = {
+    record: data,
+  }
+  const resp = await fetch(FeishuWebhookUrl, {
+    method: 'POST',
+    body: JSON.stringify(_data),
+  })
+  return transformRes(resp)
+}
