@@ -192,7 +192,12 @@ export const IndexBanner = () => {
                   </ul>
                 )}
 
-                <div className="flex items-center space-x-12">
+                <div
+                  className={classNames(
+                    'flex flex-col space-y-4 md:space-y-0 lg:space-x-12 lg:flex-row',
+                    isEn ? 'items-center lg:items-start' : 'items-center'
+                  )}
+                >
                   <Button
                     link
                     url="https://longbridge.feishu.cn/share/base/form/shrcnOorQd1IMb0pcb26rYCSvrh"
@@ -201,11 +206,18 @@ export const IndexBanner = () => {
                   >
                     {i18n.t('features_block_top_banner_891200')}
                   </Button>
-                  <img
-                    src="https://assets.lbctrl.com/uploads/a7cf0138-5514-4d2a-9e44-e4d78e8aef06/coffee.png"
-                    alt="coffee"
-                    className="h-12"
-                  />
+                  <div className="flex flex-col items-center lg:items-start lg:justify-center">
+                    <img
+                      src="https://assets.lbctrl.com/uploads/a7cf0138-5514-4d2a-9e44-e4d78e8aef06/coffee.png"
+                      alt="coffee"
+                      className="h-12"
+                    />
+                    {isEn && (
+                      <span className="text-xs text-[#D7D7D7] font-normal mt-1">
+                        Enjoy a coffee on us – a welcome gift for signing up
+                      </span>
+                    )}
+                  </div>
                 </div>
                 <div className="absolute self-end text-sm font-thin text-front-bg-color-1 bottom-4 right-4 left-4 md:relative md:-bottom-10 xl:-bottom-20 md:left-0">
                   <sup>*</sup>
